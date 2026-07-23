@@ -1,0 +1,28 @@
+-- REFERENCE ONLY — do NOT run this against a new database.
+--
+-- The Catalog Scanner writes into the SAME `public.barcode_cache` table that
+-- ingredients.help already owns and reads (its migration
+-- `supabase/migrations/0005_barcode_cache.sql`). There is no separate scanner
+-- database and no migration to apply here: point this app at the same Supabase
+-- project (NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY) and a verified
+-- row written here is live in the consumer app on the next scan.
+--
+-- This file is kept only so the shape the scanner writes is visible next to the
+-- code. RLS is ON with no public policies, so writes require the service-role
+-- key (server-side only) — never expose it to the browser.
+
+-- create table if not exists public.barcode_cache (
+--   code text primary key,               -- canonicalBarcode(code): the storage key
+--   found boolean not null,              -- verified writes: true
+--   mode text,                           -- human | pet | cosmetics
+--   source text,                         -- verified (from this scanner)
+--   product_name text,
+--   brands text,
+--   ingredients_text text,               -- the exact composition off the label
+--   image_url text,                      -- null: we don't keep photos
+--   reason text,                         -- null for verified rows
+--   hits int not null default 0,
+--   created_at timestamptz not null default now(),
+--   last_hit_at timestamptz
+-- );
+-- alter table public.barcode_cache enable row level security;

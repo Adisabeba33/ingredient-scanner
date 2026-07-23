@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: theme("colors.paper");
+  color: theme("colors.ink");
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Never let a stray horizontal scroll appear on a one-handed phone tool. */
+body {
+  overflow-x: hidden;
+}
+
+/* Big one-handed primary action. */
+.btn-primary {
+  @apply inline-flex h-14 w-full items-center justify-center gap-2 rounded-large bg-sage-500 px-6 text-[16px] font-semibold text-white shadow-button transition active:scale-[0.98] disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex h-12 w-full items-center justify-center gap-2 rounded-input border border-lineStrong bg-surface px-5 text-[15px] font-medium text-ink transition active:scale-[0.98] disabled:opacity-50;
+}
+
+.btn-ghost {
+  @apply inline-flex h-11 items-center justify-center gap-2 rounded-input px-4 text-[14px] font-medium text-muted transition active:scale-[0.98];
+}
+
+.card {
+  @apply rounded-card border border-line bg-surface shadow-card;
+}
