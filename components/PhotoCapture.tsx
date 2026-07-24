@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Camera, X, RefreshCw, Move } from "lucide-react";
+import { Camera, X, RefreshCw, Move, ImageUp } from "lucide-react";
 import {
   captureFrame,
+  compressImageFile,
   type FramePreset,
   type NormalizedRect,
 } from "@/lib/image";
@@ -72,7 +73,8 @@ function coverRectToFrame(
 type Phase =
   | { kind: "starting" }
   | { kind: "ready" }
-  | { kind: "review"; dataUrl: string }
+  // `from` decides what "Retake" does: reopen the camera, or the file picker.
+  | { kind: "review"; dataUrl: string; from: "camera" | "upload" }
   | { kind: "error"; message: string };
 
 // Which edges a corner handle controls.
@@ -108,6 +110,7 @@ export function PhotoCapture({
   const areaRef = useRef<HTMLDivElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const dragRef = useRef<DragState | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
   const [phase, setPhase] = useState<Phase>({ kind: "starting" });
   const [rect, setRect] = useState<NormalizedRect>(START_RECT[preset]);
 
@@ -266,16 +269,49 @@ export function PhotoCapture({
       const frameRect = coverRectToFrame(video, rect);
       const dataUrl = captureFrame(video, frameRect, preset);
       stop();
-      setPhase({ kind: "review", dataUrl });
+      setPhase({ kind: "review", dataUrl, from: "camera" });
     } catch {
       // Frame wasn't ready — let them try again.
     }
   }, [preset, rect, stop]);
 
+  // ── Upload ──────────────────────────────────────────────────────────────────
+  // An escape hatch for when the label just won't photograph well (glare, tiny
+  // print, curved bag): pick a screenshot or a shot of a monitor instead. The
+  // file is compressed to the same budget as a capture and goes to the same
+  // review step, so the rest of the flow is identical.
+  const pickFile = useCallback(() => fileRef.current?.click(), []);
+
+  const onFilePicked = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      e.target.value = ""; // let the same file be picked again
+      if (!file) return;
+      try {
+        const dataUrl = await compressImageFile(file, preset);
+        stop();
+        setPhase({ kind: "review", dataUrl, from: "upload" });
+      } catch (err) {
+        setPhase({
+          kind: "error",
+          message:
+            err instanceof Error
+              ? err.message
+              : "Couldn't read that image. Try a JPEG or PNG.",
+        });
+      }
+    },
+    [preset, stop]
+  );
+
   const retake = useCallback(() => {
+    if (phase.kind === "review" && phase.from === "upload") {
+      pickFile();
+      return;
+    }
     setPhase({ kind: "starting" });
     start();
-  }, [start]);
+  }, [phase, pickFile, start]);
 
   const accept = useCallback(() => {
     if (phase.kind !== "review") return;
@@ -289,6 +325,15 @@ export function PhotoCapture({
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 backdrop-blur-sm">
+      {/* Hidden picker shared by every "Upload" affordance below. */}
+      <input
+        ref={fileRef}
+        type="file"
+        accept="image/*"
+        onChange={onFilePicked}
+        className="hidden"
+      />
+
       <div className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)_+_1.25rem)] text-white">
         <div className="inline-flex items-center gap-2 text-[13px] font-medium">
           <Camera size={18} strokeWidth={1.8} aria-hidden="true" />
@@ -308,9 +353,17 @@ export function PhotoCapture({
           <p className="max-w-[320px] text-[15px] leading-relaxed text-white/85">
             {phase.message}
           </p>
+          {/* Camera blocked/unsupported is exactly when uploading matters most. */}
+          <button
+            onClick={pickFile}
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-[14px] font-semibold text-ink transition hover:bg-white/90"
+          >
+            <ImageUp size={16} strokeWidth={1.8} aria-hidden="true" />
+            Upload an image
+          </button>
           <button
             onClick={close}
-            className="inline-flex h-11 items-center rounded-full bg-white px-6 text-[14px] font-semibold text-ink transition hover:bg-white/90"
+            className="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-[14px] font-medium text-white transition hover:bg-white/10"
           >
             Go back
           </button>
@@ -431,8 +484,8 @@ export function PhotoCapture({
             </p>
           </div>
 
-          {/* Shutter */}
-          <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center pb-[calc(env(safe-area-inset-bottom)_+_2.5rem)]">
+          {/* Shutter, with Upload beside it for labels that won't photograph. */}
+          <div className="absolute inset-x-0 bottom-0 z-30 flex items-center justify-center pb-[calc(env(safe-area-inset-bottom)_+_2.5rem)]">
             <button
               onClick={snap}
               disabled={phase.kind !== "ready"}
@@ -440,6 +493,17 @@ export function PhotoCapture({
               className="inline-flex h-[74px] w-[74px] items-center justify-center rounded-full border-[5px] border-white/80 bg-white/20 transition active:scale-95 disabled:opacity-40"
             >
               <span className="h-14 w-14 rounded-full bg-white" />
+            </button>
+            {/* Absolute so the shutter stays optically centred. */}
+            <button
+              onClick={pickFile}
+              aria-label="Upload an image instead"
+              className="absolute right-8 inline-flex flex-col items-center gap-1 text-white/85 transition active:scale-95"
+            >
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10">
+                <ImageUp size={20} strokeWidth={1.7} aria-hidden="true" />
+              </span>
+              <span className="text-[11px] font-medium">Upload</span>
             </button>
           </div>
         </div>

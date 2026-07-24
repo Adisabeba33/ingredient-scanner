@@ -69,6 +69,67 @@ export function captureFrame(
   return canvas.toDataURL("image/jpeg", quality);
 }
 
+/**
+ * Decode a picked file, honouring EXIF orientation so a portrait phone photo
+ * isn't drawn sideways. `createImageBitmap` does this natively; the <img>
+ * fallback covers browsers without it (which apply orientation themselves).
+ */
+async function loadImage(file: File): Promise<CanvasImageSource & {
+  width: number;
+  height: number;
+}> {
+  if (typeof createImageBitmap === "function") {
+    try {
+      return await createImageBitmap(file, { imageOrientation: "from-image" });
+    } catch {
+      /* fall through to the <img> path */
+    }
+  }
+  const url = URL.createObjectURL(file);
+  try {
+    return await new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error("Couldn't read that image."));
+      img.src = url;
+    });
+  } finally {
+    // Revoke on the next tick so the decode has definitely finished.
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+  }
+}
+
+/**
+ * Compress a file the user picked (a screenshot, a photo of a monitor, a shot
+ * from the gallery) to the same budget as a camera capture, so an upload
+ * uploads as fast as a snap. No cropping — an uploaded image is assumed to be
+ * framed already; the preset only bounds resolution and quality.
+ */
+export async function compressImageFile(
+  file: File,
+  preset: FramePreset
+): Promise<string> {
+  const source = await loadImage(file);
+  const sw = source.width;
+  const sh = source.height;
+  if (!sw || !sh) throw new Error("That image looks empty.");
+
+  const { maxWidth, quality } = PRESETS[preset];
+  const scale = sw > maxWidth ? maxWidth / sw : 1;
+  const dw = Math.max(1, Math.round(sw * scale));
+  const dh = Math.max(1, Math.round(sh * scale));
+
+  const canvas = document.createElement("canvas");
+  canvas.width = dw;
+  canvas.height = dh;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Canvas 2D context unavailable.");
+  ctx.drawImage(source, 0, 0, dw, dh);
+  if ("close" in source && typeof source.close === "function") source.close();
+
+  return canvas.toDataURL("image/jpeg", quality);
+}
+
 /** Rough byte size of a data URL (for the "how heavy is the queue" hint). */
 export function dataUrlBytes(dataUrl: string): number {
   const comma = dataUrl.indexOf(",");
