@@ -23,6 +23,8 @@ export interface LabelExtraction {
   ingredients_text: string;
   /** False when the ingredients photo was too blurry / cropped / low-res to read. */
   ingredients_readable: boolean;
+  /** Language of the transcribed list, e.g. "English", "French". */
+  language: string;
 }
 
 const EXTRACTION_SCHEMA = {
@@ -46,10 +48,21 @@ const EXTRACTION_SCHEMA = {
     ingredients_readable: {
       type: "boolean",
       description:
-        "true only if the ingredient list was clearly legible and transcribed in full. false if the photo was blurry, cropped mid-list, glare-washed, or too low-resolution to trust.",
+        "true only if the ingredient list was clearly legible and transcribed in full. false if the photo was blurry, cropped mid-list, glare-washed, too low-resolution to trust, or if no English list is present.",
+    },
+    language: {
+      type: "string",
+      description:
+        "The language of the list you transcribed, capitalised in English (e.g. 'English', 'French', 'Spanish'). Labels often print several languages side by side — always transcribe the ENGLISH one when it is present, and report 'English' here. Only report another language if NO English list is visible at all.",
     },
   },
-  required: ["product_name", "brands", "ingredients_text", "ingredients_readable"],
+  required: [
+    "product_name",
+    "brands",
+    "ingredients_text",
+    "ingredients_readable",
+    "language",
+  ],
 } as const;
 
 const SYSTEM =
@@ -62,7 +75,11 @@ const USER_INSTRUCTION =
   "Read this product label. The first image (if present) is the brand/name; the ingredients " +
   "image is the composition. Return the product name (with its full variant), the brand, and " +
   "the ingredient list transcribed verbatim. If the ingredient list is blurry, cut off, or " +
-  "otherwise not fully legible, set ingredients_readable to false and leave ingredients_text empty.";
+  "otherwise not fully legible, set ingredients_readable to false and leave ingredients_text empty. " +
+  "Packaging often prints the same list in several languages (English / French / Spanish) in " +
+  "parallel columns or blocks: always transcribe the ENGLISH one. If the photo shows only a " +
+  "non-English list, do NOT translate it — set ingredients_readable to false, leave " +
+  "ingredients_text empty, and report the language you saw.";
 
 /** A data: URL like `data:image/jpeg;base64,AAAA` → the SDK's image block. */
 function toImageBlock(dataUrl: string): Anthropic.Messages.ImageBlockParam {
@@ -171,6 +188,10 @@ export async function extractLabel({
     // Trust the model's own flag, but never call a too-short list readable.
     ingredients_readable:
       parsed.ingredients_readable === true && ingredientsText.length >= 12,
+    language:
+      typeof parsed.language === "string" && parsed.language.trim()
+        ? parsed.language.trim()
+        : "Unknown",
   };
 
   return {

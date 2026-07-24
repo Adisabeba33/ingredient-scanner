@@ -13,6 +13,7 @@ import {
   AlertTriangle,
   CheckCircle2,
   X,
+  RefreshCw,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
@@ -100,6 +101,7 @@ function beep() {
 
 const REASON_LABEL: Record<string, string> = {
   "unreadable-ingredients": "Ingredients photo unreadable — re-shoot",
+  "wrong-language": "Not the English list — re-shoot the English column",
   "no-ingredients-photo": "No ingredients photo",
   "no-valid-barcode": "No valid barcode",
   llm_error: "Reader error — retry",
@@ -142,6 +144,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [outcomes, setOutcomes] = useState<ProcessOutcome[] | null>(null);
 
   const flashRef = useRef(false);
+  const deletingRef = useRef(false);
+  // Confirmation line after withdrawing a row from the shared catalog.
+  const [catalogNote, setCatalogNote] = useState<string | null>(null);
 
   const refreshQueue = useCallback(() => {
     listProducts()
@@ -198,7 +203,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           productName?: string | null;
         };
         if (data.verified) {
-          // Already ours — undo the add and warn.
+          // Already ours — undo the add and warn (with a way to redo it anyway,
+          // which is how a bad capture gets corrected).
           setDraft((d) => ({
             ...d,
             barcodes: d.barcodes.filter((b) => canonicalBarcode(b) !== key),
@@ -246,6 +252,47 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     },
     [refreshQueue]
   );
+
+  // ── Correcting a product that's already in the catalog ─────────────────────
+  // Re-capture: keep the code and carry on. Processing upserts on the barcode,
+  // so the fresh reading replaces the bad row.
+  const recaptureAnyway = useCallback(() => {
+    if (!dupWarning) return;
+    const code = dupWarning.code;
+    const key = canonicalBarcode(code);
+    setDraft((d) =>
+      d.barcodes.some((b) => canonicalBarcode(b) === key)
+        ? d
+        : { ...d, barcodes: [...d.barcodes, code] }
+    );
+    setDupWarning(null);
+  }, [dupWarning]);
+
+  // Withdraw a bad verified row entirely (wrong language, wrong product).
+  const deleteFromCatalog = useCallback(async () => {
+    if (!dupWarning || deletingRef.current) return;
+    deletingRef.current = true;
+    try {
+      const res = await fetch("/api/delete-barcode", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({ code: dupWarning.code }),
+      });
+      setCatalogNote(
+        res.ok
+          ? `Removed ${dupWarning.code} from the catalog — capture it again now.`
+          : "Couldn't remove it. Check your connection and try again."
+      );
+      if (res.ok) setDupWarning(null);
+    } catch {
+      setCatalogNote("Couldn't remove it. Check your connection and try again.");
+    } finally {
+      deletingRef.current = false;
+    }
+  }, [dupWarning, adminToken]);
 
   // ── Done / Skip ──────────────────────────────────────────────────────────────
   const canFinish = draft.barcodes.length > 0 && !!draft.photos.ingredients;
@@ -312,6 +359,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           error?: string;
           message?: string;
           product_name?: string | null;
+          language?: string;
         } = {};
         try {
           data = text ? JSON.parse(text) : {};
@@ -331,6 +379,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             data.reason ?? data.error ?? `http_${res.status}`;
           const message =
             data.message ??
+            // Naming the language read makes a wrong-column shot self-evident.
+            (reason === "wrong-language" && data.language
+              ? `Read as ${data.language}.`
+              : undefined) ??
             (!data.reason && !data.error && text
               ? text.replace(/\s+/g, " ").slice(0, 160)
               : undefined);
@@ -420,6 +472,26 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
               <span className="font-mono">{dupWarning.code}</span> · skip it and
               scan a different product.
             </span>
+            {/* Escape hatches for a row that's wrong (bad photo, wrong language
+                column): redo it, or withdraw it from the catalog entirely. */}
+            {dupWarning.where === "catalog" && (
+              <div className="mt-2 flex flex-wrap gap-2">
+                <button
+                  onClick={recaptureAnyway}
+                  className="inline-flex h-9 items-center gap-1.5 rounded-input border border-lineStrong bg-surface px-3 text-[12px] font-medium text-ink transition active:scale-[0.98]"
+                >
+                  <RefreshCw size={13} strokeWidth={1.8} aria-hidden="true" />
+                  Re-capture (replaces it)
+                </button>
+                <button
+                  onClick={deleteFromCatalog}
+                  className="inline-flex h-9 items-center gap-1.5 rounded-input border border-lineStrong bg-surface px-3 text-[12px] font-medium text-risk-high transition active:scale-[0.98]"
+                >
+                  <Trash2 size={13} strokeWidth={1.8} aria-hidden="true" />
+                  Delete from catalog
+                </button>
+              </div>
+            )}
           </div>
           <button
             onClick={() => setDupWarning(null)}
@@ -427,6 +499,19 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             className="shrink-0 text-faint"
           >
             <X size={16} strokeWidth={1.8} aria-hidden="true" />
+          </button>
+        </div>
+      )}
+
+      {catalogNote && (
+        <div className="flex items-start justify-between gap-2 rounded-input bg-surfaceSoft px-3 py-2 text-[12px] leading-snug text-ink">
+          <span>{catalogNote}</span>
+          <button
+            onClick={() => setCatalogNote(null)}
+            aria-label="Dismiss"
+            className="shrink-0 text-faint"
+          >
+            <X size={14} strokeWidth={1.8} aria-hidden="true" />
           </button>
         </div>
       )}
