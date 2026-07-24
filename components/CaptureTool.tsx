@@ -12,6 +12,7 @@ import {
   Barcode,
   AlertTriangle,
   CheckCircle2,
+  X,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
@@ -116,6 +117,13 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [overlay, setOverlay] = useState<Overlay>(null);
   const [captured, setCaptured] = useState(0);
   const [captureNutrition, setCaptureNutrition] = useState(false);
+  // Set when a just-scanned code is already ours (in the catalog) or already in
+  // this device's pending queue — so 5 people don't re-capture the same product.
+  const [dupWarning, setDupWarning] = useState<{
+    code: string;
+    name: string | null;
+    where: "catalog" | "queue";
+  } | null>(null);
 
   // Processing state.
   const [processing, setProcessing] = useState(false);
@@ -137,15 +145,63 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   }, [refreshCount]);
 
   // ── Barcode ────────────────────────────────────────────────────────────────
-  const onBarcode = useCallback((code: string) => {
-    beep();
-    setDraft((d) => {
+  const onBarcode = useCallback(
+    async (code: string) => {
+      beep();
+      setOverlay(null);
+      setDupWarning(null);
       const key = canonicalBarcode(code);
-      if (d.barcodes.some((b) => canonicalBarcode(b) === key)) return d; // dedupe
-      return { ...d, barcodes: [...d.barcodes, code] };
-    });
-    setOverlay(null);
-  }, []);
+
+      // 1) Local, instant, offline: already in THIS device's pending queue?
+      try {
+        const pending = await listProducts();
+        const inQueue = pending.some((p) =>
+          p.barcodes.some((b) => canonicalBarcode(b) === key)
+        );
+        if (inQueue) {
+          setDupWarning({ code, name: null, where: "queue" });
+          return; // don't add — it's already captured here
+        }
+      } catch {
+        /* IndexedDB unavailable — fall through and let capture proceed */
+      }
+
+      // Add it now so capture works even with no signal.
+      setDraft((d) =>
+        d.barcodes.some((b) => canonicalBarcode(b) === key)
+          ? d
+          : { ...d, barcodes: [...d.barcodes, code] }
+      );
+
+      // 2) Shared catalog (best-effort, needs network): already verified?
+      try {
+        const res = await fetch("/api/check-barcode", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            "x-admin-token": adminToken,
+          },
+          body: JSON.stringify({ code }),
+        });
+        if (!res.ok) return; // offline / error → keep it, don't block capture
+        const data = (await res.json()) as {
+          verified?: boolean;
+          productName?: string | null;
+        };
+        if (data.verified) {
+          // Already ours — undo the add and warn.
+          setDraft((d) => ({
+            ...d,
+            barcodes: d.barcodes.filter((b) => canonicalBarcode(b) !== key),
+          }));
+          setDupWarning({ code, name: data.productName ?? null, where: "catalog" });
+        }
+      } catch {
+        /* offline — keep the code, dedupe happens later on write anyway */
+      }
+    },
+    [adminToken]
+  );
 
   const removeBarcode = useCallback((code: string) => {
     setDraft((d) => ({ ...d, barcodes: d.barcodes.filter((b) => b !== code) }));
@@ -171,12 +227,16 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       setDraft(EMPTY_DRAFT);
       setCaptured((n) => n + 1);
       setOutcomes(null);
+      setDupWarning(null);
     } finally {
       flashRef.current = false;
     }
   }, [canFinish, draft, mode]);
 
-  const skip = useCallback(() => setDraft(EMPTY_DRAFT), []);
+  const skip = useCallback(() => {
+    setDraft(EMPTY_DRAFT);
+    setDupWarning(null);
+  }, []);
 
   // ── Process all ──────────────────────────────────────────────────────────────
   const processAll = useCallback(async () => {
@@ -306,6 +366,39 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           </button>
         ))}
       </div>
+
+      {/* Duplicate warning — this code is already ours / already queued here. */}
+      {dupWarning && (
+        <div className="flex items-start gap-2 rounded-input border border-amber bg-amber-soft px-3 py-3">
+          <AlertTriangle
+            size={16}
+            strokeWidth={1.8}
+            className="mt-0.5 shrink-0 text-amber"
+            aria-hidden="true"
+          />
+          <div className="min-w-0 flex-1 text-[13px] leading-snug text-ink">
+            <span className="font-semibold">
+              {dupWarning.where === "catalog"
+                ? "Already in the catalog"
+                : "Already in your queue"}
+            </span>
+            {dupWarning.where === "catalog" && dupWarning.name
+              ? ` — ${dupWarning.name}`
+              : ""}
+            <span className="mt-0.5 block text-[12px] text-muted">
+              <span className="font-mono">{dupWarning.code}</span> · skip it and
+              scan a different product.
+            </span>
+          </div>
+          <button
+            onClick={() => setDupWarning(null)}
+            aria-label="Dismiss"
+            className="shrink-0 text-faint"
+          >
+            <X size={16} strokeWidth={1.8} aria-hidden="true" />
+          </button>
+        </div>
+      )}
 
       {/* Current product card */}
       <section className="card flex flex-col gap-4 p-4">
