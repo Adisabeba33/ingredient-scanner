@@ -107,6 +107,7 @@ const REASON_LABEL: Record<string, string> = {
   http_500: "Server error — check Vercel logs",
   http_502: "Reader/upstream error — retry",
   http_504: "Timed out — retry",
+  crash: "Server crashed — see detail below",
 };
 
 export function CaptureTool({ adminToken }: { adminToken: string }) {
@@ -496,6 +497,14 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           onCancel={() => setOverlay(null)}
         />
       )}
+
+      {/* Version — confirm a redeploy actually landed. */}
+      <footer className="mt-auto pt-2 text-center text-[11px] text-faint">
+        {process.env.NEXT_PUBLIC_APP_VERSION ?? "dev"}
+        {process.env.NEXT_PUBLIC_BUILD_DATE
+          ? ` · ${process.env.NEXT_PUBLIC_BUILD_DATE}`
+          : ""}
+      </footer>
     </main>
   );
 }

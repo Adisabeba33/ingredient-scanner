@@ -44,6 +44,18 @@ interface VerifiedRow {
 }
 
 export async function POST(req: Request) {
+  // Catch anything the inner handler doesn't, so the UI shows the real error
+  // text instead of a bare 500 ("Server error — check Vercel logs").
+  try {
+    return await handle(req);
+  } catch (err) {
+    const message =
+      err instanceof Error ? `${err.name}: ${err.message}` : String(err);
+    return Response.json({ ok: false, reason: "crash", message }, { status: 500 });
+  }
+}
+
+async function handle(req: Request) {
   const adminToken = process.env.ADMIN_TOKEN;
   if (!adminToken) {
     return Response.json({ error: "admin_not_configured" }, { status: 501 });
