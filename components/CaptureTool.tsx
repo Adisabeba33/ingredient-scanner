@@ -63,6 +63,8 @@ interface ProcessOutcome {
   ok: boolean;
   productName: string | null;
   reason?: string;
+  /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
+  message?: string;
 }
 
 /** Short confirmation beep on a successful barcode read (spec §5: beep + green frame). */
@@ -97,6 +99,14 @@ const REASON_LABEL: Record<string, string> = {
   write_failed: "Database write failed",
   network: "Offline / network error — will retry",
   unauthorized: "Admin token rejected",
+  extractor_not_configured: "ANTHROPIC_API_KEY not set on the server",
+  store_not_configured: "Supabase not configured on the server",
+  admin_not_configured: "ADMIN_TOKEN not set on the server",
+  invalid_body: "Bad request",
+  http_413: "Photos too large for one request",
+  http_500: "Server error — check Vercel logs",
+  http_502: "Reader/upstream error — retry",
+  http_504: "Timed out — retry",
 };
 
 export function CaptureTool({ adminToken }: { adminToken: string }) {
@@ -201,12 +211,21 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             },
           }),
         });
-        const data = (await res.json().catch(() => ({}))) as {
+        // Read as text first so a non-JSON error page (413/500/504 from the
+        // platform) still yields something useful instead of a blank "unknown".
+        const text = await res.text();
+        let data: {
           ok?: boolean;
           reason?: string;
           error?: string;
+          message?: string;
           product_name?: string | null;
-        };
+        } = {};
+        try {
+          data = text ? JSON.parse(text) : {};
+        } catch {
+          /* non-JSON body — keep the raw text as the message below */
+        }
         if (res.ok && data.ok) {
           await deleteProduct(item.id); // photos gone once the text is stored
           outcome = {
@@ -216,12 +235,20 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             productName: data.product_name ?? null,
           };
         } else {
+          const reason =
+            data.reason ?? data.error ?? `http_${res.status}`;
+          const message =
+            data.message ??
+            (!data.reason && !data.error && text
+              ? text.replace(/\s+/g, " ").slice(0, 160)
+              : undefined);
           outcome = {
             id: item.id,
             barcodes: item.barcodes,
             ok: false,
             productName: data.product_name ?? null,
-            reason: data.reason ?? data.error ?? "unknown",
+            reason,
+            message,
           };
         }
       } catch {
@@ -430,6 +457,11 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                       <span className="block text-[11px] text-muted">
                         {REASON_LABEL[f.reason ?? ""] ?? f.reason}
                       </span>
+                      {f.message && (
+                        <span className="mt-0.5 block break-words text-[11px] text-faint">
+                          {f.message}
+                        </span>
+                      )}
                     </div>
                   </li>
                 ))}
