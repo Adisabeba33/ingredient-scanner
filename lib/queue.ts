@@ -109,6 +109,37 @@ export async function countProducts(): Promise<number> {
   return n;
 }
 
+/**
+ * Patch a queued product in place — used to re-shoot or re-upload a single
+ * photo, or to fix the barcode list, without losing the rest of the capture.
+ * Silently does nothing if the id is gone (e.g. it was just processed).
+ */
+export async function updateProduct(
+  id: string,
+  patch: Partial<Pick<PendingProduct, "barcodes" | "mode" | "photos">>
+): Promise<void> {
+  const db = await openDb();
+  await new Promise<void>((resolve, reject) => {
+    const store = tx(db, "readwrite");
+    const read = store.get(id);
+    read.onsuccess = () => {
+      const current = read.result as PendingProduct | undefined;
+      if (!current) {
+        resolve();
+        return;
+      }
+      const next: PendingProduct = { ...current, ...patch };
+      const write = store.put(next);
+      write.onsuccess = () => resolve();
+      write.onerror = () =>
+        reject(write.error ?? new Error("Failed to update product."));
+    };
+    read.onerror = () =>
+      reject(read.error ?? new Error("Failed to read product."));
+  });
+  db.close();
+}
+
 export async function deleteProduct(id: string): Promise<void> {
   const db = await openDb();
   await new Promise<void>((resolve, reject) => {

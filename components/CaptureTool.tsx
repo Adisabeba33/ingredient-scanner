@@ -19,9 +19,9 @@ import { PhotoCapture } from "@/components/PhotoCapture";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
-  countProducts,
   deleteProduct,
   listProducts,
+  updateProduct,
   type CaptureMode,
   type PendingProduct,
 } from "@/lib/queue";
@@ -42,7 +42,13 @@ import {
 
 type Overlay =
   | { kind: "barcode" }
-  | { kind: "photo"; slot: "brand" | "ingredients" | "nutrition" }
+  // `productId` retargets the capture at an ALREADY QUEUED product (re-shoot a
+  // bad photo) instead of the product being captured right now.
+  | {
+      kind: "photo";
+      slot: "brand" | "ingredients" | "nutrition";
+      productId?: string;
+    }
   | null;
 
 interface Draft {
@@ -115,7 +121,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [mode, setMode] = useState<CaptureMode>("pet");
   const [draft, setDraft] = useState<Draft>(EMPTY_DRAFT);
   const [overlay, setOverlay] = useState<Overlay>(null);
-  const [captured, setCaptured] = useState(0);
+  // The pending queue itself (not just its size), so it can be reviewed,
+  // re-shot and pruned before processing.
+  const [queue, setQueue] = useState<PendingProduct[]>([]);
+  const captured = queue.length;
   const [captureNutrition, setCaptureNutrition] = useState(false);
   // Set when a just-scanned code is already ours (in the catalog) or already in
   // this device's pending queue — so 5 people don't re-capture the same product.
@@ -134,15 +143,15 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
 
   const flashRef = useRef(false);
 
-  const refreshCount = useCallback(() => {
-    countProducts()
-      .then(setCaptured)
+  const refreshQueue = useCallback(() => {
+    listProducts()
+      .then(setQueue)
       .catch(() => {});
   }, []);
 
   useEffect(() => {
-    refreshCount();
-  }, [refreshCount]);
+    refreshQueue();
+  }, [refreshQueue]);
 
   // ── Barcode ────────────────────────────────────────────────────────────────
   const onBarcode = useCallback(
@@ -209,11 +218,33 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
 
   // ── Photos ──────────────────────────────────────────────────────────────────
   const onPhoto = useCallback(
-    (slot: "brand" | "ingredients" | "nutrition", dataUrl: string) => {
-      setDraft((d) => ({ ...d, photos: { ...d.photos, [slot]: dataUrl } }));
+    async (
+      slot: "brand" | "ingredients" | "nutrition",
+      dataUrl: string,
+      productId?: string
+    ) => {
       setOverlay(null);
+      // Re-shooting a photo on an already-queued product.
+      if (productId) {
+        const item = queue.find((p) => p.id === productId);
+        if (!item) return;
+        await updateProduct(productId, {
+          photos: { ...item.photos, [slot]: dataUrl },
+        });
+        refreshQueue();
+        return;
+      }
+      setDraft((d) => ({ ...d, photos: { ...d.photos, [slot]: dataUrl } }));
     },
-    []
+    [queue, refreshQueue]
+  );
+
+  const removeQueued = useCallback(
+    async (id: string) => {
+      await deleteProduct(id);
+      refreshQueue();
+    },
+    [refreshQueue]
   );
 
   // ── Done / Skip ──────────────────────────────────────────────────────────────
@@ -225,13 +256,13 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     try {
       await addProduct({ barcodes: draft.barcodes, mode, photos: draft.photos });
       setDraft(EMPTY_DRAFT);
-      setCaptured((n) => n + 1);
+      refreshQueue();
       setOutcomes(null);
       setDupWarning(null);
     } finally {
       flashRef.current = false;
     }
-  }, [canFinish, draft, mode]);
+  }, [canFinish, draft, mode, refreshQueue]);
 
   const skip = useCallback(() => {
     setDraft(EMPTY_DRAFT);
@@ -329,8 +360,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     setOutcomes(results);
     setProgress(null);
     setProcessing(false);
-    refreshCount();
-  }, [processing, adminToken, refreshCount]);
+    refreshQueue();
+  }, [processing, adminToken, refreshQueue]);
 
   const succeeded = outcomes?.filter((o) => o.ok).length ?? 0;
   const failed = outcomes?.filter((o) => !o.ok) ?? [];
@@ -500,6 +531,69 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         )}
       </section>
 
+      {/* Captured queue — review, re-shoot a bad photo, or drop a product. */}
+      {queue.length > 0 && (
+        <section className="card flex flex-col gap-3 p-4">
+          <h2 className="text-[14px] font-semibold text-ink">
+            Captured ({queue.length})
+          </h2>
+          <p className="-mt-1 text-[12px] leading-relaxed text-muted">
+            Tap a photo to re-shoot or re-upload it. Nothing is sent until you
+            process the queue.
+          </p>
+          <ul className="flex flex-col gap-3">
+            {queue.map((item, i) => (
+              <li
+                key={item.id}
+                className="flex flex-col gap-2 rounded-input bg-surfaceSoft p-3"
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <div className="text-[12px] font-semibold text-ink">
+                      #{i + 1} · {MODE_LABELS[item.mode]}
+                    </div>
+                    <div className="mt-0.5 font-mono text-[12px] leading-snug text-muted">
+                      {item.barcodes.join(", ")}
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => removeQueued(item.id)}
+                    aria-label={`Delete captured product ${i + 1}`}
+                    className="shrink-0 rounded-full p-1.5 text-faint transition active:scale-95"
+                  >
+                    <Trash2 size={16} strokeWidth={1.8} aria-hidden="true" />
+                  </button>
+                </div>
+                <div className="flex gap-2">
+                  <QueueThumb
+                    label="Brand"
+                    src={item.photos.brand}
+                    onClick={() =>
+                      setOverlay({
+                        kind: "photo",
+                        slot: "brand",
+                        productId: item.id,
+                      })
+                    }
+                  />
+                  <QueueThumb
+                    label="Ingredients"
+                    src={item.photos.ingredients}
+                    onClick={() =>
+                      setOverlay({
+                        kind: "photo",
+                        slot: "ingredients",
+                        productId: item.id,
+                      })
+                    }
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Process all */}
       <section className="card flex flex-col gap-3 p-4">
         <h2 className="text-[14px] font-semibold text-ink">Process queue</h2>
@@ -586,7 +680,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                 ? "Fit the whole ingredient list in the frame. Quick & rough is fine."
                 : "Frame the guaranteed analysis / nutrition panel."
           }
-          onCapture={(url) => onPhoto(overlay.slot, url)}
+          onCapture={(url) => onPhoto(overlay.slot, url, overlay.productId)}
           onCancel={() => setOverlay(null)}
         />
       )}
@@ -599,6 +693,40 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           : ""}
       </footer>
     </main>
+  );
+}
+
+/**
+ * A queued product's photo. Shows the actual shot so a bad one (blurry, glare,
+ * cut off) is obvious at a glance; tapping re-opens capture for that slot.
+ */
+function QueueThumb({
+  label,
+  src,
+  onClick,
+}: {
+  label: string;
+  src?: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="group relative h-20 flex-1 overflow-hidden rounded-input border border-line bg-surface transition active:scale-[0.98]"
+      aria-label={`Replace the ${label.toLowerCase()} photo`}
+    >
+      {src ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={src} alt={`${label} photo`} className="h-full w-full object-cover" />
+      ) : (
+        <span className="flex h-full w-full items-center justify-center text-[12px] text-faint">
+          No {label.toLowerCase()}
+        </span>
+      )}
+      <span className="absolute inset-x-0 bottom-0 bg-ink/60 px-2 py-1 text-[11px] font-medium text-white">
+        {label} · tap to redo
+      </span>
+    </button>
   );
 }
 
