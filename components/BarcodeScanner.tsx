@@ -250,7 +250,7 @@ export function BarcodeScanner({
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 backdrop-blur-sm">
-      <div className="flex items-center justify-between px-5 pt-5 text-white">
+      <div className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)_+_1.25rem)] text-white">
         <div className="inline-flex items-center gap-2 text-[13px] font-medium">
           <ScanLine size={18} strokeWidth={1.8} aria-hidden="true" />
           Scan a barcode

@@ -248,7 +248,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const failed = outcomes?.filter((o) => !o.ok) ?? [];
 
   return (
-    <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-5 px-4 pb-28 pt-5">
+    <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-5 px-4 pb-[calc(env(safe-area-inset-bottom)_+_7rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
       {/* Header + counter */}
       <header className="flex items-center justify-between">
         <div className="inline-flex items-center gap-2">

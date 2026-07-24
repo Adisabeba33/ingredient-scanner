@@ -287,7 +287,7 @@ export function PhotoCapture({
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 backdrop-blur-sm">
-      <div className="flex items-center justify-between px-5 pt-5 text-white">
+      <div className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)_+_1.25rem)] text-white">
         <div className="inline-flex items-center gap-2 text-[13px] font-medium">
           <Camera size={18} strokeWidth={1.8} aria-hidden="true" />
           {title}
@@ -430,7 +430,7 @@ export function PhotoCapture({
           </div>
 
           {/* Shutter */}
-          <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center pb-10">
+          <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center pb-[calc(env(safe-area-inset-bottom)_+_2.5rem)]">
             <button
               onClick={snap}
               disabled={phase.kind !== "ready"}
