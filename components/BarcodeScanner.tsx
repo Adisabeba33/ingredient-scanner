@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ScanLine, X, Keyboard } from "lucide-react";
+import { applyContinuousCamera } from "@/lib/camera";
 
 /**
  * Live "point the camera at a barcode and it reads" scanner, covering every
@@ -189,6 +190,7 @@ export function BarcodeScanner({
           if (!video) return;
           video.srcObject = stream;
           void video.play().catch(() => {});
+          void applyContinuousCamera(stream); // settle to sharp faster
           setPhase({ kind: "scanning" });
           rafRef.current = requestAnimationFrame(() => void tick());
         })

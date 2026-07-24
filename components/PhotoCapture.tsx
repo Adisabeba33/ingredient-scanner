@@ -7,6 +7,7 @@ import {
   type FramePreset,
   type NormalizedRect,
 } from "@/lib/image";
+import { applyContinuousCamera } from "@/lib/camera";
 
 /**
  * Framed photo capture with an ADJUSTABLE frame. The user drags the rectangle
@@ -142,6 +143,7 @@ export function PhotoCapture({
         if (!video) return;
         video.srcObject = stream;
         void video.play().catch(() => {});
+        void applyContinuousCamera(stream); // settle to sharp faster
         setPhase({ kind: "ready" });
       })
       .catch((err: unknown) => {
