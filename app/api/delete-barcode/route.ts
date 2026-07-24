@@ -1,5 +1,6 @@
 import { sanitizeBarcode, canonicalBarcode } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { allReportCacheKeys } from "@/lib/report-cache-key";
 
 /**
  * Remove a row from the shared catalog — the undo for a bad capture that already
@@ -55,5 +56,24 @@ export async function POST(req: Request) {
     );
   }
 
-  return Response.json({ code: key, deleted: (data?.length ?? 0) > 0 });
+  // Withdraw the cached report too — it was generated from the ingredients we
+  // just removed, and lives under a separate key that nothing else clears. The
+  // product's mode isn't known here, so clear every mode's key.
+  let reportsCleared = 0;
+  try {
+    const { data: cleared } = await admin
+      .from("report_cache")
+      .delete()
+      .in("cache_key", allReportCacheKeys(key))
+      .select("cache_key");
+    reportsCleared = cleared?.length ?? 0;
+  } catch {
+    /* best-effort */
+  }
+
+  return Response.json({
+    code: key,
+    deleted: (data?.length ?? 0) > 0,
+    reports_cleared: reportsCleared,
+  });
 }

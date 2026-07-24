@@ -134,6 +134,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     code: string;
     name: string | null;
     where: "catalog" | "queue";
+    /** What's stored right now — makes a wrong-language row obvious. */
+    preview?: string | null;
   } | null>(null);
 
   // Processing state.
@@ -201,6 +203,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         const data = (await res.json()) as {
           verified?: boolean;
           productName?: string | null;
+          ingredientsPreview?: string | null;
         };
         if (data.verified) {
           // Already ours — undo the add and warn (with a way to redo it anyway,
@@ -209,7 +212,12 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             ...d,
             barcodes: d.barcodes.filter((b) => canonicalBarcode(b) !== key),
           }));
-          setDupWarning({ code, name: data.productName ?? null, where: "catalog" });
+          setDupWarning({
+            code,
+            name: data.productName ?? null,
+            where: "catalog",
+            preview: data.ingredientsPreview ?? null,
+          });
         }
       } catch {
         /* offline — keep the code, dedupe happens later on write anyway */
@@ -472,6 +480,11 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
               <span className="font-mono">{dupWarning.code}</span> · skip it and
               scan a different product.
             </span>
+            {dupWarning.preview && (
+              <span className="mt-1.5 block rounded bg-surface/70 px-2 py-1 text-[11px] leading-snug text-muted">
+                Stored now: “{dupWarning.preview}…”
+              </span>
+            )}
             {/* Escape hatches for a row that's wrong (bad photo, wrong language
                 column): redo it, or withdraw it from the catalog entirely. */}
             {dupWarning.where === "catalog" && (

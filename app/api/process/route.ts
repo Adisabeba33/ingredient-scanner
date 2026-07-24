@@ -5,6 +5,7 @@ import {
 } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { extractLabel } from "@/lib/extract";
+import { reportCacheKey } from "@/lib/report-cache-key";
 
 /**
  * Process ONE captured product: read its label photos with Claude vision and
@@ -193,9 +194,27 @@ async function handle(req: Request) {
     );
   }
 
+  // The consumer app caches a generated report per barcode, INDEPENDENTLY of
+  // the ingredients. Re-capturing a product to correct it would otherwise keep
+  // serving the report built from the old (wrong) text forever, so drop it and
+  // let the next reader regenerate from what we just wrote.
+  let reportsCleared = 0;
+  try {
+    const keys = codes.map((c) => reportCacheKey(c, mode));
+    const { data: cleared } = await admin
+      .from("report_cache")
+      .delete()
+      .in("cache_key", keys)
+      .select("cache_key");
+    reportsCleared = cleared?.length ?? 0;
+  } catch {
+    /* best-effort — the ingredients are written either way */
+  }
+
   return Response.json({
     ok: true,
     codes,
+    reports_cleared: reportsCleared,
     product_name: extraction.product_name,
     brands: extraction.brands,
     ingredients_text: extraction.ingredients_text,

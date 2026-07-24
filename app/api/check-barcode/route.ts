@@ -45,7 +45,7 @@ export async function POST(req: Request) {
 
   const { data, error } = await admin
     .from("barcode_cache")
-    .select("code, source, product_name, brands")
+    .select("code, source, product_name, brands, ingredients_text")
     .eq("code", key)
     .maybeSingle();
   if (error) {
@@ -64,5 +64,12 @@ export async function POST(req: Request) {
     source: data?.source ?? null,
     productName: data?.product_name ?? null,
     brands: data?.brands ?? null,
+    // A short preview of what's actually stored, so a wrong-language or
+    // wrong-product row is visible on the phone instead of having to guess
+    // whether a correction landed.
+    ingredientsPreview:
+      typeof data?.ingredients_text === "string"
+        ? data.ingredients_text.replace(/\s+/g, " ").trim().slice(0, 120)
+        : null,
   });
 }
