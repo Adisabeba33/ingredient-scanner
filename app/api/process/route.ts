@@ -157,7 +157,10 @@ async function handle(req: Request) {
   // Multi-language packaging: photographing the French/Spanish column instead of
   // the English one yields a list our catalog can't read a single word of. Never
   // store that as verified — send it back to be re-shot.
-  if (!/^english$/i.test(extraction.language.trim())) {
+  // Match loosely: the model may answer "English", "en", "English (US)" or
+  // "English/French" for a bilingual pack. Only refuse when the answer names no
+  // English at all — a strict equality check here would reject good captures.
+  if (!/\benglish\b|^en$/i.test(extraction.language.trim())) {
     return Response.json({
       ok: false,
       reason: "wrong-language",
