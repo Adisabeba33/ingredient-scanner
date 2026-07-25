@@ -18,6 +18,10 @@ import {
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
+import {
+  ConfirmDestructive,
+  isUnlocked,
+} from "@/components/ConfirmDestructive";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
@@ -150,6 +154,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const deletingRef = useRef(false);
   // Confirmation line after withdrawing a row from the shared catalog.
   const [catalogNote, setCatalogNote] = useState<string | null>(null);
+  const [confirmDelete, setConfirmDelete] = useState(false);
 
   const refreshQueue = useCallback(() => {
     listProducts()
@@ -278,6 +283,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   }, [dupWarning]);
 
   // Withdraw a bad verified row entirely (wrong language, wrong product).
+  // Irreversible, so it goes behind the password prompt.
   const deleteFromCatalog = useCallback(async () => {
     if (!dupWarning || deletingRef.current) return;
     deletingRef.current = true;
@@ -302,6 +308,14 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       deletingRef.current = false;
     }
   }, [dupWarning, adminToken]);
+
+  const requestDeleteFromCatalog = useCallback(() => {
+    if (isUnlocked()) {
+      void deleteFromCatalog();
+      return;
+    }
+    setConfirmDelete(true);
+  }, [deleteFromCatalog]);
 
   // ── Done / Skip ──────────────────────────────────────────────────────────────
   const canFinish = draft.barcodes.length > 0 && !!draft.photos.ingredients;
@@ -498,7 +512,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                   Re-capture (replaces it)
                 </button>
                 <button
-                  onClick={deleteFromCatalog}
+                  onClick={requestDeleteFromCatalog}
                   className="inline-flex h-9 items-center gap-1.5 rounded-input border border-lineStrong bg-surface px-3 text-[12px] font-medium text-risk-high transition active:scale-[0.98]"
                 >
                   <Trash2 size={13} strokeWidth={1.8} aria-hidden="true" />
@@ -781,6 +795,19 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           }
           onCapture={(url) => onPhoto(overlay.slot, url, overlay.productId)}
           onCancel={() => setOverlay(null)}
+        />
+      )}
+
+      {confirmDelete && dupWarning && (
+        <ConfirmDestructive
+          title="Delete from the catalog?"
+          body={`${dupWarning.code} will be removed from the shared catalog, along with its cached report. This can't be undone — the product has to be captured again.`}
+          confirmLabel="Delete"
+          onConfirm={() => {
+            setConfirmDelete(false);
+            void deleteFromCatalog();
+          }}
+          onCancel={() => setConfirmDelete(false)}
         />
       )}
 

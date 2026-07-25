@@ -2,6 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Search, Loader2, Trash2, Database } from "lucide-react";
+import {
+  ConfirmDestructive,
+  isUnlocked,
+} from "@/components/ConfirmDestructive";
 
 /**
  * See what's actually stored in the shared catalog, and remove a bad row.
@@ -67,6 +71,10 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
     return () => clearTimeout(t);
   }, [open, query, load]);
 
+  // Deleting is irreversible, so it goes through a password prompt unless one
+  // was entered in the last few minutes (see ConfirmDestructive).
+  const [pendingDelete, setPendingDelete] = useState<string | null>(null);
+
   const remove = useCallback(
     async (code: string) => {
       if (busyCode) return;
@@ -97,6 +105,19 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
       }
     },
     [adminToken, busyCode]
+  );
+
+  const requestRemove = useCallback(
+    (code: string) => {
+      // Recent password entry keeps a short window open, so cleaning up several
+      // rows doesn't mean re-typing it for each one.
+      if (isUnlocked()) {
+        void remove(code);
+        return;
+      }
+      setPendingDelete(code);
+    },
+    [remove]
   );
 
   return (
@@ -175,7 +196,7 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
                       </div>
                     </div>
                     <button
-                      onClick={() => remove(row.code)}
+                      onClick={() => requestRemove(row.code)}
                       disabled={busyCode === row.code}
                       aria-label={`Delete ${row.code} from the catalog`}
                       className="shrink-0 rounded-full p-1.5 text-risk-high transition active:scale-95 disabled:opacity-40"
@@ -195,6 +216,20 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
             </ul>
           )}
         </>
+      )}
+
+      {pendingDelete && (
+        <ConfirmDestructive
+          title="Delete from the catalog?"
+          body={`${pendingDelete} will be removed from the shared catalog, along with its cached report. This can't be undone — the product has to be captured again.`}
+          confirmLabel="Delete"
+          onConfirm={() => {
+            const code = pendingDelete;
+            setPendingDelete(null);
+            void remove(code);
+          }}
+          onCancel={() => setPendingDelete(null)}
+        />
       )}
     </section>
   );
