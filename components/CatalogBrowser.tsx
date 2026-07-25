@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Search, Loader2, Trash2, Database } from "lucide-react";
+import { Search, Loader2, Trash2, Database, Pencil } from "lucide-react";
 import {
   ConfirmDestructive,
   isUnlocked,
@@ -181,6 +181,76 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
   // Deleting is irreversible, so it goes through a password prompt unless one
   // was entered in the last few minutes (see ConfirmDestructive).
   const [pendingDelete, setPendingDelete] = useState<string | null>(null);
+  // Inline editing: which row is open, the draft values, and the save awaiting
+  // a password (edits go through the same gate as deletes).
+  const [editing, setEditing] = useState<string | null>(null);
+  const [draftName, setDraftName] = useState("");
+  const [draftText, setDraftText] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [pendingSave, setPendingSave] = useState(false);
+
+  const openEditor = useCallback((row: CatalogRow) => {
+    setEditing(row.code);
+    setDraftName(row.productName ?? "");
+    setDraftText(row.ingredientsText ?? "");
+    setNote(null);
+  }, []);
+
+  const save = useCallback(async () => {
+    if (!editing || saving) return;
+    setSaving(true);
+    setNote(null);
+    try {
+      const res = await fetch("/api/catalog/update", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({
+          code: editing,
+          productName: draftName,
+          ingredientsText: draftText,
+        }),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        message?: string;
+        error?: string;
+      };
+      if (!res.ok) {
+        setNote(data.message ?? data.error ?? "Couldn't save.");
+        return;
+      }
+      // Reflect the saved values without a refetch.
+      setRows((r) =>
+        r
+          ? r.map((x) =>
+              x.code === editing
+                ? {
+                    ...x,
+                    productName: draftName.trim() || null,
+                    ingredientsText: draftText.replace(/\s+/g, " ").trim(),
+                  }
+                : x
+            )
+          : r
+      );
+      setEditing(null);
+      setNote("Saved. The stored report was cleared so it rebuilds from this.");
+    } catch {
+      setNote("Couldn't save — check your connection.");
+    } finally {
+      setSaving(false);
+    }
+  }, [editing, saving, adminToken, draftName, draftText]);
+
+  const requestSave = useCallback(() => {
+    if (isUnlocked()) {
+      void save();
+      return;
+    }
+    setPendingSave(true);
+  }, [save]);
 
   const remove = useCallback(
     async (code: string) => {
@@ -370,34 +440,102 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
                         {row.code}
                       </div>
                     </div>
-                    <button
-                      onClick={() => requestRemove(row.code)}
-                      disabled={busyCode === row.code}
-                      aria-label={`Delete ${row.code} from the catalog`}
-                      className="shrink-0 rounded-full p-1.5 text-risk-high transition active:scale-95 disabled:opacity-40"
-                    >
-                      {busyCode === row.code ? (
-                        <Loader2 size={16} className="animate-spin" aria-hidden="true" />
-                      ) : (
-                        <Trash2 size={16} strokeWidth={1.8} aria-hidden="true" />
-                      )}
-                    </button>
+                    <div className="flex shrink-0 items-center gap-1">
+                      <button
+                        onClick={() =>
+                          editing === row.code ? setEditing(null) : openEditor(row)
+                        }
+                        aria-label={`Edit ${row.code}`}
+                        className="rounded-full p-1.5 text-muted transition active:scale-95"
+                      >
+                        <Pencil size={16} strokeWidth={1.8} aria-hidden="true" />
+                      </button>
+                      <button
+                        onClick={() => requestRemove(row.code)}
+                        disabled={busyCode === row.code}
+                        aria-label={`Delete ${row.code} from the catalog`}
+                        className="rounded-full p-1.5 text-risk-high transition active:scale-95 disabled:opacity-40"
+                      >
+                        {busyCode === row.code ? (
+                          <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+                        ) : (
+                          <Trash2 size={16} strokeWidth={1.8} aria-hidden="true" />
+                        )}
+                      </button>
+                    </div>
                   </div>
-                  <p
-                    className={`max-h-24 overflow-y-auto rounded px-2 py-1.5 text-[11px] leading-snug ${
-                      row.ingredientsText
-                        ? "bg-surface/70 text-muted"
-                        : "bg-amber-soft font-medium text-ink"
-                    }`}
-                  >
-                    {row.ingredientsText ||
-                      "No ingredients stored — re-capture this product."}
-                  </p>
+                  {editing === row.code ? (
+                    <div className="flex flex-col gap-2">
+                      <input
+                        value={draftName}
+                        onChange={(e) => setDraftName(e.target.value)}
+                        placeholder="Product name"
+                        aria-label="Product name"
+                        className="h-10 w-full rounded-input border border-lineStrong bg-surface px-3 text-[13px] text-ink outline-none focus:border-sage-400"
+                      />
+                      <textarea
+                        value={draftText}
+                        onChange={(e) => setDraftText(e.target.value)}
+                        rows={6}
+                        placeholder="Paste the ingredient list exactly as printed on the label"
+                        aria-label="Ingredients"
+                        className="w-full rounded-input border border-lineStrong bg-surface px-3 py-2 text-[12px] leading-snug text-ink outline-none focus:border-sage-400"
+                      />
+                      <p className="text-[11px] leading-snug text-faint">
+                        Type it as printed — don&apos;t translate or tidy it up.
+                        This is what the app reads as the real composition.
+                      </p>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setEditing(null)}
+                          className="h-10 flex-1 rounded-input border border-lineStrong bg-surface text-[13px] font-medium text-ink transition active:scale-[0.98]"
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          onClick={requestSave}
+                          disabled={saving}
+                          className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-input bg-sage-500 text-[13px] font-semibold text-white transition active:scale-[0.98] disabled:opacity-40"
+                        >
+                          {saving ? (
+                            <Loader2 size={15} className="animate-spin" aria-hidden="true" />
+                          ) : (
+                            "Save"
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <p
+                      className={`max-h-24 overflow-y-auto rounded px-2 py-1.5 text-[11px] leading-snug ${
+                        row.ingredientsText
+                          ? "bg-surface/70 text-muted"
+                          : "bg-amber-soft font-medium text-ink"
+                      }`}
+                    >
+                      {row.ingredientsText ||
+                        "No ingredients stored — tap the pencil to paste them, or re-capture."}
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>
           )}
         </>
+      )}
+
+      {pendingSave && (
+        <ConfirmDestructive
+          title="Save this change?"
+          body="This replaces what the app shows for this product, and clears its stored report so the analysis rebuilds from the new text."
+          confirmLabel="Save"
+          tone="normal"
+          onConfirm={() => {
+            setPendingSave(false);
+            void save();
+          }}
+          onCancel={() => setPendingSave(false)}
+        />
       )}
 
       {pendingDelete && (

@@ -39,12 +39,15 @@ export function ConfirmDestructive({
   title,
   body,
   confirmLabel,
+  tone = "danger",
   onConfirm,
   onCancel,
 }: {
   title: string;
   body: string;
   confirmLabel: string;
+  /** "danger" for deletes; "normal" for edits, which are recoverable. */
+  tone?: "danger" | "normal";
   onConfirm: () => void;
   onCancel: () => void;
 }) {
@@ -126,7 +129,9 @@ export function ConfirmDestructive({
           <button
             type="submit"
             disabled={!value.trim() || checking}
-            className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-input bg-risk-high text-[14px] font-semibold text-white transition active:scale-[0.98] disabled:opacity-40"
+            className={`inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-input text-[14px] font-semibold text-white transition active:scale-[0.98] disabled:opacity-40 ${
+              tone === "danger" ? "bg-risk-high" : "bg-sage-500"
+            }`}
           >
             {checking ? (
               <Loader2 size={16} className="animate-spin" aria-hidden="true" />
