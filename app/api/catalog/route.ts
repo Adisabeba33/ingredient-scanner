@@ -28,11 +28,26 @@ export async function POST(req: Request) {
     return Response.json({ error: "store_not_configured" }, { status: 501 });
   }
 
-  let body: { q?: unknown };
+  let body: { q?: unknown; countOnly?: unknown };
   try {
     body = await req.json();
   } catch {
     return Response.json({ error: "invalid_body" }, { status: 400 });
+  }
+
+  /** How many verified rows we hold, without transferring any of them. */
+  const countVerified = async () => {
+    const { count } = await admin
+      .from("barcode_cache")
+      .select("code", { count: "exact", head: true })
+      .eq("source", "verified");
+    return count ?? 0;
+  };
+
+  // The panel shows the catalog size before it's opened, so support asking for
+  // just the number rather than pulling 25 rows of ingredient text for it.
+  if (body.countOnly === true) {
+    return Response.json({ totalCodes: await countVerified(), results: [] });
   }
 
   const raw = typeof body.q === "string" ? body.q.trim() : "";
@@ -63,7 +78,11 @@ export async function POST(req: Request) {
     );
   }
 
+  // The catalog size, independent of the current search. Counts BARCODES,
+  // which is what a row is — one recipe legitimately has several (6/15/30 lb
+  // bags), so it isn't the same as a count of distinct products.
   return Response.json({
+    totalCodes: await countVerified(),
     results: (data ?? []).map((row) => ({
       code: row.code as string,
       productName: (row.product_name as string | null) ?? null,

@@ -31,6 +31,7 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState<CatalogRow[] | null>(null);
+  const [total, setTotal] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
   const [busyCode, setBusyCode] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
@@ -54,8 +55,12 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
           setRows([]);
           return;
         }
-        const data = (await res.json()) as { results?: CatalogRow[] };
+        const data = (await res.json()) as {
+          results?: CatalogRow[];
+          totalCodes?: number;
+        };
         setRows(data.results ?? []);
+        if (typeof data.totalCodes === "number") setTotal(data.totalCodes);
       } catch {
         if (seq === seqRef.current) setRows([]);
       } finally {
@@ -64,6 +69,31 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
     },
     [adminToken]
   );
+
+  // Show the catalog size straight away, without opening the panel.
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const res = await fetch("/api/catalog", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            "x-admin-token": adminToken,
+          },
+          body: JSON.stringify({ countOnly: true }),
+        });
+        if (!alive || !res.ok) return;
+        const data = (await res.json()) as { totalCodes?: number };
+        if (typeof data.totalCodes === "number") setTotal(data.totalCodes);
+      } catch {
+        /* offline — the counter just stays blank */
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [adminToken]);
 
   useEffect(() => {
     if (!open) return;
@@ -94,6 +124,7 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
         };
         if (res.ok && data.deleted) {
           setRows((r) => (r ? r.filter((x) => x.code !== code) : r));
+          setTotal((t) => (t === null ? t : Math.max(0, t - 1)));
           setNote(`Deleted ${code}. Capture it again to re-add it.`);
         } else {
           setNote(`Couldn't delete ${code}.`);
@@ -129,6 +160,11 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
         <span className="inline-flex items-center gap-2 text-[14px] font-semibold text-ink">
           <Database size={16} strokeWidth={1.8} aria-hidden="true" />
           Catalog
+          {total !== null && (
+            <span className="rounded-full bg-sage-100 px-2 py-0.5 text-[12px] font-semibold text-sage-600">
+              {total}
+            </span>
+          )}
         </span>
         <span className="text-[12px] font-medium text-faint">
           {open ? "Hide" : "Browse / fix"}
@@ -138,6 +174,14 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
       {open && (
         <>
           <p className="-mt-1 text-[12px] leading-relaxed text-muted">
+            {total !== null && (
+              <>
+                <span className="font-medium text-ink">
+                  {total} barcode{total === 1 ? "" : "s"} seeded
+                </span>{" "}
+                — one recipe can hold several (6/15/30 lb).{" "}
+              </>
+            )}
             What&apos;s actually stored right now. Check a product here before
             assuming a fix didn&apos;t work — this reads the database directly.
           </p>
