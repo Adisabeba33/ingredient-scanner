@@ -61,17 +61,22 @@ export async function POST(req: Request) {
 
   if (typeof body.ingredientsText === "string") {
     const text = body.ingredientsText.replace(/\s+/g, " ").trim();
-    if (text.length < MIN_INGREDIENTS) {
-      return Response.json(
-        {
-          error: "ingredients_too_short",
-          message: `Needs at least ${MIN_INGREDIENTS} characters — paste the whole list.`,
-        },
-        { status: 422 }
-      );
+    // Empty means "leave the composition alone" — otherwise fixing just the
+    // brand on a row that has no ingredients yet would be impossible. Clearing
+    // a composition isn't an edit anyone wants; deleting the row is.
+    if (text.length > 0) {
+      if (text.length < MIN_INGREDIENTS) {
+        return Response.json(
+          {
+            error: "ingredients_too_short",
+            message: `Needs at least ${MIN_INGREDIENTS} characters — paste the whole list.`,
+          },
+          { status: 422 }
+        );
+      }
+      patch.ingredients_text = text;
+      ingredientsChanged = true;
     }
-    patch.ingredients_text = text;
-    ingredientsChanged = true;
   }
   if (typeof body.productName === "string") {
     patch.product_name = body.productName.trim() || null;

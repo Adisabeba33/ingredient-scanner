@@ -200,6 +200,7 @@ export function CatalogBrowser({
   // a password (edits go through the same gate as deletes).
   const [editing, setEditing] = useState<string | null>(null);
   const [draftName, setDraftName] = useState("");
+  const [draftBrands, setDraftBrands] = useState("");
   const [draftText, setDraftText] = useState("");
   const [saving, setSaving] = useState(false);
   const [pendingSave, setPendingSave] = useState(false);
@@ -207,6 +208,7 @@ export function CatalogBrowser({
   const openEditor = useCallback((row: CatalogRow) => {
     setEditing(row.code);
     setDraftName(row.productName ?? "");
+    setDraftBrands(row.brands ?? "");
     setDraftText(row.ingredientsText ?? "");
     setNote(null);
   }, []);
@@ -225,6 +227,7 @@ export function CatalogBrowser({
         body: JSON.stringify({
           code: editing,
           productName: draftName,
+          brands: draftBrands,
           ingredientsText: draftText,
         }),
       });
@@ -244,6 +247,7 @@ export function CatalogBrowser({
                 ? {
                     ...x,
                     productName: draftName.trim() || null,
+                    brands: draftBrands.trim() || null,
                     ingredientsText: draftText.replace(/\s+/g, " ").trim(),
                   }
                 : x
@@ -251,13 +255,17 @@ export function CatalogBrowser({
           : r
       );
       setEditing(null);
-      setNote("Saved. The stored report was cleared so it rebuilds from this.");
+      setNote(
+        draftText.trim()
+          ? "Saved. The stored report was cleared so it rebuilds from this."
+          : "Saved."
+      );
     } catch {
       setNote("Couldn't save — check your connection.");
     } finally {
       setSaving(false);
     }
-  }, [editing, saving, adminToken, draftName, draftText]);
+  }, [editing, saving, adminToken, draftName, draftBrands, draftText]);
 
   const requestSave = useCallback(() => {
     if (isUnlocked()) {
@@ -488,6 +496,13 @@ export function CatalogBrowser({
                   </div>
                   {editing === row.code ? (
                     <div className="flex flex-col gap-2">
+                      <input
+                        value={draftBrands}
+                        onChange={(e) => setDraftBrands(e.target.value)}
+                        placeholder="Brand (e.g. Weruva)"
+                        aria-label="Brand"
+                        className="h-10 w-full rounded-input border border-lineStrong bg-surface px-3 text-[13px] text-ink outline-none focus:border-sage-400"
+                      />
                       <input
                         value={draftName}
                         onChange={(e) => setDraftName(e.target.value)}
