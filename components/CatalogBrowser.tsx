@@ -27,7 +27,7 @@ interface CatalogRow {
 
 const DEBOUNCE_MS = 300;
 
-type Filter = "no-ingredients" | "no-report" | null;
+type Filter = "no-ingredients" | "no-name" | "no-report" | null;
 
 /** A tappable count — "No ingredients 2" narrows the list to exactly those. */
 function FilterChip({
@@ -72,6 +72,7 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
   // The gaps worth chasing, and which one the list is narrowed to.
   const [stats, setStats] = useState<{
     noIngredients: number;
+    noName: number;
     noReport: number;
     truncated: boolean;
   } | null>(null);
@@ -158,11 +159,13 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
       if (!res.ok) return;
       const data = (await res.json()) as {
         noIngredients?: number;
+        noName?: number;
         noReport?: number;
         truncated?: boolean;
       };
       setStats({
         noIngredients: data.noIngredients ?? 0,
+        noName: data.noName ?? 0,
         noReport: data.noReport ?? 0,
         truncated: !!data.truncated,
       });
@@ -281,6 +284,15 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
                 }
               />
               <FilterChip
+                label="No name"
+                count={stats.noName}
+                warn
+                active={filter === "no-name"}
+                onClick={() =>
+                  setFilter((f) => (f === "no-name" ? null : "no-name"))
+                }
+              />
+              <FilterChip
                 label="No report"
                 count={stats.noReport}
                 warn
@@ -331,9 +343,11 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
             <p className="text-[12px] text-muted">
               {filter === "no-ingredients"
                 ? "Every product has its ingredients. Nothing to fix."
-                : filter === "no-report"
-                  ? "Every product has a report."
-                  : "Nothing matches that."}
+                : filter === "no-name"
+                  ? "Every product has a name."
+                  : filter === "no-report"
+                    ? "Every product has a report."
+                    : "Nothing matches that."}
             </p>
           )}
 

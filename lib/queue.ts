@@ -26,6 +26,20 @@ export interface PendingProduct {
     nutrition?: string;
   };
   createdAt: number;
+  /**
+   * Why this product last failed to process. Kept ON the queued product (not
+   * just in the post-run summary, which dies with the page) so that after a
+   * reload you can still see which captures need re-shooting and why.
+   * Cleared when the product processes successfully — at which point it leaves
+   * the queue anyway.
+   */
+  lastError?: {
+    /** Server reason, e.g. "unreadable-ingredients", "wrong-language". */
+    reason: string;
+    /** Extra detail, e.g. the language that was read instead of English. */
+    message?: string;
+    at: number;
+  };
 }
 
 const DB_NAME = "catalog-scanner";
@@ -116,7 +130,9 @@ export async function countProducts(): Promise<number> {
  */
 export async function updateProduct(
   id: string,
-  patch: Partial<Pick<PendingProduct, "barcodes" | "mode" | "photos">>
+  patch: Partial<
+    Pick<PendingProduct, "barcodes" | "mode" | "photos" | "lastError">
+  >
 ): Promise<void> {
   const db = await openDb();
   await new Promise<void>((resolve, reject) => {

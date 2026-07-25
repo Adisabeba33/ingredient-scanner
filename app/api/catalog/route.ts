@@ -95,7 +95,9 @@ export async function POST(req: Request) {
   }
 
   const filter =
-    body.filter === "no-ingredients" || body.filter === "no-report"
+    body.filter === "no-ingredients" ||
+    body.filter === "no-report" ||
+    body.filter === "no-name"
       ? body.filter
       : null;
 
@@ -103,7 +105,7 @@ export async function POST(req: Request) {
   const scanAll = async () => {
     const { data } = await admin
       .from("barcode_cache")
-      .select("code, mode, ingredients_text")
+      .select("code, mode, ingredients_text, product_name")
       .eq("source", "verified")
       .order("created_at", { ascending: false })
       .limit(STATS_SCAN_CAP + 1);
@@ -137,10 +139,16 @@ export async function POST(req: Request) {
         !r.ingredients_text ||
         String(r.ingredients_text).trim().length < MIN_INGREDIENTS
     ).length;
+    // No product name means the brand photo never read — the composition is
+    // usable but the product is unnamed in search and reports.
+    const noName = rows.filter(
+      (r) => !r.product_name || !String(r.product_name).trim()
+    ).length;
     const missingReport = await codesMissingReport(admin, rows);
     return Response.json({
       totalCodes: rows.length,
       noIngredients,
+      noName,
       noReport: missingReport.size,
       truncated,
       results: [],
@@ -158,16 +166,21 @@ export async function POST(req: Request) {
   let restrictToCodes: string[] | null = null;
   if (filter) {
     const { rows } = await scanAll();
-    restrictToCodes =
-      filter === "no-ingredients"
-        ? rows
-            .filter(
-              (r) =>
-                !r.ingredients_text ||
-                String(r.ingredients_text).trim().length < MIN_INGREDIENTS
-            )
-            .map((r) => r.code as string)
-        : [...(await codesMissingReport(admin, rows))];
+    if (filter === "no-ingredients") {
+      restrictToCodes = rows
+        .filter(
+          (r) =>
+            !r.ingredients_text ||
+            String(r.ingredients_text).trim().length < MIN_INGREDIENTS
+        )
+        .map((r) => r.code as string);
+    } else if (filter === "no-name") {
+      restrictToCodes = rows
+        .filter((r) => !r.product_name || !String(r.product_name).trim())
+        .map((r) => r.code as string);
+    } else {
+      restrictToCodes = [...(await codesMissingReport(admin, rows))];
+    }
     if (restrictToCodes.length === 0) {
       return Response.json({ totalCodes: await countVerified(), results: [] });
     }

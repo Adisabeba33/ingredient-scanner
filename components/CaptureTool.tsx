@@ -70,6 +70,27 @@ const MODE_LABELS: Record<CaptureMode, string> = {
   cosmetics: "Cosmetics",
 };
 
+type QueueFilter = "ingredients" | "brand" | null;
+
+/**
+ * Failures that mean the INGREDIENTS photo needs re-shooting, as opposed to a
+ * transient network/server problem where the same photo would work on a retry.
+ */
+const INGREDIENT_FAILURES = new Set([
+  "unreadable-ingredients",
+  "wrong-language",
+  "no-ingredients-photo",
+]);
+
+function needsIngredientsRedo(p: PendingProduct): boolean {
+  return !!p.lastError && INGREDIENT_FAILURES.has(p.lastError.reason);
+}
+
+/** The brand photo is optional, but without it a product lands with no name. */
+function needsBrandPhoto(p: PendingProduct): boolean {
+  return !p.photos.brand;
+}
+
 interface ProcessOutcome {
   id: string;
   barcodes: string[];
@@ -155,6 +176,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   // Confirmation line after withdrawing a row from the shared catalog.
   const [catalogNote, setCatalogNote] = useState<string | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [queueFilter, setQueueFilter] = useState<QueueFilter>(null);
 
   const refreshQueue = useCallback(() => {
     listProducts()
@@ -250,6 +272,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         if (!item) return;
         await updateProduct(productId, {
           photos: { ...item.photos, [slot]: dataUrl },
+          // The capture just changed, so the previous failure no longer
+          // describes it — clear it rather than leave a stale warning.
+          lastError: undefined,
         });
         refreshQueue();
         return;
@@ -428,6 +453,21 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           reason: "network",
         };
       }
+      // Remember the failure on the product itself. The summary below is lost
+      // on reload; this isn't, so tomorrow you still know what needs re-shooting.
+      if (!outcome.ok) {
+        try {
+          await updateProduct(item.id, {
+            lastError: {
+              reason: outcome.reason ?? "unknown",
+              message: outcome.message,
+              at: Date.now(),
+            },
+          });
+        } catch {
+          /* the outcome list still shows it for this run */
+        }
+      }
       results.push(outcome);
       setProgress({ done: i + 1, total: items.length });
     }
@@ -440,6 +480,15 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
 
   const succeeded = outcomes?.filter((o) => o.ok).length ?? 0;
   const failed = outcomes?.filter((o) => !o.ok) ?? [];
+
+  const failedIngredients = queue.filter(needsIngredientsRedo).length;
+  const missingBrand = queue.filter(needsBrandPhoto).length;
+  const visibleQueue =
+    queueFilter === "ingredients"
+      ? queue.filter(needsIngredientsRedo)
+      : queueFilter === "brand"
+        ? queue.filter(needsBrandPhoto)
+        : queue;
 
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-5 px-4 pb-[calc(env(safe-area-inset-bottom)_+_7rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
@@ -654,8 +703,46 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             Tap a photo to re-shoot or re-upload it. Nothing is sent until you
             process the queue.
           </p>
+
+          {/* What still needs attention here. Failures survive a reload, so a
+              product that didn't go through stays findable. */}
+          {(failedIngredients > 0 || missingBrand > 0) && (
+            <div className="flex flex-wrap gap-2">
+              <QueueChip
+                label="All"
+                count={queue.length}
+                active={queueFilter === null}
+                onClick={() => setQueueFilter(null)}
+              />
+              {failedIngredients > 0 && (
+                <QueueChip
+                  label="Ingredients failed"
+                  count={failedIngredients}
+                  warn
+                  active={queueFilter === "ingredients"}
+                  onClick={() =>
+                    setQueueFilter((f) =>
+                      f === "ingredients" ? null : "ingredients"
+                    )
+                  }
+                />
+              )}
+              {missingBrand > 0 && (
+                <QueueChip
+                  label="No brand photo"
+                  count={missingBrand}
+                  warn
+                  active={queueFilter === "brand"}
+                  onClick={() =>
+                    setQueueFilter((f) => (f === "brand" ? null : "brand"))
+                  }
+                />
+              )}
+            </div>
+          )}
+
           <ul className="flex flex-col gap-3">
-            {queue.map((item, i) => (
+            {visibleQueue.map((item, i) => (
               <li
                 key={item.id}
                 className="flex flex-col gap-2 rounded-input bg-surfaceSoft p-3"
@@ -677,6 +764,25 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                     <Trash2 size={16} strokeWidth={1.8} aria-hidden="true" />
                   </button>
                 </div>
+
+                {/* Why the last run rejected it — persisted, so it's still here
+                    after a reload. Tap the photo below to redo it. */}
+                {item.lastError && (
+                  <div className="flex items-start gap-1.5 rounded bg-amber-soft px-2 py-1.5">
+                    <AlertTriangle
+                      size={13}
+                      strokeWidth={1.8}
+                      className="mt-0.5 shrink-0 text-amber"
+                      aria-hidden="true"
+                    />
+                    <span className="text-[11px] leading-snug text-ink">
+                      {REASON_LABEL[item.lastError.reason] ??
+                        item.lastError.reason}
+                      {item.lastError.message ? ` · ${item.lastError.message}` : ""}
+                    </span>
+                  </div>
+                )}
+
                 <div className="flex gap-2">
                   <QueueThumb
                     label="Brand"
@@ -822,6 +928,38 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           : ""}
       </footer>
     </main>
+  );
+}
+
+/** A tappable count that narrows the queue to the captures needing work. */
+function QueueChip({
+  label,
+  count,
+  active,
+  warn,
+  onClick,
+}: {
+  label: string;
+  count: number;
+  active: boolean;
+  warn?: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={active}
+      className={`inline-flex h-8 items-center gap-1.5 rounded-full border px-3 text-[12px] font-medium transition active:scale-[0.98] ${
+        active
+          ? "border-ink bg-ink text-white"
+          : warn
+            ? "border-amber bg-amber-soft text-ink"
+            : "border-line bg-surface text-muted"
+      }`}
+    >
+      {label}
+      <span className={active ? "opacity-80" : "font-semibold"}>{count}</span>
+    </button>
   );
 }
 
