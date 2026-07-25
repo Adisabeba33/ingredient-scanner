@@ -173,6 +173,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
 
   const flashRef = useRef(false);
   const deletingRef = useRef(false);
+  const captureCardRef = useRef<HTMLElement>(null);
   // Confirmation line after withdrawing a row from the shared catalog.
   const [catalogNote, setCatalogNote] = useState<string | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -333,6 +334,29 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       deletingRef.current = false;
     }
   }, [dupWarning, adminToken]);
+
+  /**
+   * Re-shoot a product that's already in the catalog. Loads its barcode into the
+   * capture card so the next photos are read fresh by the model; processing
+   * upserts on that code, so the new reading replaces the stored row. This is
+   * the fix for a misread the photos can correct — a brand that came back
+   * "Veruva" instead of "Weruva" — without hunting for the physical barcode.
+   */
+  const recaptureFromCatalog = useCallback(
+    (code: string, productName: string | null) => {
+      setDraft({ barcodes: [code], photos: {} });
+      setDupWarning(null);
+      setOutcomes(null);
+      setCatalogNote(
+        `Re-shooting ${productName || code}. Take the photos below, then Process all — it replaces the stored row.`
+      );
+      captureCardRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    },
+    []
+  );
 
   const requestDeleteFromCatalog = useCallback(() => {
     if (isUnlocked()) {
@@ -594,7 +618,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       )}
 
       {/* Current product card */}
-      <section className="card flex flex-col gap-4 p-4">
+      <section ref={captureCardRef} className="card flex flex-col gap-4 p-4">
         <div className="flex items-center justify-between">
           <h2 className="text-[14px] font-semibold text-ink">Current product</h2>
           {(draft.barcodes.length > 0 ||
@@ -918,7 +942,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       )}
 
       {/* What's actually in the shared catalog — inspect and fix. */}
-      <CatalogBrowser adminToken={adminToken} />
+      <CatalogBrowser
+        adminToken={adminToken}
+        onRecapture={recaptureFromCatalog}
+      />
 
       {/* Version — confirm a redeploy actually landed. */}
       <footer className="mt-auto pt-2 text-center text-[11px] text-faint">

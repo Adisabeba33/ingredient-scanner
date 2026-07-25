@@ -1,7 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Search, Loader2, Trash2, Database, Pencil } from "lucide-react";
+import {
+  Search,
+  Loader2,
+  Trash2,
+  Database,
+  Pencil,
+  Camera,
+} from "lucide-react";
 import {
   ConfirmDestructive,
   isUnlocked,
@@ -63,7 +70,15 @@ function FilterChip({
   );
 }
 
-export function CatalogBrowser({ adminToken }: { adminToken: string }) {
+export function CatalogBrowser({
+  adminToken,
+  onRecapture,
+}: {
+  adminToken: string;
+  /** Start a fresh capture for a product already in the catalog, so new photos
+   *  are read by the model and overwrite the stored row. */
+  onRecapture: (code: string, productName: string | null) => void;
+}) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState<CatalogRow[] | null>(null);
@@ -441,6 +456,13 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
                       </div>
                     </div>
                     <div className="flex shrink-0 items-center gap-1">
+                      <button
+                        onClick={() => onRecapture(row.code, row.productName)}
+                        aria-label={`Re-shoot the photos for ${row.code}`}
+                        className="rounded-full p-1.5 text-sage-600 transition active:scale-95"
+                      >
+                        <Camera size={16} strokeWidth={1.8} aria-hidden="true" />
+                      </button>
                       <button
                         onClick={() =>
                           editing === row.code ? setEditing(null) : openEditor(row)
