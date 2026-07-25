@@ -27,18 +27,61 @@ interface CatalogRow {
 
 const DEBOUNCE_MS = 300;
 
+type Filter = "no-ingredients" | "no-report" | null;
+
+/** A tappable count — "No ingredients 2" narrows the list to exactly those. */
+function FilterChip({
+  label,
+  count,
+  active,
+  warn,
+  onClick,
+}: {
+  label: string;
+  count: number;
+  active: boolean;
+  warn?: boolean;
+  onClick: () => void;
+}) {
+  // A zero gap is good news, not something to chase — show it calm, not amber.
+  const highlight = warn && count > 0;
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={active}
+      className={`inline-flex h-8 items-center gap-1.5 rounded-full border px-3 text-[12px] font-medium transition active:scale-[0.98] ${
+        active
+          ? "border-ink bg-ink text-white"
+          : highlight
+            ? "border-amber bg-amber-soft text-ink"
+            : "border-line bg-surface text-muted"
+      }`}
+    >
+      {label}
+      <span className={active ? "opacity-80" : "font-semibold"}>{count}</span>
+    </button>
+  );
+}
+
 export function CatalogBrowser({ adminToken }: { adminToken: string }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState<CatalogRow[] | null>(null);
   const [total, setTotal] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
+  // The gaps worth chasing, and which one the list is narrowed to.
+  const [stats, setStats] = useState<{
+    noIngredients: number;
+    noReport: number;
+    truncated: boolean;
+  } | null>(null);
+  const [filter, setFilter] = useState<Filter>(null);
   const [busyCode, setBusyCode] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
   const seqRef = useRef(0);
 
   const load = useCallback(
-    async (q: string) => {
+    async (q: string, f: Filter) => {
       setLoading(true);
       const seq = ++seqRef.current;
       try {
@@ -48,7 +91,7 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
             "content-type": "application/json",
             "x-admin-token": adminToken,
           },
-          body: JSON.stringify({ q }),
+          body: JSON.stringify({ q, filter: f }),
         });
         if (seq !== seqRef.current) return;
         if (!res.ok) {
@@ -97,9 +140,40 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
 
   useEffect(() => {
     if (!open) return;
-    const t = setTimeout(() => void load(query.trim()), DEBOUNCE_MS);
+    const t = setTimeout(() => void load(query.trim(), filter), DEBOUNCE_MS);
     return () => clearTimeout(t);
-  }, [open, query, load]);
+  }, [open, query, filter, load]);
+
+  // Gap counts, refreshed whenever the panel is opened.
+  const loadStats = useCallback(async () => {
+    try {
+      const res = await fetch("/api/catalog", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({ stats: true }),
+      });
+      if (!res.ok) return;
+      const data = (await res.json()) as {
+        noIngredients?: number;
+        noReport?: number;
+        truncated?: boolean;
+      };
+      setStats({
+        noIngredients: data.noIngredients ?? 0,
+        noReport: data.noReport ?? 0,
+        truncated: !!data.truncated,
+      });
+    } catch {
+      /* offline — chips just don't appear */
+    }
+  }, [adminToken]);
+
+  useEffect(() => {
+    if (open) void loadStats();
+  }, [open, loadStats]);
 
   // Deleting is irreversible, so it goes through a password prompt unless one
   // was entered in the last few minutes (see ConfirmDestructive).
@@ -186,6 +260,43 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
             assuming a fix didn&apos;t work — this reads the database directly.
           </p>
 
+          {/* Gaps worth chasing — tap one to list exactly those products. */}
+          {stats && (
+            <div className="flex flex-wrap gap-2">
+              <FilterChip
+                label="All"
+                count={total ?? 0}
+                active={filter === null}
+                onClick={() => setFilter(null)}
+              />
+              <FilterChip
+                label="No ingredients"
+                count={stats.noIngredients}
+                warn
+                active={filter === "no-ingredients"}
+                onClick={() =>
+                  setFilter((f) =>
+                    f === "no-ingredients" ? null : "no-ingredients"
+                  )
+                }
+              />
+              <FilterChip
+                label="No report"
+                count={stats.noReport}
+                warn
+                active={filter === "no-report"}
+                onClick={() =>
+                  setFilter((f) => (f === "no-report" ? null : "no-report"))
+                }
+              />
+            </div>
+          )}
+          {stats?.truncated && (
+            <p className="text-[11px] text-faint">
+              Counts cover the most recent 2,000 barcodes.
+            </p>
+          )}
+
           <div className="relative">
             <Search
               size={15}
@@ -217,7 +328,13 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
           )}
 
           {rows !== null && rows.length === 0 && !loading && (
-            <p className="text-[12px] text-muted">Nothing matches that.</p>
+            <p className="text-[12px] text-muted">
+              {filter === "no-ingredients"
+                ? "Every product has its ingredients. Nothing to fix."
+                : filter === "no-report"
+                  ? "Every product has a report."
+                  : "Nothing matches that."}
+            </p>
           )}
 
           {rows !== null && rows.length > 0 && (
@@ -252,8 +369,15 @@ export function CatalogBrowser({ adminToken }: { adminToken: string }) {
                       )}
                     </button>
                   </div>
-                  <p className="max-h-24 overflow-y-auto rounded bg-surface/70 px-2 py-1.5 text-[11px] leading-snug text-muted">
-                    {row.ingredientsText || "(no ingredients stored)"}
+                  <p
+                    className={`max-h-24 overflow-y-auto rounded px-2 py-1.5 text-[11px] leading-snug ${
+                      row.ingredientsText
+                        ? "bg-surface/70 text-muted"
+                        : "bg-amber-soft font-medium text-ink"
+                    }`}
+                  >
+                    {row.ingredientsText ||
+                      "No ingredients stored — re-capture this product."}
                   </p>
                 </li>
               ))}
