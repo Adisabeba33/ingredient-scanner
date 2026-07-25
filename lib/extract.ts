@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { isUsableIngredients } from "@/lib/ingredients-text";
 
 /**
  * Read a pet-food label from photos with Claude vision.
@@ -185,9 +186,11 @@ export async function extractLabel({
         ? parsed.brands.trim()
         : null,
     ingredients_text: ingredientsText,
-    // Trust the model's own flag, but never call a too-short list readable.
+    // Trust the model's own flag, but never call a stub readable. Length is not
+    // the test — plenty of products list a single short item ("Black Tea").
     ingredients_readable:
-      parsed.ingredients_readable === true && ingredientsText.length >= 12,
+      parsed.ingredients_readable === true &&
+      isUsableIngredients(ingredientsText),
     language:
       typeof parsed.language === "string" && parsed.language.trim()
         ? parsed.language.trim()

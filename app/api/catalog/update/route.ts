@@ -1,6 +1,7 @@
 import { sanitizeBarcode, canonicalBarcode } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
+import { isUsableIngredients } from "@/lib/ingredients-text";
 
 /**
  * Edit a catalog row by hand.
@@ -21,9 +22,6 @@ import { allReportCacheKeys } from "@/lib/report-cache-key";
  */
 
 export const runtime = "nodejs";
-
-/** Shorter than this isn't a composition — refuse rather than store a stub. */
-const MIN_INGREDIENTS = 12;
 
 export async function POST(req: Request) {
   const adminToken = process.env.ADMIN_TOKEN;
@@ -65,11 +63,12 @@ export async function POST(req: Request) {
     // brand on a row that has no ingredients yet would be impossible. Clearing
     // a composition isn't an edit anyone wants; deleting the row is.
     if (text.length > 0) {
-      if (text.length < MIN_INGREDIENTS) {
+      if (!isUsableIngredients(text)) {
         return Response.json(
           {
             error: "ingredients_too_short",
-            message: `Needs at least ${MIN_INGREDIENTS} characters — paste the whole list.`,
+            message:
+              "That doesn't look like an ingredient list — paste it as printed.",
           },
           { status: 422 }
         );

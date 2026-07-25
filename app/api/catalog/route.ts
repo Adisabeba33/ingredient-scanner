@@ -1,6 +1,7 @@
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { reportCacheKey, type ReportMode } from "@/lib/report-cache-key";
+import { isUsableIngredients } from "@/lib/ingredients-text";
 
 /**
  * Browse what's actually in the shared catalog, and find its gaps.
@@ -20,9 +21,6 @@ import { reportCacheKey, type ReportMode } from "@/lib/report-cache-key";
 export const runtime = "nodejs";
 
 const LIMIT = 25;
-
-/** A stored list shorter than this isn't a real composition. */
-const MIN_INGREDIENTS = 12;
 
 /**
  * Upper bound on rows scanned when computing stats. The report check can't be
@@ -136,8 +134,7 @@ export async function POST(req: Request) {
     const { rows, truncated } = await scanAll();
     const noIngredients = rows.filter(
       (r) =>
-        !r.ingredients_text ||
-        String(r.ingredients_text).trim().length < MIN_INGREDIENTS
+        !isUsableIngredients(r.ingredients_text as string | null)
     ).length;
     // No product name means the brand photo never read — the composition is
     // usable but the product is unnamed in search and reports.
@@ -168,11 +165,7 @@ export async function POST(req: Request) {
     const { rows } = await scanAll();
     if (filter === "no-ingredients") {
       restrictToCodes = rows
-        .filter(
-          (r) =>
-            !r.ingredients_text ||
-            String(r.ingredients_text).trim().length < MIN_INGREDIENTS
-        )
+        .filter((r) => !isUsableIngredients(r.ingredients_text as string | null))
         .map((r) => r.code as string);
     } else if (filter === "no-name") {
       restrictToCodes = rows

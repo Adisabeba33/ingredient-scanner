@@ -6,6 +6,7 @@ import {
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { extractLabel } from "@/lib/extract";
 import { reportCacheKey } from "@/lib/report-cache-key";
+import { isUsableIngredients } from "@/lib/ingredients-text";
 
 /**
  * Process ONE captured product: read its label photos with Claude vision and
@@ -144,7 +145,10 @@ async function handle(req: Request) {
   }
 
   // The ingredients photo didn't read cleanly → report it, write nothing.
-  if (!extraction.ingredients_readable || extraction.ingredients_text.length < 12) {
+  if (
+    !extraction.ingredients_readable ||
+    !isUsableIngredients(extraction.ingredients_text)
+  ) {
     return Response.json({
       ok: false,
       reason: "unreadable-ingredients",
