@@ -187,12 +187,25 @@ async function handle(req: Request) {
 
   // verified is the top-ranked source, so upserting on `code` always wins and a
   // re-run is an idempotent refresh — never buries a better row.
-  const { error } = await admin
+  // Select the rows back so "written" reflects what the database actually
+  // holds, rather than merely "the call didn't error".
+  const { data: written, error } = await admin
     .from("barcode_cache")
-    .upsert(rows, { onConflict: "code" });
+    .upsert(rows, { onConflict: "code" })
+    .select("code");
   if (error) {
     return Response.json(
       { ok: false, reason: "write_failed", message: error.message },
+      { status: 500 }
+    );
+  }
+  if (!written || written.length === 0) {
+    return Response.json(
+      {
+        ok: false,
+        reason: "write_failed",
+        message: "The upsert reported no rows — nothing was stored.",
+      },
       { status: 500 }
     );
   }

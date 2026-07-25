@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
+import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
@@ -782,6 +783,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           onCancel={() => setOverlay(null)}
         />
       )}
+
+      {/* What's actually in the shared catalog — inspect and fix. */}
+      <CatalogBrowser adminToken={adminToken} />
 
       {/* Version — confirm a redeploy actually landed. */}
       <footer className="mt-auto pt-2 text-center text-[11px] text-faint">
