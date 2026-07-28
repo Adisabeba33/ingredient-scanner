@@ -13,6 +13,7 @@ import {
   ConfirmDestructive,
   isUnlocked,
 } from "@/components/ConfirmDestructive";
+import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
 
 /**
  * See what's actually stored in the shared catalog, and remove a bad row.
@@ -29,8 +30,43 @@ interface CatalogRow {
   productName: string | null;
   brands: string | null;
   mode: string | null;
+  /** Which animal the pack is for. Null on rows captured before we read it. */
+  species: string | null;
   ingredientsText: string | null;
 }
+
+/**
+ * The species is the one field a reader can't check by eye against the stored
+ * text, and it decides the whole report — so show it on every pet row,
+ * including when it's missing. An unmarked cat food gets a species-neutral
+ * report, which is exactly the mixing we set out to remove.
+ */
+function SpeciesChip({ species }: { species: string | null }) {
+  const known = isPetSpecies(species) && species !== "unknown";
+  const text = known
+    ? species === "cat"
+      ? "Cat"
+      : species === "dog"
+        ? "Dog"
+        : "Cat & dog"
+    : "Species?";
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+        known ? "bg-sage-100 text-sage-600" : "bg-amber-soft text-ink"
+      }`}
+    >
+      {text}
+    </span>
+  );
+}
+
+const SPECIES_CHOICES: { value: PetSpecies; label: string }[] = [
+  { value: "cat", label: "Cat" },
+  { value: "dog", label: "Dog" },
+  { value: "both", label: "Both" },
+  { value: "unknown", label: "Not stated" },
+];
 
 const DEBOUNCE_MS = 300;
 
@@ -215,6 +251,7 @@ export function CatalogBrowser({
   const [draftName, setDraftName] = useState("");
   const [draftBrands, setDraftBrands] = useState("");
   const [draftText, setDraftText] = useState("");
+  const [draftSpecies, setDraftSpecies] = useState<PetSpecies>("unknown");
   const [saving, setSaving] = useState(false);
   const [pendingSave, setPendingSave] = useState(false);
 
@@ -223,6 +260,7 @@ export function CatalogBrowser({
     setDraftName(row.productName ?? "");
     setDraftBrands(row.brands ?? "");
     setDraftText(row.ingredientsText ?? "");
+    setDraftSpecies(isPetSpecies(row.species) ? row.species : "unknown");
     setNote(null);
   }, []);
 
@@ -242,6 +280,7 @@ export function CatalogBrowser({
           productName: draftName,
           brands: draftBrands,
           ingredientsText: draftText,
+          species: draftSpecies,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -261,6 +300,7 @@ export function CatalogBrowser({
                     ...x,
                     productName: draftName.trim() || null,
                     brands: draftBrands.trim() || null,
+                    species: draftSpecies,
                     ingredientsText: draftText.replace(/\s+/g, " ").trim(),
                   }
                 : x
@@ -278,7 +318,15 @@ export function CatalogBrowser({
     } finally {
       setSaving(false);
     }
-  }, [editing, saving, adminToken, draftName, draftBrands, draftText]);
+  }, [
+    editing,
+    saving,
+    adminToken,
+    draftName,
+    draftBrands,
+    draftText,
+    draftSpecies,
+  ]);
 
   const requestSave = useCallback(() => {
     if (isUnlocked()) {
@@ -469,8 +517,11 @@ export function CatalogBrowser({
                       <div className="truncate text-[13px] font-semibold text-ink">
                         {row.productName || "Unnamed product"}
                       </div>
-                      <div className="truncate text-[12px] text-muted">
-                        {row.brands || "—"}
+                      <div className="flex items-center gap-1.5 text-[12px] text-muted">
+                        <span className="truncate">{row.brands || "—"}</span>
+                        {row.mode === "pet" && (
+                          <SpeciesChip species={row.species} />
+                        )}
                       </div>
                       <div className="font-mono text-[11px] text-faint">
                         {row.code}
@@ -531,6 +582,33 @@ export function CatalogBrowser({
                         aria-label="Product name"
                         className="h-10 w-full rounded-input border border-lineStrong bg-surface px-3 text-[13px] text-ink outline-none focus:border-sage-400"
                       />
+                      {row.mode === "pet" && (
+                        <div className="flex flex-col gap-1">
+                          <span className="text-[11px] font-medium text-muted">
+                            This food is for
+                          </span>
+                          <div className="flex gap-1.5">
+                            {SPECIES_CHOICES.map((c) => (
+                              <button
+                                key={c.value}
+                                onClick={() => setDraftSpecies(c.value)}
+                                aria-pressed={draftSpecies === c.value}
+                                className={`h-9 flex-1 rounded-input border text-[12px] font-medium transition active:scale-[0.98] ${
+                                  draftSpecies === c.value
+                                    ? "border-ink bg-ink text-white"
+                                    : "border-lineStrong bg-surface text-ink"
+                                }`}
+                              >
+                                {c.label}
+                              </button>
+                            ))}
+                          </div>
+                          <span className="text-[11px] leading-snug text-faint">
+                            Decides who the app writes the report for — a cat
+                            food is never judged against a dog&apos;s diet.
+                          </span>
+                        </div>
+                      )}
                       <textarea
                         value={draftText}
                         onChange={(e) => setDraftText(e.target.value)}

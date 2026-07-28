@@ -37,6 +37,8 @@ interface VerifiedRow {
   found: true;
   source: "verified";
   mode: ScanMode;
+  /** Pet products: which animal it's for, so the report addresses only that one. */
+  species: string | null;
   ingredients_text: string;
   product_name: string | null;
   brands: string | null;
@@ -225,6 +227,8 @@ async function handle(req: Request) {
     ingredients_text: extraction.ingredients_text,
     product_name: extraction.product_name,
     brands: extraction.brands,
+    // Only meaningful for pet food; human/cosmetic products have no species.
+    species: mode === "pet" ? extraction.species : null,
     image_url: null,
     reason: null,
     created_at: now,
@@ -278,6 +282,7 @@ async function handle(req: Request) {
     reports_cleared: reportsCleared,
     product_name: extraction.product_name,
     brands: extraction.brands,
+    species: mode === "pet" ? extraction.species : null,
     ingredients_text: extraction.ingredients_text,
     usage,
   });

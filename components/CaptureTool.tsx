@@ -95,9 +95,37 @@ interface ProcessOutcome {
   barcodes: string[];
   ok: boolean;
   productName: string | null;
+  /** Pet mode: which animal the model read off the pack. */
+  species?: string | null;
   reason?: string;
   /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
   message?: string;
+}
+
+/**
+ * Which animal a captured pack turned out to be for. Amber when the pack never
+ * said: that product's report will stay species-neutral until someone sets it
+ * in the Catalog editor, so it should look unfinished rather than fine.
+ */
+function SpeciesTag({ species }: { species: string }) {
+  const known = species === "cat" || species === "dog" || species === "both";
+  const text =
+    species === "cat"
+      ? "Cat"
+      : species === "dog"
+        ? "Dog"
+        : species === "both"
+          ? "Cat & dog"
+          : "Species?";
+  return (
+    <span
+      className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+        known ? "bg-sage-100 text-sage-600" : "bg-amber-soft text-ink"
+      }`}
+    >
+      {text}
+    </span>
+  );
 }
 
 /** Short confirmation beep on a successful barcode read (spec §5: beep + green frame). */
@@ -394,6 +422,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           error?: string;
           message?: string;
           product_name?: string | null;
+          species?: string | null;
           language?: string;
         } = {};
         try {
@@ -408,6 +437,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             barcodes: item.barcodes,
             ok: true,
             productName: data.product_name ?? null,
+            species: data.species ?? null,
           };
         } else {
           const reason =
@@ -465,7 +495,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     refreshQueue();
   }, [processing, adminToken, refreshQueue]);
 
-  const succeeded = outcomes?.filter((o) => o.ok).length ?? 0;
+  const written = outcomes?.filter((o) => o.ok) ?? [];
+  const succeeded = written.length;
   const failed = outcomes?.filter((o) => !o.ok) ?? [];
 
   const failedIngredients = queue.filter(needsIngredientsRedo).length;
@@ -803,6 +834,24 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
               <CheckCircle2 size={16} strokeWidth={1.8} aria-hidden="true" />
               {succeeded} written{failed.length > 0 ? `, ${failed.length} to re-shoot` : ""}
             </div>
+            {/* What the model decided each pack is FOR. The whole report is
+                written for that animal, so a misread is worth catching here
+                rather than in the app — it's one tap to fix under Catalog. */}
+            {written.length > 0 && (
+              <ul className="flex flex-col gap-1">
+                {written.map((w) => (
+                  <li
+                    key={w.id}
+                    className="flex items-center gap-2 text-[12px] leading-snug text-muted"
+                  >
+                    <span className="min-w-0 flex-1 truncate">
+                      {w.productName || w.barcodes[0]}
+                    </span>
+                    {w.species && <SpeciesTag species={w.species} />}
+                  </li>
+                ))}
+              </ul>
+            )}
             {failed.length > 0 && (
               <ul className="flex flex-col gap-1.5">
                 {failed.map((f) => (

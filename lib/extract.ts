@@ -1,5 +1,10 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { isUsableIngredients } from "@/lib/ingredients-text";
+import {
+  detectSpeciesFromText,
+  isPetSpecies,
+  type PetSpecies,
+} from "@/lib/pet-species";
 
 /**
  * Read a pet-food label from photos with Claude vision.
@@ -26,6 +31,8 @@ export interface LabelExtraction {
   ingredients_readable: boolean;
   /** Language of the transcribed list, e.g. "English", "French". */
   language: string;
+  /** Which animal the product is for — decides how the report is written. */
+  species: PetSpecies;
 }
 
 const EXTRACTION_SCHEMA = {
@@ -56,6 +63,12 @@ const EXTRACTION_SCHEMA = {
       description:
         "The language of the list you transcribed, capitalised in English (e.g. 'English', 'French', 'Spanish'). Labels often print several languages side by side — always transcribe the ENGLISH one when it is present, and report 'English' here. Only report another language if NO English list is visible at all.",
     },
+    species: {
+      type: "string",
+      enum: ["cat", "dog", "both", "unknown"],
+      description:
+        "Which animal this product is for, read from the pack — it usually says so plainly ('Cat Food', 'For Dogs', 'Kitten', 'Puppy'), and the animal pictured is a strong hint. Use 'both' only when the pack really is sold for cats AND dogs (some treats are). Use 'unknown' when the pack doesn't say — do NOT infer it from the ingredients, since cats and dogs share most of them.",
+    },
   },
   required: [
     "product_name",
@@ -63,6 +76,7 @@ const EXTRACTION_SCHEMA = {
     "ingredients_text",
     "ingredients_readable",
     "language",
+    "species",
   ],
 } as const;
 
@@ -195,6 +209,14 @@ export async function extractLabel({
       typeof parsed.language === "string" && parsed.language.trim()
         ? parsed.language.trim()
         : "Unknown",
+    // Fall back to the product name when the model didn't answer — a pack
+    // called "Kitten Chicken Recipe" tells us plenty on its own.
+    species: isPetSpecies(parsed.species)
+      ? parsed.species
+      : detectSpeciesFromText(
+          typeof parsed.product_name === "string" ? parsed.product_name : "",
+          typeof parsed.brands === "string" ? parsed.brands : ""
+        ),
   };
 
   return {

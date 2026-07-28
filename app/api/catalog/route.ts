@@ -181,7 +181,7 @@ export async function POST(req: Request) {
 
   let query = admin
     .from("barcode_cache")
-    .select("code, product_name, brands, ingredients_text, mode, created_at")
+    .select("code, product_name, brands, ingredients_text, mode, species, created_at")
     .eq("source", "verified")
     .order("created_at", { ascending: false })
     .limit(LIMIT);
@@ -214,6 +214,7 @@ export async function POST(req: Request) {
       productName: (row.product_name as string | null) ?? null,
       brands: (row.brands as string | null) ?? null,
       mode: (row.mode as string | null) ?? null,
+      species: (row.species as string | null) ?? null,
       ingredientsText: (row.ingredients_text as string | null) ?? null,
     })),
   });

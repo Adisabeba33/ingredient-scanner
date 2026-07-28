@@ -2,6 +2,7 @@ import { sanitizeBarcode, canonicalBarcode } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
+import { isPetSpecies } from "@/lib/pet-species";
 
 /**
  * Edit a catalog row by hand.
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
     ingredientsText?: unknown;
     productName?: unknown;
     brands?: unknown;
+    species?: unknown;
   };
   try {
     body = await req.json();
@@ -55,7 +57,10 @@ export async function POST(req: Request) {
   const key = canonicalBarcode(clean);
 
   const patch: Record<string, string | null> = {};
+  // Both of these invalidate the stored report: it was written from the old
+  // composition, FOR the old animal.
   let ingredientsChanged = false;
+  let speciesChanged = false;
 
   if (typeof body.ingredientsText === "string") {
     const text = body.ingredientsText.replace(/\s+/g, " ").trim();
@@ -82,6 +87,20 @@ export async function POST(req: Request) {
   }
   if (typeof body.brands === "string") {
     patch.brands = body.brands.trim() || null;
+  }
+  // Which animal it's for decides how the report is written, so a wrong reading
+  // here is worth correcting by hand like any other field.
+  if (isPetSpecies(body.species)) {
+    patch.species = body.species;
+    // Compare against what's stored: the editor always submits the current
+    // species, and re-generating a report because someone fixed a typo in the
+    // brand would be an expensive no-op.
+    const { data: before } = await admin
+      .from("barcode_cache")
+      .select("species")
+      .eq("code", key)
+      .maybeSingle();
+    speciesChanged = (before?.species ?? null) !== body.species;
   }
   if (Object.keys(patch).length === 0) {
     return Response.json({ error: "nothing_to_update" }, { status: 400 });
@@ -110,11 +129,11 @@ export async function POST(req: Request) {
     );
   }
 
-  // The stored report describes the OLD ingredients; drop it so the next reader
-  // regenerates. Only when the composition actually changed — renaming a
-  // product doesn't invalidate its analysis.
+  // The stored report describes the OLD ingredients, written for the OLD
+  // animal; drop it so the next reader regenerates. Only when one of those
+  // actually changed — renaming a product doesn't invalidate its analysis.
   let reportsCleared = 0;
-  if (ingredientsChanged) {
+  if (ingredientsChanged || speciesChanged) {
     try {
       const { data: cleared } = await admin
         .from("report_cache")
