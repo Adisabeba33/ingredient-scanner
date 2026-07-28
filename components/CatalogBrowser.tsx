@@ -36,6 +36,19 @@ const DEBOUNCE_MS = 300;
 
 type Filter = "no-ingredients" | "no-name" | "no-report" | null;
 
+/**
+ * How many ingredients the stored text lists. Commas separate items on every
+ * label, and the parenthesised vitamin/mineral blocks are counted as their
+ * members — which is what you want here, since the question is only "does this
+ * look like the whole list, or did glare cut it short?".
+ */
+function countIngredients(text: string): number {
+  return text
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean).length;
+}
+
 /** A tappable count — "No ingredients 2" narrows the list to exactly those. */
 function FilterChip({
   label,
@@ -461,6 +474,14 @@ export function CatalogBrowser({
                       </div>
                       <div className="font-mono text-[11px] text-faint">
                         {row.code}
+                        {/* Item count is the cheap check on a glare-heavy or
+                            half-read label: a kibble lists 30–40, so a stored
+                            list of 8 says the read was cut short. */}
+                        {row.ingredientsText && (
+                          <span className="ml-2 font-sans">
+                            {countIngredients(row.ingredientsText)} items
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="flex shrink-0 items-center gap-1">
