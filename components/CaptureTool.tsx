@@ -13,15 +13,11 @@ import {
   AlertTriangle,
   CheckCircle2,
   X,
-  RefreshCw,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
-import {
-  ConfirmDestructive,
-  isUnlocked,
-} from "@/components/ConfirmDestructive";
+import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
@@ -163,6 +159,13 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     /** What's stored right now — makes a wrong-language row obvious. */
     preview?: string | null;
   } | null>(null);
+  // A scanned code that the SHARED catalog already holds — asked about in a
+  // dialog, since it means someone else's work is about to be overwritten.
+  const [duplicate, setDuplicate] = useState<{
+    code: string;
+    name: string | null;
+    preview: string | null;
+  } | null>(null);
 
   // Processing state.
   const [processing, setProcessing] = useState(false);
@@ -172,11 +175,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [outcomes, setOutcomes] = useState<ProcessOutcome[] | null>(null);
 
   const flashRef = useRef(false);
-  const deletingRef = useRef(false);
   const captureCardRef = useRef<HTMLElement>(null);
   // Confirmation line after withdrawing a row from the shared catalog.
   const [catalogNote, setCatalogNote] = useState<string | null>(null);
-  const [confirmDelete, setConfirmDelete] = useState(false);
   const [queueFilter, setQueueFilter] = useState<QueueFilter>(null);
 
   const refreshQueue = useCallback(() => {
@@ -235,16 +236,16 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           ingredientsPreview?: string | null;
         };
         if (data.verified) {
-          // Already ours — undo the add and warn (with a way to redo it anyway,
-          // which is how a bad capture gets corrected).
+          // Someone already captured this — most likely another person working
+          // the same shelves. Stop the scan and ask, rather than quietly
+          // letting a second capture overwrite the first.
           setDraft((d) => ({
             ...d,
             barcodes: d.barcodes.filter((b) => canonicalBarcode(b) !== key),
           }));
-          setDupWarning({
+          setDuplicate({
             code,
             name: data.productName ?? null,
-            where: "catalog",
             preview: data.ingredientsPreview ?? null,
           });
         }
@@ -293,48 +294,6 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     [refreshQueue]
   );
 
-  // ── Correcting a product that's already in the catalog ─────────────────────
-  // Re-capture: keep the code and carry on. Processing upserts on the barcode,
-  // so the fresh reading replaces the bad row.
-  const recaptureAnyway = useCallback(() => {
-    if (!dupWarning) return;
-    const code = dupWarning.code;
-    const key = canonicalBarcode(code);
-    setDraft((d) =>
-      d.barcodes.some((b) => canonicalBarcode(b) === key)
-        ? d
-        : { ...d, barcodes: [...d.barcodes, code] }
-    );
-    setDupWarning(null);
-  }, [dupWarning]);
-
-  // Withdraw a bad verified row entirely (wrong language, wrong product).
-  // Irreversible, so it goes behind the password prompt.
-  const deleteFromCatalog = useCallback(async () => {
-    if (!dupWarning || deletingRef.current) return;
-    deletingRef.current = true;
-    try {
-      const res = await fetch("/api/delete-barcode", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          "x-admin-token": adminToken,
-        },
-        body: JSON.stringify({ code: dupWarning.code }),
-      });
-      setCatalogNote(
-        res.ok
-          ? `Removed ${dupWarning.code} from the catalog — capture it again now.`
-          : "Couldn't remove it. Check your connection and try again."
-      );
-      if (res.ok) setDupWarning(null);
-    } catch {
-      setCatalogNote("Couldn't remove it. Check your connection and try again.");
-    } finally {
-      deletingRef.current = false;
-    }
-  }, [dupWarning, adminToken]);
-
   /**
    * Re-shoot a product that's already in the catalog. Loads its barcode into the
    * capture card so the next photos are read fresh by the model; processing
@@ -357,14 +316,6 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     },
     []
   );
-
-  const requestDeleteFromCatalog = useCallback(() => {
-    if (isUnlocked()) {
-      void deleteFromCatalog();
-      return;
-    }
-    setConfirmDelete(true);
-  }, [deleteFromCatalog]);
 
   // ── Done / Skip ──────────────────────────────────────────────────────────────
   const canFinish = draft.barcodes.length > 0 && !!draft.photos.ingredients;
@@ -555,44 +506,15 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             className="mt-0.5 shrink-0 text-amber"
             aria-hidden="true"
           />
+          {/* Only the local case reaches this now — a code already sitting in
+              YOUR queue. A code the shared catalog holds opens the dialog
+              instead, since that one affects other people's work. */}
           <div className="min-w-0 flex-1 text-[13px] leading-snug text-ink">
-            <span className="font-semibold">
-              {dupWarning.where === "catalog"
-                ? "Already in the catalog"
-                : "Already in your queue"}
-            </span>
-            {dupWarning.where === "catalog" && dupWarning.name
-              ? ` — ${dupWarning.name}`
-              : ""}
+            <span className="font-semibold">Already in your queue</span>
             <span className="mt-0.5 block text-[12px] text-muted">
-              <span className="font-mono">{dupWarning.code}</span> · skip it and
-              scan a different product.
+              <span className="font-mono">{dupWarning.code}</span> · you captured
+              this one already — scan a different product.
             </span>
-            {dupWarning.preview && (
-              <span className="mt-1.5 block rounded bg-surface/70 px-2 py-1 text-[11px] leading-snug text-muted">
-                Stored now: “{dupWarning.preview}…”
-              </span>
-            )}
-            {/* Escape hatches for a row that's wrong (bad photo, wrong language
-                column): redo it, or withdraw it from the catalog entirely. */}
-            {dupWarning.where === "catalog" && (
-              <div className="mt-2 flex flex-wrap gap-2">
-                <button
-                  onClick={recaptureAnyway}
-                  className="inline-flex h-9 items-center gap-1.5 rounded-input border border-lineStrong bg-surface px-3 text-[12px] font-medium text-ink transition active:scale-[0.98]"
-                >
-                  <RefreshCw size={13} strokeWidth={1.8} aria-hidden="true" />
-                  Re-capture (replaces it)
-                </button>
-                <button
-                  onClick={requestDeleteFromCatalog}
-                  className="inline-flex h-9 items-center gap-1.5 rounded-input border border-lineStrong bg-surface px-3 text-[12px] font-medium text-risk-high transition active:scale-[0.98]"
-                >
-                  <Trash2 size={13} strokeWidth={1.8} aria-hidden="true" />
-                  Delete from catalog
-                </button>
-              </div>
-            )}
           </div>
           <button
             onClick={() => setDupWarning(null)}
@@ -928,16 +850,22 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         />
       )}
 
-      {confirmDelete && dupWarning && (
-        <ConfirmDestructive
-          title="Delete from the catalog?"
-          body={`${dupWarning.code} will be removed from the shared catalog, along with its cached report. This can't be undone — the product has to be captured again.`}
-          confirmLabel="Delete"
-          onConfirm={() => {
-            setConfirmDelete(false);
-            void deleteFromCatalog();
+      {duplicate && (
+        <DuplicateProductDialog
+          code={duplicate.code}
+          productName={duplicate.name}
+          preview={duplicate.preview}
+          adminToken={adminToken}
+          onSkip={() => setDuplicate(null)}
+          onRecapture={() => {
+            const d = duplicate;
+            setDuplicate(null);
+            recaptureFromCatalog(d.code, d.name);
           }}
-          onCancel={() => setConfirmDelete(false)}
+          onSaved={(message) => {
+            setDuplicate(null);
+            setCatalogNote(message);
+          }}
         />
       )}
 
