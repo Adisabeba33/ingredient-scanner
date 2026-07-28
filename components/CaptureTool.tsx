@@ -18,6 +18,7 @@ import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
+import { CorrectionsReview } from "@/components/CorrectionsReview";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
@@ -879,6 +880,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           }}
         />
       )}
+
+      {/* Corrections reported by users against the catalog, awaiting a call. */}
+      <CorrectionsReview adminToken={adminToken} />
 
       {/* What's actually in the shared catalog — inspect and fix. */}
       <CatalogBrowser
