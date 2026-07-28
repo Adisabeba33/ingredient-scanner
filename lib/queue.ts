@@ -40,6 +40,15 @@ export interface PendingProduct {
     message?: string;
     at: number;
   };
+  /**
+   * Permission to replace a barcode the catalog already holds.
+   *
+   * Processing refuses to overwrite an existing entry by default, so two people
+   * working the same aisle can't silently undo each other. Set only when the
+   * replacement was chosen deliberately — re-shooting a product from the
+   * duplicate dialog or the catalog — never by an ordinary capture.
+   */
+  allowOverwrite?: boolean;
 }
 
 const DB_NAME = "catalog-scanner";
@@ -131,7 +140,10 @@ export async function countProducts(): Promise<number> {
 export async function updateProduct(
   id: string,
   patch: Partial<
-    Pick<PendingProduct, "barcodes" | "mode" | "photos" | "lastError">
+    Pick<
+      PendingProduct,
+      "barcodes" | "mode" | "photos" | "lastError" | "allowOverwrite"
+    >
   >
 ): Promise<void> {
   const db = await openDb();

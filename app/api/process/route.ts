@@ -79,6 +79,8 @@ async function handle(req: Request) {
     barcodes?: unknown;
     mode?: unknown;
     photos?: { brand?: unknown; ingredients?: unknown };
+    /** Deliberate replacement of an entry the catalog already holds. */
+    allowOverwrite?: unknown;
   };
   try {
     body = await req.json();
@@ -174,9 +176,48 @@ async function handle(req: Request) {
     });
   }
 
+  // ── Never quietly replace what's already catalogued ──────────────────────
+  // Two people working the same aisle will scan the same product, and the
+  // second capture must not undo the first. Codes the catalog already holds are
+  // left alone unless the replacement was chosen deliberately (allowOverwrite),
+  // which only the duplicate dialog and the catalog re-shoot set — and both ask
+  // for the password first.
+  const allowOverwrite = body.allowOverwrite === true;
+  let skipped: string[] = [];
+  let writable = codes;
+
+  if (!allowOverwrite) {
+    const { data: existing, error: existingErr } = await admin
+      .from("barcode_cache")
+      .select("code")
+      .in("code", codes)
+      .eq("source", "verified");
+    if (existingErr) {
+      return Response.json(
+        { ok: false, reason: "lookup_failed", message: existingErr.message },
+        { status: 500 }
+      );
+    }
+    const taken = new Set((existing ?? []).map((r) => r.code as string));
+    skipped = codes.filter((c) => taken.has(c));
+    // A product can legitimately gain a new pack size, so write the codes that
+    // are new and skip only the ones already held, rather than refusing wholesale.
+    writable = codes.filter((c) => !taken.has(c));
+
+    if (writable.length === 0) {
+      return Response.json({
+        ok: false,
+        reason: "already-in-catalog",
+        codes: skipped,
+        product_name: extraction.product_name,
+        usage,
+      });
+    }
+  }
+
   // ── One verified row per pack-size code ──────────────────────────────────
   const now = new Date().toISOString();
-  const rows: VerifiedRow[] = codes.map((code) => ({
+  const rows: VerifiedRow[] = writable.map((code) => ({
     code,
     found: true,
     source: "verified",
@@ -189,8 +230,8 @@ async function handle(req: Request) {
     created_at: now,
   }));
 
-  // verified is the top-ranked source, so upserting on `code` always wins and a
-  // re-run is an idempotent refresh — never buries a better row.
+  // Upsert rather than insert: with allowOverwrite the row is meant to be
+  // replaced, and without it `writable` contains only codes that don't exist.
   // Select the rows back so "written" reflects what the database actually
   // holds, rather than merely "the call didn't error".
   const { data: written, error } = await admin
@@ -220,7 +261,7 @@ async function handle(req: Request) {
   // let the next reader regenerate from what we just wrote.
   let reportsCleared = 0;
   try {
-    const keys = codes.map((c) => reportCacheKey(c, mode));
+    const keys = writable.map((c) => reportCacheKey(c, mode));
     const { data: cleared } = await admin
       .from("report_cache")
       .delete()

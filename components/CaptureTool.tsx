@@ -56,6 +56,8 @@ type Overlay =
 interface Draft {
   barcodes: string[];
   photos: { brand?: string; ingredients?: string; nutrition?: string };
+  /** Set only by a deliberate re-shoot of a product already in the catalog. */
+  allowOverwrite?: boolean;
 }
 
 const EMPTY_DRAFT: Draft = { barcodes: [], photos: {} };
@@ -124,6 +126,9 @@ function beep() {
 const REASON_LABEL: Record<string, string> = {
   "unreadable-ingredients": "Ingredients photo unreadable — re-shoot",
   "wrong-language": "Not the English list — re-shoot the English column",
+  "already-in-catalog":
+    "Already in the catalog — kept the existing entry, nothing overwritten",
+  lookup_failed: "Couldn't check the catalog — retry",
   "no-ingredients-photo": "No ingredients photo",
   "no-valid-barcode": "No valid barcode",
   llm_error: "Reader error — retry",
@@ -303,7 +308,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
    */
   const recaptureFromCatalog = useCallback(
     (code: string, productName: string | null) => {
-      setDraft({ barcodes: [code], photos: {} });
+      setDraft({ barcodes: [code], photos: {}, allowOverwrite: true });
       setDupWarning(null);
       setOutcomes(null);
       setCatalogNote(
@@ -324,7 +329,12 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     if (!canFinish || flashRef.current) return;
     flashRef.current = true;
     try {
-      await addProduct({ barcodes: draft.barcodes, mode, photos: draft.photos });
+      await addProduct({
+        barcodes: draft.barcodes,
+        mode,
+        photos: draft.photos,
+        allowOverwrite: draft.allowOverwrite === true,
+      });
       setDraft(EMPTY_DRAFT);
       refreshQueue();
       setOutcomes(null);
@@ -367,6 +377,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           body: JSON.stringify({
             barcodes: item.barcodes,
             mode: item.mode,
+            allowOverwrite: item.allowOverwrite === true,
             photos: {
               brand: item.photos.brand ?? null,
               ingredients: item.photos.ingredients ?? null,
