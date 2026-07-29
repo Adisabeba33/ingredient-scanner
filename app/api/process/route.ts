@@ -7,7 +7,11 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { extractLabel } from "@/lib/extract";
 import { reportCacheKey } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
-import { detectFormFromText, reconcileFoodForm } from "@/lib/food-form";
+import {
+  detectFormFromName,
+  detectFormFromText,
+  reconcileFoodForm,
+} from "@/lib/food-form";
 
 /**
  * Process ONE captured product: read its label photos with Claude vision and
@@ -235,10 +239,22 @@ async function handle(req: Request) {
   // meals). They can't fail the same way, which is the point: a form guessed
   // wrong makes the report read the ingredient order backwards. When they
   // disagree the verdict is "unknown" and the operator is told to set it.
+  // The pack signal is everything printed on the pack — which includes the
+  // product name the model just transcribed. Asking the model to name the form
+  // works when the container is in frame, but it stays silent surprisingly
+  // often on a pack that says "Pâté" and "Hydrating Purée" in its own title.
+  // Reading those words ourselves costs nothing and doesn't weaken the check:
+  // the composition signal is blind to the name, so these are still two
+  // separate pieces of evidence.
+  const fromPack =
+    extraction.food_form !== "unknown"
+      ? extraction.food_form
+      : detectFormFromName(extraction.product_name);
+
   const formVerdict =
     mode === "pet"
       ? reconcileFoodForm({
-          fromPack: extraction.food_form,
+          fromPack,
           // The COMPOSITION only. The model already saw the product name, so
           // feeding it here too would count one phrase as two confirmations.
           fromText: detectFormFromText(extraction.ingredients_text),
