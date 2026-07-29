@@ -179,26 +179,49 @@ export async function POST(req: Request) {
     }
   }
 
-  let query = admin
-    .from("barcode_cache")
-    .select(
-      "code, product_name, brands, ingredients_text, mode, species, food_form, food_form_confirmed, created_at"
-    )
-    .eq("source", "verified")
-    .order("created_at", { ascending: false })
-    .limit(LIMIT);
+  // The columns added after the first release (species, food_form…) only exist
+  // once the matching migration has been run in Supabase. Code ships by pushing
+  // and migrations are applied by hand, so there is always a window where the
+  // deployment asks for a column the database doesn't have yet — and asking for
+  // one missing column fails the WHOLE select, which showed up as an empty
+  // catalog. Fall back to the columns that have always existed, and say so,
+  // rather than reporting "nothing here" about a database full of products.
+  const FULL_COLUMNS =
+    "code, product_name, brands, ingredients_text, mode, species, food_form, food_form_confirmed, created_at";
+  const BASE_COLUMNS =
+    "code, product_name, brands, ingredients_text, mode, created_at";
 
-  if (restrictToCodes) query = query.in("code", restrictToCodes.slice(0, 500));
+  const runQuery = async (columns: string) => {
+    let query = admin
+      .from("barcode_cache")
+      .select(columns)
+      .eq("source", "verified")
+      .order("created_at", { ascending: false })
+      .limit(LIMIT);
 
-  if (q.length >= 2) {
-    const digits = q.replace(/\D+/g, "");
-    query =
-      digits.length >= 4
-        ? query.ilike("code", `%${digits}%`)
-        : query.or(`product_name.ilike.%${q}%,brands.ilike.%${q}%`);
+    if (restrictToCodes) query = query.in("code", restrictToCodes.slice(0, 500));
+
+    if (q.length >= 2) {
+      const digits = q.replace(/\D+/g, "");
+      query =
+        digits.length >= 4
+          ? query.ilike("code", `%${digits}%`)
+          : query.or(`product_name.ilike.%${q}%,brands.ilike.%${q}%`);
+    }
+    return query;
+  };
+
+  let { data, error } = await runQuery(FULL_COLUMNS);
+  let missingColumns = false;
+  if (error) {
+    // 42703 = undefined_column. Anything else is a real failure worth reporting.
+    const retry = await runQuery(BASE_COLUMNS);
+    if (!retry.error) {
+      data = retry.data;
+      error = null;
+      missingColumns = true;
+    }
   }
-
-  const { data, error } = await query;
   if (error) {
     return Response.json(
       { error: "list_failed", message: error.message },
@@ -211,15 +234,20 @@ export async function POST(req: Request) {
   // bags), so it isn't the same as a count of distinct products.
   return Response.json({
     totalCodes: await countVerified(),
-    results: (data ?? []).map((row) => ({
-      code: row.code as string,
-      productName: (row.product_name as string | null) ?? null,
-      brands: (row.brands as string | null) ?? null,
-      mode: (row.mode as string | null) ?? null,
-      species: (row.species as string | null) ?? null,
-      foodForm: (row.food_form as string | null) ?? null,
-      foodFormConfirmed: (row.food_form_confirmed as boolean | null) ?? null,
-      ingredientsText: (row.ingredients_text as string | null) ?? null,
-    })),
+    // The panel says this out loud: a catalog missing its species/form chips
+    // because a migration hasn't been run should look unfinished, not normal.
+    missingColumns,
+    results: ((data ?? []) as unknown as Record<string, unknown>[]).map(
+      (row) => ({
+        code: row.code as string,
+        productName: (row.product_name as string | null) ?? null,
+        brands: (row.brands as string | null) ?? null,
+        mode: (row.mode as string | null) ?? null,
+        species: (row.species as string | null) ?? null,
+        foodForm: (row.food_form as string | null) ?? null,
+        foodFormConfirmed: (row.food_form_confirmed as boolean | null) ?? null,
+        ingredientsText: (row.ingredients_text as string | null) ?? null,
+      })
+    ),
   });
 }

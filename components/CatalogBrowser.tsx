@@ -189,6 +189,10 @@ export function CatalogBrowser({
   } | null>(null);
   const [filter, setFilter] = useState<Filter>(null);
   const [busyCode, setBusyCode] = useState<string | null>(null);
+  /** Why the list is empty, when it's empty because something broke. */
+  const [loadError, setLoadError] = useState<string | null>(null);
+  /** The database is missing the newer columns — a migration hasn't been run. */
+  const [missingColumns, setMissingColumns] = useState(false);
   const [note, setNote] = useState<string | null>(null);
   const seqRef = useRef(0);
 
@@ -207,17 +211,35 @@ export function CatalogBrowser({
         });
         if (seq !== seqRef.current) return;
         if (!res.ok) {
+          // A failed request is NOT an empty catalog. Saying "nothing matches"
+          // here hid a real server error behind a normal-looking result, which
+          // is the most misleading thing this panel can do — the whole point of
+          // it is to tell you what's really stored.
+          const body = (await res.json().catch(() => ({}))) as {
+            error?: string;
+            message?: string;
+          };
           setRows([]);
+          setLoadError(
+            [body.error, body.message].filter(Boolean).join(": ") ||
+              `Couldn't read the catalog (${res.status}).`
+          );
           return;
         }
         const data = (await res.json()) as {
           results?: CatalogRow[];
           totalCodes?: number;
+          missingColumns?: boolean;
         };
+        setLoadError(null);
+        setMissingColumns(!!data.missingColumns);
         setRows(data.results ?? []);
         if (typeof data.totalCodes === "number") setTotal(data.totalCodes);
       } catch {
-        if (seq === seqRef.current) setRows([]);
+        if (seq === seqRef.current) {
+          setRows([]);
+          setLoadError("Couldn't reach the server — check your connection.");
+        }
       } finally {
         if (seq === seqRef.current) setLoading(false);
       }
@@ -547,7 +569,21 @@ export function CatalogBrowser({
             </p>
           )}
 
-          {rows !== null && rows.length === 0 && !loading && (
+          {loadError && (
+            <p className="rounded-input border border-amber bg-amber-soft px-3 py-2 text-[12px] leading-snug text-ink">
+              {loadError}
+            </p>
+          )}
+
+          {missingColumns && (
+            <p className="rounded-input border border-amber bg-amber-soft px-3 py-2 text-[12px] leading-snug text-ink">
+              This database is missing the newer columns, so species and
+              dry/wet aren&apos;t shown or stored. Run the pending migrations in
+              Supabase — the products themselves are fine.
+            </p>
+          )}
+
+          {rows !== null && rows.length === 0 && !loading && !loadError && (
             <p className="text-[12px] text-muted">
               {filter === "no-ingredients"
                 ? "Every product has its ingredients. Nothing to fix."
