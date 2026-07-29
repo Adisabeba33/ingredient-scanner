@@ -5,6 +5,7 @@ import {
   isPetSpecies,
   type PetSpecies,
 } from "@/lib/pet-species";
+import { isFoodForm, type FoodForm } from "@/lib/food-form";
 
 /**
  * Read a pet-food label from photos with Claude vision.
@@ -33,6 +34,10 @@ export interface LabelExtraction {
   language: string;
   /** Which animal the product is for — decides how the report is written. */
   species: PetSpecies;
+  /** Dry or wet, as read off the PACK. One of the two signals; see lib/food-form.ts. */
+  food_form: FoodForm;
+  /** Moisture % from the Guaranteed Analysis, when that panel was legible. */
+  moisture_percent: number | null;
 }
 
 const EXTRACTION_SCHEMA = {
@@ -77,6 +82,8 @@ const EXTRACTION_SCHEMA = {
     "ingredients_readable",
     "language",
     "species",
+    "food_form",
+    "moisture_percent",
   ],
 } as const;
 
@@ -94,7 +101,10 @@ const USER_INSTRUCTION =
   "Packaging often prints the same list in several languages (English / French / Spanish) in " +
   "parallel columns or blocks: always transcribe the ENGLISH one. If the photo shows only a " +
   "non-English list, do NOT translate it — set ingredients_readable to false, leave " +
-  "ingredients_text empty, and report the language you saw.";
+  "ingredients_text empty, and report the language you saw. " +
+  "Also say whether the pack is dry food or wet food, judging by the container and the " +
+  "words on it \u2014 not by the ingredients. If a Guaranteed Analysis panel is visible in " +
+  "any of the photos, copy its Moisture percentage; otherwise leave it null.";
 
 /** A data: URL like `data:image/jpeg;base64,AAAA` → the SDK's image block. */
 function toImageBlock(dataUrl: string): Anthropic.Messages.ImageBlockParam {
@@ -137,6 +147,8 @@ export interface ExtractInput {
   ingredientsImage: string;
   /** Data URL of the brand/name photo — optional. */
   brandImage?: string | null;
+  /** Data URL of the guaranteed-analysis panel — optional, but it settles dry vs wet. */
+  nutritionImage?: string | null;
 }
 
 export interface ExtractResult {
@@ -149,6 +161,7 @@ export async function extractLabel({
   model,
   ingredientsImage,
   brandImage,
+  nutritionImage,
 }: ExtractInput): Promise<ExtractResult> {
   const client = new Anthropic({ apiKey });
 
@@ -159,6 +172,10 @@ export async function extractLabel({
   }
   content.push({ type: "text", text: "Ingredients photo:" });
   content.push(toImageBlock(ingredientsImage));
+  if (nutritionImage) {
+    content.push({ type: "text", text: "Guaranteed analysis / nutrition panel:" });
+    content.push(toImageBlock(nutritionImage));
+  }
   content.push({ type: "text", text: USER_INSTRUCTION });
 
   let final: Anthropic.Messages.Message;
@@ -211,6 +228,15 @@ export async function extractLabel({
         : "Unknown",
     // Fall back to the product name when the model didn't answer — a pack
     // called "Kitten Chicken Recipe" tells us plenty on its own.
+    food_form: isFoodForm(parsed.food_form) ? parsed.food_form : "unknown",
+    // A percentage only — anything else means the panel wasn't really read.
+    moisture_percent:
+      typeof parsed.moisture_percent === "number" &&
+      Number.isFinite(parsed.moisture_percent) &&
+      parsed.moisture_percent >= 0 &&
+      parsed.moisture_percent <= 100
+        ? parsed.moisture_percent
+        : null,
     species: isPetSpecies(parsed.species)
       ? parsed.species
       : detectSpeciesFromText(

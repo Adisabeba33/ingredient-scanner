@@ -14,6 +14,7 @@ import {
   isUnlocked,
 } from "@/components/ConfirmDestructive";
 import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
+import { isFoodForm, type FoodForm } from "@/lib/food-form";
 
 /**
  * See what's actually stored in the shared catalog, and remove a bad row.
@@ -32,6 +33,10 @@ interface CatalogRow {
   mode: string | null;
   /** Which animal the pack is for. Null on rows captured before we read it. */
   species: string | null;
+  /** Dry or wet. Null on rows captured before we read it. */
+  foodForm: string | null;
+  /** Whether two independent signals agreed on the form. */
+  foodFormConfirmed: boolean | null;
   ingredientsText: string | null;
 }
 
@@ -61,11 +66,53 @@ function SpeciesChip({ species }: { species: string | null }) {
   );
 }
 
+/**
+ * Dry or wet. Amber when it isn't settled — either nothing said, or the pack
+ * and the ingredients disagreed, and both leave the report reading the
+ * ingredient order without knowing which way to read it.
+ */
+function FormChip({
+  form,
+  confirmed,
+}: {
+  form: string | null;
+  confirmed: boolean | null;
+}) {
+  const known = isFoodForm(form) && form !== "unknown";
+  const text = known
+    ? form === "dry"
+      ? "Dry"
+      : form === "wet"
+        ? "Wet"
+        : "Semi-moist"
+    : "Dry/wet?";
+  // A form only one signal vouched for is shown, but marked — it's a lead, not
+  // a fact, and it's the row worth a second look.
+  const settled = known && confirmed !== false;
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+        settled ? "bg-sage-100 text-sage-600" : "bg-amber-soft text-ink"
+      }`}
+    >
+      {text}
+      {known && confirmed === false ? " ?" : ""}
+    </span>
+  );
+}
+
 const SPECIES_CHOICES: { value: PetSpecies; label: string }[] = [
   { value: "cat", label: "Cat" },
   { value: "dog", label: "Dog" },
   { value: "both", label: "Both" },
   { value: "unknown", label: "Not stated" },
+];
+
+const FORM_CHOICES: { value: FoodForm; label: string }[] = [
+  { value: "dry", label: "Dry" },
+  { value: "wet", label: "Wet" },
+  { value: "semi-moist", label: "Semi" },
+  { value: "unknown", label: "Not sure" },
 ];
 
 const DEBOUNCE_MS = 300;
@@ -252,6 +299,7 @@ export function CatalogBrowser({
   const [draftBrands, setDraftBrands] = useState("");
   const [draftText, setDraftText] = useState("");
   const [draftSpecies, setDraftSpecies] = useState<PetSpecies>("unknown");
+  const [draftForm, setDraftForm] = useState<FoodForm>("unknown");
   const [saving, setSaving] = useState(false);
   const [pendingSave, setPendingSave] = useState(false);
 
@@ -261,6 +309,7 @@ export function CatalogBrowser({
     setDraftBrands(row.brands ?? "");
     setDraftText(row.ingredientsText ?? "");
     setDraftSpecies(isPetSpecies(row.species) ? row.species : "unknown");
+    setDraftForm(isFoodForm(row.foodForm) ? row.foodForm : "unknown");
     setNote(null);
   }, []);
 
@@ -281,6 +330,7 @@ export function CatalogBrowser({
           brands: draftBrands,
           ingredientsText: draftText,
           species: draftSpecies,
+          foodForm: draftForm,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -301,6 +351,9 @@ export function CatalogBrowser({
                     productName: draftName.trim() || null,
                     brands: draftBrands.trim() || null,
                     species: draftSpecies,
+                    foodForm: draftForm,
+                    // Set by hand — the most reliable signal there is.
+                    foodFormConfirmed: draftForm !== "unknown",
                     ingredientsText: draftText.replace(/\s+/g, " ").trim(),
                   }
                 : x
@@ -326,6 +379,7 @@ export function CatalogBrowser({
     draftBrands,
     draftText,
     draftSpecies,
+    draftForm,
   ]);
 
   const requestSave = useCallback(() => {
@@ -520,7 +574,13 @@ export function CatalogBrowser({
                       <div className="flex items-center gap-1.5 text-[12px] text-muted">
                         <span className="truncate">{row.brands || "—"}</span>
                         {row.mode === "pet" && (
-                          <SpeciesChip species={row.species} />
+                          <>
+                            <SpeciesChip species={row.species} />
+                            <FormChip
+                              form={row.foodForm}
+                              confirmed={row.foodFormConfirmed}
+                            />
+                          </>
                         )}
                       </div>
                       <div className="font-mono text-[11px] text-faint">
@@ -606,6 +666,30 @@ export function CatalogBrowser({
                           <span className="text-[11px] leading-snug text-faint">
                             Decides who the app writes the report for — a cat
                             food is never judged against a dog&apos;s diet.
+                          </span>
+                          <span className="mt-1 text-[11px] font-medium text-muted">
+                            And it&apos;s
+                          </span>
+                          <div className="flex gap-1.5">
+                            {FORM_CHOICES.map((c) => (
+                              <button
+                                key={c.value}
+                                onClick={() => setDraftForm(c.value)}
+                                aria-pressed={draftForm === c.value}
+                                className={`h-9 flex-1 rounded-input border text-[12px] font-medium transition active:scale-[0.98] ${
+                                  draftForm === c.value
+                                    ? "border-ink bg-ink text-white"
+                                    : "border-lineStrong bg-surface text-ink"
+                                }`}
+                              >
+                                {c.label}
+                              </button>
+                            ))}
+                          </div>
+                          <span className="text-[11px] leading-snug text-faint">
+                            Wet food is listed by weight with its water, so
+                            broth near the top is normal. In a bag it
+                            isn&apos;t — same list, opposite reading.
                           </span>
                         </div>
                       )}

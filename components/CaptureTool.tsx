@@ -97,6 +97,12 @@ interface ProcessOutcome {
   productName: string | null;
   /** Pet mode: which animal the model read off the pack. */
   species?: string | null;
+  /** Dry / wet, after both readings were compared. */
+  foodForm?: string | null;
+  /** Whether those two readings agreed. */
+  foodFormConfirmed?: boolean | null;
+  /** What decided it, or what disagreed — shown when it isn't settled. */
+  foodFormNote?: string | null;
   reason?: string;
   /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
   message?: string;
@@ -124,6 +130,39 @@ function SpeciesTag({ species }: { species: string }) {
       }`}
     >
       {text}
+    </span>
+  );
+}
+
+/**
+ * Dry or wet, and whether both readings agreed on it. Amber when they didn't:
+ * the same ingredient list means opposite things in a tin and in a bag, so an
+ * unsettled form is worth one tap in Catalog before moving on.
+ */
+function FormTag({
+  form,
+  confirmed,
+}: {
+  form: string;
+  confirmed: boolean | null;
+}) {
+  const known = form === "dry" || form === "wet" || form === "semi-moist";
+  const text = known
+    ? form === "dry"
+      ? "Dry"
+      : form === "wet"
+        ? "Wet"
+        : "Semi-moist"
+    : "Dry/wet?";
+  const settled = known && confirmed !== false;
+  return (
+    <span
+      className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+        settled ? "bg-sage-100 text-sage-600" : "bg-amber-soft text-ink"
+      }`}
+    >
+      {text}
+      {known && confirmed === false ? " ?" : ""}
     </span>
   );
 }
@@ -410,6 +449,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             photos: {
               brand: item.photos.brand ?? null,
               ingredients: item.photos.ingredients ?? null,
+              // Optional, and only shot when someone bothered — but the
+              // Guaranteed Analysis carries the moisture figure, which settles
+              // dry vs wet outright instead of by inference.
+              nutrition: item.photos.nutrition ?? null,
             },
           }),
         });
@@ -423,6 +466,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           message?: string;
           product_name?: string | null;
           species?: string | null;
+          food_form?: string | null;
+          food_form_confirmed?: boolean | null;
+          food_form_note?: string | null;
           language?: string;
         } = {};
         try {
@@ -438,6 +484,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             ok: true,
             productName: data.product_name ?? null,
             species: data.species ?? null,
+            foodForm: data.food_form ?? null,
+            foodFormConfirmed: data.food_form_confirmed ?? null,
+            foodFormNote: data.food_form_note ?? null,
           };
         } else {
           const reason =
@@ -498,6 +547,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const written = outcomes?.filter((o) => o.ok) ?? [];
   const succeeded = written.length;
   const failed = outcomes?.filter((o) => !o.ok) ?? [];
+  const unsettledForm = written.filter(
+    (o) => o.foodFormNote && o.foodFormConfirmed === false
+  );
 
   const failedIngredients = queue.filter(needsIngredientsRedo).length;
   const missingBrand = queue.filter(needsBrandPhoto).length;
@@ -848,6 +900,30 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                       {w.productName || w.barcodes[0]}
                     </span>
                     {w.species && <SpeciesTag species={w.species} />}
+                    {w.foodForm && (
+                      <FormTag
+                        form={w.foodForm}
+                        confirmed={w.foodFormConfirmed ?? null}
+                      />
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {/* Written, but the two readings of dry-vs-wet didn't agree. The
+                product is in the catalog and usable; only the form is open,
+                and it takes one tap in Catalog to close it. */}
+            {unsettledForm.length > 0 && (
+              <ul className="flex flex-col gap-1">
+                {unsettledForm.map((w) => (
+                  <li
+                    key={`form-${w.id}`}
+                    className="rounded-input bg-amber-soft px-3 py-2 text-[11px] leading-snug text-ink"
+                  >
+                    <span className="font-medium">
+                      {w.productName || w.barcodes[0]}
+                    </span>{" "}
+                    — {w.foodFormNote}
                   </li>
                 ))}
               </ul>

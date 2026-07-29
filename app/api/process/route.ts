@@ -7,6 +7,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { extractLabel } from "@/lib/extract";
 import { reportCacheKey } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
+import { detectFormFromText, reconcileFoodForm } from "@/lib/food-form";
 
 /**
  * Process ONE captured product: read its label photos with Claude vision and
@@ -39,6 +40,12 @@ interface VerifiedRow {
   mode: ScanMode;
   /** Pet products: which animal it's for, so the report addresses only that one. */
   species: string | null;
+  /** Dry / wet — decides how the ingredient order is to be read. */
+  food_form: string | null;
+  /** Whether two independent signals agreed on the form. */
+  food_form_confirmed: boolean | null;
+  /** Moisture % off the guaranteed analysis, when it was legible. */
+  moisture_percent: number | null;
   ingredients_text: string;
   product_name: string | null;
   brands: string | null;
@@ -80,7 +87,7 @@ async function handle(req: Request) {
   let body: {
     barcodes?: unknown;
     mode?: unknown;
-    photos?: { brand?: unknown; ingredients?: unknown };
+    photos?: { brand?: unknown; ingredients?: unknown; nutrition?: unknown };
     /** Deliberate replacement of an entry the catalog already holds. */
     allowOverwrite?: unknown;
   };
@@ -124,6 +131,10 @@ async function handle(req: Request) {
   }
   const brandImage =
     typeof body.photos?.brand === "string" ? body.photos.brand : null;
+  // Optional, and worth having: the Guaranteed Analysis carries the moisture
+  // figure, which settles dry vs wet outright instead of by inference.
+  const nutritionImage =
+    typeof body.photos?.nutrition === "string" ? body.photos.nutrition : null;
 
   const mode: ScanMode = MODES.includes(body.mode as ScanMode)
     ? (body.mode as ScanMode)
@@ -140,6 +151,7 @@ async function handle(req: Request) {
       model,
       ingredientsImage,
       brandImage,
+      nutritionImage,
     });
     extraction = result.extraction;
     usage = result.usage;
@@ -217,6 +229,24 @@ async function handle(req: Request) {
     }
   }
 
+  // ── Dry or wet, decided by two independent readings ──────────────────────
+  // One is the model looking at the PACK (a tin vs a bag, the words on it); the
+  // other is these rules reading the COMPOSITION (water and broth vs rendered
+  // meals). They can't fail the same way, which is the point: a form guessed
+  // wrong makes the report read the ingredient order backwards. When they
+  // disagree the verdict is "unknown" and the operator is told to set it.
+  const formVerdict =
+    mode === "pet"
+      ? reconcileFoodForm({
+          fromPack: extraction.food_form,
+          fromText: detectFormFromText(
+            extraction.ingredients_text,
+            extraction.product_name
+          ),
+          moisturePercent: extraction.moisture_percent,
+        })
+      : null;
+
   // ── One verified row per pack-size code ──────────────────────────────────
   const now = new Date().toISOString();
   const rows: VerifiedRow[] = writable.map((code) => ({
@@ -229,6 +259,9 @@ async function handle(req: Request) {
     brands: extraction.brands,
     // Only meaningful for pet food; human/cosmetic products have no species.
     species: mode === "pet" ? extraction.species : null,
+    food_form: formVerdict ? formVerdict.form : null,
+    food_form_confirmed: formVerdict ? formVerdict.confirmed : null,
+    moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
     image_url: null,
     reason: null,
     created_at: now,
@@ -283,6 +316,10 @@ async function handle(req: Request) {
     product_name: extraction.product_name,
     brands: extraction.brands,
     species: mode === "pet" ? extraction.species : null,
+    food_form: formVerdict ? formVerdict.form : null,
+    food_form_confirmed: formVerdict ? formVerdict.confirmed : null,
+    food_form_note: formVerdict ? formVerdict.why : null,
+    moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
     ingredients_text: extraction.ingredients_text,
     usage,
   });

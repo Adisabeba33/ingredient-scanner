@@ -3,6 +3,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { isPetSpecies } from "@/lib/pet-species";
+import { isFoodForm } from "@/lib/food-form";
 
 /**
  * Edit a catalog row by hand.
@@ -43,6 +44,7 @@ export async function POST(req: Request) {
     productName?: unknown;
     brands?: unknown;
     species?: unknown;
+    foodForm?: unknown;
   };
   try {
     body = await req.json();
@@ -56,11 +58,12 @@ export async function POST(req: Request) {
   }
   const key = canonicalBarcode(clean);
 
-  const patch: Record<string, string | null> = {};
-  // Both of these invalidate the stored report: it was written from the old
-  // composition, FOR the old animal.
+  const patch: Record<string, string | boolean | null> = {};
+  // Any of these invalidates the stored report: it was written from the old
+  // composition, FOR the old animal, read as the old form.
   let ingredientsChanged = false;
   let speciesChanged = false;
+  let formChanged = false;
 
   if (typeof body.ingredientsText === "string") {
     const text = body.ingredientsText.replace(/\s+/g, " ").trim();
@@ -102,6 +105,19 @@ export async function POST(req: Request) {
       .maybeSingle();
     speciesChanged = (before?.species ?? null) !== body.species;
   }
+  // Dry vs wet decides how the ingredient ORDER is read, so a hand-set form is
+  // worth as much as a confirmed one — a person looking at the tin is the most
+  // reliable signal we have.
+  if (isFoodForm(body.foodForm)) {
+    patch.food_form = body.foodForm;
+    patch.food_form_confirmed = body.foodForm !== "unknown";
+    const { data: before } = await admin
+      .from("barcode_cache")
+      .select("food_form")
+      .eq("code", key)
+      .maybeSingle();
+    formChanged = (before?.food_form ?? null) !== body.foodForm;
+  }
   if (Object.keys(patch).length === 0) {
     return Response.json({ error: "nothing_to_update" }, { status: 400 });
   }
@@ -130,10 +146,11 @@ export async function POST(req: Request) {
   }
 
   // The stored report describes the OLD ingredients, written for the OLD
-  // animal; drop it so the next reader regenerates. Only when one of those
-  // actually changed — renaming a product doesn't invalidate its analysis.
+  // animal, read as the OLD form; drop it so the next reader regenerates. Only
+  // when one of those actually changed — renaming a product doesn't invalidate
+  // its analysis.
   let reportsCleared = 0;
-  if (ingredientsChanged || speciesChanged) {
+  if (ingredientsChanged || speciesChanged || formChanged) {
     try {
       const { data: cleared } = await admin
         .from("report_cache")
