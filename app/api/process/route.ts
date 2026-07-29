@@ -239,10 +239,9 @@ async function handle(req: Request) {
     mode === "pet"
       ? reconcileFoodForm({
           fromPack: extraction.food_form,
-          fromText: detectFormFromText(
-            extraction.ingredients_text,
-            extraction.product_name
-          ),
+          // The COMPOSITION only. The model already saw the product name, so
+          // feeding it here too would count one phrase as two confirmations.
+          fromText: detectFormFromText(extraction.ingredients_text),
           moisturePercent: extraction.moisture_percent,
         })
       : null;

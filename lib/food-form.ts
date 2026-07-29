@@ -112,6 +112,19 @@ const WET_NAME_WORDS = [
   "terrine",
   "flaked",
   "tender bites",
+  // Squeeze-tube and topper formats — the fastest-growing wet category, and
+  // named for their texture rather than their tin.
+  "puree",
+  "purée",
+  "hydrating",
+  "lickable",
+  "creamy",
+  "broth",
+  "bisque",
+  "soup",
+  "topper",
+  "in sauce",
+  "in jelly",
 ];
 const DRY_NAME_WORDS = [
   "dry",
@@ -124,32 +137,63 @@ const DRY_NAME_WORDS = [
 ];
 
 /**
- * Read the form out of the composition alone — deterministic, no model.
+ * Read the form out of the COMPOSITION alone — deterministic, no model, and
+ * deliberately blind to the product name.
  *
- * This is the second opinion. Deliberately conservative in the same way the
- * species reader is: it answers only when the text contains something that
- * belongs to one form and not the other, and says "unknown" the moment both
- * kinds of marker show up (a "chicken broth" line beside "chicken meal" means
- * one of them was misread, and guessing between them helps nobody).
+ * The blindness is the point. This is one of two signals that must agree before
+ * the catalog treats the form as settled, and the other one is the model
+ * reading the pack — which sees the name too. If this function also read the
+ * name, a product called "Chunks in Gravy" would produce two "wet" answers off
+ * ONE piece of evidence and be recorded as independently confirmed. Two
+ * readings of the same words are not two confirmations.
+ *
+ * Conservative in the same way the species reader is: it answers only when the
+ * list contains something belonging to one form and not the other, and says
+ * "unknown" the moment both kinds of marker appear (a "chicken broth" line
+ * beside "chicken meal" means one was misread, and guessing helps nobody).
  */
 export function detectFormFromText(
-  ingredientsText: string | null | undefined,
-  productName?: string | null
+  ingredientsText: string | null | undefined
 ): FoodForm {
   const text = normalize(ingredientsText ?? "");
-  const name = normalize(productName ?? "");
-
-  // The pack's own words come first when they're unambiguous — "Chunks in
-  // Gravy" is the maker telling you outright.
-  const nameWet = WET_NAME_WORDS.some((w) => hasWord(name, w));
-  const nameDry = DRY_NAME_WORDS.some((w) => hasWord(name, w));
-  if (nameWet !== nameDry) return nameWet ? "wet" : "dry";
-
   if (!text) return "unknown";
   const wet = WET_MARKERS.some((m) => hasWord(text, m));
   const dry = DRY_MARKERS.some((m) => hasWord(text, m));
   if (wet === dry) return "unknown";
   return wet ? "wet" : "dry";
+}
+
+/**
+ * Read the form out of the pack's own words — "Chunks in Gravy", "Crunchy
+ * Biscuits". The maker saying it outright.
+ *
+ * Kept apart from the composition reader on purpose (see above). It's used
+ * where there is no model reading the pack at all — a photo scan in the
+ * consumer app, or a catalog row that predates the column — and where the goal
+ * is simply the best available guess rather than a second opinion.
+ */
+export function detectFormFromName(
+  productName: string | null | undefined
+): FoodForm {
+  const name = normalize(productName ?? "");
+  if (!name) return "unknown";
+  const wet = WET_NAME_WORDS.some((w) => hasWord(name, w));
+  const dry = DRY_NAME_WORDS.some((w) => hasWord(name, w));
+  if (wet === dry) return "unknown";
+  return wet ? "wet" : "dry";
+}
+
+/**
+ * Best guess with no model in the picture: the name if it's decisive, else the
+ * composition. NOT for the two-signal check — this deliberately mixes the
+ * evidence that check keeps apart.
+ */
+export function guessFoodForm(
+  ingredientsText: string | null | undefined,
+  productName?: string | null
+): FoodForm {
+  const byName = detectFormFromName(productName);
+  return byName !== "unknown" ? byName : detectFormFromText(ingredientsText);
 }
 
 /**
