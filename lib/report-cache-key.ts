@@ -4,7 +4,7 @@ import { canonicalBarcode } from "@/lib/barcode";
 /**
  * Report-cache key — MUST match ingredients.help's `app/api/report/route.ts`:
  *
- *   sha256(`barcode:v1:${mode}:${canonicalBarcode(code)}`)
+ *   sha256(`barcode:v2:${mode}:${canonicalBarcode(code)}`)
  *
  * The consumer app caches a generated report under this key, keyed by the
  * barcode so a repeat scan reuses it for free. That cache is INDEPENDENT of
@@ -13,14 +13,15 @@ import { canonicalBarcode } from "@/lib/barcode";
  * stale analysis forever unless we clear it here too.
  *
  * Keep in sync with that route (same small, stable contract as the barcode
- * helpers in lib/barcode.ts).
+ * helpers in lib/barcode.ts). The version moved to v2 when the report's shape
+ * changed — clearing a v1 key would delete nothing, because nothing reads it.
  */
 export type ReportMode = "human" | "pet" | "cosmetics";
 
 export const REPORT_MODES: ReportMode[] = ["human", "pet", "cosmetics"];
 
 export function reportCacheKey(code: string, mode: ReportMode): string {
-  const keySource = `barcode:v1:${mode}:${canonicalBarcode(code)}`;
+  const keySource = `barcode:v2:${mode}:${canonicalBarcode(code)}`;
   return createHash("sha256").update(keySource).digest("hex");
 }
 
