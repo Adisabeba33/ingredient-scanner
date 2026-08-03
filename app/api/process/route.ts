@@ -7,6 +7,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { extractLabel } from "@/lib/extract";
 import { reportCacheKey } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
+import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import {
   detectFormFromName,
   detectFormFromText,
@@ -71,13 +72,8 @@ export async function POST(req: Request) {
 }
 
 async function handle(req: Request) {
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (!adminToken) {
-    return Response.json({ error: "admin_not_configured" }, { status: 501 });
-  }
-  if ((req.headers.get("x-admin-token") ?? "") !== adminToken) {
-    return Response.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {

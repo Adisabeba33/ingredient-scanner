@@ -1,6 +1,7 @@
 import { sanitizeBarcode, canonicalBarcode } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
+import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 
 /**
  * Remove a row from the shared catalog — the undo for a bad capture that already
@@ -18,13 +19,8 @@ import { allReportCacheKeys } from "@/lib/report-cache-key";
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (!adminToken) {
-    return Response.json({ error: "admin_not_configured" }, { status: 501 });
-  }
-  if ((req.headers.get("x-admin-token") ?? "") !== adminToken) {
-    return Response.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
   const admin = createSupabaseAdminClient();
   if (!admin) {
     return Response.json({ error: "store_not_configured" }, { status: 501 });

@@ -4,6 +4,7 @@ import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { isPetSpecies } from "@/lib/pet-species";
 import { isFoodForm } from "@/lib/food-form";
+import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 
 /**
  * Edit a catalog row by hand.
@@ -26,13 +27,8 @@ import { isFoodForm } from "@/lib/food-form";
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (!adminToken) {
-    return Response.json({ error: "admin_not_configured" }, { status: 501 });
-  }
-  if ((req.headers.get("x-admin-token") ?? "") !== adminToken) {
-    return Response.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
   const admin = createSupabaseAdminClient();
   if (!admin) {
     return Response.json({ error: "store_not_configured" }, { status: 501 });

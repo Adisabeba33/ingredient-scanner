@@ -1,3 +1,4 @@
+import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 /**
  * Admin gate check. The capture UI keeps the admin token in localStorage and
  * calls this once on load to decide whether to show the tool. Every real write
@@ -13,12 +14,7 @@
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (!adminToken) {
-    return Response.json({ error: "admin_not_configured" }, { status: 501 });
-  }
-  if ((req.headers.get("x-admin-token") ?? "") !== adminToken) {
-    return Response.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
   return Response.json({ ok: true });
 }
