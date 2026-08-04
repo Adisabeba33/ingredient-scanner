@@ -9,6 +9,7 @@ import {
   Pencil,
   Camera,
 } from "lucide-react";
+import { StoredIngredients } from "./StoredIngredients";
 import {
   ConfirmDestructive,
   isUnlocked,
@@ -762,16 +763,15 @@ export function CatalogBrowser({
                       </div>
                     </div>
                   ) : (
-                    <p
-                      className={`max-h-24 overflow-y-auto rounded px-2 py-1.5 text-[11px] leading-snug ${
-                        row.ingredientsText
-                          ? "bg-surface/70 text-muted"
-                          : "bg-amber-soft font-medium text-ink"
-                      }`}
-                    >
-                      {row.ingredientsText ||
-                        "No ingredients stored — tap the pencil to paste them, or re-capture."}
-                    </p>
+                    // Was a 96-pixel box with an inner scrollbar: six lines of
+                    // a twenty-line composition, and a thumb cannot reliably
+                    // catch a small scroller inside a scrolling list, so it
+                    // read as cut off with no way down. It now folds and opens,
+                    // and the page does the scrolling.
+                    <StoredIngredients
+                      text={row.ingredientsText}
+                      emptyNote="No ingredients stored — tap the pencil to paste them, or re-capture."
+                    />
                   )}
                 </li>
               ))}

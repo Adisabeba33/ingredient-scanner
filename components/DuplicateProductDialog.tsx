@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { AlertTriangle, Loader2, ShieldAlert, Camera } from "lucide-react";
+import { StoredIngredients } from "./StoredIngredients";
 
 /**
  * What happens when someone scans a barcode the catalog already holds.
@@ -185,10 +186,16 @@ export function DuplicateProductDialog({
                   {productName ? ` · ${productName}` : ""} was captured already —
                   someone may have just done it. Do you want to edit it?
                 </p>
+                {/* The whole stored composition, not the first line of it.
+                    "Do I need to re-shoot this?" cannot be answered from an
+                    ellipsis, and that is the only question being asked here. */}
                 {preview && (
-                  <p className="mt-2 rounded-input bg-surfaceSoft px-3 py-2 text-[11px] leading-snug text-muted">
-                    Stored now: “{preview}…”
-                  </p>
+                  <div className="mt-2">
+                    <div className="mb-1 text-[11px] font-medium text-muted">
+                      Stored now
+                    </div>
+                    <StoredIngredients text={preview} />
+                  </div>
                 )}
               </div>
             </div>
