@@ -67,6 +67,12 @@ const GAP = 0.03;
 /** Keep the whole button on screen, with a little to spare. */
 const MARGIN = 0.02;
 
+/** Half the lamp button's width, as a fraction of the box's width. */
+export const LAMP_RADIUS = 0.058;
+
+/** Space between the lamp and the shutter, as a fraction of the box's width. */
+const LAMP_GAP = 0.03;
+
 const clamp = (v: number, lo: number, hi: number) =>
   Math.max(lo, Math.min(hi, v));
 
@@ -103,5 +109,24 @@ export function shutterPlacement(frame: Rect, aspect: number): ShutterSpot {
       cx - rx >= frame.x + frame.w ||
       cy + ry <= frame.y ||
       cy - ry >= frame.y + frame.h,
+  };
+}
+
+/**
+ * Where the lamp sits: immediately left of the shutter, on the same line.
+ *
+ * Always that side, never mirrored to dodge anything. A control that moves
+ * around is a control you have to look for, and looking away from the label is
+ * the cost this whole arrangement exists to avoid. It rides with the shutter,
+ * so the thumb finds it in the same place relative to the button it already
+ * knows.
+ */
+export function lampSpot(shutter: ShutterSpot): { cx: number; cy: number } {
+  return {
+    cx: Math.max(
+      LAMP_RADIUS + MARGIN,
+      shutter.cx - SHUTTER_RADIUS - LAMP_GAP - LAMP_RADIUS
+    ),
+    cy: shutter.cy,
   };
 }

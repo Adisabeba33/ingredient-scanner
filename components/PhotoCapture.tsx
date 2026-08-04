@@ -1,7 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Camera, X, RefreshCw, Crop, ImageUp, Check } from "lucide-react";
+import {
+  Camera,
+  X,
+  RefreshCw,
+  Crop,
+  ImageUp,
+  Check,
+  Flashlight,
+  Sun,
+} from "lucide-react";
 import {
   WHOLE_IMAGE,
   cropImage,
@@ -10,10 +19,21 @@ import {
   type FramePreset,
   type NormalizedRect,
 } from "@/lib/image";
-import { applyContinuousCamera } from "@/lib/camera";
+import {
+  applyContinuousCamera,
+  readCameraLight,
+  setExposure,
+  setTorch,
+  type CameraLight,
+} from "@/lib/camera";
 import { burstSharpest } from "@/lib/sharpness";
 import { CropFrame } from "@/components/CropFrame";
-import { SHUTTER_RADIUS, shutterPlacement } from "@/lib/shutter-position";
+import {
+  LAMP_RADIUS,
+  SHUTTER_RADIUS,
+  lampSpot,
+  shutterPlacement,
+} from "@/lib/shutter-position";
 
 /**
  * Framed photo capture with an ADJUSTABLE frame. The user drags the rectangle
@@ -139,6 +159,33 @@ export function PhotoCapture({
   const [cropRect, setCropRect] = useState<NormalizedRect>(WHOLE_IMAGE);
   const [adjustRect, setAdjustRect] = useState<NormalizedRect>(WHOLE_IMAGE);
 
+  // ── The lamp ────────────────────────────────────────────────────────────────
+  /**
+   * A shelf in a shop is darker than it looks and an ingredient list is 6pt
+   * print, so the phone's lamp is often the difference between a readable shot
+   * and a third attempt.
+   *
+   * The web gives NO control over how bright the lamp burns — `torch` is a
+   * boolean and there is no dimmer in the spec. What a torch does need dimming
+   * for is the blown-out white patch it puts on a glossy pack, and that is the
+   * camera's exposure, which some devices do expose as a real range. So: a
+   * switch for the lamp, and a slider for how bright the picture comes out.
+   */
+  const [light, setLight] = useState<CameraLight>({
+    torch: false,
+    known: false,
+    exposure: null,
+  });
+  const [torchOn, setTorchOn] = useState(false);
+  const [exposure, setExposureAt] = useState<number | null>(null);
+  // Set once the device has actually refused, so a button that cannot work
+  // stops pretending it might.
+  const [noLamp, setNoLamp] = useState(false);
+
+  // The camera restarts on every retake, and `start` must not be rebuilt each
+  // time the lamp is switched, so the switch's position is read from here.
+  const torchRef = useRef(false);
+
   const stop = useCallback(() => {
     const stream = streamRef.current;
     if (stream) {
@@ -172,6 +219,14 @@ export function PhotoCapture({
         video.srcObject = stream;
         void video.play().catch(() => {});
         void applyContinuousCamera(stream); // settle to sharp faster
+
+        const found = readCameraLight(stream);
+        setLight(found);
+        setExposureAt(found.exposure ? found.exposure.value : null);
+        // The lamp stays on across a retake: it is switched on for an aisle,
+        // not for a shot, and stopping the stream puts it out every time.
+        if (torchRef.current) void setTorch(stream, true);
+
         setPhase({ kind: "ready" });
       })
       .catch((err: unknown) => {
@@ -215,6 +270,38 @@ export function PhotoCapture({
     const spot = shutterPlacement(rect, aspect);
     return spot.clear ? spot : null;
   }, [rect, aspect]);
+
+  const lamp = useMemo(() => (floating ? lampSpot(floating) : null), [floating]);
+
+  /**
+   * Offer the switch when the device says it has a lamp — and also when it says
+   * nothing at all, because several browsers (WebKit above all) report no
+   * capabilities whatsoever while still having a lamp behind them. Trying and
+   * being refused is a real answer; hiding the button would leave the question
+   * open forever.
+   */
+  const showLamp = (light.torch || !light.known) && !noLamp;
+
+  const toggleTorch = useCallback(async () => {
+    const stream = streamRef.current;
+    if (!stream) return;
+    const next = !torchRef.current;
+    if (!(await setTorch(stream, next))) {
+      setNoLamp(true);
+      return;
+    }
+    torchRef.current = next;
+    setTorchOn(next);
+  }, []);
+
+  const moveExposure = useCallback(
+    (value: number) => {
+      setExposureAt(value);
+      const stream = streamRef.current;
+      if (stream && light.exposure) void setExposure(stream, light.exposure.key, value);
+    },
+    [light.exposure]
+  );
 
   /**
    * Take the shot — as a short burst, keeping the sharpest.
@@ -461,10 +548,17 @@ export function PhotoCapture({
           />
 
           {/* Hint */}
-          <div className="pointer-events-none absolute inset-x-0 top-20 z-30 flex justify-center px-6">
+          <div className="pointer-events-none absolute inset-x-0 top-20 z-30 flex flex-col items-center gap-2 px-6">
             <p className="max-w-[340px] rounded-full bg-black/40 px-4 py-2 text-center text-[13px] font-medium text-white/90">
               {hint} · Drag the box, pull the corners to fit.
             </p>
+            {/* Said out loud rather than by a button quietly disappearing: the
+                answer to "does the lamp work on this phone" is worth having. */}
+            {noLamp && (
+              <p className="max-w-[340px] rounded-full bg-black/50 px-4 py-2 text-center text-[12px] font-medium text-amber">
+                This browser won&rsquo;t let the page switch the lamp.
+              </p>
+            )}
           </div>
 
           {/* The shutter, which travels with the frame.
@@ -474,39 +568,108 @@ export function PhotoCapture({
               the thumb is already there: lift, tap. Falls back to the fixed
               position when the frame fills the screen and there is nowhere
               clear to stand. */}
-          {floating ? (
-            <button
-              onClick={() => void snap()}
-              disabled={phase.kind !== "ready" || bursting}
-              aria-label="Take photo"
-              className="absolute z-30 inline-flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[5px] border-white/80 bg-white/20 shadow-lg backdrop-blur-[2px] transition active:scale-95 disabled:opacity-40"
-              style={{
-                left: `${floating.cx * 100}%`,
-                top: `${floating.cy * 100}%`,
-                width: `${SHUTTER_RADIUS * 2 * 100}%`,
-                aspectRatio: "1 / 1",
-              }}
-            >
-              <span
-                className={`h-[72%] w-[72%] rounded-full bg-white transition-opacity ${
-                  bursting ? "animate-pulse opacity-70" : ""
-                }`}
-              />
-            </button>
-          ) : (
-            <div className="absolute inset-x-0 bottom-0 z-30 flex items-center justify-center pb-[calc(env(safe-area-inset-bottom)_+_2.5rem)]">
+          {floating && lamp ? (
+            <>
               <button
                 onClick={() => void snap()}
                 disabled={phase.kind !== "ready" || bursting}
                 aria-label="Take photo"
-                className="inline-flex h-[74px] w-[74px] items-center justify-center rounded-full border-[5px] border-white/80 bg-white/20 transition active:scale-95 disabled:opacity-40"
+                className="absolute z-30 inline-flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[5px] border-white/80 bg-white/20 shadow-lg backdrop-blur-[2px] transition active:scale-95 disabled:opacity-40"
+                style={{
+                  left: `${floating.cx * 100}%`,
+                  top: `${floating.cy * 100}%`,
+                  width: `${SHUTTER_RADIUS * 2 * 100}%`,
+                  aspectRatio: "1 / 1",
+                }}
               >
                 <span
-                  className={`h-14 w-14 rounded-full bg-white ${
+                  className={`h-[72%] w-[72%] rounded-full bg-white transition-opacity ${
                     bursting ? "animate-pulse opacity-70" : ""
                   }`}
                 />
               </button>
+
+              {/* The lamp rides alongside, so switching it on doesn't cost the
+                  journey the shutter no longer costs. */}
+              {showLamp && (
+                <button
+                  onClick={() => void toggleTorch()}
+                  disabled={phase.kind !== "ready"}
+                  aria-label={torchOn ? "Switch the lamp off" : "Switch the lamp on"}
+                  aria-pressed={torchOn}
+                  className={`absolute z-30 inline-flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 backdrop-blur-[2px] transition active:scale-95 disabled:opacity-40 ${
+                    torchOn
+                      ? "border-amber bg-amber text-ink"
+                      : "border-white/50 bg-black/35 text-white"
+                  }`}
+                  style={{
+                    left: `${lamp.cx * 100}%`,
+                    top: `${lamp.cy * 100}%`,
+                    width: `${LAMP_RADIUS * 2 * 100}%`,
+                    aspectRatio: "1 / 1",
+                  }}
+                >
+                  <Flashlight size={20} strokeWidth={1.9} aria-hidden="true" />
+                </button>
+              )}
+            </>
+          ) : (
+            <div className="absolute inset-x-0 bottom-0 z-30 flex items-center justify-center pb-[calc(env(safe-area-inset-bottom)_+_2.5rem)]">
+              {/* The shutter stays dead centre; the lamp hangs off its left,
+                  rather than the pair sharing the middle between them. */}
+              <div className="relative">
+                {showLamp && (
+                  <button
+                    onClick={() => void toggleTorch()}
+                    disabled={phase.kind !== "ready"}
+                    aria-label={torchOn ? "Switch the lamp off" : "Switch the lamp on"}
+                    aria-pressed={torchOn}
+                    className={`absolute right-full top-1/2 mr-5 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 transition active:scale-95 disabled:opacity-40 ${
+                      torchOn
+                        ? "border-amber bg-amber text-ink"
+                        : "border-white/50 bg-black/35 text-white"
+                    }`}
+                  >
+                    <Flashlight size={20} strokeWidth={1.9} aria-hidden="true" />
+                  </button>
+                )}
+                <button
+                  onClick={() => void snap()}
+                  disabled={phase.kind !== "ready" || bursting}
+                  aria-label="Take photo"
+                  className="inline-flex h-[74px] w-[74px] items-center justify-center rounded-full border-[5px] border-white/80 bg-white/20 transition active:scale-95 disabled:opacity-40"
+                >
+                  <span
+                    className={`h-14 w-14 rounded-full bg-white ${
+                      bursting ? "animate-pulse opacity-70" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* How bright the picture comes out — NOT how hard the lamp burns,
+              which the web does not expose. It earns its place all the same:
+              a torch on a glossy pack leaves a white patch across the print,
+              and this is the control that takes it off. Only shown while the
+              lamp is on, and only where the device offers a real range.
+              Deliberately a hairline: it sits over the picture, so it covers
+              as close to nothing as a draggable control can. */}
+          {torchOn && light.exposure && exposure !== null && (
+            <div className="absolute inset-x-0 bottom-0 z-30 flex items-center gap-3 px-7 pb-[calc(env(safe-area-inset-bottom)_+_0.85rem)]">
+              <Sun size={14} strokeWidth={1.8} className="shrink-0 text-white/70" aria-hidden="true" />
+              <input
+                type="range"
+                aria-label="Picture brightness"
+                min={light.exposure.min}
+                max={light.exposure.max}
+                step={light.exposure.step}
+                value={exposure}
+                onChange={(e) => moveExposure(Number(e.target.value))}
+                className="h-1.5 w-full cursor-pointer accent-amber"
+              />
+              <Sun size={20} strokeWidth={1.8} className="shrink-0 text-white/90" aria-hidden="true" />
             </div>
           )}
 

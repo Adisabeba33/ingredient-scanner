@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { SHUTTER_RADIUS, shutterPlacement, type Rect } from "./shutter-position";
+import {
+  LAMP_RADIUS,
+  SHUTTER_RADIUS,
+  lampSpot,
+  shutterPlacement,
+  type Rect,
+} from "./shutter-position";
 
 /** A phone held upright: 390 × 724 of camera box. */
 const PORTRAIT = 390 / 724;
@@ -111,5 +117,36 @@ describe("shutterPlacement", () => {
     for (const bad of [0, NaN, Infinity, -1]) {
       expect(shutterPlacement(frame, bad).clear).toBe(true);
     }
+  });
+});
+
+describe("lampSpot", () => {
+  const shutter = { cx: 0.5, cy: 0.7, side: "below" as const, clear: true };
+
+  it("sits on the shutter's line, to its left", () => {
+    const lamp = lampSpot(shutter);
+    expect(lamp.cy).toBe(shutter.cy);
+    expect(lamp.cx).toBeLessThan(shutter.cx);
+  });
+
+  it("doesn't touch the shutter", () => {
+    const lamp = lampSpot(shutter);
+    expect(lamp.cx + LAMP_RADIUS).toBeLessThan(shutter.cx - SHUTTER_RADIUS);
+  });
+
+  it("stays on screen even when the shutter is pinned to the left edge", () => {
+    // A frame dragged into the left corner pushes the shutter as far left as it
+    // can go; the lamp must not follow it off the phone.
+    const pinned = { cx: SHUTTER_RADIUS + 0.02, cy: 0.5, side: "below" as const, clear: true };
+    expect(lampSpot(pinned).cx - LAMP_RADIUS).toBeGreaterThanOrEqual(-0.001);
+  });
+
+  it("travels with the shutter", () => {
+    const low = lampSpot({ ...shutter, cy: 0.2 });
+    const high = lampSpot({ ...shutter, cy: 0.8 });
+    expect(low.cy).toBeLessThan(high.cy);
+    const left = lampSpot({ ...shutter, cx: 0.3 });
+    const right = lampSpot({ ...shutter, cx: 0.7 });
+    expect(left.cx).toBeLessThan(right.cx);
   });
 });
