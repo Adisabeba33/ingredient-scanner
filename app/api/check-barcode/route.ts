@@ -64,12 +64,18 @@ export async function POST(req: Request) {
     source: data?.source ?? null,
     productName: data?.product_name ?? null,
     brands: data?.brands ?? null,
-    // A short preview of what's actually stored, so a wrong-language or
-    // wrong-product row is visible on the phone instead of having to guess
-    // whether a correction landed.
+    // What is actually stored, so a wrong-language or wrong-product row is
+    // visible on the phone instead of having to guess whether a correction
+    // landed.
+    //
+    // This used to be cut to 120 characters — about one line of an ingredient
+    // list, which is not enough to decide whether a product needs re-shooting.
+    // The dialog that shows it now collapses it for display and can open it,
+    // so the cut belongs there, not here. The ceiling is a guard against a
+    // pathological row, not a display choice.
     ingredientsPreview:
       typeof data?.ingredients_text === "string"
-        ? data.ingredients_text.replace(/\s+/g, " ").trim().slice(0, 120)
+        ? data.ingredients_text.replace(/\s+/g, " ").trim().slice(0, 4000)
         : null,
   });
 }
