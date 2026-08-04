@@ -1,4 +1,5 @@
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { compositionKey } from "@/lib/composition-key";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 
@@ -88,16 +89,53 @@ export async function POST(req: Request) {
     return Response.json({ error: "already_reviewed" }, { status: 409 });
   }
 
+  let corrected: string[] = [];
+
   if (action === "approve") {
-    // The recipe really changed, so the verified row is corrected in place —
-    // the entry stays ours, it just now says the right thing.
+    const code = row.code as string;
+    const proposed = row.proposed_text as string;
+
+    // ── Every pack size, not just the one somebody photographed ────────────
+    //
+    // A recipe sold in three bag sizes has three codes. A reformulation
+    // changes all three at once — the maker does not reformulate the 6 lb and
+    // leave the 15 lb alone — but this used to correct the single code the
+    // report arrived under. The others went on serving the old list, so two
+    // people holding the same food in different bags were told different
+    // things about it.
+    //
+    // `recipe_id` is only set where a person confirmed two codes are one
+    // recipe, so this widens the correction exactly as far as somebody
+    // vouched for and no further.
+    const { data: self } = await admin
+      .from("barcode_cache")
+      .select("recipe_id, brands")
+      .eq("code", code)
+      .maybeSingle();
+    const recipeId = (self as { recipe_id?: string | null } | null)?.recipe_id ?? null;
+    const brands = (self as { brands?: string | null } | null)?.brands ?? null;
+
+    if (recipeId) {
+      const { data: family } = await admin
+        .from("barcode_cache")
+        .select("code")
+        .eq("recipe_id", recipeId)
+        .eq("source", "verified");
+      corrected = (family ?? []).map((r) => r.code as string);
+    }
+    if (corrected.length === 0) corrected = [code];
+
     const { error: writeErr } = await admin
       .from("barcode_cache")
       .update({
-        ingredients_text: row.proposed_text as string,
+        ingredients_text: proposed,
+        // The composition changed, so its fingerprint has to change with it.
+        // Leaving the old one would have this recipe keep matching what it
+        // used to be, and stop matching what it now is.
+        composition_key: compositionKey(brands, proposed),
         created_at: new Date().toISOString(),
       })
-      .eq("code", row.code as string)
+      .in("code", corrected)
       .eq("source", "verified");
     if (writeErr) {
       return Response.json(
@@ -106,13 +144,13 @@ export async function POST(req: Request) {
       );
     }
 
-    // The stored report describes the OLD composition and lives under a
-    // separate key, so it survives the update unless dropped here.
+    // The stored reports describe the OLD composition and live under separate
+    // keys, so they survive the update unless dropped here — for every size.
     try {
       await admin
         .from("report_cache")
         .delete()
-        .in("cache_key", allReportCacheKeys(row.code as string));
+        .in("cache_key", corrected.flatMap((c) => allReportCacheKeys(c)));
     } catch {
       /* best-effort — the composition is corrected either way */
     }
@@ -132,5 +170,12 @@ export async function POST(req: Request) {
     );
   }
 
-  return Response.json({ ok: true, action, code: row.code });
+  return Response.json({
+    ok: true,
+    action,
+    code: row.code,
+    // Which codes actually moved — one for an unlinked product, all its pack
+    // sizes for a recipe somebody grouped.
+    corrected,
+  });
 }
