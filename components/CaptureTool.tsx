@@ -59,6 +59,7 @@ interface Draft {
   photos: { brand?: string; ingredients?: string; nutrition?: string };
   /** Set only by a deliberate re-shoot of a product already in the catalog. */
   allowOverwrite?: boolean;
+  allowSeparate?: boolean;
 }
 
 const EMPTY_DRAFT: Draft = { barcodes: [], photos: {} };
@@ -106,6 +107,12 @@ interface ProcessOutcome {
   reason?: string;
   /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
   message?: string;
+  /**
+   * Set on "same-recipe": barcodes the catalog already holds carrying this
+   * exact composition. A food in three bag sizes has three codes and one
+   * recipe, and this is where the operator says whether that is what happened.
+   */
+  siblings?: { code: string; productName: string | null; brands: string | null }[];
 }
 
 /**
@@ -196,6 +203,8 @@ const REASON_LABEL: Record<string, string> = {
   "wrong-language": "Not the English list — re-shoot the English column",
   "already-in-catalog":
     "Already in the catalog — kept the existing entry, nothing overwritten",
+  "same-recipe":
+    "Same composition as a code we already hold — another bag size, or a different product?",
   lookup_failed: "Couldn't check the catalog — retry",
   "no-ingredients-photo": "No ingredients photo",
   "no-valid-barcode": "No valid barcode",
@@ -446,6 +455,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             barcodes: item.barcodes,
             mode: item.mode,
             allowOverwrite: item.allowOverwrite === true,
+            allowSeparate: item.allowSeparate === true,
             photos: {
               brand: item.photos.brand ?? null,
               ingredients: item.photos.ingredients ?? null,
@@ -470,6 +480,11 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           food_form_confirmed?: boolean | null;
           food_form_note?: string | null;
           language?: string;
+          siblings?: {
+            code: string;
+            productName: string | null;
+            brands: string | null;
+          }[];
         } = {};
         try {
           data = text ? JSON.parse(text) : {};
@@ -507,6 +522,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             productName: data.product_name ?? null,
             reason,
             message,
+            siblings: data.siblings,
           };
         }
       } catch {
@@ -952,6 +968,21 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                           {f.message}
                         </span>
                       )}
+                      {/* The one refusal that is a question rather than a
+                          fault. Nothing was written; the answer decides what
+                          gets written. */}
+                      {f.reason === "same-recipe" && f.siblings?.length ? (
+                        <SameRecipeAnswer
+                          outcome={f}
+                          adminToken={adminToken}
+                          onResolved={() => {
+                            void refreshQueue();
+                            setOutcomes(
+                              (prev) => prev?.filter((o) => o.id !== f.id) ?? null
+                            );
+                          }}
+                        />
+                      ) : null}
                     </div>
                   </li>
                 ))}
@@ -1122,5 +1153,112 @@ function PhotoSlot({
         {required && !done ? " *" : ""}
       </span>
     </button>
+  );
+}
+
+/**
+ * The one refusal that is a question rather than a fault.
+ *
+ * A capture's composition matched a barcode the catalog already holds, so
+ * nothing was written and the operator decides what happens. Two answers, and
+ * they cost very different amounts:
+ *
+ *   Another bag size  — the sibling's stored reading IS this pack's reading,
+ *                       exactly, which is why they matched. Nothing is read
+ *                       again: /api/link-size copies the row and records that
+ *                       the two codes are one recipe. No photos, no model call.
+ *
+ *   Different product — re-run the capture with allowSeparate, which does cost
+ *                       a model call. It is the rarer answer, and paying for
+ *                       the rarer one is the right way round.
+ */
+function SameRecipeAnswer({
+  outcome,
+  adminToken,
+  onResolved,
+}: {
+  outcome: ProcessOutcome;
+  adminToken: string;
+  onResolved: () => void;
+}) {
+  const [busy, setBusy] = useState<"link" | "separate" | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const sibling = outcome.siblings?.[0];
+  if (!sibling) return null;
+
+  const linkAsSize = async () => {
+    setBusy("link");
+    setError(null);
+    try {
+      const res = await fetch("/api/link-size", {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-admin-token": adminToken },
+        body: JSON.stringify({
+          code: outcome.barcodes[0],
+          siblingCode: sibling.code,
+        }),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        reason?: string;
+      };
+      if (!res.ok || !data.ok) {
+        setError(REASON_LABEL[data.reason ?? ""] ?? data.reason ?? "Couldn't link it");
+        setBusy(null);
+        return;
+      }
+      // The photos were never needed for this answer, so the queue item goes.
+      await deleteProduct(outcome.id).catch(() => {});
+      onResolved();
+    } catch {
+      setError("Offline — try again");
+      setBusy(null);
+    }
+  };
+
+  const keepSeparate = async () => {
+    setBusy("separate");
+    setError(null);
+    try {
+      // Marked on the queue item so the next "Process all" writes it as its own
+      // recipe instead of asking the same question again.
+      await updateProduct(outcome.id, { allowSeparate: true });
+      onResolved();
+    } catch {
+      setError("Couldn't mark it — try again");
+      setBusy(null);
+    }
+  };
+
+  return (
+    <div className="mt-2 rounded-input bg-surface/70 p-2">
+      <div className="text-[11px] leading-snug text-ink">
+        Same list as{" "}
+        <span className="font-mono">{sibling.code}</span>
+        {sibling.productName ? ` · ${sibling.productName}` : ""}
+        {outcome.siblings && outcome.siblings.length > 1
+          ? ` (and ${outcome.siblings.length - 1} more)`
+          : ""}
+      </div>
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
+        <button
+          type="button"
+          onClick={linkAsSize}
+          disabled={busy !== null}
+          className="rounded-full bg-green-primary px-3 py-1 text-[11px] font-medium text-white disabled:opacity-50"
+        >
+          {busy === "link" ? "Linking…" : "Another bag size"}
+        </button>
+        <button
+          type="button"
+          onClick={keepSeparate}
+          disabled={busy !== null}
+          className="rounded-full border border-border-strong px-3 py-1 text-[11px] font-medium text-ink disabled:opacity-50"
+        >
+          {busy === "separate" ? "Marking…" : "Different product"}
+        </button>
+      </div>
+      {error && <div className="mt-1 text-[11px] text-amber">{error}</div>}
+    </div>
   );
 }

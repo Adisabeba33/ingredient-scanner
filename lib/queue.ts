@@ -49,6 +49,12 @@ export interface PendingProduct {
    * duplicate dialog or the catalog — never by an ordinary capture.
    */
   allowOverwrite?: boolean;
+  /**
+   * "That other code is a different product" — the operator's answer to a
+   * composition match. Set on the item so the next processing run writes it as
+   * its own recipe rather than asking again.
+   */
+  allowSeparate?: boolean;
 }
 
 const DB_NAME = "catalog-scanner";
@@ -142,7 +148,7 @@ export async function updateProduct(
   patch: Partial<
     Pick<
       PendingProduct,
-      "barcodes" | "mode" | "photos" | "lastError" | "allowOverwrite"
+      "barcodes" | "mode" | "photos" | "lastError" | "allowOverwrite" | "allowSeparate"
     >
   >
 ): Promise<void> {

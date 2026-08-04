@@ -4,6 +4,7 @@ import {
   type ScanMode,
 } from "@/lib/barcode";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { compositionKey } from "@/lib/composition-key";
 import { extractLabel } from "@/lib/extract";
 import { reportCacheKey } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
@@ -57,6 +58,12 @@ interface VerifiedRow {
   image_url: null;
   reason: null;
   created_at: string;
+  /**
+   * Fingerprint of the brand and the list, so a later capture of the SAME
+   * recipe under a different pack-size barcode can be spotted. Null when the
+   * composition is too thin to fingerprint — see lib/composition-key.ts.
+   */
+  composition_key: string | null;
 }
 
 export async function POST(req: Request) {
@@ -90,6 +97,11 @@ async function handle(req: Request) {
     photos?: { brand?: unknown; ingredients?: unknown; nutrition?: unknown };
     /** Deliberate replacement of an entry the catalog already holds. */
     allowOverwrite?: unknown;
+    /**
+     * "No, that other code is a different product" — write this capture as its
+     * own recipe rather than asking about the composition match again.
+     */
+    allowSeparate?: unknown;
   };
   try {
     body = await req.json();
@@ -258,6 +270,53 @@ async function handle(req: Request) {
         })
       : null;
 
+  // ── Has this recipe already arrived under a different barcode? ───────────
+  //
+  // The case this exists for: a food sold in three bag sizes has three codes.
+  // Somebody captures the small bag in one shop and meets the large one a week
+  // later in another, by which time nobody remembers. Nothing here knew they
+  // were the same food, so the catalog gained a second, unlinked row.
+  //
+  // The composition is what gives it away — same maker, same list. That is a
+  // reason to ASK, never to merge: one brand's Adult and Senior recipes can
+  // carry a word-for-word identical list and differ only in the guaranteed
+  // analysis. So this refuses the write and hands back who it looks like,
+  // and a person decides.
+  const composition = compositionKey(
+    extraction.brands,
+    extraction.ingredients_text
+  );
+  const allowSeparate = body.allowSeparate === true;
+
+  if (composition && !allowSeparate) {
+    const { data: siblings } = await admin
+      .from("barcode_cache")
+      .select("code, product_name, brands")
+      .eq("composition_key", composition)
+      .eq("source", "verified")
+      .not("code", "in", `(${writable.join(",")})`)
+      .limit(3);
+
+    if (siblings && siblings.length > 0) {
+      return Response.json({
+        ok: false,
+        reason: "same-recipe",
+        codes: writable,
+        product_name: extraction.product_name,
+        brands: extraction.brands,
+        // Everything the operator needs to recognise it without opening
+        // anything: which codes already carry this exact list, and what they
+        // are called.
+        siblings: siblings.map((s) => ({
+          code: s.code as string,
+          productName: (s.product_name as string | null) ?? null,
+          brands: (s.brands as string | null) ?? null,
+        })),
+        usage,
+      });
+    }
+  }
+
   // ── One verified row per pack-size code ──────────────────────────────────
   const now = new Date().toISOString();
   const rows: VerifiedRow[] = writable.map((code) => ({
@@ -276,6 +335,7 @@ async function handle(req: Request) {
     image_url: null,
     reason: null,
     created_at: now,
+    composition_key: composition,
   }));
 
   // Upsert rather than insert: with allowOverwrite the row is meant to be
