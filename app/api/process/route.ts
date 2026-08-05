@@ -6,6 +6,10 @@ import {
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { compositionKey } from "@/lib/composition-key";
 import { extractLabel } from "@/lib/extract";
+import {
+  hasAnyFigure,
+  type GuaranteedAnalysis,
+} from "@/lib/guaranteed-analysis";
 import { reportCacheKey } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
@@ -52,6 +56,8 @@ interface VerifiedRow {
   food_form_confirmed: boolean | null;
   /** Moisture % off the guaranteed analysis, when it was legible. */
   moisture_percent: number | null;
+  /** The whole Guaranteed Analysis panel as printed — null when none was read. */
+  guaranteed_analysis: GuaranteedAnalysis | null;
   ingredients_text: string;
   product_name: string | null;
   brands: string | null;
@@ -332,6 +338,13 @@ async function handle(req: Request) {
     food_form: formVerdict ? formVerdict.form : null,
     food_form_confirmed: formVerdict ? formVerdict.confirmed : null,
     moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
+    // Pet food only: the Guaranteed Analysis is an AAFCO panel and human packs
+    // carry a different one, read elsewhere. Null rather than an object of
+    // nulls, so "we have no panel for this" is one check and not nine.
+    guaranteed_analysis:
+      mode === "pet" && hasAnyFigure(extraction.guaranteed_analysis)
+        ? extraction.guaranteed_analysis
+        : null,
     image_url: null,
     reason: null,
     created_at: now,
@@ -391,6 +404,10 @@ async function handle(req: Request) {
     food_form_confirmed: formVerdict ? formVerdict.confirmed : null,
     food_form_note: formVerdict ? formVerdict.why : null,
     moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
+    guaranteed_analysis:
+      mode === "pet" && hasAnyFigure(extraction.guaranteed_analysis)
+        ? extraction.guaranteed_analysis
+        : null,
     ingredients_text: extraction.ingredients_text,
     usage,
   });

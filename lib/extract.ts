@@ -6,6 +6,10 @@ import {
   type PetSpecies,
 } from "@/lib/pet-species";
 import { isFoodForm, type FoodForm } from "@/lib/food-form";
+import {
+  readGuaranteedAnalysis,
+  type GuaranteedAnalysis,
+} from "@/lib/guaranteed-analysis";
 
 /**
  * Read a pet-food label from photos with Claude vision.
@@ -38,6 +42,8 @@ export interface LabelExtraction {
   food_form: FoodForm;
   /** Moisture % from the Guaranteed Analysis, when that panel was legible. */
   moisture_percent: number | null;
+  /** The whole Guaranteed Analysis panel, as printed. See lib/guaranteed-analysis.ts. */
+  guaranteed_analysis: GuaranteedAnalysis;
 }
 
 const EXTRACTION_SCHEMA = {
@@ -74,6 +80,61 @@ const EXTRACTION_SCHEMA = {
       description:
         "Which animal this product is for, read from the pack — it usually says so plainly ('Cat Food', 'For Dogs', 'Kitten', 'Puppy'), and the animal pictured is a strong hint. Use 'both' only when the pack really is sold for cats AND dogs (some treats are). Use 'unknown' when the pack doesn't say — do NOT infer it from the ingredients, since cats and dogs share most of them.",
     },
+    guaranteed_analysis: {
+      type: "object",
+      additionalProperties: false,
+      description:
+        "The Guaranteed Analysis panel and the calorie statement beside it, COPIED as printed. Every field is null when that figure is not on the pack, and ALL are null when no such panel is visible in any photo. Copy percentages as numbers without the % sign. Do not convert, average, or calculate anything.",
+      properties: {
+        crude_protein_min: {
+          type: ["number", "null"],
+          description: "Crude Protein, the 'min' percentage (e.g. 11.0 from 'Crude Protein 11.0% min').",
+        },
+        crude_fat_min: {
+          type: ["number", "null"],
+          description: "Crude Fat, the 'min' percentage.",
+        },
+        crude_fiber_max: {
+          type: ["number", "null"],
+          description: "Crude Fiber (or Fibre), the 'max' percentage.",
+        },
+        moisture_max: {
+          type: ["number", "null"],
+          description: "Moisture, the 'max' percentage.",
+        },
+        ash_max: {
+          type: ["number", "null"],
+          description: "Ash, the 'max' percentage. Many packs list it; null when this one doesn't.",
+        },
+        taurine_min: {
+          type: ["number", "null"],
+          description: "Taurine, the 'min' percentage — usually a small figure like 0.05. Common on cat food, absent on most dog food.",
+        },
+        kcal_per_kg: {
+          type: ["number", "null"],
+          description: "Calorie content per kilogram, e.g. 843 from '843 kcal/kg'.",
+        },
+        kcal_per_serving: {
+          type: ["number", "null"],
+          description: "Calories per serving as printed, e.g. 71 from '71 kcal/can'.",
+        },
+        serving_name: {
+          type: ["string", "null"],
+          description: "What that serving is called on the pack: 'can', 'cup', 'pouch', 'tray'. One word.",
+        },
+      },
+      required: [
+        "crude_protein_min",
+        "crude_fat_min",
+        "crude_fiber_max",
+        "moisture_max",
+        "ash_max",
+        "taurine_min",
+        "kcal_per_kg",
+        "kcal_per_serving",
+        "serving_name",
+      ],
+    },
   },
   required: [
     "product_name",
@@ -84,6 +145,7 @@ const EXTRACTION_SCHEMA = {
     "species",
     "food_form",
     "moisture_percent",
+    "guaranteed_analysis",
   ],
 } as const;
 
@@ -104,7 +166,12 @@ const USER_INSTRUCTION =
   "ingredients_text empty, and report the language you saw. " +
   "Also say whether the pack is dry food or wet food, judging by the container and the " +
   "words on it \u2014 not by the ingredients. If a Guaranteed Analysis panel is visible in " +
-  "any of the photos, copy its Moisture percentage; otherwise leave it null.";
+  "any of the photos, copy its Moisture percentage; otherwise leave it null. " +
+  "Fill guaranteed_analysis from that same panel and the calorie statement printed with it, " +
+  "COPYING each figure exactly as shown. Leave a field null when the pack doesn't print it, " +
+  "and leave every field null when no such panel is visible. Do NOT convert between units, " +
+  "do NOT work anything out on a dry-matter basis, and do NOT estimate a figure that is " +
+  "absent \u2014 the calculations are done elsewhere and a guessed input would poison them.";
 
 /** A data: URL like `data:image/jpeg;base64,AAAA` → the SDK's image block. */
 function toImageBlock(dataUrl: string): Anthropic.Messages.ImageBlockParam {
@@ -207,6 +274,7 @@ export async function extractLabel({
 
   const ingredientsText =
     typeof parsed.ingredients_text === "string" ? parsed.ingredients_text.trim() : "";
+  const analysis = readGuaranteedAnalysis(parsed.guaranteed_analysis);
   const extraction: LabelExtraction = {
     product_name:
       typeof parsed.product_name === "string" && parsed.product_name.trim()
@@ -230,13 +298,17 @@ export async function extractLabel({
     // called "Kitten Chicken Recipe" tells us plenty on its own.
     food_form: isFoodForm(parsed.food_form) ? parsed.food_form : "unknown",
     // A percentage only — anything else means the panel wasn't really read.
+    // Falls back to the panel's own moisture: the two are the same figure off
+    // the same photograph, and the panel is now the more careful reading of it
+    // (a panel that contradicts itself is discarded whole).
     moisture_percent:
       typeof parsed.moisture_percent === "number" &&
       Number.isFinite(parsed.moisture_percent) &&
       parsed.moisture_percent >= 0 &&
       parsed.moisture_percent <= 100
         ? parsed.moisture_percent
-        : null,
+        : analysis.moistureMax,
+    guaranteed_analysis: analysis,
     species: isPetSpecies(parsed.species)
       ? parsed.species
       : detectSpeciesFromText(
