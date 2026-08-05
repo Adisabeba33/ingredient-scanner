@@ -1248,7 +1248,7 @@ function SameRecipeAnswer({
           type="button"
           onClick={linkAsSize}
           disabled={busy !== null}
-          className="rounded-full bg-green-primary px-3 py-1 text-[11px] font-medium text-white disabled:opacity-50"
+          className="rounded-full bg-sage-500 px-3 py-1 text-[11px] font-medium text-white disabled:opacity-50"
         >
           {busy === "link" ? "Linking…" : "Another bag size"}
         </button>
@@ -1256,7 +1256,7 @@ function SameRecipeAnswer({
           type="button"
           onClick={keepSeparate}
           disabled={busy !== null}
-          className="rounded-full border border-border-strong px-3 py-1 text-[11px] font-medium text-ink disabled:opacity-50"
+          className="rounded-full border border-lineStrong bg-surface px-3 py-1 text-[11px] font-medium text-ink disabled:opacity-50"
         >
           {busy === "separate" ? "Marking…" : "Different product"}
         </button>

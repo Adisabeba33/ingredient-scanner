@@ -200,7 +200,7 @@ export function PackSizeReview({ adminToken }: { adminToken: string }) {
                 type="button"
                 onClick={backfill}
                 disabled={backfilling}
-                className="mt-2 flex items-center gap-1.5 rounded-full bg-green-primary px-3 py-1 text-[12px] font-medium text-white disabled:opacity-50"
+                className="mt-2 flex items-center gap-1.5 rounded-full bg-sage-500 px-3 py-1 text-[12px] font-medium text-white disabled:opacity-50"
               >
                 {backfilling && (
                   <Loader2 size={12} className="animate-spin" aria-hidden="true" />
@@ -233,7 +233,7 @@ export function PackSizeReview({ adminToken }: { adminToken: string }) {
           {groups?.map((group) => (
             <div
               key={group.compositionKey}
-              className="rounded-input border border-border-strong p-3"
+              className="rounded-input border border-lineStrong p-3"
             >
               <div className="text-[12px] font-semibold text-ink">
                 {group.members[0]?.brands ? `${group.members[0].brands} · ` : ""}
@@ -265,7 +265,7 @@ export function PackSizeReview({ adminToken }: { adminToken: string }) {
                   type="button"
                   onClick={() => link(group)}
                   disabled={busy !== null}
-                  className="rounded-full bg-green-primary px-3 py-1 text-[11px] font-medium text-white disabled:opacity-50"
+                  className="rounded-full bg-sage-500 px-3 py-1 text-[11px] font-medium text-white disabled:opacity-50"
                 >
                   {busy === group.compositionKey ? "Linking…" : "One recipe"}
                 </button>
@@ -273,7 +273,7 @@ export function PackSizeReview({ adminToken }: { adminToken: string }) {
                   type="button"
                   onClick={() => dismiss(group)}
                   disabled={busy !== null}
-                  className="rounded-full border border-border-strong px-3 py-1 text-[11px] font-medium text-ink disabled:opacity-50"
+                  className="rounded-full border border-lineStrong bg-surface px-3 py-1 text-[11px] font-medium text-ink disabled:opacity-50"
                 >
                   Different products
                 </button>
