@@ -20,6 +20,7 @@ import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
 import { CorrectionsReview } from "@/components/CorrectionsReview";
 import { PackSizeReview } from "@/components/PackSizeReview";
+import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
 import {
   addProduct,
@@ -1042,6 +1043,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       <CorrectionsReview adminToken={adminToken} />
 
       <PackSizeReview adminToken={adminToken} />
+
+      {/* The opposite relation: one code holding several different recipes. */}
+      <MultipackMark adminToken={adminToken} />
 
       {/* What's actually in the shared catalog — inspect and fix. */}
       <CatalogBrowser

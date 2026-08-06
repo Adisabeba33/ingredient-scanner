@@ -218,6 +218,39 @@ async function handle(req: Request) {
   let skipped: string[] = [];
   let writable = codes;
 
+  // ── A box is never a product, and allowOverwrite doesn't change that ─────
+  // Checked before and separately from the verified check below, because a
+  // multipack row carries no source and would slip past it — and because the
+  // duplicate dialog's "yes, replace it" is an answer about a product, not
+  // permission to turn a carton into one. Writing a composition here is the
+  // exact mistake the marking exists to prevent, and nothing downstream can
+  // catch it: the back of such a box reads as a perfectly ordinary list.
+  {
+    const { data: boxes, error: boxErr } = await admin
+      .from("barcode_cache")
+      .select("code")
+      .in("code", codes)
+      .eq("reason", "multipack");
+    if (boxErr) {
+      return Response.json(
+        { ok: false, reason: "lookup_failed", message: boxErr.message },
+        { status: 500 }
+      );
+    }
+    const marked = new Set((boxes ?? []).map((r) => r.code as string));
+    if (marked.size > 0) {
+      writable = writable.filter((c) => !marked.has(c));
+      if (writable.length === 0) {
+        return Response.json({
+          ok: false,
+          reason: "multipack",
+          codes: [...marked],
+          usage,
+        });
+      }
+    }
+  }
+
   if (!allowOverwrite) {
     const { data: existing, error: existingErr } = await admin
       .from("barcode_cache")
@@ -234,7 +267,10 @@ async function handle(req: Request) {
     skipped = codes.filter((c) => taken.has(c));
     // A product can legitimately gain a new pack size, so write the codes that
     // are new and skip only the ones already held, rather than refusing wholesale.
-    writable = codes.filter((c) => !taken.has(c));
+    // Narrows `writable` rather than rebuilding it from `codes`: the multipack
+    // check above has already removed the cartons, and starting over would put
+    // them back.
+    writable = writable.filter((c) => !taken.has(c));
 
     if (writable.length === 0) {
       return Response.json({
