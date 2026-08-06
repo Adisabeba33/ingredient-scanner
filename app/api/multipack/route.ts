@@ -36,6 +36,9 @@ import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 
 export const runtime = "nodejs";
 
+/** More recipes than this in one box is a mistranscription, not a product. */
+const MAX_MEMBERS = 24;
+
 interface ExistingRow {
   code: string;
   found: boolean | null;
@@ -43,6 +46,7 @@ interface ExistingRow {
   reason: string | null;
   product_name: string | null;
   ingredients_text: string | null;
+  contains: string[] | null;
 }
 
 export async function POST(req: Request) {
@@ -54,7 +58,7 @@ export async function POST(req: Request) {
     return Response.json({ error: "store_not_configured" }, { status: 501 });
   }
 
-  let body: { code?: unknown; productName?: unknown };
+  let body: { code?: unknown; productName?: unknown; contains?: unknown };
   try {
     body = await req.json();
   } catch {
@@ -78,11 +82,31 @@ export async function POST(req: Request) {
       ? body.productName.trim().replace(/\s+/g, " ").slice(0, 120) || null
       : null;
 
+  // What the box holds. Not required — a code marked with no members still
+  // stops the app inviting a photograph of the carton, which is the whole point
+  // of marking it. With them, the app can offer the three recipes instead of
+  // just refusing, which is the point of coming back and adding them.
+  //
+  // Members are NOT required to exist in the catalog. The operator reads all
+  // four codes off the box in one pass, long before the tins are captured, and
+  // recording the relation early is what lets the app tell the next person
+  // which member is still unread — the person holding that tin.
+  const contains: string[] = [];
+  for (const raw of Array.isArray(body.contains) ? body.contains : []) {
+    const member = sanitizeBarcode(typeof raw === "string" ? raw : "");
+    const memberKey = member ? canonicalBarcode(member) : null;
+    // The box is never its own member: a carton listing itself would send the
+    // chooser straight back to the screen the person is already looking at.
+    if (!memberKey || memberKey === key) continue;
+    if (!contains.includes(memberKey)) contains.push(memberKey);
+    if (contains.length >= MAX_MEMBERS) break;
+  }
+
   let existing: ExistingRow | null = null;
   try {
     const { data, error } = await admin
       .from("barcode_cache")
-      .select("code, found, source, reason, product_name, ingredients_text")
+      .select("code, found, source, reason, product_name, ingredients_text, contains")
       .eq("code", key)
       .maybeSingle();
     if (error) throw new Error(error.message);
@@ -93,16 +117,12 @@ export async function POST(req: Request) {
     return Response.json({ ok: false, reason: "load-failed" }, { status: 503 });
   }
 
-  if (existing?.reason === "multipack") {
-    return Response.json({
-      ok: true,
-      code: key,
-      already: true,
-      productName: existing.product_name,
-    });
-  }
+  // An already-marked box is not a no-op: coming back to add the member codes,
+  // once the tins have been scanned, is the normal second visit. Only the name
+  // and the contents can change, and neither is required.
+  const already = existing?.reason === "multipack";
 
-  if (existing?.found && existing.ingredients_text?.trim()) {
+  if (!already && existing?.found && existing.ingredients_text?.trim()) {
     return Response.json(
       {
         ok: false,
@@ -128,6 +148,11 @@ export async function POST(req: Request) {
         source: null,
         ingredients_text: null,
         product_name: productName ?? existing?.product_name ?? null,
+        // Written only when this request actually carried members. An upsert
+        // always sends every column, so passing the empty list through would
+        // let a second visit that adds nothing silently erase what the first
+        // one recorded.
+        contains: contains.length > 0 ? contains : (existing?.contains ?? null),
         created_at: new Date().toISOString(),
       },
       { onConflict: "code" }
@@ -143,8 +168,9 @@ export async function POST(req: Request) {
   return Response.json({
     ok: true,
     code: key,
-    already: false,
+    already,
     productName: productName ?? existing?.product_name ?? null,
+    contains: contains.length > 0 ? contains : (existing?.contains ?? []),
   });
 }
 
