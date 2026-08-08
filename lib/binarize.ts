@@ -132,6 +132,23 @@ export function adaptiveThreshold(
   return out;
 }
 
+/**
+ * Flip black and white, in place.
+ *
+ * Decoders assume dark bars on a light background, because that is what a
+ * printed barcode is — until it isn't. Foil and dark packs carry the code the
+ * other way round, light bars on black, and a reader handed one of those finds
+ * nothing at all rather than finding it upside down. Once a frame has been
+ * binarised, trying the negative costs one pass over the pixels.
+ */
+export function invertRgba(rgba: Uint8ClampedArray): void {
+  for (let p = 0; p < rgba.length; p += 4) {
+    rgba[p] = 255 - rgba[p];
+    rgba[p + 1] = 255 - rgba[p + 1];
+    rgba[p + 2] = 255 - rgba[p + 2];
+  }
+}
+
 /** Paint a binary mask back over an RGBA buffer, in place. */
 export function writeBinary(
   binary: Uint8ClampedArray,

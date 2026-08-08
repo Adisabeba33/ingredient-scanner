@@ -1,10 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ScanLine, X, Keyboard, Contrast } from "lucide-react";
+import { ScanLine, X, Keyboard, Contrast, Crosshair } from "lucide-react";
 import { applyContinuousCamera } from "@/lib/camera";
 import { apertureCrop } from "@/lib/aperture-crop";
-import { binarizeRgba } from "@/lib/binarize";
+import { binarizeRgba, invertRgba } from "@/lib/binarize";
+import { gradientEnergy } from "@/lib/sharpness";
+import {
+  READINGS,
+  STEADY_MAX_MS,
+  STEADY_TICK_MS,
+  needsContrast,
+  needsInvert,
+  shouldKeep,
+} from "@/lib/steady";
 
 /**
  * Live "point the camera at a barcode and it reads" scanner, covering every
@@ -76,6 +85,21 @@ const STRUGGLE_AFTER_MS = 12000;
  *  spending a whole core on image processing. */
 const LENS_INTERVAL_MS = 90;
 
+function sizeCanvas(canvas: HTMLCanvasElement, w: number, h: number): void {
+  if (canvas.width !== w || canvas.height !== h) {
+    canvas.width = w;
+    canvas.height = h;
+  }
+}
+
+/** Copy one canvas onto another, matching its size first. */
+function paintInto(target: HTMLCanvasElement, source: HTMLCanvasElement): void {
+  const ctx = target.getContext("2d");
+  if (!ctx) return;
+  sizeCanvas(target, source.width, source.height);
+  ctx.drawImage(source, 0, 0);
+}
+
 /** Retail barcodes are 8 (EAN-8), 12 (UPC-A), or 13 (EAN-13) digits. */
 function acceptCode(raw: string): string | null {
   const digits = raw.replace(/\D+/g, "");
@@ -112,6 +136,12 @@ export function BarcodeScanner({
   }, []);
   /** Off-screen frame the lens is applied to, and what the decoder is then given. */
   const workRef = useRef<HTMLCanvasElement | null>(null);
+  // Holding still. `held` keeps the sharpest untouched crop of the hold; each
+  // reading is rendered from it into `work`, so the kept frame survives being
+  // read four different ways.
+  const [steady, setSteady] = useState(false);
+  const steadyRef = useRef(false);
+  const heldRef = useRef<HTMLCanvasElement | null>(null);
   /** On-screen copy, so you see exactly the picture the decoder is working from. */
   const viewRef = useRef<HTMLCanvasElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -122,6 +152,8 @@ export function BarcodeScanner({
   const readerRef = useRef<{
     decodeFromCanvas: (c: HTMLCanvasElement) => { getText(): string };
   } | null>(null);
+  /** The native detector, same reason — whichever exists, a canvas can be read. */
+  const detectorRef = useRef<BarcodeDetectorInstance | null>(null);
   const doneRef = useRef(false);
   const [phase, setPhase] = useState<Phase>({ kind: "starting" });
   const [struggling, setStruggling] = useState(false);
@@ -154,6 +186,14 @@ export function BarcodeScanner({
     (digits: string) => {
       if (doneRef.current) return;
       doneRef.current = true;
+      // A short buzz, for the hand that is holding the pack rather than looking
+      // at the screen. Android only — iOS Safari has no Vibration API at all,
+      // so this is a bonus where it exists and silence where it doesn't.
+      try {
+        navigator.vibrate?.(25);
+      } catch {
+        /* not supported, or blocked without a gesture */
+      }
       // Flash the frame green so the read feels confirmed, then hand back.
       setPhase({ kind: "locked" });
       stop();
@@ -200,17 +240,43 @@ export function BarcodeScanner({
     ctx.putImageData(image, 0, 0);
 
     // Show it. The on-screen canvas is CSS-sized to the aperture, so its own
-    // pixel buffer only has to be big enough to look sharp.
-    const vctx = view.getContext("2d");
-    if (vctx) {
-      if (view.width !== w || view.height !== h) {
-        view.width = w;
-        view.height = h;
-      }
-      vctx.drawImage(work, 0, 0);
-    }
+    // pixel buffer only has to be big enough to look sharp. Not while a hold is
+    // running, though: that has frozen a chosen frame there, and a live repaint
+    // over the top would undo the one thing the hold is for.
+    if (!steadyRef.current) paintInto(view, work);
     return work;
   }, []);
+
+  /**
+   * Read one canvas with whatever decoder this browser has. Chromium's native
+   * detector where it exists, ZXing where it doesn't — the callers below don't
+   * care which, they only need a canvas read.
+   */
+  const decodeCanvas = useCallback(
+    async (canvas: HTMLCanvasElement): Promise<string | null> => {
+      const detector = detectorRef.current;
+      if (detector) {
+        try {
+          for (const b of await detector.detect(canvas)) {
+            const code = acceptCode(b.rawValue);
+            if (code) return code;
+          }
+        } catch {
+          /* transient — try the other reader if there is one */
+        }
+      }
+      const reader = readerRef.current;
+      if (reader) {
+        try {
+          return acceptCode(reader.decodeFromCanvas(canvas).getText());
+        } catch {
+          /* nothing in this frame */
+        }
+      }
+      return null;
+    },
+    []
+  );
 
   const fail = useCallback((err: unknown) => {
     const name = err instanceof DOMException ? err.name : "";
@@ -242,6 +308,7 @@ export function BarcodeScanner({
     // ── Native BarcodeDetector path (Chromium) ──────────────────────────────
     if (Ctor) {
       const detector = new Ctor({ formats: NATIVE_FORMATS });
+      detectorRef.current = detector;
       const tick = async () => {
         if (cancelled || doneRef.current) return;
         const video = videoRef.current;
@@ -375,6 +442,95 @@ export function BarcodeScanner({
     };
   }, [hard, lens, succeed]);
 
+  /**
+   * Hold still. See lib/steady.ts for why this keeps the sharpest frame and
+   * reads it four ways, rather than freezing the picture as asked — freezing
+   * the picture alone would change nothing the decoder can see.
+   */
+  useEffect(() => {
+    if (!steady) return;
+    let stopped = false;
+    let timer: number | null = null;
+    let best = -Infinity;
+    let reading = 0;
+    const startedAt = performance.now();
+    const held = (heldRef.current ??= document.createElement("canvas"));
+    const work = (workRef.current ??= document.createElement("canvas"));
+
+    const tick = async () => {
+      if (stopped || doneRef.current) return;
+      const video = videoRef.current;
+      const view = viewRef.current;
+      if (video && view && video.readyState >= 2 && video.videoWidth) {
+        const crop = apertureCrop(
+          { width: video.videoWidth, height: video.videoHeight },
+          video.getBoundingClientRect(),
+          view.getBoundingClientRect()
+        );
+        const w = Math.round(crop.sw);
+        const h = Math.round(crop.sh);
+        if (w > 1 && h > 1) {
+          sizeCanvas(work, w, h);
+          const ctx = work.getContext("2d", { willReadFrequently: true });
+          if (ctx) {
+            ctx.drawImage(video, crop.sx, crop.sy, crop.sw, crop.sh, 0, 0, w, h);
+            // Scored on the APERTURE. A phone pointed at a shelf has most of
+            // the shelf in frame, and a crisp shelf behind a smeared barcode
+            // would win every comparison.
+            const frame = ctx.getImageData(0, 0, w, h);
+            const score = gradientEnergy(frame.data, w, h);
+            if (shouldKeep(score, best)) {
+              best = score;
+              paintInto(held, work);
+              paintInto(view, held); // the picture freezes here
+              reading = 0; // a better frame deserves the readings from the top
+            }
+
+            if (best > -Infinity) {
+              const how = READINGS[reading % READINGS.length];
+              reading++;
+              paintInto(work, held);
+              if (needsContrast(how) || needsInvert(how)) {
+                const wctx = work.getContext("2d", { willReadFrequently: true });
+                if (wctx) {
+                  const image = wctx.getImageData(0, 0, held.width, held.height);
+                  if (needsContrast(how)) {
+                    binarizeRgba(image.data, held.width, held.height);
+                  }
+                  if (needsInvert(how)) invertRgba(image.data);
+                  wctx.putImageData(image, 0, 0);
+                }
+              }
+              const code = await decodeCanvas(work);
+              if (code) return succeed(code);
+            }
+          }
+        }
+      }
+      if (performance.now() - startedAt > STEADY_MAX_MS) {
+        setSteady(false);
+        steadyRef.current = false;
+        return;
+      }
+      timer = window.setTimeout(() => void tick(), STEADY_TICK_MS);
+    };
+    void tick();
+    return () => {
+      stopped = true;
+      if (timer != null) clearTimeout(timer);
+    };
+  }, [steady, decodeCanvas, succeed]);
+
+  const holdSteady = useCallback(() => {
+    steadyRef.current = true;
+    setSteady(true);
+  }, []);
+
+  const releaseSteady = useCallback(() => {
+    steadyRef.current = false;
+    setSteady(false);
+  }, []);
+
   const close = useCallback(() => {
     stop();
     onCancel();
@@ -467,18 +623,40 @@ export function BarcodeScanner({
                 whether it is darker than its own surroundings, which is the one
                 question a barcode's bars always answer the same way. */}
             {phase.kind === "scanning" && !locked && (
-              <button
-                onClick={toggleHard}
-                aria-pressed={hard}
-                className={`pointer-events-auto inline-flex h-9 items-center gap-2 rounded-full px-4 text-[13px] font-medium transition ${
-                  hard
-                    ? "bg-white text-ink"
-                    : "border border-white/30 text-white/85 hover:bg-white/10"
-                }`}
-              >
-                <Contrast size={15} strokeWidth={1.8} aria-hidden="true" />
-                {hard ? "Hard contrast on" : "Won't read? Hard contrast"}
-              </button>
+              <div className="flex flex-col items-center gap-2">
+                <button
+                  onClick={toggleHard}
+                  aria-pressed={hard}
+                  className={`pointer-events-auto inline-flex h-9 items-center gap-2 rounded-full px-4 text-[13px] font-medium transition ${
+                    hard
+                      ? "bg-white text-ink"
+                      : "border border-white/30 text-white/85 hover:bg-white/10"
+                  }`}
+                >
+                  <Contrast size={15} strokeWidth={1.8} aria-hidden="true" />
+                  {hard ? "Hard contrast on" : "Won't read? Hard contrast"}
+                </button>
+
+                {/* Press and hold. Not a shutter: it keeps the sharpest frame
+                    of the hold, freezes THAT on screen so the hand can stop
+                    trying, and spends the seconds reading it four ways. */}
+                <button
+                  onPointerDown={holdSteady}
+                  onPointerUp={releaseSteady}
+                  onPointerLeave={releaseSteady}
+                  onPointerCancel={releaseSteady}
+                  onContextMenu={(e) => e.preventDefault()}
+                  aria-pressed={steady}
+                  className={`pointer-events-auto inline-flex h-9 touch-none select-none items-center gap-2 rounded-full px-4 text-[13px] font-medium transition ${
+                    steady
+                      ? "bg-white text-ink"
+                      : "border border-white/30 text-white/85 hover:bg-white/10"
+                  }`}
+                >
+                  <Crosshair size={15} strokeWidth={1.8} aria-hidden="true" />
+                  {steady ? "Holding — keep it in frame" : "Hold to steady"}
+                </button>
+              </div>
             )}
           </div>
 
