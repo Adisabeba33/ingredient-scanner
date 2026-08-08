@@ -3,6 +3,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { reportCacheKey, type ReportMode } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
+import { canonicalBarcode } from "@/lib/barcode";
 
 /**
  * Browse what's actually in the shared catalog, and find its gaps.
@@ -183,9 +184,9 @@ export async function POST(req: Request) {
   // catalog. Fall back to the columns that have always existed, and say so,
   // rather than reporting "nothing here" about a database full of products.
   const FULL_COLUMNS =
-    "code, product_name, brands, ingredients_text, mode, species, food_form, food_form_confirmed, created_at";
+    "code, product_name, brands, ingredients_text, mode, species, food_form, food_form_confirmed, source, created_at";
   const BASE_COLUMNS =
-    "code, product_name, brands, ingredients_text, mode, created_at";
+    "code, product_name, brands, ingredients_text, mode, source, created_at";
 
   const runQuery = async (columns: string) => {
     let query = admin
@@ -207,7 +208,27 @@ export async function POST(req: Request) {
     return query;
   };
 
+  /**
+   * Looking up one exact barcode, ignoring who supplied it.
+   *
+   * The browse list and every count on this screen are about OUR catalog, and
+   * should stay that way — the open databases hold millions of rows and none of
+   * them are our work. But a product somebody scanned that came back from Open
+   * Food Facts with the right ingredients and no name at all is still sitting in
+   * the same table, and it is exactly the row worth fixing by hand. Typing its
+   * barcode should find it rather than reporting nothing.
+   */
+  const lookupAnySource = async (columns: string, code: string) =>
+    admin.from("barcode_cache").select(columns).eq("code", code).limit(1);
+
   let { data, error } = await runQuery(FULL_COLUMNS);
+  // Nothing of ours under that exact code — try the table at large before
+  // saying there is nothing.
+  const exactCode = q.replace(/\D+/g, "");
+  if (!error && (data ?? []).length === 0 && exactCode.length >= 8) {
+    const wide = await lookupAnySource(FULL_COLUMNS, canonicalBarcode(exactCode));
+    if (!wide.error && (wide.data ?? []).length > 0) data = wide.data;
+  }
   let missingColumns = false;
   if (error) {
     // 42703 = undefined_column. Anything else is a real failure worth reporting.
@@ -243,6 +264,9 @@ export async function POST(req: Request) {
         foodForm: (row.food_form as string | null) ?? null,
         foodFormConfirmed: (row.food_form_confirmed as boolean | null) ?? null,
         ingredientsText: (row.ingredients_text as string | null) ?? null,
+        // Who supplied this. The browser badges anything that isn't ours, and
+        // warns that saving will claim it.
+        source: (row.source as string | null) ?? null,
       })
     ),
   });

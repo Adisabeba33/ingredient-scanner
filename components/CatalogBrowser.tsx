@@ -17,6 +17,7 @@ import {
 import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
 import { isFoodForm, type FoodForm } from "@/lib/food-form";
 import { isScanMode } from "@/lib/capture-mode";
+import { editPromotes, sourceAfterEdit, sourceLabel } from "@/lib/catalog-edit";
 import type { ScanMode } from "@/lib/barcode";
 
 /**
@@ -41,6 +42,8 @@ interface CatalogRow {
   /** Whether two independent signals agreed on the form. */
   foodFormConfirmed: boolean | null;
   ingredientsText: string | null;
+  /** Who supplied the row: our capture, a hand correction, or an open database. */
+  source: string | null;
 }
 
 /**
@@ -387,6 +390,8 @@ export function CatalogBrowser({
                     productName: draftName.trim() || null,
                     brands: draftBrands.trim() || null,
                     mode: draftMode,
+                    // Mirror the server: an edited row is ours from now on.
+                    source: sourceAfterEdit(x.source),
                     // Mirror what the server does when a row leaves pet mode:
                     // these describe an animal's food and mean nothing on a
                     // cereal box. Showing them until the next refetch would
@@ -630,6 +635,14 @@ export function CatalogBrowser({
                       </div>
                       <div className="flex items-center gap-1.5 text-[12px] text-muted">
                         <span className="truncate">{row.brands || "—"}</span>
+                        {/* Only when it ISN'T our own capture. Badging every row
+                            "ours" would be noise on a screen where ours is the
+                            norm; badging the exceptions is the information. */}
+                        {row.source && row.source !== "verified" && (
+                          <span className="shrink-0 rounded-full bg-surface px-1.5 py-0.5 text-[10px] font-medium text-faint">
+                            {sourceLabel(row.source)}
+                          </span>
+                        )}
                         {row.mode === "pet" && (
                           <>
                             <SpeciesChip species={row.species} />
@@ -795,6 +808,21 @@ export function CatalogBrowser({
                         Type it as printed — don&apos;t translate or tidy it up.
                         This is what the app reads as the real composition.
                       </p>
+                      {/* An open-database row corrected by hand becomes ours.
+                          It has to: left labelled as the database's, the next
+                          scan of this code would fetch the same nameless
+                          record and write it straight back over the top. */}
+                      {editPromotes(row.source) && (
+                        <p className="rounded-input bg-surface px-3 py-2 text-[11px] leading-snug text-muted">
+                          This came from{" "}
+                          <span className="font-medium">
+                            {sourceLabel(row.source)}
+                          </span>
+                          . Saving marks it as corrected by hand, so your edit
+                          isn&apos;t overwritten the next time somebody scans it.
+                          A proper capture still replaces it later.
+                        </p>
+                      )}
                       <div className="flex gap-2">
                         <button
                           onClick={() => setEditing(null)}

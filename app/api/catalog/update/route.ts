@@ -6,6 +6,7 @@ import { isPetSpecies } from "@/lib/pet-species";
 import { isFoodForm } from "@/lib/food-form";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { isScanMode } from "@/lib/capture-mode";
+import { sourceAfterEdit } from "@/lib/catalog-edit";
 
 /**
  * Edit a catalog row by hand.
@@ -15,8 +16,12 @@ import { isScanMode } from "@/lib/capture-mode";
  * named. This is the counterpart to the gap filters — see what's missing, then
  * fill it.
  *
- * Only VERIFIED rows are editable: those are ours. Edits are still `verified`,
- * so the trust ranking is unchanged.
+ * ANY row we hold is editable, not only our own captures. A product the open
+ * databases know but barely describe — right ingredients, no name, no brand —
+ * is worth ten minutes of typing and not worth a second trip to the shelf. An
+ * edited row is relabelled `community` (lib/catalog-edit.ts) so the correction
+ * outranks the database it came from and survives the next scan; a row that was
+ * already `verified` stays verified.
  *
  * Changing the ingredients invalidates the generated report, which was written
  * from the old text and lives under a separate key — so it's dropped here too,
@@ -150,12 +155,38 @@ export async function POST(req: Request) {
     return Response.json({ error: "nothing_to_update" }, { status: 400 });
   }
 
-  // Scope the update to our own rows: an open-database row isn't ours to edit.
+  // Any row we hold, not only our own captures.
+  //
+  // The case that forced this: a product the open databases know but barely
+  // describe — a barcode, a correct ingredient list, no name, no brand. The
+  // ingredients are the expensive part and they are already right; sending
+  // somebody back to the shelf to photograph a label we can already read would
+  // be absurd. So the descriptive gaps get filled in by hand.
+  //
+  // The row's source moves with the edit (lib/catalog-edit.ts). It has to: a
+  // correction that stayed labelled `openfoodfacts` would be overwritten by the
+  // next scan of that code, since the consumer app treats an open-database row
+  // as replaceable by a fresh open-database result.
+  const { data: current } = await admin
+    .from("barcode_cache")
+    .select("source")
+    .eq("code", key)
+    .maybeSingle();
+  if (!current) {
+    return Response.json(
+      {
+        error: "not_found",
+        message: "Nothing stored under that barcode — capture it first.",
+      },
+      { status: 404 }
+    );
+  }
+  patch.source = sourceAfterEdit((current as { source?: string }).source ?? null);
+
   const { data, error } = await admin
     .from("barcode_cache")
     .update(patch)
     .eq("code", key)
-    .eq("source", "verified")
     .select("code");
   if (error) {
     return Response.json(
@@ -167,7 +198,7 @@ export async function POST(req: Request) {
     return Response.json(
       {
         error: "not_found",
-        message: "No verified row for that barcode — capture it first.",
+        message: "That row disappeared while it was being edited.",
       },
       { status: 404 }
     );
