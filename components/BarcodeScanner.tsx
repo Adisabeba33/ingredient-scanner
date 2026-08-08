@@ -593,7 +593,7 @@ export function BarcodeScanner({
                   ref={viewRef}
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover transition-opacity duration-150"
-                  style={{ opacity: hard ? 1 : 0 }}
+                  style={{ opacity: hard || steady ? 1 : 0 }}
                 />
                 {/* moving scan line while hunting */}
                 {!locked && phase.kind === "scanning" && (
