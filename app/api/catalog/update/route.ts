@@ -5,6 +5,7 @@ import { isUsableIngredients } from "@/lib/ingredients-text";
 import { isPetSpecies } from "@/lib/pet-species";
 import { isFoodForm } from "@/lib/food-form";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
+import { isScanMode } from "@/lib/capture-mode";
 
 /**
  * Edit a catalog row by hand.
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
     brands?: unknown;
     species?: unknown;
     foodForm?: unknown;
+    mode?: unknown;
   };
   try {
     body = await req.json();
@@ -54,12 +56,13 @@ export async function POST(req: Request) {
   }
   const key = canonicalBarcode(clean);
 
-  const patch: Record<string, string | boolean | null> = {};
+  const patch: Record<string, string | boolean | number | null> = {};
   // Any of these invalidates the stored report: it was written from the old
-  // composition, FOR the old animal, read as the old form.
+  // composition, FOR the old animal, read as the old form, for the old audience.
   let ingredientsChanged = false;
   let speciesChanged = false;
   let formChanged = false;
+  let modeChanged = false;
 
   if (typeof body.ingredientsText === "string") {
     const text = body.ingredientsText.replace(/\s+/g, " ").trim();
@@ -114,6 +117,35 @@ export async function POST(req: Request) {
       .maybeSingle();
     formChanged = (before?.food_form ?? null) !== body.foodForm;
   }
+  // What kind of product this is. The capture picker is sticky, so before the
+  // pack was allowed to overrule it (lib/capture-mode.ts) a forgetful afternoon
+  // filed human food as pet food — and the only cure was deleting the row and
+  // walking back to the shelf. The model gets it right nearly always now, but
+  // "nearly" is why this is here: a person looking at the tin is the last word.
+  //
+  // Placed after species and food_form deliberately, so leaving pet mode clears
+  // them even if the editor submitted its stale values in the same request.
+  if (isScanMode(body.mode)) {
+    const { data: before } = await admin
+      .from("barcode_cache")
+      .select("mode")
+      .eq("code", key)
+      .maybeSingle();
+    modeChanged = (before?.mode ?? null) !== body.mode;
+    patch.mode = body.mode;
+    if (body.mode !== "pet") {
+      // These describe an animal's food and mean nothing on a cereal box. Left
+      // behind, they'd have the consumer app reading a human product's
+      // ingredient order as if water content mattered, and printing a
+      // Guaranteed Analysis panel that belongs to a different product entirely.
+      patch.species = null;
+      patch.food_form = null;
+      patch.food_form_confirmed = null;
+      patch.moisture_percent = null;
+      patch.guaranteed_analysis = null;
+    }
+  }
+
   if (Object.keys(patch).length === 0) {
     return Response.json({ error: "nothing_to_update" }, { status: 400 });
   }
@@ -146,7 +178,7 @@ export async function POST(req: Request) {
   // when one of those actually changed — renaming a product doesn't invalidate
   // its analysis.
   let reportsCleared = 0;
-  if (ingredientsChanged || speciesChanged || formChanged) {
+  if (ingredientsChanged || speciesChanged || formChanged || modeChanged) {
     try {
       const { data: cleared } = await admin
         .from("report_cache")

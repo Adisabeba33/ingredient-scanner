@@ -16,6 +16,8 @@ import {
 } from "@/components/ConfirmDestructive";
 import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
 import { isFoodForm, type FoodForm } from "@/lib/food-form";
+import { isScanMode } from "@/lib/capture-mode";
+import type { ScanMode } from "@/lib/barcode";
 
 /**
  * See what's actually stored in the shared catalog, and remove a bad row.
@@ -101,6 +103,14 @@ function FormChip({
     </span>
   );
 }
+
+/** What the product IS. Wrong here and everything downstream is wrong: a cereal
+ *  filed as pet food gets judged against a dog's diet. */
+const MODE_CHOICES: { value: ScanMode; label: string }[] = [
+  { value: "pet", label: "Pet food" },
+  { value: "human", label: "Human food" },
+  { value: "cosmetics", label: "Cosmetics" },
+];
 
 const SPECIES_CHOICES: { value: PetSpecies; label: string }[] = [
   { value: "cat", label: "Cat" },
@@ -323,6 +333,7 @@ export function CatalogBrowser({
   const [draftText, setDraftText] = useState("");
   const [draftSpecies, setDraftSpecies] = useState<PetSpecies>("unknown");
   const [draftForm, setDraftForm] = useState<FoodForm>("unknown");
+  const [draftMode, setDraftMode] = useState<ScanMode>("pet");
   const [saving, setSaving] = useState(false);
   const [pendingSave, setPendingSave] = useState(false);
 
@@ -333,6 +344,7 @@ export function CatalogBrowser({
     setDraftText(row.ingredientsText ?? "");
     setDraftSpecies(isPetSpecies(row.species) ? row.species : "unknown");
     setDraftForm(isFoodForm(row.foodForm) ? row.foodForm : "unknown");
+    setDraftMode(isScanMode(row.mode) ? row.mode : "pet");
     setNote(null);
   }, []);
 
@@ -354,6 +366,7 @@ export function CatalogBrowser({
           ingredientsText: draftText,
           species: draftSpecies,
           foodForm: draftForm,
+          mode: draftMode,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -373,10 +386,16 @@ export function CatalogBrowser({
                     ...x,
                     productName: draftName.trim() || null,
                     brands: draftBrands.trim() || null,
-                    species: draftSpecies,
-                    foodForm: draftForm,
+                    mode: draftMode,
+                    // Mirror what the server does when a row leaves pet mode:
+                    // these describe an animal's food and mean nothing on a
+                    // cereal box. Showing them until the next refetch would
+                    // suggest they survived, which they didn't.
+                    species: draftMode === "pet" ? draftSpecies : null,
+                    foodForm: draftMode === "pet" ? draftForm : null,
                     // Set by hand — the most reliable signal there is.
-                    foodFormConfirmed: draftForm !== "unknown",
+                    foodFormConfirmed:
+                      draftMode === "pet" ? draftForm !== "unknown" : null,
                     ingredientsText: draftText.replace(/\s+/g, " ").trim(),
                   }
                 : x
@@ -403,6 +422,7 @@ export function CatalogBrowser({
     draftText,
     draftSpecies,
     draftForm,
+    draftMode,
   ]);
 
   const requestSave = useCallback(() => {
@@ -679,7 +699,40 @@ export function CatalogBrowser({
                         aria-label="Product name"
                         className="h-10 w-full rounded-input border border-lineStrong bg-surface px-3 text-[13px] text-ink outline-none focus:border-sage-400"
                       />
-                      {row.mode === "pet" && (
+                      {/* What the product is. First, because everything under
+                          it depends on the answer — and because this is the
+                          field that used to cost a walk back to the shelf: a
+                          sticky picker filed human food as pet food, and there
+                          was no way to say otherwise afterwards. */}
+                      <div className="flex flex-col gap-1">
+                        <span className="text-[11px] font-medium text-muted">
+                          This product is
+                        </span>
+                        <div className="flex gap-1.5">
+                          {MODE_CHOICES.map((c) => (
+                            <button
+                              key={c.value}
+                              onClick={() => setDraftMode(c.value)}
+                              aria-pressed={draftMode === c.value}
+                              className={`h-9 flex-1 rounded-input border text-[12px] font-medium transition active:scale-[0.98] ${
+                                draftMode === c.value
+                                  ? "border-ink bg-ink text-white"
+                                  : "border-lineStrong bg-surface text-ink"
+                              }`}
+                            >
+                              {c.label}
+                            </button>
+                          ))}
+                        </div>
+                        {draftMode !== "pet" && row.mode === "pet" && (
+                          <span className="text-[11px] leading-snug text-amber">
+                            Saving drops this row&apos;s species, dry/wet and
+                            Guaranteed Analysis — they describe an animal&apos;s
+                            food.
+                          </span>
+                        )}
+                      </div>
+                      {draftMode === "pet" && (
                         <div className="flex flex-col gap-1">
                           <span className="text-[11px] font-medium text-muted">
                             This food is for

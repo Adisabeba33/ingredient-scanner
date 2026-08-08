@@ -106,6 +106,10 @@ interface ProcessOutcome {
   foodFormConfirmed?: boolean | null;
   /** What decided it, or what disagreed — shown when it isn't settled. */
   foodFormNote?: string | null;
+  /** What the row was actually filed as, once the pack had its say. */
+  mode?: string | null;
+  /** Set only when the pack overruled the picker: the mode that was selected. */
+  reclassifiedFrom?: string | null;
   reason?: string;
   /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
   message?: string;
@@ -379,6 +383,22 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   );
 
   /**
+   * Re-file a queued capture. The picker at the top is sticky, so an afternoon
+   * of pet food followed by one cereal box used to queue the cereal as pet
+   * food, and fixing it meant deleting the capture and walking back for the
+   * photos. The pack itself now overrules a wrong pick when it's processed
+   * (lib/capture-mode.ts) — this is for the case it can't tell, and for saying
+   * so before the call is paid for rather than after.
+   */
+  const setQueuedMode = useCallback(
+    async (id: string, next: CaptureMode) => {
+      await updateProduct(id, { mode: next });
+      refreshQueue();
+    },
+    [refreshQueue]
+  );
+
+  /**
    * Re-shoot a product that's already in the catalog. Loads its barcode into the
    * capture card so the next photos are read fresh by the model; processing
    * upserts on that code, so the new reading replaces the stored row. This is
@@ -481,6 +501,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           food_form?: string | null;
           food_form_confirmed?: boolean | null;
           food_form_note?: string | null;
+          mode?: string | null;
+          reclassified_from?: string | null;
           language?: string;
           siblings?: {
             code: string;
@@ -504,6 +526,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             foodForm: data.food_form ?? null,
             foodFormConfirmed: data.food_form_confirmed ?? null,
             foodFormNote: data.food_form_note ?? null,
+            mode: data.mode ?? null,
+            reclassifiedFrom: data.reclassified_from ?? null,
           };
         } else {
           const reason =
@@ -568,6 +592,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   const unsettledForm = written.filter(
     (o) => o.foodFormNote && o.foodFormConfirmed === false
   );
+  // Filed somewhere other than where it was aimed. Not an error — it is the
+  // fix working — but silently refiling somebody's capture is how you stop
+  // trusting a tool, so it gets said.
+  const reclassified = written.filter((o) => o.reclassifiedFrom);
 
   const failedIngredients = queue.filter(needsIngredientsRedo).length;
   const missingBrand = queue.filter(needsBrandPhoto).length;
@@ -808,8 +836,30 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <div className="text-[12px] font-semibold text-ink">
-                      #{i + 1} · {MODE_LABELS[item.mode]}
+                    {/* The category is editable here, not just displayed. A
+                        native select is deliberate: on a phone it opens the
+                        system picker, which is one thumb-reach, and it keeps
+                        the card the same height as before. */}
+                    <div className="flex items-center gap-1.5 text-[12px] font-semibold text-ink">
+                      <span>#{i + 1}</span>
+                      <span aria-hidden="true">·</span>
+                      <select
+                        value={item.mode}
+                        onChange={(e) =>
+                          void setQueuedMode(
+                            item.id,
+                            e.target.value as CaptureMode
+                          )
+                        }
+                        aria-label={`Category of captured product ${i + 1}`}
+                        className="-ml-1 rounded border-0 bg-transparent py-0 pl-1 pr-5 text-[12px] font-semibold text-ink underline decoration-dotted underline-offset-2 outline-none focus:bg-surface"
+                      >
+                        {(Object.keys(MODE_LABELS) as CaptureMode[]).map((m) => (
+                          <option key={m} value={m}>
+                            {MODE_LABELS[m]}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                     <div className="mt-0.5 font-mono text-[12px] leading-snug text-muted">
                       {item.barcodes.join(", ")}
@@ -924,6 +974,32 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
                         confirmed={w.foodFormConfirmed ?? null}
                       />
                     )}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {/* The pack disagreed with the picker and the pack won. Shown so a
+                genuine misreading can be corrected in Catalog — the row is
+                written and usable either way. */}
+            {reclassified.length > 0 && (
+              <ul className="flex flex-col gap-1">
+                {reclassified.map((w) => (
+                  <li
+                    key={`mode-${w.id}`}
+                    className="rounded-input bg-surfaceSoft px-3 py-2 text-[11px] leading-snug text-ink"
+                  >
+                    <span className="font-medium">
+                      {w.productName || w.barcodes[0]}
+                    </span>{" "}
+                    — filed as{" "}
+                    <span className="font-medium">
+                      {MODE_LABELS[w.mode as CaptureMode] ?? w.mode}
+                    </span>
+                    , not{" "}
+                    {MODE_LABELS[w.reclassifiedFrom as CaptureMode] ??
+                      w.reclassifiedFrom}
+                    . The label said so. Change it in Catalog if that&apos;s
+                    wrong.
                   </li>
                 ))}
               </ul>

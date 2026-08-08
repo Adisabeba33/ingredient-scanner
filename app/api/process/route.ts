@@ -7,10 +7,15 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { compositionKey } from "@/lib/composition-key";
 import { extractLabel } from "@/lib/extract";
 import {
+  isScanMode,
+  resolveCaptureMode,
+  wasReclassified,
+} from "@/lib/capture-mode";
+import {
   hasAnyFigure,
   type GuaranteedAnalysis,
 } from "@/lib/guaranteed-analysis";
-import { reportCacheKey } from "@/lib/report-cache-key";
+import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import {
@@ -40,8 +45,6 @@ import {
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
-
-const MODES: ScanMode[] = ["human", "pet", "cosmetics"];
 
 interface VerifiedRow {
   code: string;
@@ -154,9 +157,7 @@ async function handle(req: Request) {
   const nutritionImage =
     typeof body.photos?.nutrition === "string" ? body.photos.nutrition : null;
 
-  const mode: ScanMode = MODES.includes(body.mode as ScanMode)
-    ? (body.mode as ScanMode)
-    : "pet";
+  const picked: ScanMode = isScanMode(body.mode) ? body.mode : "pet";
 
   const model = process.env.EXTRACT_MODEL || "claude-haiku-4-5";
 
@@ -191,6 +192,12 @@ async function handle(req: Request) {
       usage,
     });
   }
+
+  // What the pack says it is beats what was left selected on the picker. The
+  // mode governs every field below it, so this has to be settled before any of
+  // them are computed — see lib/capture-mode.ts.
+  const verdict = resolveCaptureMode(picked, extraction.category);
+  const mode = verdict.mode;
 
   // Multi-language packaging: photographing the French/Spanish column instead of
   // the English one yields a list our catalog can't read a single word of. Never
@@ -416,9 +423,15 @@ async function handle(req: Request) {
   // the ingredients. Re-capturing a product to correct it would otherwise keep
   // serving the report built from the old (wrong) text forever, so drop it and
   // let the next reader regenerate from what we just wrote.
+  //
+  // Every mode's key, not just this one's. A product filed as pet food and
+  // re-captured as human food has a report sitting under the OLD mode's key,
+  // and clearing only the new one would leave that stale analysis serving
+  // forever. Now that the pack can move a row between modes on its own, that
+  // stopped being a hypothetical.
   let reportsCleared = 0;
   try {
-    const keys = writable.map((c) => reportCacheKey(c, mode));
+    const keys = writable.flatMap((c) => allReportCacheKeys(c));
     const { data: cleared } = await admin
       .from("report_cache")
       .delete()
@@ -433,6 +446,11 @@ async function handle(req: Request) {
     ok: true,
     codes,
     reports_cleared: reportsCleared,
+    mode,
+    // Only when the pack overruled the picker. The operator should see that it
+    // happened — silently refiling somebody's capture is how you end up not
+    // trusting the tool — but a mode that simply matched needs no announcement.
+    reclassified_from: wasReclassified(verdict) ? verdict.picked : null,
     product_name: extraction.product_name,
     brands: extraction.brands,
     species: mode === "pet" ? extraction.species : null,

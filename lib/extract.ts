@@ -25,6 +25,15 @@ import {
  * 400s on it). Haiku is plenty for label transcription and costs ~$0.005/label.
  */
 
+/** What the pack is: the three catalog modes, plus "can't tell". */
+export type LabelCategory = "pet" | "human" | "cosmetics" | "unknown";
+
+const CATEGORIES: LabelCategory[] = ["pet", "human", "cosmetics", "unknown"];
+
+export function isLabelCategory(x: unknown): x is LabelCategory {
+  return typeof x === "string" && CATEGORIES.includes(x as LabelCategory);
+}
+
 export interface LabelExtraction {
   /** Full product name incl. variant, e.g. "Life Protection Adult Chicken & Brown Rice". */
   product_name: string | null;
@@ -36,6 +45,16 @@ export interface LabelExtraction {
   ingredients_readable: boolean;
   /** Language of the transcribed list, e.g. "English", "French". */
   language: string;
+  /**
+   * What kind of product this is, read off the pack.
+   *
+   * The operator picks a mode before shooting and forgets to change it — which
+   * used to mean a human food filed as pet food, and the only cure was deleting
+   * the row and starting again. The model is already looking at the pack, so it
+   * may as well say. "unknown" is an honest answer and leaves the operator's
+   * pick standing.
+   */
+  category: LabelCategory;
   /** Which animal the product is for — decides how the report is written. */
   species: PetSpecies;
   /** Dry or wet, as read off the PACK. One of the two signals; see lib/food-form.ts. */
@@ -73,6 +92,12 @@ const EXTRACTION_SCHEMA = {
       type: "string",
       description:
         "The language of the list you transcribed, capitalised in English (e.g. 'English', 'French', 'Spanish'). Labels often print several languages side by side — always transcribe the ENGLISH one when it is present, and report 'English' here. Only report another language if NO English list is visible at all.",
+    },
+    category: {
+      type: "string",
+      enum: ["pet", "human", "cosmetics", "unknown"],
+      description:
+        "What kind of product this is, judged from the PACK — who it is sold to feed or be used on, not from the ingredients (people and pets eat much the same things). 'pet' when the pack is for an animal: 'Cat Food', 'For Dogs', a Guaranteed Analysis panel, feeding guidelines by body weight, an animal pictured as the consumer. 'human' when it is food or drink for people: a Nutrition Facts / nutrition information panel, serving suggestions, 'best before'. 'cosmetics' when it is applied to the body rather than eaten: shampoo, cream, lotion, balm, soap, make-up — an INCI list is the giveaway (it opens with 'Aqua' or 'Water' and names things like 'Sodium Laureth Sulfate', 'Cetearyl Alcohol', 'Parfum'). 'unknown' when the photos genuinely do not say — do not guess between them.",
     },
     species: {
       type: "string",
@@ -142,6 +167,7 @@ const EXTRACTION_SCHEMA = {
     "ingredients_text",
     "ingredients_readable",
     "language",
+    "category",
     "species",
     "food_form",
     "moisture_percent",
@@ -164,6 +190,9 @@ const USER_INSTRUCTION =
   "parallel columns or blocks: always transcribe the ENGLISH one. If the photo shows only a " +
   "non-English list, do NOT translate it — set ingredients_readable to false, leave " +
   "ingredients_text empty, and report the language you saw. " +
+  "Say what kind of product it is (category): for an animal, for people to eat, or applied " +
+  "to the body. Judge that from the PACK — who it is sold for — and not from the " +
+  "ingredients, which overlap heavily; answer 'unknown' rather than guessing between two. " +
   "Also say whether the pack is dry food or wet food, judging by the container and the " +
   "words on it \u2014 not by the ingredients. If a Guaranteed Analysis panel is visible in " +
   "any of the photos, copy its Moisture percentage; otherwise leave it null. " +
@@ -294,6 +323,10 @@ export async function extractLabel({
       typeof parsed.language === "string" && parsed.language.trim()
         ? parsed.language.trim()
         : "Unknown",
+    // An unreadable or missing answer is "unknown", never a guess: the caller
+    // treats unknown as "keep what the operator picked", which is the safe
+    // direction when the model didn't actually see what kind of pack this is.
+    category: isLabelCategory(parsed.category) ? parsed.category : "unknown",
     // Fall back to the product name when the model didn't answer — a pack
     // called "Kitten Chicken Recipe" tells us plenty on its own.
     food_form: isFoodForm(parsed.food_form) ? parsed.food_form : "unknown",
