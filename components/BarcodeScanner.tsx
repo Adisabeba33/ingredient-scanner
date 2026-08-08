@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ScanLine, X, Keyboard } from "lucide-react";
+import { ScanLine, X, Keyboard, Contrast } from "lucide-react";
 import { applyContinuousCamera } from "@/lib/camera";
+import { apertureCrop } from "@/lib/aperture-crop";
+import { binarizeRgba } from "@/lib/binarize";
 
 /**
  * Live "point the camera at a barcode and it reads" scanner, covering every
@@ -69,6 +71,11 @@ const NATIVE_FORMATS = ["ean_13", "ean_8", "upc_a", "upc_e"];
 // After this long with nothing decoded, offer the "type it by hand" way out.
 const STRUGGLE_AFTER_MS = 12000;
 
+/** How often a frame is put through the lens. Ten looks a second is more than a
+ *  hand holding a pack against a rectangle can use, and it keeps the phone from
+ *  spending a whole core on image processing. */
+const LENS_INTERVAL_MS = 90;
+
 /** Retail barcodes are 8 (EAN-8), 12 (UPC-A), or 13 (EAN-13) digits. */
 function acceptCode(raw: string): string | null {
   const digits = raw.replace(/\D+/g, "");
@@ -92,9 +99,29 @@ export function BarcodeScanner({
   onCancel: () => void;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  // The hard-contrast lens. `hard` drives the button, `hardRef` is what the
+  // decode loop reads — the loop is started once and must not be torn down and
+  // rebuilt (losing the camera) every time the lens is switched.
+  const [hard, setHard] = useState(false);
+  const hardRef = useRef(false);
+  const toggleHard = useCallback(() => {
+    setHard((v) => {
+      hardRef.current = !v;
+      return !v;
+    });
+  }, []);
+  /** Off-screen frame the lens is applied to, and what the decoder is then given. */
+  const workRef = useRef<HTMLCanvasElement | null>(null);
+  /** On-screen copy, so you see exactly the picture the decoder is working from. */
+  const viewRef = useRef<HTMLCanvasElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef<number | null>(null);
+  const lensTimerRef = useRef<number | null>(null);
   const zxingStopRef = useRef<(() => void) | null>(null);
+  /** The ZXing reader, kept so the lens can hand it a canvas (iOS / Firefox). */
+  const readerRef = useRef<{
+    decodeFromCanvas: (c: HTMLCanvasElement) => { getText(): string };
+  } | null>(null);
   const doneRef = useRef(false);
   const [phase, setPhase] = useState<Phase>({ kind: "starting" });
   const [struggling, setStruggling] = useState(false);
@@ -103,6 +130,10 @@ export function BarcodeScanner({
     if (rafRef.current != null) {
       cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
+    }
+    if (lensTimerRef.current != null) {
+      clearTimeout(lensTimerRef.current);
+      lensTimerRef.current = null;
     }
     if (zxingStopRef.current) {
       try {
@@ -130,6 +161,56 @@ export function BarcodeScanner({
     },
     [stop, onDetected]
   );
+
+  /**
+   * Apply the lens to the current frame and return the canvas holding it, or
+   * null when there's nothing to work with yet.
+   *
+   * Only the aiming rectangle is processed, at full sensor resolution. That is
+   * both the cheap option (a fraction of the pixels, so it can run on a live
+   * camera) and the good one — downscaling the whole frame would throw away the
+   * very resolution that decides whether a marginal barcode reads.
+   *
+   * The same pixels are then painted on screen. It has to be the same ones: if
+   * you are shown a cleaned-up picture the decoder never saw, a code that still
+   * won't read looks like a bug in the reader rather than a hint to move.
+   */
+  const lens = useCallback((video: HTMLVideoElement): HTMLCanvasElement | null => {
+    const frame = { width: video.videoWidth, height: video.videoHeight };
+    if (!frame.width || !frame.height) return null;
+    const box = video.getBoundingClientRect();
+    const view = viewRef.current;
+    if (!view) return null;
+    const aperture = view.getBoundingClientRect();
+    const crop = apertureCrop(frame, box, aperture);
+    if (crop.sw < 2 || crop.sh < 2) return null;
+
+    const work = (workRef.current ??= document.createElement("canvas"));
+    const w = Math.round(crop.sw);
+    const h = Math.round(crop.sh);
+    if (work.width !== w || work.height !== h) {
+      work.width = w;
+      work.height = h;
+    }
+    const ctx = work.getContext("2d", { willReadFrequently: true });
+    if (!ctx) return null;
+    ctx.drawImage(video, crop.sx, crop.sy, crop.sw, crop.sh, 0, 0, w, h);
+    const image = ctx.getImageData(0, 0, w, h);
+    binarizeRgba(image.data, w, h);
+    ctx.putImageData(image, 0, 0);
+
+    // Show it. The on-screen canvas is CSS-sized to the aperture, so its own
+    // pixel buffer only has to be big enough to look sharp.
+    const vctx = view.getContext("2d");
+    if (vctx) {
+      if (view.width !== w || view.height !== h) {
+        view.width = w;
+        view.height = h;
+      }
+      vctx.drawImage(work, 0, 0);
+    }
+    return work;
+  }, []);
 
   const fail = useCallback((err: unknown) => {
     const name = err instanceof DOMException ? err.name : "";
@@ -164,9 +245,14 @@ export function BarcodeScanner({
       const tick = async () => {
         if (cancelled || doneRef.current) return;
         const video = videoRef.current;
-        if (video && video.readyState >= 2) {
+        // With the lens on, the decoder is handed the processed crop instead of
+        // the raw video — the whole point, since a filter the decoder can't see
+        // would only change the picture on screen.
+        const source =
+          video && hardRef.current ? lens(video) : (video ?? null);
+        if (video && video.readyState >= 2 && source) {
           try {
-            const found = await detector.detect(video);
+            const found = await detector.detect(source);
             for (const b of found) {
               const code = acceptCode(b.rawValue);
               if (code) return succeed(code);
@@ -175,7 +261,15 @@ export function BarcodeScanner({
             /* transient decode error — keep scanning */
           }
         }
-        rafRef.current = requestAnimationFrame(() => void tick());
+        // Raw video decoding is cheap enough for every frame. Processing one is
+        // not, and doesn't need to be: ten looks a second is far more than a
+        // hand holding a pack against a rectangle can use.
+        if (hardRef.current) {
+          rafRef.current = null;
+          lensTimerRef.current = window.setTimeout(() => void tick(), LENS_INTERVAL_MS);
+        } else {
+          rafRef.current = requestAnimationFrame(() => void tick());
+        }
       };
 
       navigator.mediaDevices
@@ -209,6 +303,7 @@ export function BarcodeScanner({
       .then(({ BrowserMultiFormatReader }) => {
         if (cancelled || !videoRef.current) return;
         const reader = new BrowserMultiFormatReader();
+        readerRef.current = reader;
         return reader.decodeFromConstraints(
           { video: VIDEO_CONSTRAINTS, audio: false },
           videoRef.current,
@@ -238,7 +333,47 @@ export function BarcodeScanner({
       cancelled = true;
       stop();
     };
-  }, [stop, succeed, fail]);
+    // `lens` is a useCallback with no dependencies, so listing it here can't
+    // restart the camera; it is named only so the closure can never go stale.
+  }, [stop, succeed, fail, lens]);
+
+  /**
+   * The lens on the ZXing path (iOS, Firefox — no BarcodeDetector there).
+   *
+   * ZXing is bound to the <video> element and decodes the raw picture; it has
+   * no way to be told "read this canvas instead" mid-stream. So rather than
+   * tear that down and risk losing the camera on the platform with the fussiest
+   * camera rules, this runs alongside it and offers the processed crop as a
+   * second opinion. Both call succeed(), which only fires once. The cost is one
+   * extra decode attempt every tenth of a second, and only while the lens is on.
+   */
+  useEffect(() => {
+    if (!hard) return;
+    let stopped = false;
+    let timer: number | null = null;
+    const look = () => {
+      if (stopped || doneRef.current) return;
+      const video = videoRef.current;
+      const reader = readerRef.current;
+      if (reader && video && video.readyState >= 2) {
+        const canvas = lens(video);
+        if (canvas) {
+          try {
+            const code = acceptCode(reader.decodeFromCanvas(canvas).getText());
+            if (code) return succeed(code);
+          } catch {
+            /* nothing in this frame — normal, keep looking */
+          }
+        }
+      }
+      timer = window.setTimeout(look, LENS_INTERVAL_MS);
+    };
+    look();
+    return () => {
+      stopped = true;
+      if (timer != null) clearTimeout(timer);
+    };
+  }, [hard, lens, succeed]);
 
   const close = useCallback(() => {
     stop();
@@ -294,15 +429,24 @@ export function BarcodeScanner({
               className="h-32 w-72 max-w-[80vw] rounded-2xl border-[3px] shadow-[0_0_0_100vmax_rgba(20,26,20,0.55)] transition-colors duration-200"
               style={{ borderColor: frameColor }}
             >
-              {/* moving scan line while hunting */}
-              {!locked && phase.kind === "scanning" && (
-                <div className="relative h-full w-full overflow-hidden rounded-2xl">
+              <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                {/* The lens. Always mounted — the decode loop measures this
+                    element to work out which sensor pixels sit behind the
+                    rectangle — but only painted, and only visible, when on. */}
+                <canvas
+                  ref={viewRef}
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover transition-opacity duration-150"
+                  style={{ opacity: hard ? 1 : 0 }}
+                />
+                {/* moving scan line while hunting */}
+                {!locked && phase.kind === "scanning" && (
                   <div
                     className="absolute inset-x-2 h-0.5 animate-[scanline_1.6s_ease-in-out_infinite]"
                     style={{ background: frameColor, top: 8 }}
                   />
-                </div>
-              )}
+                )}
+              </div>
             </div>
             <p
               className="text-[13px] font-medium transition-colors"
@@ -312,8 +456,30 @@ export function BarcodeScanner({
                 ? "Starting camera…"
                 : locked
                   ? "Got it — reading…"
-                  : "Line the barcode up inside the frame"}
+                  : hard
+                    ? "Hard contrast on — this is what the reader sees"
+                    : "Line the barcode up inside the frame"}
             </p>
+
+            {/* The way in for a code the camera can see but not read: silver on
+                a pale pack, glossy, a shop light across one end of it. This
+                doesn't brighten the picture — it decides, for every pixel,
+                whether it is darker than its own surroundings, which is the one
+                question a barcode's bars always answer the same way. */}
+            {phase.kind === "scanning" && !locked && (
+              <button
+                onClick={toggleHard}
+                aria-pressed={hard}
+                className={`pointer-events-auto inline-flex h-9 items-center gap-2 rounded-full px-4 text-[13px] font-medium transition ${
+                  hard
+                    ? "bg-white text-ink"
+                    : "border border-white/30 text-white/85 hover:bg-white/10"
+                }`}
+              >
+                <Contrast size={15} strokeWidth={1.8} aria-hidden="true" />
+                {hard ? "Hard contrast on" : "Won't read? Hard contrast"}
+              </button>
+            )}
           </div>
 
           {/* After a struggle, offer the reliable way in. */}
