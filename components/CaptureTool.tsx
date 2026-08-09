@@ -12,6 +12,7 @@ import {
   Barcode,
   AlertTriangle,
   CheckCircle2,
+  Database,
   X,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
@@ -737,6 +738,18 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
               </>
             )}
           </button>
+
+          {/* Ask the open databases before spending a capture on this product.
+              See lib/open-lookup.ts: a product Open Food Facts already
+              describes properly is one the consumer app can already answer, and
+              photographing it buys nothing. */}
+          {draft.barcodes.length > 0 && (
+            <OpenCheck
+              code={draft.barcodes[0]}
+              adminToken={adminToken}
+              onSkip={skip}
+            />
+          )}
         </div>
 
         {/* Photos */}
@@ -1342,6 +1355,189 @@ function SameRecipeAnswer({
         </button>
       </div>
       {error && <div className="mt-1 text-[11px] text-amber">{error}</div>}
+    </div>
+  );
+}
+
+/**
+ * "Do the open databases already have this?" — asked before any photographs.
+ *
+ * The point is not to copy their answer into our catalog. The consumer app
+ * already falls back to those databases by itself, so importing their record
+ * would add no answer while freezing a stale copy at a rank it hasn't earned
+ * (the whole argument is in lib/open-lookup.ts). The point is the decision:
+ * a product Open Food Facts already describes properly is one the app can
+ * already answer, and photographing it costs a capture, a model call and a
+ * minute of an afternoon for nothing.
+ *
+ * So it reports what is there and lets the operator walk on — or shows the
+ * stored list, so a composition that looks wrong against the pack in hand is
+ * still captured.
+ */
+function OpenCheck({
+  code,
+  adminToken,
+  onSkip,
+}: {
+  code: string;
+  adminToken: string;
+  onSkip: () => void;
+}) {
+  const [state, setState] = useState<
+    | { kind: "idle" }
+    | { kind: "loading" }
+    | { kind: "error"; message: string }
+    | {
+        kind: "done";
+        verdict: "nothing" | "thin" | "complete";
+        worthCapturing: boolean;
+        items: number;
+        hit: {
+          source: string;
+          productName: string | null;
+          brands: string | null;
+          ingredientsText: string | null;
+        } | null;
+      }
+  >({ kind: "idle" });
+  const [showList, setShowList] = useState(false);
+
+  // A new barcode is a new question. Without this, the previous product's
+  // verdict would sit there looking like this one's.
+  useEffect(() => {
+    setState({ kind: "idle" });
+    setShowList(false);
+  }, [code]);
+
+  const check = useCallback(async () => {
+    setState({ kind: "loading" });
+    try {
+      const res = await fetch("/api/open-lookup", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({ code }),
+      });
+      const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;
+      if (!res.ok) {
+        setState({
+          kind: "error",
+          message:
+            (data.message as string) ??
+            (data.error as string) ??
+            `Lookup failed (${res.status}).`,
+        });
+        return;
+      }
+      setState({
+        kind: "done",
+        verdict: data.verdict as "nothing" | "thin" | "complete",
+        worthCapturing: data.worthCapturing === true,
+        items: (data.items as number) ?? 0,
+        hit: (data.hit as never) ?? null,
+      });
+    } catch {
+      setState({ kind: "error", message: "No connection — try again." });
+    }
+  }, [code, adminToken]);
+
+  if (state.kind === "idle") {
+    return (
+      <button
+        onClick={check}
+        className="inline-flex h-9 items-center justify-center gap-2 self-start rounded-full border border-line px-3 text-[12px] font-medium text-muted transition active:scale-[0.98]"
+      >
+        <Database size={14} strokeWidth={1.8} aria-hidden="true" />
+        Already in the open databases?
+      </button>
+    );
+  }
+
+  if (state.kind === "loading") {
+    return (
+      <div className="inline-flex h-9 items-center gap-2 self-start px-1 text-[12px] text-muted">
+        <Loader2 size={14} className="animate-spin" aria-hidden="true" />
+        Asking Open Food Facts…
+      </div>
+    );
+  }
+
+  if (state.kind === "error") {
+    return (
+      <div className="flex items-center gap-2 rounded-input bg-amber-soft px-3 py-2 text-[12px] text-ink">
+        <AlertTriangle size={14} strokeWidth={1.8} aria-hidden="true" />
+        <span className="min-w-0 flex-1">{state.message}</span>
+        <button onClick={check} className="shrink-0 font-medium underline">
+          Retry
+        </button>
+      </div>
+    );
+  }
+
+  const { verdict, worthCapturing, items, hit } = state;
+  return (
+    <div
+      className={`flex flex-col gap-2 rounded-input px-3 py-2.5 ${
+        worthCapturing ? "bg-sage-100" : "bg-surfaceSoft"
+      }`}
+    >
+      <div className="text-[12px] leading-snug text-ink">
+        {verdict === "nothing" ? (
+          <>
+            <span className="font-semibold">Nobody has this one.</span> Worth
+            capturing — this is where the catalog earns its keep.
+          </>
+        ) : verdict === "thin" ? (
+          <>
+            <span className="font-semibold">
+              Listed, but the composition is a stub
+            </span>{" "}
+            ({items} {items === 1 ? "item" : "items"}). Worth capturing.
+          </>
+        ) : (
+          <>
+            <span className="font-semibold">
+              Already described, {items} ingredients.
+            </span>{" "}
+            The app can answer this product without us — capture it only if the
+            list is wrong against the pack.
+          </>
+        )}
+      </div>
+
+      {hit && (hit.productName || hit.brands) && (
+        <div className="text-[11px] leading-snug text-muted">
+          {[hit.brands, hit.productName].filter(Boolean).join(" · ")}
+        </div>
+      )}
+
+      {hit?.ingredientsText && (
+        <>
+          <button
+            onClick={() => setShowList((v) => !v)}
+            className="self-start text-[11px] font-medium text-muted underline underline-offset-2"
+          >
+            {showList ? "Hide their list" : "Read their list"}
+          </button>
+          {showList && (
+            <p className="max-h-40 overflow-y-auto rounded bg-surface px-2 py-1.5 text-[11px] leading-snug text-ink">
+              {hit.ingredientsText}
+            </p>
+          )}
+        </>
+      )}
+
+      {!worthCapturing && (
+        <button
+          onClick={onSkip}
+          className="inline-flex h-9 items-center justify-center gap-1.5 rounded-full bg-ink px-4 text-[12px] font-semibold text-white transition active:scale-[0.98]"
+        >
+          <Check size={14} strokeWidth={2} aria-hidden="true" />
+          Skip it, next product
+        </button>
+      )}
     </div>
   );
 }
