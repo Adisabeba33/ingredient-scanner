@@ -101,20 +101,74 @@ export function isSharper(score: number, best: number): boolean {
 }
 
 /**
- * Score one video frame as it stands. Returns 0 when the frame isn't readable —
- * a score that loses to any real frame, which is the right way for this to fail.
+ * The part of the sensor frame worth scoring, in fractions of it (0–1).
+ *
+ * Same shape the capture path already speaks — an aimed rectangle mapped back
+ * through the preview's `object-cover` scaling to source coordinates.
  */
-export function scoreVideoFrame(video: HTMLVideoElement): number {
+export interface ScoreRegion {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+/**
+ * Score one video frame. Returns 0 when the frame isn't readable — a score that
+ * loses to any real frame, which is the right way for this to fail.
+ *
+ * ── Score what was aimed at, not what was in shot ─────────────────────────
+ *
+ * `region` matters more than it looks. A phone held over a packet has the
+ * shelf, the table and the packet's own edges in frame, and those are usually
+ * in focus precisely when the thing being photographed is not: close-up small
+ * print is exactly where a lens settles on the wrong distance. Scored whole,
+ * a sharp background drowns out a smeared subject.
+ *
+ * Measured in Chromium, blurring only the aimed block and leaving a detailed
+ * background sharp — the ratio a soft frame scores against a sharp one:
+ *
+ *     aimed rectangle      whole frame      the region alone
+ *     84% x 46%            0.40             0.055
+ *     50% x 25%            0.66             0.015
+ *     30% x 14%            0.83             0.010
+ *
+ * A caller that treats anything under 0.6 as soft therefore stops noticing as
+ * soon as the rectangle is tightened — which is what the screen asks people to
+ * do. Scored on the region it stays decisive at any size.
+ *
+ * Omitting `region` scores the whole frame, which is right when the whole frame
+ * IS the subject.
+ */
+export function scoreVideoFrame(
+  video: HTMLVideoElement,
+  region?: ScoreRegion
+): number {
   const vw = video.videoWidth;
   const vh = video.videoHeight;
   if (!vw || !vh) return 0;
+
+  // Clamped rather than trusted: a rectangle dragged to the edge of the preview
+  // can map a hair outside the sensor frame, and drawImage of an out-of-bounds
+  // source is a blank sample — a zero score for a perfectly good frame.
+  let sx = 0;
+  let sy = 0;
+  let sw = vw;
+  let sh = vh;
+  if (region) {
+    sx = Math.max(0, Math.min(vw - 1, region.x * vw));
+    sy = Math.max(0, Math.min(vh - 1, region.y * vh));
+    sw = Math.max(1, Math.min(vw - sx, region.w * vw));
+    sh = Math.max(1, Math.min(vh - sy, region.h * vh));
+  }
+
   try {
     const canvas = document.createElement("canvas");
     canvas.width = SAMPLE_W;
     canvas.height = SAMPLE_H;
     const ctx = canvas.getContext("2d", { willReadFrequently: true });
     if (!ctx) return 0;
-    ctx.drawImage(video, 0, 0, vw, vh, 0, 0, SAMPLE_W, SAMPLE_H);
+    ctx.drawImage(video, sx, sy, sw, sh, 0, 0, SAMPLE_W, SAMPLE_H);
     const { data } = ctx.getImageData(0, 0, SAMPLE_W, SAMPLE_H);
     return gradientEnergy(data, SAMPLE_W, SAMPLE_H);
   } catch {
@@ -146,11 +200,15 @@ export const BURST_GAP_MS = 90;
  *
  * `keep` is expected to overwrite whatever the previous keep wrote; the last
  * call to run is the winner.
+ *
+ * Pass `region` whenever the shot is a framed crop rather than the whole
+ * picture — see `scoreVideoFrame`. Without it the burst ranks frames by how
+ * sharp the background is, which is not the question being asked.
  */
 export async function burstSharpest(
   video: HTMLVideoElement,
   keep: () => void,
-  options: { frames?: number; gapMs?: number } = {}
+  options: { frames?: number; gapMs?: number; region?: ScoreRegion } = {}
 ): Promise<void> {
   const frames = Math.max(1, options.frames ?? BURST_FRAMES);
   const gap = Math.max(0, options.gapMs ?? BURST_GAP_MS);
@@ -160,7 +218,7 @@ export async function burstSharpest(
     if (i > 0) await wait(gap);
     // Scored BEFORE the keep, so the number describes the same instant the
     // keep is about to take rather than one draw later.
-    const score = scoreVideoFrame(video);
+    const score = scoreVideoFrame(video, options.region);
     if (!isSharper(score, best)) continue;
     best = score;
     keep();

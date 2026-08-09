@@ -323,7 +323,21 @@ export function PhotoCapture({
     try {
       const frame = keptFrame();
       const region = visibleRegion(video);
-      await burstSharpest(video, () => snapshotFrame(video, frame, region));
+      // The burst is ranked on the AIMED rectangle, not the visible frame.
+      // `region` is everything the preview shows; `rect` indexes into it, so the
+      // two compose into source-frame coordinates. Ranking on the whole visible
+      // frame scores the shelf and the packet edges around the label — and those
+      // stay crisp exactly when close-up small print does not, which is the case
+      // the burst exists to catch. See lib/sharpness.ts for the measurements.
+      const aimed = {
+        x: region.x + rect.x * region.w,
+        y: region.y + rect.y * region.h,
+        w: rect.w * region.w,
+        h: rect.h * region.h,
+      };
+      await burstSharpest(video, () => snapshotFrame(video, frame, region), {
+        region: aimed,
+      });
       // The kept frame IS the viewfinder box, so the rectangle drawn on screen
       // is already in its coordinates — nothing to convert.
       const dataUrl = cropImage(frame, rect, preset);
