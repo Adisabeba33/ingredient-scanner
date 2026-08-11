@@ -4,6 +4,11 @@
 -- shared-barcode_cache.reference.sql, this table is the scanner's own and does
 -- not exist yet.
 --
+-- Safe to run more than once, and safe to run against a half-applied earlier
+-- version: every statement is guarded, and the ALTERs at the bottom add any
+-- column a previous run of this file predates. Paste the whole thing, run it,
+-- and the schema is correct whatever state it was in.
+--
 -- ── Why this is not a column on barcode_cache ─────────────────────────────
 --
 -- An express capture has no ingredient list. `barcode_cache` is the table the
@@ -87,3 +92,29 @@ create index if not exists express_capture_group_idx
 --   insert into storage.buckets (id, name, public)
 --   values ('product-photos', 'product-photos', true)
 --   on conflict (id) do nothing;
+
+
+-- ── Catching up an earlier version of this file ───────────────────────────
+--
+-- These do nothing on a fresh database — the CREATE above already has every
+-- column. They exist so that a database where an earlier version of this file
+-- was applied comes up to date from the same paste, without anybody having to
+-- remember which version that was.
+
+alter table public.express_capture
+  add column if not exists capture_group text,
+  add column if not exists product_line text,
+  add column if not exists species text,
+  add column if not exists life_stage text,
+  add column if not exists proteins text[],
+  add column if not exists texture text,
+  add column if not exists food_form text,
+  add column if not exists front_claims text[],
+  add column if not exists multipack_count int;
+
+-- Rows written before capture_group existed are each their own group. The
+-- reading code already treats a null that way, so this is tidiness rather than
+-- a fix — but it keeps the column honest for anything that queries it directly.
+update public.express_capture
+  set capture_group = code
+  where capture_group is null;
