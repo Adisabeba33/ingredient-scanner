@@ -1,5 +1,6 @@
 import { brandIdentity, seededIdentities, type BrandIdentity } from "./brand-key";
 import { alignedFold, deaccent } from "./fold";
+import { knownItems, type KnownItem } from "./known-products";
 
 /**
  * What we have scanned, arranged the way a shelf is arranged.
@@ -21,8 +22,12 @@ import { alignedFold, deaccent } from "./fold";
  *   · a seeded brand with nothing under it at all — a whole shelf untouched
  *   · a seeded RANGE with nothing under it — Gravy Lovers done, Medleys not
  *   · a range that came off the shelf and was never in the seed list
+ *   · the individual products we have been told exist and have never scanned,
+ *     by name and with the barcode to look for — data/known-products.ts
  *
- * That is a map with the edges left blank rather than a map with invented
+ * That last one is a partial catalogue, not a complete one: it covers the
+ * recipes somebody has actually gone and found, and says nothing about the rest.
+ * So this is a map with the edges left blank rather than a map with invented
  * coastlines, and the blanks fill in as the shop teaches us.
  *
  * ── Pure ──────────────────────────────────────────────────────────────────
@@ -35,11 +40,23 @@ import { alignedFold, deaccent } from "./fold";
 /**
  * How far along one product is.
  *
- * Two states, not three, because there are only two answers that change what
- * you do in a shop: it is done, or it still needs the back of the pack. A row
- * that has never been seen has no product to have a state.
+ * Three, and no more, because a shop is read at arm's length with one thumb:
+ * done, half-done, and not started. Anything finer would not get read at all.
  */
-export type ProductState = "filled" | "photo";
+export type ProductState =
+  /** We have its composition. Done. */
+  | "filled"
+  /** Photographed in a shop; the back of the pack still to type. */
+  | "photo"
+  /**
+   * We know it exists and have never touched it — from data/known-products.ts.
+   *
+   * The state the page could not honestly show before. An untouched range used
+   * to be a dashed outline with nothing inside it, because we had no idea what
+   * was in a range; now the ones we know about are named, and carry the barcode
+   * you will meet on the shelf.
+   */
+  | "known";
 
 /** Where a product is sitting right now. */
 export type ProductPlace = "catalog" | "worklist";
@@ -71,6 +88,12 @@ export interface CoverageItem {
   species: string | null;
   foodForm: string | null;
   origin: string | null;
+  /**
+   * Barcodes we believe this recipe is sold under but have not scanned, as
+   * printed. On a `known` item these are the numbers to look for; on a done one
+   * they are pack sizes still to do.
+   */
+  toFind?: string[];
 }
 
 /** One range within a brand. */
@@ -81,6 +104,8 @@ export interface CoverageLine {
   items: CoverageItem[];
   filled: number;
   photo: number;
+  /** Named products in this range that nobody has scanned. */
+  known: number;
 }
 
 export interface CoverageBrand extends BrandIdentity {
@@ -90,6 +115,8 @@ export interface CoverageBrand extends BrandIdentity {
   filled: number;
   /** Products photographed but still needing the back of the pack. */
   photo: number;
+  /** Named products we know exist and have never touched. */
+  known: number;
   /** Seeded ranges with nothing under them at all. */
   emptyRanges: number;
 }
@@ -199,6 +226,38 @@ export function splitRange(
 }
 
 /**
+ * Is one label the other with extra words on the END?
+ *
+ * The catalog calls a tin "Turkey Feast", because that is what the operator
+ * typed; the seed list calls it "Turkey Feast in Roasted Turkey Flavor Gravy",
+ * because that is the retailer's full name. Requiring an exact match listed the
+ * same product twice — once done, once still to find — which is the confusion
+ * this whole page exists to remove.
+ *
+ * A PREFIX, and nothing looser. The first attempt allowed the shorter label
+ * anywhere inside the longer one, and a screenshot caught what that costs:
+ * Fancy Feast's "Chicken Feast" sits at the end of "Tender Beef & Chicken
+ * Feast", so one scanned pâté quietly absorbed two flavours nobody had
+ * scanned — two products vanished from the list of things to go and find,
+ * which is worse than showing one of them twice.
+ *
+ * Anchored at the front, that cannot happen: a maker's extra words go on the
+ * end ("… in Roasted Turkey Flavor Gravy"), while the words that tell two
+ * flavours apart go at the front ("Tender Beef &…").
+ *
+ * Two words minimum, because a one-word label like "Chicken" starts half a
+ * shelf.
+ */
+function labelPrefix(a: string, b: string): boolean {
+  const aWords = a.split(" ").filter(Boolean);
+  const bWords = b.split(" ").filter(Boolean);
+  const [shortWords, longWords] =
+    aWords.length <= bWords.length ? [aWords, bWords] : [bWords, aWords];
+  if (shortWords.length < 2) return false;
+  return shortWords.every((word, i) => longWords[i] === word);
+}
+
+/**
  * Pack sizes of one recipe carry the same label; this is what "the same" means.
  *
  * Accents fold first, or "Pâté" collapses to "p t" and never meets "Pate". And
@@ -226,7 +285,10 @@ function labelKey(label: string): string {
  * page. Brands that arrived from the shelf and were never seeded appear too,
  * marked, so a list I wrote from memory never silently hides a real product.
  */
-export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
+export function buildCoverage(
+  rows: CoverageSource[],
+  known: KnownItem[] = knownItems()
+): CoverageBrand[] {
   // A code can legitimately be in both tables for a moment — a finish that
   // wrote the catalog row and failed to clear the worklist. The catalog wins:
   // it is the one with a composition in it.
@@ -322,6 +384,69 @@ export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
     }
   }
 
+  // ── The products we have been told exist ─────────────────────────────────
+  //
+  // Merged in AFTER everything scanned, through the same label key, so a recipe
+  // already in the catalog is not listed twice under two spellings. When it is
+  // already there, the seeded entry contributes only the barcodes we have not
+  // met — which is how a 3 oz can done and a 5.5 oz can not done stays visible
+  // as one recipe with one number left to find, rather than two products.
+  //
+  // These never overwrite a state. A scanned product's answer came from the
+  // pack; a seeded one came from a retailer listing, and the pack wins.
+  const seenCodes = new Set<string>();
+  for (const row of byCode.values()) seenCodes.add(row.code);
+
+  for (const item of known) {
+    const identity = brandIdentity(item.brand);
+    if (!identity) continue;
+    const draft = draftFor(identity);
+    let items = draft.ranges.get(item.line);
+    if (!items) {
+      items = new Map();
+      draft.ranges.set(item.line, items);
+    }
+    const key = labelKey(item.variant);
+    const unseen = item.codes
+      .map((code, i) => ({ code, printed: item.printedCodes[i] }))
+      .filter(({ code }) => !seenCodes.has(code));
+    // Exact first, then the same recipe under a shorter name. Scoped to one
+    // range of one brand AND anchored at the front — see labelPrefix for what
+    // a looser rule cost.
+    let existing = items.get(key);
+    if (!existing) {
+      for (const [otherKey, candidate] of items) {
+        if (candidate.state === "known") continue;
+        if (labelPrefix(key, otherKey)) {
+          existing = candidate;
+          break;
+        }
+      }
+    }
+    if (existing) {
+      // Already done, or on the worklist. Only the pack sizes we haven't met
+      // are worth saying anything about.
+      if (unseen.length > 0) {
+        existing.toFind = [
+          ...(existing.toFind ?? []),
+          ...unseen.map((u) => u.printed),
+        ];
+      }
+      continue;
+    }
+    // Every code of it is unscanned, so the recipe itself is untouched.
+    items.set(key, {
+      label: item.variant,
+      codes: item.codes,
+      state: "known",
+      place: "catalog",
+      species: item.species,
+      foodForm: item.foodForm,
+      origin: "seed",
+      toFind: item.printedCodes,
+    });
+  }
+
   const brands: CoverageBrand[] = [];
   for (const draft of drafts.values()) {
     // Seeded ranges in the order the seed file lists them — that is roughly
@@ -336,6 +461,7 @@ export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
     const ranges: CoverageLine[] = [];
     let filled = 0;
     let photo = 0;
+    let knownLeft = 0;
     let emptyRanges = 0;
     for (const name of order) {
       const items = [...(draft.ranges.get(name)?.values() ?? [])].sort((a, b) =>
@@ -347,15 +473,24 @@ export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
         // "go and find this" row. An empty catch-all is not.
         if (seeded) {
           emptyRanges += 1;
-          ranges.push({ name, seeded, items, filled: 0, photo: 0 });
+          ranges.push({ name, seeded, items, filled: 0, photo: 0, known: 0 });
         }
         continue;
       }
       const rangeFilled = items.filter((i) => i.state === "filled").length;
-      const rangePhoto = items.length - rangeFilled;
+      const rangeKnown = items.filter((i) => i.state === "known").length;
+      const rangePhoto = items.length - rangeFilled - rangeKnown;
       filled += rangeFilled;
       photo += rangePhoto;
-      ranges.push({ name, seeded, items, filled: rangeFilled, photo: rangePhoto });
+      knownLeft += rangeKnown;
+      ranges.push({
+        name,
+        seeded,
+        items,
+        filled: rangeFilled,
+        photo: rangePhoto,
+        known: rangeKnown,
+      });
     }
 
     brands.push({
@@ -363,6 +498,7 @@ export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
       ranges,
       filled,
       photo,
+      known: knownLeft,
       emptyRanges,
     });
   }
@@ -374,13 +510,17 @@ export function buildCoverage(rows: CoverageSource[]): CoverageBrand[] {
 export function coverageTotals(brands: CoverageBrand[]) {
   let filled = 0;
   let photo = 0;
+  let known = 0;
   let started = 0;
   for (const brand of brands) {
     filled += brand.filled;
     photo += brand.photo;
+    known += brand.known;
+    // A brand with only named-but-unscanned products has NOT been started —
+    // knowing what is on a shelf is not the same as having been to it.
     if (brand.filled + brand.photo > 0) started += 1;
   }
-  return { brands: brands.length, started, filled, photo };
+  return { brands: brands.length, started, filled, photo, known };
 }
 
 export type CoverageSort = "name" | "gaps" | "most";
@@ -405,7 +545,13 @@ export function sortBrands(
         b.filled + b.photo - (a.filled + a.photo) || a.name.localeCompare(b.name)
     );
   }
+  // Gaps first, and a brand with named products waiting is a BIGGER gap than an
+  // empty one: you know exactly what to pick up there. Ties fall back to how
+  // little has been done.
   return copy.sort(
-    (a, b) => a.filled + a.photo - (b.filled + b.photo) || a.name.localeCompare(b.name)
+    (a, b) =>
+      b.known - a.known ||
+      a.filled + a.photo - (b.filled + b.photo) ||
+      a.name.localeCompare(b.name)
   );
 }

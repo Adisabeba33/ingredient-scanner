@@ -1,0 +1,105 @@
+import { canonicalBarcode } from "./barcode";
+import { KNOWN_PRODUCTS, type KnownProduct } from "../data/known-products";
+
+/**
+ * The seeded product list, indexed the two ways it gets used.
+ *
+ * By BARCODE, so a scan in a shop can name the tin before any photograph is
+ * taken or any model is called — and so the coverage page can tell "we have
+ * done this one" from "we know it exists".
+ *
+ * And FLATTENED, one entry per recipe, so the coverage page can list what is
+ * left to find inside a range instead of showing an empty dashed outline.
+ *
+ * Nothing here is written to the catalog. See data/known-products.ts for why
+ * that would make the products worse rather than better.
+ */
+
+/** One recipe, with every barcode it is sold under. */
+export interface KnownItem {
+  brand: string;
+  line: string;
+  variant: string;
+  species: "cat" | "dog";
+  texture: string;
+  presentation: string;
+  foodForm: string;
+  proteins: string[];
+  /** Canonical (GTIN-14) keys — what the catalog stores and looks up under. */
+  codes: string[];
+  /** As printed under the bars, for showing to a person. */
+  printedCodes: string[];
+  /** "3 oz", "5.5 oz" — parallel to `codes`. */
+  sizes: string[];
+}
+
+/**
+ * The UPC-A check digit.
+ *
+ * Worth having in the code rather than only in a note: it is the one property
+ * of a barcode that can be checked without a shop, a network or a shelf, and a
+ * transposed pair of digits — the likeliest way a hand-copied number goes wrong
+ * — fails it nine times in ten. The test over data/known-products.ts runs this
+ * against every row, so a bad number is caught here and not in an aisle.
+ */
+export function upcCheckDigit(code: string): number {
+  const digits = code.replace(/\D+/g, "").slice(0, 11);
+  let total = 0;
+  for (let i = 0; i < digits.length; i += 1) {
+    total += Number(digits[i]) * (i % 2 === 0 ? 3 : 1);
+  }
+  return (10 - (total % 10)) % 10;
+}
+
+/** Is this a well-formed 12-digit UPC-A? */
+export function isValidUpcA(code: string): boolean {
+  const digits = code.replace(/\D+/g, "");
+  if (digits.length !== 12) return false;
+  return Number(digits[11]) === upcCheckDigit(digits);
+}
+
+function toItem(product: KnownProduct): KnownItem {
+  return {
+    brand: product.brand,
+    line: product.line,
+    variant: product.variant,
+    species: product.species,
+    texture: product.texture,
+    presentation: product.presentation,
+    foodForm: product.foodForm,
+    proteins: product.proteins,
+    codes: product.packages.map((p) => canonicalBarcode(p.upc)),
+    printedCodes: product.packages.map((p) => p.upc),
+    sizes: product.packages.map((p) => p.size),
+  };
+}
+
+const ITEMS: KnownItem[] = KNOWN_PRODUCTS.map(toItem);
+
+const BY_CODE = new Map<string, KnownItem>();
+for (const item of ITEMS) {
+  for (const code of item.codes) BY_CODE.set(code, item);
+}
+
+/** Every seeded recipe. */
+export function knownItems(): KnownItem[] {
+  return ITEMS;
+}
+
+/**
+ * What we believe this barcode is, before anybody photographs it.
+ *
+ * A LEAD, not a fact. The source is retailer listings, which can pair a right
+ * UPC with a wrong flavour, so this names a product on screen and pre-fills a
+ * form — it never writes itself into the catalog. The pack in the operator's
+ * hand settles what the product actually is.
+ */
+export function lookupKnown(code: string | null | undefined): KnownItem | null {
+  if (!code) return null;
+  return BY_CODE.get(canonicalBarcode(code)) ?? null;
+}
+
+/** How many seeded products there are, for a line of copy. */
+export function knownCount(): number {
+  return ITEMS.length;
+}

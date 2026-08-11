@@ -22,7 +22,9 @@ function source(over: Partial<CoverageSource> = {}): CoverageSource {
 }
 
 function brand(rows: CoverageSource[], name: string) {
-  return buildCoverage(rows).find((b) => b.name === name);
+  // No seeded products by default: the existing tests are about grouping what
+  // was scanned, and letting 27 real ones in would change every count.
+  return buildCoverage(rows, []).find((b) => b.name === name);
 }
 
 describe("countsAsPet", () => {
@@ -140,7 +142,7 @@ describe("splitRange", () => {
 
 describe("buildCoverage", () => {
   it("lists every seeded brand, including the ones with nothing scanned", () => {
-    const brands = buildCoverage([]);
+    const brands = buildCoverage([], []);
     const fancy = brands.find((b) => b.name === "Fancy Feast");
     expect(fancy).toBeDefined();
     expect(fancy!.filled).toBe(0);
@@ -151,12 +153,15 @@ describe("buildCoverage", () => {
   });
 
   it("gathers four spellings of a brand into one row", () => {
-    const brands = buildCoverage([
-      source({ code: "1", brands: "Friskies", productName: "Shreds Salmon" }),
-      source({ code: "2", brands: "PURINA FRISKIES", productName: "Shreds Chicken" }),
-      source({ code: "3", brands: "purina,friskies", productName: "Pâté Turkey" }),
-      source({ code: "4", brands: "Purina Friskies®", productName: "Party Mix Beachside" }),
-    ]);
+    const brands = buildCoverage(
+      [
+        source({ code: "1", brands: "Friskies", productName: "Shreds Salmon" }),
+        source({ code: "2", brands: "PURINA FRISKIES", productName: "Shreds Chicken" }),
+        source({ code: "3", brands: "purina,friskies", productName: "Pâté Turkey" }),
+        source({ code: "4", brands: "Purina Friskies®", productName: "Party Mix Beachside" }),
+      ],
+      []
+    );
     const friskies = brands.filter((b) => b.name === "Friskies");
     expect(friskies).toHaveLength(1);
     expect(friskies[0].filled).toBe(4);
@@ -272,22 +277,27 @@ describe("buildCoverage", () => {
   });
 
   it("puts a product with no readable brand in its own bucket", () => {
-    const brands = buildCoverage([source({ brands: null, productName: "Chicken Dinner" })]);
+    const brands = buildCoverage(
+      [source({ brands: null, productName: "Chicken Dinner" })],
+      []
+    );
     const orphan = brands.find((b) => b.name === NO_BRAND)!;
     expect(orphan.filled).toBe(1);
   });
 
   it("labels a product by its barcode when nothing else read", () => {
-    const orphan = buildCoverage([
-      source({ code: "99", brands: null, productName: null }),
-    ]).find((b) => b.name === NO_BRAND)!;
+    const orphan = buildCoverage(
+      [source({ code: "99", brands: null, productName: null })],
+      []
+    ).find((b) => b.name === NO_BRAND)!;
     expect(orphan.ranges[0].items[0].label).toBe("99");
   });
 
   it("marks a brand that came off the shelf rather than the seed list", () => {
-    const found = buildCoverage([
-      source({ brands: "Kozy Kitten Supreme", productName: "Tuna" }),
-    ]).find((b) => b.name === "Kozy Kitten Supreme")!;
+    const found = buildCoverage(
+      [source({ brands: "Kozy Kitten Supreme", productName: "Tuna" })],
+      []
+    ).find((b) => b.name === "Kozy Kitten Supreme")!;
     expect(found.seeded).toBe(false);
     expect(found.filled).toBe(1);
   });
@@ -302,10 +312,19 @@ describe("buildCoverage", () => {
 describe("coverageTotals", () => {
   it("counts brands, started brands and both kinds of product", () => {
     const totals = coverageTotals(
-      buildCoverage([
-        source({ code: "1", productName: "Shreds Salmon" }),
-        source({ code: "2", brands: "Pedigree", productName: "Choice Cuts Beef", state: "photo", place: "worklist" }),
-      ])
+      buildCoverage(
+        [
+          source({ code: "1", productName: "Shreds Salmon" }),
+          source({
+            code: "2",
+            brands: "Pedigree",
+            productName: "Choice Cuts Beef",
+            state: "photo",
+            place: "worklist",
+          }),
+        ],
+        []
+      )
     );
     expect(totals.filled).toBe(1);
     expect(totals.photo).toBe(1);
@@ -315,11 +334,14 @@ describe("coverageTotals", () => {
 });
 
 describe("sortBrands", () => {
-  const brands = buildCoverage([
-    source({ code: "1", productName: "Shreds Salmon" }),
-    source({ code: "2", productName: "Shreds Chicken" }),
-    source({ code: "3", brands: "Pedigree", productName: "Choice Cuts Beef" }),
-  ]);
+  const brands = buildCoverage(
+    [
+      source({ code: "1", productName: "Shreds Salmon" }),
+      source({ code: "2", productName: "Shreds Chicken" }),
+      source({ code: "3", brands: "Pedigree", productName: "Choice Cuts Beef" }),
+    ],
+    []
+  );
 
   it("puts untouched brands first when the question is what to do next", () => {
     const first = sortBrands(brands, "gaps")[0];

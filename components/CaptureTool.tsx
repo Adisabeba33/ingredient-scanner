@@ -27,6 +27,13 @@ import { ExpressDesk } from "@/components/ExpressDesk";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
+import { lookupKnown } from "@/lib/known-products";
+import {
+  presentationLabel,
+  textureLabel,
+  type Presentation,
+  type Texture,
+} from "@/lib/presentation";
 import { EXPRESS_STORED, shrinkDataUrl } from "@/lib/image";
 import {
   addProduct,
@@ -833,6 +840,13 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
             )}
           </button>
 
+          {/* What we already believe this barcode is, from the seeded batch —
+              named before any photograph is taken and without spending a model
+              call. A LEAD, not a fact: the source is retailer listings, which
+              can pair a right number with a wrong flavour, so it is shown to be
+              read against the tin in your hand and never written anywhere. */}
+          {draft.barcodes.length > 0 && <KnownHint code={draft.barcodes[0]} />}
+
           {/* Ask the open databases before spending a capture on this product.
               See lib/open-lookup.ts: a product Open Food Facts already
               describes properly is one the consumer app can already answer, and
@@ -1491,6 +1505,42 @@ function SameRecipeAnswer({
  * stored list, so a composition that looks wrong against the pack in hand is
  * still captured.
  */
+/**
+ * "We think this is Friskies Shreds With Salmon in Sauce."
+ *
+ * Shown the moment a barcode is read, from data/known-products.ts — no network,
+ * no model, no photograph. Two things it buys in a shop: you know instantly
+ * whether the tin in your hand is the one the page was pointing you at, and you
+ * get its range and flavour to check against the pack rather than typing them
+ * later from memory.
+ *
+ * Deliberately worded as a belief. It is not written to any table and does not
+ * pre-fill any field: a retailer listing can pair a correct barcode with the
+ * wrong flavour, and the pack is the thing that settles it.
+ */
+function KnownHint({ code }: { code: string }) {
+  const known = lookupKnown(code);
+  if (!known) return null;
+  const bits = [
+    known.texture ? textureLabel(known.texture as Texture) : "",
+    known.presentation ? presentationLabel(known.presentation as Presentation) : "",
+    known.sizes[0] ?? "",
+  ].filter(Boolean);
+  return (
+    <div className="rounded-input border border-line bg-surfaceSoft px-4 py-2.5">
+      <p className="text-[12.5px] font-semibold leading-snug text-ink">
+        {known.brand} · {known.line} · {known.variant}
+      </p>
+      {bits.length > 0 && (
+        <p className="mt-0.5 text-[11.5px] text-muted">{bits.join(" · ")}</p>
+      )}
+      <p className="mt-1 text-[11px] leading-snug text-faint">
+        From our seed list — check it against the pack before trusting it.
+      </p>
+    </div>
+  );
+}
+
 function OpenCheck({
   code,
   adminToken,

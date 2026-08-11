@@ -9,6 +9,7 @@ import {
   Clock,
   Loader2,
   RefreshCw,
+  Barcode,
   Search,
   X,
 } from "lucide-react";
@@ -37,17 +38,19 @@ import { brandMatchesQuery } from "@/lib/brand-key";
  * ── Three states, not five ────────────────────────────────────────────────
  *
  * Green: done, it has a composition. Amber: photographed, the back of the pack
- * still to type. Empty: nothing, go and find it. Read at arm's length with one
+ * still to type. Dashed outline with a barcode: we have been told it exists and
+ * nobody has scanned it — go and find THIS one. Read at arm's length with one
  * thumb, in a shop, so anything finer than three would not be read at all.
  *
  * ── Honest about its own edges ────────────────────────────────────────────
  *
- * The brand and range list is seeded from what a model knew, and cannot be a
- * complete catalogue — nothing we can reach knows how many flavours Fancy Feast
- * really has. So an empty range means "the seed list expected this and we have
- * nothing", not "this is all that is left". Brands and ranges that came off a
- * shelf and were never seeded are marked as such, which is the list correcting
- * itself.
+ * The brand and range list is seeded from what a model knew, and the named
+ * products from a batch somebody went and collected — neither is a complete
+ * catalogue, and nothing we can reach knows how many flavours Fancy Feast really
+ * has. So an empty range means "the seed list expected this and we have
+ * nothing", and a dashed product means "we were told about this one", never
+ * "this is all that is left". Brands and ranges that came off a shelf and were
+ * never seeded are marked as such, which is the list correcting itself.
  */
 
 interface Payload {
@@ -168,6 +171,7 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
         <p className="mt-1 text-[13px] leading-relaxed text-muted">
           {totals.started} of {totals.brands} brands started · {totals.filled}{" "}
           done · {totals.photo} awaiting ingredients
+          {totals.known > 0 ? ` · ${totals.known} named to find` : ""}
         </p>
         {/* Said rather than assumed. The catalog also holds human food and
             cosmetics, and somebody counting brands here should know why their
@@ -309,7 +313,12 @@ function BrandRow({
           <span className="text-sage-600">{brand.filled}</span>
         )}
         {brand.photo > 0 && <span className="text-amber">{brand.photo}</span>}
-        {total === 0 && <span className="text-faint">—</span>}
+        {/* Named and never touched. Grey rather than a warning colour: it is
+            not a problem, it is a shopping list. */}
+        {brand.known > 0 && <span className="text-faint">+{brand.known}</span>}
+        {total === 0 && brand.known === 0 && (
+          <span className="text-faint">—</span>
+        )}
       </span>
       <ChevronRight
         size={16}
@@ -404,36 +413,63 @@ function BrandPage({
                 </span>
               )}
               <span className="text-[11.5px] font-normal text-faint">
-                {range.filled > 0 && `${range.filled} done`}
-                {range.filled > 0 && range.photo > 0 && " · "}
-                {range.photo > 0 && `${range.photo} to finish`}
+                {[
+                  range.filled > 0 ? `${range.filled} done` : null,
+                  range.photo > 0 ? `${range.photo} to finish` : null,
+                  range.known > 0 ? `${range.known} to find` : null,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}
               </span>
             </h2>
             <ul className="flex flex-wrap gap-1.5">
               {range.items.map((item) => (
                 <li key={item.codes[0]}>
                   <span
-                    title={item.codes.join(", ")}
+                    // The barcode on the chip itself for a product still to
+                    // find: it is the one thing you can match against a shelf
+                    // without reading a word.
+                    title={
+                      item.state === "known"
+                        ? `Not scanned — look for ${item.toFind?.join(", ")}`
+                        : item.codes.join(", ")
+                    }
                     className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12px] ${
                       item.state === "filled"
                         ? "bg-sage-100 text-sage-700"
-                        : "bg-amber-soft text-ink"
+                        : item.state === "photo"
+                          ? "bg-amber-soft text-ink"
+                          : "border border-dashed border-lineStrong text-muted"
                     }`}
                   >
                     {item.state === "filled" ? (
                       <Check size={12} strokeWidth={2.5} aria-hidden="true" />
-                    ) : (
+                    ) : item.state === "photo" ? (
                       <Clock size={12} strokeWidth={2.5} aria-hidden="true" />
+                    ) : (
+                      <Barcode size={12} strokeWidth={2} aria-hidden="true" />
                     )}
                     <span>{item.label}</span>
                     {/* Several barcodes under one recipe: pack sizes. Worth
                         showing — it is the difference between "I did the small
                         bag" and "I did all three". */}
-                    {item.codes.length > 1 && (
+                    {item.state !== "known" && item.codes.length > 1 && (
                       <span className="text-[10px] font-semibold opacity-70">
                         ×{item.codes.length}
                       </span>
                     )}
+                    {item.state === "known" && item.toFind?.[0] && (
+                      <span className="font-mono text-[10px] tracking-tight opacity-70">
+                        {item.toFind[0]}
+                      </span>
+                    )}
+                    {/* A recipe already done that is also sold in a size we
+                        have never met. One number left, not a second product. */}
+                    {item.state !== "known" && item.toFind?.length ? (
+                      <span className="font-mono text-[10px] tracking-tight opacity-60">
+                        +{item.toFind[0]}
+                      </span>
+                    ) : null}
                   </span>
                 </li>
               ))}
