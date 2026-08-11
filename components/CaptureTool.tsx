@@ -15,7 +15,9 @@ import {
   Database,
   Zap,
   X,
+  LayoutList,
 } from "lucide-react";
+import Link from "next/link";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { PhotoCapture } from "@/components/PhotoCapture";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
@@ -654,6 +656,29 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           Captured: {captured}
         </div>
       </header>
+
+      {/* Coverage. At the top because the question it answers — "have I already
+          done this brand?" — comes BEFORE picking a pack up, not after. */}
+      <Link
+        href="/coverage"
+        className="flex items-center gap-2.5 rounded-input border border-line bg-surface px-4 py-2.5 text-left transition active:scale-[0.99]"
+      >
+        <LayoutList
+          size={16}
+          strokeWidth={1.8}
+          aria-hidden="true"
+          className="shrink-0 text-sage-600"
+        />
+        <span className="min-w-0 flex-1">
+          <span className="block text-[13px] font-semibold text-ink">
+            Brand coverage
+          </span>
+          <span className="mt-0.5 block text-[11.5px] leading-snug text-muted">
+            What&apos;s scanned, by brand and range — before you start scanning
+            it twice.
+          </span>
+        </span>
+      </Link>
 
       {/* Mode selector */}
       <div className="flex gap-2">
