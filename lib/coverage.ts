@@ -94,6 +94,27 @@ export interface CoverageBrand extends BrandIdentity {
   emptyRanges: number;
 }
 
+/**
+ * Is this row cat or dog food?
+ *
+ * The page is about pet food and nothing else. The catalog is not: a barcode
+ * looked up through Open Food Facts lands with `mode: "human"` and one through
+ * Open Beauty Facts with `"cosmetics"`, so a can of Red Bull somebody scanned
+ * once sits in the same table as the Friskies. On a page whose entire job is
+ * "what pet food is left to do", a drinks brand is not a small blemish — it is
+ * a row of work that doesn't exist, in a list you are trying to trust.
+ *
+ * A row with no mode at all counts as pet. That is the convention the rest of
+ * the tool already follows (`/api/catalog` reads a missing mode as pet), and it
+ * is the safe direction here: the tool was pet-only when those rows were
+ * written, so dropping them would hide real work, while keeping them can at
+ * worst show one stray product under a brand marked new.
+ */
+export function countsAsPet(mode: string | null | undefined): boolean {
+  const value = (mode ?? "").trim().toLowerCase();
+  return value === "" || value === "pet";
+}
+
 /** The catch-all range, for a product whose name matched nothing seeded. */
 export const OTHER_RANGE = "Other";
 

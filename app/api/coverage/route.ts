@@ -2,7 +2,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { isUsableIngredients } from "@/lib/ingredients-text";
-import type { CoverageSource } from "@/lib/coverage";
+import { countsAsPet, type CoverageSource } from "@/lib/coverage";
 
 /**
  * Everything we hold, flattened into rows the coverage page can group.
@@ -43,6 +43,17 @@ const SCAN_CAP = 6000;
 /** PostgREST caps a single response; walk the table rather than trusting one call. */
 const PAGE = 1000;
 
+/**
+ * Cat and dog food only, asked of the database rather than sorted out here.
+ *
+ * A human-food or cosmetics row is not merely filtered from the page — it never
+ * crosses the wire, which is also most of what keeps the scan under the cap on
+ * a catalog where a lot of the rows came from Open Food Facts. Nulls come along
+ * because a row with no mode predates the column and is ours, so pet; see
+ * `countsAsPet`, which decides the same thing again on the way past.
+ */
+const PET_ONLY = "mode.eq.pet,mode.is.null";
+
 /** Read a table in pages until it runs out or the cap is reached. */
 async function readAll(
   admin: SupabaseClient,
@@ -55,6 +66,7 @@ async function readAll(
     const { data, error } = await admin
       .from(table)
       .select(columns)
+      .or(PET_ONLY)
       .order(order, { ascending: false })
       .range(from, Math.min(from + PAGE, SCAN_CAP) - 1);
     if (error) return { rows, truncated: false, error: error.message };
@@ -78,8 +90,8 @@ export async function GET(req: Request) {
   // WHOLE select. Same fallback as /api/catalog: come back with less rather
   // than reporting an empty catalog about a full one.
   const FULL =
-    "code, brands, product_name, ingredients_text, found, species, food_form, source";
-  const BASE = "code, brands, product_name, ingredients_text, found, source";
+    "code, brands, product_name, ingredients_text, found, mode, species, food_form, source";
+  const BASE = "code, brands, product_name, ingredients_text, found, mode, source";
   let catalog = await readAll(admin, "barcode_cache", FULL, "created_at");
   let missingColumns = false;
   if (catalog.error) {
@@ -102,7 +114,7 @@ export async function GET(req: Request) {
   const express = await readAll(
     admin,
     "express_capture",
-    "code, brands, product_name, product_line, variant, species, food_form",
+    "code, brands, product_name, product_line, variant, mode, species, food_form",
     "captured_at"
   );
 
@@ -112,6 +124,10 @@ export async function GET(req: Request) {
     // A miss — a barcode somebody looked up and nothing was found for. It is
     // not a product and must not read as one; the shelf still has it to do.
     if (row.found === false) continue;
+    // Human food and cosmetics belong to the same table and not to this page.
+    // The query already excluded them; this is the guarantee rather than the
+    // optimisation, and it is the half that has a test.
+    if (!countsAsPet(row.mode as string | null)) continue;
     rows.push({
       code: row.code as string,
       brands: (row.brands as string | null) ?? null,
@@ -129,6 +145,7 @@ export async function GET(req: Request) {
   }
 
   for (const row of express.rows) {
+    if (!countsAsPet(row.mode as string | null)) continue;
     rows.push({
       code: row.code as string,
       brands: (row.brands as string | null) ?? null,

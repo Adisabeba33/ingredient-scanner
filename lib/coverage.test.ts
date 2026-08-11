@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildCoverage,
+  countsAsPet,
   coverageTotals,
   NO_BRAND,
   OTHER_RANGE,
@@ -23,6 +24,36 @@ function source(over: Partial<CoverageSource> = {}): CoverageSource {
 function brand(rows: CoverageSource[], name: string) {
   return buildCoverage(rows).find((b) => b.name === name);
 }
+
+describe("countsAsPet", () => {
+  it("keeps cat and dog food", () => {
+    expect(countsAsPet("pet")).toBe(true);
+    expect(countsAsPet("PET")).toBe(true);
+    expect(countsAsPet(" pet ")).toBe(true);
+  });
+
+  // The actual complaint: a can of Red Bull, looked up once through Open Food
+  // Facts, stored with mode "human", showing on a page about pet food. And a
+  // shampoo from Open Beauty Facts behind it.
+  it("drops human food and cosmetics", () => {
+    expect(countsAsPet("human")).toBe(false);
+    expect(countsAsPet("cosmetics")).toBe(false);
+  });
+
+  // Rows written before the column existed are ours, from a tool that only did
+  // pet food. Dropping them would hide real work.
+  it("treats a row with no mode as pet", () => {
+    expect(countsAsPet(null)).toBe(true);
+    expect(countsAsPet(undefined)).toBe(true);
+    expect(countsAsPet("")).toBe(true);
+    expect(countsAsPet("   ")).toBe(true);
+  });
+
+  // A mode nobody has invented yet is not pet food until somebody says it is.
+  it("says no to anything it doesn't recognise", () => {
+    expect(countsAsPet("beverages")).toBe(false);
+  });
+});
 
 describe("splitRange", () => {
   // The can from the Express experiment. "Shreds" is the heading a shelf is

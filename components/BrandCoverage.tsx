@@ -169,6 +169,12 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
           {totals.started} of {totals.brands} brands started · {totals.filled}{" "}
           done · {totals.photo} awaiting ingredients
         </p>
+        {/* Said rather than assumed. The catalog also holds human food and
+            cosmetics, and somebody counting brands here should know why their
+            total doesn't match the catalog's. */}
+        <p className="mt-0.5 text-[11.5px] text-faint">
+          Cat and dog food only — human food and cosmetics aren&apos;t counted.
+        </p>
       </div>
 
       {/* Search first, because in a shop it is the only control that matters:
