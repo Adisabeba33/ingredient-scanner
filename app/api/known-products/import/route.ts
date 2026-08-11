@@ -1,0 +1,267 @@
+import { canonicalBarcode } from "@/lib/barcode";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
+import { compositionKey } from "@/lib/composition-key";
+import { allReportCacheKeys } from "@/lib/report-cache-key";
+import { hasAnyFigure } from "@/lib/guaranteed-analysis";
+import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
+import { importVerdict, type ExistingRow, type ImportVerdict } from "@/lib/known-import";
+import { KNOWN_PRODUCTS } from "@/data/known-products";
+import { KNOWN_FORMULAS } from "@/data/known-formulas";
+
+/**
+ * Put the seeded formulas into the catalog.
+ *
+ * ── Why these may now be written when the barcodes alone could not ────────
+ *
+ * A `barcode_cache` row without an ingredient list fails `servableRow()`, which
+ * does not mean "ignored" — it means the code reads as a recent MISS and the
+ * open databases are not asked again for a week. That is why the 27 barcodes
+ * arrived as a shopping list and stayed out of the catalog.
+ *
+ * With a composition they are ordinary, servable products, and better than what
+ * the open databases hold for most of them.
+ *
+ * ── `community`, not `verified` ───────────────────────────────────────────
+ *
+ * These lists come from manufacturer and retailer records, not from anybody
+ * photographing a tin. `community` is exactly what that is: it outranks the
+ * open databases, which is right, and it is outranked by our own capture, which
+ * is also right — the moment somebody photographs the real pack, the pack wins.
+ * Calling them `verified` would make a retailer record permanently
+ * unoverwritable by a photograph, which is backwards.
+ *
+ * ── Nothing is overwritten silently ───────────────────────────────────────
+ *
+ * A barcode already holding a DIFFERENT composition is left alone and reported.
+ * One barcode does carry two formulas over time — Friskies Pâté Ocean Whitefish
+ * & Tuna has gone 11% protein to 9% under one UPC — and walking over the older
+ * one destroys the only evidence that happened. The rule lives in
+ * lib/known-import.ts, where it can be read and tested.
+ *
+ * GET previews. POST writes. Both gated by ADMIN_TOKEN.
+ */
+
+export const runtime = "nodejs";
+
+/** Added by ingredients.help migration 0024. See lib/optional-columns.ts. */
+const NEW_COLUMNS = ["nutrition_role", "requires_vet"];
+
+interface Candidate {
+  code: string;
+  printed: string;
+  productName: string;
+  brands: string;
+  species: string;
+  foodForm: string;
+  ingredients: string;
+  analysis: ReturnType<typeof analysisFor>;
+  compositionKey: string | null;
+  conflictNote: string | null;
+}
+
+function analysisFor(upc: string) {
+  return KNOWN_FORMULAS[upc]?.analysis ?? null;
+}
+
+/**
+ * Every seeded product that has a formula, flattened to a row-shaped thing.
+ *
+ * A product without a formula is skipped rather than written empty — an empty
+ * row is the miss-shadowing problem this whole route exists to avoid.
+ */
+function candidates(): Candidate[] {
+  const out: Candidate[] = [];
+  for (const product of KNOWN_PRODUCTS) {
+    for (const pkg of product.packages) {
+      const formula = KNOWN_FORMULAS[pkg.upc];
+      if (!formula) continue;
+      // Range, name and flavour joined the way the catalog stores them, so a
+      // later capture of the same tin produces the same string.
+      const productName = `${product.line} ${product.variant}`.trim();
+      out.push({
+        code: canonicalBarcode(pkg.upc),
+        printed: pkg.upc,
+        productName,
+        brands: product.brand,
+        species: product.species,
+        foodForm: product.foodForm,
+        ingredients: formula.ingredients,
+        analysis: formula.analysis,
+        compositionKey: compositionKey(product.brand, formula.ingredients),
+        conflictNote: formula.conflict ?? null,
+      });
+    }
+  }
+  return out;
+}
+
+async function decide(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>,
+  force: boolean
+) {
+  const list = candidates();
+  const codes = list.map((c) => c.code);
+
+  const { data, error } = await admin
+    .from("barcode_cache")
+    .select("code, source, composition_key, ingredients_text")
+    .in("code", codes);
+  if (error) {
+    return { error: error.message, decided: [] as (Candidate & { verdict: ImportVerdict })[] };
+  }
+  const existing = new Map<string, ExistingRow>();
+  for (const row of (data ?? []) as unknown as (ExistingRow & { code: string })[]) {
+    existing.set(row.code, row);
+  }
+
+  return {
+    error: null,
+    decided: list.map((c) => ({
+      ...c,
+      verdict: importVerdict(existing.get(c.code), c.compositionKey, force),
+    })),
+  };
+}
+
+function summarise(decided: { verdict: ImportVerdict }[]) {
+  const counts: Record<ImportVerdict, number> = {
+    write: 0,
+    identical: 0,
+    "ours-is-better": 0,
+    conflict: 0,
+  };
+  for (const d of decided) counts[d.verdict] += 1;
+  return counts;
+}
+
+/** What WOULD happen, so the button can say it before anybody presses it. */
+export async function GET(req: Request) {
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
+  const admin = createSupabaseAdminClient();
+  if (!admin) {
+    return Response.json({ error: "store_not_configured" }, { status: 501 });
+  }
+
+  const { error, decided } = await decide(admin, false);
+  if (error) {
+    return Response.json({ error: "lookup_failed", message: error }, { status: 500 });
+  }
+  return Response.json({
+    total: decided.length,
+    counts: summarise(decided),
+    products: decided.map((d) => ({
+      code: d.printed,
+      name: `${d.brands} ${d.productName}`,
+      verdict: d.verdict,
+    })),
+  });
+}
+
+export async function POST(req: Request) {
+  const auth = checkAdmin(req);
+  if (!auth.ok) return adminRefusal(auth);
+  const admin = createSupabaseAdminClient();
+  if (!admin) {
+    return Response.json({ error: "store_not_configured" }, { status: 501 });
+  }
+
+  let force = false;
+  try {
+    const body = (await req.json()) as { force?: unknown };
+    force = body.force === true;
+  } catch {
+    /* no body is the ordinary case */
+  }
+
+  const { error, decided } = await decide(admin, force);
+  if (error) {
+    return Response.json({ error: "lookup_failed", message: error }, { status: 500 });
+  }
+
+  const toWrite = decided.filter((d) => d.verdict === "write");
+  if (toWrite.length === 0) {
+    return Response.json({
+      ok: true,
+      written: 0,
+      counts: summarise(decided),
+      conflicts: decided
+        .filter((d) => d.verdict === "conflict")
+        .map((d) => ({ code: d.printed, name: `${d.brands} ${d.productName}` })),
+    });
+  }
+
+  const now = new Date().toISOString();
+  const rows = toWrite.map((c) => ({
+    code: c.code,
+    found: true,
+    // Not "verified": nobody photographed this pack. See the note above.
+    source: "community",
+    mode: "pet",
+    brands: c.brands,
+    product_name: c.productName,
+    ingredients_text: c.ingredients,
+    species: c.species,
+    food_form: c.foodForm,
+    // Two independent signals agree on every one of these — the pack's own
+    // range name and a list that opens with broth or water.
+    food_form_confirmed: true,
+    moisture_percent: c.analysis?.moistureMax ?? null,
+    guaranteed_analysis: c.analysis && hasAnyFigure(c.analysis) ? c.analysis : null,
+    // Deliberately NOT set: the AAFCO feeding statement wasn't in the source,
+    // and `nutrition_role` is one field where guessing re-creates the error it
+    // exists to remove. Null reads as unknown, which keeps the everyday
+    // complete-diet standard — the same treatment every other row gets.
+    requires_vet: false,
+    image_url: null,
+    reason: null,
+    created_at: now,
+    composition_key: c.compositionKey,
+  }));
+
+  let { error: writeError } = await admin
+    .from("barcode_cache")
+    .upsert(rows, { onConflict: "code" });
+  if (writeError && isUndefinedColumn(writeError)) {
+    const retry = await admin
+      .from("barcode_cache")
+      .upsert(withoutColumns(rows, NEW_COLUMNS), { onConflict: "code" });
+    if (!retry.error) writeError = null;
+  }
+  if (writeError) {
+    return Response.json(
+      { error: "write_failed", message: writeError.message },
+      { status: 500 }
+    );
+  }
+
+  // Any report stored for these codes was generated before we had a
+  // composition — in every mode, since the mode may have been wrong too.
+  let reportsCleared = 0;
+  try {
+    const { data: cleared } = await admin
+      .from("report_cache")
+      .delete()
+      .in("cache_key", toWrite.flatMap((c) => allReportCacheKeys(c.code)))
+      .select("cache_key");
+    reportsCleared = cleared?.length ?? 0;
+  } catch {
+    /* best-effort — the products are written either way */
+  }
+
+  return Response.json({
+    ok: true,
+    written: toWrite.length,
+    reportsCleared,
+    counts: summarise(decided),
+    conflicts: decided
+      .filter((d) => d.verdict === "conflict")
+      .map((d) => ({ code: d.printed, name: `${d.brands} ${d.productName}` })),
+    // Products whose formula the source itself flagged as having older records
+    // under the same barcode. Written, and worth knowing about.
+    flagged: toWrite
+      .filter((d) => d.conflictNote)
+      .map((d) => ({ code: d.printed, note: d.conflictNote })),
+  });
+}

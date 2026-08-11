@@ -24,6 +24,7 @@ import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
 import { CorrectionsReview } from "@/components/CorrectionsReview";
 import { ExpressDesk } from "@/components/ExpressDesk";
+import { SeedImport } from "@/components/SeedImport";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
@@ -1259,6 +1260,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       {/* The desk half of Express Mode. Above corrections because it is the
           list with somebody's afternoon on it. */}
       <ExpressDesk adminToken={adminToken} />
+
+      <SeedImport adminToken={adminToken} />
 
       <CorrectionsReview adminToken={adminToken} />
 
