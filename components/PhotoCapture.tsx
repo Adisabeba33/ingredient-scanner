@@ -56,6 +56,11 @@ import {
 const START_RECT: Record<FramePreset, NormalizedRect> = {
   brand: { x: 0.07, y: 0.4, w: 0.86, h: 0.18 },
   ingredients: { x: 0.08, y: 0.16, w: 0.84, h: 0.64 },
+  // Nearly the whole frame. Express asks for the brand, the variant AND the net
+  // weight, and those are printed at opposite ends of a pack — a band across
+  // the middle, which is all the brand preset needs, would crop the weight off
+  // every time.
+  express: { x: 0.04, y: 0.06, w: 0.92, h: 0.84 },
 };
 
 const VIDEO_CONSTRAINTS: MediaTrackConstraints = {

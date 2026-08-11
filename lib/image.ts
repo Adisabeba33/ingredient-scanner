@@ -28,7 +28,7 @@
  * draw. Nothing is discarded until the photo is accepted.
  */
 
-export type FramePreset = "brand" | "ingredients";
+export type FramePreset = "brand" | "ingredients" | "express";
 
 export interface NormalizedRect {
   x: number; // 0–1 from left
@@ -47,7 +47,50 @@ const PRESETS: Record<FramePreset, PresetConfig> = {
   brand: { maxWidth: 1000, quality: 0.6 },
   // Moderate — the ingredient list is small and must stay legible for Claude.
   ingredients: { maxWidth: 1600, quality: 0.82 },
+  // Express Mode's front-of-pack shot, and NOT the `brand` preset despite
+  // photographing the same face of the same box. That one is tuned for "a few
+  // big words" — a brand and a product name, set large. Express asks the model
+  // for the net weight too, which is the smallest print on a pack and the first
+  // thing to dissolve under compression. This copy is the one the model reads;
+  // a much smaller one is derived from it for storage (EXPRESS_STORED).
+  express: { maxWidth: 1600, quality: 0.82 },
 };
+
+/**
+ * The copy that gets kept.
+ *
+ * Read at 1600 (above), stored at 900. The stored picture only has to let a
+ * person at a desk recognise the pack and read its variant off the front —
+ * everything the model needed the detail for has already been read by then.
+ * Around 70 KB a product, so a few thousand of them is a rounding error.
+ */
+export const EXPRESS_STORED = { maxWidth: 900, quality: 0.62 };
+
+/**
+ * Re-encode a data URL smaller. Used to derive the stored copy from the one
+ * the model just read, so the phone never encodes the same photograph twice
+ * from scratch and the good copy is never uploaded.
+ */
+export async function shrinkDataUrl(
+  dataUrl: string,
+  { maxWidth, quality }: { maxWidth: number; quality: number }
+): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const el = new Image();
+    el.onload = () => resolve(el);
+    el.onerror = () => reject(new Error("Couldn't read that photo."));
+    el.src = dataUrl;
+  });
+  const scale = Math.min(1, maxWidth / img.naturalWidth);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(img.naturalWidth * scale);
+  canvas.height = Math.round(img.naturalHeight * scale);
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Couldn't prepare that photo.");
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  return canvas.toDataURL("image/jpeg", quality);
+}
 
 /** The rectangle that keeps everything — an uploaded image starts here. */
 export const WHOLE_IMAGE: NormalizedRect = { x: 0, y: 0, w: 1, h: 1 };

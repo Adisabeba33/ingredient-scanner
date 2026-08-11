@@ -19,6 +19,13 @@ export interface PendingProduct {
   /** All pack-size codes for ONE recipe. One verified row is written per code. */
   barcodes: string[];
   mode: CaptureMode;
+  /**
+   * Captured in Express Mode: a barcode and the front of the pack, no
+   * ingredient list. Processed by /api/express into the worklist rather than by
+   * /api/process into the catalog — see supabase/express_capture.sql for why
+   * the two must not share a table.
+   */
+  express?: boolean;
   /** JPEG data URLs. Ingredients is the one that matters; the rest are optional. */
   photos: {
     brand?: string;
@@ -148,7 +155,13 @@ export async function updateProduct(
   patch: Partial<
     Pick<
       PendingProduct,
-      "barcodes" | "mode" | "photos" | "lastError" | "allowOverwrite" | "allowSeparate"
+      | "barcodes"
+      | "mode"
+      | "express"
+      | "photos"
+      | "lastError"
+      | "allowOverwrite"
+      | "allowSeparate"
     >
   >
 ): Promise<void> {

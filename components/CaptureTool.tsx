@@ -13,6 +13,7 @@ import {
   AlertTriangle,
   CheckCircle2,
   Database,
+  Zap,
   X,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
@@ -20,9 +21,11 @@ import { PhotoCapture } from "@/components/PhotoCapture";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
 import { CorrectionsReview } from "@/components/CorrectionsReview";
+import { ExpressDesk } from "@/components/ExpressDesk";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
+import { EXPRESS_STORED, shrinkDataUrl } from "@/lib/image";
 import {
   addProduct,
   deleteProduct,
@@ -111,6 +114,8 @@ interface ProcessOutcome {
   mode?: string | null;
   /** Set only when the pack overruled the picker: the mode that was selected. */
   reclassifiedFrom?: string | null;
+  /** Express only: the net weight read off the front, shown in the summary. */
+  expressWeight?: string | null;
   reason?: string;
   /** Extra detail from the server (e.g. the Anthropic error text) for debugging. */
   message?: string;
@@ -232,6 +237,20 @@ const REASON_LABEL: Record<string, string> = {
 
 export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [mode, setMode] = useState<CaptureMode>("pet");
+  // Express Mode: a barcode and the front of the pack, nothing else. The
+  // ingredient list is typed in later at a desk (see /api/express). Sticky
+  // across reloads on purpose — somebody working a whole aisle this way should
+  // not have to switch it back on after every accidental refresh.
+  const [express, setExpress] = useState(false);
+  useEffect(() => {
+    setExpress(localStorage.getItem("catalog-scanner.express") === "1");
+  }, []);
+  const toggleExpress = useCallback(() => {
+    setExpress((v) => {
+      localStorage.setItem("catalog-scanner.express", v ? "0" : "1");
+      return !v;
+    });
+  }, []);
   const [draft, setDraft] = useState<Draft>(EMPTY_DRAFT);
   const [overlay, setOverlay] = useState<Overlay>(null);
   // The pending queue itself (not just its size), so it can be reviewed,
@@ -423,7 +442,11 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
   );
 
   // ── Done / Skip ──────────────────────────────────────────────────────────────
-  const canFinish = draft.barcodes.length > 0 && !!draft.photos.ingredients;
+  // Express needs the front of the pack; the full capture needs the ingredient
+  // list. Each mode asks for the one photo it cannot work without.
+  const canFinish =
+    draft.barcodes.length > 0 &&
+    (express ? !!draft.photos.brand : !!draft.photos.ingredients);
 
   const finish = useCallback(async () => {
     if (!canFinish || flashRef.current) return;
@@ -432,6 +455,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       await addProduct({
         barcodes: draft.barcodes,
         mode,
+        express,
         photos: draft.photos,
         allowOverwrite: draft.allowOverwrite === true,
       });
@@ -442,7 +466,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
     } finally {
       flashRef.current = false;
     }
-  }, [canFinish, draft, mode, refreshQueue]);
+  }, [canFinish, draft, mode, express, refreshQueue]);
 
   const skip = useCallback(() => {
     setDraft(EMPTY_DRAFT);
@@ -468,6 +492,15 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       const item = items[i];
       let outcome: ProcessOutcome;
       try {
+        // An express capture takes a different road: /api/express reads the
+        // front of the pack for identity and files it on the worklist. It must
+        // never reach /api/process, which would refuse it for having no
+        // ingredients photo — correctly, since it hasn't got one.
+        if (item.express) {
+          results.push(await processExpress(item, adminToken));
+          setProgress({ done: i + 1, total: items.length });
+          continue;
+        }
         const res = await fetch("/api/process", {
           method: "POST",
           headers: {
@@ -639,6 +672,42 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         ))}
       </div>
 
+      {/* Express Mode. Under the picker rather than beside it: it changes what a
+          capture IS, not which shelf it came from. */}
+      <button
+        onClick={toggleExpress}
+        aria-pressed={express}
+        className={`flex items-center justify-between gap-3 rounded-input border px-4 py-2.5 text-left transition ${
+          express
+            ? "border-sage-500 bg-sage-100"
+            : "border-line bg-surface"
+        }`}
+      >
+        <span className="min-w-0">
+          <span className="flex items-center gap-1.5 text-[13px] font-semibold text-ink">
+            <Zap size={14} strokeWidth={2} aria-hidden="true" />
+            Express Mode
+          </span>
+          <span className="mt-0.5 block text-[11.5px] leading-snug text-muted">
+            {express
+              ? "Barcode + front of pack. Ingredients typed in later, at a desk."
+              : "Two seconds a product: barcode, front photo, walk on."}
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          className={`relative h-6 w-11 shrink-0 rounded-full transition ${
+            express ? "bg-sage-500" : "bg-lineStrong"
+          }`}
+        >
+          <span
+            className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow-soft transition-all ${
+              express ? "left-[22px]" : "left-0.5"
+            }`}
+          />
+        </span>
+      </button>
+
       {/* Duplicate warning — this code is already ours / already queued here. */}
       {dupWarning && (
         <div className="flex items-start gap-2 rounded-input border border-amber bg-amber-soft px-3 py-3">
@@ -752,22 +821,32 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           )}
         </div>
 
-        {/* Photos */}
-        <div className="grid grid-cols-2 gap-2">
+        {/* Photos. Express asks for one — the front — and does not offer the
+            others, because offering them is what turns two seconds into ten. */}
+        {express ? (
           <PhotoSlot
-            label="Brand / name"
+            label="Front of pack"
+            required
             done={!!draft.photos.brand}
             onClick={() => setOverlay({ kind: "photo", slot: "brand" })}
           />
-          <PhotoSlot
-            label="Ingredients"
-            required
-            done={!!draft.photos.ingredients}
-            onClick={() => setOverlay({ kind: "photo", slot: "ingredients" })}
-          />
-        </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-2">
+            <PhotoSlot
+              label="Brand / name"
+              done={!!draft.photos.brand}
+              onClick={() => setOverlay({ kind: "photo", slot: "brand" })}
+            />
+            <PhotoSlot
+              label="Ingredients"
+              required
+              done={!!draft.photos.ingredients}
+              onClick={() => setOverlay({ kind: "photo", slot: "ingredients" })}
+            />
+          </div>
+        )}
 
-        {captureNutrition && (
+        {!express && captureNutrition && (
           <PhotoSlot
             label="Nutrition panel (optional)"
             done={!!draft.photos.nutrition}
@@ -775,6 +854,7 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           />
         )}
         <button
+          hidden={express}
           onClick={() => setCaptureNutrition((v) => !v)}
           className="self-start text-[12px] font-medium text-faint"
         >
@@ -788,7 +868,9 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         </button>
         {!canFinish && (
           <p className="-mt-2 text-center text-[12px] text-faint">
-            Need at least one barcode and the ingredients photo.
+            {express
+              ? "Need a barcode and a photo of the front."
+              : "Need at least one barcode and the ingredients photo."}
           </p>
         )}
       </section>
@@ -1089,7 +1171,13 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       )}
       {overlay?.kind === "photo" && (
         <PhotoCapture
-          preset={overlay.slot === "brand" ? "brand" : "ingredients"}
+          preset={
+            overlay.slot === "brand"
+              ? express
+                ? "express"
+                : "brand"
+              : "ingredients"
+          }
           title={
             overlay.slot === "brand"
               ? "Brand / name"
@@ -1129,6 +1217,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       )}
 
       {/* Corrections reported by users against the catalog, awaiting a call. */}
+      {/* The desk half of Express Mode. Above corrections because it is the
+          list with somebody's afternoon on it. */}
+      <ExpressDesk adminToken={adminToken} />
+
       <CorrectionsReview adminToken={adminToken} />
 
       <PackSizeReview adminToken={adminToken} />
@@ -1540,4 +1632,86 @@ function OpenCheck({
       )}
     </div>
   );
+}
+
+/**
+ * One express capture, on wifi.
+ *
+ * Two copies of the photograph go up: the one the model reads, and the smaller
+ * one that gets kept. Shrinking happens here rather than on the server because
+ * the browser already holds the pixels and a canvas, and because it means the
+ * good copy is the only thing that ever crosses the wire twice — 900px of JPEG
+ * instead of a second round trip to fetch and re-encode it.
+ */
+async function processExpress(
+  item: PendingProduct,
+  adminToken: string
+): Promise<ProcessOutcome> {
+  const base: Pick<ProcessOutcome, "id" | "barcodes"> = {
+    id: item.id,
+    barcodes: item.barcodes,
+  };
+  const readPhoto = item.photos.brand;
+  if (!readPhoto) {
+    return { ...base, ok: false, productName: null, reason: "no-photo" };
+  }
+
+  let storePhoto = readPhoto;
+  try {
+    storePhoto = await shrinkDataUrl(readPhoto, EXPRESS_STORED);
+  } catch {
+    // Couldn't re-encode it — send the read copy instead. A slightly larger
+    // stored picture is a much smaller problem than a lost capture.
+  }
+
+  try {
+    const res = await fetch("/api/express", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "x-admin-token": adminToken,
+      },
+      body: JSON.stringify({
+        barcode: item.barcodes[0],
+        mode: item.mode,
+        readPhoto,
+        storePhoto,
+      }),
+    });
+    const data = (await res.json().catch(() => ({}))) as {
+      ok?: boolean;
+      reason?: string;
+      error?: string;
+      message?: string;
+      brands?: string | null;
+      product_name?: string | null;
+      variant?: string | null;
+      net_weight?: string | null;
+      mode?: string | null;
+    };
+    if (!res.ok || !data.ok) {
+      return {
+        ...base,
+        ok: false,
+        productName: data.product_name ?? null,
+        reason: data.reason ?? data.error ?? `http_${res.status}`,
+        message: data.message,
+      };
+    }
+    await deleteProduct(item.id); // photo gone once the identity is stored
+    return {
+      ...base,
+      ok: true,
+      // What the desk will see on the worklist, said here so the run's summary
+      // is readable without opening it.
+      productName:
+        [data.brands, data.product_name, data.variant]
+          .filter(Boolean)
+          .join(" · ") || null,
+      mode: data.mode ?? null,
+      expressWeight: data.net_weight ?? null,
+    };
+  } catch {
+    return { ...base, ok: false, productName: null, reason: "network" };
+  }
 }
