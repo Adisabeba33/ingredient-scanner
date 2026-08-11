@@ -23,7 +23,13 @@ export interface ExpressRow {
   lifeStage?: string | null;
   proteins?: string[] | null;
   texture?: string | null;
+  /** What it is suspended in: "in gravy", "in sauce". Never a texture. */
+  presentation?: string | null;
   foodForm?: string | null;
+  /** Meal, topper, treat…  `unknown`/null keeps the everyday standard. */
+  nutritionRole?: string | null;
+  /** A vet-channel therapeutic diet, which the everyday standard misjudges. */
+  requiresVet?: boolean | null;
   frontClaims?: string[] | null;
   multipackCount?: number | null;
   netWeight: string | null;
@@ -96,20 +102,29 @@ export function missingForFinish(row: {
  * can and alarming in a bag — so a wrong answer here quietly corrupts the
  * report rather than merely leaving a field empty.
  *
- * Two signals, in order of how directly they say it: the texture the model read
- * off the pack ("in sauce", "pate", "kibble"), then the product's own name,
- * through the same word list the full capture path already uses. `unknown` when
- * neither says anything — a guess here is worse than a blank, and the desk can
- * still set it by hand.
+ * Three signals, in order of how directly they say it: the texture ("pate",
+ * "shreds", "kibble"), then what it is suspended in ("in gravy", "in broth"),
+ * then the product's own name — all through the same word list the full capture
+ * path already uses. `unknown` when none says anything: a guess here is worse
+ * than a blank, and the desk can still set it by hand.
+ *
+ * The presentation has to be one of the three, and it is the reason this
+ * function was rewritten. It used to read the texture alone, back when "in
+ * sauce" and "shreds" both landed in that one field. Now that they are properly
+ * apart, a tin whose only wet word is "in Sauce" would come through as unknown
+ * — the split would have quietly cost us the answer it was meant to sharpen.
  */
 export function expressFoodForm(identity: {
   texture?: string | null;
+  presentation?: string | null;
   product_line?: string | null;
   product_name?: string | null;
   variant?: string | null;
 }): FoodForm {
   const fromTexture = detectFormFromName(identity.texture);
   if (fromTexture !== "unknown") return fromTexture;
+  const fromPresentation = detectFormFromName(identity.presentation);
+  if (fromPresentation !== "unknown") return fromPresentation;
   return detectFormFromName(
     [identity.product_line, identity.product_name, identity.variant]
       .filter(Boolean)

@@ -6,6 +6,11 @@ import { Loader2, Zap, Check, ChevronDown } from "lucide-react";
 import { expressTitle, groupCaptures, type ExpressRow } from "@/lib/express";
 import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
 import { isFoodForm, type FoodForm } from "@/lib/food-form";
+import {
+  isNutritionRole,
+  roleLabel,
+  type NutritionRole,
+} from "@/lib/nutrition-role";
 
 /**
  * The other half of Express Mode: the desk.
@@ -26,6 +31,24 @@ const SPECIES_CHOICES: { value: PetSpecies; label: string }[] = [
   { value: "cat", label: "Cat" },
   { value: "dog", label: "Dog" },
   { value: "both", label: "Both" },
+  { value: "unknown", label: "Not stated" },
+];
+
+/**
+ * Is it dinner?
+ *
+ * The one field on this form that changes what the consumer app SAYS rather
+ * than what it stores. A treat judged as a diet is marked down for not being
+ * one — so when the shop trip couldn't read the feeding statement off the
+ * front, this is where somebody looking at the photograph answers it.
+ *
+ * "Not stated" is a real answer and the safe one: it keeps the everyday
+ * complete-diet standard, which is what every product got before this existed.
+ */
+const ROLE_CHOICES: { value: NutritionRole; label: string }[] = [
+  { value: "complete", label: "Meal" },
+  { value: "topper", label: "Topper" },
+  { value: "treat", label: "Treat" },
   { value: "unknown", label: "Not stated" },
 ];
 
@@ -172,6 +195,9 @@ function ExpressCard({
   const [form, setForm] = useState<FoodForm>(
     isFoodForm(row.foodForm) ? row.foodForm : "unknown"
   );
+  const [role, setRole] = useState<NutritionRole>(
+    isNutritionRole(row.nutritionRole) ? row.nutritionRole : "unknown"
+  );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -196,6 +222,7 @@ function ExpressCard({
           mode: row.mode,
           species: isPet ? species : undefined,
           foodForm: isPet ? form : undefined,
+          nutritionRole: isPet ? role : undefined,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -223,6 +250,7 @@ function ExpressCard({
     brands,
     productName,
     isPet,
+    role,
     species,
     form,
     onFinished,
@@ -272,14 +300,37 @@ function ExpressCard({
           {(row.lifeStage ||
             row.proteins?.length ||
             row.texture ||
+            row.presentation ||
             row.multipackCount) && (
             <span className="mt-1 flex flex-wrap gap-1">
               {row.multipackCount && <Tag>{row.multipackCount}-pack</Tag>}
               {row.texture && <Tag>{row.texture}</Tag>}
+              {row.presentation && <Tag>{row.presentation}</Tag>}
               {row.lifeStage && <Tag>{row.lifeStage}</Tag>}
               {row.proteins?.map((p) => (
                 <Tag key={p}>{p}</Tag>
               ))}
+            </span>
+          )}
+          {/* The two that change what the report SAYS, so they are called out
+              rather than left among the ordinary chips. */}
+          {(row.requiresVet ||
+            (isNutritionRole(row.nutritionRole) &&
+              row.nutritionRole !== "unknown" &&
+              row.nutritionRole !== "complete")) && (
+            <span className="mt-1 flex flex-wrap gap-1">
+              {row.requiresVet && (
+                <span className="rounded-full bg-amber-soft px-2 py-0.5 text-[10px] font-semibold text-ink">
+                  vet diet
+                </span>
+              )}
+              {isNutritionRole(row.nutritionRole) &&
+                row.nutritionRole !== "unknown" &&
+                row.nutritionRole !== "complete" && (
+                  <span className="rounded-full bg-amber-soft px-2 py-0.5 text-[10px] font-semibold text-ink">
+                    {roleLabel(row.nutritionRole)} — not a meal
+                  </span>
+                )}
             </span>
           )}
           {row.frontClaims && row.frontClaims.length > 0 && (
@@ -333,6 +384,20 @@ function ExpressCard({
                     label={c.label}
                     active={form === c.value}
                     onClick={() => setForm(c.value)}
+                  />
+                ))}
+              </div>
+              {/* Is it dinner? The pack answers it in the feeding statement,
+                  which the shop trip often can't see. Answering it here is what
+                  stops a bag of treats being marked down for not being a
+                  balanced diet. */}
+              <div className="flex gap-1.5">
+                {ROLE_CHOICES.map((c) => (
+                  <Choice
+                    key={c.value}
+                    label={c.label}
+                    active={role === c.value}
+                    onClick={() => setRole(c.value)}
                   />
                 ))}
               </div>

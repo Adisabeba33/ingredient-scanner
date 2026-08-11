@@ -43,8 +43,31 @@ create table if not exists public.express_capture (
   species text,                       -- cat | dog | both | unknown
   life_stage text,                    -- kitten | puppy | adult | senior | all
   proteins text[],                    -- ["salmon"] — what the pack sells on
-  texture text,                       -- "in sauce", "pate", "kibble"
+  texture text,                       -- "pate", "shreds", "flaked" — the CUT
+  -- What it is suspended in: "in gravy", "in sauce", "in broth". A separate
+  -- column from texture on purpose. "Flaked Salmon in Gravy" is a flaked
+  -- texture in a gravy, and one column for both meant a capture kept whichever
+  -- word the model happened to write — after which "have I done Shreds in
+  -- Gravy as well as Shreds in Sauce?" has no answer, and those are two
+  -- different products on a shelf. It also predicts the composition: a gravy
+  -- is thickened, nearly always with carrageenan, guar or xanthan.
+  presentation text,
   food_form text,                     -- dry | wet | semi-moist, derived
+  -- Is it dinner? complete | complementary | topper | treat | supplement |
+  -- unknown, from the AAFCO feeding statement the pack is required to carry.
+  --
+  -- Not a catalog nicety. The consumer app judges a pet food by whether real
+  -- named meat leads the list — the right question about a meal and nonsense
+  -- about a lickable broth, which is mostly water on purpose, and unfair about
+  -- a bag of treats, which never claimed to be a diet. "unknown" keeps the
+  -- everyday standard, so a missing answer can only leave a report as it is
+  -- today, never make it worse.
+  nutrition_role text,
+  -- A vet-channel therapeutic diet. A renal formula is DELIBERATELY low in
+  -- protein and phosphorus; measured against "more named meat is better" it
+  -- reads as a cynically cheap food, and the report would say so about
+  -- something a vet prescribed to keep an animal alive.
+  requires_vet boolean,
   -- Claims printed on the front, verbatim. The consumer app weighs marketing
   -- against the composition and until now had only the back of the pack.
   front_claims text[],
@@ -108,7 +131,10 @@ alter table public.express_capture
   add column if not exists life_stage text,
   add column if not exists proteins text[],
   add column if not exists texture text,
+  add column if not exists presentation text,
   add column if not exists food_form text,
+  add column if not exists nutrition_role text,
+  add column if not exists requires_vet boolean,
   add column if not exists front_claims text[],
   add column if not exists multipack_count int;
 

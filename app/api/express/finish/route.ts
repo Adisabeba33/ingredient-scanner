@@ -8,6 +8,12 @@ import { isFoodForm } from "@/lib/food-form";
 import { isScanMode } from "@/lib/capture-mode";
 import { compositionKey } from "@/lib/composition-key";
 import { readGuaranteedAnalysis, hasAnyFigure } from "@/lib/guaranteed-analysis";
+import { isNutritionRole } from "@/lib/nutrition-role";
+import {
+  columnsWithout,
+  isUndefinedColumn,
+  withoutColumns,
+} from "@/lib/optional-columns";
 
 /**
  * Finish an express capture: type in what the shop trip couldn't, and let the
@@ -29,6 +35,9 @@ export const runtime = "nodejs";
 
 const BUCKET = "product-photos";
 
+/** Added by ingredients.help migration 0024. See lib/optional-columns.ts. */
+const NEW_CATALOG_COLUMNS = ["nutrition_role", "requires_vet"];
+
 export async function POST(req: Request) {
   const auth = checkAdmin(req);
   if (!auth.ok) return adminRefusal(auth);
@@ -48,6 +57,7 @@ export async function POST(req: Request) {
     species?: unknown;
     foodForm?: unknown;
     guaranteedAnalysis?: unknown;
+    nutritionRole?: unknown;
   };
   try {
     body = await req.json();
@@ -92,13 +102,23 @@ export async function POST(req: Request) {
     );
   }
 
-  const { data: rowData, error: readError } = await admin
-    .from("express_capture")
-    .select(
-      "code, mode, brands, product_name, product_line, variant, species, food_form, photo_path"
-    )
-    .eq("code", code)
-    .maybeSingle();
+  const WORKLIST_COLUMNS =
+    "code, mode, brands, product_name, product_line, variant, species, food_form, nutrition_role, requires_vet, photo_path";
+  const readWorklist = (columns: string) =>
+    admin.from("express_capture").select(columns).eq("code", code).maybeSingle();
+
+  let { data: rowData, error: readError } = await readWorklist(WORKLIST_COLUMNS);
+  // Not yet migrated. Finish the product without the newest fields rather than
+  // refusing to finish it at all — see lib/optional-columns.ts.
+  if (readError && isUndefinedColumn(readError)) {
+    const retry = await readWorklist(
+      columnsWithout(WORKLIST_COLUMNS, NEW_CATALOG_COLUMNS)
+    );
+    if (!retry.error) {
+      rowData = retry.data;
+      readError = null;
+    }
+  }
   if (readError) {
     return Response.json(
       { error: "read_failed", message: readError.message },
@@ -114,7 +134,7 @@ export async function POST(req: Request) {
       { status: 404 }
     );
   }
-  const row = rowData as {
+  const row = rowData as unknown as {
     mode: string | null;
     brands: string | null;
     product_name: string | null;
@@ -122,6 +142,8 @@ export async function POST(req: Request) {
     variant: string | null;
     species: string | null;
     food_form: string | null;
+    nutrition_role: string | null;
+    requires_vet: boolean | null;
     photo_path: string | null;
   };
 
@@ -172,12 +194,22 @@ export async function POST(req: Request) {
   const analysis =
     mode === "pet" ? readGuaranteedAnalysis(body.guaranteedAnalysis) : null;
 
+  // Meal, topper or treat. The desk's answer wins — it has the photograph of
+  // the pack in front of it and can read the feeding statement the shop trip
+  // couldn't. Otherwise the shop trip's reading stands, and "unknown" survives
+  // as unknown rather than being talked into "complete": unknown keeps the
+  // everyday standard, and inventing a role is how a real food gets excused.
+  const nutritionRole = isNutritionRole(body.nutritionRole)
+    ? body.nutritionRole
+    : isNutritionRole(row.nutrition_role)
+      ? row.nutrition_role
+      : "unknown";
+
   const imageUrl = row.photo_path
     ? admin.storage.from(BUCKET).getPublicUrl(row.photo_path).data.publicUrl
     : null;
 
-  const { error: writeError } = await admin.from("barcode_cache").upsert(
-    codes.map((c) => ({
+  const catalogRows = codes.map((c) => ({
       code: c,
       found: true,
       source: "verified",
@@ -188,6 +220,8 @@ export async function POST(req: Request) {
       species,
       food_form: foodForm,
       food_form_confirmed: foodForm ? foodForm !== "unknown" : null,
+      nutrition_role: mode === "pet" ? nutritionRole : null,
+      requires_vet: mode === "pet" ? row.requires_vet ?? false : null,
       moisture_percent: analysis?.moistureMax ?? null,
       guaranteed_analysis:
         analysis && hasAnyFigure(analysis) ? analysis : null,
@@ -195,9 +229,19 @@ export async function POST(req: Request) {
       reason: null,
       created_at: new Date().toISOString(),
       composition_key: compositionKey(brands, ingredients),
-    })),
-    { onConflict: "code" }
-  );
+  }));
+
+  let { error: writeError } = await admin
+    .from("barcode_cache")
+    .upsert(catalogRows, { onConflict: "code" });
+  if (writeError && isUndefinedColumn(writeError)) {
+    const retry = await admin
+      .from("barcode_cache")
+      .upsert(withoutColumns(catalogRows, NEW_CATALOG_COLUMNS), {
+        onConflict: "code",
+      });
+    if (!retry.error) writeError = null;
+  }
   if (writeError) {
     return Response.json(
       { error: "write_failed", message: writeError.message },

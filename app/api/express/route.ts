@@ -4,6 +4,13 @@ import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { extractIdentity } from "@/lib/extract-identity";
 import { isScanMode, resolveCaptureMode } from "@/lib/capture-mode";
 import { photoPathFor, decodeDataUrl, expressFoodForm } from "@/lib/express";
+import { detectNutritionRole } from "@/lib/nutrition-role";
+import { isVeterinaryDiet } from "@/lib/vet-diet";
+import {
+  columnsWithout,
+  isUndefinedColumn,
+  withoutColumns,
+} from "@/lib/optional-columns";
 import type { ScanMode } from "@/lib/barcode";
 
 /**
@@ -36,6 +43,9 @@ export const maxDuration = 60;
 
 const BUCKET = "product-photos";
 
+/** Columns supabase/express_capture.sql adds last. See lib/optional-columns.ts. */
+const NEW_COLUMNS = ["presentation", "nutrition_role", "requires_vet"];
+
 /** The worklist, oldest first — the order somebody works through it. */
 export async function GET(req: Request) {
   const auth = checkAdmin(req);
@@ -45,13 +55,29 @@ export async function GET(req: Request) {
     return Response.json({ error: "store_not_configured" }, { status: 501 });
   }
 
-  const { data, error } = await admin
-    .from("express_capture")
-    .select(
-      "code, capture_group, mode, brands, product_name, product_line, variant, species, life_stage, proteins, texture, food_form, front_claims, multipack_count, net_weight, container, photo_path, read_error, captured_at"
-    )
-    .order("captured_at", { ascending: true })
-    .limit(200);
+  // Columns added after this table was first created only exist once the
+  // matching ALTER has been run by hand, and asking for one the database
+  // doesn't have fails the WHOLE select — which would empty the worklist rather
+  // than merely omitting a field. So: try it whole, and fall back.
+  const COLUMNS =
+    "code, capture_group, mode, brands, product_name, product_line, variant, species, life_stage, proteins, texture, presentation, food_form, nutrition_role, requires_vet, front_claims, multipack_count, net_weight, container, photo_path, read_error, captured_at";
+  const NEWEST = ["presentation", "nutrition_role", "requires_vet"];
+
+  const read = (columns: string) =>
+    admin
+      .from("express_capture")
+      .select(columns)
+      .order("captured_at", { ascending: true })
+      .limit(200);
+
+  let { data, error } = await read(COLUMNS);
+  if (error && isUndefinedColumn(error)) {
+    const retry = await read(columnsWithout(COLUMNS, NEWEST));
+    if (!retry.error) {
+      data = retry.data;
+      error = null;
+    }
+  }
   if (error) {
     return Response.json(
       { error: "list_failed", message: error.message },
@@ -59,7 +85,7 @@ export async function GET(req: Request) {
     );
   }
 
-  const rows = (data ?? []) as Record<string, unknown>[];
+  const rows = (data ?? []) as unknown as Record<string, unknown>[];
   return Response.json({
     rows: rows.map((r) => ({
       code: r.code as string,
@@ -74,7 +100,10 @@ export async function GET(req: Request) {
       lifeStage: (r.life_stage as string | null) ?? null,
       proteins: (r.proteins as string[] | null) ?? null,
       texture: (r.texture as string | null) ?? null,
+      presentation: (r.presentation as string | null) ?? null,
       foodForm: (r.food_form as string | null) ?? null,
+      nutritionRole: (r.nutrition_role as string | null) ?? null,
+      requiresVet: (r.requires_vet as boolean | null) ?? null,
       frontClaims: (r.front_claims as string[] | null) ?? null,
       multipackCount: (r.multipack_count as number | null) ?? null,
       netWeight: (r.net_weight as string | null) ?? null,
@@ -168,6 +197,30 @@ export async function POST(req: Request) {
   // desk later. See lib/express.ts — the pack usually shouts it.
   const foodForm = expressFoodForm(identity);
 
+  // Is it dinner? The report judges a pet food by whether real named meat leads
+  // the list, which is nonsense about a lickable broth and unfair about a bag of
+  // treats. `unknown` where the pack didn't say, and unknown keeps the ordinary
+  // standard — see lib/nutrition-role.ts.
+  const nutritionRole = detectNutritionRole({
+    claims: identity.front_claims,
+    parts: [
+      identity.brands,
+      identity.product_line,
+      identity.product_name,
+      identity.variant,
+    ],
+  });
+
+  // A therapeutic diet is formulated against a clinical target, so the everyday
+  // "more named meat is better" reading is a category error on it — a renal diet
+  // is low in protein deliberately.
+  const requiresVet = isVeterinaryDiet(
+    identity.brands,
+    identity.product_line,
+    identity.product_name,
+    identity.variant
+  );
+
   // ── Keep the small copy ───────────────────────────────────────────────────
   //
   // Before the row, so a row never points at a photograph that isn't there. A
@@ -210,8 +263,7 @@ export async function POST(req: Request) {
   // That mirrors the catalog, which stores a row per barcode too — pack sizes
   // are separate products on a shelf even when they are one recipe.
   const now = new Date().toISOString();
-  const { error } = await admin.from("express_capture").upsert(
-    codes.map((c) => ({
+  const rows = codes.map((c) => ({
       code: c,
       capture_group: code,
       mode,
@@ -224,7 +276,12 @@ export async function POST(req: Request) {
       life_stage: mode === "pet" ? identity.life_stage : null,
       proteins: identity.proteins.length > 0 ? identity.proteins : null,
       texture: identity.texture,
+      // What it is suspended in, kept apart from what it is cut into. See
+      // lib/presentation.ts for why one field for both was costing us answers.
+      presentation: identity.presentation,
       food_form: mode === "pet" ? foodForm : null,
+      nutrition_role: nutritionRole,
+      requires_vet: requiresVet,
       front_claims:
         identity.front_claims.length > 0 ? identity.front_claims : null,
       multipack_count: identity.multipack_count,
@@ -233,9 +290,26 @@ export async function POST(req: Request) {
       photo_path: photoPath,
       read_error: readError || null,
       captured_at: now,
-    })),
-    { onConflict: "code" }
-  );
+  }));
+
+  // A shop trip is gone either way if this fails, and only one of the two
+  // outcomes leaves you with the product. So a database that hasn't had the
+  // newest columns added yet stores the row WITHOUT them rather than storing
+  // nothing — the fields start landing on their own once the ALTER is run, and
+  // nothing has to be re-photographed.
+  let { error } = await admin
+    .from("express_capture")
+    .upsert(rows, { onConflict: "code" });
+  let storedPartially = false;
+  if (error && isUndefinedColumn(error)) {
+    const retry = await admin
+      .from("express_capture")
+      .upsert(withoutColumns(rows, NEW_COLUMNS), { onConflict: "code" });
+    if (!retry.error) {
+      error = null;
+      storedPartially = true;
+    }
+  }
   if (error) {
     return Response.json(
       { ok: false, reason: "write_failed", message: error.message },
@@ -250,7 +324,12 @@ export async function POST(req: Request) {
     mode,
     ...identity,
     food_form: foodForm,
+    nutrition_role: nutritionRole,
+    requires_vet: requiresVet,
     photoStored: photoPath !== null,
+    // Worth saying out loud rather than looking like a clean capture: the
+    // product IS stored, minus the newest fields, until the ALTER is run.
+    storedPartially,
     usage,
   });
 }

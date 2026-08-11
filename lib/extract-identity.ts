@@ -40,8 +40,27 @@ export interface LabelIdentity {
   life_stage: string | null;
   /** The named protein(s) on the front: ["salmon"], ["chicken", "liver"]. */
   proteins: string[];
-  /** Texture as printed — the strongest wet/dry signal a front carries. */
+  /**
+   * The TEXTURE as printed — what the meat is cut or shaped into: "shreds",
+   * "pate", "flaked", "chunks", "kibble". The strongest wet/dry signal a front
+   * carries.
+   *
+   * Kept apart from `presentation` on purpose. "Flaked Salmon in Gravy" is a
+   * flaked texture in a gravy, and storing both words in one field means a
+   * capture keeps whichever the model happened to write — after which "have I
+   * done Shreds in Gravy as well as Shreds in Sauce?" has no answer, and they
+   * are different products on a shelf. See lib/presentation.ts.
+   */
   texture: string | null;
+  /**
+   * What it is suspended in, as printed: "in gravy", "in sauce", "in broth".
+   *
+   * Not a texture. It also predicts the composition — a gravy or a sauce is
+   * thickened, nearly always with carrageenan, guar gum or xanthan — so it is
+   * the difference between "this has carrageenan in it" and "this has
+   * carrageenan in it, as every gravy does".
+   */
+  presentation: string | null;
   /**
    * Front-of-pack claims, verbatim: "Complete & Balanced", "No artificial
    * colors", "With real salmon". The consumer app has a section that weighs
@@ -126,13 +145,18 @@ const IDENTITY_SCHEMA = {
     texture: {
       type: ["string", "null"],
       description:
-        "The texture word or phrase as printed: 'in sauce', 'in gravy', 'pate', 'shreds', 'chunks', 'flaked', 'minced', 'kibble', 'biscuits'. Copy it as it appears. Null when the pack doesn't say.",
+        "The TEXTURE only — what the food has been cut, ground or shaped into: 'pate', 'shreds', 'flaked', 'minced', 'chunks', 'cuts', 'slices', 'filets', 'morsels', 'loaf', 'mousse', 'stew', 'kibble', 'biscuits'. Copy it as printed. Do NOT put 'in gravy', 'in sauce' or 'in broth' here — those go in `presentation`. For 'Flaked Salmon in Gravy' the texture is 'Flaked'. Null when the pack names no texture.",
+    },
+    presentation: {
+      type: ["string", "null"],
+      description:
+        "What the food is suspended in, as printed: 'in gravy', 'extra gravy', 'in sauce', 'in broth', 'in jelly', 'in water', 'in its own juices'. NOT the texture. For 'Flaked Salmon in Gravy' this is 'in Gravy'. Null when the pack doesn't say — a pate usually doesn't.",
     },
     front_claims: {
       type: "array",
       items: { type: "string" },
       description:
-        "Claims printed on the front, VERBATIM and each as its own string: 'Complete & Balanced', 'No artificial colors, flavors or preservatives', 'With real salmon', 'Grain Free', 'High Protein', '100% Complete Nutrition'. Copy what is written — do not summarise, rephrase or judge. Empty when the front carries none.",
+        "Claims printed on the front, VERBATIM and each as its own string: 'Complete & Balanced', 'No artificial colors, flavors or preservatives', 'With real salmon', 'Grain Free', 'High Protein', '100% Complete Nutrition'. Copy what is written — do not summarise, rephrase or judge. INCLUDE the feeding statement if the front carries it — 'Complete & Balanced Nutrition', 'For intermittent or supplemental feeding only', 'A complement to your cat's regular meal' — that sentence decides whether the product is a meal at all, so never leave it out. Empty when the front carries none.",
     },
     multipack_count: {
       type: ["integer", "null"],
@@ -166,6 +190,7 @@ const IDENTITY_SCHEMA = {
           "life_stage",
           "proteins",
           "texture",
+          "presentation",
         ],
       },
       description:
@@ -181,6 +206,7 @@ const IDENTITY_SCHEMA = {
     "life_stage",
     "proteins",
     "texture",
+    "presentation",
     "front_claims",
     "multipack_count",
     "net_weight",
@@ -198,8 +224,10 @@ const SYSTEM =
 const USER_INSTRUCTION =
   "This is the front of a product. Read everything off it that the schema asks for: the " +
   "brand, the range, the product name, the flavour, the animal it is for, the life stage, " +
-  "the protein it is sold on, the texture, the claims printed on it, the pack count, the net " +
-  "weight and what it is sold in. " +
+  "the protein it is sold on, the texture, what it is suspended in, the claims printed on it, " +
+  "the pack count, the net weight and what it is sold in. " +
+  "Keep the texture and what it is suspended in APART. 'Flaked Salmon in Gravy' is texture " +
+  "'Flaked', flavour 'Salmon', presentation 'in Gravy' — three answers, not one phrase. " +
   "The flavour and the weight matter most — they are what tell two barcodes of one product " +
   "line apart. Copy the weight with its unit and do not convert it. " +
   "Copy the claims word for word: they are compared against the ingredient list later, and a " +
@@ -320,6 +348,7 @@ export async function extractIdentity({
       life_stage: life && LIFE_STAGES.includes(life) ? life : null,
       proteins: strings(parsed.proteins).map((p) => p.toLowerCase()),
       texture: clean(parsed.texture),
+      presentation: clean(parsed.presentation),
       front_claims: strings(parsed.front_claims),
       multipack_count: count,
       net_weight: clean(parsed.net_weight),

@@ -57,6 +57,19 @@ export interface LabelExtraction {
   category: LabelCategory;
   /** Which animal the product is for — decides how the report is written. */
   species: PetSpecies;
+  /**
+   * The AAFCO feeding statement, verbatim.
+   *
+   * One sentence, printed beside the guaranteed analysis on every American pet
+   * pack, and it settles whether the product is a MEAL: "complete and balanced
+   * nutrition for…" or "for intermittent or supplemental feeding only". It is
+   * in the ingredients photograph already, because it sits next to the panel.
+   *
+   * It matters because the report judges a food by whether real named meat
+   * leads the list — the right question about dinner and nonsense about a
+   * lickable broth, which is mostly water on purpose. See lib/nutrition-role.ts.
+   */
+  feeding_statement: string | null;
   /** Dry or wet, as read off the PACK. One of the two signals; see lib/food-form.ts. */
   food_form: FoodForm;
   /** Moisture % from the Guaranteed Analysis, when that panel was legible. */
@@ -104,6 +117,11 @@ const EXTRACTION_SCHEMA = {
       enum: ["cat", "dog", "both", "unknown"],
       description:
         "Which animal this product is for, read from the pack — it usually says so plainly ('Cat Food', 'For Dogs', 'Kitten', 'Puppy'), and the animal pictured is a strong hint. Use 'both' only when the pack really is sold for cats AND dogs (some treats are). Use 'unknown' when the pack doesn't say — do NOT infer it from the ingredients, since cats and dogs share most of them.",
+    },
+    feeding_statement: {
+      type: ["string", "null"],
+      description:
+        "The AAFCO nutritional adequacy / feeding statement, copied VERBATIM — one sentence printed near the guaranteed analysis on American pet packs. It reads either like 'X is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance' / 'provides complete and balanced nutrition for…', or like 'For intermittent or supplemental feeding only'. Copy whichever is printed, exactly. Null when no such sentence is visible — do NOT infer it from the product looking like a normal food.",
     },
     guaranteed_analysis: {
       type: "object",
@@ -170,6 +188,7 @@ const EXTRACTION_SCHEMA = {
     "category",
     "species",
     "food_form",
+    "feeding_statement",
     "moisture_percent",
     "guaranteed_analysis",
   ],
@@ -342,6 +361,11 @@ export async function extractLabel({
         ? parsed.moisture_percent
         : analysis.moistureMax,
     guaranteed_analysis: analysis,
+    feeding_statement:
+      typeof parsed.feeding_statement === "string" &&
+      parsed.feeding_statement.trim()
+        ? parsed.feeding_statement.trim()
+        : null,
     species: isPetSpecies(parsed.species)
       ? parsed.species
       : detectSpeciesFromText(

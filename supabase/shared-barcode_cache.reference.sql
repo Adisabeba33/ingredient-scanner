@@ -26,3 +26,25 @@
 --   last_hit_at timestamptz
 -- );
 -- alter table public.barcode_cache enable row level security;
+
+
+-- ── Columns this scanner started writing later ────────────────────────────
+--
+-- Added by ingredients.help migration 0024_nutrition_role.sql, which is where
+-- the reasoning lives. Run it there, in the same project — there is nothing to
+-- run here.
+--
+--   nutrition_role text   -- complete | complementary | topper | treat |
+--                         -- supplement | unknown. From the AAFCO feeding
+--                         -- statement printed beside the guaranteed analysis.
+--                         -- NULL/unknown keeps the everyday complete-diet
+--                         -- standard, so a missing answer can only leave a
+--                         -- report as it already was.
+--   requires_vet boolean  -- a vet-channel therapeutic diet. A renal formula is
+--                         -- deliberately low in protein, and the everyday
+--                         -- "more named meat is better" reading calls that a
+--                         -- cheap food — about something a vet prescribed.
+--
+-- Until that migration is run, the scanner's writes to these columns fail and
+-- the consumer app's read of them is caught and ignored, so both behave exactly
+-- as they did before the columns existed.

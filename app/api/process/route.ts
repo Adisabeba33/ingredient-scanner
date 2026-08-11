@@ -18,6 +18,9 @@ import {
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { isUsableIngredients } from "@/lib/ingredients-text";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
+import { detectNutritionRole } from "@/lib/nutrition-role";
+import { isVeterinaryDiet } from "@/lib/vet-diet";
+import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import {
   detectFormFromName,
   detectFormFromText,
@@ -57,6 +60,13 @@ interface VerifiedRow {
   food_form: string | null;
   /** Whether two independent signals agreed on the form. */
   food_form_confirmed: boolean | null;
+  /**
+   * Meal, topper, treat — from the AAFCO feeding statement beside the panel.
+   * "unknown" keeps the everyday standard; see lib/nutrition-role.ts.
+   */
+  nutrition_role: string | null;
+  /** A vet-channel therapeutic diet, which the everyday standard misjudges. */
+  requires_vet: boolean | null;
   /** Moisture % off the guaranteed analysis, when it was legible. */
   moisture_percent: number | null;
   /** The whole Guaranteed Analysis panel as printed — null when none was read. */
@@ -367,6 +377,11 @@ async function handle(req: Request) {
   }
 
   // ── One verified row per pack-size code ──────────────────────────────────
+  const nutritionRole = detectNutritionRole({
+    claims: extraction.feeding_statement ? [extraction.feeding_statement] : [],
+    parts: [extraction.brands, extraction.product_name],
+  });
+  const requiresVet = isVeterinaryDiet(extraction.brands, extraction.product_name);
   const now = new Date().toISOString();
   const rows: VerifiedRow[] = writable.map((code) => ({
     code,
@@ -380,6 +395,12 @@ async function handle(req: Request) {
     species: mode === "pet" ? extraction.species : null,
     food_form: formVerdict ? formVerdict.form : null,
     food_form_confirmed: formVerdict ? formVerdict.confirmed : null,
+    // Is it dinner? The feeding statement is printed beside the guaranteed
+    // analysis, which is in the photograph we already took, so this costs
+    // nothing extra to know — and without it a bag of treats is judged for not
+    // being a balanced diet, which no treat has ever claimed to be.
+    nutrition_role: mode === "pet" ? nutritionRole : null,
+    requires_vet: mode === "pet" ? requiresVet : null,
     moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
     // Pet food only: the Guaranteed Analysis is an AAFCO panel and human packs
     // carry a different one, read elsewhere. Null rather than an object of
@@ -398,10 +419,26 @@ async function handle(req: Request) {
   // replaced, and without it `writable` contains only codes that don't exist.
   // Select the rows back so "written" reflects what the database actually
   // holds, rather than merely "the call didn't error".
-  const { data: written, error } = await admin
+  let { data: written, error } = await admin
     .from("barcode_cache")
     .upsert(rows, { onConflict: "code" })
     .select("code");
+  // The columns from ingredients.help migration 0024, on a database that hasn't
+  // had it run yet. Store the product without them rather than losing a capture
+  // that has already been photographed, uploaded and paid for — see
+  // lib/optional-columns.ts.
+  if (error && isUndefinedColumn(error)) {
+    const retry = await admin
+      .from("barcode_cache")
+      .upsert(withoutColumns(rows, ["nutrition_role", "requires_vet"]), {
+        onConflict: "code",
+      })
+      .select("code");
+    if (!retry.error) {
+      written = retry.data;
+      error = null;
+    }
+  }
   if (error) {
     return Response.json(
       { ok: false, reason: "write_failed", message: error.message },

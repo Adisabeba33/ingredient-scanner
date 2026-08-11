@@ -181,6 +181,21 @@ describe("expressFoodForm", () => {
     ).toBe("wet");
   });
 
+  // The regression the texture/presentation split could have caused. Before it,
+  // "in Sauce" arrived in `texture` and settled the question; now it arrives in
+  // its own field, and a tin whose only wet word is there must still read wet.
+  it("reads the presentation when the texture doesn't say", () => {
+    expect(
+      expressFoodForm({
+        texture: "Flaked",
+        presentation: "in Gravy",
+        variant: "Salmon",
+      })
+    ).toBe("wet");
+    expect(expressFoodForm({ presentation: "in Sauce" })).toBe("wet");
+    expect(expressFoodForm({ presentation: "in Broth" })).toBe("wet");
+  });
+
   it("takes the texture word on its own", () => {
     expect(expressFoodForm({ texture: "pâté" })).toBe("wet");
     expect(expressFoodForm({ texture: "kibble" })).toBe("dry");
