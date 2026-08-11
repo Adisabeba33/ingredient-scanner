@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { isLabelCategory, type LabelCategory } from "@/lib/extract";
+import { isPetSpecies } from "@/lib/pet-species";
 
 /**
  * Read who a product is off one photograph of its front.
@@ -24,8 +25,32 @@ export interface LabelIdentity {
   brands: string | null;
   /** Product name without the variant, e.g. "Life Protection Formula". */
   product_name: string | null;
-  /** The variant/flavour/life-stage, e.g. "Chicken & Brown Rice". */
+  /**
+   * The sub-brand or range within the brand: "Shreds", "Pate", "Prime Filets".
+   * Not the flavour. Kept apart from the name because it is often the texture
+   * word that settles wet vs dry, and because two ranges of one brand are
+   * different products that a search must not merge.
+   */
+  product_line: string | null;
+  /** The variant/flavour, e.g. "With Salmon in Sauce". */
   variant: string | null;
+  /** Pet food: which animal the front says it is for. */
+  species: "cat" | "dog" | "both" | "unknown";
+  /** "kitten" | "puppy" | "adult" | "senior" | "all" | null. */
+  life_stage: string | null;
+  /** The named protein(s) on the front: ["salmon"], ["chicken", "liver"]. */
+  proteins: string[];
+  /** Texture as printed — the strongest wet/dry signal a front carries. */
+  texture: string | null;
+  /**
+   * Front-of-pack claims, verbatim: "Complete & Balanced", "No artificial
+   * colors", "With real salmon". The consumer app has a section that weighs
+   * marketing against the composition, and until now it had only the back of
+   * the pack to work from.
+   */
+  front_claims: string[];
+  /** "12" from "12 x 5.5 oz", when the pack is a multipack. */
+  multipack_count: number | null;
   /** Net weight or volume, transcribed exactly as printed. */
   net_weight: string | null;
   /** What it is sold in. */
@@ -35,6 +60,8 @@ export interface LabelIdentity {
   /** What could not be read, so the desk knows to look at the photo itself. */
   unreadable: string[];
 }
+
+const LIFE_STAGES = ["kitten", "puppy", "adult", "senior", "all"];
 
 const CONTAINERS = [
   "can",
@@ -61,7 +88,12 @@ const IDENTITY_SCHEMA = {
     product_name: {
       type: ["string", "null"],
       description:
-        "The product line WITHOUT the flavour or variant (e.g. 'Life Protection Formula', 'Cesar Classic Loaf'). Null if not legible.",
+        "The product name WITHOUT the range or the flavour (e.g. 'Life Protection Formula', 'Classic Loaf'). Null if the pack shows only a brand and a flavour, which is common.",
+    },
+    product_line: {
+      type: ["string", "null"],
+      description:
+        "The sub-brand or range within the brand, usually set in its own banner or badge: 'Shreds', 'Pate', 'Prime Filets', 'Gravy Lovers', 'Tastefuls'. NOT the flavour and NOT the brand. Null if the pack has no such range.",
     },
     variant: {
       type: ["string", "null"],
@@ -72,6 +104,40 @@ const IDENTITY_SCHEMA = {
       type: ["string", "null"],
       description:
         "Net weight or volume EXACTLY as printed, with its unit and no conversion: '12.5 oz', '3 kg', '85 g', '1.5 L', '24 x 100g'. It is often the smallest print on the pack. Null if you cannot read it — do NOT estimate from the pack's size.",
+    },
+    species: {
+      type: "string",
+      enum: ["cat", "dog", "both", "unknown"],
+      description:
+        "Pet products only: which animal the FRONT says it is for — 'Cat Food', 'For Dogs', a kitten or puppy named, the animal pictured as the one eating it. 'both' only if the pack really is sold for cats AND dogs. 'unknown' for anything that isn't pet food, and for a pet pack whose front doesn't say. Do NOT infer it from the brand you happen to recognise: read the pack.",
+    },
+    life_stage: {
+      type: ["string", "null"],
+      enum: ["kitten", "puppy", "adult", "senior", "all", null],
+      description:
+        "The life stage printed on the front: 'Kitten', 'Puppy', 'Adult', 'Senior'/'7+'/'Mature', or 'all' for 'All Life Stages'. Null when the front doesn't say.",
+    },
+    proteins: {
+      type: "array",
+      items: { type: "string" },
+      description:
+        "The protein(s) named on the front, lowercase and singular: ['salmon'], ['chicken', 'liver'], ['beef']. This is what the pack SELLS itself on, not the full composition. Empty when no protein is named.",
+    },
+    texture: {
+      type: ["string", "null"],
+      description:
+        "The texture word or phrase as printed: 'in sauce', 'in gravy', 'pate', 'shreds', 'chunks', 'flaked', 'minced', 'kibble', 'biscuits'. Copy it as it appears. Null when the pack doesn't say.",
+    },
+    front_claims: {
+      type: "array",
+      items: { type: "string" },
+      description:
+        "Claims printed on the front, VERBATIM and each as its own string: 'Complete & Balanced', 'No artificial colors, flavors or preservatives', 'With real salmon', 'Grain Free', 'High Protein', '100% Complete Nutrition'. Copy what is written — do not summarise, rephrase or judge. Empty when the front carries none.",
+    },
+    multipack_count: {
+      type: ["integer", "null"],
+      description:
+        "How many units are in the pack, when it is sold as several: 12 from '12 x 5.5 oz', 24 from '24 count'. Null for a single unit — do NOT put 1 here.",
     },
     container: {
       type: "string",
@@ -89,7 +155,18 @@ const IDENTITY_SCHEMA = {
       type: "array",
       items: {
         type: "string",
-        enum: ["brands", "product_name", "variant", "net_weight", "container"],
+        enum: [
+          "brands",
+          "product_name",
+          "product_line",
+          "variant",
+          "net_weight",
+          "container",
+          "species",
+          "life_stage",
+          "proteins",
+          "texture",
+        ],
       },
       description:
         "Name every field above you had to answer null (or 'other') because the photograph was blurry, glared, cropped or too small to read — as opposed to the pack genuinely not printing it. Empty when the photo was legible throughout.",
@@ -98,7 +175,14 @@ const IDENTITY_SCHEMA = {
   required: [
     "brands",
     "product_name",
+    "product_line",
     "variant",
+    "species",
+    "life_stage",
+    "proteins",
+    "texture",
+    "front_claims",
+    "multipack_count",
     "net_weight",
     "container",
     "category",
@@ -112,13 +196,19 @@ const SYSTEM =
   "You are not asked for the ingredient list and must not attempt one.";
 
 const USER_INSTRUCTION =
-  "This is the front of a product. Read off it: the brand, the product line, the variant " +
-  "(flavour / recipe / life-stage), the net weight or volume exactly as printed, what it is " +
-  "sold in, and what kind of product it is. The variant and the weight matter most — they " +
-  "are what tell two barcodes of the same product line apart. Copy the weight with its unit " +
-  "and do not convert it. If a field is unreadable in this photograph, answer null and name " +
-  "it in `unreadable`; if the pack simply does not print it, answer null and leave it out of " +
-  "that list.";
+  "This is the front of a product. Read everything off it that the schema asks for: the " +
+  "brand, the range, the product name, the flavour, the animal it is for, the life stage, " +
+  "the protein it is sold on, the texture, the claims printed on it, the pack count, the net " +
+  "weight and what it is sold in. " +
+  "The flavour and the weight matter most — they are what tell two barcodes of one product " +
+  "line apart. Copy the weight with its unit and do not convert it. " +
+  "Copy the claims word for word: they are compared against the ingredient list later, and a " +
+  "paraphrase makes that comparison meaningless. " +
+  "A round can or a bag photographed at an angle shows only part of its front, so some of " +
+  "this will genuinely not be in the picture. That is fine and expected. Answer null (or an " +
+  "empty list) and, if the reason is that the photograph was blurry, glared or cropped rather " +
+  "than the pack not printing it, name the field in `unreadable`. Never guess a field from a " +
+  "brand you recognise — read this pack.";
 
 function toImageBlock(dataUrl: string): Anthropic.Messages.ImageBlockParam {
   const match = /^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s.exec(dataUrl.trim());
@@ -204,11 +294,34 @@ export async function extractIdentity({
     unknown
   >;
   const container = clean(parsed.container);
+  const life = clean(parsed.life_stage)?.toLowerCase() ?? null;
+  const strings = (v: unknown): string[] =>
+    Array.isArray(v)
+      ? v
+          .filter((x): x is string => typeof x === "string")
+          .map((x) => x.trim())
+          .filter(Boolean)
+      : [];
+  const count =
+    typeof parsed.multipack_count === "number" &&
+    Number.isFinite(parsed.multipack_count) &&
+    // 1 is not a multipack, and a pack of a thousand is a misread.
+    parsed.multipack_count > 1 &&
+    parsed.multipack_count <= 200
+      ? Math.round(parsed.multipack_count)
+      : null;
   return {
     identity: {
       brands: clean(parsed.brands),
       product_name: clean(parsed.product_name),
+      product_line: clean(parsed.product_line),
       variant: clean(parsed.variant),
+      species: isPetSpecies(parsed.species) ? parsed.species : "unknown",
+      life_stage: life && LIFE_STAGES.includes(life) ? life : null,
+      proteins: strings(parsed.proteins).map((p) => p.toLowerCase()),
+      texture: clean(parsed.texture),
+      front_claims: strings(parsed.front_claims),
+      multipack_count: count,
       net_weight: clean(parsed.net_weight),
       container:
         container && CONTAINERS.includes(container) ? container : null,

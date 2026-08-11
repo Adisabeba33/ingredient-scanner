@@ -1,3 +1,5 @@
+import { detectFormFromName, type FoodForm } from "./food-form";
+
 /**
  * Express Mode: a product captured in two seconds, finished at a desk.
  *
@@ -13,7 +15,17 @@ export interface ExpressRow {
   mode: string | null;
   brands: string | null;
   productName: string | null;
+  /** The range within the brand: "Shreds", "Prime Filets". */
+  productLine?: string | null;
   variant: string | null;
+  /** Read off the front, so the desk starts from an answer, not a blank. */
+  species?: string | null;
+  lifeStage?: string | null;
+  proteins?: string[] | null;
+  texture?: string | null;
+  foodForm?: string | null;
+  frontClaims?: string[] | null;
+  multipackCount?: number | null;
   netWeight: string | null;
   container: string | null;
   /** Path inside the bucket, or null when the upload failed. */
@@ -76,6 +88,36 @@ export function missingForFinish(row: {
 }
 
 /**
+ * Dry or wet, from the front of the pack alone.
+ *
+ * Worth deriving rather than asking the desk for, because the pack usually
+ * shouts it: "Shreds ... in Sauce" is wet before anybody opens the tin. And it
+ * decides how the ingredient ORDER is read — broth near the top is normal in a
+ * can and alarming in a bag — so a wrong answer here quietly corrupts the
+ * report rather than merely leaving a field empty.
+ *
+ * Two signals, in order of how directly they say it: the texture the model read
+ * off the pack ("in sauce", "pate", "kibble"), then the product's own name,
+ * through the same word list the full capture path already uses. `unknown` when
+ * neither says anything — a guess here is worse than a blank, and the desk can
+ * still set it by hand.
+ */
+export function expressFoodForm(identity: {
+  texture?: string | null;
+  product_line?: string | null;
+  product_name?: string | null;
+  variant?: string | null;
+}): FoodForm {
+  const fromTexture = detectFormFromName(identity.texture);
+  if (fromTexture !== "unknown") return fromTexture;
+  return detectFormFromName(
+    [identity.product_line, identity.product_name, identity.variant]
+      .filter(Boolean)
+      .join(" ")
+  );
+}
+
+/**
  * Rows gathered into the captures they came from.
  *
  * One recipe sold as a 3 kg bag and a 12 kg bag is two barcodes, two catalog
@@ -98,7 +140,10 @@ export function groupCaptures<T extends ExpressRow>(rows: T[]): T[][] {
 
 /** A one-line description of a row, for a list somebody scans down. */
 export function expressTitle(row: ExpressRow): string {
-  const parts = [row.brands, row.productName, row.variant].filter(
+  // Range included, between the brand and the name: "Friskies Shreds" and
+  // "Friskies Pate" are different products, and a title that drops the range
+  // makes two of them look like one.
+  const parts = [row.brands, row.productLine, row.productName, row.variant].filter(
     (p): p is string => !!p && p.trim().length > 0
   );
   return parts.length > 0 ? parts.join(" · ") : row.code;

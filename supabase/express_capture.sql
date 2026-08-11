@@ -30,7 +30,20 @@ create table if not exists public.express_capture (
   mode text,                          -- human | pet | cosmetics
   brands text,
   product_name text,
+  product_line text,                  -- the range: "Shreds", "Prime Filets"
   variant text,                       -- "Chicken & Brown Rice", "Large Breed"
+  -- Everything below is read off the FRONT of the pack. None of it needs a
+  -- second trip, and each field is one the desk would otherwise pick by hand
+  -- or the catalog would go without.
+  species text,                       -- cat | dog | both | unknown
+  life_stage text,                    -- kitten | puppy | adult | senior | all
+  proteins text[],                    -- ["salmon"] — what the pack sells on
+  texture text,                       -- "in sauce", "pate", "kibble"
+  food_form text,                     -- dry | wet | semi-moist, derived
+  -- Claims printed on the front, verbatim. The consumer app weighs marketing
+  -- against the composition and until now had only the back of the pack.
+  front_claims text[],
+  multipack_count int,                -- 12 from "12 x 5.5 oz"
   net_weight text,                    -- as printed: "12.5 oz", "3 kg"
   container text,                     -- can | pouch | bag | tray | box | bottle
   -- Path inside the product-photos bucket, not a URL: the bucket can be made

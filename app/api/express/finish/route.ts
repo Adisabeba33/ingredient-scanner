@@ -95,7 +95,7 @@ export async function POST(req: Request) {
   const { data: rowData, error: readError } = await admin
     .from("express_capture")
     .select(
-      "code, mode, brands, product_name, variant, net_weight, photo_path"
+      "code, mode, brands, product_name, product_line, variant, species, food_form, photo_path"
     )
     .eq("code", code)
     .maybeSingle();
@@ -118,7 +118,10 @@ export async function POST(req: Request) {
     mode: string | null;
     brands: string | null;
     product_name: string | null;
+    product_line: string | null;
     variant: string | null;
+    species: string | null;
+    food_form: string | null;
     photo_path: string | null;
   };
 
@@ -135,7 +138,11 @@ export async function POST(req: Request) {
       : row.brands;
   // The variant is what tells two barcodes of one product line apart, so it
   // belongs in the name the catalog stores rather than being dropped here.
+  // Range, name, flavour — the three the shelf uses to tell packs apart, joined
+  // in the order they are printed. Dropping the range would merge Friskies
+  // Shreds with Friskies Pate, which are different products.
   const nameParts = [
+    row.product_line,
     typeof body.productName === "string" && body.productName.trim()
       ? body.productName.trim()
       : row.product_name,
@@ -143,8 +150,25 @@ export async function POST(req: Request) {
   ].filter((p): p is string => !!p);
   const productName = nameParts.length > 0 ? nameParts.join(" ") : null;
 
-  const species = mode === "pet" && isPetSpecies(body.species) ? body.species : null;
-  const foodForm = mode === "pet" && isFoodForm(body.foodForm) ? body.foodForm : null;
+  // The desk's answer wins; the front of the pack stands where the desk left it
+  // alone. Reading it in the shop was the point — it should not have to be
+  // re-entered to survive.
+  const species =
+    mode !== "pet"
+      ? null
+      : isPetSpecies(body.species) && body.species !== "unknown"
+        ? body.species
+        : isPetSpecies(row.species)
+          ? row.species
+          : null;
+  const foodForm =
+    mode !== "pet"
+      ? null
+      : isFoodForm(body.foodForm) && body.foodForm !== "unknown"
+        ? body.foodForm
+        : isFoodForm(row.food_form)
+          ? row.food_form
+          : null;
   const analysis =
     mode === "pet" ? readGuaranteedAnalysis(body.guaranteedAnalysis) : null;
 

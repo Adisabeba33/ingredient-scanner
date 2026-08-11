@@ -57,6 +57,10 @@ export function detectSpeciesFromText(
     .filter(Boolean)
     .join(" ")
     .toLowerCase()
+    // Same fold as lib/food-form.ts: strip the accents as accents, not as
+    // punctuation, so a name written with them still reads.
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
   if (!text) return "unknown";

@@ -42,6 +42,13 @@ export function formLabel(form: FoodForm): string {
 function normalize(text: string): string {
   return text
     .toLowerCase()
+    // Fold the accents BEFORE stripping, or they are stripped as punctuation:
+    // "pâté" became "p t " and never matched anything. The word list has always
+    // carried both "pate" and "pâté" — the accented entry could not fire, so
+    // every Fancy Feast, Sheba and Weruva pack printing "Pâté" went through as
+    // an unknown form, which is exactly the case this list exists for.
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9%]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();

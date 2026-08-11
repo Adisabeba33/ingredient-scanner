@@ -3,7 +3,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { extractIdentity } from "@/lib/extract-identity";
 import { isScanMode, resolveCaptureMode } from "@/lib/capture-mode";
-import { photoPathFor, decodeDataUrl } from "@/lib/express";
+import { photoPathFor, decodeDataUrl, expressFoodForm } from "@/lib/express";
 import type { ScanMode } from "@/lib/barcode";
 
 /**
@@ -48,7 +48,7 @@ export async function GET(req: Request) {
   const { data, error } = await admin
     .from("express_capture")
     .select(
-      "code, capture_group, mode, brands, product_name, variant, net_weight, container, photo_path, read_error, captured_at"
+      "code, capture_group, mode, brands, product_name, product_line, variant, species, life_stage, proteins, texture, food_form, front_claims, multipack_count, net_weight, container, photo_path, read_error, captured_at"
     )
     .order("captured_at", { ascending: true })
     .limit(200);
@@ -68,7 +68,15 @@ export async function GET(req: Request) {
       mode: (r.mode as string | null) ?? null,
       brands: (r.brands as string | null) ?? null,
       productName: (r.product_name as string | null) ?? null,
+      productLine: (r.product_line as string | null) ?? null,
       variant: (r.variant as string | null) ?? null,
+      species: (r.species as string | null) ?? null,
+      lifeStage: (r.life_stage as string | null) ?? null,
+      proteins: (r.proteins as string[] | null) ?? null,
+      texture: (r.texture as string | null) ?? null,
+      foodForm: (r.food_form as string | null) ?? null,
+      frontClaims: (r.front_claims as string[] | null) ?? null,
+      multipackCount: (r.multipack_count as number | null) ?? null,
       netWeight: (r.net_weight as string | null) ?? null,
       container: (r.container as string | null) ?? null,
       photoPath: (r.photo_path as string | null) ?? null,
@@ -156,6 +164,10 @@ export async function POST(req: Request) {
   // full capture — same rule, same module.
   const mode = resolveCaptureMode(picked, identity.category).mode;
 
+  // Dry vs wet, worked out from what the front said rather than asked of the
+  // desk later. See lib/express.ts — the pack usually shouts it.
+  const foodForm = expressFoodForm(identity);
+
   // ── Keep the small copy ───────────────────────────────────────────────────
   //
   // Before the row, so a row never points at a photograph that isn't there. A
@@ -205,7 +217,17 @@ export async function POST(req: Request) {
       mode,
       brands: identity.brands,
       product_name: identity.product_name,
+      product_line: identity.product_line,
       variant: identity.variant,
+      // Only meaningful for an animal's food; a cereal box has no species.
+      species: mode === "pet" ? identity.species : null,
+      life_stage: mode === "pet" ? identity.life_stage : null,
+      proteins: identity.proteins.length > 0 ? identity.proteins : null,
+      texture: identity.texture,
+      food_form: mode === "pet" ? foodForm : null,
+      front_claims:
+        identity.front_claims.length > 0 ? identity.front_claims : null,
+      multipack_count: identity.multipack_count,
       net_weight: identity.net_weight,
       container: identity.container,
       photo_path: photoPath,
@@ -227,6 +249,7 @@ export async function POST(req: Request) {
     codes,
     mode,
     ...identity,
+    food_form: foodForm,
     photoStored: photoPath !== null,
     usage,
   });

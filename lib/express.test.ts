@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   decodeDataUrl,
+  expressFoodForm,
   groupCaptures,
   expressTitle,
   missingForFinish,
@@ -91,6 +92,21 @@ describe("expressTitle", () => {
     ).toBe("Blue Buffalo · Life Protection · Chicken & Brown Rice");
   });
 
+  // The can from the experiment. "Shreds" is the range and belongs in the
+  // title: Friskies Shreds and Friskies Pate are not the same product.
+  it("keeps the range between the brand and the flavour", () => {
+    expect(
+      expressTitle(
+        row({
+          brands: "Purina Friskies",
+          productLine: "Shreds",
+          productName: null,
+          variant: "With Salmon in Sauce",
+        })
+      )
+    ).toBe("Purina Friskies · Shreds · With Salmon in Sauce");
+  });
+
   it("skips whatever the front didn't say", () => {
     expect(expressTitle(row({ brands: "Weruva", variant: "Paw Lickin'" }))).toBe(
       "Weruva · Paw Lickin'"
@@ -148,5 +164,49 @@ describe("groupCaptures", () => {
 
   it("returns nothing for an empty worklist", () => {
     expect(groupCaptures([])).toEqual([]);
+  });
+});
+
+describe("expressFoodForm", () => {
+  // The can from the experiment: Friskies Shreds With Salmon in Sauce. Two
+  // separate signals say wet, and the desk should never have to be asked.
+  it("reads the Friskies can as wet", () => {
+    expect(
+      expressFoodForm({
+        texture: "in sauce",
+        product_line: "Shreds",
+        product_name: null,
+        variant: "With Salmon in Sauce",
+      })
+    ).toBe("wet");
+  });
+
+  it("takes the texture word on its own", () => {
+    expect(expressFoodForm({ texture: "pâté" })).toBe("wet");
+    expect(expressFoodForm({ texture: "kibble" })).toBe("dry");
+  });
+
+  // A pack that names no texture still usually says it in the range or the
+  // flavour — "Gravy Lovers", "Chunks in Gravy", "Crunchy Bites".
+  it("falls back to the name when there is no texture word", () => {
+    expect(
+      expressFoodForm({ product_line: "Gravy Lovers", variant: "Turkey Feast" })
+    ).toBe("wet");
+    expect(expressFoodForm({ variant: "Crunchy Kibble Chicken" })).toBe("dry");
+  });
+
+  // A guess here corrupts the report rather than leaving a blank: broth near
+  // the top of a list is normal in a tin and alarming in a bag.
+  it("says unknown rather than guessing", () => {
+    expect(expressFoodForm({})).toBe("unknown");
+    expect(
+      expressFoodForm({ product_line: "Life Protection", variant: "Salmon" })
+    ).toBe("unknown");
+  });
+
+  it("prefers the texture over the name when they disagree", () => {
+    expect(
+      expressFoodForm({ texture: "in gravy", variant: "Crunchy Bites" })
+    ).toBe("wet");
   });
 });

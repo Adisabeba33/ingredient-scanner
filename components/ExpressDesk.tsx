@@ -164,8 +164,14 @@ function ExpressCard({
   const [ingredients, setIngredients] = useState("");
   const [brands, setBrands] = useState(row.brands ?? "");
   const [productName, setProductName] = useState(row.productName ?? "");
-  const [species, setSpecies] = useState<PetSpecies>("unknown");
-  const [form, setForm] = useState<FoodForm>("unknown");
+  // Seeded from the front of the pack. The shop trip already answered these;
+  // making somebody answer them again would waste the reading.
+  const [species, setSpecies] = useState<PetSpecies>(
+    isPetSpecies(row.species) ? row.species : "unknown"
+  );
+  const [form, setForm] = useState<FoodForm>(
+    isFoodForm(row.foodForm) ? row.foodForm : "unknown"
+  );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -260,6 +266,27 @@ function ExpressCard({
               </span>
             </span>
           )}
+          {/* What the front gave us. Shown rather than hidden in the database:
+              the photograph is right there, and a wrong reading is only
+              catchable if it is visible. */}
+          {(row.lifeStage ||
+            row.proteins?.length ||
+            row.texture ||
+            row.multipackCount) && (
+            <span className="mt-1 flex flex-wrap gap-1">
+              {row.multipackCount && <Tag>{row.multipackCount}-pack</Tag>}
+              {row.texture && <Tag>{row.texture}</Tag>}
+              {row.lifeStage && <Tag>{row.lifeStage}</Tag>}
+              {row.proteins?.map((p) => (
+                <Tag key={p}>{p}</Tag>
+              ))}
+            </span>
+          )}
+          {row.frontClaims && row.frontClaims.length > 0 && (
+            <span className="mt-1 block text-[11px] leading-snug text-faint">
+              Claims: {row.frontClaims.join(" · ")}
+            </span>
+          )}
           {row.readError && (
             <span className="mt-1 block text-[11px] leading-snug text-amber">
               {row.readError}
@@ -342,6 +369,15 @@ function ExpressCard({
         </div>
       )}
     </div>
+  );
+}
+
+/** A small fact read off the front. */
+function Tag({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="rounded-full bg-surface px-2 py-0.5 text-[10px] font-medium text-muted">
+      {children}
+    </span>
   );
 }
 
