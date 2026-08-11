@@ -1672,7 +1672,7 @@ async function processExpress(
         "x-admin-token": adminToken,
       },
       body: JSON.stringify({
-        barcode: item.barcodes[0],
+        barcodes: item.barcodes,
         mode: item.mode,
         readPhoto,
         storePhoto,

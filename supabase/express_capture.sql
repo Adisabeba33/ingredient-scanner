@@ -21,6 +21,12 @@ create table if not exists public.express_capture (
   -- canonicalBarcode(code) — the same key barcode_cache uses, so a finished
   -- row lands under exactly the code the shopper will scan.
   code text primary key,
+  -- Pack sizes. One recipe is sold as a 3 kg bag and a 12 kg bag with two
+  -- different barcodes, and a shop trip photographs the front once. Each code
+  -- gets its own row (that is what the catalog stores) but they share this
+  -- group, so the desk types the composition once and all of them graduate
+  -- together. Defaults to the row's own code for a product with a single code.
+  capture_group text,
   mode text,                          -- human | pet | cosmetics
   brands text,
   product_name text,
@@ -43,6 +49,10 @@ alter table public.express_capture enable row level security;
 -- Oldest first is how the desk works through them.
 create index if not exists express_capture_captured_at_idx
   on public.express_capture (captured_at);
+
+-- The desk reads a group at a time.
+create index if not exists express_capture_group_idx
+  on public.express_capture (capture_group);
 
 
 -- ── The photo bucket ──────────────────────────────────────────────────────

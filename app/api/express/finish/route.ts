@@ -38,6 +38,8 @@ export async function POST(req: Request) {
   }
 
   let body: {
+    /** Every pack-size code that shares this composition. */
+    codes?: unknown;
     code?: unknown;
     ingredientsText?: unknown;
     productName?: unknown;
@@ -53,9 +55,25 @@ export async function POST(req: Request) {
     return Response.json({ error: "invalid_body" }, { status: 400 });
   }
 
-  const clean = sanitizeBarcode(typeof body.code === "string" ? body.code : "");
-  if (!clean) return Response.json({ error: "bad-barcode" }, { status: 422 });
-  const code = canonicalBarcode(clean);
+  // Several codes when the product is sold in several pack sizes: one
+  // composition typed once, a catalog row per code — which is what the shelf
+  // has. `code` alone is still accepted so nothing older breaks.
+  const rawCodes = Array.isArray(body.codes)
+    ? body.codes
+    : typeof body.code === "string"
+      ? [body.code]
+      : [];
+  const codes: string[] = [];
+  for (const raw of rawCodes) {
+    const clean = sanitizeBarcode(typeof raw === "string" ? raw : "");
+    if (!clean) continue;
+    const key = canonicalBarcode(clean);
+    if (!codes.includes(key)) codes.push(key);
+  }
+  if (codes.length === 0) {
+    return Response.json({ error: "bad-barcode" }, { status: 422 });
+  }
+  const code = codes[0];
 
   // The composition is the whole point of the second visit. Everything else on
   // the form can stay empty; this cannot.
@@ -135,8 +153,8 @@ export async function POST(req: Request) {
     : null;
 
   const { error: writeError } = await admin.from("barcode_cache").upsert(
-    {
-      code,
+    codes.map((c) => ({
+      code: c,
       found: true,
       source: "verified",
       mode,
@@ -153,7 +171,7 @@ export async function POST(req: Request) {
       reason: null,
       created_at: new Date().toISOString(),
       composition_key: compositionKey(brands, ingredients),
-    },
+    })),
     { onConflict: "code" }
   );
   if (writeError) {
@@ -170,7 +188,7 @@ export async function POST(req: Request) {
     const { data: cleared } = await admin
       .from("report_cache")
       .delete()
-      .in("cache_key", allReportCacheKeys(code))
+      .in("cache_key", codes.flatMap((c) => allReportCacheKeys(c)))
       .select("cache_key");
     reportsCleared = cleared?.length ?? 0;
   } catch {
@@ -182,11 +200,12 @@ export async function POST(req: Request) {
   const { error: deleteError } = await admin
     .from("express_capture")
     .delete()
-    .eq("code", code);
+    .in("code", codes);
 
   return Response.json({
     ok: true,
     code,
+    codes,
     productName,
     imageStored: imageUrl !== null,
     reportsCleared,

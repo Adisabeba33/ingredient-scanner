@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Loader2, Zap, Check, ChevronDown } from "lucide-react";
-import { expressTitle, type ExpressRow } from "@/lib/express";
+import { expressTitle, groupCaptures, type ExpressRow } from "@/lib/express";
 import { isPetSpecies, type PetSpecies } from "@/lib/pet-species";
 import { isFoodForm, type FoodForm } from "@/lib/food-form";
 
@@ -73,14 +73,14 @@ export function ExpressDesk({ adminToken }: { adminToken: string }) {
     if (open) void load();
   }, [open, load]);
 
-  const finished = useCallback(
-    (code: string, name: string | null) => {
-      setRows((r) => (r ? r.filter((x) => x.code !== code) : r));
-      setEditing(null);
-      setNote(`${name ?? code} is in the catalog.`);
-    },
-    []
-  );
+  const finished = useCallback((codes: string[], name: string | null) => {
+    setRows((r) => (r ? r.filter((x) => !codes.includes(x.code)) : r));
+    setEditing(null);
+    setNote(
+      `${name ?? codes[0]} is in the catalog` +
+        (codes.length > 1 ? `, under all ${codes.length} codes.` : ".")
+    );
+  }, []);
 
   return (
     <section className="card flex flex-col gap-3 p-4">
@@ -119,16 +119,21 @@ export function ExpressDesk({ adminToken }: { adminToken: string }) {
               you&apos;ve processed the queue.
             </p>
           )}
-          {rows?.map((row) => (
-            <ExpressCard
-              key={row.code}
-              row={row}
-              adminToken={adminToken}
-              editing={editing === row.code}
-              onEdit={() => setEditing(editing === row.code ? null : row.code)}
-              onFinished={finished}
-            />
-          ))}
+          {/* Grouped: the pack sizes of one product are one job, not three. */}
+          {rows &&
+            groupCaptures(rows).map((group) => (
+              <ExpressCard
+                key={group[0].code}
+                row={group[0]}
+                siblings={group.slice(1)}
+                adminToken={adminToken}
+                editing={editing === group[0].code}
+                onEdit={() =>
+                  setEditing(editing === group[0].code ? null : group[0].code)
+                }
+                onFinished={finished}
+              />
+            ))}
         </>
       )}
     </section>
@@ -137,17 +142,25 @@ export function ExpressDesk({ adminToken }: { adminToken: string }) {
 
 function ExpressCard({
   row,
+  siblings,
   adminToken,
   editing,
   onEdit,
   onFinished,
 }: {
   row: Row;
+  /** The other pack sizes captured with it. */
+  siblings: Row[];
   adminToken: string;
   editing: boolean;
   onEdit: () => void;
-  onFinished: (code: string, name: string | null) => void;
+  onFinished: (codes: string[], name: string | null) => void;
 }) {
+  // Memoised so it doesn't hand `save` a new array on every keystroke.
+  const codes = useMemo(
+    () => [row.code, ...siblings.map((s) => s.code)],
+    [row.code, siblings]
+  );
   const [ingredients, setIngredients] = useState("");
   const [brands, setBrands] = useState(row.brands ?? "");
   const [productName, setProductName] = useState(row.productName ?? "");
@@ -170,7 +183,7 @@ function ExpressCard({
           "x-admin-token": adminToken,
         },
         body: JSON.stringify({
-          code: row.code,
+          codes,
           ingredientsText: ingredients,
           brands,
           productName,
@@ -189,7 +202,7 @@ function ExpressCard({
         setError(data.message ?? data.error ?? "Couldn't save.");
         return;
       }
-      onFinished(row.code, data.productName ?? null);
+      onFinished(codes, data.productName ?? null);
     } catch {
       setError("Couldn't save — check your connection.");
     } finally {
@@ -198,7 +211,7 @@ function ExpressCard({
   }, [
     saving,
     adminToken,
-    row.code,
+    codes,
     row.mode,
     ingredients,
     brands,
@@ -237,6 +250,16 @@ function ExpressCard({
             {row.netWeight ? ` · ${row.netWeight}` : ""}
             {row.container ? ` · ${row.container}` : ""}
           </span>
+          {/* The other pack sizes. Said plainly, because one composition is
+              about to be written under all of them. */}
+          {siblings.length > 0 && (
+            <span className="mt-0.5 block text-[11px] leading-snug text-muted">
+              + {siblings.length} more pack{siblings.length === 1 ? "" : "s"}:{" "}
+              <span className="font-mono">
+                {siblings.map((s) => s.code).join(", ")}
+              </span>
+            </span>
+          )}
           {row.readError && (
             <span className="mt-1 block text-[11px] leading-snug text-amber">
               {row.readError}
@@ -313,8 +336,8 @@ function ExpressCard({
             )}
           </button>
           <p className="text-[11px] leading-snug text-faint">
-            Saving writes a verified catalog row under {row.code} — photo
-            included — and takes it off this list.
+            Saving writes {codes.length === 1 ? "a verified catalog row" : `${codes.length} verified catalog rows`} — one per
+            barcode, photo included — and takes {codes.length === 1 ? "it" : "them"} off this list.
           </p>
         </div>
       )}

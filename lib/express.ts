@@ -8,6 +8,8 @@
 
 export interface ExpressRow {
   code: string;
+  /** Which capture this row came from. Pack sizes of one product share it. */
+  captureGroup?: string | null;
   mode: string | null;
   brands: string | null;
   productName: string | null;
@@ -71,6 +73,27 @@ export function missingForFinish(row: {
   const missing: string[] = [];
   if (!row.ingredientsText.trim()) missing.push("the ingredient list");
   return missing;
+}
+
+/**
+ * Rows gathered into the captures they came from.
+ *
+ * One recipe sold as a 3 kg bag and a 12 kg bag is two barcodes, two catalog
+ * rows and ONE composition. Listing them separately would mean typing the same
+ * ingredient list twice and inviting the two copies to differ — so the desk
+ * works on a group and writes a row per code.
+ *
+ * Order is preserved: the worklist arrives oldest first and stays that way.
+ */
+export function groupCaptures<T extends ExpressRow>(rows: T[]): T[][] {
+  const groups = new Map<string, T[]>();
+  for (const row of rows) {
+    const key = row.captureGroup ?? row.code;
+    const existing = groups.get(key);
+    if (existing) existing.push(row);
+    else groups.set(key, [row]);
+  }
+  return [...groups.values()];
 }
 
 /** A one-line description of a row, for a list somebody scans down. */

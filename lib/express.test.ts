@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   decodeDataUrl,
+  groupCaptures,
   expressTitle,
   missingForFinish,
   photoPathFor,
@@ -101,5 +102,51 @@ describe("expressTitle", () => {
   it("falls back to the barcode", () => {
     expect(expressTitle(row())).toBe("00040000000000");
     expect(expressTitle(row({ brands: "   " }))).toBe("00040000000000");
+  });
+});
+
+describe("groupCaptures", () => {
+  // The reason this exists: one recipe in three bag sizes is three barcodes,
+  // three catalog rows and ONE ingredient list. Typing it three times is how
+  // three copies of it end up differing.
+  it("gathers pack sizes of one product into one job", () => {
+    const groups = groupCaptures([
+      row({ code: "a", captureGroup: "a" }),
+      row({ code: "b", captureGroup: "a" }),
+      row({ code: "c", captureGroup: "a" }),
+    ]);
+    expect(groups).toHaveLength(1);
+    expect(groups[0].map((r) => r.code)).toEqual(["a", "b", "c"]);
+  });
+
+  it("keeps separate captures separate", () => {
+    const groups = groupCaptures([
+      row({ code: "a", captureGroup: "a" }),
+      row({ code: "b", captureGroup: "b" }),
+    ]);
+    expect(groups).toHaveLength(2);
+  });
+
+  // Rows written before the column existed have no group, and each is its own.
+  it("treats a row with no group as its own", () => {
+    const groups = groupCaptures([
+      row({ code: "a", captureGroup: null }),
+      row({ code: "b" }),
+    ]);
+    expect(groups.map((g) => g.map((r) => r.code))).toEqual([["a"], ["b"]]);
+  });
+
+  it("keeps the worklist's order, oldest capture first", () => {
+    const groups = groupCaptures([
+      row({ code: "old", captureGroup: "old" }),
+      row({ code: "new", captureGroup: "new" }),
+      row({ code: "old-2", captureGroup: "old" }),
+    ]);
+    expect(groups[0][0].code).toBe("old");
+    expect(groups[1][0].code).toBe("new");
+  });
+
+  it("returns nothing for an empty worklist", () => {
+    expect(groupCaptures([])).toEqual([]);
   });
 });

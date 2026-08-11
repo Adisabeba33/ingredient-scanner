@@ -48,7 +48,7 @@ export async function GET(req: Request) {
   const { data, error } = await admin
     .from("express_capture")
     .select(
-      "code, mode, brands, product_name, variant, net_weight, container, photo_path, read_error, captured_at"
+      "code, capture_group, mode, brands, product_name, variant, net_weight, container, photo_path, read_error, captured_at"
     )
     .order("captured_at", { ascending: true })
     .limit(200);
@@ -63,6 +63,8 @@ export async function GET(req: Request) {
   return Response.json({
     rows: rows.map((r) => ({
       code: r.code as string,
+      // Older rows predate the column; a row is its own group by default.
+      captureGroup: (r.capture_group as string | null) ?? (r.code as string),
       mode: (r.mode as string | null) ?? null,
       brands: (r.brands as string | null) ?? null,
       productName: (r.product_name as string | null) ?? null,
@@ -96,7 +98,8 @@ export async function POST(req: Request) {
   }
 
   let body: {
-    barcode?: unknown;
+    /** Every pack-size code for this product. One photo, several shelf codes. */
+    barcodes?: unknown;
     mode?: unknown;
     /** The copy the model reads. Not stored. */
     readPhoto?: unknown;
@@ -109,13 +112,23 @@ export async function POST(req: Request) {
     return Response.json({ error: "invalid_body" }, { status: 400 });
   }
 
-  const cleanCode = sanitizeBarcode(
-    typeof body.barcode === "string" ? body.barcode : ""
-  );
-  if (!cleanCode) {
+  // Every code, canonicalised and deduped — a recipe sold as a 3 kg bag and a
+  // 12 kg bag is one photograph and two shelf codes, and dropping the second
+  // would silently lose half the trip.
+  const rawCodes = Array.isArray(body.barcodes) ? body.barcodes : [];
+  const codes: string[] = [];
+  for (const raw of rawCodes) {
+    const clean = sanitizeBarcode(typeof raw === "string" ? raw : "");
+    if (!clean) continue;
+    const key = canonicalBarcode(clean);
+    if (!codes.includes(key)) codes.push(key);
+  }
+  if (codes.length === 0) {
     return Response.json({ ok: false, reason: "no-valid-barcode" }, { status: 422 });
   }
-  const code = canonicalBarcode(cleanCode);
+  // The first code names the group and the photograph. Arbitrary but stable,
+  // and it means a product with one code needs no special case.
+  const code = codes[0];
 
   const readPhoto = typeof body.readPhoto === "string" ? body.readPhoto : "";
   const storePhoto =
@@ -181,9 +194,14 @@ export async function POST(req: Request) {
     .filter(Boolean)
     .join(" ");
 
+  // One row per code, all carrying the same reading and the same photograph.
+  // That mirrors the catalog, which stores a row per barcode too — pack sizes
+  // are separate products on a shelf even when they are one recipe.
+  const now = new Date().toISOString();
   const { error } = await admin.from("express_capture").upsert(
-    {
-      code,
+    codes.map((c) => ({
+      code: c,
+      capture_group: code,
       mode,
       brands: identity.brands,
       product_name: identity.product_name,
@@ -192,8 +210,8 @@ export async function POST(req: Request) {
       container: identity.container,
       photo_path: photoPath,
       read_error: readError || null,
-      captured_at: new Date().toISOString(),
-    },
+      captured_at: now,
+    })),
     { onConflict: "code" }
   );
   if (error) {
@@ -206,6 +224,7 @@ export async function POST(req: Request) {
   return Response.json({
     ok: true,
     code,
+    codes,
     mode,
     ...identity,
     photoStored: photoPath !== null,
