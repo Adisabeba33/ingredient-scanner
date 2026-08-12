@@ -1,5 +1,5 @@
 /**
- * What is actually in the 27 seeded products.
+ * What is actually in the seeded products that have a composition.
  *
  * ── Why this is a separate file from known-products.ts ────────────────────
  *
@@ -34,6 +34,14 @@
  * records, so they go into the catalog as `community` — better than an open
  * database, and outranked by our own capture the moment somebody photographs
  * the real tin. See app/api/known-products/import/route.ts.
+ *
+ * ── Not every seeded product is in here ───────────────────────────────────
+ *
+ * data/known-products.ts holds more products than this file holds formulas, on
+ * purpose. A source that summarised its ingredient blocks ("mineral premix
+ * [potassium, zinc]") is not a list we can store as one, so those products are
+ * seeded as identity — a barcode to go and find — and wait. The import route
+ * steps over a product with no entry here.
  */
 
 import type { GuaranteedAnalysis } from "@/lib/guaranteed-analysis";
@@ -57,7 +65,13 @@ export interface KnownFormula {
 
 const VERIFIED = "2026-08-11";
 
-/** Every one of these is a canned cat food with no calorie statement supplied. */
+/**
+ * The six guarantees every one of these packs prints.
+ *
+ * Calories are optional because most sources omit the statement — `withCalories`
+ * adds it where the label deck supplied one. Null is the honest answer for the
+ * rest: a missing calorie line is not a zero.
+ */
 function ga(
   crudeProteinMin: number,
   crudeFatMin: number,
@@ -77,6 +91,28 @@ function ga(
     kcalPerServing: null,
     servingName: null,
   };
+}
+
+/**
+ * The calorie statement printed beside the panel.
+ *
+ * Worth having rather than deriving: energy cannot be calculated from the
+ * guarantees, because they are minima and maxima rather than the real figures,
+ * and the carbohydrate that carries the rest of the energy is never printed at
+ * all. A stated 863 kcal/kg is a fact; anything we computed would be a guess
+ * wearing a number's clothes.
+ *
+ * It also checks itself. A 3 oz can is 85 g, and 863 kcal/kg × 0.085 kg = 73.4
+ * against a printed 73 — the two halves of the statement agreeing is a sign the
+ * figures came off a real deck rather than out of somebody's head.
+ */
+function withCalories(
+  analysis: GuaranteedAnalysis,
+  kcalPerKg: number,
+  kcalPerServing: number,
+  servingName = "can"
+): GuaranteedAnalysis {
+  return { ...analysis, kcalPerKg, kcalPerServing, servingName };
 }
 
 /** The vitamin block, identical across most of the Purina range. */
@@ -178,6 +214,46 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   "050000580040": {
     ingredients: `Turkey Broth, Turkey, Wheat Gluten, Meat By-Products, Liver, Chicken, Corn Starch-Modified, Soy Flour, Glycine, Salt, Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
     analysis: ga(9.0, 2.0, 1.5, 82.0, 3.0, 0.05),
+    verifiedAt: VERIFIED,
+  },
+
+
+  // ── Fancy Feast · Grilled ──────────────────────────────────────────────
+  //
+  // Batch 003, from Purina's own label decks — the first source here to carry
+  // the calorie statement, and the first whose ingredient blocks arrived
+  // written out rather than summarised as "mineral premix [potassium, zinc]".
+  //
+  // It also corrected itself: the earlier normalised pass gave Grilled Beef and
+  // Grilled Turkey 2.0% minimum fat where the deck says 1.5%. That correction
+  // cost nothing to apply because those panels were never stored — the products
+  // were seeded as identity only, precisely because the source was a paraphrase.
+  //
+  // Case follows this file rather than the source's mixed capitals: it is
+  // typography, not data, and `composition_key` folds it away in any case. The
+  // words and their ORDER are what was copied.
+  "050000040803": {
+    ingredients: `Chicken Broth, Chicken, Wheat Gluten, Meat By-Products, Liver, Fish, Corn Starch-Modified, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 80.0, 2.7, 0.05), 863, 73),
+    verifiedAt: VERIFIED,
+  },
+  "050000040704": {
+    ingredients: `Beef Broth, Beef, Wheat Gluten, Meat By-Products, Liver, Fish, Corn Starch-Modified, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 1.5, 1.5, 80.0, 2.7, 0.05), 833, 70),
+    verifiedAt: VERIFIED,
+  },
+  "050000040605": {
+    ingredients: `Turkey Broth, Turkey, Wheat Gluten, Meat By-Products, Liver, Fish, Corn Starch-Modified, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 1.5, 1.5, 80.0, 2.7, 0.05), 833, 70),
+    verifiedAt: VERIFIED,
+  },
+  // Note the order here differs from its three siblings: the minerals come
+  // BEFORE the natural flavor, and the block carries magnesium proteinate. Both
+  // were in the source and both are kept — a list tidied to match its
+  // neighbours is a list that no longer describes its own tin.
+  "050000503896": {
+    ingredients: `Fish Broth, Salmon, Wheat Gluten, Chicken, Meat By-Products, Liver, Corn Starch-Modified, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 1.5, 1.5, 80.0, 2.7, 0.05), 850, 72),
     verifiedAt: VERIFIED,
   },
 
