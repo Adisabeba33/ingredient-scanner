@@ -21,10 +21,18 @@ import { verdictLabel, type ImportVerdict } from "@/lib/known-import";
  * over time, and the fix is a person looking at it — not a checkbox.
  */
 
+interface PreviewProduct {
+  code: string;
+  name: string;
+  verdict: ImportVerdict;
+  /** Whether the row we are leaving alone already carries a panel. */
+  heldPanel?: boolean | null;
+}
+
 interface Preview {
   total: number;
   counts: Record<ImportVerdict, number>;
-  products?: { code: string; name: string; verdict: ImportVerdict }[];
+  products?: PreviewProduct[];
   error?: string;
   message?: string;
 }
@@ -148,6 +156,9 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   }, [clearing, adminToken]);
 
   const toWrite = preview?.counts?.write ?? 0;
+  const ours = (preview?.products ?? []).filter(
+    (p) => p.verdict === "ours-is-better"
+  );
 
   return (
     <section className="card flex flex-col gap-3 p-4">
@@ -206,6 +217,35 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               barcode — the current formula was written.
             </p>
           )}
+        </div>
+      )}
+
+      {/* Our own captures, named. The count alone leaves you wondering WHICH
+          two the import stepped around — and there is something to do about
+          them: a row we photographed before the scanner read guaranteed
+          analysis keeps a row without one, so its report is thinner than the
+          rest of the batch and the tin is worth re-shooting. */}
+      {ours.length > 0 && (
+        <div className="rounded-input bg-surfaceSoft px-3 py-2.5">
+          <p className="text-[12px] font-semibold text-ink">
+            {ours.length} already photographed — left alone
+          </p>
+          <p className="mt-0.5 text-[11px] leading-snug text-muted">
+            Your own capture outranks a manufacturer record, so these keep what
+            you shot. They do NOT get the seeded formula.
+          </p>
+          <ul className="mt-1.5 flex flex-col gap-1">
+            {ours.map((p) => (
+              <li key={p.code} className="text-[11px] leading-snug text-muted">
+                <span className="font-mono">{p.code}</span> · {p.name}
+                {p.heldPanel === false && (
+                  <span className="ml-1 rounded-full bg-amber-soft px-1.5 py-0.5 text-[10px] font-semibold text-ink">
+                    no analysis panel — worth re-shooting
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

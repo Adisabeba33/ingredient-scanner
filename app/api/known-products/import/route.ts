@@ -3,7 +3,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { compositionKey } from "@/lib/composition-key";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
-import { hasAnyFigure } from "@/lib/guaranteed-analysis";
+import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import { importVerdict, type ExistingRow, type ImportVerdict } from "@/lib/known-import";
 import { KNOWN_PRODUCTS } from "@/data/known-products";
@@ -103,26 +103,40 @@ async function decide(
   const list = candidates();
   const codes = list.map((c) => c.code);
 
+  // `guaranteed_analysis` comes along for a reason worth stating: when OUR OWN
+  // capture wins, the seeded panel is not written — so a product photographed
+  // before the scanner read that panel keeps a row without one, and its report
+  // is poorer than the 25 beside it. That is invisible unless somebody says it.
   const { data, error } = await admin
     .from("barcode_cache")
-    .select("code, source, composition_key, ingredients_text")
+    .select("code, source, composition_key, ingredients_text, guaranteed_analysis")
     .in("code", codes);
   if (error) {
-    return { error: error.message, decided: [] as (Candidate & { verdict: ImportVerdict })[] };
+    return { error: error.message, decided: [] as Decided[] };
   }
-  const existing = new Map<string, ExistingRow>();
-  for (const row of (data ?? []) as unknown as (ExistingRow & { code: string })[]) {
+  const existing = new Map<string, ExistingRow & { guaranteed_analysis?: unknown }>();
+  for (const row of (data ?? []) as unknown as (ExistingRow & {
+    code: string;
+    guaranteed_analysis?: unknown;
+  })[]) {
     existing.set(row.code, row);
   }
 
   return {
     error: null,
-    decided: list.map((c) => ({
-      ...c,
-      verdict: importVerdict(existing.get(c.code), c.compositionKey, force),
-    })),
+    decided: list.map((c) => {
+      const held = existing.get(c.code);
+      return {
+        ...c,
+        verdict: importVerdict(held, c.compositionKey, force),
+        // Only meaningful for a row we are leaving alone; null elsewhere.
+        heldPanel: held ? hasAnyFigure(readGuaranteedAnalysis(held.guaranteed_analysis)) : null,
+      };
+    }),
   };
 }
+
+type Decided = Candidate & { verdict: ImportVerdict; heldPanel: boolean | null };
 
 function summarise(decided: { verdict: ImportVerdict }[]) {
   const counts: Record<ImportVerdict, number> = {
@@ -155,6 +169,9 @@ export async function GET(req: Request) {
       code: d.printed,
       name: `${d.brands} ${d.productName}`,
       verdict: d.verdict,
+      // True when the row we are leaving alone already carries a guaranteed
+      // analysis, false when it does not — the ones worth re-capturing.
+      heldPanel: d.heldPanel,
     })),
   });
 }
