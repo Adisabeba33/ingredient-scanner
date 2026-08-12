@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Check, Loader2, Download, AlertTriangle } from "lucide-react";
+import { Check, Loader2, Download, AlertTriangle, RefreshCw } from "lucide-react";
 import { verdictLabel, type ImportVerdict } from "@/lib/known-import";
 
 /**
@@ -46,6 +46,8 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [clearing, setClearing] = useState(false);
+  const [cleared, setCleared] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -98,6 +100,52 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
       setRunning(false);
     }
   }, [running, adminToken, load]);
+
+  /**
+   * Throw away the stored reports for these products so they rebuild.
+   *
+   * A report is generated once from the stored ingredients and then served to
+   * everyone — so it keeps its original wording after the catalog learns
+   * something it was written without. Clearing loses nothing: the ingredients
+   * stay, and the next reader waits a few seconds for one written against what
+   * we hold now. Nobody opens it, nothing is spent.
+   */
+  const clearReports = useCallback(async () => {
+    if (clearing) return;
+    setClearing(true);
+    setError(null);
+    setCleared(null);
+    try {
+      const res = await fetch("/api/known-products/reports", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({}),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        products?: number;
+        cleared?: number;
+        message?: string;
+        error?: string;
+      };
+      if (!res.ok || !data.ok) {
+        setError(data.message ?? data.error ?? "Couldn't clear the reports.");
+        return;
+      }
+      setCleared(
+        data.cleared === 0
+          ? "None were stored — nothing to rebuild."
+          : `${data.cleared} report${data.cleared === 1 ? "" : "s"} cleared. They rebuild when somebody opens the product.`
+      );
+    } catch {
+      setError("Couldn't clear the reports — check your connection.");
+    } finally {
+      setClearing(false);
+    }
+  }, [clearing, adminToken]);
 
   const toWrite = preview?.counts?.write ?? 0;
 
@@ -196,6 +244,21 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         )}
         {toWrite === 0 ? "Nothing to write" : `Write ${toWrite} to the catalog`}
       </button>
+
+      {/* Separate from the write, because it is a separate decision: the
+          catalog can be right while the report served for it was written
+          before the catalog knew what it knows now. */}
+      <button onClick={clearReports} disabled={clearing} className="btn-ghost">
+        {clearing ? (
+          <Loader2 className="animate-spin" size={15} aria-hidden="true" />
+        ) : (
+          <RefreshCw size={15} strokeWidth={1.8} aria-hidden="true" />
+        )}
+        Rebuild their reports
+      </button>
+      {cleared && (
+        <p className="-mt-1 text-[11.5px] leading-snug text-muted">{cleared}</p>
+      )}
     </section>
   );
 }
