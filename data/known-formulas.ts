@@ -257,6 +257,105 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED,
   },
 
+
+  // ── The nine that came with the premix collapsed ───────────────────────
+  //
+  // These say "Mineral Premix" and "Vitamin Premix" where the tin spells the
+  // blocks out. Kept as given rather than reconstructed: the elements could be
+  // recovered from an earlier pass and the salt forms from Purina's other decks,
+  // but assembling a list from two sources and storing it as one label's text is
+  // writing a label rather than copying one.
+  //
+  // Taken anyway, and the reason is worth recording because it reverses an
+  // earlier call. Measured, the collapse costs Potassium Chloride and Riboflavin
+  // from the additives and 23 vitamin and mineral names from the foods — all of
+  // it PREMIX. Everything the report actually judges a food on is here verbatim
+  // and in order: water or broth, the meat, wheat gluten, meat by-products, soy
+  // flour, modified corn starch, the flavours. Counting tokens made the loss look
+  // like half the label; looking at which tokens shows it is the tail.
+  //
+  // What it does cost, honestly: `composition_key` is built from the words, so a
+  // later photograph of the real tin — which WILL carry the expanded blocks —
+  // won't match its own seeded row, and the duplicate detector stays quiet. That
+  // fails safe (it declines to merge rather than merging wrongly) and is the
+  // price of having these products readable at all today.
+
+  // Fancy Feast · Grilled, completing the range.
+  "050000572168": {
+    ingredients:
+      "Fish Broth, Ocean Fish, Wheat Gluten, Meat By-Products, Liver, Chicken, Modified Corn Starch, Soy Flour, Corn Oil, Shrimp, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Mineral Premix, Choline Chloride, Taurine, Vitamin Premix.",
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 80.0, 2.7, 0.05), 843, 71),
+    verifiedAt: VERIFIED,
+  },
+  "050000102167": {
+    ingredients:
+      "Chicken Broth, Chicken, Liver, Wheat Gluten, Meat By-Products, Beef, Modified Corn Starch, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Mineral Premix, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 80.0, 2.5, 0.05), 835, 71),
+    verifiedAt: VERIFIED,
+  },
+  "050000102068": {
+    ingredients:
+      "Fish Broth, Salmon, Wheat Gluten, Liver, Meat By-Products, Chicken, Modified Corn Starch, Shrimp, Soy Flour, Glycine, Tricalcium Phosphate, Salt, Corn Oil, Natural Flavor, Mineral Premix, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 80.0, 3.0, 0.05), 847, 72),
+    verifiedAt: VERIFIED,
+  },
+  // "Liver & Chicken Broth" as one ingredient is unusual — a broth is normally
+  // named for one animal. Flagged when the identity arrived and kept as the
+  // source has it twice now, so it stands rather than being quietly rewritten.
+  "050000100866": {
+    ingredients:
+      "Liver & Chicken Broth, Liver, Chicken, Wheat Gluten, Meat By-Products, Modified Corn Starch, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Mineral Premix, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 80.0, 2.7, 0.05), 868, 73),
+    verifiedAt: VERIFIED,
+  },
+
+  // ── Friskies · Prime Filets ────────────────────────────────────────────
+  //
+  // Water first on all four, where the Fancy Feast ranges lead with a broth.
+  // That is a real difference between the two shelves and the report reads it.
+  "050000170180": {
+    ingredients:
+      "Water, Chicken, Wheat Gluten, Liver, Meat By-Products, Soy Flour, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Mineral Premix, Taurine, Salt, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 82.0, 2.8, 0.05), 810, 126),
+    verifiedAt: VERIFIED,
+  },
+  "050000225224": {
+    ingredients:
+      "Water, Turkey, Wheat Gluten, Liver, Meat By-Products, Chicken, Soy Flour, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Mineral Premix, Salt, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 82.0, 2.8, 0.05), 794, 123),
+    verifiedAt: VERIFIED,
+  },
+  "050000100446": {
+    ingredients:
+      "Water, Chicken, Liver, Wheat Gluten, Meat By-Products, Soy Flour, Tuna, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Mineral Premix, Salt, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 82.0, 2.8, 0.05), 803, 125),
+    verifiedAt: VERIFIED,
+    conflict:
+      "Deck H611023 is the current formula. Older retailer records for this barcode carry an earlier one.",
+  },
+  // The clearest reformulation in the batch, and the kind worth keeping a note
+  // of: the previous deck carried Added Color and Red 3. This one carries
+  // neither. A shopper reading an older listing is reading about a product that
+  // is no longer in the tin.
+  "050000170166": {
+    ingredients:
+      "Water, Wheat Gluten, Chicken, Liver, Meat By-Products, Ocean Whitefish, Soy Flour, Tuna, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Mineral Premix, Taurine, Choline Chloride, Salt, Vitamin Premix.",
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 82.0, 2.8, 0.05), 796, 124),
+    verifiedAt: VERIFIED,
+    conflict:
+      "Deck H611423 is current. The previous formula (G611419) contained Added Color and Red 3 and ran at 766 kcal/kg; this one has neither.",
+  },
+
+  // ── Friskies · Tasty Treasures ─────────────────────────────────────────
+  "050000577965": {
+    ingredients:
+      "Water, Chicken, Liver, Wheat Gluten, Meat By-Products, Soy Flour, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Mineral Premix, Salt, Taurine, Choline Chloride, Vitamin Premix.",
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 80.0, 3.0, 0.05), 863, 134),
+    verifiedAt: VERIFIED,
+    conflict:
+      "Deck B627723 is current. The previous formula (A627719) contained Added Color and Red 3 at 137 kcal/can. This barcode is the chicken-and-liver variety, NOT Chicken & Cheese.",
+  },
+
   // ── Friskies · Shreds ──────────────────────────────────────────────────
   "050000572014": {
     ingredients: `Water Sufficient for Processing, Poultry, Meat By-Products, Salmon, Wheat Gluten, Corn Starch-Modified, Soy Flour, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Salt, Choline Chloride, Taurine, ${V}.`,

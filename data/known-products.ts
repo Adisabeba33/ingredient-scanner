@@ -571,7 +571,10 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   {
     brand: "Friskies",
     line: "Tasty Treasures",
-    variant: "With Chicken in Gravy",
+    // The full printed name, with the liver in it. Two things ride on that:
+    // Prime Filets also sells a "With Chicken in Gravy", and the source warns
+    // this barcode is NOT the Chicken & Cheese variety it is sometimes listed as.
+    variant: "With Chicken in Gravy (With Liver)",
     species: "cat",
     texture: "shredded",
     presentation: "in_gravy",
