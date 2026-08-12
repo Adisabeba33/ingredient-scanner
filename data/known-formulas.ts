@@ -65,6 +65,9 @@ export interface KnownFormula {
 
 const VERIFIED = "2026-08-11";
 
+/** Batch 004 — read off Purina label decks rather than retailer listings. */
+const VERIFIED_004 = "2026-08-12";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -78,7 +81,16 @@ function ga(
   crudeFiberMax: number,
   moistureMax: number,
   ashMax: number,
-  taurineMin: number
+  /**
+   * Null where the deck states no taurine guarantee.
+   *
+   * Not the same as zero, and not the same as "no taurine in the food". Fancy
+   * Feast Delights With Cheddar carries taurine in its ingredient list and
+   * guarantees nothing about how much — cat food is required to contain it
+   * whether or not the panel states a figure. Writing 0.05 here because its
+   * siblings print 0.05 would be putting a number on a label that has none.
+   */
+  taurineMin: number | null
 ): GuaranteedAnalysis {
   return {
     crudeProteinMin,
@@ -129,6 +141,10 @@ const V_E_FIRST =
 
 const V_E_FIRST_A_MID =
   "Vitamins [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Vitamin B-12 Supplement, Biotin (Vitamin B-7), Folic Acid (Vitamin B-9), Vitamin D-3 Supplement]";
+
+/** Savory Centers leads with niacin, and puts A near the end. */
+const V_NIACIN_FIRST =
+  "Vitamins [Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Vitamin E Supplement, Calcium Pantothenate (Vitamin B-5), Riboflavin Supplement (Vitamin B-2), Pyridoxine Hydrochloride (Vitamin B-6), Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid (Vitamin B-9), Vitamin A Supplement, Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -439,5 +455,68 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED,
     conflict:
       "Older copies of this list include 'Added Color'. The current record carries no artificial colours.",
+  },
+
+  // ── Fancy Feast · Delights With Cheddar ────────────────────────────────
+  //
+  // The first four packs in this file whose deck states NO taurine guarantee.
+  // Taurine is in the ingredient list of all four and the panel says nothing
+  // about how much; `ga` takes null for exactly this, and null reads as "not
+  // stated" everywhere downstream rather than as zero.
+  "050000579310": {
+    ingredients: `Poultry Broth, Chicken, Wheat Gluten, Liver, Meat By-Products, Vegetable Starch-Modified, Cheese (Source Of Cheddar Cheese), Soy Flour, Salt, Glycine, Sodium Caseinate, Vegetable Oil, Natural Flavor, Tricalcium Phosphate, Corn Starch, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Dried Whey, Taurine, Choline Chloride, Non-Fat Milk, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 80.0, 3.0, null), 860, 73),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000579334": {
+    ingredients: `Poultry Broth, Turkey, Wheat Gluten, Liver, Meat By-Products, Vegetable Starch-Modified, Cheese (Source Of Cheddar Cheese), Soy Flour, Salt, Glycine, Sodium Caseinate, Vegetable Oil, Natural Flavor, Tricalcium Phosphate, Corn Starch, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Dried Whey, Taurine, Choline Chloride, Non-Fat Milk, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 80.0, 3.0, null), 857, 72),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000579358": {
+    ingredients: `Fish Broth, Whitefish, Wheat Gluten, Liver, Meat By-Products, Vegetable Starch-Modified, Chicken, Cheese (Source Of Cheddar Cheese), Soy Flour, Salt, Glycine, Sodium Caseinate, Vegetable Oil, Natural Flavor, Tricalcium Phosphate, Corn Starch, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Dried Whey, Taurine, Choline Chloride, Non-Fat Milk, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 80.0, 3.0, null), 842, 71),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000579280": {
+    ingredients: `Fish Broth, Tuna, Wheat Gluten, Liver, Meat By-Products, Chicken, Vegetable Starch-Modified, Cheese (Source Of Cheddar Cheese), Soy Flour, Glycine, Sodium Caseinate, Salt, Vegetable Oil, Tricalcium Phosphate, Natural Flavor, Corn Starch, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Dried Whey, Taurine, Choline Chloride, Non-Fat Milk, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 80.0, 3.0, null), 856, 72),
+    verifiedAt: VERIFIED_004,
+  },
+
+  // ── Fancy Feast · Savory Centers ───────────────────────────────────────
+  //
+  // Methionine after the vitamin block on all four, which is where the deck
+  // puts it. Iron Sulfate rather than Ferrous Sulfate, and Calcium Iodate
+  // rather than Potassium Iodide: the same elements under the names this range
+  // prints, copied rather than harmonised with its siblings.
+  "050000172733": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Products, Fish, Glycine, Locust Bean Gum, Guar Gum, Sodium Tripolyphosphate, Minerals [Potassium Chloride, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Magnesium Sulfate], Natural Flavors, Pork Bone Meal, Taurine, Choline Chloride, ${V_NIACIN_FIRST}, Methionine.`,
+    analysis: withCalories(ga(9.0, 5.5, 1.5, 82.0, 3.0, 0.05), 1039, 88),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000172757": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Products, Salmon, Glycine, Locust Bean Gum, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Magnesium Sulfate], Sodium Tripolyphosphate, Natural Flavors, Taurine, Choline Chloride, Pork Bone Meal, ${V_NIACIN_FIRST}, Methionine.`,
+    analysis: withCalories(ga(9.0, 5.5, 1.5, 82.0, 3.0, 0.05), 1060, 90),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000172771": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Products, Tuna, Glycine, Locust Bean Gum, Guar Gum, Sodium Tripolyphosphate, Minerals [Potassium Chloride, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Magnesium Sulfate], Natural Flavors, Taurine, Choline Chloride, Pork Bone Meal, ${V_NIACIN_FIRST}, Methionine.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.5, 82.0, 3.0, 0.05), 1007, 85),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000172801": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Products, Fish, Glycine, Beef, Locust Bean Gum, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Magnesium Sulfate], Sodium Tripolyphosphate, Natural Flavors, Taurine, Choline Chloride, Pork Bone Meal, ${V_NIACIN_FIRST}, Methionine.`,
+    analysis: withCalories(ga(9.0, 5.5, 1.5, 82.0, 3.0, 0.05), 1067, 90),
+    verifiedAt: VERIFIED_004,
+  },
+
+  // ── Friskies · Meaty Bits ──────────────────────────────────────────────
+  "050000423149": {
+    ingredients: `Water, Meat By-Products, Beef, Wheat Gluten, Chicken, Fish, Soy Flour, Modified Corn Starch, Natural And Artificial Flavors, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 961, 149),
+    verifiedAt: VERIFIED_004,
+    conflict:
+      "Target still lists an older formula for this barcode: 11% minimum protein, turkey among the meats, and Added Color. The current deck has none of those. One barcode, two formulas.",
   },
 };

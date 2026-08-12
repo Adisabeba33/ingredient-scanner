@@ -82,6 +82,8 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Broths",
       "Appetizers",
       "Creamy Delights",
+      "Delights With Cheddar",
+      "Savory Centers",
       "Royale",
     ],
   },

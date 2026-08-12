@@ -69,6 +69,16 @@ export type Presentation =
   | "in_broth"
   | "in_jelly"
   | "in_water"
+  /**
+   * A pâté with a pocket of gravy inside it, not a solid suspended in one.
+   *
+   * Fancy Feast Savory Centers is a whole range built on this and it is neither
+   * of the two answers that were available: "in gravy" describes a tin you pour
+   * off, and "plain" says there is no sauce at all. It still implies a
+   * thickener — the centre is a gravy and carries locust bean and guar gum —
+   * which is the question the field mostly exists to answer.
+   */
+  | "gravy_center"
   | "plain"
   | "unknown";
 
@@ -81,7 +91,7 @@ const TEXTURES = new Set<string>([
 
 const PRESENTATIONS = new Set<string>([
   "in_gravy", "extra_gravy", "in_sauce", "in_broth", "in_jelly", "in_water",
-  "plain", "unknown",
+  "gravy_center", "plain", "unknown",
 ]);
 
 export function isTexture(value: unknown): value is Texture {
@@ -137,6 +147,10 @@ const TEXTURE_WORDS: [Texture, string[]][] = [
  * makes the absence of a thickener unremarkable.
  */
 const PRESENTATION_WORDS: [Presentation, string[]][] = [
+  // Ahead of "in gravy" by word count rather than by position — `match` sorts
+  // on specificity — so "Paté with Chicken and a Gourmet Gravy Center" is not
+  // filed as an ordinary gravy on the strength of its last word.
+  ["gravy_center", ["gourmet gravy center", "gravy center", "gravy centre", "savory centers", "savory centres"]],
   ["extra_gravy", ["extra gravy", "extra-gravy"]],
   ["in_gravy", ["in gravy", "in a gravy", "gravy", "with gravy", "in savory gravy"]],
   ["in_sauce", ["in sauce", "in a sauce", "in savory sauce", "sauce", "with sauce"]],
@@ -232,6 +246,7 @@ export function impliesThickener(presentation: Presentation): boolean {
     presentation === "in_gravy" ||
     presentation === "extra_gravy" ||
     presentation === "in_sauce" ||
-    presentation === "in_jelly"
+    presentation === "in_jelly" ||
+    presentation === "gravy_center"
   );
 }

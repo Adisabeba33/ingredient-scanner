@@ -582,4 +582,117 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["chicken", "liver"],
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000577965", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Delights With Cheddar ────────────────────────────────
+  //
+  // Cheddar is named on the front and is in the deck, so it is listed among
+  // the proteins: it is what the tin sells itself on beside the meat, and a
+  // shopper looking for "the cheese ones" is looking for exactly this.
+  {
+    brand: "Fancy Feast",
+    line: "Delights With Cheddar",
+    variant: "Grilled Chicken & Cheddar Cheese Feast in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "cheddar cheese"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000579310", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Delights With Cheddar",
+    variant: "Grilled Turkey & Cheddar Cheese Feast in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey", "cheddar cheese"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000579334", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Delights With Cheddar",
+    variant: "Grilled Whitefish & Cheddar Cheese Feast in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["whitefish", "cheddar cheese"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000579358", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Delights With Cheddar",
+    variant: "Grilled Tuna & Cheddar Cheese Feast in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna", "cheddar cheese"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000579280", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Savory Centers ───────────────────────────────────────
+  //
+  // A pâté with a pocket of gravy in the middle of it, which is why these
+  // carry `gravy_center` rather than `in_gravy`: nothing is suspended in
+  // anything, and a tin you would pour off is a different object on a shelf.
+  {
+    brand: "Fancy Feast",
+    line: "Savory Centers",
+    variant: "Pâté With Chicken and a Gourmet Gravy Center",
+    species: "cat",
+    texture: "pate",
+    presentation: "gravy_center",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172733", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Centers",
+    variant: "Pâté With Salmon and a Gourmet Gravy Center",
+    species: "cat",
+    texture: "pate",
+    presentation: "gravy_center",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172757", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Centers",
+    variant: "Pâté With Tuna and a Gourmet Gravy Center",
+    species: "cat",
+    texture: "pate",
+    presentation: "gravy_center",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172771", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Centers",
+    variant: "Pâté With Beef and a Gourmet Gravy Center",
+    species: "cat",
+    texture: "pate",
+    presentation: "gravy_center",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172801", scope: UNIT }],
+  },
+
+  // ── Friskies · Meaty Bits ──────────────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Meaty Bits",
+    variant: "With Beef in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000423149", scope: UNIT }],
+  },
 ];

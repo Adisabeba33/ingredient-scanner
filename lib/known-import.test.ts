@@ -165,11 +165,17 @@ describe("data/known-formulas.ts", () => {
         upc,
         ok: true,
       });
-      // Taurine is a fraction of a percent on every cat food that adds it.
-      expect({ upc, ok: (a.taurineMin ?? 0) > 0 && (a.taurineMin ?? 0) < 1 }).toEqual({
-        upc,
-        ok: true,
-      });
+      // Taurine is a fraction of a percent on every cat food that STATES it —
+      // and plenty of decks state nothing. Fancy Feast Delights With Cheddar
+      // carries taurine in its ingredient list and guarantees no figure for it,
+      // which is null here rather than zero. The check is on the figure when
+      // there is one, not on there being one.
+      if (a.taurineMin !== null) {
+        expect({ upc, ok: a.taurineMin > 0 && a.taurineMin < 1 }).toEqual({
+          upc,
+          ok: true,
+        });
+      }
     }
   });
 
@@ -192,6 +198,27 @@ describe("data/known-formulas.ts", () => {
     const whitefish = KNOWN_FORMULAS["050000429646"];
     expect(whitefish.analysis.taurineMin).toBe(0.05);
     expect(/\bTaurine\b/.test(whitefish.ingredients)).toBe(false);
+  });
+
+  // The other half of the taurine rule, stated as data rather than as a
+  // convention: a null is a deck that says nothing, and it must not drift into
+  // a 0.05 copied off a sibling because the sibling looked similar.
+  it("leaves taurine unstated where the deck states none", () => {
+    const cheddar = [
+      "050000579310",
+      "050000579334",
+      "050000579358",
+      "050000579280",
+    ];
+    for (const upc of cheddar) {
+      expect({ upc, taurine: KNOWN_FORMULAS[upc].analysis.taurineMin }).toEqual({
+        upc,
+        taurine: null,
+      });
+      // And it IS in the food — the list says so. The panel simply doesn't
+      // quantify it, which is the distinction null exists to hold.
+      expect(/\bTaurine\b/.test(KNOWN_FORMULAS[upc].ingredients)).toBe(true);
+    }
   });
 
   it("keeps the note where the source flagged an older formula", () => {
