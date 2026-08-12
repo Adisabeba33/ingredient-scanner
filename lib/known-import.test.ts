@@ -99,9 +99,17 @@ describe("importVerdict", () => {
 describe("data/known-formulas.ts", () => {
   const upcs = KNOWN_PRODUCTS.flatMap((p) => p.packages.map((pkg) => pkg.upc));
 
-  it("has a formula for every seeded product", () => {
-    const missing = upcs.filter((u) => !KNOWN_FORMULAS[u]);
-    expect(missing).toEqual([]);
+  // A formula is OPTIONAL. Batch 002 arrived with its ingredient lists
+  // paraphrased rather than copied — "mineral premix [potassium, zinc, iron]"
+  // where the tin prints "Minerals [Potassium Chloride, Zinc Sulfate, Ferrous
+  // Sulfate]" — and measured on one list written both ways that costs the
+  // report half of what it can read. So those products are seeded as identity
+  // only: they show on the coverage page with a barcode to look for, and the
+  // import steps over them until verbatim text arrives.
+  it("seeds identity with or without a formula", () => {
+    const withFormula = upcs.filter((u) => KNOWN_FORMULAS[u]);
+    expect(withFormula.length).toBeGreaterThan(0);
+    expect(withFormula.length).toBeLessThanOrEqual(upcs.length);
   });
 
   it("has no formula for a barcode nothing sells", () => {

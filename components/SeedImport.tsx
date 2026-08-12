@@ -30,7 +30,10 @@ interface PreviewProduct {
 }
 
 interface Preview {
+  /** Products the import can act on — the ones that have a formula. */
   total: number;
+  /** Every seeded product, formula or not. */
+  seeded?: number;
   counts: Record<ImportVerdict, number>;
   products?: PreviewProduct[];
   error?: string;
@@ -168,6 +171,17 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
           Fancy Feast and Friskies compositions from manufacturer records. Filed
           as community readings — a photograph of the real pack still wins.
         </p>
+        {/* Not every seeded product has a composition. The ones without appear
+            on the coverage page with a barcode to look for, and stay out of the
+            catalog until a real ingredient list arrives — an entry there
+            without one would read to the consumer app as a recent miss. */}
+        {preview?.seeded && preview.seeded > preview.total ? (
+          <p className="mt-1 text-[11px] leading-snug text-faint">
+            {preview.total} of {preview.seeded} seeded products have a
+            composition. The other {preview.seeded - preview.total} are on the
+            coverage page as barcodes to find.
+          </p>
+        ) : null}
       </div>
 
       {loading && !preview ? (

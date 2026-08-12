@@ -399,4 +399,184 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["beef"],
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000293315", scope: UNIT }],
   },
+
+  // ══ Batch 002 — identity only, no formulas ═══════════════════════════════
+  //
+  // These arrived with ingredient lists that had been NORMALISED rather than
+  // copied: "mineral premix [potassium, zinc, iron…]" where the tin prints
+  // "Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate…]", and
+  // "vitamin premix [B1, E, B3…]" for the spelled-out vitamin block.
+  //
+  // Measured on one list written both ways, the paraphrase costs the report
+  // half of what it can read: 4 recognised additives fall to 2 (Potassium
+  // Chloride and Riboflavin disappear), 37 recognised foods fall to 15, and
+  // unreadable tokens go from 1 to 7. It also breaks duplicate detection,
+  // because `composition_key` is built from the words — a later photograph of
+  // the real tin would not match its own seeded row.
+  //
+  // Expanding the premixes back would be writing lines onto somebody else's
+  // label. So the IDENTITY is seeded — every field below is reliable, and it
+  // extends the "go and find this" list from 27 products to 40, each with the
+  // barcode to look for — and the compositions wait for verbatim text. The
+  // import route skips a product with no formula by design.
+
+  // ── Fancy Feast · Grilled ──────────────────────────────────────────────
+  //
+  // "Grilled" is the range, so the texture field carries what the tin holds —
+  // pieces — rather than repeating the cooking method already in the line name.
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Chicken Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000040803", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Beef Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000040704", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Turkey Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000040605", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Salmon Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503896", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Seafood Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    // "Ocean fish" as the source wrote it, not folded into "whitefish": they
+    // are different words on different tins and guessing they mean one thing
+    // is how two products become one.
+    proteins: ["ocean fish", "shrimp"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000572168", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Chicken & Beef Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000102167", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Salmon & Shrimp Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon", "shrimp"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000102068", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Liver & Chicken Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["liver", "chicken"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000100866", scope: UNIT }],
+  },
+
+  // ── Friskies · Prime Filets ────────────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "With Chicken in Gravy",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000170180", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "Turkey Dinner in Gravy",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000225224", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "Chicken & Tuna Dinner in Gravy",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000100446", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "With Ocean Whitefish & Tuna in Sauce",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["whitefish", "tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000170166", scope: UNIT }],
+  },
+
+  // ── Friskies · Tasty Treasures ─────────────────────────────────────────
+  //
+  // The source notes retailers also shelve this one as "Tasty Treasures Prime
+  // Filets". Filed under the range the pack prints; if the shelf turns out to
+  // disagree, a scan will say so and the coverage page will show it under
+  // whichever range it really carries.
+  {
+    brand: "Friskies",
+    line: "Tasty Treasures",
+    variant: "With Chicken in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "liver"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000577965", scope: UNIT }],
+  },
 ];

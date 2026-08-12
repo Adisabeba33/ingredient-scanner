@@ -164,6 +164,10 @@ export async function GET(req: Request) {
   }
   return Response.json({
     total: decided.length,
+    // Seeded products WITHOUT a formula are not in `decided` at all — the
+    // import has nothing to write for them. Said out loud so "27 of 40" reads
+    // as a known state rather than as thirteen products having gone missing.
+    seeded: KNOWN_PRODUCTS.reduce((n, p) => n + p.packages.length, 0),
     counts: summarise(decided),
     products: decided.map((d) => ({
       code: d.printed,
