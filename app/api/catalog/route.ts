@@ -35,6 +35,31 @@ const STATS_SCAN_CAP = 2000;
 /** report_cache keys per request, so `in()` doesn't build a huge query. */
 const KEY_CHUNK = 200;
 
+/**
+ * The rows this browser is responsible for.
+ *
+ * `verified` is our own capture — somebody photographed the pack. `community`
+ * is the other half of our work: a reading a user sent through the consumer
+ * app, a row corrected by hand here, and the seeded formulas written from
+ * manufacturer records. Both are OURS and both are ours to fix.
+ *
+ * It used to list `verified` alone, and that made 27 real products invisible
+ * the day they were imported — written, servable, answering scans, and absent
+ * from the one screen whose job is "what is actually stored right now". The
+ * open-database rows still stay out of the LISTING, because they are not our
+ * work; an exact barcode still finds them (see `lookupAnySource`).
+ */
+const OURS = ["verified", "community"];
+
+/** The three shelves the catalog holds, once one has been chosen. */
+type Shelf = "pet" | "human" | "cosmetics";
+
+/** Just enough of a PostgREST builder to narrow one, without naming its type. */
+interface Narrowable<T> {
+  eq(column: string, value: string): T;
+  or(filters: string): T;
+}
+
 const MODES: ReportMode[] = ["human", "pet", "cosmetics"];
 function asMode(value: unknown): ReportMode {
   return MODES.includes(value as ReportMode) ? (value as ReportMode) : "pet";
@@ -82,12 +107,36 @@ export async function POST(req: Request) {
     countOnly?: unknown;
     stats?: unknown;
     filter?: unknown;
+    mode?: unknown;
   };
   try {
     body = await req.json();
   } catch {
     return Response.json({ error: "invalid_body" }, { status: 400 });
   }
+
+  // Which shelf. Null means all three — the catalog holds pet food, human food
+  // and cosmetics in one table, and once it runs to hundreds of rows looking for
+  // a cat food among the shampoos is the whole problem.
+  const modeFilter =
+    body.mode === "pet" || body.mode === "human" || body.mode === "cosmetics"
+      ? body.mode
+      : null;
+
+  /**
+   * Narrow a query to the chosen shelf.
+   *
+   * Pet also takes rows with no mode at all: they were written when the tool
+   * did nothing but pet food, and dropping them would hide real work. Same
+   * convention as /api/coverage.
+   *
+   * The mode is passed in rather than read from the closure so the callers'
+   * `if (modeFilter)` guard is what proves it isn't null — no assertion needed.
+   */
+  const onShelf = <T extends Narrowable<T>>(query: T, mode: Shelf): T =>
+    mode === "pet"
+      ? query.or("mode.eq.pet,mode.is.null")
+      : query.eq("mode", mode);
 
   const filter =
     body.filter === "no-ingredients" ||
@@ -96,12 +145,20 @@ export async function POST(req: Request) {
       ? body.filter
       : null;
 
-  /** Every verified row, light columns only, for the gap counts. */
+  /**
+   * Every row of ours, light columns only, for the gap counts.
+   *
+   * Narrowed by the chosen shelf too, so "12 with no ingredients" means twelve
+   * in the list you are actually looking at rather than twelve somewhere in the
+   * whole table.
+   */
   const scanAll = async () => {
-    const { data } = await admin
+    let query = admin
       .from("barcode_cache")
       .select("code, mode, ingredients_text, product_name")
-      .eq("source", "verified")
+      .in("source", OURS);
+    if (modeFilter) query = onShelf(query, modeFilter);
+    const { data } = await query
       .order("created_at", { ascending: false })
       .limit(STATS_SCAN_CAP + 1);
     const rows = data ?? [];
@@ -111,19 +168,44 @@ export async function POST(req: Request) {
     };
   };
 
-  /** How many verified rows we hold, without transferring any of them. */
-  const countVerified = async () => {
-    const { count } = await admin
+  /** How many rows we hold, without transferring any of them. */
+  const countOurs = async () => {
+    let query = admin
       .from("barcode_cache")
       .select("code", { count: "exact", head: true })
-      .eq("source", "verified");
+      .in("source", OURS);
+    if (modeFilter) query = onShelf(query, modeFilter);
+    const { count } = await query;
     return count ?? 0;
+  };
+
+  /** How the catalog splits across the three shelves, for the picker's counts. */
+  const countByMode = async () => {
+    const counts: Record<string, number> = { pet: 0, human: 0, cosmetics: 0 };
+    for (const m of MODES) {
+      const base = admin
+        .from("barcode_cache")
+        .select("code", { count: "exact", head: true })
+        .in("source", OURS);
+      // A row written before the mode column existed is pet — the same
+      // convention /api/coverage follows, and the tool was pet-only then.
+      const { count } =
+        m === "pet"
+          ? await base.or("mode.eq.pet,mode.is.null")
+          : await base.eq("mode", m);
+      counts[m] = count ?? 0;
+    }
+    return counts;
   };
 
   // The panel shows the catalog size before it's opened, so support asking for
   // just the number rather than pulling 25 rows of ingredient text for it.
   if (body.countOnly === true) {
-    return Response.json({ totalCodes: await countVerified(), results: [] });
+    return Response.json({
+      totalCodes: await countOurs(),
+      byMode: await countByMode(),
+      results: [],
+    });
   }
 
   // "What still needs work" — the two gaps worth chasing.
@@ -172,7 +254,7 @@ export async function POST(req: Request) {
       restrictToCodes = [...(await codesMissingReport(admin, rows))];
     }
     if (restrictToCodes.length === 0) {
-      return Response.json({ totalCodes: await countVerified(), results: [] });
+      return Response.json({ totalCodes: await countOurs(), results: [] });
     }
   }
 
@@ -192,9 +274,11 @@ export async function POST(req: Request) {
     let query = admin
       .from("barcode_cache")
       .select(columns)
-      .eq("source", "verified")
+      .in("source", OURS)
       .order("created_at", { ascending: false })
       .limit(LIMIT);
+
+    if (modeFilter) query = onShelf(query, modeFilter);
 
     if (restrictToCodes) query = query.in("code", restrictToCodes.slice(0, 500));
 
@@ -250,7 +334,8 @@ export async function POST(req: Request) {
   // which is what a row is — one recipe legitimately has several (6/15/30 lb
   // bags), so it isn't the same as a count of distinct products.
   return Response.json({
-    totalCodes: await countVerified(),
+    totalCodes: await countOurs(),
+    byMode: await countByMode(),
     // The panel says this out loud: a catalog missing its species/form chips
     // because a migration hasn't been run should look unfinished, not normal.
     missingColumns,

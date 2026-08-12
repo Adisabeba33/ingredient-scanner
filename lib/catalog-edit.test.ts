@@ -49,7 +49,10 @@ describe("editPromotes", () => {
 describe("sourceLabel", () => {
   it("names each source in words a person would use", () => {
     expect(sourceLabel("verified")).toBe("Our capture");
-    expect(sourceLabel("community")).toBe("Corrected by hand");
+    // Says what it is rather than how it got here: `community` now covers a
+    // consumer-app reading, a hand correction AND a formula from a manufacturer
+    // record, and the only part that matters is that nobody photographed it.
+    expect(sourceLabel("community")).toBe("Not photographed");
     expect(sourceLabel("openfoodfacts")).toBe("Open Food Facts");
   });
 

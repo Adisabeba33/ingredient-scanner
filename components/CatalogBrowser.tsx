@@ -134,6 +134,23 @@ const DEBOUNCE_MS = 300;
 type Filter = "no-ingredients" | "no-name" | "no-report" | null;
 
 /**
+ * Which shelf is being browsed.
+ *
+ * The catalog is one table holding pet food, human food and cosmetics, and at
+ * forty rows that is fine. At four hundred, hunting a cat food among the
+ * shampoos is the whole difficulty — so the shelf is picked first and every
+ * count below it follows the choice, rather than reporting on a list you are
+ * not looking at.
+ */
+type Shelf = "pet" | "human" | "cosmetics" | null;
+
+const SHELVES: { value: Exclude<Shelf, null>; label: string }[] = [
+  { value: "pet", label: "Pet" },
+  { value: "human", label: "Human" },
+  { value: "cosmetics", label: "Cosmetics" },
+];
+
+/**
  * How many ingredients the stored text lists. Commas separate items on every
  * label, and the parenthesised vitamin/mineral blocks are counted as their
  * members — which is what you want here, since the question is only "does this
@@ -147,6 +164,42 @@ function countIngredients(text: string): number {
 }
 
 /** A tappable count — "No ingredients 2" narrows the list to exactly those. */
+/**
+ * One shelf, with how much is on it.
+ *
+ * Shows its count even at zero: an empty Cosmetics tab is the honest answer to
+ * "where did my shampoos go", and hiding it would look like the filter had
+ * broken rather than like the shelf being empty.
+ */
+function ShelfTab({
+  label,
+  count,
+  active,
+  onClick,
+}: {
+  label: string;
+  count: number | null;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={active}
+      className={`flex h-9 flex-1 items-center justify-center gap-1.5 rounded-input text-[12.5px] font-medium transition ${
+        active ? "bg-ink text-white" : "border border-line bg-surface text-muted"
+      }`}
+    >
+      <span>{label}</span>
+      {count !== null && (
+        <span className={`tabular-nums ${active ? "opacity-70" : "text-faint"}`}>
+          {count}
+        </span>
+      )}
+    </button>
+  );
+}
+
 function FilterChip({
   label,
   count,
@@ -202,6 +255,8 @@ export function CatalogBrowser({
     truncated: boolean;
   } | null>(null);
   const [filter, setFilter] = useState<Filter>(null);
+  const [shelf, setShelf] = useState<Shelf>(null);
+  const [byMode, setByMode] = useState<Record<string, number> | null>(null);
   const [busyCode, setBusyCode] = useState<string | null>(null);
   /** Why the list is empty, when it's empty because something broke. */
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -221,7 +276,7 @@ export function CatalogBrowser({
             "content-type": "application/json",
             "x-admin-token": adminToken,
           },
-          body: JSON.stringify({ q, filter: f }),
+          body: JSON.stringify({ q, filter: f, mode: shelf }),
         });
         if (seq !== seqRef.current) return;
         if (!res.ok) {
@@ -243,12 +298,14 @@ export function CatalogBrowser({
         const data = (await res.json()) as {
           results?: CatalogRow[];
           totalCodes?: number;
+          byMode?: Record<string, number>;
           missingColumns?: boolean;
         };
         setLoadError(null);
         setMissingColumns(!!data.missingColumns);
         setRows(data.results ?? []);
         if (typeof data.totalCodes === "number") setTotal(data.totalCodes);
+        if (data.byMode) setByMode(data.byMode);
       } catch {
         if (seq === seqRef.current) {
           setRows([]);
@@ -258,7 +315,7 @@ export function CatalogBrowser({
         if (seq === seqRef.current) setLoading(false);
       }
     },
-    [adminToken]
+    [adminToken, shelf]
   );
 
   // Show the catalog size straight away, without opening the panel.
@@ -275,8 +332,12 @@ export function CatalogBrowser({
           body: JSON.stringify({ countOnly: true }),
         });
         if (!alive || !res.ok) return;
-        const data = (await res.json()) as { totalCodes?: number };
+        const data = (await res.json()) as {
+          totalCodes?: number;
+          byMode?: Record<string, number>;
+        };
         if (typeof data.totalCodes === "number") setTotal(data.totalCodes);
+        if (data.byMode) setByMode(data.byMode);
       } catch {
         /* offline — the counter just stays blank */
       }
@@ -290,7 +351,7 @@ export function CatalogBrowser({
     if (!open) return;
     const t = setTimeout(() => void load(query.trim(), filter), DEBOUNCE_MS);
     return () => clearTimeout(t);
-  }, [open, query, filter, load]);
+  }, [open, query, filter, shelf, load]);
 
   // Gap counts, refreshed whenever the panel is opened.
   const loadStats = useCallback(async () => {
@@ -301,7 +362,7 @@ export function CatalogBrowser({
           "content-type": "application/json",
           "x-admin-token": adminToken,
         },
-        body: JSON.stringify({ stats: true }),
+        body: JSON.stringify({ stats: true, mode: shelf }),
       });
       if (!res.ok) return;
       const data = (await res.json()) as {
@@ -319,7 +380,7 @@ export function CatalogBrowser({
     } catch {
       /* offline — chips just don't appear */
     }
-  }, [adminToken]);
+  }, [adminToken, shelf]);
 
   useEffect(() => {
     if (open) void loadStats();
@@ -518,6 +579,28 @@ export function CatalogBrowser({
             What&apos;s actually stored right now. Check a product here before
             assuming a fix didn&apos;t work — this reads the database directly.
           </p>
+
+          {/* The shelf first, because it changes what every number below means.
+              Pet food, human food and cosmetics share one table, and hunting a
+              cat food among the shampoos is the whole difficulty once the
+              catalog is large. */}
+          <div className="flex gap-1.5">
+            <ShelfTab
+              label="All"
+              count={total}
+              active={shelf === null}
+              onClick={() => setShelf(null)}
+            />
+            {SHELVES.map((s) => (
+              <ShelfTab
+                key={s.value}
+                label={s.label}
+                count={byMode?.[s.value] ?? null}
+                active={shelf === s.value}
+                onClick={() => setShelf((cur) => (cur === s.value ? null : s.value))}
+              />
+            ))}
+          </div>
 
           {/* Gaps worth chasing — tap one to list exactly those products. */}
           {stats && (

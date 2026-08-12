@@ -42,7 +42,13 @@ export function sourceLabel(source: string | null): string {
     case "verified":
       return "Our capture";
     case "community":
-      return "Corrected by hand";
+      // Covers three things now — a reading sent through the consumer app, a
+      // row corrected by hand here, and a formula written from a manufacturer
+      // record. "Corrected by hand" was true when it only meant the second and
+      // is a small lie about the other two. What they share, and the only part
+      // an operator needs, is that nobody photographed the pack — so this row
+      // is still worth capturing properly one day.
+      return "Not photographed";
     case "openfoodfacts":
       return "Open Food Facts";
     case "openpetfoodfacts":
