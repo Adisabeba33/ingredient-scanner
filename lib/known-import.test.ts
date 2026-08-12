@@ -221,6 +221,19 @@ describe("data/known-formulas.ts", () => {
     }
   });
 
+  // A bracket is a group the LABEL drew. Prime Filets Salmon & Beef closes its
+  // vitamin bracket before menadione and lists it on its own afterwards, and
+  // the source asked that it not be tidied on import. Pinned, because the
+  // temptation to make one deck look like its eleven siblings is exactly the
+  // sort of edit that gets made in passing and never noticed.
+  it("leaves Vitamin K outside the bracket the deck put it outside of", () => {
+    const list = KNOWN_FORMULAS["050000100422"].ingredients;
+    const close = list.indexOf("Vitamin D-3 Supplement]");
+    const k = list.indexOf("Menadione");
+    expect(close).toBeGreaterThan(-1);
+    expect(k).toBeGreaterThan(close);
+  });
+
   it("keeps the note where the source flagged an older formula", () => {
     // 11% protein historically, 9% now, under one barcode.
     expect(KNOWN_FORMULAS["050000424948"].conflict).toBeTruthy();

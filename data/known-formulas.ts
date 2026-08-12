@@ -146,6 +146,17 @@ const V_E_FIRST_A_MID =
 const V_NIACIN_FIRST =
   "Vitamins [Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Vitamin E Supplement, Calcium Pantothenate (Vitamin B-5), Riboflavin Supplement (Vitamin B-2), Pyridoxine Hydrochloride (Vitamin B-6), Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid (Vitamin B-9), Vitamin A Supplement, Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement]";
 
+/**
+ * Prime Filets Salmon & Beef, whose deck closes the vitamin bracket BEFORE
+ * menadione and then lists it on its own.
+ *
+ * The source flagged this and asked that it not be tidied on import, and it is
+ * right to: a bracket is a group the label drew, and moving an item into one it
+ * was printed outside of is editing the label to look like its siblings.
+ */
+const V_NO_K =
+  "Vitamins [Thiamine Mononitrate (Vitamin B-1), Vitamin E Supplement, Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Vitamin B-12 Supplement, Biotin (Vitamin B-7), Folic Acid (Vitamin B-9), Vitamin D-3 Supplement], Menadione Sodium Bisulfite Complex (Vitamin K)";
+
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
@@ -518,5 +529,82 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_004,
     conflict:
       "Target still lists an older formula for this barcode: 11% minimum protein, turkey among the meats, and Added Color. The current deck has none of those. One barcode, two formulas.",
+  },
+
+  // ── Friskies · Meaty Bits (continued) ──────────────────────────────────
+  "050000420544": {
+    ingredients: `Water, Poultry, Liver, Wheat Gluten, Meat By-Products, Soy Flour, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 969, 151),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000421947": {
+    ingredients: `Water, Chicken, Liver, Wheat Gluten, Meat By-Products, Turkey, Soy Flour, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 965, 150),
+    verifiedAt: VERIFIED_004,
+    conflict:
+      "Older retailer records show 11% minimum protein for this barcode. Current formula data for G610022 is 10%.",
+  },
+
+  // ── Friskies · Pâté (continued) ────────────────────────────────────────
+  "050000423644": {
+    ingredients: `Poultry, Water, Meat By-Products, Liver, Poultry By-Products, Fish, Rice, Artificial And Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Carrageenan, Choline Chloride, Taurine, ${V_PATE}, Salt.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1124, 175),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000424443": {
+    ingredients: `Meat By-Products, Poultry By-Products, Water, Chicken, Liver, Tuna, Rice, Artificial And Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Tricalcium Phosphate, Carrageenan, Taurine, Choline Chloride, Salt, ${V_PATE}.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1132, 176),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000425044": {
+    // Named after the sea and led by meat by-products, with fish third. The
+    // list is what it is; the name is on the front of the tin.
+    ingredients: `Meat By-Products, Water, Fish, Chicken, Poultry By-Products, Rice, Artificial And Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Guar Gum, Carrageenan, Choline Chloride, Taurine, Salt, ${V}.`,
+    analysis: withCalories(ga(9.0, 4.0, 1.0, 78.0, 3.5, 0.05), 1141, 177),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000425648": {
+    ingredients: `Meat By-Products, Water, Fish, Poultry By-Products, Chicken, Rice, Artificial And Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Guar Gum, Carrageenan, Salt, Choline Chloride, Taurine, ${V_PATE}.`,
+    analysis: withCalories(ga(9.0, 4.0, 1.0, 78.0, 3.5, 0.05), 1151, 179),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000423248": {
+    ingredients: `Meat By-Products, Water, Chicken, Fish, Poultry By-Products, Rice, Artificial And Natural Flavors, Tricalcium Phosphate, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Carrageenan, Choline Chloride, Taurine, ${V_PATE}, Salt.`,
+    // The label deck's figure. Purina's own product page has shown 1093 kcal/kg
+    // and 170 kcal/can for the same code — see the note below.
+    analysis: withCalories(ga(9.0, 5.0, 1.0, 78.0, 3.0, 0.05), 1151, 179),
+    verifiedAt: VERIFIED_004,
+    conflict:
+      "Two calorie statements exist for this barcode: label deck J605224 says 1151 kcal/kg and 179 kcal/can, Purina's product page has shown 1093 and 170. Both pairs are internally consistent for a 5.5 oz can, so this is two formulas rather than one typo. The deck's figure is stored. Worth re-reading off a physical can.",
+  },
+
+  // ── Friskies · Prime Filets (continued) ────────────────────────────────
+  "050000100422": {
+    ingredients: `Water, Salmon, Wheat Gluten, Liver, Meat By-Products, Beef, Soy Flour, Poultry, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Salt, Choline Chloride, ${V_NO_K}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 82.0, 2.8, 0.05), 805, 125),
+    verifiedAt: VERIFIED_004,
+  },
+
+  // ── Friskies · Tasty Treasures (continued) ─────────────────────────────
+  //
+  // Scallop flavour is a separate entry near the end of both decks, after the
+  // artificial and natural flavors that already appear higher up. Kept where
+  // it is printed.
+  "050000577972": {
+    ingredients: `Water, Meat By-Products, Chicken, Wheat Gluten, Soy Flour, Modified Corn Starch, Ocean Fish, Tuna, Artificial And Natural Flavors, Sodium Caseinate, Tricalcium Phosphate, Vegetable Oil, Vegetable Starch-Modified, Corn Starch, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Salt, Dried Whey, Sodium Phosphate, Taurine, Choline Chloride, Scallop Flavor, Non-Fat Milk, ${V_PATE}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 80.0, 3.0, 0.05), 877, 136),
+    verifiedAt: VERIFIED_004,
+  },
+  "050000577958": {
+    ingredients: `Water, Meat By-Products, Wheat Gluten, Chicken, Soy Flour, Modified Corn Starch, Tuna, Artificial And Natural Flavors, Sodium Caseinate, Tricalcium Phosphate, Vegetable Oil, Vegetable Starch-Modified, Corn Starch, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Salt, Dried Whey, Sodium Phosphate, Taurine, Choline Chloride, Scallop Flavor, Non-Fat Milk, ${V_PATE}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.0, 80.0, 3.0, 0.05), 867, 135),
+    verifiedAt: VERIFIED_004,
+  },
+
+  // ── Friskies · Extra Gravy (continued) ─────────────────────────────────
+  "050000168781": {
+    ingredients: `Meat By-Products, Water, Poultry By-Products, Chicken, Tuna, Artificial And Natural Flavors, Carrageenan, Calcium Sulfate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.0, 82.0, 3.5, 0.05), 1003, 156),
+    verifiedAt: VERIFIED_004,
   },
 };

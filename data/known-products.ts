@@ -695,4 +695,152 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["beef"],
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000423149", scope: UNIT }],
   },
+
+  // ── Friskies · Meaty Bits (continued) ──────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Meaty Bits",
+    variant: "Gourmet Grill in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    // The deck names "Poultry" and nothing more specific. Left as the pack
+    // leaves it rather than resolved into chicken and turkey.
+    proteins: ["poultry"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000420544", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Meaty Bits",
+    variant: "Chicken Dinner in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000421947", scope: UNIT }],
+  },
+
+  // ── Friskies · Pâté (continued) ────────────────────────────────────────
+  //
+  // Two of these are named after the sea rather than after what is in them:
+  // "Mariner's Catch" and "Sea Captain's Choice" both lead with meat
+  // by-products and put fish third. The variant keeps the pack's own name —
+  // that is what somebody is looking for on a shelf — and `proteins` keeps
+  // what the deck actually lists.
+  {
+    brand: "Friskies",
+    line: "Pâté",
+    variant: "Poultry Platter",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["poultry"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000423644", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Pâté",
+    variant: "Chicken & Tuna Dinner",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000424443", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Pâté",
+    variant: "Mariner's Catch",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["fish"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000425044", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Pâté",
+    variant: "Sea Captain's Choice",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["fish"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000425648", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Pâté",
+    variant: "Country Style Dinner",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000423248", scope: UNIT }],
+  },
+
+  // ── Friskies · Prime Filets (continued) ────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "With Salmon & Beef in Sauce",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "beef"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000100422", scope: UNIT }],
+  },
+
+  // ── Friskies · Tasty Treasures (continued) ─────────────────────────────
+  //
+  // Both carry a scallop flavouring that is named separately on the deck and
+  // is not one of the proteins the pack sells itself on. It stays in the
+  // ingredient list, where it is, and out of here.
+  {
+    brand: "Friskies",
+    line: "Tasty Treasures",
+    variant: "With Ocean Fish & Tuna in Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    // "Ocean fish" as the deck writes it, not folded into "whitefish".
+    proteins: ["ocean fish", "tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000577972", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Tasty Treasures",
+    variant: "With Chicken & Tuna in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000577958", scope: UNIT }],
+  },
+
+  // ── Friskies · Extra Gravy (continued) ─────────────────────────────────
+  //
+  // The source writes the range as "Extra Gravy Paté". Same range as the
+  // Chunky above it — Extra Gravy is what the tin says, and paté is the
+  // texture, which has its own column.
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Paté With Tuna in Savory Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000168781", scope: UNIT }],
+  },
 ];
