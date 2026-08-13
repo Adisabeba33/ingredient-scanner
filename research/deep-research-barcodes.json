@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "Staging ledger for new pet-food barcode records found through Deep Research before promotion into data/known-products.ts and data/known-formulas.ts.",
   "repository": "Adisabeba33/ingredient-scanner",
   "branch": "agent/deep-research-barcode-ledger",
@@ -44,7 +44,7 @@
     "recipe": [
       "string"
     ],
-    "life_stage": "adult | kitten | puppy | all | null",
+    "life_stage": "adult | senior | kitten | puppy | all | null",
     "food_form": "wet | dry | treat | supplement | unknown",
     "texture": "repository vocabulary value or null",
     "presentation": "repository vocabulary value or null",
@@ -65,7 +65,8 @@
         {
           "nutrient": "string",
           "basis": "min | max",
-          "value_percent": "number"
+          "value": "number",
+          "unit": "percent | IU/kg | other"
         }
       ]
     },
@@ -879,6 +880,756 @@
         "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 808 kcal/kg × 0.1559 kg = 126.0 kcal; label prints 125 kcal/can.",
         "The current official Purina deck and live product page agree on 808 kcal/kg and 125 kcal/can.",
         "The repository presentation value is extra_gravy because that is the named range/presentation, not merely in_gravy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 151,
+      "upc": "050000427949",
+      "canonical_gtin14": "00050000427949",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Flaked",
+      "product_name": "Fancy Feast Flaked Chicken & Tuna Feast Gourmet Cat Food",
+      "variant": "Chicken & Tuna Feast",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Poultry broth, fish, chicken, tuna, wheat gluten, liver, meat by-products, turkey, soy flour, glycine, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], natural flavor, tricalcium phosphate, xanthan gum, salt, choline chloride, carrageenan, taurine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Poultry broth",
+        "fish",
+        "chicken",
+        "tuna",
+        "wheat gluten",
+        "liver",
+        "meat by-products",
+        "turkey",
+        "soy flour",
+        "glycine",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "natural flavor",
+        "tricalcium phosphate",
+        "xanthan gum",
+        "salt",
+        "choline chloride",
+        "carrageenan",
+        "taurine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 74,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1210,
+        "kcal_per_unit": 102,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D690021",
+      "formula_source": "Purina official product label deck D690021",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/6900-d690021-fancy-feast-flaked-chicken-tuna-feast-cat-food-wet-258.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-flaked-chicken-tuna-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-chicken-38-tuna-flavor-flaked-wet-cat-food-3oz/-/A-14778602"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000427949 for package quantity 1, 3 oz. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Target's label data prints 78% maximum moisture, while the current Purina-linked deck D690021 prints 74%. The official deck value is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042794 requires check digit 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000427949.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1210 kcal/kg × 0.0850 kg = 102.9 kcal; label prints 102 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck D690021 states that the recipe meets AAFCO nutrient profiles for all life stages."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 152,
+      "upc": "050000428748",
+      "canonical_gtin14": "00050000428748",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Flaked",
+      "product_name": "Fancy Feast Flaked Fish & Shrimp Feast Gourmet Cat Food",
+      "variant": "Fish & Shrimp Feast",
+      "recipe": [
+        "ocean fish",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Ocean fish, fish broth, shrimp, vegetable oil, tricalcium phosphate, guar gum, choline chloride, VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin supplement, biotin, Vitamin B-12 supplement, menadione sodium bisulfite complex (Vitamin K), folic acid, Vitamin D-3 supplement], MINERALS [ferric pyrophosphate, zinc sulfate, copper sulfate, manganese sulfate, potassium iodide].",
+      "ingredients_ordered_normalized": [
+        "Ocean fish",
+        "fish broth",
+        "shrimp",
+        "vegetable oil",
+        "tricalcium phosphate",
+        "guar gum",
+        "choline chloride",
+        "VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin supplement, biotin, Vitamin B-12 supplement, menadione sodium bisulfite complex (Vitamin K), folic acid, Vitamin D-3 supplement]",
+        "MINERALS [ferric pyrophosphate, zinc sulfate, copper sulfate, manganese sulfate, potassium iodide]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 985,
+        "kcal_per_unit": 83,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D690120",
+      "formula_source": "Purina official product label deck D690120",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/d690120-fancy-feast-flaked-fish-shrimp-feast-gourmet-cat-food.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-flaked-fish-shrimp-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-flaked-gourmet-wet-cat-food-fish-38-shrimp-feast-3oz/-/A-14779341"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000428748 for package quantity 1, 3 oz. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Purina's live ingredient widget currently says vegetable glycerin, but the official PDF it links (deck D690120) and Target's D690120 label panel say vegetable oil. The linked official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042874 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000428748.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 985 kcal/kg × 0.0850 kg = 83.7 kcal; label prints 83 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck D690120 states adult-maintenance nutritional adequacy and identifies the food as a product of Thailand."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 153,
+      "upc": "050000428847",
+      "canonical_gtin14": "00050000428847",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Flaked",
+      "product_name": "Fancy Feast Flaked Trout Feast Gourmet Cat Food",
+      "variant": "Trout Feast",
+      "recipe": [
+        "trout"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Fish broth, fish, trout, wheat gluten, chicken, liver, meat by-products, soy flour, glycine, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], natural flavor, xanthan gum, salt, choline chloride, carrageenan, taurine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Fish broth",
+        "fish",
+        "trout",
+        "wheat gluten",
+        "chicken",
+        "liver",
+        "meat by-products",
+        "soy flour",
+        "glycine",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "natural flavor",
+        "xanthan gum",
+        "salt",
+        "choline chloride",
+        "carrageenan",
+        "taurine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 74,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1249,
+        "kcal_per_unit": 106,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D690421",
+      "formula_source": "Purina official product label deck D690421",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/6904-d690421-fancy-feast-flaked-trout-feast-cat-food-wet-262.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-flaked-trout-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-flaked-gourmet-with-fish-wet-cat-food-3oz/-/A-14229803"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000428847 for package quantity 1, 3 oz, with Trout selected as the flavor. The code is recorded as the individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042884 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000428847.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1249 kcal/kg × 0.0850 kg = 106.2 kcal; label prints 106 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck D690421 states that the recipe meets AAFCO nutrient profiles for all life stages.",
+        "A retailer transcription misspells ferrous sulfate; the exact official deck spelling and order are stored here."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 154,
+      "upc": "050000001248",
+      "canonical_gtin14": "00050000001248",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Flaked",
+      "product_name": "Fancy Feast Flaked Tuna Feast Gourmet Cat Food",
+      "variant": "Tuna Feast",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Fish broth, tuna, fish, chicken, wheat gluten, liver, meat by-products, soy flour, glycine, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], natural flavor, xanthan gum, salt, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Fish broth",
+        "tuna",
+        "fish",
+        "chicken",
+        "wheat gluten",
+        "liver",
+        "meat by-products",
+        "soy flour",
+        "glycine",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "natural flavor",
+        "xanthan gum",
+        "salt",
+        "tricalcium phosphate",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 74,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1197,
+        "kcal_per_unit": 101,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D690521",
+      "formula_source": "Purina official product label deck D690521",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/6905-d690521-fancy-feast-flaked-tuna-feast-gourmet-cat-food-wet-265.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-flaked-tuna-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-flaked-gourmet-wet-cat-food-with-fish-flavor-3oz/-/A-14778599"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000001248 for package quantity 1, 3 oz, with Tuna selected as the flavor. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Target's label panel is a superseded formula containing soy protein concentrate, artificial flavor, added color, and sodium nitrite and prints 78% moisture/3.5% ash. Purina's current page links deck D690521, which omits those ingredients and prints 74% moisture/3.25% ash; the official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000000124 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000001248.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1197 kcal/kg × 0.0850 kg = 101.7 kcal; label prints 101 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck D690521 states that the recipe meets AAFCO nutrient profiles for all life stages."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 155,
+      "upc": "050000426942",
+      "canonical_gtin14": "00050000426942",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Chunky",
+      "product_name": "Fancy Feast Chunky Chicken Feast Gourmet Cat Food",
+      "variant": "Chunky Chicken Feast",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "chunks",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken broth, chicken, meat by-products, liver, fish, wheat gluten, turkey, soy flour, glycine, natural flavor, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], sodium tripolyphosphate, tricalcium phosphate, guar gum, taurine, carrageenan, locust bean gum, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Chicken broth",
+        "chicken",
+        "meat by-products",
+        "liver",
+        "fish",
+        "wheat gluten",
+        "turkey",
+        "soy flour",
+        "glycine",
+        "natural flavor",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "sodium tripolyphosphate",
+        "tricalcium phosphate",
+        "guar gum",
+        "taurine",
+        "carrageenan",
+        "locust bean gum",
+        "choline chloride",
+        "salt",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1106,
+        "kcal_per_unit": 94,
+        "unit_name": "can"
+      },
+      "label_deck_code": "E665022",
+      "formula_source": "Purina official product label deck E665022",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/6650-e665022-fancy-feast-chunky-chicken-feast189.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-chunky-chicken-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-chunky-wet-cat-food-3oz-can/-/A-80282560"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000426942 for package quantity 1, 3 oz, with Chicken selected as the flavor. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Target's label panel is a superseded formula with soy protein concentrate and added color. Purina's current page links deck E665022, which instead includes glycine and magnesium proteinate and omits added color; the official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042694 requires check digit 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000426942.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1106 kcal/kg × 0.0850 kg = 94.0 kcal; label prints 94 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck E665022 states that the recipe meets AAFCO nutrient profiles for all life stages."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 156,
+      "upc": "050000032648",
+      "canonical_gtin14": "00050000032648",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Sliced",
+      "product_name": "Fancy Feast Sliced Chicken Feast in Gravy Gourmet Cat Food",
+      "variant": "Sliced Chicken Feast in Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "slices",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Poultry broth, chicken, liver, wheat gluten, meat by-products, soy flour, corn starch-modified, salt, glycine, tricalcium phosphate, natural flavor, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Poultry broth",
+        "chicken",
+        "liver",
+        "wheat gluten",
+        "meat by-products",
+        "soy flour",
+        "corn starch-modified",
+        "salt",
+        "glycine",
+        "tricalcium phosphate",
+        "natural flavor",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 2.7,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 919,
+        "kcal_per_unit": 78,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D700222",
+      "formula_source": "Purina official product label deck D700222",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/7002-d700222-fancy-feast-sliced-chicken-feast-in-gravy-292.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-sliced-chicken-gravy-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-sliced-gourmet-wet-cat-food-chicken-feast-in-gravy-3oz/-/A-14230263"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000032648 for package quantity 1, 3 oz, with Chicken selected as the flavor. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Target's label panel is a superseded formula that lists turkey, soy protein concentrate, artificial flavor, and added color. Purina's current page links deck D700222, which omits them and includes glycine; the official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000003264 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000032648.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 919 kcal/kg × 0.0850 kg = 78.1 kcal; label prints 78 kcal/can.",
+        "Target identifies the item as one 3 oz can; no multipack or case barcode was substituted.",
+        "Deck D700222 states adult-maintenance nutritional adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 157,
+      "upc": "050000426447",
+      "canonical_gtin14": "00050000426447",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Sliced",
+      "product_name": "Fancy Feast Sliced Turkey Feast in Gravy Gourmet Cat Food",
+      "variant": "Sliced Turkey Feast in Gravy",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "slices",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Poultry broth, turkey, liver, wheat gluten, meat by-products, chicken, soy flour, corn starch-modified, salt, glycine, tricalcium phosphate, natural flavor, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Poultry broth",
+        "turkey",
+        "liver",
+        "wheat gluten",
+        "meat by-products",
+        "chicken",
+        "soy flour",
+        "corn starch-modified",
+        "salt",
+        "glycine",
+        "tricalcium phosphate",
+        "natural flavor",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 2.7,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 917,
+        "kcal_per_unit": 78,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D700622",
+      "formula_source": "Purina official product label deck D700622",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-06/7006-d700622-fancy-feast-sliced-turkey-feast-in-gravy-313.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-sliced-turkey-gravy-wet-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/74108-purely-fancy-feast-gravy-wet-cat-food-sliced-turkey-feast-in-gravy-3-oz"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Woodman's single-can listing prints GTIN-14/UPC field 00050000426447 for the 3 oz item. Removing the two GTIN padding zeros yields individual-unit UPC-A 050000426447.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042644 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000426447.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 917 kcal/kg × 0.0850 kg = 77.9 kcal; label prints 78 kcal/can.",
+        "Woodman's identifies the item as one 3 oz can; no 24-count variety-pack barcode was substituted.",
+        "Deck D700622 states adult-maintenance nutritional adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 158,
+      "upc": "050000503827",
+      "canonical_gtin14": "00050000503827",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Senior 7+",
+      "product_name": "Fancy Feast Chicken Feast Classic Paté Senior 7+ Gourmet Cat Food",
+      "variant": "Chicken Feast Classic Paté Senior 7+",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "senior",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken, fish, meat by-products, liver, chicken broth, artificial and natural flavors, guar gum, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, salt, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "fish",
+        "meat by-products",
+        "liver",
+        "chicken broth",
+        "artificial and natural flavors",
+        "guar gum",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "taurine",
+        "choline chloride",
+        "salt",
+        "VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 40,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1128,
+        "kcal_per_unit": 95,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B662622",
+      "formula_source": "Purina official product label deck B662622",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-07/6626-b662622-fancy-feast-chicken-feast-classic-pate-senior-7-wet-cat-food-tm1.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-classic-pate-chicken-senior-food-wet-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/21025927-purely-fancy-feast-high-protein-senior-pate-wet-cat-food-chicken-feast-senior-7-3-oz"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Woodman's single-can listing prints GTIN-14/UPC field 00050000503827 for the 3 oz item. Removing the two GTIN padding zeros yields individual-unit UPC-A 050000503827.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000050382 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000503827.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1128 kcal/kg × 0.0850 kg = 95.9 kcal; label prints 95 kcal/can.",
+        "Woodman's identifies the item as one 3 oz can; no case or 24-count pack barcode was substituted.",
+        "The full guaranteed analysis includes Vitamin E (Min) 40.0 IU/kg in addition to the percentage guarantees.",
+        "Deck B662622 states adult-maintenance nutritional adequacy; the product is specifically marketed for senior cats 7+."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 159,
+      "upc": "050000503841",
+      "canonical_gtin14": "00050000503841",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Senior 7+",
+      "product_name": "Fancy Feast Beef Feast Classic Paté Senior 7+ Gourmet Cat Food",
+      "variant": "Beef Feast Classic Paté Senior 7+",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "senior",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Beef, fish, meat by-products, liver, beef broth, chicken, artificial and natural flavors, guar gum, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, salt, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "fish",
+        "meat by-products",
+        "liver",
+        "beef broth",
+        "chicken",
+        "artificial and natural flavors",
+        "guar gum",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "taurine",
+        "choline chloride",
+        "salt",
+        "VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11.5,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 40,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1082,
+        "kcal_per_unit": 91,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B662722",
+      "formula_source": "Purina official product label deck B662722",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-07/6627-b662722-fancy-feast-beef-feast-classic-pate-senior-7-wet-cat-food-tm2.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-classic-pate-beef-senior-food-wet-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/21029120-purely-fancy-feast-high-protein-senior-pate-wet-cat-food-beef-feast-senior-7-3-oz"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Woodman's single-can listing prints GTIN-14/UPC field 00050000503841 for the 3 oz item. Removing the two GTIN padding zeros yields individual-unit UPC-A 050000503841.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000050384 requires check digit 1.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000503841.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 1082 kcal/kg × 0.0850 kg = 92.0 kcal; label prints 91 kcal/can.",
+        "Woodman's identifies the item as one 3 oz can; no case or 24-count pack barcode was substituted.",
+        "The full guaranteed analysis includes Vitamin E (Min) 40.0 IU/kg in addition to the percentage guarantees.",
+        "Deck B662722 states adult-maintenance nutritional adequacy; the product is specifically marketed for senior cats 7+."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 160,
+      "upc": "050000574070",
+      "canonical_gtin14": "00050000574070",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Indoor",
+      "product_name": "Friskies Indoor Meaty Bits Homestyle Turkey Dinner With Garden Greens in Gravy",
+      "variant": "Meaty Bits Homestyle Turkey Dinner With Garden Greens in Gravy",
+      "recipe": [
+        "turkey",
+        "rice",
+        "spinach"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "bits",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Water, turkey, wheat gluten, meat by-products, rice, liver, chicken, powdered cellulose, corn starch-modified, spinach, artificial and natural flavors, soy flour, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), Menadione Sodium Bisulfite Complex (Vitamin K), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Water",
+        "turkey",
+        "wheat gluten",
+        "meat by-products",
+        "rice",
+        "liver",
+        "chicken",
+        "powdered cellulose",
+        "corn starch-modified",
+        "spinach",
+        "artificial and natural flavors",
+        "soy flour",
+        "MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "taurine",
+        "choline chloride",
+        "salt",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), Menadione Sodium Bisulfite Complex (Vitamin K), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 2.75,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 2.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 886,
+        "kcal_per_unit": 138,
+        "unit_name": "can"
+      },
+      "label_deck_code": "I608623",
+      "formula_source": "Purina official product label deck I608623",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-09/6086_i608623_friskies_indoor_meaty_bits_homestyle_turkey_dinner_with_garden_greens_in_gravy_cat_food_ga7.pdf",
+        "https://www.purina.com/cats/shop/friskies-indoor-meaty-bits-homestyle-turkey-dinner-garden-greens-in-gravy-wet-cat-food",
+        "https://www.target.com/p/purina-friskies-indoor-wet-cat-food-meaty-bits-homestyle-turkey-dinner-with-garden-greens-in-gravy-5-5oz/-/A-50052316"
+      ],
+      "source_accessed_at": "2026-08-13",
+      "barcode_notes": "Target explicitly prints UPC 050000574070 for package quantity 1, 5.5 oz, with Turkey selected as the flavor. The code is recorded as the individual-can UPC.",
+      "conflicts": [
+        "Purina's live ingredient widget and Target's retailer panel still show added color and 2.3% maximum fiber. Purina's live page links September 2024 deck I608623, which omits added color and prints 2.75% maximum fiber; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057407 requires check digit 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000574070.",
+        "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 886 kcal/kg × 0.1559 kg = 138.1 kcal; label prints 138 kcal/can.",
+        "Target identifies the item as one 5.5 oz can; no multipack or case barcode was substituted.",
+        "Deck I608623 states adult-maintenance nutritional adequacy.",
+        "The current PDF's vitamin order is preserved exactly, including Menadione Sodium Bisulfite Complex capitalization."
       ],
       "research_status": "source_verified"
     }
