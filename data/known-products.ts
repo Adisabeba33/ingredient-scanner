@@ -1251,4 +1251,131 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     // check digit exactly as this one does.
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000579921", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Medleys ──────────────────────────────────────────────
+  //
+  // Three sub-ranges under one name — Florentine in a light broth, Tuscany in
+  // a savory sauce, Primavera in a silky broth — filed under the range the
+  // brand list knows, with the style in the variant. `presentation` keeps them
+  // apart where it matters: a broth and a sauce predict different thickeners.
+  //
+  // The four Florentines carry a live disagreement about artificial colour.
+  // See data/known-formulas.ts; the decks are stored as they read.
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken Florentine With Spinach in a Light Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570188", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Turkey Florentine With Spinach in a Light Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["turkey", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570348", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Tuna Florentine With Spinach in a Light Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000572199", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Wild Salmon Florentine With Spinach in a Light Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["salmon", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570492", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken Tuscany With Long Grain Rice & Spinach in a Savory Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "long grain rice", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000573660", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Tender Turkey Tuscany With Long Grain Rice & Spinach in a Savory Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["turkey", "long grain rice", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000573646", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Tuna Tuscany With Long Grain Rice & Spinach in a Savory Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "long grain rice", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000573622", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken Primavera With Tomatoes, Carrots & Spinach in a Silky Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken", "tomatoes", "carrots", "spinach"],
+    // The BROTH version. There is a separate White Meat Chicken Primavera
+    // PATÉ under 050000962648 — a different texture, a different formula and a
+    // different product record. It is not seeded here, and this code must
+    // never be given to it or the other way round.
+    packages: [{ size: "3 oz", container: CAN, upc: "050000574582", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Tuna Primavera With Tomatoes, Carrots & Spinach in a Silky Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna", "tomatoes", "carrots", "spinach"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000574605", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Tender Turkey Primavera With Tomatoes, Carrots & Spinach in a Silky Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["turkey", "tomatoes", "carrots", "spinach"],
+    // NOT 050000574537, which turns up in case and multipack listings. Unlike
+    // the other case codes here it has not been confirmed as one — the source
+    // calls it a candidate — so it is kept off the single can either way.
+    packages: [{ size: "3 oz", container: CAN, upc: "050000574520", scope: UNIT }],
+  },
 ];

@@ -164,7 +164,7 @@ const PRESENTATION_WORDS: [Presentation, string[]][] = [
   ["extra_gravy", ["extra gravy", "extra-gravy"]],
   ["in_gravy", ["in gravy", "in a gravy", "gravy", "with gravy", "in savory gravy"]],
   ["in_sauce", ["in sauce", "in a sauce", "in savory sauce", "sauce", "with sauce"]],
-  ["in_broth", ["in broth", "in a broth", "silky broth", "broth", "consomme"]],
+  ["in_broth", ["in broth", "in a broth", "silky broth", "light broth", "broth", "consomme"]],
   ["in_jelly", ["in jelly", "in jelle", "in gelee", "jelly", "aspic"]],
   ["in_water", ["in water", "in spring water", "in its own juices", "in natural juices"]],
 ];

@@ -265,11 +265,23 @@ describe("data/known-formulas.ts", () => {
   // digit exactly as the single tub does — and it circulates on pack listings.
   // Nothing about the number itself says it is the wrong object, which is why
   // this is a test and not a comment.
-  it("never files a case code against a single package", () => {
+  it("never files a case or sibling code against a single package", () => {
     const upcs = KNOWN_PRODUCTS.flatMap((p) => p.packages.map((k) => k.upc));
     // Every one of these passes its own check digit and circulates on retail
     // listings beside the code for the single unit.
-    for (const caseCode of ["050000504299", "050000503650", "050000579938"]) {
+    for (const caseCode of [
+      "050000504299",
+      "050000503650",
+      "050000579938",
+      // Not confirmed as a case — the source calls it a candidate — but it
+      // turns up in multipack listings for the Turkey Primavera, so it stays
+      // off the single can until a pack settles it.
+      "050000574537",
+      // Not a case at all: the White Meat Chicken Primavera PATE, a different
+      // texture and a different formula that shares the flavour name. The
+      // easiest of all of these to file against the wrong record.
+      "050000962648",
+    ]) {
       expect({ caseCode, filed: upcs.includes(caseCode) }).toEqual({
         caseCode,
         filed: false,
