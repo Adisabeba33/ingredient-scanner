@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Eleven batches, 130 products and 130 formulas have gone through this. Everything
+Twelve batches, 140 products and 140 formulas have gone through this. Everything
 below is what was actually done, including the parts that were got wrong first.
 
 ---
@@ -58,7 +58,7 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 130 have one.
+to go and find, and the import steps over it. Right now all 140 have one.
 
 ---
 
@@ -104,7 +104,7 @@ So when it fails: try the other plausible pack sizes before believing anybody.
 
 ### 2.3 Check what the checker cannot
 
-- **Is this barcode a case or a multipack?** Seven codes have turned up that
+- **Is this barcode a case or a multipack?** Ten codes have turned up that
   pass their own check digit and belong to a different object. The checker knows
   them (`data/wrong-barcodes.ts`) — but read what it says rather than only the
   ok/FAIL, because a code can earn its way OFF that list: `050000962648` was on
@@ -256,9 +256,14 @@ both, observed on a deck.
 | `V_MEDLEYS` | Short letters "(B1)", biotin and folic acid bare, K full |
 | `V_PATE_SHORT` | `V_PATE`'s order in short letters, biotin and folic glossed |
 
-**Before adding an eleventh, check every existing one against the new deck
-item by item.** Reusing one that is nearly right is worse than adding one:
-nearly right is a label nobody printed.
+**Before adding another, check every existing one against the new deck item by
+item.** Reusing one that is nearly right is worse than adding one: nearly right
+is a label nobody printed.
+
+Batch 012 is the worked example. Its block looked like `V_MEDLEYS` and a
+mechanical diff put it at **2 of 12 entries different** — biotin and folic acid,
+which Medleys prints bare and these decks gloss "(B7)" and "(B9)". Reusing it
+would have silently stripped two glosses off ten labels. Eleven constants now.
 
 Minerals are written inline rather than as constants, because they vary in one
 or two entries at a time. The two common shapes: with `Magnesium Proteinate`

@@ -89,6 +89,9 @@ const VERIFIED_010 = "2026-08-13";
 /** Batch 011 — the rest of the Fancy Feast Medleys range. */
 const VERIFIED_011 = "2026-08-13";
 
+/** Batch 012 — Gravy Lovers, Marinated Morsels and Sliced. */
+const VERIFIED_012 = "2026-08-13";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -249,6 +252,18 @@ const V_MEDLEYS =
  */
 const V_PATE_SHORT =
   "Vitamins [Thiamine Mononitrate (B1), Vitamin E Supplement, Niacin (B3), Calcium Pantothenate (B5), Pyridoxine Hydrochloride (B6), Riboflavin Supplement (B2), Vitamin B-12 Supplement, Biotin (B7), Vitamin A Supplement, Folic Acid (B9), Menadione Sodium Bisulfite Complex (Vitamin K), Vitamin D-3 Supplement]";
+
+/**
+ * An eleventh block: `V`'s order in the short notation, with every gloss kept.
+ *
+ * The closest existing constant is `V_MEDLEYS`, and it differs in exactly two
+ * of twelve entries — biotin and folic acid, which Medleys prints bare and
+ * these decks print as "(B7)" and "(B9)". Reusing it would have silently
+ * stripped two glosses off ten labels, which is the whole failure mode these
+ * constants exist to prevent. Checked against all ten before adding this one.
+ */
+const V_SHORT =
+  "Vitamins [Thiamine Mononitrate (B1), Vitamin E Supplement, Niacin (B3), Calcium Pantothenate (B5), Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride (B6), Riboflavin Supplement (B2), Vitamin B-12 Supplement, Biotin (B7), Folic Acid (B9), Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -1212,5 +1227,82 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Poultry Broth, Chicken, Wheat Gluten, Carrots, Liver, Meat By-Products, Turkey, Modified Corn Starch, Spinach, Glycine, Salt, Added Color, Soy Protein Concentrate, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Choline Chloride, Taurine, ${V_MEDLEYS}.`,
     analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 3.5, 0.05), 768, 65),
     verifiedAt: VERIFIED_011,
+  },
+
+  // ── Fancy Feast · Gravy Lovers (continued) ─────────────────────────────
+  //
+  // "Corn Starch-Modified" here, where most of the file says "Modified Corn
+  // Starch". Same thing, the range's own word order, copied.
+  "050000292639": {
+    ingredients: `Chicken And Beef Broth, Chicken, Wheat Gluten, Liver, Meat By-Products, Beef, Corn Starch-Modified, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(9.0, 2.0, 1.5, 82.0, 3.0, 0.05), 795, 67),
+    verifiedAt: VERIFIED_012,
+    conflict:
+      "Purina's current web presentation splits this into \u201cChicken Broth\u201d and \u201cBeef Broth\u201d where deck C702522 says \u201cChicken and Beef Broth\u201d, and writes the mineral block differently. The deck is stored. One combined broth and two separate ones are not the same claim about what is in the tin.",
+  },
+  "050000292615": {
+    // Chicken Hearts and Chicken Liver as named organs, ahead of the generic
+    // meat by-products. That ordering is the product.
+    ingredients: `Chicken Broth, Chicken, Wheat Gluten, Chicken Hearts, Chicken Liver, Corn Starch-Modified, Meat By-Products, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(9.0, 2.0, 1.5, 82.0, 3.0, 0.05), 792, 67),
+    verifiedAt: VERIFIED_012,
+    conflict: "Purina's current web presentation of this barcode differs from deck C702622 in small ways, including how the mineral block is written. The deck is stored. Recorded rather than ignored because \u201csmall\u201d is a judgement, and the next person to compare the two should know somebody already did.",
+  },
+  "050000292592": {
+    ingredients: `Fish Broth, Salmon, Wheat Gluten, Meat By-Products, Liver, Chicken, Corn Starch-Modified, Sole, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Vegetable Oil, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(9.0, 2.0, 1.5, 82.0, 3.0, 0.05), 770, 65),
+    verifiedAt: VERIFIED_012,
+    conflict:
+      "Purina's current web display and deck D702722 name two ingredients differently: \u201cVegetable Glycerin\u201d against \u201cVegetable Oil\u201d, and \u201cMagnesium Sulfate\u201d against \u201cMagnesium Proteinate\u201d. Neither pair is a spelling — glycerin is a humectant and oil is a fat, and a proteinate is a chelated mineral where a sulfate is not. The deck is stored.",
+  },
+
+  // ── Fancy Feast · Marinated Morsels ────────────────────────────────────
+  //
+  // Added Color on all five, Red 3 named on two, and no source contradicting
+  // any of it — so no conflict notes. Three of the five write their mineral
+  // block with copper before manganese, which is a fourth mineral ordering.
+  "050000259007": {
+    ingredients: `Poultry Broth, Chicken, Liver, Wheat Gluten, Turkey, Meat By-Products, Corn Starch-Modified, Artificial And Natural Flavors, Added Color, Soy Flour, Salt, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 3.0, 0.05), 944, 80),
+    verifiedAt: VERIFIED_012,
+  },
+  "050000235100": {
+    ingredients: `Meat Broth, Meat By-Products, Beef, Wheat Gluten, Fish, Corn Starch-Modified, Artificial And Natural Flavors, Soy Flour, Added Color, Salt, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.7, 0.05), 962, 82),
+    verifiedAt: VERIFIED_012,
+  },
+  "050000513338": {
+    // 0.07% taurine on an all-life-stages deck, not a kitten one. The higher
+    // guarantee is not exclusively a kitten thing, which is worth knowing
+    // before anybody reads 0.07 as a life stage.
+    ingredients: `Fish Broth, Meat By-Products, Salmon, Wheat Gluten, Chicken, Corn Starch-Modified, Artificial And Natural Flavors, Added Color, Soy Flour, Tricalcium Phosphate, Salt, Taurine, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide], Red 3, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 3.0, 0.07), 924, 79),
+    verifiedAt: VERIFIED_012,
+  },
+  "050000397983": {
+    // Red 3 after the vitamin block; the salmon above puts it before. Copied.
+    ingredients: `Fish Broth, Tuna, Meat By-Products, Wheat Gluten, Chicken, Corn Starch-Modified, Artificial And Natural Flavors, Added Color, Soy Flour, Tricalcium Phosphate, Salt, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}, Red 3.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 3.0, 0.05), 899, 76),
+    verifiedAt: VERIFIED_012,
+  },
+  "050000405398": {
+    ingredients: `Poultry Broth, Turkey, Liver, Wheat Gluten, Meat By-Products, Corn Starch-Modified, Artificial And Natural Flavors, Soy Flour, Added Color, Tricalcium Phosphate, Salt, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.7, 0.05), 955, 81),
+    verifiedAt: VERIFIED_012,
+  },
+
+  // ── Fancy Feast · Sliced ───────────────────────────────────────────────
+  "050000434640": {
+    // "Chicken Livers" plural AND a generic "Liver" on the same deck, in that
+    // order. Two entries, not one written twice.
+    ingredients: `Poultry Broth, Chicken, Wheat Gluten, Chicken Hearts, Chicken Livers, Liver, Soy Flour, Meat By-Products, Corn Starch-Modified, Salt, Glycine, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.7, 0.05), 960, 81),
+    verifiedAt: VERIFIED_012,
+    conflict: "Purina's current web presentation of this barcode differs from deck E700322 in small ways, including how the mineral block is written. The deck is stored. Recorded rather than ignored because \u201csmall\u201d is a judgement, and the next person to compare the two should know somebody already did.",
+  },
+  "050000426348": {
+    ingredients: `Meat Broth, Beef, Liver, Wheat Gluten, Meat By-Products, Corn Starch-Modified, Fish, Poultry, Soy Flour, Soy Protein Concentrate, Artificial And Natural Flavors, Salt, Added Color, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_SHORT}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.5, 0.05), 933, 79),
+    verifiedAt: VERIFIED_012,
   },
 };

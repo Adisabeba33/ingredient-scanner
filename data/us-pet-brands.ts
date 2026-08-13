@@ -75,6 +75,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Flaked",
       "Roasted",
       "Marinated Morsels",
+      "Sliced",
       "Gems",
       "Purely",
       "Petites",

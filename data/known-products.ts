@@ -1815,4 +1815,143 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "adult",
     packages: [{ size: "3 oz", container: CAN, upc: "050000503315", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Gravy Lovers (continued) ─────────────────────────────
+  //
+  // All three carry a case candidate a digit or two away from the single tin —
+  // see data/wrong-barcodes.ts. That is now three ranges in a row where the
+  // source has caught one, which is worth reading as the norm rather than as
+  // an oddity.
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Chicken & Beef Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000292639", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Chicken Hearts & Liver Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    // Chicken Hearts and Chicken Liver are named organs, distinct from the
+    // generic "liver" that most of these decks list. Both are kept.
+    proteins: ["chicken", "chicken hearts", "chicken liver"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000292615", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Salmon & Sole Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon", "sole", "chicken"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000292592", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Marinated Morsels ────────────────────────────────────
+  //
+  // Added Color on all five, and Red 3 named on two. No webpage contradicts
+  // these, so they carry no conflict note — they are simply coloured foods.
+  {
+    brand: "Fancy Feast",
+    line: "Marinated Morsels",
+    variant: "Chicken Feast in Gravy",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000259007", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Marinated Morsels",
+    variant: "Beef Feast in Gravy",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef", "fish"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000235100", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Marinated Morsels",
+    variant: "Salmon Feast in Gravy",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon", "chicken"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000513338", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Marinated Morsels",
+    variant: "Tuna Feast in Gravy",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna", "chicken"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000397983", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Marinated Morsels",
+    variant: "Turkey Feast in Gravy",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000405398", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Sliced ───────────────────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Sliced",
+    variant: "Chicken Hearts & Liver Feast in Gravy",
+    species: "cat",
+    texture: "slices",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "chicken hearts", "chicken liver"],
+    lifeStage: "adult",
+    // Shares its whole name with the Gravy Lovers tin above. Different range,
+    // different texture, different deck — and a good reason to read the range
+    // before assuming two products with one name are one product.
+    packages: [{ size: "3 oz", container: CAN, upc: "050000434640", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Sliced",
+    variant: "Beef Feast in Gravy",
+    species: "cat",
+    texture: "slices",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef", "fish", "poultry"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000426348", scope: UNIT }],
+  },
 ];

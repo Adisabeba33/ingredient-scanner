@@ -18,7 +18,7 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-13, after batch 011. 130 products, 32 with a conflict
+Last updated: 2026-08-13, after batch 012. 140 products, 36 with a conflict
 note, 10 of those needing a physical pack.
 
 ---
@@ -139,7 +139,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (21)
+## B. Settled at the desk — an older record against a current deck (25)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -252,9 +252,40 @@ Inventing the specific name to match a webpage would be writing the label.
 
 **Where this came from:** batch 011.
 
+### B9. A deck's wording against the same maker's webpage (4)
+
+The pattern that arrived in bulk with batch 012: Purina's own site presents an
+ingredient list that differs from the deck it links to. Rule 1 settles all four
+— the deck is the artwork that was printed — but two of them are worth reading,
+because "minor wording difference" is what the source called them and two of
+them are not that.
+
+| UPC | Product | Deck says | The website says |
+|---|---|---|---|
+| `050000292592` | Gravy Lovers — Salmon & Sole, 3 oz | **Vegetable Oil**, **Magnesium Proteinate** | Vegetable Glycerin, Magnesium Sulfate |
+| `050000292639` | Gravy Lovers — Chicken & Beef, 3 oz | **Chicken and Beef Broth** (one entry) | Chicken Broth, Beef Broth (two) |
+| `050000292615` | Gravy Lovers — Chicken Hearts & Liver, 3 oz | deck C702622 | minor differences incl. the mineral block |
+| `050000434640` | Sliced — Chicken Hearts & Liver, 3 oz | deck E700322 | minor wording and mineral-list differences |
+
+**Not minor, the first one.** Glycerin is a humectant and oil is a fat; a
+proteinate is a chelated mineral and a sulfate is not. Those are four different
+substances, not two spellings, and somebody reading a list for fat content or
+for chelated minerals gets a different answer from each.
+
+**Not minor, the second either.** One combined broth and two separate broths
+are different claims about what is in the tin and in what proportion — the
+combined entry says nothing about the ratio, the split entries place each by
+weight.
+
+The other two the source itself described only as "minor", without listing
+what. Recorded anyway: *minor* is a judgement somebody made, and the next
+person to compare the two pages should know it was already looked at.
+
+**Where this came from:** batch 012.
+
 ---
 
-## C. Barcodes that belong to something else (7)
+## C. Barcodes that belong to something else (10)
 
 **The list lives in [`data/wrong-barcodes.ts`](../data/wrong-barcodes.ts)**, not
 in this file and no longer in a test. Three things read it: the test that
@@ -270,7 +301,7 @@ a check somebody will trust and should not.**
 Every code in it passes its own UPC-A check digit and appears in real listings.
 Nothing about the number says it is wrong.
 
-Four are confirmed cases. Three arrived labelled "case candidate" by the source
+Three are confirmed cases. Seven arrived labelled "case candidate" by the source
 and are unconfirmed; they stay off the single tin either way, because an
 unconfirmed case code is still not evidence that it IS the tin.
 
@@ -289,6 +320,7 @@ kind of hazard goes — not a code to avoid, two codes to keep apart.
 | Pair | Why they are confusable |
 |---|---|
 | `050000574582` / `050000962648` | Fancy Feast Medleys White Meat Chicken Primavera exists twice: a silky broth with tender pieces, and a paté. Same flavour name, different texture, different formula. |
+| `050000292615` / `050000434640` | **Chicken Hearts & Liver Feast in Gravy** exists twice, with the same name to the letter: once in Gravy Lovers as chunks, once in Sliced as slices. Different decks, different guarantees — 9% protein against 11%. The only thing telling them apart is the range. |
 
 A case code attached to a single tin gives the right ingredients under the wrong
 barcode. A **sibling product** code gives the wrong ingredients under a

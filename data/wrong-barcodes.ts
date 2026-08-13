@@ -93,6 +93,24 @@ export const WRONG_BARCODES: WrongBarcode[] = [
     insteadUse: "050000503285",
     confirmed: false,
   },
+  {
+    code: "050000292646",
+    is: "appears in 24-can listings for Gravy Lovers Chicken & Beef",
+    insteadUse: "050000292639",
+    confirmed: false,
+  },
+  {
+    code: "050000292622",
+    is: "appears in 24-can listings for Gravy Lovers Chicken Hearts & Liver",
+    insteadUse: "050000292615",
+    confirmed: false,
+  },
+  {
+    code: "050000292608",
+    is: "appears in case listings for Gravy Lovers Salmon & Sole",
+    insteadUse: "050000292592",
+    confirmed: false,
+  },
 ];
 
 /**
@@ -107,5 +125,10 @@ export const CONFUSABLE_PAIRS: { a: string; b: string; why: string }[] = [
     a: "050000574582",
     b: "050000962648",
     why: "Fancy Feast Medleys White Meat Chicken Primavera exists twice: a silky broth with tender pieces, and a paté. Same flavour name, different texture, different formula.",
+  },
+  {
+    a: "050000292615",
+    b: "050000434640",
+    why: "Chicken Hearts & Liver Feast in Gravy exists twice under the same name to the letter: Gravy Lovers sells it as chunks, Sliced sells it as slices. Different decks and different guarantees — 9% minimum protein against 11%. Nothing but the range name separates them, and a product name alone will pick the wrong one.",
   },
 ];
