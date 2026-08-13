@@ -290,10 +290,44 @@ describe("data/known-formulas.ts", () => {
   });
 
   // Kitten food guarantees more taurine than adult food does, and the figure
-  // must not be flattened to the 0.05 that the other fifty-odd packs state.
+  // must not be flattened to the 0.05 that the other hundred-odd packs state.
+  //
+  // Written against `lifeStage` rather than against a list of barcodes, so it
+  // covers whatever arrives next — and so it is a cross-check rather than a
+  // restatement: the field is set from the front of the pack and the taurine
+  // comes off the panel, two independent readings that have to agree. A kitten
+  // tin at 0.05 means one of the two was copied from an adult sibling.
   it("keeps the kitten taurine guarantee at what the deck says", () => {
-    expect(KNOWN_FORMULAS["050000575008"].analysis.taurineMin).toBe(0.07);
-    expect(KNOWN_FORMULAS["050000574988"].analysis.taurineMin).toBe(0.07);
+    const kittens = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "kitten");
+    expect(kittens.length).toBeGreaterThan(0);
+    for (const upc of kittens.flatMap((p) => p.packages.map((k) => k.upc))) {
+      expect({ upc, taurine: KNOWN_FORMULAS[upc]?.analysis.taurineMin }).toEqual({
+        upc,
+        taurine: 0.07,
+      });
+    }
+  });
+
+  // The field says what a deck said, never what a name suggests. "Kitten" in a
+  // product's own words is the one place it may be inferred from — that is the
+  // range name on the front — and everywhere else it has to come from an AAFCO
+  // statement somebody actually read.
+  it("claims a life stage only where one was stated", () => {
+    const stated = KNOWN_PRODUCTS.filter((p) => p.lifeStage !== undefined);
+    for (const p of stated) {
+      expect({
+        name: `${p.line} ${p.variant}`,
+        ok: ["kitten", "adult", "all"].includes(p.lifeStage as string),
+      }).toEqual({ name: `${p.line} ${p.variant}`, ok: true });
+    }
+    // And the two that are neither plain adult nor plain kitten are still here:
+    // an all-life-stages Shreds, and a kitten paté inside an adult range.
+    expect(KNOWN_PRODUCTS.some((p) => p.lifeStage === "all")).toBe(true);
+    expect(
+      KNOWN_PRODUCTS.some(
+        (p) => p.lifeStage === "kitten" && p.line !== "Kitten"
+      )
+    ).toBe(true);
   });
 
   // A Gems box holds two 2 oz mousses and the deck states calories per GEM.

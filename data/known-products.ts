@@ -83,6 +83,29 @@ export interface KnownProduct {
   foodForm: "wet" | "dry";
   /** The named protein(s), normalised: what the pack sells itself on. */
   proteins: string[];
+  /**
+   * Who the pack is fed to, where the deck says.
+   *
+   * Absent means the deck did not state one, which is most of them — an
+   * ordinary adult food usually just says "maintenance of adult cats" in the
+   * AAFCO statement and nothing on the front, and inferring "adult" from
+   * silence would turn an absence into a claim.
+   *
+   * ── Why this is a field and not part of the range name ────────────────
+   *
+   * Fancy Feast Kitten carries it in `line`, correctly: "Kitten" IS the range
+   * on the front of the tin. Two other cases cannot be written that way, and
+   * both were losing the information until this existed. Gourmet Naturals
+   * sells a kitten paté INSIDE an otherwise adult range, so the range name
+   * says nothing about it. And the Friskies Shreds Whitefish & Sardines deck
+   * is approved for kitten growth AND adult maintenance in a range where
+   * everything else is adult — a property of the formula, not of the shelf.
+   *
+   * Getting this wrong is not cosmetic. A kitten food fed as an adult food is
+   * a real mistake, and it is the sort a catalog quietly causes by having
+   * nowhere to put the distinction.
+   */
+  lifeStage?: "kitten" | "adult" | "all";
   packages: KnownPackage[];
 }
 
@@ -868,6 +891,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     presentation: "plain",
     foodForm: "wet",
     proteins: ["turkey"],
+    lifeStage: "kitten",
     packages: [{ size: "3 oz", container: CAN, upc: "050000575008", scope: UNIT }],
   },
   {
@@ -879,6 +903,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     presentation: "plain",
     foodForm: "wet",
     proteins: ["whitefish"],
+    lifeStage: "kitten",
     packages: [{ size: "3 oz", container: CAN, upc: "050000574988", scope: UNIT }],
   },
 
@@ -1220,13 +1245,9 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
 
   // ── Friskies · Shreds (continued) ──────────────────────────────────────
   //
-  // The Whitefish & Sardines deck covers kitten growth AND adult maintenance.
-  // There is nowhere here to record that: `KnownProduct` has no life-stage
-  // column, and the one life-stage range in the seed — Fancy Feast Kitten —
-  // carries it in `line` because that is the range name on the front. This one
-  // is an ordinary Shreds tin that happens to be fed to both, which is a
-  // property of the FORMULA rather than of the range. Second time this has come
-  // up; the field is worth adding on its own.
+  // The Whitefish & Sardines deck covers kitten growth AND adult maintenance,
+  // in a range where everything else is adult. `lifeStage: "all"` is what that
+  // is; see the field's note above for why it is not in the range name.
   {
     brand: "Friskies",
     line: "Shreds",
@@ -1236,6 +1257,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     presentation: "in_sauce",
     foodForm: "wet",
     proteins: ["whitefish", "sardines"],
+    lifeStage: "all",
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000579907", scope: UNIT }],
   },
   {
@@ -1377,5 +1399,132 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     // the other case codes here it has not been confirmed as one — the source
     // calls it a candidate — so it is kept off the single can either way.
     packages: [{ size: "3 oz", container: CAN, upc: "050000574520", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Gourmet Naturals ─────────────────────────────────────
+  //
+  // The range that made `lifeStage` necessary: a kitten paté sits inside it,
+  // between nine adult recipes, and the range name says nothing about which is
+  // which. Two textures share the range too — paté and cuts in gravy — so the
+  // texture column carries the whole of that distinction.
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Wild Alaskan Salmon Recipe (Kitten)",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "kitten",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000502585", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Wild Alaskan Salmon Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172108", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural White Meat Chicken Recipe in Gravy",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172832", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Beef Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172146", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural White Meat Chicken Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172085", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Trout & Tuna Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["trout", "tuna"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172122", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Beef Recipe in Gravy",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172887", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Wild Alaskan Salmon & Shrimp Recipe in Gravy",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon", "shrimp"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000172856", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural Ocean Whitefish Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["whitefish"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000502677", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Naturals",
+    variant: "Natural White Meat Chicken & Beef Recipe in Gravy",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000502622", scope: UNIT }],
   },
 ];

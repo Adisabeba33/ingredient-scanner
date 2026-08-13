@@ -80,6 +80,9 @@ const VERIFIED_007 = "2026-08-13";
 /** Batch 008 — the Fancy Feast Medleys range. */
 const VERIFIED_008 = "2026-08-13";
 
+/** Batch 009 — the Fancy Feast Gourmet Naturals range. */
+const VERIFIED_009 = "2026-08-13";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -965,5 +968,73 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Poultry Broth, Turkey, Wheat Gluten, Meat By-Products, Liver, Tomatoes, Carrots, Modified Corn Starch, Spinach, Soy Flour, Glycine, Salt, Natural Flavor, Corn Oil, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Choline Chloride, Taurine, ${V_MEDLEYS}.`,
     analysis: withCalories(ga(10.0, 1.5, 1.5, 82.0, 3.0, 0.05), 795, 67),
     verifiedAt: VERIFIED_008,
+  },
+
+  // ── Fancy Feast · Gourmet Naturals ─────────────────────────────────────
+  //
+  // Short lists by the standards of this file — the range sells itself on that
+  // — and the two in-gravy recipes are the ones that pick up xanthan gum and
+  // carrageenan, exactly as `impliesThickener` would predict.
+  "050000502585": {
+    // Kitten. 0.07% taurine like the other two kitten decks, and a calcium
+    // minimum of 0.3% that is again NOT stored: `GuaranteedAnalysis` has no
+    // calcium field, and adding one means changing the type here and in the
+    // consumer app together, since the consumer drops keys it does not know
+    // when it reads a stored panel back. Third pack to state one.
+    ingredients: `Salmon, Chicken, Liver, Fish Broth, Fish, Milk, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Choline Chloride, Taurine, ${V_E_FIRST_A_MID}, Salt.`,
+    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1143, 97),
+    verifiedAt: VERIFIED_009,
+    conflict: "Also guarantees Calcium (min) 0.3%, which is not stored — there is no field for it yet.",
+  },
+  "050000172108": {
+    ingredients: `Salmon, Chicken, Liver, Fish Broth, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(10.0, 5.0, 1.5, 78.0, 3.5, 0.05), 1145, 97),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172832": {
+    ingredients: `Chicken Broth, Chicken, Liver, Wheat Gluten, Natural Flavors, Turkey, Canola Oil, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Xanthan Gum, Salt, Carrageenan, Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 82.0, 2.5, 0.05), 779, 66),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172146": {
+    ingredients: `Beef, Meat Broth, Liver, Chicken, Fish, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.5, 78.0, 3.5, 0.05), 1168, 99),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172085": {
+    ingredients: `Chicken, Chicken Broth, Liver, Turkey, Fish, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Choline Chloride, Taurine, ${V}, Salt.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.5, 78.0, 3.8, 0.05), 1134, 96),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172122": {
+    ingredients: `Trout, Chicken, Fish Broth, Liver, Tuna, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(10.0, 5.0, 1.5, 78.0, 3.5, 0.05), 1171, 99),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172887": {
+    ingredients: `Meat Broth, Beef, Wheat Gluten, Liver, Natural Flavors, Turkey, Fish, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Xanthan Gum, Carrageenan, Salt, Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 82.0, 2.8, 0.05), 744, 63),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000172856": {
+    ingredients: `Fish Broth, Salmon, Wheat Gluten, Liver, Chicken, Shrimp, Natural Flavors, Canola Oil, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Xanthan Gum, Salt, Carrageenan, Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 82.0, 2.5, 0.05), 777, 66),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000502677": {
+    ingredients: `Ocean Whitefish, Chicken, Liver, Fish Broth, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Choline Chloride, Taurine, ${V}, Salt.`,
+    analysis: withCalories(ga(10.0, 5.0, 1.5, 78.0, 3.5, 0.05), 1157, 98),
+    verifiedAt: VERIFIED_009,
+  },
+  "050000502622": {
+    // Vegetable Oil stays. Purina's HTML list for this barcode does not show
+    // it and deck B653921 does; everything else about the two sequences lines
+    // up. An oil is a real ingredient with a real place in the order, so this
+    // is a reformulation or a rendering fault, not a spelling.
+    ingredients: `Chicken Broth, Chicken, Liver, Wheat Gluten, Beef, Natural Flavors, Vegetable Oil, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Xanthan Gum, Carrageenan, Taurine, Choline Chloride, ${V}, Salt.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 82.0, 2.5, 0.05), 784, 66),
+    verifiedAt: VERIFIED_009,
+    conflict:
+      "Deck B653921 lists Vegetable Oil where Purina's current HTML list for this barcode does not. The rest of the sequence agrees, so this is one ingredient added or removed rather than two different lists. The deck is stored; worth a physical re-read.",
   },
 };
