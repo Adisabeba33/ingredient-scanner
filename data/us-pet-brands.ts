@@ -109,6 +109,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Farm Favorites",
       "Lil' Soups",
       "Glaz'd & Infuz'd",
+      "Fully Load'd",
       "Chunky",
       "Party Mix",
       "Seafood Sensations",

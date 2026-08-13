@@ -83,6 +83,9 @@ const VERIFIED_008 = "2026-08-13";
 /** Batch 009 — the Fancy Feast Gourmet Naturals range. */
 const VERIFIED_009 = "2026-08-13";
 
+/** Batch 010 — four more Medleys, Fully Load\u2019d and Glaz\u2019d & Infuz\u2019d. */
+const VERIFIED_010 = "2026-08-13";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -224,6 +227,25 @@ const V_GEMS =
  */
 const V_MEDLEYS =
   "Vitamins [Thiamine Mononitrate (B1), Vitamin E Supplement, Niacin (B3), Calcium Pantothenate (B5), Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride (B6), Riboflavin Supplement (B2), Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]";
+
+/**
+ * `V_PATE`'s order in the short notation — a tenth block, and the last one
+ * anybody should be surprised by.
+ *
+ * Thiamine, E, niacin, pantothenate, B6, B2, B12, biotin, A, folic acid,
+ * menadione, D-3: exactly the Friskies Pâté ordering. What differs is how it is
+ * written. These decks gloss with bare letters, "(B1)" and "(B7)", where the
+ * pâtés write "(Vitamin B-1)" and "(Vitamin B-7)" — and unlike `V_MEDLEYS`,
+ * which drops the gloss from biotin and folic acid entirely, these keep it on
+ * both.
+ *
+ * Ten constants for one vitamin premix looks absurd until you notice that no
+ * two of them are the same document. Each is an ordering, a notation, or both,
+ * observed on a deck. Merging any pair would make the file tidier and make it
+ * describe a label nobody printed.
+ */
+const V_PATE_SHORT =
+  "Vitamins [Thiamine Mononitrate (B1), Vitamin E Supplement, Niacin (B3), Calcium Pantothenate (B5), Pyridoxine Hydrochloride (B6), Riboflavin Supplement (B2), Vitamin B-12 Supplement, Biotin (B7), Vitamin A Supplement, Folic Acid (B9), Menadione Sodium Bisulfite Complex (Vitamin K), Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -1036,5 +1058,84 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_009,
     conflict:
       "Deck B653921 lists Vegetable Oil where Purina's current HTML list for this barcode does not. The rest of the sequence agrees, so this is one ingredient added or removed rather than two different lists. The deck is stored; worth a physical re-read.",
+  },
+
+  // ── Fancy Feast · Medleys (continued) ──────────────────────────────────
+  //
+  // Milanese and Carne Asada both print 811 kcal/kg on the same 3 oz can and
+  // then state 69 and 68 kcal/can. 811 x 85.05 g is 68.97, so Purina rounded
+  // one and truncated the other. Both are copied as printed: a figure on a
+  // label is a fact about that label even when its sibling disagrees.
+  "050000659951": {
+    ingredients: `Beef Broth, Beef, Wheat Gluten, Liver, Tomatoes, Meat By-Products, Pasta, Modified Corn Starch, Soy Flour, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_MEDLEYS}.`,
+    analysis: withCalories(ga(10.0, 1.5, 1.5, 82.0, 3.5, 0.05), 813, 69),
+    verifiedAt: VERIFIED_010,
+  },
+  "050000660018": {
+    // Whole Milk, eleventh. The only Medleys deck that carries dairy.
+    ingredients: `Beef And Pork Broth, Beef, Liver, Wheat Gluten, Potatoes, Meat By-Products, Carrots, Modified Corn Starch, Pork, Soy Flour, Whole Milk, Glycine, Salt, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_MEDLEYS}.`,
+    analysis: withCalories(ga(10.0, 1.5, 1.5, 82.0, 3.5, 0.05), 811, 69),
+    verifiedAt: VERIFIED_010,
+  },
+  "050000191024": {
+    // Pork, from the first ingredient down. Target files this as "Barbacoa
+    // Beef Flavor"; there is no beef anywhere in the deck.
+    ingredients: `Pork Broth, Pork, Wheat Gluten, Liver, Meat By-Products, Rice, Tomatoes, Carrots, Modified Corn Starch, Soy Flour, Salt, Glycine, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_MEDLEYS}.`,
+    analysis: withCalories(ga(10.0, 1.5, 1.5, 82.0, 3.0, 0.05), 820, 69),
+    verifiedAt: VERIFIED_010,
+    conflict:
+      "Target's metadata calls this barcode \u201cBarbacoa Beef Flavor\u201d. Deck A648523 and Purina's own description say Pork Barbacoa, and the list leads with pork broth and pork with no beef anywhere in it. Stored as pork. Not a formula disagreement — a retailer naming the wrong animal, which matters to somebody avoiding one.",
+  },
+  "050000186341": {
+    ingredients: `Beef Broth, Beef, Wheat Gluten, Liver, Meat By-Products, Potatoes, Carrots, Modified Corn Starch, Soy Flour, Salt, Glycine, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_MEDLEYS}.`,
+    analysis: withCalories(ga(10.0, 1.5, 1.5, 82.0, 3.0, 0.05), 811, 68),
+    verifiedAt: VERIFIED_010,
+  },
+
+  // ── Friskies · Fully Load'd ────────────────────────────────────────────
+  //
+  // The named flavour is eighth on all three, after water, chicken, wheat
+  // gluten, meat by-products, liver, soy flour and modified corn starch. The
+  // first seven are identical across the range; what makes a Fully Load'd tin
+  // tuna rather than salmon is one line eight positions down.
+  "050000239726": {
+    ingredients: `Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Modified Corn Starch, Carrots, Tomatoes, Spinach, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Taurine, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 958, 149),
+    verifiedAt: VERIFIED_010,
+  },
+  "050000236091": {
+    ingredients: `Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Modified Corn Starch, Tuna, Rice, Spinach, Tomatoes, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Taurine, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 958, 149),
+    verifiedAt: VERIFIED_010,
+    conflict:
+      "Some retailer copies of this list omit Wheat Gluten near the front. Deck A508025 has it third, and third is a lot of the tin. Stored with it.",
+  },
+  "050000241200": {
+    ingredients: `Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Modified Corn Starch, Salmon, Wild Rice, Carrots, Spinach, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Taurine, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.5, 1.0, 79.0, 2.5, 0.05), 937, 146),
+    verifiedAt: VERIFIED_010,
+    conflict:
+      "Two calorie statements for this barcode: deck A507925 says 937 kcal/kg and 146 kcal/can, older Purina and retailer pages say 958 and 149. Both pairs check out against a 5.5 oz can (146.1 and 149.4), so this is a reformulation rather than a typo — the same pattern as Country Style Dinner. The deck's figures are stored.",
+  },
+
+  // ── Friskies · Glaz'd & Infuz'd ────────────────────────────────────────
+  //
+  // Caramel Color on all three, and two gums — xanthan and locust bean. The
+  // crab and the shrimp share a deck almost exactly: the same eighteen
+  // entries in the same order, differing only in which shellfish sits eighth.
+  "050000351428": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Carrots, Soy Flour, Spinach, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Xanthan Gum, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Caramel Color, Locust Bean Gum, Taurine, Choline Chloride, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.5, 0.05), 831, 129),
+    verifiedAt: VERIFIED_010,
+  },
+  "050000348053": {
+    ingredients: `Water, Meat By-Products, Chicken, Tomatoes, Wheat Gluten, Carrots, Soy Flour, Crab, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Xanthan Gum, Caramel Color, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Locust Bean Gum, Taurine, Choline Chloride, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.5, 0.05), 815, 127),
+    verifiedAt: VERIFIED_010,
+  },
+  "050000342143": {
+    ingredients: `Water, Meat By-Products, Chicken, Tomatoes, Wheat Gluten, Carrots, Soy Flour, Shrimp, Modified Corn Starch, Artificial And Natural Flavors, Tricalcium Phosphate, Xanthan Gum, Caramel Color, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Locust Bean Gum, Taurine, Choline Chloride, Salt, ${V_PATE_SHORT}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.5, 0.05), 822, 128),
+    verifiedAt: VERIFIED_010,
   },
 };

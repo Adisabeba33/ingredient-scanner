@@ -14,7 +14,7 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-13, after batch 009. 110 products, 28 with a conflict
+Last updated: 2026-08-13, after batch 010. 120 products, 31 with a conflict
 note, 10 of those needing a physical pack.
 
 ---
@@ -135,7 +135,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (17)
+## B. Settled at the desk — an older record against a current deck (20)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -191,6 +191,49 @@ would be 64.6 kcal and the deck prints 52, which is a 2 oz gem. Stored as 4 oz.
 The source documents said only that an older version exists, without giving it.
 If one of these ever needs resolving, the old formula will have to be found
 again — worth knowing before somebody assumes the note means more than it says.
+
+### B5. A retailer naming the wrong animal (1)
+
+| UPC | Product | What the retailer says | Stored |
+|---|---|---|---|
+| `050000191024` | Fancy Feast Medleys — Barbacoa, 3 oz | Target: "Barbacoa **Beef** Flavor" | **Pork** Barbacoa (deck A648523) |
+
+Settled without a pack because the ingredient list settles it: the deck leads
+with **Pork Broth, Pork** and contains no beef anywhere. Purina's own
+description says pork.
+
+Worth its own entry rather than a line in B3, because this is not a formula
+being out of date — it is a product identified as the wrong meat. Somebody
+avoiding beef, or feeding a cat that reacts to it, is exactly the person who
+would trust a retailer's flavour name and be wrong.
+
+**Where this came from:** batch 010.
+
+### B6. A calorie statement reformulated (1)
+
+| UPC | Product | Older | Deck A507925 |
+|---|---|---|---|
+| `050000241200` | Friskies Fully Load'd — Salmon, Wild Rice, Carrots & Spinach, 5.5 oz | 958 kcal/kg · 149 kcal/can | **937 kcal/kg · 146 kcal/can** |
+
+```
+958 × 155.9 g = 149.4  ✓
+937 × 155.9 g = 146.1  ✓
+```
+
+Same shape as Country Style Dinner in A3 and the opposite verdict, because here
+the two are dated: an older page against a newer deck is a sequence. Both pairs
+check out, so it is a real reformulation and not a typo — rule 4 — and the
+current deck wins by rule 1.
+
+### B7. An ingredient a retailer drops (1)
+
+| UPC | Product | Missing from retailer copies | Stored |
+|---|---|---|---|
+| `050000236091` | Friskies Fully Load'd — Tuna, Rice, Spinach & Tomatoes, 5.5 oz | **Wheat Gluten**, third | deck A508025, with it |
+
+Third position is a lot of a tin, and wheat gluten is something people look for.
+Unlike the Haddock case in A2 this needs no pack: it is a retailer omission
+against the manufacturer's own deck, which rule 1 already answers.
 
 ---
 
@@ -266,13 +309,19 @@ Not conflicts between sources — conflicts between what a source document wrote
 and what a label can plausibly print. Recorded because each was a judgement and
 each could be wrong.
 
-### E1. Six vitamin block orderings, none merged
+### E1. Ten vitamin block orderings, none merged
 
-`data/known-formulas.ts` carries nine constants — `V`, `V_PATE`, `V_E_FIRST`,
-`V_E_FIRST_A_MID`, `V_NIACIN_FIRST`, `V_NO_K`, `V_PLAIN`, `V_GEMS`, `V_MEDLEYS`
-— because that many genuinely different orderings and notations turned up across
-110 decks. Merging any two would be tidying a label into a house style it does
-not have.
+`data/known-formulas.ts` carries ten constants — `V`, `V_PATE`, `V_E_FIRST`,
+`V_E_FIRST_A_MID`, `V_NIACIN_FIRST`, `V_NO_K`, `V_PLAIN`, `V_GEMS`,
+`V_MEDLEYS`, `V_PATE_SHORT` — because that many genuinely different orderings
+and notations turned up across 120 decks.
+
+Ten looks absurd for one premix until you notice no two are the same document.
+`V_PATE` and `V_PATE_SHORT` are the same twelve in the same order, written with
+"(Vitamin B-1)" and with "(B1)". `V_MEDLEYS` uses the short letters too but
+drops the gloss from biotin and folic acid while keeping menadione's in full.
+Merging any pair would make the file tidier and make it describe a label nobody
+printed.
 
 The one worth knowing about: **`V_NO_K`**, for Prime Filets Salmon & Beef
 (`050000100422`), whose deck closes the vitamin bracket *before* menadione and

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
@@ -364,6 +365,21 @@ describe("data/known-formulas.ts", () => {
         shorthand: false,
       });
     }
+  });
+
+  // The promise made when docs/CATALOG-CONFLICTS.md was written: a new
+  // disagreement gets recorded there at the same time as the data, not
+  // afterwards. A promise kept by memory is kept until the day it is busy.
+  //
+  // The one-sentence `conflict` note is what a person sees in the import panel;
+  // the document is where the reasoning lives, and reasoning that exists only
+  // in a commit message is reasoning nobody will find in November.
+  it("has every conflict written down in docs/CATALOG-CONFLICTS.md", () => {
+    const doc = readFileSync("docs/CATALOG-CONFLICTS.md", "utf8");
+    const undocumented = Object.entries(KNOWN_FORMULAS)
+      .filter(([upc, f]) => f.conflict && !doc.includes(upc))
+      .map(([upc]) => upc);
+    expect(undocumented).toEqual([]);
   });
 
   it("keeps the note where the source flagged an older formula", () => {

@@ -166,7 +166,12 @@ const PRESENTATION_WORDS: [Presentation, string[]][] = [
   ["in_sauce", ["in sauce", "in a sauce", "in savory sauce", "sauce", "with sauce"]],
   ["in_broth", ["in broth", "in a broth", "silky broth", "light broth", "broth", "consomme"]],
   ["in_jelly", ["in jelly", "in jelle", "in gelee", "jelly", "aspic"]],
-  ["in_water", ["in water", "in spring water", "in its own juices", "in natural juices"]],
+  // "Savory juices" belongs here rather than under gravy or sauce, and the
+  // decks are why: the three Medleys that use the phrase carry no xanthan, no
+  // guar and no carrageenan between them. A juice is the liquid the meat came
+  // in, and `in_water` is the bucket that predicts no thickener — which is the
+  // question this field mostly exists to answer.
+  ["in_water", ["in savory juices", "in its own juices", "in natural juices", "savory juices", "in spring water", "in water"]],
 ];
 
 function fold(text: string | null | undefined): string {

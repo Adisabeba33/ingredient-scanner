@@ -1527,4 +1527,150 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "adult",
     packages: [{ size: "3 oz", container: CAN, upc: "050000502622", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Medleys (continued) ──────────────────────────────────
+  //
+  // A fourth sub-range under Medleys, and the first pork in the seed. The
+  // three "in savory juices" decks carry no gums at all, which is why they are
+  // `in_water` and not `in_gravy` — see the note in lib/presentation.ts.
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Beef Ragú Recipe With Tomatoes & Pasta in a Savory Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["beef", "tomatoes", "pasta"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000659951", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Beef & Pork Milanese Recipe With Potatoes & Carrots in Savory Juices",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_water",
+    foodForm: "wet",
+    proteins: ["beef", "pork", "potatoes", "carrots"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000660018", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    // PORK, not beef. Target's metadata says "Barbacoa Beef Flavor"; the deck
+    // and Purina's own description say pork, and the list leads with pork
+    // broth and pork. Filed under what the deck says.
+    variant: "Pork Barbacoa Recipe With Rice, Tomatoes & Carrots in Savory Juices",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_water",
+    foodForm: "wet",
+    proteins: ["pork", "rice", "tomatoes", "carrots"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000191024", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Beef Carne Asada Recipe With Potatoes & Carrots in Savory Juices",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_water",
+    foodForm: "wet",
+    proteins: ["beef", "potatoes", "carrots"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000186341", scope: UNIT }],
+  },
+
+  // ── Friskies · Fully Load'd ────────────────────────────────────────────
+  //
+  // All three lead with water, chicken and wheat gluten — the flavour the pack
+  // is named after arrives eighth, after the corn starch. That is not a
+  // complaint, it is what the order says, and it is exactly the sort of thing
+  // the printed list on the scan screen exists to show.
+  {
+    brand: "Friskies",
+    line: "Fully Load'd",
+    variant: "With Chicken, Carrots, Tomatoes & Spinach in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "carrots", "tomatoes", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000239726", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Fully Load'd",
+    variant: "With Tuna, Rice, Spinach & Tomatoes in Sauce",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "rice", "spinach", "tomatoes"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000236091", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Fully Load'd",
+    variant: "With Salmon, Wild Rice, Carrots & Spinach in Sauce",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "wild rice", "carrots", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000241200", scope: UNIT }],
+  },
+
+  // ── Friskies · Glaz'd & Infuz'd ────────────────────────────────────────
+  //
+  // Filed as `in_gravy`. A glaze is gravy on the outside of the pieces rather
+  // than a bath they sit in, but unlike the Gems halo and the Savory Centers
+  // filling — which are geometrically different objects — it predicts exactly
+  // what a gravy predicts, and these decks prove it: xanthan gum AND locust
+  // bean gum on all three. The range name carries the distinction; the
+  // presentation vocabulary does not need a fourth kind of gravy for a
+  // spelling.
+  {
+    brand: "Friskies",
+    line: "Glaz'd & Infuz'd",
+    variant: "With Gravy Glaz'd Chicken",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "carrots", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000351428", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Glaz'd & Infuz'd",
+    variant: "With Gravy Glaz'd Crab",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["crab", "tomatoes", "carrots"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000348053", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Glaz'd & Infuz'd",
+    variant: "With Gravy Glaz'd Shrimp",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["shrimp", "tomatoes", "carrots"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000342143", scope: UNIT }],
+  },
 ];
