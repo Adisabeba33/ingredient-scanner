@@ -1954,4 +1954,146 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "all",
     packages: [{ size: "3 oz", container: CAN, upc: "050000426348", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Creamy Delights ──────────────────────────────────────
+  //
+  // The first ten products in this file that did not come from a batch pasted
+  // into a chat. They were researched into research/deep-research-barcodes.json
+  // on a separate branch, checked against the same rules, and promoted here.
+  // Both of these carry milk, which is what the range is named for.
+  {
+    brand: "Fancy Feast",
+    line: "Creamy Delights",
+    variant: "Chicken Feast With a Touch of Real Milk in a Creamy Sauce",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "milk"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000168248", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Creamy Delights",
+    variant: "Tuna Feast With a Touch of Real Milk in a Creamy Sauce",
+    species: "cat",
+    texture: "morsels",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "chicken", "milk"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000168262", scope: UNIT }],
+  },
+
+  // ── Friskies · Indoor ──────────────────────────────────────────────────
+  //
+  // A range of its own, not the "Indoor Delights" or "Indoor Health" already in
+  // the brand list. All four carry powdered cellulose high up — an insoluble
+  // fibre for hairball control — which is why their maximum fibre runs 2.4 to
+  // 2.75% where the rest of the file sits at 1 to 1.5.
+  {
+    brand: "Friskies",
+    line: "Indoor",
+    variant: "Pâté Chicken Dinner With Garden Greens",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "rice", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000574001", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Indoor",
+    variant: "Chunky Chicken & Turkey Casserole With Garden Greens in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey", "rice", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000573950", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Indoor",
+    variant: "Meaty Bits Saucy Seafood Bake With Garden Greens in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["ocean fish", "chicken", "rice", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000574100", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Indoor",
+    variant: "Flaked Ocean Whitefish Dinner With Garden Greens in Sauce",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["ocean whitefish", "poultry", "rice", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000574124", scope: UNIT }],
+  },
+
+  // ── Friskies · Extra Gravy (continued) ─────────────────────────────────
+  //
+  // Three more Chunky, taking the range from two products to five. All three
+  // barcodes come from Target pages that print the unit code beside a separate
+  // 24-count code — the one case where a retailer distinguishes them for you.
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Chunky With Salmon in Savory Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["salmon", "poultry"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000293339", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Chunky With Chicken in Savory Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000293292", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Chunky With Turkey in Savory Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["turkey", "chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000293353", scope: UNIT }],
+  },
+
+  // ── Friskies · Tasty Treasures (continued) ─────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Tasty Treasures",
+    variant: "With Turkey and Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey", "chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000582334", scope: UNIT }],
+  },
 ];

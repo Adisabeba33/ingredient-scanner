@@ -18,7 +18,7 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-13, after batch 012. 140 products, 36 with a conflict
+Last updated: 2026-08-13, after batch 013. 150 products, 42 with a conflict
 note, 10 of those needing a physical pack.
 
 ---
@@ -139,7 +139,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (25)
+## B. Settled at the desk — an older record against a current deck (31)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -282,6 +282,46 @@ what. Recorded anyway: *minor* is a judgement somebody made, and the next
 person to compare the two pages should know it was already looked at.
 
 **Where this came from:** batch 012.
+
+### B10. One maker, two dated decks (5)
+
+The batch that arrived through Deep Research rather than as a pasted document
+brought a kind we had seen singly and never in bulk: Purina's *own* older deck
+against Purina's *own* current one, with both deck codes known.
+
+That makes them the easiest conflicts in this file. Two dated decks from one
+maker are a sequence, not a contradiction — rule 1 — so none needs a pack.
+
+| UPC | Product | Superseded deck | Current deck | What changed |
+|---|---|---|---|---|
+| `050000573950` | Friskies Indoor — Chunky Chicken & Turkey | H608118 | **I608123** | lost added color and xanthan gum; fibre 2.3 → 2.75%; 887 → 896 kcal/kg |
+| `050000574100` | Friskies Indoor — Meaty Bits Saucy Seafood | I608718 | **J608723** | lost added color and Red 3; fibre 2.3 → 2.7%; 850 → 848 kcal/kg |
+| `050000574124` | Friskies Indoor — Flaked Ocean Whitefish | I608318 | **J608323** | lost added color and Red 3; spinach moved after the meat by-products; fibre 2.2 → 2.6% |
+| `050000293292` | Friskies Extra Gravy — Chunky With Chicken | B626618 | **C626622** | list no longer opens Water, Liver, Meat By-Products; lost poultry and added color; 822 → 818 kcal/kg |
+| `050000293353` | Friskies Extra Gravy — Chunky With Turkey | Target's live panel | **C626822** | Target still shows added color and mono/dicalcium phosphate; Purina's page says no artificial colours and links a deck with neither |
+
+**Three of the five lost an artificial colour.** Read against A1 — where four
+Medleys decks still *list* Added Color and Red 3 against a page that denies
+them — this is the same reformulation reaching different ranges at different
+times, and it is decent evidence that the Medleys decks really are the stale
+ones. Not proof. Still worth a pack.
+
+**Where this came from:** batch 013, promoted from
+`research/deep-research-barcodes.json`.
+
+### B11. A website that links the right deck from the wrong page (1)
+
+| UPC | Product | The fault |
+|---|---|---|
+| `050000582334` | Friskies Tasty Treasures — With Turkey and Chicken, 5.5 oz | Purina's site routes deck B627823 from a differently named Tasty Treasures product page |
+
+The deck itself is unambiguous — it says "With Turkey and Chicken" — and a
+Kroger single-can page independently matches both that identity and the paté
+format. Stored on the deck's own wording.
+
+**A navigation fault on a website is not evidence about a tin.** Worth its own
+entry because it is the first conflict here that is about a link rather than
+about a list, and the next one will be easier to recognise.
 
 ---
 

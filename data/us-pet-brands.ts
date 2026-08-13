@@ -106,6 +106,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Ocean Favorites",
       "Wild Favorites",
       "Indoor Delights",
+      "Indoor",
       "Meaty Bits",
       "Farm Favorites",
       "Lil' Soups",

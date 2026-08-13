@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Twelve batches, 140 products and 140 formulas have gone through this. Everything
+Thirteen batches, 150 products and 150 formulas have gone through this. Everything
 below is what was actually done, including the parts that were got wrong first.
 
 ---
@@ -53,12 +53,13 @@ Inside the scanner:
 | `lib/known-import.test.ts` | Where the rules below are enforced. Read it before inventing a new one. |
 | `docs/CATALOG-CONFLICTS.md` | Every source disagreement, with the reasoning. |
 | `scripts/check-batch.mjs` | The pre-flight check. |
+| `scripts/match-vitamins.mjs` | Matches an incoming vitamin block against every constant. Run it; do not eyeball it. |
 | `app/api/known-products/import/route.ts` | What actually writes to the catalog when the operator presses the button. |
 
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 140 have one.
+to go and find, and the import steps over it. Right now all 150 have one.
 
 ---
 
@@ -256,14 +257,29 @@ both, observed on a deck.
 | `V_MEDLEYS` | Short letters "(B1)", biotin and folic acid bare, K full |
 | `V_PATE_SHORT` | `V_PATE`'s order in short letters, biotin and folic glossed |
 
-**Before adding another, check every existing one against the new deck item by
-item.** Reusing one that is nearly right is worse than adding one: nearly right
-is a label nobody printed.
+**Do not eyeball this. Run the script:**
 
-Batch 012 is the worked example. Its block looked like `V_MEDLEYS` and a
-mechanical diff put it at **2 of 12 entries different** — biotin and folic acid,
-which Medleys prints bare and these decks gloss "(B7)" and "(B9)". Reusing it
-would have silently stripped two glosses off ten labels. Eleven constants now.
+```bash
+node scripts/match-vitamins.mjs "thiamine mononitrate, Vitamin E supplement, …"
+```
+
+It prints EXACT MATCH and the constant to reuse, or the three nearest with the
+differing entries listed. Reusing one that is nearly right is worse than adding
+one: nearly right is a label nobody printed.
+
+Two worked examples, and the second is why the script exists.
+
+**Batch 012** looked like `V_MEDLEYS` and came out **2 of 12 different** —
+biotin and folic acid, bare there and glossed "(B7)" and "(B9)" here. Reusing it
+would have stripped two glosses off ten labels.
+
+**Batch 013** was checked by a comparison typed out by hand, and the hand-typed
+version was wrong. It reported `V_MEDLEYS` at five differences when `V_PLAIN`
+was **one** away. The cause: `V_NO_K` is the one constant whose string does not
+end at its closing bracket — its deck prints menadione after the group — so a
+regex anchored on `]";` ran past it and ate the next declaration. The check then
+compared against eleven constants while reporting twelve. A check that silently
+examines less than it claims is worse than no check, because it is trusted.
 
 Minerals are written inline rather than as constants, because they vary in one
 or two entries at a time. The two common shapes: with `Magnesium Proteinate`
