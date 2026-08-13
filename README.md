@@ -137,12 +137,30 @@ disagree about what a row even *is*:
   scanner clears that key itself; if the formula drifts, it clears nothing and
   the stale analysis is served forever.
 
+## Seeding products from label data
+
+Most of the catalog did not come from a shop. 120 products were typed in from
+Purina label decks, checked by arithmetic, and written as `community` rows that
+a photograph of the real pack still outranks.
+
+- **[docs/SEEDING-A-BATCH.md](docs/SEEDING-A-BATCH.md)** — the whole process,
+  written so it can be picked up cold: what to verify before typing anything,
+  how identity and composition are split across two files, when to extend the
+  controlled vocabularies and when not to, and what to tell the operator at the
+  end.
+- **[docs/CATALOG-CONFLICTS.md](docs/CATALOG-CONFLICTS.md)** — every place two
+  sources describe one barcode differently, which one is stored, and what would
+  change the answer.
+
 ## Scripts
 
 - `npm run dev` / `build` / `start`
 - `npm run typecheck` — `tsc --noEmit`
 - `npm run lint`
 - `npm test` — unit tests (barcode key/trust parity with ingredients.help)
+- `node scripts/check-batch.mjs batch.tsv` — pre-flight a seed batch: UPC-A
+  check digits, GS1 prefix, collisions, and whether each calorie statement
+  agrees with its own net weight
 
 ## Security
 

@@ -9,6 +9,10 @@ disagreement, record it here at the same time as the data — not afterwards. Th
 scanner; this is where the reasoning lives, so a decision made in five minutes
 in August can be re-examined in November by somebody who was not there.
 
+The process that produces these entries is written down separately, in
+[SEEDING-A-BATCH.md](SEEDING-A-BATCH.md) — read that first if you are new to
+this.
+
 Nothing here is broken. These are places where a manufacturer's own label deck,
 their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
