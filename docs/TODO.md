@@ -1,5 +1,11 @@
 # TODO — planned work
 
+> Source disagreements about individual products do NOT go here. They live in
+> [CATALOG-CONFLICTS.md](CATALOG-CONFLICTS.md), which is the working list for
+> everything two sources say differently about one barcode — including the one
+> piece of work this file would otherwise own, the missing calcium field.
+
+
 ## Soft delete + audit log for catalog changes
 
 **Why.** Deleting a catalog row is currently permanent: the row is stripped from
