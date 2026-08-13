@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "purpose": "Staging ledger for new pet-food barcode records found through Deep Research before promotion into data/known-products.ts and data/known-formulas.ts.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "branch": "agent/deep-research-barcode-ledger",
+  "created_at": "2026-08-13",
+  "updated_at": "2026-08-13",
+  "baseline": {
+    "known_product_upcs": 140,
+    "canonical_sources": [
+      "data/known-products.ts",
+      "data/known-formulas.ts",
+      "data/wrong-barcodes.ts",
+      "docs/CATALOG-CONFLICTS.md"
+    ]
+  },
+  "rules": {
+    "new_only": "Before adding a record, compare its canonical UPC/GTIN against data/known-products.ts, this ledger, and data/wrong-barcodes.ts.",
+    "upc_storage": "Store UPC/GTIN as a zero-padded string. Never store it as a number.",
+    "barcode_scope": "An individual unit UPC is required for promotion. Case, tray, variety-pack, and multipack codes must be identified explicitly and must not replace an individual-unit UPC.",
+    "ingredients": "Preserve the exact printed ingredient order. Do not shorten, tidy, reorder, infer, or repair OCR silently.",
+    "incomplete_evidence": "If the full label-order ingredient list, guaranteed analysis, calories, or barcode scope cannot be verified, use research_status=needs_physical_label and state exactly what is missing.",
+    "source_priority": "Official label/deck or a clear physical label beats an official product page; an official page beats a retailer. Record every material disagreement.",
+    "promotion": "A record is staging data only. Promotion to the catalog requires the repository seeding checks and explicit insertion into known-products.ts and known-formulas.ts."
+  },
+  "status_values": {
+    "candidate": "Identity or barcode candidate found, but evidence is incomplete.",
+    "source_verified": "Required fields are supported by authoritative label/deck evidence and arithmetic/check-digit checks pass.",
+    "needs_physical_label": "A real package photo is needed to resolve missing, cropped, stale, or conflicting label data.",
+    "rejected": "Duplicate, wrong product, case/multipack code used as unit code, invalid check digit, or otherwise unsuitable.",
+    "promoted_to_seed": "Copied into the repository seed files after checks; keep the ledger entry for provenance."
+  },
+  "record_contract": {
+    "catalog_number": "integer or null",
+    "upc": "zero-padded string",
+    "canonical_gtin14": "zero-padded string",
+    "barcode_scope": "individual_unit | multipack | case | tray | unknown",
+    "brand": "string",
+    "manufacturer": "string or null",
+    "species": "cat | dog",
+    "product_line": "string or null",
+    "product_name": "string",
+    "variant": "string",
+    "recipe": [
+      "string"
+    ],
+    "life_stage": "adult | kitten | puppy | all | null",
+    "food_form": "wet | dry | treat | supplement | unknown",
+    "texture": "repository vocabulary value or null",
+    "presentation": "repository vocabulary value or null",
+    "package_type": "can | pouch | tub | tray | bag | box | other",
+    "size": "printed package size",
+    "ingredients_verbatim": "complete label text in printed order",
+    "ingredients_ordered_normalized": [
+      "optional normalized ingredient names in the same order"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": "number or null",
+      "crude_fat_min_percent": "number or null",
+      "crude_fiber_max_percent": "number or null",
+      "moisture_max_percent": "number or null",
+      "ash_max_percent": "number or null",
+      "taurine_min_percent": "number or null",
+      "other_printed_guarantees": [
+        {
+          "nutrient": "string",
+          "basis": "min | max",
+          "value_percent": "number"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": "number or null",
+      "kcal_per_unit": "number or null",
+      "unit_name": "can | pouch | serving | cup | piece | other | null"
+    },
+    "label_deck_code": "string or null",
+    "formula_source": "string",
+    "source_urls": [
+      "direct source URL"
+    ],
+    "source_accessed_at": "YYYY-MM-DD",
+    "barcode_notes": "string or null",
+    "conflicts": [
+      "material source disagreement"
+    ],
+    "verification_notes": [
+      "check-digit, arithmetic, identity, or label notes"
+    ],
+    "research_status": "candidate | source_verified | needs_physical_label | rejected | promoted_to_seed"
+  },
+  "records": []
+}
