@@ -51,7 +51,13 @@ import type { Presentation, Texture } from "@/lib/presentation";
 export interface KnownPackage {
   /** Net weight exactly as printed. */
   size: string;
-  container: "can" | "pouch" | "tray" | "bag" | "box";
+  /**
+   * `tub` is the Fancy Feast Petites twin-serve pot — two 1.4 oz halves under
+   * ONE retail barcode. The size below is the whole package, which is what the
+   * code is on; the calorie statement in the formula is per half, which is what
+   * the pack states. Neither is wrong and they are not the same number.
+   */
+  container: "can" | "pouch" | "tray" | "tub" | "bag" | "box";
   /**
    * As printed under the bars — 12 digits for a UPC-A, kept as a STRING.
    * `canonicalBarcode()` pads it to GTIN-14 for storage, which is also what
@@ -81,6 +87,7 @@ export interface KnownProduct {
 }
 
 const CAN = "can" as const;
+const TUB = "tub" as const;
 const UNIT = "individual_unit" as const;
 
 export const KNOWN_PRODUCTS: KnownProduct[] = [
@@ -842,5 +849,136 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     foodForm: "wet",
     proteins: ["tuna"],
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000168781", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Kitten ───────────────────────────────────────────────
+  //
+  // The only life-stage range in the seed so far. It lives in `line` because
+  // that is where the shelf puts it — "Fancy Feast Kitten" is the range name
+  // on the front — and because nothing else here has a life-stage column to
+  // put it in. Both decks also guarantee a calcium minimum, which the panel
+  // type has no field for; see the note in data/known-formulas.ts.
+  {
+    brand: "Fancy Feast",
+    line: "Kitten",
+    variant: "Tender Turkey Feast Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000575008", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Kitten",
+    variant: "Tender Ocean Whitefish Feast Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["whitefish"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000574988", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Petites ──────────────────────────────────────────────
+  //
+  // Twin-serve tubs: 2.8 oz under one barcode, eaten as two 1.4 oz halves.
+  // The size here is the package the code is on. Getting that backwards is
+  // the same class of mistake as using a case code for a single tin — and one
+  // of these has a case code circulating, noted below.
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Grilled Chicken Entrée With Rice in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002597", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Seared Salmon Entrée With Spinach in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002504", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Ocean Whitefish Entrée With Tomato in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["whitefish"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002528", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Roasted Turkey Entrée With Sweet Potato in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002610", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Tender Beef Entrée With Carrots in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    // NOT 050000504299. That code is a case of these tubs, it passes its own
+    // check digit, and it is circulating on pack listings — which is exactly
+    // what makes it dangerous: nothing about the number itself says it is the
+    // wrong object.
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002603", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Braised Chicken Entrée Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000002580", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Petites",
+    variant: "Ocean Whitefish & Tuna Entrée Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["whitefish", "tuna"],
+    packages: [{ size: "2.8 oz", container: TUB, upc: "050000001590", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Flaked ───────────────────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Flaked",
+    variant: "Tuna & Mackerel Feast",
+    species: "cat",
+    texture: "flaked",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna", "mackerel"],
+    packages: [{ size: "3 oz", container: CAN, upc: "050000426249", scope: UNIT }],
   },
 ];

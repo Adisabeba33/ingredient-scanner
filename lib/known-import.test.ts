@@ -234,6 +234,49 @@ describe("data/known-formulas.ts", () => {
     expect(k).toBeGreaterThan(close);
   });
 
+  // A Petites tub is 2.8 oz and holds two 1.4 oz servings under one barcode.
+  // Its calorie statement is per SERVING, and reading "47 kcal" as the whole
+  // package understates the tub by half — which is the sort of error that looks
+  // like a diet plan rather than like a bug.
+  it("keeps the Petites calorie statement per serving, not per package", () => {
+    const petites = [
+      "050000002597",
+      "050000002504",
+      "050000002528",
+      "050000002610",
+      "050000002603",
+      "050000002580",
+      "050000001590",
+    ];
+    for (const upc of petites) {
+      const a = KNOWN_FORMULAS[upc].analysis;
+      expect({ upc, serving: a.servingName }).toEqual({ upc, serving: "serving" });
+      // And the two halves of the statement agree on a 1.4 oz half.
+      const grams = 1.4 * 28.3495;
+      const calc = ((a.kcalPerKg ?? 0) * grams) / 1000;
+      expect({ upc, close: Math.abs(calc - (a.kcalPerServing ?? 0)) < 1.2 }).toEqual({
+        upc,
+        close: true,
+      });
+    }
+  });
+
+  // A case of tubs carries its own valid UPC — 050000504299 passes its check
+  // digit exactly as the single tub does — and it circulates on pack listings.
+  // Nothing about the number itself says it is the wrong object, which is why
+  // this is a test and not a comment.
+  it("never files a case code against a single package", () => {
+    const upcs = KNOWN_PRODUCTS.flatMap((p) => p.packages.map((k) => k.upc));
+    expect(upcs).not.toContain("050000504299");
+  });
+
+  // Kitten food guarantees more taurine than adult food does, and the figure
+  // must not be flattened to the 0.05 that the other fifty-odd packs state.
+  it("keeps the kitten taurine guarantee at what the deck says", () => {
+    expect(KNOWN_FORMULAS["050000575008"].analysis.taurineMin).toBe(0.07);
+    expect(KNOWN_FORMULAS["050000574988"].analysis.taurineMin).toBe(0.07);
+  });
+
   it("keeps the note where the source flagged an older formula", () => {
     // 11% protein historically, 9% now, under one barcode.
     expect(KNOWN_FORMULAS["050000424948"].conflict).toBeTruthy();

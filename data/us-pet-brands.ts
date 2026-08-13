@@ -78,6 +78,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Gems",
       "Purely",
       "Petites",
+      "Kitten",
       "Savory Cravings",
       "Broths",
       "Appetizers",

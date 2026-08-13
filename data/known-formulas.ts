@@ -68,6 +68,9 @@ const VERIFIED = "2026-08-11";
 /** Batch 004 — read off Purina label decks rather than retailer listings. */
 const VERIFIED_004 = "2026-08-12";
 
+/** Batch 005 — Fancy Feast Kitten, Petites and Flaked. */
+const VERIFIED_005 = "2026-08-12";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -156,6 +159,20 @@ const V_NIACIN_FIRST =
  */
 const V_NO_K =
   "Vitamins [Thiamine Mononitrate (Vitamin B-1), Vitamin E Supplement, Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Vitamin B-12 Supplement, Biotin (Vitamin B-7), Folic Acid (Vitamin B-9), Vitamin D-3 Supplement], Menadione Sodium Bisulfite Complex (Vitamin K)";
+
+/**
+ * The same twelve in the same order as `V`, printed without the vitamin
+ * letters — "Thiamine Mononitrate" rather than "Thiamine Mononitrate (Vitamin
+ * B-1)". Every Petites deck in batch 005 is written this way.
+ *
+ * Copied rather than harmonised. Adding the glosses because the sibling ranges
+ * carry them would be putting words on a label that may not have them, and the
+ * whole value of this file is that it does not do that. If a photograph of a
+ * real tub later shows the letters, the photograph wins — which is what
+ * `community` ranking is for.
+ */
+const V_PLAIN =
+  "Vitamins [Thiamine Mononitrate, Vitamin E Supplement, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -606,5 +623,81 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Meat By-Products, Water, Poultry By-Products, Chicken, Tuna, Artificial And Natural Flavors, Carrageenan, Calcium Sulfate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt, Choline Chloride.`,
     analysis: withCalories(ga(8.0, 5.0, 1.0, 82.0, 3.5, 0.05), 1003, 156),
     verifiedAt: VERIFIED_004,
+  },
+
+  // ── Fancy Feast · Kitten ───────────────────────────────────────────────
+  //
+  // Both decks also guarantee Calcium (min) 0.3%. `GuaranteedAnalysis` has no
+  // calcium field — no pack in the first eighty stated one — so that figure is
+  // NOT stored, and it is written here rather than dropped silently. Adding the
+  // field means changing the type in this repo and in the consumer app
+  // together, since the consumer drops keys it does not know when it reads the
+  // stored panel back. Worth doing; not worth doing inside a data commit.
+  "050000575008": {
+    ingredients: `Turkey, Meat By-Products, Liver, Poultry Broth, Fish, Milk, Dried Egg Product, Artificial And Natural Flavorings, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt.`,
+    // 0.07% taurine, not the 0.05% every adult pack in this file states.
+    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1087, 92),
+    verifiedAt: VERIFIED_005,
+    conflict:
+      "Target still exposes an older ingredient field for this barcode containing Added Color. The current Purina deck D662122 has none. Also guarantees Calcium (min) 0.3%, which is not stored.",
+  },
+  "050000574988": {
+    ingredients: `Ocean Whitefish, Meat By-Products, Liver, Fish Broth, Chicken, Milk, Dried Egg Product, Artificial And Natural Flavorings, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt.`,
+    analysis: withCalories(ga(11.5, 4.0, 1.5, 78.0, 3.5, 0.07), 1067, 90),
+    verifiedAt: VERIFIED_005,
+    conflict:
+      "Target's ingredient text for this barcode is OCR-corrupted; Purina deck D662022 is the master. Also guarantees Calcium (min) 0.3%, which is not stored.",
+  },
+
+  // ── Fancy Feast · Petites ──────────────────────────────────────────────
+  //
+  // Calories are per SERVING here, and a serving is half a tub. "47 kcal a
+  // serving" on a 2.8 oz package is not a small can — it is one of two 1.4 oz
+  // halves, and the arithmetic only checks out against the half.
+  "050000002597": {
+    ingredients: `Chicken Broth, Chicken, Wheat Gluten, Liver, Rice, Meat By-Products, Modified Corn Starch, Glycine, Salt, Soy Protein Concentrate, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.65, 0.05), 800, 32, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000002504": {
+    ingredients: `Salmon Broth, Salmon, Wheat Gluten, Liver, Meat By-Products, Chicken, Modified Corn Starch, Spinach, Glycine, Salt, Tricalcium Phosphate, Soy Protein Concentrate, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.75, 0.05), 785, 31, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000002528": {
+    ingredients: `Fish Broth, Ocean Whitefish, Wheat Gluten, Tomatoes, Meat By-Products, Liver, Modified Corn Starch, Chicken, Corn Oil, Glycine, Salt, Soy Protein Concentrate, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.65, 0.05), 781, 31, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000002610": {
+    ingredients: `Turkey Broth, Turkey, Wheat Gluten, Liver, Sweet Potatoes, Meat By-Products, Modified Corn Starch, Glycine, Salt, Soy Protein Concentrate, Natural Flavor, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Taurine, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.65, 0.05), 773, 30, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000002603": {
+    ingredients: `Beef Broth, Beef, Wheat Gluten, Liver, Meat By-Products, Carrots, Modified Corn Starch, Glycine, Salt, Soy Protein Concentrate, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 2.0, 1.5, 82.0, 2.5, 0.05), 783, 31, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000002580": {
+    ingredients: `Chicken, Chicken Broth, Meat By-Products, Liver, Fish, Artificial And Natural Flavorings, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Choline Chloride, Taurine, Salt, ${V_PLAIN}.`,
+    analysis: withCalories(ga(10.0, 5.0, 1.5, 78.0, 3.25, 0.05), 1193, 47, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+  "050000001590": {
+    ingredients: `Ocean Whitefish, Fish, Meat By-Products, Liver, Fish Broth, Tuna, Artificial And Natural Flavorings, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, ${V_PLAIN}, Salt.`,
+    analysis: withCalories(ga(12.0, 2.0, 1.5, 78.0, 3.65, 0.05), 1063, 42, "serving"),
+    verifiedAt: VERIFIED_005,
+  },
+
+  // ── Fancy Feast · Flaked ───────────────────────────────────────────────
+  //
+  // 74% moisture and 14% protein — the driest and the highest-protein panel in
+  // the file. Both are ordinary for a flaked fish pack and neither trips the
+  // as-fed sanity check, which is the point of having one.
+  "050000426249": {
+    ingredients: `Fish Broth, Tuna, Mackerel, Chicken, Wheat Gluten, Fish, Liver, Meat By-Products, Soy Flour, Glycine, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Xanthan Gum, Salt, Carrageenan, Choline Chloride, Taurine, ${V_E_FIRST_A_MID}.`,
+    analysis: withCalories(ga(14.0, 3.5, 1.5, 74.0, 3.5, 0.05), 1161, 98),
+    verifiedAt: VERIFIED_005,
   },
 };
