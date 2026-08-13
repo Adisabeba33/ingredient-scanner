@@ -102,6 +102,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Gravy Sensations",
       "Tasty Treasures",
       "Ocean Favorites",
+      "Wild Favorites",
       "Indoor Delights",
       "Meaty Bits",
       "Farm Favorites",

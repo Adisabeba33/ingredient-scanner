@@ -267,7 +267,14 @@ describe("data/known-formulas.ts", () => {
   // this is a test and not a comment.
   it("never files a case code against a single package", () => {
     const upcs = KNOWN_PRODUCTS.flatMap((p) => p.packages.map((k) => k.upc));
-    expect(upcs).not.toContain("050000504299");
+    // Every one of these passes its own check digit and circulates on retail
+    // listings beside the code for the single unit.
+    for (const caseCode of ["050000504299", "050000503650", "050000579938"]) {
+      expect({ caseCode, filed: upcs.includes(caseCode) }).toEqual({
+        caseCode,
+        filed: false,
+      });
+    }
   });
 
   // Kitten food guarantees more taurine than adult food does, and the figure

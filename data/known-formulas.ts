@@ -74,6 +74,9 @@ const VERIFIED_005 = "2026-08-12";
 /** Batch 006 — Fancy Feast Gems and Friskies Farm Favorites. */
 const VERIFIED_006 = "2026-08-12";
 
+/** Batch 007 — Friskies Ocean Favorites, Wild Favorites and two Shreds. */
+const VERIFIED_007 = "2026-08-13";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -796,5 +799,80 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Water, Meat By-Products, Chicken, Wheat Gluten, Soy Flour, Whitefish, Modified Corn Starch, Spinach, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_PLAIN}.`,
     analysis: withCalories(ga(11.0, 2.5, 1.0, 79.0, 2.5, 0.05), 971, 151),
     verifiedAt: VERIFIED_006,
+  },
+
+  // ── Friskies · Ocean Favorites ─────────────────────────────────────────
+  "050000503667": {
+    ingredients: `Meat By-Products, Water, Chicken, Poultry By-Products, Salmon, Brown Rice, Peas, Rice, Artificial And Natural Flavors, Tricalcium Phosphate, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Carrageenan, Taurine, ${V}, Salt.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1180, 183),
+    verifiedAt: VERIFIED_007,
+    conflict: "Purina's own HTML page shows a different list for this barcode: “Poultry By-Product Meal” where deck B632321 says “Poultry By-Products”, and “Peas (Dried)” where it says “Peas”. By-product meal is rendered and dried rather than fresh, so these are two different formulas, not two spellings. The deck is stored; the pages are not merged. Worth a physical re-read.",
+  },
+  "050000503636": {
+    ingredients: `Meat By-Products, Water, Chicken, Poultry By-Products, Tuna, Brown Rice, Peas, Rice, Artificial And Natural Flavors, Tricalcium Phosphate, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Carrageenan, Taurine, ${V}, Salt.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1168, 182),
+    verifiedAt: VERIFIED_007,
+    conflict: "Purina's own HTML page shows a different list for this barcode: “Poultry By-Product Meal” where deck B632321 says “Poultry By-Products”, and “Peas (Dried)” where it says “Peas”. By-product meal is rendered and dried rather than fresh, so these are two different formulas, not two spellings. The deck is stored; the pages are not merged. Worth a physical re-read.",
+  },
+  "050000503612": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Modified Corn Starch, Tuna, Crab, Brown Rice, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 79.0, 2.5, 0.05), 965, 150),
+    verifiedAt: VERIFIED_007,
+  },
+  "050000503681": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Modified Corn Starch, Salmon, Shrimp, Brown Rice, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 79.0, 2.5, 0.05), 967, 150),
+    verifiedAt: VERIFIED_007,
+    conflict:
+      "Purina's product page now lists this can as 5.4 oz where retailers still show 5.5 oz. Deck A632019's own calorie statement belongs to the larger can: 967 kcal/kg x 5.5 oz is 150.8 against a printed 150, while 5.4 oz gives 148.0. Stored as 5.5 oz so the record does not contradict itself. A downsizing in progress, and worth a physical re-read.",
+  },
+
+  // ── Friskies · Wild Favorites ──────────────────────────────────────────
+  //
+  // Four decks that differ only in the named fish and vegetable, and in where
+  // those two sit. Cod and Sardines put the vegetable AFTER the corn starch;
+  // Tuna and Haddock put it before. Copied as each deck orders it.
+  "050000543274": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Cod, Modified Corn Starch, Kale, Fish, Artificial And Natural Flavors, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 78.0, 2.5, 0.05), 981, 152),
+    verifiedAt: VERIFIED_007,
+  },
+  "050000543311": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Tuna, Sweet Potatoes, Modified Corn Starch, Fish, Artificial And Natural Flavors, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 78.0, 2.5, 0.05), 977, 152),
+    verifiedAt: VERIFIED_007,
+  },
+  "050000543250": {
+    // Haddock stays. Purina's own HTML renderer currently drops it between the
+    // soy flour and the sweet potatoes; the linked deck A633720 has it, and a
+    // missing ingredient is not a formatting difference — it is the named fish
+    // of the product disappearing from its own list.
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Haddock, Sweet Potatoes, Modified Corn Starch, Fish, Artificial And Natural Flavors, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 78.0, 2.5, 0.05), 982, 153),
+    verifiedAt: VERIFIED_007,
+    conflict:
+      "Purina's HTML ingredient renderer currently omits Haddock between Soy Flour and Sweet Potatoes. Deck A633720 lists it, and the product is named after it. Stored with Haddock; worth a physical re-read.",
+  },
+  "050000543298": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Soy Flour, Sardines, Modified Corn Starch, Kale, Fish, Artificial And Natural Flavors, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Tricalcium Phosphate, Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 78.0, 2.5, 0.05), 981, 152),
+    verifiedAt: VERIFIED_007,
+  },
+
+  // ── Friskies · Shreds (continued) ──────────────────────────────────────
+  "050000579907": {
+    // Deck F612722 is an all-life-stages formula — AAFCO growth of kittens AND
+    // maintenance of adult cats. Nothing here can hold that yet; see the note
+    // beside this product in data/known-products.ts.
+    ingredients: `Water, Meat By-Products, Turkey, Wheat Gluten, Chicken, Modified Corn Starch, Soy Flour, Ocean Whitefish, Sardines, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Salt, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(9.0, 2.5, 1.0, 82.0, 2.5, 0.05), 837, 130),
+    verifiedAt: VERIFIED_007,
+  },
+  "050000579921": {
+    ingredients: `Water, Turkey, Meat By-Products, Wheat Gluten, Chicken, Modified Corn Starch, Soy Flour, Poultry Giblets, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(9.0, 2.5, 1.0, 82.0, 2.5, 0.05), 824, 128),
+    verifiedAt: VERIFIED_007,
+    conflict:
+      "Older retailer copies of this list carry Added Color. The current deck G612622 has no artificial colours and no artificial preservatives.",
   },
 };

@@ -1112,4 +1112,143 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["whitefish", "spinach"],
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000501373", scope: UNIT }],
   },
+
+  // ── Friskies · Ocean Favorites ─────────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Ocean Favorites",
+    variant: "Pâté With Salmon, Brown Rice & Peas",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "brown rice", "peas"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000503667", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Ocean Favorites",
+    variant: "Pâté With Tuna, Brown Rice & Peas",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna", "brown rice", "peas"],
+    // NOT 050000503650, which is the case. It passes its own check digit.
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000503636", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Ocean Favorites",
+    variant: "Meaty Bits With Tuna, Crab & Brown Rice in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "crab", "brown rice"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000503612", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Ocean Favorites",
+    variant: "Meaty Bits With Salmon, Shrimp & Brown Rice in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "shrimp", "brown rice"],
+    // 5.5 oz, against the source's instruction to file this as 5.4 — and the
+    // pack's own arithmetic is the reason. The deck we copied prints 967
+    // kcal/kg and 150 kcal/can: 967 x 5.5 oz is 150.8, 967 x 5.4 oz is 148.0.
+    // The calorie statement is a second measurement of the net weight and it
+    // says 5.5. Purina's page saying 5.4 is a downsizing in progress, not a
+    // correction to this deck, and storing 5.4 beside a 5.5 oz calorie line
+    // would make our own record contradict itself. Named in the formula note
+    // and flagged for a physical re-read.
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000503681", scope: UNIT }],
+  },
+
+  // ── Friskies · Wild Favorites ──────────────────────────────────────────
+  //
+  // "Mini Bites" is filed as `bits`, the same texture as Meaty Bits. They are
+  // different sizes of the same idea and the vocabulary has one word for it;
+  // inventing a second would split a shelf on the strength of an adjective.
+  {
+    brand: "Friskies",
+    line: "Wild Favorites",
+    variant: "Mini Bites With Wild Caught Cod & Kale in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["cod", "kale"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000543274", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Wild Favorites",
+    variant: "Mini Bites With Wild Caught Tuna & Sweet Potato in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "sweet potato"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000543311", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Wild Favorites",
+    variant: "Mini Bites With Wild Caught Haddock & Sweet Potato in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["haddock", "sweet potato"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000543250", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Wild Favorites",
+    variant: "Mini Bites With Wild Caught Sardines & Kale in Sauce",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["sardines", "kale"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000543298", scope: UNIT }],
+  },
+
+  // ── Friskies · Shreds (continued) ──────────────────────────────────────
+  //
+  // The Whitefish & Sardines deck covers kitten growth AND adult maintenance.
+  // There is nowhere here to record that: `KnownProduct` has no life-stage
+  // column, and the one life-stage range in the seed — Fancy Feast Kitten —
+  // carries it in `line` because that is the range name on the front. This one
+  // is an ordinary Shreds tin that happens to be fed to both, which is a
+  // property of the FORMULA rather than of the range. Second time this has come
+  // up; the field is worth adding on its own.
+  {
+    brand: "Friskies",
+    line: "Shreds",
+    variant: "With Whitefish & Sardines in Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["whitefish", "sardines"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000579907", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Shreds",
+    variant: "With Turkey & Giblets in Gravy",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey", "giblets"],
+    // NOT 050000579938 — that is the 24-can case, and it passes its own
+    // check digit exactly as this one does.
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000579921", scope: UNIT }],
+  },
 ];
