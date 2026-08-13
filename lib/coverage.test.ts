@@ -186,9 +186,15 @@ describe("buildCoverage", () => {
 
   // A range the seed file never knew is not an error — it is the shelf
   // correcting a list written from memory, and it has to show.
+  //
+  // The name here is deliberately invented. This test used to use "Farm
+  // Favorites", which was unseeded when it was written and is a real Friskies
+  // range that has since been seeded — at which point the test was checking
+  // that a KNOWN range lands in "Other", which is the opposite of its point. A
+  // range nobody will ever ship keeps it testing what it says it tests.
   it("keeps a range that isn't in the seed list, marked", () => {
     const friskies = brand(
-      [source({ productName: "Farm Favorites With Chicken" })],
+      [source({ productName: "Midnight Harbour Selection With Chicken" })],
       "Friskies"
     )!;
     const other = friskies.ranges.find((r) => r.items.length > 0)!;

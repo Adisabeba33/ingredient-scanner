@@ -79,6 +79,15 @@ export type Presentation =
    * which is the question the field mostly exists to answer.
    */
   | "gravy_center"
+  /**
+   * A ring of gravy around the outside of a moulded mousse, not a bath it sits
+   * in. Fancy Feast Gems is the range built on it — "a halo of savory gravy" is
+   * the pack's own phrase — and it is the mirror image of `gravy_center`:
+   * gravy outside rather than gravy inside, and neither is "in gravy". Also
+   * implies a thickener; these decks carry locust bean gum, guar gum AND
+   * carrageenan.
+   */
+  | "gravy_halo"
   | "plain"
   | "unknown";
 
@@ -91,7 +100,7 @@ const TEXTURES = new Set<string>([
 
 const PRESENTATIONS = new Set<string>([
   "in_gravy", "extra_gravy", "in_sauce", "in_broth", "in_jelly", "in_water",
-  "gravy_center", "plain", "unknown",
+  "gravy_center", "gravy_halo", "plain", "unknown",
 ]);
 
 export function isTexture(value: unknown): value is Texture {
@@ -151,6 +160,7 @@ const PRESENTATION_WORDS: [Presentation, string[]][] = [
   // on specificity — so "Paté with Chicken and a Gourmet Gravy Center" is not
   // filed as an ordinary gravy on the strength of its last word.
   ["gravy_center", ["gourmet gravy center", "gravy center", "gravy centre", "savory centers", "savory centres"]],
+  ["gravy_halo", ["halo of savory gravy", "halo of gravy", "gravy halo"]],
   ["extra_gravy", ["extra gravy", "extra-gravy"]],
   ["in_gravy", ["in gravy", "in a gravy", "gravy", "with gravy", "in savory gravy"]],
   ["in_sauce", ["in sauce", "in a sauce", "in savory sauce", "sauce", "with sauce"]],
@@ -247,6 +257,7 @@ export function impliesThickener(presentation: Presentation): boolean {
     presentation === "extra_gravy" ||
     presentation === "in_sauce" ||
     presentation === "in_jelly" ||
-    presentation === "gravy_center"
+    presentation === "gravy_center" ||
+    presentation === "gravy_halo"
   );
 }

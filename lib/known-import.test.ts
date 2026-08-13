@@ -277,6 +277,42 @@ describe("data/known-formulas.ts", () => {
     expect(KNOWN_FORMULAS["050000574988"].analysis.taurineMin).toBe(0.07);
   });
 
+  // A Gems box holds two 2 oz mousses and the deck states calories per GEM.
+  // Same trap as the Petites tub, one size up: read "48 kcal" as the box and
+  // you have halved it.
+  it("keeps the Gems calorie statement per gem, not per box", () => {
+    const gems = [
+      "050000544073",
+      "050000544035",
+      "050000544059",
+      "050000544097",
+      "050000589968",
+      "050000593019",
+    ];
+    for (const upc of gems) {
+      const a = KNOWN_FORMULAS[upc].analysis;
+      expect({ upc, serving: a.servingName }).toEqual({ upc, serving: "gem" });
+      const calc = ((a.kcalPerKg ?? 0) * 2 * 28.3495) / 1000;
+      expect({ upc, close: Math.abs(calc - (a.kcalPerServing ?? 0)) < 1.2 }).toEqual({
+        upc,
+        close: true,
+      });
+    }
+  });
+
+  // Batch 006 arrived written as "KCl" and "B3 niacin". Neither is label text —
+  // a US label names ingredients by their AAFCO definitions — so the shorthand
+  // was expanded back on the way in. If it ever leaks through, the composition
+  // stops matching its own siblings and the report loses tokens it can read.
+  it("carries no source shorthand in a stored composition", () => {
+    for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
+      expect({ upc, shorthand: /\bKCl\b|\bB\d\s|\bHCl\b/.test(f.ingredients) }).toEqual({
+        upc,
+        shorthand: false,
+      });
+    }
+  });
+
   it("keeps the note where the source flagged an older formula", () => {
     // 11% protein historically, 9% now, under one barcode.
     expect(KNOWN_FORMULAS["050000424948"].conflict).toBeTruthy();

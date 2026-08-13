@@ -71,6 +71,9 @@ const VERIFIED_004 = "2026-08-12";
 /** Batch 005 — Fancy Feast Kitten, Petites and Flaked. */
 const VERIFIED_005 = "2026-08-12";
 
+/** Batch 006 — Fancy Feast Gems and Friskies Farm Favorites. */
+const VERIFIED_006 = "2026-08-12";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -173,6 +176,28 @@ const V_NO_K =
  */
 const V_PLAIN =
   "Vitamins [Thiamine Mononitrate, Vitamin E Supplement, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]";
+
+/**
+ * The Gems ordering: E first, then B3 and B1, with A and K late.
+ *
+ * ── Why these read differently from the source document ───────────────────
+ *
+ * Batch 006 arrived written in a third notation: "KCl", "B3 niacin", "B6
+ * pyridoxine HCl", "Vitamin K menadione sodium bisulfite complex". None of
+ * those is label text. A US pet food label has to name its ingredients by their
+ * AAFCO definitions — "Potassium Chloride", "Niacin", "Pyridoxine
+ * Hydrochloride" — and no deck prints a chemical formula or a leading vitamin
+ * number. That is the source compressing, not the pack.
+ *
+ * So the abbreviations are expanded back to the terms they abbreviate, which is
+ * undoing the source's shorthand rather than editing a label. What is NOT done
+ * is the other direction: the parenthetical glosses the other ranges carry —
+ * "Niacin (Vitamin B-3)" — are not added here, because whether this deck prints
+ * them is exactly what the shorthand destroyed, and guessing would be writing
+ * the label rather than copying it.
+ */
+const V_GEMS =
+  "Vitamins [Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Folic Acid, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Biotin, Vitamin B-12 Supplement, Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -699,5 +724,77 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Fish Broth, Tuna, Mackerel, Chicken, Wheat Gluten, Fish, Liver, Meat By-Products, Soy Flour, Glycine, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Xanthan Gum, Salt, Carrageenan, Choline Chloride, Taurine, ${V_E_FIRST_A_MID}.`,
     analysis: withCalories(ga(14.0, 3.5, 1.5, 74.0, 3.5, 0.05), 1161, 98),
     verifiedAt: VERIFIED_005,
+  },
+
+  // ── Fancy Feast · Gems ─────────────────────────────────────────────────
+  //
+  // Calories are per GEM — one of the two 2 oz mousses in the 4 oz box — and
+  // every one of the six checks out against 2 oz rather than against 4.
+  //
+  // Note "Meat By-Product" singular on five of the six and plural on the
+  // Turkey. Copied as each deck writes it; a difference that small is either
+  // real or a typo in the source, and flattening it would destroy the evidence
+  // either way.
+  "050000544073": {
+    ingredients: `Chicken Broth, Chicken, Meat By-Product, Liver, Beef, Modified Tapioca Starch, Glycine, Sodium Tripolyphosphate, Natural Flavors, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Carrageenan, Taurine, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 849, 48, "gem"),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000544035": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Product, Modified Tapioca Starch, Glycine, Sodium Tripolyphosphate, Natural Flavors, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Carrageenan, Taurine, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 881, 50, "gem"),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000544059": {
+    ingredients: `Chicken Broth, Chicken, Meat By-Product, Liver, Salmon, Modified Tapioca Starch, Glycine, Sodium Tripolyphosphate, Natural Flavors, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Carrageenan, Taurine, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 861, 49, "gem"),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000544097": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Product, Tuna, Modified Tapioca Starch, Glycine, Sodium Tripolyphosphate, Natural Flavors, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Carrageenan, Taurine, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 849, 48, "gem"),
+    verifiedAt: VERIFIED_006,
+    conflict:
+      "Target's ingredient field for this barcode is truncated mid-vitamin and carries a different formula code. Purina deck A638422 is the master.",
+  },
+  "050000589968": {
+    // Taurine before carrageenan on this one and the Ocean Fish, after it on
+    // the other four. Same eighteen ingredients, two orderings.
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Products, Turkey, Modified Tapioca Starch, Glycine, Natural Flavors, Sodium Tripolyphosphate, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Taurine, Carrageenan, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 930, 52, "gem"),
+    verifiedAt: VERIFIED_006,
+    conflict:
+      "Target's title for this barcode says 4.9 oz/2pk against Purina's 4 oz box of two. The calorie statement settles it: at 930 kcal/kg a 2.45 oz gem would be 64.6 kcal and the deck prints 52, which is a 2 oz gem. Stored as 4 oz.",
+  },
+  "050000593019": {
+    ingredients: `Chicken Broth, Chicken, Liver, Meat By-Product, Ocean Fish, Modified Tapioca Starch, Glycine, Sodium Tripolyphosphate, Natural Flavors, Minerals [Potassium Chloride, Magnesium Sulfate, Zinc Sulfate, Iron Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate], Locust Bean Gum, Guar Gum, Caramel Color, Taurine, Carrageenan, Methyl Cellulose, L-Ascorbic Acid, ${V_GEMS}, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 83.0, 3.0, 0.05), 912, 51, "gem"),
+    verifiedAt: VERIFIED_006,
+  },
+
+  // ── Friskies · Farm Favorites ──────────────────────────────────────────
+  //
+  // The vegetables are real entries in the deck, high enough up to matter:
+  // carrots fifth on the chicken pâté, spinach sixth on the salmon one. Same
+  // vitamin ordering as the rest of the Purina range, in the plain notation.
+  "050000501335": {
+    ingredients: `Meat By-Products, Water, Poultry By-Products, Chicken, Carrots, Ocean Fish, Rice, Artificial And Natural Flavors, Guar Gum, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Carrageenan, Taurine, ${V_PLAIN}, Salt.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1220, 190),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000501359": {
+    ingredients: `Meat By-Products, Chicken, Water, Poultry By-Products, Salmon, Spinach, Rice, Artificial And Natural Flavors, Guar Gum, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Choline Chloride, Carrageenan, Taurine, ${V_PLAIN}, Salt.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.0, 78.0, 3.5, 0.05), 1228, 191),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000501397": {
+    ingredients: `Water, Chicken, Meat By-Products, Wheat Gluten, Turkey, Carrots, Soy Flour, Modified Corn Starch, Natural And Artificial Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Salt, Choline Chloride, ${V_PLAIN}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 79.0, 2.5, 0.05), 966, 151),
+    verifiedAt: VERIFIED_006,
+  },
+  "050000501373": {
+    ingredients: `Water, Meat By-Products, Chicken, Wheat Gluten, Soy Flour, Whitefish, Modified Corn Starch, Spinach, Artificial And Natural Flavors, Tricalcium Phosphate, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_PLAIN}.`,
+    analysis: withCalories(ga(11.0, 2.5, 1.0, 79.0, 2.5, 0.05), 971, 151),
+    verifiedAt: VERIFIED_006,
   },
 };

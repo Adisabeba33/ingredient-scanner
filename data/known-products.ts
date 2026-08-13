@@ -88,6 +88,7 @@ export interface KnownProduct {
 
 const CAN = "can" as const;
 const TUB = "tub" as const;
+const BOX = "box" as const;
 const UNIT = "individual_unit" as const;
 
 export const KNOWN_PRODUCTS: KnownProduct[] = [
@@ -980,5 +981,135 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     foodForm: "wet",
     proteins: ["tuna", "mackerel"],
     packages: [{ size: "3 oz", container: CAN, upc: "050000426249", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Gems ─────────────────────────────────────────────────
+  //
+  // A 4 oz box holding two moulded 2 oz mousses, under one retail barcode.
+  // The size is the box, because that is what the code is on; the calorie
+  // statement in the formula is per GEM, because that is what the deck states.
+  //
+  // Target lists the Turkey as "4.9 oz/2pk". It is wrong, and the pack settles
+  // it without needing a shop: at 930 kcal/kg a 2.45 oz gem would be 64.6 kcal
+  // and the deck prints 52, which is a 2 oz gem to within a rounding. The
+  // calorie statement is a second measurement of the net weight, and it agrees
+  // with Purina rather than with the retailer.
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Beef and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000544073", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Chicken and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000544035", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Salmon and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000544059", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Tuna and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000544097", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Turkey and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000589968", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gems",
+    variant: "Mousse Pâté With Ocean Fish and a Halo of Savory Gravy",
+    species: "cat",
+    texture: "mousse",
+    presentation: "gravy_halo",
+    foodForm: "wet",
+    // "Ocean fish" as the deck writes it, not folded into "whitefish".
+    proteins: ["ocean fish"],
+    packages: [{ size: "4 oz", container: BOX, upc: "050000593019", scope: UNIT }],
+  },
+
+  // ── Friskies · Farm Favorites ──────────────────────────────────────────
+  //
+  // Two of these are "Meaty Bits", which is ALSO a Friskies range of its own —
+  // three products of it are above. Here it is the texture inside Farm
+  // Favorites, and it goes in the texture column where it belongs; filing them
+  // under the Meaty Bits range because the words match would merge two shelves.
+  {
+    brand: "Friskies",
+    line: "Farm Favorites",
+    variant: "Pâté With Chicken & Carrots",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "carrots"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000501335", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Farm Favorites",
+    variant: "Pâté With Salmon & Spinach",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "spinach"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000501359", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Farm Favorites",
+    variant: "Meaty Bits With Turkey & Carrots in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey", "carrots"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000501397", scope: UNIT }],
+  },
+  {
+    brand: "Friskies",
+    line: "Farm Favorites",
+    variant: "Meaty Bits With Whitefish & Spinach in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["whitefish", "spinach"],
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000501373", scope: UNIT }],
   },
 ];
