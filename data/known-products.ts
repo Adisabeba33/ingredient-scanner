@@ -1673,4 +1673,146 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "adult",
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000342143", scope: UNIT }],
   },
+
+  // ── Fancy Feast · Medleys · Shredded Fare ──────────────────────────────
+  //
+  // 14% minimum protein, the highest in the seed, on a 78% moisture can. Two
+  // of the four are all-life-stages decks — a kitten formula sitting between
+  // two adult ones under one range name, which is what `lifeStage` is for.
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Shredded Wild Salmon Fare With Spinach in a Savory Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["salmon", "chicken", "spinach"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570515", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Shredded White Meat Chicken Fare With Spinach in a Savory Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570195", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Shredded Turkey Fare With Spinach in a Savory Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["turkey", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570386", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Shredded Tuna Fare With Spinach in a Savory Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna", "chicken", "spinach"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000570584", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Medleys · Paté ───────────────────────────────────────
+  //
+  // The Chicken Primavera Paté is the product that spent three batches on the
+  // do-not-file list in data/wrong-barcodes.ts. It was correctly identified —
+  // 050000962648 IS the paté and not the silky-broth version — and the right
+  // conclusion was never "avoid this code", it was "these are two tins". Now
+  // its deck has arrived and both are seeded, which is a stronger guarantee
+  // than one of them being forbidden.
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken Florentine Pâté With Cheese & Spinach",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "whitefish", "cheese", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000962600", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken Primavera Pâté With Tomatoes, Carrots & Spinach",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "fish", "tomatoes", "carrots", "spinach"],
+    lifeStage: "adult",
+    // The paté. Its silky-broth namesake is 050000574582, seeded above.
+    packages: [{ size: "3 oz", container: CAN, upc: "050000962648", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Wild Salmon Primavera Pâté With Tomatoes, Carrots & Spinach",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "turkey", "fish", "tomatoes", "carrots", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000962662", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Medleys · French sauces ──────────────────────────────
+  //
+  // Velouté, béchamel and demi-glace are three named French sauces and, for
+  // this field, three sauces: `in_sauce` on all of them. Naming a value after
+  // each would split a shelf on the strength of a menu.
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Wild Alaskan Salmon With Carrots & Spinach in a Creamy Velouté Sauce",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "chicken", "whitefish", "carrots", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503285", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Ocean Whitefish With Carrots & Spinach in a Creamy Béchamel Sauce",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["whitefish", "chicken", "carrots", "spinach", "cheese"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503339", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "White Meat Chicken With Carrots & Spinach in a Demi-Glace",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey", "carrots", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503315", scope: UNIT }],
+  },
 ];

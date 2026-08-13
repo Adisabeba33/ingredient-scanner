@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
+import { CONFUSABLE_PAIRS, WRONG_BARCODES } from "../data/wrong-barcodes";
 import { compositionKey } from "./composition-key";
 import { hasAnyFigure } from "./guaranteed-analysis";
 
@@ -267,26 +268,36 @@ describe("data/known-formulas.ts", () => {
   // Nothing about the number itself says it is the wrong object, which is why
   // this is a test and not a comment.
   it("never files a case or sibling code against a single package", () => {
-    const upcs = KNOWN_PRODUCTS.flatMap((p) => p.packages.map((k) => k.upc));
-    // Every one of these passes its own check digit and circulates on retail
-    // listings beside the code for the single unit.
-    for (const caseCode of [
-      "050000504299",
-      "050000503650",
-      "050000579938",
-      // Not confirmed as a case — the source calls it a candidate — but it
-      // turns up in multipack listings for the Turkey Primavera, so it stays
-      // off the single can until a pack settles it.
-      "050000574537",
-      // Not a case at all: the White Meat Chicken Primavera PATE, a different
-      // texture and a different formula that shares the flavour name. The
-      // easiest of all of these to file against the wrong record.
-      "050000962648",
-    ]) {
-      expect({ caseCode, filed: upcs.includes(caseCode) }).toEqual({
-        caseCode,
+    const upcs = new Set(
+      KNOWN_PRODUCTS.flatMap((p) => p.packages.map((k) => k.upc))
+    );
+    // The list moved out of this test and into data/wrong-barcodes.ts, so
+    // scripts/check-batch.mjs can warn about a code BEFORE anybody types the
+    // batch in. It found the gap itself: 050000962648 was on the list, the
+    // checker said "ok", and the list was somewhere only a test could see it.
+    for (const w of WRONG_BARCODES) {
+      expect({ code: w.code, is: w.is, filed: upcs.has(w.code) }).toEqual({
+        code: w.code,
+        is: w.is,
         filed: false,
       });
+    }
+  });
+
+  // The other shape: not a code to avoid, two codes to keep apart. Both are
+  // real products with real decks, and the hazard is filing one's ingredients
+  // against the other's barcode — which nothing on the page would make look odd.
+  it("keeps confusable products apart, with both of them present", () => {
+    for (const pair of CONFUSABLE_PAIRS) {
+      const a = KNOWN_FORMULAS[pair.a];
+      const b = KNOWN_FORMULAS[pair.b];
+      expect({ pair: `${pair.a}/${pair.b}`, both: !!a && !!b }).toEqual({
+        pair: `${pair.a}/${pair.b}`,
+        both: true,
+      });
+      // Different products means different lists. Identical text under two
+      // codes would mean one deck was pasted against both.
+      expect(a.ingredients).not.toEqual(b.ingredients);
     }
   });
 

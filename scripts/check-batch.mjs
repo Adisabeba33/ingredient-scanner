@@ -7,7 +7,9 @@
  *   1. Is the barcode real?      UPC-A check digit.
  *   2. Is it Purina's?           GS1 company prefix 050000.
  *   3. Do we already hold it?    against data/known-products.ts.
- *   4. Does the pack agree with  kcal/kg x net weight has to equal
+ *   4. Is it somebody else's?    against data/wrong-barcodes.ts — cases,
+ *                                multipacks, and products that share a name.
+ *   5. Does the pack agree with  kcal/kg x net weight has to equal
  *      itself?                   the printed kcal/can.
  *
  * The fourth is the one that earns its keep. A calorie statement is a second,
@@ -49,6 +51,7 @@ import { dirname, join } from "node:path";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const PRODUCTS = join(HERE, "..", "data", "known-products.ts");
+const WRONG = join(HERE, "..", "data", "wrong-barcodes.ts");
 
 /** Nestlé Purina. Everything seeded so far sits under it. */
 const PURINA = "050000";
@@ -87,6 +90,24 @@ function seeded() {
   return new Set([...src.matchAll(/upc:\s*"(\d+)"/g)].map((m) => m[1]));
 }
 
+/**
+ * The codes that belong to something else — cases, multipacks, and one product
+ * that shares a flavour name with another.
+ *
+ * Added after the first real use of this script missed one: 050000962648 was on
+ * the do-not-file list and the checker said "ok", because the list lived in a
+ * test file where nothing but the test could see it. A check that knows less
+ * than the repository does is a check somebody will trust and should not.
+ */
+function wrongCodes() {
+  const src = readFileSync(WRONG, "utf8");
+  const out = new Map();
+  for (const m of src.matchAll(/code:\s*"(\d+)",\s*\n\s*is:\s*"([^"]+)"/g)) {
+    out.set(m[1], m[2]);
+  }
+  return out;
+}
+
 function parse(text) {
   return text
     .split("\n")
@@ -111,6 +132,7 @@ if (rows.length === 0) {
 }
 
 const already = seeded();
+const wrong = wrongCodes();
 const seenHere = new Set();
 let failures = 0;
 
@@ -132,6 +154,15 @@ for (const r of rows) {
   }
 
   if (already.has(r.upc)) problems.push("ALREADY IN THE SEED");
+
+  const belongsTo = wrong.get(r.upc);
+  if (belongsTo) {
+    problems.push(
+      `NOT A SINGLE TIN — data/wrong-barcodes.ts says this is ${belongsTo}. ` +
+        `If the source now gives it a full deck of its own, it may have earned ` +
+        `its way off that list; say so out loud rather than quietly.`
+    );
+  }
   if (seenHere.has(r.upc)) problems.push("duplicated inside this batch");
   seenHere.add(r.upc);
 

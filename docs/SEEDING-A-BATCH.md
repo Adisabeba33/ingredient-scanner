@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Ten batches, 120 products and 120 formulas have gone through this. Everything
+Eleven batches, 130 products and 130 formulas have gone through this. Everything
 below is what was actually done, including the parts that were got wrong first.
 
 ---
@@ -55,8 +55,10 @@ Inside the scanner:
 | `scripts/check-batch.mjs` | The pre-flight check. |
 | `app/api/known-products/import/route.ts` | What actually writes to the catalog when the operator presses the button. |
 
+| `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
+
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 120 have one.
+to go and find, and the import steps over it. Right now all 130 have one.
 
 ---
 
@@ -102,8 +104,12 @@ So when it fails: try the other plausible pack sizes before believing anybody.
 
 ### 2.3 Check what the checker cannot
 
-- **Is this barcode a case or a multipack?** Five codes have turned up that pass
-  their own check digit and belong to a different object. See §6.
+- **Is this barcode a case or a multipack?** Seven codes have turned up that
+  pass their own check digit and belong to a different object. The checker knows
+  them (`data/wrong-barcodes.ts`) — but read what it says rather than only the
+  ok/FAIL, because a code can earn its way OFF that list: `050000962648` was on
+  it for three batches as "the paté, not the broth version", and in batch 011
+  the paté's own deck arrived and it became an ordinary product. See §6.
 - **Do two products in the batch share a composition?** The test suite catches
   it (`no two products share a composition`), but know that it is a real
   hazard — Mariner's Catch and Sea Captain's Choice differ by two swapped
@@ -171,6 +177,9 @@ Refused, and why:
   distinction. Adding a value for a spelling is over-fitting.
 - A separate texture for **"Mini Bites"** against "Meaty Bits". Different sizes
   of one idea; `bits` covers both.
+- A value each for **velouté, béchamel and demi-glace**. Three named French
+  sauces and, for this field, three sauces. Naming a value after each would
+  split a shelf on the strength of a menu.
 
 ---
 

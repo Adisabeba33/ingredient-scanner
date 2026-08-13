@@ -18,7 +18,7 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-13, after batch 010. 120 products, 31 with a conflict
+Last updated: 2026-08-13, after batch 011. 130 products, 32 with a conflict
 note, 10 of those needing a physical pack.
 
 ---
@@ -139,7 +139,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (20)
+## B. Settled at the desk — an older record against a current deck (21)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -239,28 +239,61 @@ Third position is a lot of a tin, and wheat gluten is something people look for.
 Unlike the Haddock case in A2 this needs no pack: it is a retailer omission
 against the manufacturer's own deck, which rule 1 already answers.
 
+### B8. A deck's own wording against a webpage's (1)
+
+| UPC | Product | Deck C670521 | Purina online |
+|---|---|---|---|
+| `050000962600` | Fancy Feast Medleys — Chicken Florentine Paté, 3 oz | **Vegetable Oil** | may name the oil more specifically |
+
+Stored as the deck reads. A more specific oil name is a different ingredient
+claim, not a clarification of the same one — somebody avoiding a particular oil
+is answered differently by "vegetable oil" and by any name that replaces it.
+Inventing the specific name to match a webpage would be writing the label.
+
+**Where this came from:** batch 011.
+
 ---
 
-## C. Barcodes that must never be filed against these products (5)
+## C. Barcodes that belong to something else (7)
 
-Every one of these passes its own UPC-A check digit and circulates in real
-listings. **Nothing about the number itself says it belongs to a different
-object** — which is precisely why they are a test
-(`lib/known-import.test.ts`, "never files a case or sibling code against a
-single package") and not a comment.
+**The list lives in [`data/wrong-barcodes.ts`](../data/wrong-barcodes.ts)**, not
+in this file and no longer in a test. Three things read it: the test that
+refuses to file any of them as a package, `scripts/check-batch.mjs` which warns
+before a batch is typed in at all, and this section for a person.
 
-| Wrong code | What it actually is | Correct code for the product |
-|---|---|---|
-| `050000504299` | case of Fancy Feast Petites Tender Beef tubs | `050000002603` |
-| `050000503650` | case of Friskies Ocean Favorites Tuna pâté | `050000503636` |
-| `050000579938` | 24-can case of Friskies Shreds Turkey & Giblets | `050000579921` |
-| `050000574537` | **unconfirmed** — appears in Turkey Primavera multipack listings, may or may not be a case | `050000574520` |
-| `050000962648` | **not a case at all** — the White Meat Chicken Primavera **Paté**, a different texture and formula sharing the flavour name | `050000574582` (the broth version) |
+It moved there because of a gap the checker found on its first real use. The
+list had been sitting inside `lib/known-import.test.ts`, so the batch checker
+looked at `050000962648` — a code that had been on that list for three
+batches — and said "ok". **A check that knows less than the repository does is
+a check somebody will trust and should not.**
 
-The last one is the dangerous one. A case code attached to a single tin gives
-the right ingredients under the wrong barcode; a *sibling product* code gives
-the wrong ingredients under a plausible barcode, and nothing on the page would
-look odd.
+Every code in it passes its own UPC-A check digit and appears in real listings.
+Nothing about the number says it is wrong.
+
+Four are confirmed cases. Three arrived labelled "case candidate" by the source
+and are unconfirmed; they stay off the single tin either way, because an
+unconfirmed case code is still not evidence that it IS the tin.
+
+### A code can leave the list
+
+`050000962648` sat there as "the White Meat Chicken Primavera **Paté** — do not
+file it against the silky-broth version". That was right about what the code
+was and wrong about what to do with it. The paté is a real product; when its
+deck arrived in batch 011 it was seeded like any other.
+
+What survives is the warning that the two are different tins, and it is now
+stronger than a ban: **both are seeded**, and a test asserts both exist and that
+their ingredient lists differ. `CONFUSABLE_PAIRS` in the same file is where that
+kind of hazard goes — not a code to avoid, two codes to keep apart.
+
+| Pair | Why they are confusable |
+|---|---|
+| `050000574582` / `050000962648` | Fancy Feast Medleys White Meat Chicken Primavera exists twice: a silky broth with tender pieces, and a paté. Same flavour name, different texture, different formula. |
+
+A case code attached to a single tin gives the right ingredients under the wrong
+barcode. A **sibling product** code gives the wrong ingredients under a
+plausible barcode, and nothing on the page looks odd. The second is the one to
+be afraid of.
 
 ---
 
