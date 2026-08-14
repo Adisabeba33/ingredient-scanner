@@ -5,7 +5,7 @@
  * Four questions, none of which need a shop or a network:
  *
  *   1. Is the barcode real?      UPC-A check digit.
- *   2. Is it Purina's?           GS1 company prefix 050000.
+ *   2. Do we know the maker?     GS1 company prefix, against the list below.
  *   3. Do we already hold it?    against data/known-products.ts.
  *   4. Is it somebody else's?    against data/wrong-barcodes.ts — cases,
  *                                multipacks, and products that share a name.
@@ -52,9 +52,24 @@ import { dirname, join } from "node:path";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const PRODUCTS = join(HERE, "..", "data", "known-products.ts");
 const WRONG = join(HERE, "..", "data", "wrong-barcodes.ts");
+const GS1 = join(HERE, "..", "data", "gs1-prefixes.ts");
 
-/** Nestlé Purina. Everything seeded so far sits under it. */
-const PURINA = "050000";
+/**
+ * The GS1 company prefixes the seed holds products under.
+ *
+ * Read out of data/gs1-prefixes.ts rather than written here, for the reason
+ * that file states at length: this script and lib/known-products.test.ts both
+ * ask the question, and a check that knows less than the repository does is a
+ * check somebody will trust and should not.
+ */
+function prefixes() {
+  const src = readFileSync(GS1, "utf8");
+  const out = new Map();
+  for (const m of src.matchAll(/prefix:\s*"(\d+)",\s*maker:\s*"([^"]+)"/g)) {
+    out.set(m[1], m[2]);
+  }
+  return out;
+}
 
 const GRAMS_PER_OZ = 28.3495;
 
@@ -133,6 +148,7 @@ if (rows.length === 0) {
 
 const already = seeded();
 const wrong = wrongCodes();
+const makers = prefixes();
 const seenHere = new Set();
 let failures = 0;
 
@@ -147,10 +163,13 @@ for (const r of rows) {
     problems.push(`check digit ${r.upc[11]}, should be ${checkDigit(r.upc.slice(0, 11))}`);
   }
 
-  if (!r.upc.startsWith(PURINA)) {
-    // Not fatal — the seed will hold other makers eventually — but every
-    // product so far is Purina, so an odd prefix is worth a human look.
-    problems.push(`prefix ${r.upc.slice(0, 6)} is not Purina's ${PURINA}`);
+  const maker = makers.get(r.upc.slice(0, 6));
+  if (!maker) {
+    problems.push(
+      `prefix ${r.upc.slice(0, 6)} belongs to no maker we have seeded. ` +
+        `If this is a new maker rather than a mistyped digit, add the prefix ` +
+        `to data/gs1-prefixes.ts and say whose it is.`
+    );
   }
 
   if (already.has(r.upc)) problems.push("ALREADY IN THE SEED");

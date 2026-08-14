@@ -5,6 +5,7 @@ import { compositionKey } from "@/lib/composition-key";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
+import { isVeterinaryDiet } from "@/lib/vet-diet";
 import { importVerdict, type ExistingRow, type ImportVerdict } from "@/lib/known-import";
 import { KNOWN_PRODUCTS } from "@/data/known-products";
 import { KNOWN_FORMULAS } from "@/data/known-formulas";
@@ -58,6 +59,16 @@ interface Candidate {
   analysis: ReturnType<typeof analysisFor>;
   compositionKey: string | null;
   conflictNote: string | null;
+  /**
+   * Does this come from the veterinary channel?
+   *
+   * Read from the brand and range with `isVeterinaryDiet`, the same function
+   * the capture route uses, rather than stored as a field on the seed. It needs
+   * no data the catalog does not already have — "Hill's Prescription Diet r/d"
+   * is the whole evidence — so a field would be a second copy of a fact, and
+   * the copy is what goes stale.
+   */
+  requiresVet: boolean;
 }
 
 function analysisFor(upc: string) {
@@ -90,6 +101,7 @@ function candidates(): Candidate[] {
         analysis: formula.analysis,
         compositionKey: compositionKey(product.brand, formula.ingredients),
         conflictNote: formula.conflict ?? null,
+        requiresVet: isVeterinaryDiet(product.brand, product.line, product.variant),
       });
     }
   }
@@ -176,6 +188,12 @@ export async function GET(req: Request) {
       // True when the row we are leaving alone already carries a guaranteed
       // analysis, false when it does not — the ones worth re-capturing.
       heldPanel: d.heldPanel,
+      // Surfaced in the preview because it changes how the consumer report
+      // judges the product. A therapeutic diet written in as an everyday food
+      // is the one mistake here that a reader cannot see and would not think
+      // to question, so it should be visible BEFORE the write, not inferrable
+      // afterwards from the range name.
+      requiresVet: d.requiresVet,
     })),
   });
 }
@@ -230,11 +248,21 @@ export async function POST(req: Request) {
     food_form_confirmed: true,
     moisture_percent: c.analysis?.moistureMax ?? null,
     guaranteed_analysis: c.analysis && hasAnyFigure(c.analysis) ? c.analysis : null,
-    // Deliberately NOT set: the AAFCO feeding statement wasn't in the source,
-    // and `nutrition_role` is one field where guessing re-creates the error it
-    // exists to remove. Null reads as unknown, which keeps the everyday
-    // complete-diet standard — the same treatment every other row gets.
-    requires_vet: false,
+    // `nutrition_role` is deliberately NOT set: the AAFCO feeding statement
+    // wasn't in the source, and it is one field where guessing re-creates the
+    // error it exists to remove. Null reads as unknown, which keeps the
+    // everyday complete-diet standard — the same treatment every other row gets.
+    //
+    // `requires_vet` is the opposite case, and used to be hardcoded `false`
+    // here. That was not "unknown" — false is the assertion that a product is
+    // NOT a therapeutic diet, and the consumer report reads it as one, dropping
+    // back to judging by "is there real named meat near the top". Applied to a
+    // renal or hydrolysed diet that is the exact category error lib/vet-diet.ts
+    // was written to prevent, about a food a vet prescribed.
+    //
+    // It cost nothing to get right: the evidence is the range name, which is
+    // already here.
+    requires_vet: c.requiresVet,
     image_url: null,
     reason: null,
     created_at: now,

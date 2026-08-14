@@ -9,6 +9,7 @@ import { KNOWN_PRODUCTS } from "../data/known-products";
 import { buildCoverage } from "./coverage";
 import { brandKey } from "./brand-key";
 import { US_PET_BRANDS } from "../data/us-pet-brands";
+import { GS1_PREFIXES } from "../data/gs1-prefixes";
 import { isPresentation, isTexture } from "./presentation";
 
 describe("upcCheckDigit", () => {
@@ -56,13 +57,18 @@ describe("data/known-products.ts", () => {
     expect(bad).toEqual([]);
   });
 
-  // Nestlé Purina's GS1 company prefix. Every product in this batch is theirs,
-  // so a code under a different prefix is either a typo or a product filed
-  // under the wrong brand — both worth catching.
-  it("every barcode sits under the maker's GS1 prefix", () => {
+  // A code under a prefix belonging to nobody we seed is either a typo or a
+  // product filed under the wrong brand — both worth catching.
+  //
+  // Against data/gs1-prefixes.ts rather than a literal "050000", which is what
+  // this was until the seed held a second maker. See that file for why the
+  // list is data — scripts/check-batch.mjs asks the same question, and the two
+  // drifting apart is how a check stops meaning anything.
+  it("every barcode sits under a maker's GS1 prefix", () => {
+    const known = GS1_PREFIXES.map((g) => g.prefix);
     const wrong = KNOWN_PRODUCTS.flatMap((p) =>
       p.packages
-        .filter((pkg) => !pkg.upc.startsWith("050000"))
+        .filter((pkg) => !known.some((prefix) => pkg.upc.startsWith(prefix)))
         .map((pkg) => `${p.variant} — ${pkg.upc}`)
     );
     expect(wrong).toEqual([]);

@@ -18,8 +18,12 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-14, after batch 014. 160 products, 50 with a conflict
+Last updated: 2026-08-14, after batch 015. 180 products, 58 with a conflict
 note, 10 of those needing a physical pack.
+
+Two makers now: Nestlé Purina (160) and Hill's (20). Batch 015 is the first
+non-Purina batch, and the conflicts it brought are a different shape — see B13,
+B14 and B15, all of which are a maker disagreeing with **itself**.
 
 ---
 
@@ -139,7 +143,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (37)
+## B. Settled at the desk — an older record against a current deck (45)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -345,7 +349,7 @@ format. Stored on the deck's own wording.
 entry because it is the first conflict here that is about a link rather than
 about a list, and the next one will be easier to recognise.
 
-### B12. A retailer's panel is a superseded formula (4)
+### B12. A retailer's panel is a superseded formula (5)
 
 B10 is two dated decks from one maker. This is the commoner and weaker version:
 a retailer's panel carries a formula the maker has replaced, and only the
@@ -359,6 +363,7 @@ retailer panel is what a shopper is most likely to have read before scanning.
 | `050000001248` | Fancy Feast Flaked — Tuna Feast, 3 oz | soy protein concentrate, artificial flavor, added color, **sodium nitrite**; 78% moisture, 3.5% ash | none of those; 74% and 3.25% (D690521) |
 | `050000426942` | Fancy Feast Chunky — Chunky Chicken Feast, 3 oz | soy protein concentrate, added color | neither; glycine and magnesium proteinate instead (E665022) |
 | `050000032648` | Fancy Feast Sliced — Sliced Chicken Feast in Gravy, 3 oz | turkey, soy protein concentrate, artificial flavor, added color | none of those; glycine added (D700222) |
+| `052742453408` | Hill's Science Diet Adult — Savory Chicken Entrée, 5.5 oz | *(Chewy)* older sequence omitting Hydrolyzed Chicken Flavor; 181 kcal/can | complete sequence; 182 kcal/can |
 
 **The sodium nitrite is the one to notice.** It is a curing salt, and somebody
 who avoids it would want to know it left rather than to find it absent and
@@ -375,6 +380,77 @@ difference is
 worth an entry precisely because it will not look worth one next time.
 
 **Where this came from:** batch 014.
+
+### B13. A maker disagreeing with itself by one kilocalorie (5)
+
+The signature conflict of the first Hill's batch, and a kind Purina never
+produced: Hill's own product page and Hill's own back-label image state the
+same kcal/kg and a **different kcal/can**, always by exactly one.
+
+| UPC | Product | Page | Label | kcal/kg × 0.156 kg |
+|---|---|---|---|---|
+| `052742661001` | Science Diet Adult — Liver & Chicken Entrée | 156 | **157** | 156.6 |
+| `052742453606` | Science Diet Adult — Savory Salmon Entrée | 171 | **172** | 171.8 |
+| `052742177908` | Science Diet Adult 7+ — Tender Tuna Dinner | 146 | **147** | 146.6 |
+| `052742462806` | Prescription Diet i/d — Chicken Pâté | 171 | **172** | 171.6 |
+| `052742177601` | Science Diet Adult 7+ — Tender Chicken Dinner | 167 | **168** | 167.9 |
+
+**Rule 4 settles all five in the same direction, which is what makes them one
+entry rather than five.** Every page figure is the true value truncated; every
+label figure is it rounded. That is not two sources disagreeing about a fact —
+it is one fact and two rounding conventions, and the web renderer is the one
+throwing the fraction away.
+
+**Stored: the label.** By rule 1, but here rule 4 agrees independently, which
+is worth more than the precedence rule on its own.
+
+**Worth recognising on sight next time.** A one-kcal gap on an identical
+kcal/kg is not evidence of a reformulation and does not need investigating as
+one. Multiply the kcal/kg by the net weight: if the page is the floor and the
+label is the round, it is this, and there is nothing to decide.
+
+### B14. A maker's own renderer mangling its own list (2)
+
+Not a disagreement about ingredients — a disagreement about typography, from
+one source that cannot be read literally.
+
+| UPC | Product | What Hill's HTML does |
+|---|---|---|
+| `052742617404` | Science Diet Kitten — Savory Turkey Entrée | collapses spaces inside names: "SoyProtein Isolate", "ChickenLiver Flavor" |
+| `050000428748` | *(Purina, see B9)* | substitutes Vegetable Glycerin for the deck's Vegetable Oil |
+
+**Stored: the label transcription, spaces restored.** A missing space is not a
+spelling a maker chose, and copying it through would put a word in the catalog
+that appears on no can — findable by nobody searching for either real word.
+
+Filed beside the Purina glycerin case on purpose. Both are the *manufacturer's
+own website* misrepresenting the manufacturer's own deck, which is the failure
+mode rule 1 is least intuitive about: the instinct is that a maker's site is
+authoritative because it is the maker's. It is authoritative about the product
+and unreliable about the string.
+
+### B15. A maker's own stale marketing asset (1)
+
+| UPC | Product | Gallery graphic | Can-back label (code 6111) |
+|---|---|---|---|
+| `052742611105` | Hill's Science Diet Adult Indoor — Ocean Fish Entrée, 5.5 oz | fat **min 3.5%**, fibre **max 2.0%** | fat **min 2.0%**, fibre **max 4.5%** |
+
+A standalone guaranteed-analysis image still linked from Hill's own product
+gallery, against the current can-back panel on the same page — whose ingredient
+deck matches the live list, which is what identifies it as the current one.
+
+**Stored: the can-back label.**
+
+**This one is not a rounding and not a transcription slip.** The two figures
+essentially swap places, and a fat minimum moving 3.5 → 2.0 while fibre moves
+2.0 → 4.5 is a reformulated food, not a mistyped one. The gallery image is an
+older pack's panel that nobody unlinked.
+
+Worth its own entry because of where it was found: not on a retailer's site and
+not in the page's text, but in an *image* on the correct page, which is the
+last place a check would look and the first place a person would trust.
+
+**Where this came from:** batch 015.
 
 ---
 
@@ -495,6 +571,51 @@ figure is stored as a bare number next to six that behave differently.
 a life stage: calcium on kitten food, vitamin E on senior food. They are the
 figures a buyer chose that pack for, and dropping them silently is worse on
 these two ranges than anywhere else in the catalog.
+
+Hill's adds a third product to this one — `052742454108` Science Diet Adult 7+
+Savory Chicken, at 15 IU/kg — and an ascorbic-acid minimum printed in **ppm**,
+which is a third unit again.
+
+### D4. Ash and taurine — every Hill's product, and not a gap in the research
+
+`052742068473` and the other nineteen Hill's cans state **no ash guarantee and
+no taurine guarantee**. All twenty. This is not something the research missed;
+it is what Hill's prints.
+
+It is recorded here because of what it costs, which is invisible from the data:
+
+- **No carbohydrate figure on any Hill's product.** Carbohydrate is derived by
+  difference and needs all five of protein, fat, fibre, moisture and ash. The
+  consumer app already refuses to guess without ash, which is right — but the
+  result is that a reader comparing a Hill's can against a Fancy Feast one gets
+  a carbohydrate row on one and not the other, with nothing on the page saying
+  why.
+- **No taurine row either**, on cat food, where an absent taurine guarantee is
+  itself treated as a signal elsewhere in the report.
+
+**Nothing to fix in the model** — `GuaranteedAnalysis` already allows null for
+both, and `ga()` was widened in batch 015 to accept a null ash. The open
+question is a *presentation* one: whether the panel should say "the label does
+not state this" where a maker prints nothing, rather than leaving a row out and
+letting absence read as an oversight.
+
+**Do not be tempted to fill these in.** A plausible ash would make the
+carbohydrate row appear, and that row would then be a number derived from an
+invention, presented identically to a hundred and sixty derived from labels.
+
+### D5. Fibre stated as a MINIMUM
+
+`052742453101` Hill's Science Diet Adult Hairball Control guarantees **Crude
+Fiber (min) 2.0%** — in addition to the maximum every other product states.
+
+`GuaranteedAnalysis` has `crudeFiberMax` and no minimum, which is the right
+default: fibre is bulk, and a maximum is what nearly every maker prints. But on
+a hairball formula the *minimum* is the point of the product — it is the reason
+somebody buys that can rather than the ordinary one — and it is the figure the
+catalog cannot hold.
+
+Same two-repo change as D1 and D3. Lower priority than either, on one product
+so far, but it will recur on every hairball and weight range we seed.
 
 ---
 

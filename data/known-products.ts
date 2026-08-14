@@ -2248,4 +2248,281 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "adult",
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000574070", scope: UNIT }],
   },
+
+  // ══ Batch 015 · Hill's ═══════════════════════════════════════════════════
+  //
+  // The first maker in the seed that is not Purina, and it arrives with its own
+  // way of writing a label. Two things differ enough to matter here:
+  //
+  //   - Hill's prints NO ash and NO taurine guarantee. Not on one deck, on all
+  //     twenty. See the note on `ga` in data/known-formulas.ts for what that
+  //     costs the reader.
+  //   - `brand` is the range Hill's sells under — Science Diet or Prescription
+  //     Diet — not the company. Both are separate entries in
+  //     data/us-pet-brands.ts, and a shopper reads them as separate brands,
+  //     which is the reading the catalog should carry.
+  //
+  // The five Prescription Diet cans get their veterinary flag from
+  // `lib/vet-diet.ts` at import time, off the range name. Nothing is stored on
+  // the product for it — see app/api/known-products/import/route.ts.
+
+  // ── Hill's Science Diet · Adult ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Savory Beef Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [{ size: "2.9 oz", container: CAN, upc: "052742068473", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Savory Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742453408", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Chicken Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742177007", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Liver & Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["liver", "chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742661001", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Savory Salmon Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742453606", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Savory Turkey Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742661308", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult Hairball Control ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Hairball Control",
+    variant: "Ocean Fish Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish", "tuna"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742453101", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult Indoor ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Indoor",
+    variant: "Savory Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742610900", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Indoor",
+    variant: "Ocean Fish Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742611105", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Kitten ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "Savory Turkey Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "kitten",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742617404", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "with Salmon",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "kitten",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742617305", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult 7+ ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Savory Beef Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "senior",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742740003", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Tender Tuna Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "senior",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742177908", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Savory Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742454108", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Tender Chicken Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742177601", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · r/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "r/d",
+    variant: "Chicken Flavor",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742945408", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · y/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "y/d",
+    variant: "with Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742149608", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · z/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "z/d",
+    variant: "Hydrolyzed Chicken Flavor",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742523804", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · c/d Multicare ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "c/d Multicare",
+    variant: "with Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742623801", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · i/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "i/d",
+    variant: "Chicken Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742462806", scope: UNIT }],
+  },
 ];

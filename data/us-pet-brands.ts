@@ -351,6 +351,11 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Small & Mini",
       "Large Breed",
       "Adult 7+",
+      // Seeded in batch 015. Named the way Hill's prints them on the can,
+      // which keeps "Adult" in front — these are adult ranges with a purpose,
+      // not purposes sold across life stages.
+      "Adult Hairball Control",
+      "Adult Indoor",
     ],
   },
   {
@@ -358,7 +363,24 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Hill's (Colgate)",
     species: "both",
     aliases: ["prescription diet", "hills prescription diet"],
-    lines: ["c/d", "i/d", "k/d", "z/d", "w/d", "j/d", "Metabolic", "Derm Complete", "Gastrointestinal Biome"],
+    lines: [
+      "c/d",
+      // Hill's prints "c/d Multicare" on the can and sells plain "c/d" as a
+      // separate thing. Both are kept: collapsing them would file a Multicare
+      // deck under a range whose formula it is not.
+      "c/d Multicare",
+      "i/d",
+      "k/d",
+      "z/d",
+      "w/d",
+      "j/d",
+      // Seeded in batch 015.
+      "r/d",
+      "y/d",
+      "Metabolic",
+      "Derm Complete",
+      "Gastrointestinal Biome",
+    ],
   },
   { name: "Hill's Bioactive Recipe", owner: "Hill's (Colgate)", species: "dog", aliases: ["bioactive recipe"] },
 

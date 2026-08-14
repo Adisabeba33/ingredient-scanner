@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
+import { isVeterinaryDiet } from "./vet-diet";
 import { CONFUSABLE_PAIRS, WRONG_BARCODES } from "../data/wrong-barcodes";
 import { compositionKey } from "./composition-key";
 import { hasAnyFigure } from "./guaranteed-analysis";
@@ -309,10 +310,25 @@ describe("data/known-formulas.ts", () => {
   // restatement: the field is set from the front of the pack and the taurine
   // comes off the panel, two independent readings that have to agree. A kitten
   // tin at 0.05 means one of the two was copied from an adult sibling.
+  //
+  // Scoped to decks that STATE a figure, which is not a weakening: the mistake
+  // being caught is a kitten tin carrying 0.05, and that is still caught. What
+  // changed is that stating nothing became possible — Hill's prints no taurine
+  // guarantee on any of its twenty cans, kitten ones included, so requiring a
+  // figure would have been requiring Purina's label habits of another maker.
+  //
+  // A null here means the panel is silent, which the report already treats as
+  // its own signal. Writing 0.07 into it to satisfy this test would put a
+  // number on a label that has none — the same error `ga`'s taurine note
+  // describes, in the direction that looks like diligence.
   it("keeps the kitten taurine guarantee at what the deck says", () => {
     const kittens = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "kitten");
     expect(kittens.length).toBeGreaterThan(0);
-    for (const upc of kittens.flatMap((p) => p.packages.map((k) => k.upc))) {
+    const stated = kittens
+      .flatMap((p) => p.packages.map((k) => k.upc))
+      .filter((upc) => KNOWN_FORMULAS[upc]?.analysis.taurineMin !== null);
+    expect(stated.length).toBeGreaterThan(0);
+    for (const upc of stated) {
       expect({ upc, taurine: KNOWN_FORMULAS[upc]?.analysis.taurineMin }).toEqual({
         upc,
         taurine: 0.07,
@@ -347,16 +363,28 @@ describe("data/known-formulas.ts", () => {
   // states maintenance on its panel and "7+" on its front, so the field is
   // recording the range, not the nutritional claim.
   //
-  // That is fine as long as it stays tied to the range that prints it. Set
+  // That is fine as long as it stays tied to a range that prints an age. Set
   // `senior` on a tin whose front does not say so and the field has quietly
   // become a guess about an animal's age — which is not a thing any deck says.
-  it("sets senior only on the range whose front says so", () => {
+  //
+  // ── Why this matches a marker and not a range name ────────────────────
+  //
+  // It was written as `line === "Senior 7+"` when Fancy Feast was the only
+  // senior range we held, and that was too narrow by one batch: Hill's calls
+  // the same shelf "Adult 7+". Pinning to a maker's chosen wording would have
+  // made every other maker's senior food unfileable, which is not the rule —
+  // the rule is that an age is printed. So the marker is what is matched, and
+  // "7+" and "Senior" are both markers. `\b7\s*\+` rather than "7+" so that a
+  // range which writes it "7 +" still passes and one that happens to contain a
+  // 7 in another position does not.
+  it("sets senior only where the range prints an age", () => {
     const seniors = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "senior");
     expect(seniors.length).toBeGreaterThan(0);
     for (const p of seniors) {
-      expect({ name: p.variant, line: p.line }).toEqual({
-        name: p.variant,
-        line: "Senior 7+",
+      const printsAge = /\bsenior\b|\b\d+\s*\+/i.test(p.line);
+      expect({ name: `${p.line} ${p.variant}`, printsAge }).toEqual({
+        name: `${p.line} ${p.variant}`,
+        printsAge: true,
       });
     }
   });
@@ -404,6 +432,44 @@ describe("data/known-formulas.ts", () => {
   // The one-sentence `conflict` note is what a person sees in the import panel;
   // the document is where the reasoning lives, and reasoning that exists only
   // in a commit message is reasoning nobody will find in November.
+  // The import route asks `isVeterinaryDiet` for every seeded product and
+  // writes the answer to `requires_vet`, which the consumer report reads to
+  // decide whether to judge the food by the everyday standard.
+  //
+  // Two ways that goes wrong, and this test is about both:
+  //
+  //   - A therapeutic diet read as an everyday food. The report then asks "is
+  //     there real named meat near the top" about a renal or hydrolysed diet,
+  //     whose whole design is to not have that — and says so, about a food a
+  //     vet prescribed. `requires_vet` was hardcoded `false` here for fourteen
+  //     batches, which was harmless only because every product was Purina and
+  //     none was therapeutic.
+  //   - An everyday food read as a therapeutic one, which drops the standard
+  //     for a supermarket product nobody prescribed. Science Diet is sold off
+  //     a shelf and must NOT trip this; Prescription Diet must.
+  //
+  // Written against the seed rather than against invented strings, because the
+  // question is whether the detector fires on the names we actually store.
+  it("recognises every prescription product and no retail one", () => {
+    const vet = KNOWN_PRODUCTS.filter((p) =>
+      isVeterinaryDiet(p.brand, p.line, p.variant)
+    );
+    // Every Prescription Diet product we hold, and nothing else.
+    expect(vet.map((p) => `${p.brand} ${p.line}`).sort()).toEqual(
+      KNOWN_PRODUCTS.filter((p) => p.brand.includes("Prescription Diet"))
+        .map((p) => `${p.brand} ${p.line}`)
+        .sort()
+    );
+    expect(vet.length).toBeGreaterThan(0);
+    // Named explicitly: the shelf brand that shares a maker with the vet one.
+    for (const p of KNOWN_PRODUCTS.filter((p) => p.brand === "Hill's Science Diet")) {
+      expect({
+        name: `${p.line} ${p.variant}`,
+        vet: isVeterinaryDiet(p.brand, p.line, p.variant),
+      }).toEqual({ name: `${p.line} ${p.variant}`, vet: false });
+    }
+  });
+
   it("has every conflict written down in docs/CATALOG-CONFLICTS.md", () => {
     const doc = readFileSync("docs/CATALOG-CONFLICTS.md", "utf8");
     const undocumented = Object.entries(KNOWN_FORMULAS)

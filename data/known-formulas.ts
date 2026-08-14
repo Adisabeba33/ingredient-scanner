@@ -97,6 +97,7 @@ const VERIFIED_013 = "2026-08-13";
 
 /** Promoted from the research ledger, batch 014. */
 const VERIFIED_014 = "2026-08-13";
+const VERIFIED_015 = "2026-08-14";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -110,7 +111,21 @@ function ga(
   crudeFatMin: number,
   crudeFiberMax: number,
   moistureMax: number,
-  ashMax: number,
+  /**
+   * Null where the deck states no ash guarantee.
+   *
+   * Every Purina deck prints one, so this was `number` for fourteen batches.
+   * No Hill's deck prints one at all — not on any of the twenty in batch 015 —
+   * and that is a real difference between the two makers rather than a gap in
+   * the research.
+   *
+   * The cost is visible to the reader and worth knowing: carbohydrate is
+   * derived by difference and needs all five figures, so a Hill's product shows
+   * no carbohydrate row. The consumer app already refuses to guess it. Writing
+   * a plausible ash here to make the row appear would be inventing the one
+   * figure the calculation rests on.
+   */
+  ashMax: number | null,
   /**
    * Null where the deck states no taurine guarantee.
    *
@@ -1509,5 +1524,154 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_014,
     conflict:
       "Purina's live widget and Target's panel both still show added color and 2.3% maximum fibre. Purina's live page links September 2024 deck I608623, which omits the colour and prints 2.75%. The deck is stored. Fourth Friskies Indoor product to supersede a coloured formula from the same reformulation.",
+  },
+
+  // ══ Batch 015 · Hill's ═══════════════════════════════════════════════════
+  //
+  // No vitamin constants for any of these, and that is deliberate. Purina
+  // reuses about thirteen premix blocks across a hundred and sixty products,
+  // which is what makes a named constant worth having. Hill's prints SIXTEEN
+  // distinct vitamin orderings across these twenty cans — barely two products
+  // share one. A constant used once is a variable holding a string, and
+  // sixteen of them would make the near-identical blocks harder to compare
+  // rather than easier, which is the opposite of the point.
+  //
+  // So these are written out. If a later Hill's batch shows real reuse, the
+  // constants can be extracted then, from evidence rather than from habit.
+
+  // ── Hill's Science Diet · Adult ─────────────────────────────────────
+  "052742068473": {
+    ingredients: `Water, Beef, Turkey, Pork Liver, Cracked Pearled Barley, Potatoes, Corn Flour, Corn Protein Meal, Egg Product, Powdered Cellulose, Natural Flavor, Chicken Fat, Calcium Sulfate, Iodized Salt, Potassium Chloride, Dicalcium Phosphate, Egg Whites, Choline Chloride, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Ascorbic Acid (source of Vitamin C), Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Locust Bean Gum, Carrageenan, Taurine, Fish Oil, Guar Gum, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(9.0, 5.5, 3.5, 78.0, null, null), 1062, 87),
+    verifiedAt: VERIFIED_015,
+  },
+  "052742453408": {
+    ingredients: `Water, Chicken, Turkey Giblets, Pork By-Products, Pork Liver, Corn Starch, Powdered Cellulose, Wheat Flour, Soybean Meal, Corn Protein Meal, Chicken Fat, Chicken Liver Flavor, Natural Flavor, Hydrolyzed Chicken Flavor, Dicalcium Phosphate, Guar Gum, Fish Oil, Potassium Chloride, Brewers Dried Yeast, Locust Bean Gum, Carrageenan, Choline Chloride, Iodized Salt, Taurine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin D3 Supplement, Folic Acid), Calcium Sulfate, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), DL-Methionine, Potassium Citrate.`,
+    analysis: withCalories(ga(8.5, 4.5, 2.0, 78.0, null, null), 1164, 182),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Chewy's live panel carries an older ingredient sequence that omits Hydrolyzed Chicken Flavor, and states 181 kcal/can. Hill's current page and back label give the complete sequence and 182. The label is stored.",
+  },
+  "052742177007": {
+    ingredients: `Water, Chicken, Pork Liver, Wheat Flour, Wheat Gluten, Dextrose, Modified Rice Starch, Oat Fiber, Hydrolyzed Chicken Flavor, Egg Whites, Soybean Oil, Dicalcium Phosphate, Potassium Chloride, Fish Oil, Choline Chloride, Guar Gum, Calcium Carbonate, Iodized Salt, L-Lysine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), Taurine, Calcium Chloride, Caramel color, minerals (Zinc Oxide, Ferrous Sulfate, Copper Sulfate, Manganous Oxide, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.8, 2.5, 1.5, 82.0, null, null), 1028, 160),
+    verifiedAt: VERIFIED_015,
+  },
+  "052742661001": {
+    ingredients: `Water, Pork Liver, Pork By-Products, Chicken, Wheat Flour, Whole Grain Corn, Corn Starch, Powdered Cellulose, Chicken Fat, Calcium Sulfate, Chicken Liver Flavor, Fish Oil, Guar Gum, Brewers Dried Yeast, Natural Flavor, Locust Bean Gum, Carrageenan, Dicalcium Phosphate, DL-Methionine, Potassium Chloride, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), Taurine, Iodized Salt, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(8.0, 3.5, 2.5, 78.0, null, null), 1004, 157),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's own page text prints 156 kcal/can where its own back-label image prints 157, on the same 1004 kcal/kg. The label is stored, because 1004 x 0.156 kg = 156.6, which rounds to 157. Four Hill's products in this batch disagree with themselves this way and the label wins the arithmetic every time â see docs/CATALOG-CONFLICTS.md B13.",
+  },
+  "052742453606": {
+    ingredients: `Water, Pork Liver, Salmon, Pork By-Products, Whole Grain Corn, Corn Protein Meal, Corn Starch, Chicken Fat, Powdered Cellulose, Chicken Liver Flavor, Calcium Sulfate, Natural Flavor, Guar Gum, Locust Bean Gum, Brewers Dried Yeast, Potassium Chloride, Iodized Salt, Choline Chloride, Taurine, Carrageenan, Oat Bran, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin), Dicalcium Phosphate, Fructooligosaccharides (FOS), L-Lysine, Magnesium Oxide, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(8.0, 3.5, 2.0, 78.0, null, null), 1101, 172),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's own page text prints 171 kcal/can where its own back-label image prints 172, on the same 1101 kcal/kg. The label is stored: 1101 x 0.156 kg = 171.8. See B13.",
+  },
+  "052742661308": {
+    ingredients: `Water, Turkey, Turkey Giblets, Pork Liver, Salmon, Rice, Pork By-Products, Corn Starch, Chicken Fat, Powdered Cellulose, Wheat Flour, Corn Protein Meal, Chicken, Chicken Liver Flavor, Natural Flavor, Guar Gum, Dicalcium Phosphate, Locust Bean Gum, Brewers Dried Yeast, Choline Chloride, Potassium Chloride, Carrageenan, Calcium Carbonate, Calcium Sulfate, Taurine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Folic Acid, Vitamin D3 Supplement), Iodized Salt, DL-Methionine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate).`,
+    analysis: withCalories(ga(7.3, 5.5, 2.5, 78.0, null, null), 1268, 198),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Science Diet · Adult Hairball Control ─────────────────────────────────────
+  "052742453101": {
+    ingredients: `Water, Pork Liver, Tuna, Pork By-Products, Powdered Cellulose, Chicken Fat, Wheat Flour, Corn Starch, Soybean Oil, Whole Grain Corn, Chicken Liver Flavor, Natural Flavor, Calcium Sulfate, Dicalcium Phosphate, Guar Gum, Locust Bean Gum, Brewers Dried Yeast, Calcium Carbonate, Choline Chloride, Potassium Chloride, Carrageenan, DL-Methionine, Iodized Salt, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Folic Acid), L-Carnitine, Taurine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(8.0, 4.5, 4.0, 78.0, null, null), 1153, 180),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Science Diet · Adult Indoor ─────────────────────────────────────
+  "052742610900": {
+    ingredients: `Water, Chicken, Turkey Giblets, Pork By-Products, Pork Liver, Powdered Cellulose, Corn Starch, Wheat Flour, Soybean Meal, Corn Protein Meal, Chicken Fat, Soybean Oil, Chicken Liver Flavor, Natural Flavor, Dicalcium Phosphate, Guar Gum, Potassium Chloride, Brewers Dried Yeast, Iodized Salt, Choline Chloride, Locust Bean Gum, Carrageenan, Taurine, Calcium Carbonate, Calcium Sulfate, DL-Methionine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.5, 5.0, 4.0, 78.0, null, null), 1136, 177),
+    verifiedAt: VERIFIED_015,
+  },
+  "052742611105": {
+    ingredients: `Water, Tuna, Pork By-Products, Pork Liver, Wheat Flour, Powdered Cellulose, Corn Starch, Chicken Fat, Natural Flavor, Soybean Oil, Egg Whites, Dicalcium Phosphate, Calcium Sulfate, Guar Gum, Locust Bean Gum, Iodized Salt, Fish Oil, Potassium Chloride, Carrageenan, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Folic Acid), Choline Chloride, Fructooligosaccharides (FOS), Potassium Citrate, L-Tryptophan, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(8.0, 2.0, 4.5, 78.0, null, null), 983, 153),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "A standalone guaranteed-analysis graphic still linked in Hill's own gallery shows 3.5% minimum fat and 2.0% maximum fibre. The current code-6111 can-back label, whose ingredient deck matches the live page, prints 2.0% fat and 4.5% fibre. The label is stored. This one is not a rounding: the two figures swap places, which is what a stale graphic looks like rather than a typo.",
+  },
+
+  // ── Hill's Science Diet · Kitten ─────────────────────────────────────
+  "052742617404": {
+    ingredients: `Water, Turkey, Turkey Giblets, Pork Liver, Salmon, Pork By-Products, Soy Protein Isolate, Corn Protein Meal, Egg Product, Corn Starch, Chicken Liver Flavor, Chicken Fat, Whole Grain Corn, Oat Fiber, Dicalcium Phosphate, Chicken, Natural Flavor, Ground Pecan Shells, Potassium Chloride, Guar Gum, Brewers Dried Yeast, Calcium Carbonate, Flaxseed, Dried Beet Pulp, Locust Bean Gum, Dried Citrus Pulp, Calcium Sulfate, Choline Chloride, Iodized Salt, Carrageenan, Fish Oil, Fructooligosaccharides (FOS), Pressed Cranberries, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin A Supplement, Riboflavin Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (source of Vitamin K), Vitamin D3 Supplement), L-Lysine, Taurine, Magnesium Oxide, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(9.5, 5.5, 2.0, 78.0, null, null), 1271, 198),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's HTML ingredient renderer collapses whitespace inside several names â it prints “SoyProtein Isolate” and “ChickenLiver Flavor”. The back-label image separates the words, and the label transcription is stored rather than inheriting a rendering defect. A missing space is not a spelling the maker chose.",
+  },
+  "052742617305": {
+    ingredients: `Chicken Broth, Pork Liver, Salmon, Pork By-Products, Chicken Fat, Egg Product, Soybean Meal, Corn Starch, Soy Protein Isolate, Wheat Flour, Dicalcium Phosphate, Chicken Liver Flavor, Hydrolyzed Chicken Flavor, Natural Flavor, Calcium Sulfate, Ground Pecan Shells, Brewers Dried Yeast, Guar Gum, Oat Fiber, Flaxseed, Dried Beet Pulp, Potassium Chloride, Dried Citrus Pulp, Locust Bean Gum, Fructooligosaccharides (FOS), Iodized Salt, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin), Carrageenan, Choline Chloride, Taurine, Pressed Cranberries, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Magnesium Oxide.`,
+    analysis: withCalories(ga(11.0, 5.5, 2.0, 78.0, null, null), 1360, 212),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Science Diet · Adult 7+ ─────────────────────────────────────
+  "052742740003": {
+    ingredients: `Water, Pork Liver, Beef, Pork By-Products, Wheat Flour, Corn Starch, Powdered Cellulose, Rice, Corn Gluten Meal, Soybean Oil, Chicken Liver Flavor, Calcium Carbonate, Natural Flavor, Carrageenan, Guar Gum, Locust Bean Gum, Fish Oil, Brewers Dried Yeast, Calcium Sulfate, Dicalcium Phosphate, Potassium Chloride, DL-Methionine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), Iodized Salt, Choline Chloride, Taurine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.0, 3.5, 3.5, 78.0, null, null), 1021, 159),
+    verifiedAt: VERIFIED_015,
+  },
+  "052742177908": {
+    ingredients: `Water, Tuna, Chicken, Pork Liver, Wheat Flour, Dextrose, Modified Rice Starch, Oat Fiber, Wheat Gluten, Pork Plasma, Soybean Oil, Glycine, Potassium Chloride, Dicalcium Phosphate, Calcium Carbonate, Natural Flavor, Guar Gum, Fish Oil, Choline Chloride, Cysteine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Biotin, Vitamin D3 Supplement, Folic Acid), minerals (Calcium Chloride, Zinc Oxide, Ferrous Sulfate, Copper Sulfate, Manganous Oxide, Calcium Iodate), Taurine, Iodized Salt, DL-Methionine, L-Carnitine, Caramel color, Beta-Carotene.`,
+    analysis: withCalories(ga(7.5, 2.5, 1.5, 82.0, null, null), 940, 147),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's page prints 146 kcal/can where the can-back label prints 147, on the same 940 kcal/kg. The label is stored: 940 x 0.156 kg = 146.6. See B13.",
+  },
+  "052742454108": {
+    ingredients: `Water, Chicken, Pork By-Products, Pork Liver, Wheat Flour, Rice, Corn Starch, Chicken Liver Flavor, Soybean Oil, Guar Gum, Calcium Sulfate, Dicalcium Phosphate, Potassium Chloride, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Calcium Carbonate, Powdered Cellulose, Calcium Chloride, Taurine, Iodized Salt, Choline Chloride, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Magnesium Oxide.`,
+    analysis: withCalories(ga(7.0, 3.5, 1.0, 78.0, null, null), 1072, 167),
+    verifiedAt: VERIFIED_015,
+  },
+  "052742177601": {
+    ingredients: `Water, Chicken, Pork Liver, Wheat Flour, Wheat Gluten, Dextrose, Modified Rice Starch, Oat Fiber, Egg Whites, Hydrolyzed Chicken Flavor, Soybean Oil, Dicalcium Phosphate, Potassium Chloride, Choline Chloride, Guar Gum, Fish Oil, Calcium Carbonate, L-Lysine, Salt, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Ascorbic Acid (source of Vitamin C), Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), Iodized Salt, Taurine, minerals (Calcium Chloride, Zinc Oxide, Ferrous Sulfate, Copper Sulfate, Manganous Oxide, Calcium Iodate), L-Carnitine, Caramel color, Beta-Carotene.`,
+    analysis: withCalories(ga(7.5, 2.5, 1.5, 82.0, null, null), 1076, 168),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's page prints 167 kcal/can where the can-back label prints 168, on the same 1076 kcal/kg. The label is stored: 1076 x 0.156 kg = 167.9. See B13.",
+  },
+
+  // ── Hill's Prescription Diet · r/d ─────────────────────────────────────
+  "052742945408": {
+    ingredients: `Water, Pork Liver, Pork By-Products, Powdered Cellulose, Chicken, Brewers Rice, Corn Gluten Meal, Corn Starch, Calcium Sulfate, Soybean Oil, Dicalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, DL-Methionine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid), Iodized Salt, Calcium Carbonate, Taurine, Chicken Liver Flavor, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(6.5, 1.0, 6.0, 78.0, null, null), 779, 122),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Prescription Diet · y/d ─────────────────────────────────────
+  "052742149608": {
+    ingredients: `Water, Pork Liver, Pork By-Products, Chicken, Corn Flour, Rice, Chicken Fat, Chicken Liver Flavor, Powdered Cellulose, Calcium Carbonate, Fish Oil, Natural Flavor, L-Lysine, Potassium Chloride, DL-Methionine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Guar Gum, Taurine, Choline Chloride, Salt, Cysteine, Dicalcium Phosphate, L-Carnitine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.0, 5.5, 2.5, 78.0, null, null), 1242, 194),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Prescription Diet · z/d ─────────────────────────────────────
+  "052742523804": {
+    ingredients: `Hydrolyzed Chicken Liver, Water, Corn Starch, Coconut Oil, Ground Pecan Shells, Calcium Carbonate, Fish Oil, Powdered Cellulose, Dicalcium Phosphate, Flaxseed, Dried Beet Pulp, Potassium Chloride, Dried Citrus Pulp, Choline Chloride, Cysteine, Iodized Salt, Potassium Citrate, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin D3 Supplement, Folic Acid), DL-Methionine, Soybean Oil, Pressed Cranberries, Calcium Sulfate, Taurine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.0, 2.5, 1.5, 78.0, null, null), 1108, 173),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Prescription Diet · c/d Multicare ─────────────────────────────────────
+  "052742623801": {
+    ingredients: `Pork By-Products, Water, Pork Liver, Brewers Rice, Chicken, Corn Starch, Chicken Fat, Soybean Meal, Chicken Liver Flavor, Fish Oil, Hydrolyzed Chicken Flavor, Calcium Sulfate, Guar Gum, Brewers Dried Yeast, Choline Chloride, Calcium Chloride, DL-Methionine, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Folic Acid, Vitamin D3 Supplement), Iodized Salt, Taurine, Potassium Citrate, Potassium Chloride, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(8.5, 3.5, 2.5, 78.0, null, null), 1118, 174),
+    verifiedAt: VERIFIED_015,
+  },
+
+  // ── Hill's Prescription Diet · i/d ─────────────────────────────────────
+  "052742462806": {
+    ingredients: `Water, Pork Liver, Chicken, Rice, Potato Protein, Flaxseed, Fish Oil, Calcium Sulfate, Chicken Fat, Chicken Liver Flavor, Hydrolyzed Chicken Flavor, Ground Pecan Shells, Guar Gum, Potassium Chloride, Dicalcium Phosphate, Dried Beet Pulp, Dried Citrus Pulp, Iodized Salt, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Choline Chloride, Taurine, Pressed Cranberries, DL-Methionine, Magnesium Oxide, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Beta-Carotene.`,
+    analysis: withCalories(ga(7.2, 4.0, 4.0, 78.0, null, null), 1100, 172),
+    verifiedAt: VERIFIED_015,
+    conflict:
+      "Hill's page prints 171 kcal/can where the PET NUTRITION FACTS panel prints 172, on the same 1100 kcal/kg. The label is stored: 1100 x 0.156 kg = 171.6. See B13.",
   },
 };

@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Fourteen batches, 160 products and 160 formulas have gone through this. Everything
+Fifteen batches, 180 products and 180 formulas have gone through this. Everything
 below is what was actually done, including the parts that were got wrong first.
 
 ---
@@ -59,7 +59,7 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 160 have one.
+to go and find, and the import steps over it. Right now all 180 have one.
 
 ---
 
@@ -118,6 +118,39 @@ So when it fails: try the other plausible pack sizes before believing anybody.
 - **Does the panel read as as-fed?** Moisture 60–90%, protein ≤20%. A
   dry-matter figure typed into an as-fed panel would wreck every comparison
   drawn from it. Tested.
+
+### 2.4 If the batch is a maker we have not seeded before
+
+Batches 001–014 were all Nestlé Purina. Batch 015 was the first Hill's, and
+almost everything that needed doing was a place where "Purina" had been written
+down as if it meant "a pet food maker". Expect the same and look for it
+deliberately — a new maker's first batch is where those show up, and each one
+looks like the data being wrong until you read the code.
+
+What batch 015 needed, as a checklist for the next one:
+
+1. **`data/gs1-prefixes.ts`** — add the six-digit prefix and whose it is, or the
+   checker calls every row in the batch a failure. That file explains why
+   twenty false failures is worse than no check.
+2. **`data/us-pet-brands.ts`** — the brand must be there, and every range must
+   be in its `lines`. Both are tested. Check what `brandKey()` actually resolves
+   before assuming: `"Hill's"` does not match `"Hill's Science Diet"`.
+3. **Which string is the brand?** Hill's sells *Science Diet* and *Prescription
+   Diet* as separate brands and the company name appears on neither shelf as the
+   thing being chosen. Store what a shopper would name.
+4. **Ask what the maker does not print.** Hill's states no ash and no taurine on
+   any product — Purina states both on all 160. Anything the model marks
+   required because every Purina deck has it will need widening, and the right
+   fix is to widen the type, never to supply a plausible figure. See §5.
+5. **Do the ingredient lists use a different notation?** Hill's writes
+   `vitamins (…)` in lower case with parentheses where Purina writes
+   `VITAMINS […]`. Both are fine — copy what is printed (§4) — but check that
+   the consumer's splitter handles it before assuming, since that is what
+   produces the numbered list a reader checks against their can.
+6. **Does the maker sell through a vet channel?** If so, `lib/vet-diet.ts` must
+   recognise the range, and there is a test that it does. Getting this wrong is
+   the worst single error available here: the report drops to judging a
+   prescribed therapeutic food by whether it has meat near the top.
 
 ---
 
