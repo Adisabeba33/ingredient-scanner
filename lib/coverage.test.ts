@@ -6,9 +6,11 @@ import {
   NO_BRAND,
   OTHER_RANGE,
   sortBrands,
+  packWeightOz,
   splitRange,
   type CoverageSource,
 } from "./coverage";
+import type { KnownItem } from "./known-products";
 
 function source(over: Partial<CoverageSource> = {}): CoverageSource {
   return {
@@ -367,5 +369,144 @@ describe("sortBrands", () => {
     const before = brands.map((b) => b.name);
     sortBrands(brands, "most");
     expect(brands.map((b) => b.name)).toEqual(before);
+  });
+});
+
+describe("packWeightOz", () => {
+  // The reason sizes are ordered by weight and not by string: sorted as text,
+  // "12 lb" comes before "3.15 lb" and a row of five bags reads as noise.
+  it("puts a row of bag sizes in the order a shelf has them", () => {
+    const sizes = ["22 lb", "3.15 lb", "16 oz", "30 lb", "12 lb", "2.1 oz"];
+    const sorted = [...sizes].sort(
+      (a, b) => (packWeightOz(a) ?? 0) - (packWeightOz(b) ?? 0)
+    );
+    expect(sorted).toEqual(["2.1 oz", "16 oz", "3.15 lb", "12 lb", "22 lb", "30 lb"]);
+  });
+
+  it("reads the units a pet food actually prints", () => {
+    expect(packWeightOz("3 oz")).toBeCloseTo(3);
+    expect(packWeightOz("5.5 oz")).toBeCloseTo(5.5);
+    expect(packWeightOz("1 lb")).toBeCloseTo(16);
+    expect(packWeightOz("3.15 lb")).toBeCloseTo(50.4);
+  });
+
+  // Null rather than zero, so an unreadable size sorts LAST. Guessing zero
+  // would march every one of them to the front of the row, which is the one
+  // place a reader would look first.
+  it("says nothing about a size it cannot read", () => {
+    expect(packWeightOz("family size")).toBeNull();
+    expect(packWeightOz("")).toBeNull();
+    expect(packWeightOz(null)).toBeNull();
+  });
+});
+
+describe("buildCoverage — packages and food form", () => {
+  // buildCoverage returns every seeded brand, so pick the one under test
+  // rather than taking the first — the first is whatever the brand list has at
+  // the top, which is not Friskies and would not be stable if it were.
+  const only = (rows: CoverageSource[], known: KnownItem[], name: string) =>
+    buildCoverage(rows, known).find((b) => b.name === name)!;
+  const dryItem: KnownItem = {
+    brand: "Friskies",
+    line: "Seafood Sensations",
+    variant: "Salmon, Tuna, Shrimp & Seaweed Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    codes: ["0001", "0002", "0003"],
+    printedCodes: ["1", "2", "3"],
+    sizes: ["16 lb", "3.15 lb", "22 lb"],
+  };
+
+  // The question somebody in an aisle is actually holding. `×3` answered "how
+  // many exist" while they stood in front of three bags needing to know which.
+  it("names every package of a recipe, smallest first", () => {
+    const b = only([], [dryItem], "Friskies");
+    const item = b.ranges.find((r) => r.name === "Seafood Sensations")!.items[0];
+    expect(item.packs.map((p) => p.size)).toEqual(["3.15 lb", "16 lb", "22 lb"]);
+    expect(item.packs.map((p) => p.printed)).toEqual(["2", "1", "3"]);
+  });
+
+  // The state that used not to exist: a recipe marked done because ONE bag was
+  // scanned, with the other two invisible. Both facts have to survive.
+  it("marks the sizes scanned and leaves the rest outlined", () => {
+    const b = only(
+      [
+        source({
+          code: "0002",
+          brands: "Friskies",
+          productName: "Seafood Sensations Salmon, Tuna, Shrimp & Seaweed Flavors",
+          foodForm: "dry",
+        }),
+      ],
+      [dryItem],
+      "Friskies"
+    );
+    const item = b.ranges.find((r) => r.name === "Seafood Sensations")!.items[0];
+    expect(item.state).toBe("filled");
+    expect(item.packs.map((p) => [p.size, p.scanned])).toEqual([
+      ["3.15 lb", true],
+      ["16 lb", false],
+      ["22 lb", false],
+    ]);
+  });
+
+  it("says which form a range is", () => {
+    const b = only([], [dryItem], "Friskies");
+    expect(b.ranges.find((r) => r.name === "Seafood Sensations")!.forms).toEqual([
+      "dry",
+    ]);
+  });
+
+  // Fancy Feast Kitten is sold as cans AND as bags. The page shows a form badge
+  // on the heading when a range is all one thing, and on each product when it
+  // is not — so this length is what that decision is made from.
+  it("reports both forms for a range that holds both", () => {
+    const wetKitten: KnownItem = {
+      ...dryItem,
+      brand: "Fancy Feast",
+      line: "Kitten",
+      variant: "Tender Turkey Feast",
+      foodForm: "wet",
+      texture: "pate",
+      codes: ["0010"],
+      printedCodes: ["10"],
+      sizes: ["3 oz"],
+    };
+    const dryKitten: KnownItem = {
+      ...dryItem,
+      brand: "Fancy Feast",
+      line: "Kitten",
+      variant: "With Savory Chicken & Turkey",
+      codes: ["0011", "0012"],
+      printedCodes: ["11", "12"],
+      sizes: ["7 lb", "3 lb"],
+    };
+    const b = only([], [wetKitten, dryKitten], "Fancy Feast");
+    const kitten = b.ranges.find((r) => r.name === "Kitten")!;
+    expect(kitten.forms).toEqual(["wet", "dry"]);
+  });
+
+  // A code nobody seeded has no size anywhere, and the pill falls back to the
+  // barcode rather than showing a blank that would read as a small pack.
+  it("leaves the size null for a code the seed never named", () => {
+    const b = only(
+      [
+        source({
+          code: "9999",
+          brands: "Friskies",
+          productName: "Shreds With Salmon in Sauce",
+          foodForm: "wet",
+        }),
+      ],
+      [],
+      "Friskies"
+    );
+    const item = b.ranges.find((r) => r.name === "Shreds")!.items[0];
+    expect(item.packs).toEqual([
+      { code: "9999", printed: "9999", size: null, scanned: true },
+    ]);
   });
 });

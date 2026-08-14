@@ -42,6 +42,24 @@ import { brandMatchesQuery } from "@/lib/brand-key";
  * nobody has scanned it — go and find THIS one. Read at arm's length with one
  * thumb, in a shop, so anything finer than three would not be read at all.
  *
+ * ── Two more things a shelf is arranged by ────────────────────────────────
+ *
+ * Both arrived with dry food, and neither had to be said while the catalog was
+ * all canned:
+ *
+ * **Wet or dry.** An aisle is divided by this before anything else — bags on
+ * one side, tins on the other — and a range name does not say which side you
+ * are on. Fancy Feast Kitten is both. Shown once on the range heading where a
+ * range is all one form, and on each product where it is not.
+ *
+ * **Which packages.** A recipe is not a barcode any more: Friskies Seafood
+ * Sensations is one recipe in five bags. Each is a pill showing its size,
+ * smallest first, filled where that exact bag has been scanned and outlined
+ * where only the recipe has. This replaced a `×5` that answered how many
+ * existed to somebody standing in front of the five needing to know which —
+ * and that hid the four unscanned sizes completely, because one scanned size
+ * marks the recipe done.
+ *
  * ── Honest about its own edges ────────────────────────────────────────────
  *
  * The brand and range list is seeded from what a model knew, and the named
@@ -360,6 +378,49 @@ function Progress({ filled, photo }: { filled: number; photo: number }) {
   );
 }
 
+/**
+ * Wet or dry, said once and the same way everywhere.
+ *
+ * ── Why this is worth its own mark ────────────────────────────────────────
+ *
+ * The catalog was entirely canned food until batch 017, so the page never had
+ * to say — everything on it was wet, and a badge saying so on every product
+ * would have been noise. It is not true any more, and an aisle is arranged by
+ * this before it is arranged by anything else: the bags are on one side and the
+ * tins on the other, and a range name does not tell you which side you are
+ * standing on. "Fancy Feast Kitten" is both.
+ *
+ * Two colours rather than two words alone, because the point is to be read
+ * without being read — blue for wet, tan for dry, consistently, so a block of
+ * one form is recognisable as a block before any word in it is.
+ *
+ * Neither colour is one the states use. Green means done, amber means
+ * photographed and a dashed outline means untouched, and those three are the
+ * page's primary signal; a form badge borrowing any of them would make a wet
+ * product look half-finished. `amber-soft` in particular is deliberately
+ * avoided here even though tan is the obvious colour for kibble.
+ */
+const FORM_STYLE: Record<string, { label: string; className: string }> = {
+  wet: { label: "wet", className: "bg-sky-50 text-sky-700" },
+  dry: { label: "dry", className: "bg-orange-50 text-orange-700" },
+};
+
+function FormBadge({ form, title }: { form: string; title?: string }) {
+  const style = FORM_STYLE[form];
+  // An unknown form gets nothing at all. A third badge reading "unknown" would
+  // put a label on every row the catalog was never told about, which is a lot
+  // of ink spent saying nothing.
+  if (!style) return null;
+  return (
+    <span
+      title={title}
+      className={`rounded-full px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wide ${style.className}`}
+    >
+      {style.label}
+    </span>
+  );
+}
+
 /** One brand, opened: its ranges and what sits under each. */
 function BrandPage({
   brand,
@@ -370,6 +431,25 @@ function BrandPage({
 }) {
   const withItems = brand.ranges.filter((r) => r.items.length > 0);
   const empty = brand.ranges.filter((r) => r.items.length === 0);
+
+  // Counted in PACKAGES, not products, because that is what is on a shelf and
+  // what a barcode is: one recipe in five bags is five things to scan. The
+  // per-product counts above stay as they are — they answer "how many recipes
+  // do we hold", which is a different question and still the right one there.
+  const packTotals = withItems
+    .flatMap((r) => r.items)
+    .reduce(
+      (acc, item) => {
+        const form = item.foodForm === "wet" || item.foodForm === "dry" ? item.foodForm : null;
+        for (const pack of item.packs) {
+          if (form) acc[form] = (acc[form] ?? 0) + 1;
+          if (pack.scanned) acc.done += 1;
+          acc.total += 1;
+        }
+        return acc;
+      },
+      { wet: 0, dry: 0, done: 0, total: 0 } as Record<string, number>
+    );
 
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-4 px-4 pb-[calc(env(safe-area-inset-bottom)_+_2rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
@@ -385,6 +465,28 @@ function BrandPage({
           {brand.filled} done
           {brand.photo > 0 ? ` · ${brand.photo} awaiting ingredients` : ""}
         </p>
+        {(packTotals.wet > 0 || packTotals.dry > 0) && (
+          <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11.5px] text-faint">
+            {packTotals.wet > 0 && (
+              <span className="inline-flex items-center gap-1">
+                <FormBadge form="wet" />
+                {packTotals.wet}
+              </span>
+            )}
+            {packTotals.dry > 0 && (
+              <span className="inline-flex items-center gap-1">
+                <FormBadge form="dry" />
+                {packTotals.dry}
+              </span>
+            )}
+            {/* Packages, spelt out, because the number is bigger than the
+                product count above it and the difference is the whole point of
+                the size pills below. */}
+            <span>
+              · {packTotals.done} of {packTotals.total} packages scanned
+            </span>
+          </p>
+        )}
       </div>
 
       {withItems.length === 0 && (
@@ -412,6 +514,13 @@ function BrandPage({
                   new
                 </span>
               )}
+              {/* On the heading, because a range is nearly always all one form
+                  — badging every product in a wet range would say the same
+                  thing forty times. When a range holds both, the badge appears
+                  on the products instead; see below. */}
+              {range.forms.map((form) => (
+                <FormBadge key={form} form={form} />
+              ))}
               <span className="text-[11.5px] font-normal text-faint">
                 {[
                   range.filled > 0 ? `${range.filled} done` : null,
@@ -450,26 +559,49 @@ function BrandPage({
                       <Barcode size={12} strokeWidth={2} aria-hidden="true" />
                     )}
                     <span>{item.label}</span>
-                    {/* Several barcodes under one recipe: pack sizes. Worth
-                        showing — it is the difference between "I did the small
-                        bag" and "I did all three". */}
-                    {item.state !== "known" && item.codes.length > 1 && (
-                      <span className="text-[10px] font-semibold opacity-70">
-                        ×{item.codes.length}
-                      </span>
+                    {/* Only where the range holds both forms. Everywhere else
+                        the heading has already said it once. */}
+                    {range.forms.length > 1 && (
+                      <FormBadge form={item.foodForm ?? ""} />
                     )}
-                    {item.state === "known" && item.toFind?.[0] && (
-                      <span className="font-mono text-[10px] tracking-tight opacity-70">
-                        {item.toFind[0]}
-                      </span>
-                    )}
-                    {/* A recipe already done that is also sold in a size we
-                        have never met. One number left, not a second product. */}
-                    {item.state !== "known" && item.toFind?.length ? (
-                      <span className="font-mono text-[10px] tracking-tight opacity-60">
-                        +{item.toFind[0]}
-                      </span>
-                    ) : null}
+                    {/* ── The packages ────────────────────────────────────
+                        One pill per barcode, smallest bag first, filled where
+                        we have that exact package and outlined where we have
+                        only the recipe.
+
+                        This replaced `×5`. The count answered "how many exist"
+                        while somebody stood in front of the five bags needing
+                        to know WHICH — and with the recipe marked done, the
+                        four unscanned sizes were invisible. Shown only when a
+                        recipe really has several packages: on the hundred and
+                        ninety single-can products it would be a size printed
+                        beside every name, saying nothing. */}
+                    {item.packs.length > 1 &&
+                      item.packs.map((pack) => (
+                        <span
+                          key={pack.code}
+                          title={`${pack.printed}${pack.size ? ` · ${pack.size}` : ""} — ${
+                            pack.scanned ? "scanned" : "not scanned"
+                          }`}
+                          className={`rounded-full px-1.5 py-px text-[10px] font-medium leading-[1.4] ${
+                            pack.scanned
+                              ? "bg-ink/10 text-ink"
+                              : "border border-dashed border-current opacity-55"
+                          }`}
+                        >
+                          {pack.size ?? pack.printed.slice(-4)}
+                        </span>
+                      ))}
+                    {/* A single-package product still to find keeps its
+                        barcode on the chip: it is the one thing you can match
+                        against a shelf without reading a word. */}
+                    {item.state === "known" &&
+                      item.packs.length === 1 &&
+                      item.toFind?.[0] && (
+                        <span className="font-mono text-[10px] tracking-tight opacity-70">
+                          {item.toFind[0]}
+                        </span>
+                      )}
                   </span>
                 </li>
               ))}

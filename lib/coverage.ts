@@ -77,6 +77,32 @@ export interface CoverageSource {
   place: ProductPlace;
 }
 
+/**
+ * One barcode of one recipe — a single package on a shelf.
+ *
+ * ── Why the packages are listed and not just counted ──────────────────────
+ *
+ * A recipe used to be one barcode, so a product and a package were the same
+ * thing and the page never had to tell them apart. Dry food broke that: Friskies
+ * Seafood Sensations is one recipe in five bags, from 3.15 lb to 30 lb, each
+ * with its own code.
+ *
+ * The page showed that as `×5`, which answers "how many" and not the question
+ * somebody in an aisle is actually holding: *which* ones. Standing in front of
+ * five bags with a note saying five exist and one is done is no better than no
+ * note. So each package is named by its size and carries its own state.
+ */
+export interface CoveragePack {
+  /** Canonical GTIN-14 — the catalog key. */
+  code: string;
+  /** As printed under the bars, which is what you read off a shelf. */
+  printed: string;
+  /** "3 oz", "16 lb". Null when nothing we hold knows this code's size. */
+  size: string | null;
+  /** Have we met this exact package, or only its recipe? */
+  scanned: boolean;
+}
+
 /** One product on a brand's page. Pack sizes of one recipe are merged. */
 export interface CoverageItem {
   /** What to call it — the name with the range taken off the front. */
@@ -94,7 +120,18 @@ export interface CoverageItem {
    * they are pack sizes still to do.
    */
   toFind?: string[];
+  /**
+   * Every package of this recipe, smallest first, scanned or not.
+   *
+   * A superset of `codes` and `toFind` and the one to render from: those two
+   * answer "what is done" and "what is left" separately, which is the right
+   * shape for a count and the wrong shape for a shelf.
+   */
+  packs: CoveragePack[];
 }
+
+/** Wet, dry, or we were never told. */
+export type CoverageForm = "wet" | "dry" | "unknown";
 
 /** One range within a brand. */
 export interface CoverageLine {
@@ -102,6 +139,15 @@ export interface CoverageLine {
   /** Whether the seed file expected this range, or the shelf produced it. */
   seeded: boolean;
   items: CoverageItem[];
+  /**
+   * The food forms present, in a fixed order — wet, dry, then unknown.
+   *
+   * Nearly every range is entirely one or the other, so this is usually one
+   * entry and can be shown once on the heading instead of on every product. A
+   * range with two is the case worth marking per product, and the page decides
+   * that from the length of this.
+   */
+  forms: CoverageForm[];
   filled: number;
   photo: number;
   /** Named products in this range that nobody has scanned. */
@@ -140,6 +186,53 @@ export interface CoverageBrand extends BrandIdentity {
 export function countsAsPet(mode: string | null | undefined): boolean {
   const value = (mode ?? "").trim().toLowerCase();
   return value === "" || value === "pet";
+}
+
+/**
+ * A pack size as a number of ounces, for putting sizes in order.
+ *
+ * Sorting the strings does not work and is not nearly wrong enough to notice:
+ * "12 lb" sorts before "3.15 lb", and "16 oz" before "3 lb", so a row of bags
+ * reads big-small-big and looks like nothing in particular. Ordering them by
+ * what they weigh is the whole reason a row of sizes is legible at a glance —
+ * it turns five pills into a scale.
+ *
+ * Returns null for anything it cannot read, and those sort last rather than
+ * being guessed at zero, which would put every unparsed size in front.
+ */
+export function packWeightOz(size: string | null | undefined): number | null {
+  const text = (size ?? "").trim().toLowerCase();
+  const found = /^([\d.]+)\s*(oz|lb|lbs|g|kg)\b/.exec(text);
+  if (!found) return null;
+  const value = Number(found[1]);
+  if (!Number.isFinite(value)) return null;
+  switch (found[2]) {
+    case "lb":
+    case "lbs":
+      return value * 16;
+    case "kg":
+      return value * 35.274;
+    case "g":
+      return value * 0.035274;
+    default:
+      return value;
+  }
+}
+
+function bySize(a: CoveragePack, b: CoveragePack): number {
+  const aw = packWeightOz(a.size);
+  const bw = packWeightOz(b.size);
+  if (aw === null && bw === null) return a.printed.localeCompare(b.printed);
+  if (aw === null) return 1;
+  if (bw === null) return -1;
+  return aw - bw || a.printed.localeCompare(b.printed);
+}
+
+const FORM_ORDER: CoverageForm[] = ["wet", "dry", "unknown"];
+
+function asForm(value: string | null | undefined): CoverageForm {
+  const text = (value ?? "").trim().toLowerCase();
+  return text === "wet" || text === "dry" ? text : "unknown";
 }
 
 /** The catch-all range, for a product whose name matched nothing seeded. */
@@ -300,6 +393,26 @@ export function buildCoverage(
     }
   }
 
+  // What we know about individual packages, by barcode. The seed is the only
+  // thing that holds a size — a catalog row has a code and a name and never a
+  // net weight — so a scanned code that was never seeded shows no size, which
+  // is the honest answer rather than a blank that looks like a small pack.
+  const packInfo = new Map<string, { printed: string; size: string | null }>();
+  for (const item of known) {
+    item.codes.forEach((code, i) => {
+      packInfo.set(code, {
+        printed: item.printedCodes[i] ?? code,
+        size: item.sizes[i] ?? null,
+      });
+    });
+  }
+  const packFor = (code: string, scanned: boolean): CoveragePack => ({
+    code,
+    printed: packInfo.get(code)?.printed ?? code,
+    size: packInfo.get(code)?.size ?? null,
+    scanned,
+  });
+
   interface Draft {
     identity: BrandIdentity;
     /** Range name (or OTHER_RANGE) → label key → item. */
@@ -361,7 +474,10 @@ export function buildCoverage(
     const existing = items.get(key);
     if (existing) {
       // Another pack size of something already listed.
-      if (!existing.codes.includes(row.code)) existing.codes.push(row.code);
+      if (!existing.codes.includes(row.code)) {
+        existing.codes.push(row.code);
+        existing.packs.push(packFor(row.code, true));
+      }
       // One size finished is enough to know the recipe: the composition is the
       // same text on every bag, and the worklist row for the other size will
       // be finished from it.
@@ -380,6 +496,7 @@ export function buildCoverage(
         species: row.species ?? null,
         foodForm: row.foodForm ?? null,
         origin: row.origin ?? null,
+        packs: [packFor(row.code, true)],
       });
     }
   }
@@ -431,6 +548,13 @@ export function buildCoverage(
           ...(existing.toFind ?? []),
           ...unseen.map((u) => u.printed),
         ];
+        // The sizes we have NOT met, beside the ones we have. This is the row
+        // that answers "which bags are left" instead of "how many".
+        for (const { code } of unseen) {
+          if (!existing.packs.some((p) => p.code === code)) {
+            existing.packs.push(packFor(code, false));
+          }
+        }
       }
       continue;
     }
@@ -444,6 +568,7 @@ export function buildCoverage(
       foodForm: item.foodForm,
       origin: "seed",
       toFind: item.printedCodes,
+      packs: item.codes.map((code) => packFor(code, false)),
     });
   }
 
@@ -467,13 +592,25 @@ export function buildCoverage(
       const items = [...(draft.ranges.get(name)?.values() ?? [])].sort((a, b) =>
         a.label.localeCompare(b.label)
       );
+      // Smallest bag first, inside every product. Done here rather than at the
+      // push sites so it holds however a product was assembled — scanned rows
+      // first, seeded ones merged in after, or only one of the two.
+      for (const item of items) item.packs.sort(bySize);
       const seeded = seededRanges.includes(name);
       if (items.length === 0) {
         // A seeded range with nothing in it is worth showing — it is the
         // "go and find this" row. An empty catch-all is not.
         if (seeded) {
           emptyRanges += 1;
-          ranges.push({ name, seeded, items, filled: 0, photo: 0, known: 0 });
+          ranges.push({
+            name,
+            seeded,
+            items,
+            forms: [],
+            filled: 0,
+            photo: 0,
+            known: 0,
+          });
         }
         continue;
       }
@@ -483,10 +620,12 @@ export function buildCoverage(
       filled += rangeFilled;
       photo += rangePhoto;
       knownLeft += rangeKnown;
+      const present = new Set(items.map((i) => asForm(i.foodForm)));
       ranges.push({
         name,
         seeded,
         items,
+        forms: FORM_ORDER.filter((f) => present.has(f)),
         filled: rangeFilled,
         photo: rangePhoto,
         known: rangeKnown,
