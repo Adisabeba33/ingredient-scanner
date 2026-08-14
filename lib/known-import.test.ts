@@ -132,17 +132,80 @@ describe("data/known-formulas.ts", () => {
   // Two products with the same fingerprint would be flagged as one recipe. It
   // happens legitimately, but not among 27 different flavours — here it means a
   // list was pasted twice.
+  //
+  // Compared across PRODUCTS, not across barcodes, which is not the same thing
+  // any more. Batch 017 seeded dry food, and a bag of Friskies is sold in five
+  // sizes under five barcodes with one recipe — so the same fingerprint under
+  // several codes became the normal case rather than the symptom.
+  //
+  // Keyed on brand + line + variant, because that is what "one product" means
+  // on a shelf. Two DIFFERENT products with one fingerprint is still the paste
+  // error, and still caught.
   it("no two products share a composition", () => {
+    const productOf = new Map<string, string>();
+    for (const p of KNOWN_PRODUCTS) {
+      for (const pkg of p.packages) {
+        productOf.set(pkg.upc, `${p.brand} ${p.line} ${p.variant}`);
+      }
+    }
     const seen = new Map<string, string>();
     const dupes: string[] = [];
     for (const [upc, formula] of Object.entries(KNOWN_FORMULAS)) {
       const key = compositionKey("Purina", formula.ingredients);
       if (!key) continue;
+      const name = productOf.get(upc) ?? upc;
       const already = seen.get(key);
-      if (already) dupes.push(`${already} / ${upc}`);
-      else seen.set(key, upc);
+      if (already && already !== name) dupes.push(`${already} / ${name}`);
+      else if (!already) seen.set(key, name);
     }
     expect(dupes).toEqual([]);
+  });
+
+  // Every pack size of one product must carry the SAME RECIPE — the sibling of
+  // the test above, and the reason that one could be relaxed safely.
+  //
+  // A 3 lb bag and a 16 lb bag of one recipe are one formula printed twice. If
+  // the ingredients disagree, either two products have been merged under one
+  // name or one size's list came from a different source, and both are worth
+  // stopping: the barcodes are interchangeable to a reader, so whichever they
+  // happen to scan decides what they are told.
+  //
+  // ── Why the glosses are stripped before comparing ─────────────────────
+  //
+  // Purina prints Party Mix in a foil pouch and a screw-top canister, and the
+  // two decks differ — not in ingredients, in PARENTHESES. The pouch says
+  // "niacin (Vitamin B-3)" and "L-ascorbyl-2-polyphosphate (Vitamin C)"; the
+  // canister says "niacin" and "L-ascorbyl-2-polyphosphate". Same substances,
+  // same order, same count. The source says outright that the declaration is
+  // package-format-specific.
+  //
+  // Both are stored as printed, because §4's rule is copy, do not tidy, and
+  // deciding which gloss is "the real one" would be writing a label. What the
+  // test asks is the question that matters — is this the same food — so it
+  // removes the parentheticals from both sides first. That direction is safe:
+  // stripping only ever makes two lists MORE alike, so a pass here can be a
+  // notation difference, but a failure is always a real one.
+  it("gives every size of one product the same recipe", () => {
+    // Parentheticals out, then down to the bare word sequence — punctuation and
+    // spacing collapsed together, so that removing "(Vitamin B-3)" does not
+    // leave a space before the comma and count as a difference.
+    const recipe = (text: string) =>
+      text
+        .replace(/\([^()]*\)/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    const bad: string[] = [];
+    for (const p of KNOWN_PRODUCTS) {
+      const seen = new Set(
+        p.packages
+          .map((pkg) => KNOWN_FORMULAS[pkg.upc])
+          .filter(Boolean)
+          .map((f) => recipe(f.ingredients))
+      );
+      if (seen.size > 1) bad.push(`${p.brand} ${p.line} ${p.variant}`);
+    }
+    expect(bad).toEqual([]);
   });
 
   it("every panel carries real figures", () => {
@@ -157,14 +220,45 @@ describe("data/known-formulas.ts", () => {
   // Guarantees, as printed. A moisture above 90 or a protein above 50 in a
   // canned food means somebody typed a dry-matter figure into a wet-basis
   // panel, which would make every comparison against it wrong.
+  //
+  // ── Why the bounds depend on the food form ─────────────────────────────
+  //
+  // This was one pair of bounds — moisture 60–90, protein ≤20 — for sixteen
+  // batches, and they were right about every one of them, because every product
+  // was wet. They are not a rule about as-fed panels. They are a rule about
+  // as-fed panels ON CANNED FOOD.
+  //
+  // A bag of kibble is ~10–12% moisture and 30–35% protein AS FED. Those are
+  // the printed figures, not dry-matter ones. Under the old bounds every dry
+  // product in batch 017 looked exactly like the mistake this test hunts —
+  // which is the trap: the check would have been loudest precisely where it was
+  // wrong, and the obvious way to quiet it is to "fix" correct data.
+  //
+  // So the bounds are per form. The check still does its real job in both: a
+  // dry-matter figure in a wet panel reads as low moisture and high protein,
+  // and in a DRY panel it reads as moisture near zero — dry matter of a 10%
+  // moisture food is 90% of it, so its dry-matter protein is only about a
+  // ninth higher than as-fed, and the floor on moisture is what catches it.
+  const BOUNDS = {
+    wet: { moisture: [60, 90], protein: [0, 20] },
+    dry: { moisture: [5, 20], protein: [0, 50] },
+  } as const;
+  const formOf = new Map<string, "wet" | "dry">();
+  for (const p of KNOWN_PRODUCTS) {
+    for (const pkg of p.packages) formOf.set(pkg.upc, p.foodForm);
+  }
+
   it("reads as an as-fed panel, not a dry-matter one", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
       const a = f.analysis;
-      expect({ upc, ok: (a.moistureMax ?? 0) >= 60 && (a.moistureMax ?? 0) <= 90 }).toEqual({
+      const b = BOUNDS[formOf.get(upc) ?? "wet"];
+      const m = a.moistureMax ?? 0;
+      const pr = a.crudeProteinMin ?? 0;
+      expect({ upc, ok: m >= b.moisture[0] && m <= b.moisture[1] }).toEqual({
         upc,
         ok: true,
       });
-      expect({ upc, ok: (a.crudeProteinMin ?? 0) > 0 && (a.crudeProteinMin ?? 0) <= 20 }).toEqual({
+      expect({ upc, ok: pr > b.protein[0] && pr <= b.protein[1] }).toEqual({
         upc,
         ok: true,
       });
@@ -321,8 +415,21 @@ describe("data/known-formulas.ts", () => {
   // its own signal. Writing 0.07 into it to satisfy this test would put a
   // number on a label that has none — the same error `ga`'s taurine note
   // describes, in the direction that looks like diligence.
+  //
+  // Scoped to WET food, and this is the second bound in this file that turned
+  // out to be about canned food rather than about cat food. 0.07% is a figure
+  // in a tin that is 78% water. Dry food states 0.12% as fed, and states it on
+  // adult bags as well as kitten ones — every dry product in batch 017 that
+  // guarantees taurine at all guarantees 0.12, whatever it is fed to.
+  //
+  // So on dry food this comparison has no signal in it: matching the adult
+  // figure is not evidence of anything, because the adult figure IS the kitten
+  // figure. A test that cannot fail on a class of input should say so rather
+  // than pass and be counted.
   it("keeps the kitten taurine guarantee at what the deck says", () => {
-    const kittens = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "kitten");
+    const kittens = KNOWN_PRODUCTS.filter(
+      (p) => p.lifeStage === "kitten" && p.foodForm === "wet"
+    );
     expect(kittens.length).toBeGreaterThan(0);
     const stated = kittens
       .flatMap((p) => p.packages.map((k) => k.upc))

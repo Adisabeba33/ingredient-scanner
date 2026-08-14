@@ -18,12 +18,17 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-14, after batch 015. 180 products, 58 with a conflict
-note, 10 of those needing a physical pack.
+Last updated: 2026-08-14, after batch 017. 230 barcodes across 203 products,
+95 with a conflict note, 10 of those needing a physical pack.
 
-Two makers now: Nestlé Purina (160) and Hill's (20). Batch 015 is the first
-non-Purina batch, and the conflicts it brought are a different shape — see B13,
-B14 and B15, all of which are a maker disagreeing with **itself**.
+Two makers: Nestlé Purina (200 barcodes) and Hill's (30). Two food forms since
+batch 017, which brought the first dry food and the first treats — and with them
+the first products sold under several barcodes at once, one per bag size.
+
+Batches 015–016 were the first non-Purina ones and their conflicts are a
+different shape: B13, B14, B15 and B16 are all a maker disagreeing with
+**itself**. Batch 017 then found the same fault on Purina's site at scale — see
+B18.
 
 ---
 
@@ -143,7 +148,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (45)
+## B. Settled at the desk — an older record against a current deck (86)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -429,6 +434,127 @@ mode rule 1 is least intuitive about: the instinct is that a maker's site is
 authoritative because it is the maker's. It is authoritative about the product
 and unreliable about the string.
 
+### B16. A maker's own page reordering its own list (1)
+
+| UPC | Product | Hill's page text | Back label + flat graphic |
+|---|---|---|---|
+| `052742068138` | Prescription Diet c/d Multicare Stress — with Chicken | **Brewers Rice**, then Chicken; "Corn Protein Meal" | **Chicken**, then Brewers Rice; "Corn Gluten Meal" |
+
+**Stored: the label.** Two independent assets on Hill's own page — the printed
+back label and a flat ingredient graphic — agree with each other against the
+page's running text.
+
+**The order is the fact here, not a presentation choice.** American labels are
+printed in descending weight, so chicken-first and rice-first are two different
+statements about what the tin mostly is, and it is the whole question somebody
+scanning a prescription food is asking. This is the same website that produced
+B14's collapsed spaces and B13's truncated calories: three distinct ways for
+one renderer to be wrong about a deck it links to on the same page.
+
+**Where this came from:** batch 016.
+
+### B17. Dry food — the colour reformulation, again (13 barcodes, 4 products)
+
+The Fancy Feast dry range repeated exactly what the Friskies Indoor wet range
+did in B10: retailer panels still carry a coloured formula with corn *gluten*
+meal, while Purina's current page links an October 2024 deck with corn *protein*
+meal and no colours.
+
+| Product | Current deck | What retailers still show | Barcodes |
+|---|---|---|---|
+| Fancy Feast Gourmet Dry — Savory Farm-Raised Chicken & Turkey | G650024 | corn gluten meal, artificial colors | `050000462896` `050000463008` `050000463114` `050000576227` |
+| Fancy Feast Gourmet Dry — Filet Mignon Flavor With Real Seafood & Shrimp | G650124 | corn gluten meal, Yellow and Red dyes | `050000572908` `050000572830` `050000572854` `050000576241` |
+| Fancy Feast Gourmet Dry — Ocean Fish & Salmon with Garden Greens | G650224 | corn gluten meal, Blue/Yellow/Red dyes | `050000467150` `050000463916` `050000580743` |
+| Fancy Feast Kitten — Savory Chicken & Turkey | B512723 | A512722: chicken by-product meal, corn gluten meal, beef fat | `050000660681` `050000660667` |
+
+**Stored: the decks.**
+
+**"Corn gluten meal" → "corn protein meal" is a rename, not a reformulation.**
+Same ingredient, and Purina has been relabelling it across ranges. It is listed
+here because it appears in the same diff as the colour removal and it would be
+easy to read the pair as one change; a reader comparing an old panel to ours
+should know that only one of the two differences is about what is in the bag.
+
+**Where this came from:** batch 017.
+
+### B18. Purina's ingredient tiles against Purina's own deck (20 barcodes)
+
+Every Friskies dry product in batch 017 carries this. Purina's shop pages render
+the ingredient list as a grid of tiles, and the tiles are in a different order
+from the deck the same page links — on Surfin' & Turfin' it is phosphoric acid
+and calcium carbonate that move; on Seafood Sensations it is several at once.
+
+| Product | Deck | Barcodes |
+|---|---|---|
+| Seafood Sensations — Salmon, Tuna, Shrimp & Seaweed | K600323 | `050000015474` `050000575770` `050000168866` `050000290833` `050000963584` |
+| Surfin' & Turfin' Favorites — Chicken, Ocean Whitefish, Salmon & Filet Mignon | N600123 | `050000100347` `050000576692` `050000294701` `050000290215` |
+| Tender & Crunchy Combo — Chicken, Beef, Carrots & Green Beans | J600425 | `050000084500` `050000575787` |
+| Indoor Delights — Chicken, Salmon, Peas & Carrots | J600224 | `050000051472` `050000376407` |
+| Land & Sea Adventures — Chicken & Ocean Fish | A508223 | `050000259373` |
+
+**Stored: the deck.** On Seafood Sensations and Surfin' & Turfin' a Target label
+panel independently agrees with the deck against the tiles, which is what makes
+this settled rather than a coin toss. On Land & Sea the tiles drop corn protein
+meal near the START of the list and flatten the premix blocks — an omission
+high up, where position carries the most weight.
+
+**Order is the whole content of an American ingredient list** — descending
+weight — so a reordered list is a different claim about the food, even with the
+identical set of words. This is B16 at scale: the same renderer, the same fault,
+across twenty barcodes instead of one.
+
+Two of these carry a second, separate note:
+
+| UPC | Product | The other disagreement |
+|---|---|---|
+| `050000168866` | Seafood Sensations, 17.6 lb | that size's retailer panel is a legacy formula with **crab meal**; Purina still lists the size and links current deck K600323 |
+| `050000290833` | Seafood Sensations, 22 lb | ShopRite's panel is an older generation of the same range |
+
+And one is a formula fork rather than an ordering:
+
+| UPC | Product | Tiles | Linked deck J600224 *(stored)* |
+|---|---|---|---|
+| `050000051472` `050000376407` | Indoor Delights | materially different order and composition; 3382 kcal/kg, 365 kcal/cup | 3410 kcal/kg, 368 kcal/cup |
+
+**Where this came from:** batch 017.
+
+### B19. A size only the maker disagrees about (1)
+
+| UPC | Product | Purina's size selector | Five retailers *(stored)* |
+|---|---|---|---|
+| `050000084500` | Friskies Tender & Crunchy Combo | 3.5 lb | **3.15 lb** |
+
+Rakuten, Petco, Kroger, Chewy and Walmart all identify this barcode as 3.15 lb.
+
+**This is the one place a retailer outranks the maker in this file, and the
+reason is not a rule but a count.** Rule 1 ranks sources by how close they sit
+to the printed pack, and a size selector on a shop page is not a printed pack at
+all — it is the same HTML layer that produced B18's reordered tiles on the same
+site. Against it are five independent listings that agree to two decimal places.
+
+Rule 4 cannot help: the calorie statement is per cup, so there is no arithmetic
+tying kcal to the weight of a bag. See D6.
+
+**Where this came from:** batch 017.
+
+### B20. Treats — an abbreviated declaration (7 barcodes)
+
+Both Friskies Party Mix products, across all seven barcodes. Purina's tiles
+abbreviate and re-case printed terms — "Dried Yeast" among them — where the
+linked deck gives the full declaration. Several retailer panels for Beachside
+are older still, carrying corn gluten meal or premixes that are not grouped.
+
+| Product | Deck | Pouches | Canisters |
+|---|---|---|---|
+| Party Mix Original Crunch | I619223 | `050000238910` `050000575848` | `050000963089` `050000500413` |
+| Party Mix Beachside Crunch | I619023 | `050000574438` `050000576999` | `050000963102` |
+
+**Stored: the decks**, and for Party Mix that means *two* decks per product —
+see E5, which is about the pouch and the canister printing the same recipe
+differently.
+
+**Where this came from:** batch 017.
+
 ### B15. A maker's own stale marketing asset (1)
 
 | UPC | Product | Gallery graphic | Can-back label (code 6111) |
@@ -619,6 +745,56 @@ so far, but it will recur on every hairball and weight range we seed.
 
 ---
 
+### D6. Everything a bag prints that a tin does not
+
+Dry food arrived in batch 017 and brought a panel several times richer than any
+can's. What the model holds is protein, fat, fibre, moisture, ash, taurine and
+calories. What a Friskies bag prints, beyond those:
+
+- **Linoleic acid** and **arachidonic acid** minima (percent) — on all 20
+- **Calcium** and **phosphorus** minima (percent) — on all 20, which is D1's
+  field again, now wanted by twenty more products
+- **Zinc** and **selenium** in **mg/kg**, **Vitamin A** and **Vitamin E** in
+  **IU/kg** — a third and fourth unit, as in D3
+- **DHA** on the Fancy Feast Kitten bags — the figure that range is sold on
+
+And two that are their own problem:
+
+**A printed carbohydrate.** `050000618958` / `050000619832` Friskies Party
+Pack'd states **Total Carbohydrate (calculated) max 47%** on the bag. Everywhere
+else in this catalog carbohydrate is something we derive and label as a ceiling.
+Here the maker prints their own, and we have nowhere to put it — so the product
+shows no carbohydrate at all, because it also states no ash and the derivation
+needs one. The one product that publishes the figure is the one that displays
+none.
+
+**A whole second column in grams per cup.** The same two bags print every
+guarantee twice: 34.8 g protein per cup beside 30% protein, 1.16 g calcium per
+cup, and so on. That is the caloric-basis idea the consumer app already
+implements from kcal — the maker has done the arithmetic and printed it, and it
+is discarded on read.
+
+**Nothing here is urgent and all of it is the same fix**: guarantees need to be
+a list of (nutrient, basis, value, unit) rather than seven named fields. That is
+a bigger change than D1's single calcium column and should not be started
+without deciding it is worth doing at all — but it is worth writing down that
+the seven-field shape has now been the wrong shape four times (D1, D3, D5, D6),
+and that dry food is where it stops being a small gap.
+
+### D7. Crude fibre, absent
+
+`050000618958` / `050000619832` Party Pack'd print a **Dietary Fiber** maximum
+of 12.5% and no crude fibre figure at all. Stored as null.
+
+Worth its own line because the tempting move is obvious and wrong: there is a
+fibre number right there on the bag. Dietary fibre counts soluble fractions that
+the crude method destroys, so 12.5% dietary sits beside 2–3% crude on other bags
+of similar food. Copying it into `crudeFiberMax` would make this product read as
+five times more fibrous than its siblings, on a comparison the reader would have
+no way to know was between two different measurements.
+
+---
+
 ## E. Transcription decisions, revisitable
 
 Not conflicts between sources — conflicts between what a source document wrote
@@ -676,6 +852,31 @@ Every Petites deck prints plain names — "Thiamine Mononitrate" where other
 ranges print "Thiamine Mononitrate (Vitamin B-1)". Kept as given (`V_PLAIN`).
 Adding the glosses because the siblings carry them would be putting words on a
 label that may not have them.
+
+### E5. One product, two decks, because two packages — batch 017
+
+Friskies Party Mix is sold in a foil pouch and a screw-top canister, and the two
+print the same recipe differently:
+
+```
+pouch     …, niacin (Vitamin B-3), …, L-ascorbyl-2-polyphosphate (Vitamin C), …
+canister  …, niacin,               …, L-ascorbyl-2-polyphosphate,             …
+```
+
+Same substances, same order, same count. Only the parenthetical glosses differ,
+and the source states outright that the declaration is package-format-specific.
+
+**Both are stored, each against its own barcodes** — §4's rule is copy, do not
+tidy, and picking one gloss for all four codes would be writing a label for two
+packages that print another.
+
+**What this cost, which is the part worth recording.** The test asserting that
+every pack size of a product carries one composition had just been written, one
+batch earlier, on the assumption that a recipe has one string. It does not. The
+test now strips parentheticals from both sides before comparing, which asks the
+question that actually matters — *is this the same food* — and stripping is the
+safe direction: it can only make two lists look more alike, so a pass may be a
+notation difference but a failure is always a real one.
 
 ---
 

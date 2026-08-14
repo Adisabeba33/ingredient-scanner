@@ -57,7 +57,12 @@ export interface KnownPackage {
    * code is on; the calorie statement in the formula is per half, which is what
    * the pack states. Neither is wrong and they are not the same number.
    */
-  container: "can" | "pouch" | "tray" | "tub" | "bag" | "box";
+  /**
+   * `canister` is the rigid screw-top tub Party Mix is sold in at 20 and 30 oz,
+   * beside the same recipe in a 2.1 and 6 oz foil pouch. Not a `tub`, which
+   * here means the Petites twin-serve pot of wet food, and not a `bag`.
+   */
+  container: "can" | "pouch" | "tray" | "tub" | "bag" | "box" | "canister";
   /**
    * As printed under the bars — 12 digits for a UPC-A, kept as a STRING.
    * `canonicalBarcode()` pads it to GTIN-14 for storage, which is also what
@@ -117,6 +122,9 @@ export interface KnownProduct {
 const CAN = "can" as const;
 const TUB = "tub" as const;
 const BOX = "box" as const;
+const BAG = "bag" as const;
+const POUCH = "pouch" as const;
+const CANISTER = "canister" as const;
 const UNIT = "individual_unit" as const;
 
 export const KNOWN_PRODUCTS: KnownProduct[] = [
@@ -2524,5 +2532,404 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["chicken"],
     lifeStage: "adult",
     packages: [{ size: "5.5 oz", container: CAN, upc: "052742462806", scope: UNIT }],
+  },
+
+  // ══ Batch 016 · Hill's, continued ════════════════════════════════════════
+  //
+  // Six more Prescription Diet and four Science Diet. Two things new here:
+  //
+  //   - Three ranges name a condition rather than a life stage or a texture.
+  //     "Adult Urinary Hairball Control" is NOT the "Adult Hairball Control"
+  //     seeded in batch 015 — Hill's sells both, and they are different decks.
+  //   - "k/d + z/d" is one product for two conditions, one deck, one barcode.
+  //     It is its own range, not an entry filed under either letter.
+
+  // ── Hill's Prescription Diet · c/d Multicare ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "c/d Multicare",
+    variant: "with Ocean Fish",
+    species: "cat",
+    texture: "ground",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["ocean fish", "tuna"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742623900", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · c/d Multicare Stress ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "c/d Multicare Stress",
+    variant: "with Chicken",
+    species: "cat",
+    texture: "ground",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742068138", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · i/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "i/d",
+    variant: "Kitten Chicken Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742078205", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · k/d + z/d ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "k/d + z/d",
+    variant: "Hydrolyzed Chicken Flavor",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742086620", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · m/d GlucoSupport ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "m/d GlucoSupport",
+    variant: "with Liver",
+    species: "cat",
+    texture: "ground",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["liver"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742428109", scope: UNIT }],
+  },
+
+  // ── Hill's Prescription Diet · w/d Multi-Benefit ─────────────────────────────────────
+  {
+    brand: "Hill's Prescription Diet",
+    line: "w/d Multi-Benefit",
+    variant: "with Chicken",
+    species: "cat",
+    texture: "ground",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "052742945507", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult 7+ Senior Vitality ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+ Senior Vitality",
+    variant: "Chicken & Vegetable Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "vegetables"],
+    lifeStage: "senior",
+    packages: [{ size: "2.9 oz", container: CAN, upc: "052742011974", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Healthy Cuisine",
+    variant: "Poached Salmon & Spinach Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "2.8 oz", container: CAN, upc: "052742007199", scope: UNIT }],
+  },
+
+  // ── Hill's Science Diet · Adult Urinary Hairball Control ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Urinary Hairball Control",
+    variant: "Chicken Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "2.9 oz", container: CAN, upc: "052742075556", scope: UNIT }],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Urinary Hairball Control",
+    variant: "Turkey Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "2.9 oz", container: CAN, upc: "052742075877", scope: UNIT }],
+  },
+
+  // ══ Batch 017 · Dry food and treats ══════════════════════════════════════
+  //
+  // Thirteen products under FORTY barcodes, and that ratio is the new thing.
+  // Every product before this had one pack size; a bag of Friskies is sold in
+  // five, and all five carry one recipe. `packages` was built for exactly this
+  // and had never held more than one entry until now.
+  //
+  // Two consequences worth knowing before reading further:
+  //
+  //   - Two barcodes sharing a composition stopped being a paste error. The
+  //     test that catches it now compares across products rather than across
+  //     codes, with a second test that every size of ONE product agrees.
+  //   - `line` is read off the deck title and the shop URL, not off the
+  //     ledger's `product_line`, which said "Dry Cat Food" for twenty of them.
+  //     The real ranges are Seafood Sensations, Surfin' & Turfin' Favorites,
+  //     Gravy Swirlers, Indoor Delights, Land & Sea Adventures and Party
+  //     Pack'd — all named in the deck filenames.
+  //
+  // `Party Pack'd` is a complete dry FOOD. `Party Mix` is treats. Purina sells
+  // both, the names are one word apart, and only the second should ever be
+  // excused from the everyday standard.
+
+  // ── Fancy Feast · Gourmet Dry ─────────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Dry",
+    variant: "With Savory Farm-Raised Chicken & Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "all",
+    packages: [
+      { size: "16 oz", container: BAG, upc: "050000462896", scope: UNIT },
+      { size: "3 lb", container: BAG, upc: "050000463008", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "050000463114", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "050000576227", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Dry",
+    variant: "Filet Mignon Flavor With Real Seafood & Shrimp",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["fish", "shrimp", "filet mignon flavor"],
+    lifeStage: "all",
+    packages: [
+      { size: "16 oz", container: BAG, upc: "050000572908", scope: UNIT },
+      { size: "3 lb", container: BAG, upc: "050000572830", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "050000572854", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "050000576241", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gourmet Dry",
+    variant: "With Ocean Fish & Salmon and Accents of Garden Greens",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["ocean fish", "salmon", "spinach", "parsley"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 lb", container: BAG, upc: "050000467150", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "050000463916", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "050000580743", scope: UNIT },
+    ],
+  },
+
+  // ── Fancy Feast · Kitten ─────────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Kitten",
+    variant: "With Savory Chicken & Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey", "milk"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3 lb", container: BAG, upc: "050000660681", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "050000660667", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Seafood Sensations ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Seafood Sensations",
+    variant: "Salmon, Tuna, Shrimp & Seaweed Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "tuna", "shrimp", "seaweed", "ocean fish"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "050000015474", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "050000575770", scope: UNIT },
+      { size: "17.6 lb", container: BAG, upc: "050000168866", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "050000290833", scope: UNIT },
+      { size: "30 lb", container: BAG, upc: "050000963584", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Surfin' & Turfin' Favorites ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Surfin' & Turfin' Favorites",
+    variant: "Chicken, Ocean Whitefish, Salmon & Filet Mignon Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "ocean whitefish", "salmon", "filet mignon flavor"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "050000100347", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "050000576692", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "050000294701", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "050000290215", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Gravy Swirlers ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Gravy Swirlers",
+    variant: "Flavors of Chicken, Salmon & Gravy",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "salmon", "gravy"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "050000168583", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "050000168620", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "050000172559", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "050000504121", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Tender & Crunchy Combo ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Tender & Crunchy Combo",
+    variant: "Flavors of Chicken, Beef, Carrots & Green Beans",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "beef", "carrots", "green beans"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "050000084500", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "050000575787", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Indoor Delights ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Indoor Delights",
+    variant: "Flavors of Chicken, Salmon, Peas & Carrots",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "salmon", "peas", "carrots"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "050000051472", scope: UNIT },
+      { size: "18.5 lb", container: BAG, upc: "050000376407", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Land & Sea Adventures ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Land & Sea Adventures",
+    variant: "Flavors of Chicken & Ocean Fish",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "ocean fish"],
+    lifeStage: "all",
+    packages: [
+      { size: "32 lb", container: BAG, upc: "050000259373", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Party Pack'd ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Party Pack'd",
+    variant: "Flavors of Chicken, Liver & Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "liver", "turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 lb", container: BAG, upc: "050000618958", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "050000619832", scope: UNIT },
+    ],
+  },
+
+  // ── Friskies · Party Mix ─────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Party Mix",
+    variant: "Original Crunch With Chicken & Flavors of Liver & Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "liver", "turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.1 oz", container: POUCH, upc: "050000238910", scope: UNIT },
+      { size: "6 oz", container: POUCH, upc: "050000575848", scope: UNIT },
+      { size: "20 oz", container: CANISTER, upc: "050000963089", scope: UNIT },
+      { size: "30 oz", container: CANISTER, upc: "050000500413", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Friskies",
+    line: "Party Mix",
+    variant: "Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["ocean whitefish", "shrimp", "crab", "tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.1 oz", container: POUCH, upc: "050000574438", scope: UNIT },
+      { size: "6 oz", container: POUCH, upc: "050000576999", scope: UNIT },
+      { size: "20 oz", container: CANISTER, upc: "050000963102", scope: UNIT },
+    ],
   },
 ];

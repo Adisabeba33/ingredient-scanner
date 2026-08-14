@@ -6,6 +6,7 @@ import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
+import { detectNutritionRole } from "@/lib/nutrition-role";
 import { importVerdict, type ExistingRow, type ImportVerdict } from "@/lib/known-import";
 import { KNOWN_PRODUCTS } from "@/data/known-products";
 import { KNOWN_FORMULAS } from "@/data/known-formulas";
@@ -69,6 +70,15 @@ interface Candidate {
    * the copy is what goes stale.
    */
   requiresVet: boolean;
+  /**
+   * Meal, treat, topper — or unknown, which is most of them.
+   *
+   * Same shape as `requiresVet` and asked of the same evidence: the brand,
+   * range and variant we already hold. `detectNutritionRole` fires only on
+   * unambiguous wording and returns "unknown" otherwise, so this cannot quietly
+   * excuse a real dinner — the failure it is built to avoid.
+   */
+  nutritionRole: ReturnType<typeof detectNutritionRole>;
 }
 
 function analysisFor(upc: string) {
@@ -102,6 +112,9 @@ function candidates(): Candidate[] {
         compositionKey: compositionKey(product.brand, formula.ingredients),
         conflictNote: formula.conflict ?? null,
         requiresVet: isVeterinaryDiet(product.brand, product.line, product.variant),
+        nutritionRole: detectNutritionRole({
+          parts: [product.brand, product.line, product.variant],
+        }),
       });
     }
   }
@@ -194,6 +207,9 @@ export async function GET(req: Request) {
       // to question, so it should be visible BEFORE the write, not inferrable
       // afterwards from the range name.
       requiresVet: d.requiresVet,
+      // Same reason as requiresVet: it changes the standard the report judges
+      // by, and is worth seeing before the write rather than after.
+      nutritionRole: d.nutritionRole,
     })),
   });
 }
@@ -248,10 +264,25 @@ export async function POST(req: Request) {
     food_form_confirmed: true,
     moisture_percent: c.analysis?.moistureMax ?? null,
     guaranteed_analysis: c.analysis && hasAnyFigure(c.analysis) ? c.analysis : null,
-    // `nutrition_role` is deliberately NOT set: the AAFCO feeding statement
-    // wasn't in the source, and it is one field where guessing re-creates the
-    // error it exists to remove. Null reads as unknown, which keeps the
-    // everyday complete-diet standard — the same treatment every other row gets.
+    // `nutrition_role` was deliberately NOT set here while every seeded product
+    // was a canned dinner: the AAFCO feeding statement was not in the source,
+    // and guessing re-creates the error the field exists to remove.
+    //
+    // Batch 017 seeded Friskies Party Mix, which is a treat, and the reasoning
+    // stopped holding. `detectNutritionRole` is not a guess — it is the same
+    // conservative detector the capture route uses, it fires only on wording a
+    // maker chose, and it answers "unknown" for everything else. Run across the
+    // 190 products seeded before this change it returns unknown for all 190, so
+    // nothing that was working changes; Party Mix returns "treat" because
+    // "party mix" is in the module's own list of ranges that are not dinner.
+    //
+    // Writing null instead would tell the report to judge a bag of crunchy
+    // snacks by whether it has real meat near the top, and report back that a
+    // cat's treat is a poor food. Nothing on the page would look wrong.
+    //
+    // Stored as null when unknown, not as the string: null is the column's
+    // "nothing was established", and it is what the 190 already hold.
+    nutrition_role: c.nutritionRole === "unknown" ? null : c.nutritionRole,
     //
     // `requires_vet` is the opposite case, and used to be hardcoded `false`
     // here. That was not "unknown" — false is the assertion that a product is

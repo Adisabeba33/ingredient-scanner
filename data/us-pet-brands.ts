@@ -89,6 +89,10 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Savory Centers",
       "Gourmet Naturals",
       "Royale",
+      // Batch 017, the first dry food in the seed. Purina's own pages call the
+      // dry Fancy Feast range "Gourmet"; the decks are titled "Gourmet Cat
+      // Food" and "Gourmet Kitten Food".
+      "Gourmet Dry",
     ],
   },
   {
@@ -119,6 +123,15 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Surfin' & Turfin' Favorites",
       "Gravy Swirlers",
       "Tender & Crunchy",
+      // Batch 017. The deck and the shop page both name it "Tender & Crunchy
+      // Combo"; the shorter entry above was written from memory and is kept
+      // because nothing has been filed under it either way.
+      "Tender & Crunchy Combo",
+      "Land & Sea Adventures",
+      // A complete dry FOOD, not the Party Mix treats — Purina sells both and
+      // the names are one word apart. Filing a dinner under the treat range
+      // would make the report excuse it as a snack.
+      "Party Pack'd",
     ],
   },
   {
@@ -356,6 +369,13 @@ export const US_PET_BRANDS: SeedBrand[] = [
       // not purposes sold across life stages.
       "Adult Hairball Control",
       "Adult Indoor",
+      // Batch 016. "Adult Urinary Hairball Control" is a THIRD range beside
+      // "Adult Hairball Control" and plain "Adult" — Hill's sells both the
+      // hairball formula and the urinary-plus-hairball one, and collapsing
+      // them would file a urinary deck under a range that is not it.
+      "Adult Urinary Hairball Control",
+      "Adult 7+ Senior Vitality",
+      "Adult Healthy Cuisine",
     ],
   },
   {
@@ -377,6 +397,14 @@ export const US_PET_BRANDS: SeedBrand[] = [
       // Seeded in batch 015.
       "r/d",
       "y/d",
+      // Batch 016. Each is the name printed on its own can. "k/d + z/d" is one
+      // product Hill's sells for two conditions at once, not a pair — there is
+      // a single deck with a single barcode, so it is a range of its own and
+      // not an entry under either letter.
+      "c/d Multicare Stress",
+      "k/d + z/d",
+      "m/d GlucoSupport",
+      "w/d Multi-Benefit",
       "Metabolic",
       "Derm Complete",
       "Gastrointestinal Biome",

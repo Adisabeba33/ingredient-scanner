@@ -4,8 +4,9 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Fifteen batches, 180 products and 180 formulas have gone through this. Everything
-below is what was actually done, including the parts that were got wrong first.
+Seventeen batches, 203 products under 230 barcodes, all with formulas, have gone
+through this. Everything below is what was actually done, including the parts
+that were got wrong first.
 
 ---
 
@@ -59,7 +60,7 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 180 have one.
+to go and find, and the import steps over it. Right now all 230 have one.
 
 ---
 
@@ -115,11 +116,44 @@ So when it fails: try the other plausible pack sizes before believing anybody.
   it (`no two products share a composition`), but know that it is a real
   hazard — Mariner's Catch and Sea Captain's Choice differ by two swapped
   ingredients and one vitamin ordering.
-- **Does the panel read as as-fed?** Moisture 60–90%, protein ≤20%. A
-  dry-matter figure typed into an as-fed panel would wreck every comparison
-  drawn from it. Tested.
+- **Does the panel read as as-fed?** Moisture 60–90% and protein ≤20% for WET
+  food; 5–20% and ≤50% for dry. A dry-matter figure typed into an as-fed panel
+  would wreck every comparison drawn from it. Tested, per form — see §2.4.
 
-### 2.4 If the batch is a maker we have not seeded before
+### 2.4 If the batch is dry food, treats, or several sizes of one product
+
+Batches 001–016 were all single-size wet cans. Batch 017 was the first that was
+not, and — exactly like the first Hill's batch — most of the work was undoing
+places where "a canned dinner" had been written down as if it meant "a product".
+
+1. **One product, several barcodes.** `packages` takes them all; do NOT file a
+   3 lb bag and a 16 lb bag as two products. `KNOWN_FORMULAS` is still keyed by
+   barcode, so each size gets its own entry, and a test checks they agree on
+   the recipe.
+2. **The panel bounds are per food form.** Wet is moisture 60–90%, protein
+   ≤20%. Dry is moisture 5–20%, protein ≤50%. Those are as-fed figures in both
+   cases; a bag really is 34% protein. Do not "fix" data to fit a bound.
+3. **Calories are per CUP or per PIECE**, not per package, so rule 4 is
+   unavailable — a cup is a volume and there is nothing for the arithmetic to
+   check. Leave the kcal columns as `-` in the checker input rather than
+   inventing a pack figure. Say out loud that the batch went in without the
+   arithmetic witness.
+4. **A treat is not a food form.** The ledger writes `food_form: "treat"`;
+   the model stores `foodForm: "dry"` and lets `lib/nutrition-role.ts` say it
+   is a treat, from the range name at import time. Check the range is in that
+   module's list. Getting it wrong makes the report judge a bag of snacks for
+   not being a balanced diet.
+5. **Check the range name against the deck, not the ledger.** Batch 017's
+   ledger said `product_line: "Dry Cat Food"` for twenty barcodes. The real
+   ranges — Seafood Sensations, Gravy Swirlers, Land & Sea Adventures, Party
+   Pack'd — were in `product_name` and in the deck's own filename in the source
+   URL. Filing them all as "Dry Cat Food" would have made the coverage page
+   useless for the whole dry shelf.
+6. **Watch for one-word-apart ranges.** Friskies sells *Party Mix* (treats) and
+   *Party Pack'd* (a complete dry food). Only one of them should ever be
+   excused from the everyday standard.
+
+### 2.5 If the batch is a maker we have not seeded before
 
 Batches 001–014 were all Nestlé Purina. Batch 015 was the first Hill's, and
 almost everything that needed doing was a place where "Purina" had been written
