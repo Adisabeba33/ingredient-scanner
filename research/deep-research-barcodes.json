@@ -5027,6 +5027,1256 @@
         "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are captured from the printed analysis."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000259373",
+      "canonical_gtin14": "00050000259373",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Land & Sea Adventures With Flavors of Chicken & Ocean Fish Dry Cat Food",
+      "variant": "Flavors of Chicken & Ocean Fish",
+      "recipe": [
+        "chicken",
+        "ocean fish"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "32 lb",
+      "ingredients_verbatim": "Whole grain corn, corn protein meal, chicken by-product meal, soybean meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Whole grain corn",
+        "corn protein meal",
+        "chicken by-product meal",
+        "soybean meal",
+        "beef fat preserved with mixed-tocopherols",
+        "meat and bone meal",
+        "liver flavor",
+        "fish meal",
+        "calcium carbonate",
+        "phosphoric acid",
+        "salt",
+        "choline chloride",
+        "potassium chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 3.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 80,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3568,
+        "kcal_per_unit": 404,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A508223",
+      "formula_source": "Purina official product label deck A508223 (February 2024; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-02/5082-a508223-friskies-land-sea-adventures-cat-food-ak8.pdf",
+        "https://www.purina.com/cats/shop/friskies-land-sea-adventures-chicken-ocean-fish-dry-cat-food",
+        "https://www.ebay.com/itm/257235453973",
+        "https://cittapet.com/product/purina-dry-cat-food-friskies-land-sea-flavors-of-chicken-ocean-whitefish-14-5-kg/",
+        "https://www.instacart.com/products/41423510-purina-friskies-dry-cat-food-land-and-sea-adventures-flavors-of-chicken-and-ocean-fish-32-lb"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "eBay identifies one 32 lb bag and explicitly prints UPC 050000259373. CittaPet independently uses 050000259373 as the item code for the same 14.5 kg / 32 lb retail bag.",
+      "conflicts": [
+        "Purina's current HTML ingredient tiles omit corn protein meal near the start and flatten the premix blocks, while the current page links deck A508223 and a current retailer label panel matches the deck's stored complete order. The linked official deck is used for every formula field."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000025937 is 67; (10 - (67 mod 10)) mod 10 = 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000259373.",
+        "The barcode evidence identifies one 32 lb retail bag; no case or multipack code was substituted.",
+        "Current linked deck A508223 provides the complete ingredient order, guaranteed analysis, 3568 kcal/kg and 404 kcal/cup, manufacturer, and all-life-stages statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are captured from the printed analysis.",
+        "The deck does not print grams per cup, so no package-weight calorie arithmetic was manufactured."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000618958",
+      "canonical_gtin14": "00050000618958",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Purina Friskies Party Pack’d With Flavors of Chicken, Liver & Turkey Crunchy Dry Cat Food",
+      "variant": "Flavors of Chicken, Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, soybean meal, whole grain wheat, animal fat preserved with mixed tocopherols, liver flavor, phosphoric acid, calcium carbonate, turkey by-product meal, salt, sodium bisulfate, choline chloride, DL-Methionine, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Whole grain corn",
+        "chicken by-product meal",
+        "corn protein meal",
+        "soybean meal",
+        "whole grain wheat",
+        "animal fat preserved with mixed tocopherols",
+        "liver flavor",
+        "phosphoric acid",
+        "calcium carbonate",
+        "turkey by-product meal",
+        "salt",
+        "sodium bisulfate",
+        "choline chloride",
+        "DL-Methionine",
+        "taurine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "L-Lysine monohydrochloride",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Protein [g/cup]",
+            "basis": "min",
+            "value": 34.8,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Fat [g/cup]",
+            "basis": "min",
+            "value": 13.9,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Carbohydrate (calculated)",
+            "basis": "max",
+            "value": 47,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Carbohydrate (calculated) [g/cup]",
+            "basis": "max",
+            "value": 54.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Dietary Fiber",
+            "basis": "max",
+            "value": 12.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Dietary Fiber [g/cup]",
+            "basis": "max",
+            "value": 14.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Moisture [g/cup]",
+            "basis": "max",
+            "value": 13.9,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Linoleic Acid [g/cup]",
+            "basis": "min",
+            "value": 1.39,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid [g/cup]",
+            "basis": "min",
+            "value": 0.023,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca) [g/cup]",
+            "basis": "min",
+            "value": 1.16,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P) [g/cup]",
+            "basis": "min",
+            "value": 1.04,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/cup]",
+            "basis": "min",
+            "value": 14.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/cup]",
+            "basis": "min",
+            "value": 0.034,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin A [IU/cup]",
+            "basis": "min",
+            "value": 1160,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E [IU/cup]",
+            "basis": "min",
+            "value": 11.6,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Taurine [g/cup]",
+            "basis": "min",
+            "value": 0.13,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": 423,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A508325",
+      "formula_source": "Purina official product label deck A508325 (February 2026)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2026-02/5083_a508325_friskies_party_pack_d_dry_cat_food_tcy.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-packd-chicken-liver-turkey-dry-cat-food",
+        "https://www.target.com/p/-/A-94919901"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 3 lb bag and explicitly prints UPC 050000618958.",
+      "conflicts": [
+        "Target classifies both bags as “All Ages,” while current official deck A508325 states “Complete Adult Cat Food” and AAFCO maintenance of adult cats. The official adult-maintenance statement is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000061895 is 72; (10 - (72 mod 10)) mod 10 = 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000618958.",
+        "Target identifies one 3 lb retail bag; no case or multipack code was substituted.",
+        "Current official deck A508325 provides the complete ingredient order, Pet Nutrition Facts, manufacturer, and adult-maintenance statement.",
+        "The deck prints 423 kcal/cup and a 116 g cup but does not print kcal/kg; kcal_per_kg is stored as null rather than reverse-calculated.",
+        "As a cross-check only, 423 kcal ÷ 0.116 kg is approximately 3647 kcal/kg; that derived figure is not stored as a label value.",
+        "The printed calorie sources are preserved in this note: 127 kcal from protein, 131 from fat, and 165 from carbohydrate.",
+        "The deck prints Dietary Fiber rather than Crude Fiber and does not print ash; crude_fiber_max_percent and ash_max_percent are therefore null.",
+        "All printed percent, per-kg, and per-cup nutrient guarantees are preserved, including the calculated carbohydrate and dietary-fiber rows."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000619832",
+      "canonical_gtin14": "00050000619832",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Purina Friskies Party Pack’d With Flavors of Chicken, Liver & Turkey Crunchy Dry Cat Food",
+      "variant": "Flavors of Chicken, Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "15 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, soybean meal, whole grain wheat, animal fat preserved with mixed tocopherols, liver flavor, phosphoric acid, calcium carbonate, turkey by-product meal, salt, sodium bisulfate, choline chloride, DL-Methionine, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Whole grain corn",
+        "chicken by-product meal",
+        "corn protein meal",
+        "soybean meal",
+        "whole grain wheat",
+        "animal fat preserved with mixed tocopherols",
+        "liver flavor",
+        "phosphoric acid",
+        "calcium carbonate",
+        "turkey by-product meal",
+        "salt",
+        "sodium bisulfate",
+        "choline chloride",
+        "DL-Methionine",
+        "taurine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "L-Lysine monohydrochloride",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Protein [g/cup]",
+            "basis": "min",
+            "value": 34.8,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Fat [g/cup]",
+            "basis": "min",
+            "value": 13.9,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Carbohydrate (calculated)",
+            "basis": "max",
+            "value": 47,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Carbohydrate (calculated) [g/cup]",
+            "basis": "max",
+            "value": 54.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Dietary Fiber",
+            "basis": "max",
+            "value": 12.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Dietary Fiber [g/cup]",
+            "basis": "max",
+            "value": 14.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Moisture [g/cup]",
+            "basis": "max",
+            "value": 13.9,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Linoleic Acid [g/cup]",
+            "basis": "min",
+            "value": 1.39,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid [g/cup]",
+            "basis": "min",
+            "value": 0.023,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca) [g/cup]",
+            "basis": "min",
+            "value": 1.16,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P) [g/cup]",
+            "basis": "min",
+            "value": 1.04,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/cup]",
+            "basis": "min",
+            "value": 14.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/cup]",
+            "basis": "min",
+            "value": 0.034,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin A [IU/cup]",
+            "basis": "min",
+            "value": 1160,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E [IU/cup]",
+            "basis": "min",
+            "value": 11.6,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Taurine [g/cup]",
+            "basis": "min",
+            "value": 0.13,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": 423,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A508325",
+      "formula_source": "Purina official product label deck A508325 (February 2026)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2026-02/5083_a508325_friskies_party_pack_d_dry_cat_food_tcy.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-packd-chicken-liver-turkey-dry-cat-food",
+        "https://www.target.com/p/-/A-94919910"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 15 lb bag and explicitly prints UPC 050000619832.",
+      "conflicts": [
+        "Target classifies both bags as “All Ages,” while current official deck A508325 states “Complete Adult Cat Food” and AAFCO maintenance of adult cats. The official adult-maintenance statement is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000061983 is 68; (10 - (68 mod 10)) mod 10 = 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000619832.",
+        "Target identifies one 15 lb retail bag; no case or multipack code was substituted.",
+        "Current official deck A508325 provides the complete ingredient order, Pet Nutrition Facts, manufacturer, and adult-maintenance statement.",
+        "The deck prints 423 kcal/cup and a 116 g cup but does not print kcal/kg; kcal_per_kg is stored as null rather than reverse-calculated.",
+        "As a cross-check only, 423 kcal ÷ 0.116 kg is approximately 3647 kcal/kg; that derived figure is not stored as a label value.",
+        "The printed calorie sources are preserved in this note: 127 kcal from protein, 131 from fat, and 165 from carbohydrate.",
+        "The deck prints Dietary Fiber rather than Crude Fiber and does not print ash; crude_fiber_max_percent and ash_max_percent are therefore null.",
+        "All printed percent, per-kg, and per-cup nutrient guarantees are preserved, including the calculated carbohydrate and dietary-fiber rows."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000238910",
+      "canonical_gtin14": "00050000238910",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Original Crunch With Chicken & Flavors of Liver & Turkey Cat Treats",
+      "variant": "Original Crunch With Chicken & Flavors of Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "pouch",
+      "size": "2.1 oz",
+      "ingredients_verbatim": "Chicken, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, brewers dried yeast, natural and artificial flavors, cassava root flour, turkey by-product meal, phosphoric acid, calcium carbonate, potassium chloride, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate (Vitamin C), VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid, Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "brewers dried yeast",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "turkey by-product meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate (Vitamin C)",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid, Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4080,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619223",
+      "formula_source": "Purina official product label deck I619223, general declaration for pouches (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6192-i619223-friskies-party-mix-original-crunch-w-chicken-cat-treats-nf1.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-original-cat-treats",
+        "https://shop.agwaycapecod.com/p/purina-friskies-party-mix-original-crunch-cat-treats-050000238910",
+        "https://www.thefreshgrocer.com/product/purina-friskies-party-mix-original-crunch-cat-treats-21-oz-id-00050000238910"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Agway identifies one 2.1 oz pouch and explicitly prints UPC 050000238910; The Fresh Grocer independently exposes equivalent GTIN-14 00050000238910.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles abbreviate or alter a few printed terms (for example “Dried Yeast” and tile-casing/order), while the linked official deck I619223 supplies the complete declaration. The deck version appropriate to the package format is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000023891 is 50; (10 - (50 mod 10)) mod 10 = 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000238910.",
+        "Both barcode sources identify one 2.1 oz pouch; no case or multipack code was substituted.",
+        "The current Purina page lists this size and links deck I619223; page 1 of the deck supplies the full general-use pouch declaration.",
+        "Deck I619223 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4080 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000575848",
+      "canonical_gtin14": "00050000575848",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Original Crunch With Chicken & Flavors of Liver & Turkey Cat Treats",
+      "variant": "Original Crunch With Chicken & Flavors of Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "pouch",
+      "size": "6 oz",
+      "ingredients_verbatim": "Chicken, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, brewers dried yeast, natural and artificial flavors, cassava root flour, turkey by-product meal, phosphoric acid, calcium carbonate, potassium chloride, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate (Vitamin C), VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid, Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "brewers dried yeast",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "turkey by-product meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate (Vitamin C)",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid, Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4080,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619223",
+      "formula_source": "Purina official product label deck I619223, general declaration for pouches (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6192-i619223-friskies-party-mix-original-crunch-w-chicken-cat-treats-nf1.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-original-cat-treats",
+        "https://www.thefreshgrocer.com/product/friskies-party-mix-original-crunch-cat-treats-id-00050000575848",
+        "https://www.kroger.com/p/purina-friskies-party-mix-cat-treats-original-crunch/0005000057584"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "The Fresh Grocer identifies one 6 oz pouch and explicitly prints GTIN-14 00050000575848; Kroger independently identifies the same 6 oz item body.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles abbreviate or alter a few printed terms (for example “Dried Yeast” and tile-casing/order), while the linked official deck I619223 supplies the complete declaration. The deck version appropriate to the package format is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000057584 is 62; (10 - (62 mod 10)) mod 10 = 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000575848.",
+        "The barcode evidence identifies one 6 oz pouch; no case or multipack code was substituted.",
+        "The current Purina page lists this size and links deck I619223; page 1 of the deck supplies the full general-use pouch declaration.",
+        "Deck I619223 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4080 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000963089",
+      "canonical_gtin14": "00050000963089",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Original Crunch With Chicken & Flavors of Liver & Turkey Cat Treats",
+      "variant": "Original Crunch With Chicken & Flavors of Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "other",
+      "size": "20 oz",
+      "ingredients_verbatim": "Chicken, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, brewers dried yeast, natural and artificial flavors, cassava root flour, turkey by-product meal, phosphoric acid, calcium carbonate, potassium chloride, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate, VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "brewers dried yeast",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "turkey by-product meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate",
+        "VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4080,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619223",
+      "formula_source": "Purina official product label deck I619223, abbreviated declaration for canisters (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6192-i619223-friskies-party-mix-original-crunch-w-chicken-cat-treats-nf1.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-original-cat-treats",
+        "https://www.thefreshgrocer.com/product/purina-friskies-party-mix-original-crunch-cat-treats-20-oz-id-00050000963089",
+        "https://www.dillons.com/p/purina-friskies-party-mix-cat-treats-original-crunch/0005000096308"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "The Fresh Grocer identifies one 20 oz canister and explicitly prints GTIN-14 00050000963089; Dillons independently identifies the same 20 oz item body.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles abbreviate or alter a few printed terms (for example “Dried Yeast” and tile-casing/order), while the linked official deck I619223 supplies the complete declaration. The deck version appropriate to the package format is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000096308 is 71; (10 - (71 mod 10)) mod 10 = 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000963089.",
+        "The barcode evidence identifies one 20 oz canister; no case or multipack code was substituted. package_type is other because the contract has no canister value.",
+        "The current Purina page lists this size and links deck I619223; page 2 of the deck explicitly supplies the abbreviated declaration for canisters.",
+        "Deck I619223 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4080 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000500413",
+      "canonical_gtin14": "00050000500413",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Original Crunch With Chicken & Flavors of Liver & Turkey Cat Treats",
+      "variant": "Original Crunch With Chicken & Flavors of Liver & Turkey",
+      "recipe": [
+        "chicken",
+        "liver",
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "other",
+      "size": "30 oz",
+      "ingredients_verbatim": "Chicken, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, brewers dried yeast, natural and artificial flavors, cassava root flour, turkey by-product meal, phosphoric acid, calcium carbonate, potassium chloride, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate, VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "brewers dried yeast",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "turkey by-product meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate",
+        "VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4080,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619223",
+      "formula_source": "Purina official product label deck I619223, abbreviated declaration for canisters (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6192-i619223-friskies-party-mix-original-crunch-w-chicken-cat-treats-nf1.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-original-cat-treats",
+        "https://www.target.com/p/-/A-86056726",
+        "https://www.thefreshgrocer.com/product/purina-friskies-cat-treats-party-mix-original-crunch-30-oz-canister-id-00050000500413"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 30 oz canister and explicitly prints UPC 050000500413; The Fresh Grocer independently exposes equivalent GTIN-14 00050000500413.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles abbreviate or alter a few printed terms (for example “Dried Yeast” and tile-casing/order), while the linked official deck I619223 supplies the complete declaration. The deck version appropriate to the package format is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000050041 is 27; (10 - (27 mod 10)) mod 10 = 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000500413.",
+        "Both barcode sources identify one 30 oz canister; no case or multipack code was substituted. package_type is other because the contract has no canister value.",
+        "The current Purina page lists this size and links deck I619223; page 2 of the deck explicitly supplies the abbreviated declaration for canisters.",
+        "Deck I619223 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4080 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000574438",
+      "canonical_gtin14": "00050000574438",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna Cat Treats",
+      "variant": "Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna",
+      "recipe": [
+        "ocean whitefish",
+        "shrimp",
+        "crab",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "pouch",
+      "size": "2.1 oz",
+      "ingredients_verbatim": "Ocean whitefish, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, natural and artificial flavors, cassava root flour, phosphoric acid, calcium carbonate, potassium chloride, brewers dried yeast, shrimp meal, crab meal, tuna meal, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate (Vitamin C), MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Ocean whitefish",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "brewers dried yeast",
+        "shrimp meal",
+        "crab meal",
+        "tuna meal",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate (Vitamin C)",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4011,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619023",
+      "formula_source": "Purina official product label deck I619023, general declaration for pouches (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6190-i619023-friskies-party-mix-beachside-crunch-w-ocean-whitefish-cat-treats-tt3.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-beachside-cat-treats",
+        "https://shop.agwaycapecod.com/p/purina-friskies-party-mix-beachside-crunch-cat-treats-050000574438",
+        "https://www.thefreshgrocer.com/product/purina-friskies-party-mix-beachside-crunch-cat-treats-21-oz-id-00050000574438"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Agway identifies one 2.1 oz pouch and explicitly prints UPC 050000574438; The Fresh Grocer independently exposes equivalent GTIN-14 00050000574438.",
+      "conflicts": [
+        "Several retailer panels expose an older or flattened Beachside declaration (including corn gluten meal or ungrouped premixes). Purina's current page links deck I619023; its package-format-specific declaration is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000057443 is 52; (10 - (52 mod 10)) mod 10 = 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000574438.",
+        "Both barcode sources identify one 2.1 oz pouch; no case or multipack code was substituted.",
+        "The current Purina page lists this size and links deck I619023; page 1 of the deck supplies the full general-use pouch declaration.",
+        "Deck I619023 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4011 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000576999",
+      "canonical_gtin14": "00050000576999",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna Cat Treats",
+      "variant": "Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna",
+      "recipe": [
+        "ocean whitefish",
+        "shrimp",
+        "crab",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "pouch",
+      "size": "6 oz",
+      "ingredients_verbatim": "Ocean whitefish, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, natural and artificial flavors, cassava root flour, phosphoric acid, calcium carbonate, potassium chloride, brewers dried yeast, shrimp meal, crab meal, tuna meal, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate (Vitamin C), MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Ocean whitefish",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "brewers dried yeast",
+        "shrimp meal",
+        "crab meal",
+        "tuna meal",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate (Vitamin C)",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4011,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619023",
+      "formula_source": "Purina official product label deck I619023, general declaration for pouches (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6190-i619023-friskies-party-mix-beachside-crunch-w-ocean-whitefish-cat-treats-tt3.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-beachside-cat-treats",
+        "https://www.target.com/p/-/A-15722663",
+        "https://www.dillons.com/p/purina-friskies-party-mix-cat-treats-beachside-crunch/0005000057699"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 6 oz pouch and explicitly prints UPC 050000576999; Dillons independently identifies the same 6 oz item body.",
+      "conflicts": [
+        "Several retailer panels expose an older or flattened Beachside declaration (including corn gluten meal or ungrouped premixes). Purina's current page links deck I619023; its package-format-specific declaration is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000057699 is 81; (10 - (81 mod 10)) mod 10 = 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000576999.",
+        "The barcode evidence identifies one 6 oz pouch; no case or multipack code was substituted.",
+        "The current Purina page lists this size and links deck I619023; page 1 of the deck supplies the full general-use pouch declaration.",
+        "Deck I619023 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4011 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000963102",
+      "canonical_gtin14": "00050000963102",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Party Mix",
+      "product_name": "Friskies Party Mix Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna Cat Treats",
+      "variant": "Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna",
+      "recipe": [
+        "ocean whitefish",
+        "shrimp",
+        "crab",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "other",
+      "size": "20 oz",
+      "ingredients_verbatim": "Ocean whitefish, chicken meal, brewers rice, chicken by-product meal, animal fat preserved with mixed-tocopherols, pea starch, barley, corn protein meal, liver flavor, natural and artificial flavors, cassava root flour, phosphoric acid, calcium carbonate, potassium chloride, brewers dried yeast, shrimp meal, crab meal, tuna meal, choline chloride, salt, taurine, L-ascorbyl-2-polyphosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex], Yellow 5, citric acid, Yellow 6, Red 40, Blue 2, BHA (a preservative), BHT (a preservative).",
+      "ingredients_ordered_normalized": [
+        "Ocean whitefish",
+        "chicken meal",
+        "brewers rice",
+        "chicken by-product meal",
+        "animal fat preserved with mixed-tocopherols",
+        "pea starch",
+        "barley",
+        "corn protein meal",
+        "liver flavor",
+        "natural and artificial flavors",
+        "cassava root flour",
+        "phosphoric acid",
+        "calcium carbonate",
+        "potassium chloride",
+        "brewers dried yeast",
+        "shrimp meal",
+        "crab meal",
+        "tuna meal",
+        "choline chloride",
+        "salt",
+        "taurine",
+        "L-ascorbyl-2-polyphosphate",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "VITAMINS [Vitamin E supplement, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, biotin, menadione sodium bisulfite complex]",
+        "Yellow 5",
+        "citric acid",
+        "Yellow 6",
+        "Red 40",
+        "Blue 2",
+        "BHA (a preservative)",
+        "BHT (a preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 29,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 8,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4011,
+        "kcal_per_unit": 1.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "I619023",
+      "formula_source": "Purina official product label deck I619023, abbreviated declaration for canisters (December 2023; still linked from the current product page)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-12/6190-i619023-friskies-party-mix-beachside-crunch-w-ocean-whitefish-cat-treats-tt3.pdf",
+        "https://www.purina.com/cats/shop/friskies-party-mix-crunch-beachside-cat-treats",
+        "https://www.priceritemarketplace.com/product/purina-friskies-party-mix-beachside-crunch-cat-treats-20-oz-id-00050000963102",
+        "https://www.dillons.com/p/purina-friskies-party-mix-cat-treats-beachside-crunch/0005000096310"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Price Rite identifies one 20 oz canister and explicitly prints GTIN-14 00050000963102; Dillons independently identifies the same 20 oz item body.",
+      "conflicts": [
+        "Several retailer panels expose an older or flattened Beachside declaration (including corn gluten meal or ungrouped premixes). Purina's current page links deck I619023; its package-format-specific declaration is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: weighted body sum for 05000096310 is 48; (10 - (48 mod 10)) mod 10 = 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000963102.",
+        "The barcode evidence identifies one 20 oz canister; no case or multipack code was substituted. package_type is other because the contract has no canister value.",
+        "The current Purina page lists this size and links deck I619023; page 2 of the deck explicitly supplies the abbreviated declaration for canisters.",
+        "Deck I619023 prints 29% protein, 15% fat, 4% fiber, 8% moisture, 4011 kcal/kg and 1.3 kcal/piece, plus adult-maintenance adequacy.",
+        "Ash and taurine are not printed as guarantees and are stored as null rather than inferred from the ingredient list.",
+        "Piece weight is not printed, so kcal/kg and kcal/piece are stored as printed without an invented arithmetic conversion."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }
