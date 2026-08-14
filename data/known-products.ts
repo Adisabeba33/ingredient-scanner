@@ -2932,4 +2932,702 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "20 oz", container: CANISTER, upc: "050000963102", scope: UNIT },
     ],
   },
+
+  // ══ Batch 018 · Hill's, wet pouches and dry bags ═════════════════════════
+  //
+  // Fifty-two barcodes, forty-four products, and one finding that decides how
+  // they are filed: a Hill's 5.5 oz CAN and a 2.8 oz POUCH sold under the same
+  // flavour name are not one recipe in two packages. They are two formulas.
+  //
+  //   Adult 7+ Tender Tuna Dinner   can 7.5% protein, 2.5% fat, 940 kcal/kg
+  //                                 pouch 7.0%, 2.2%, 903 kcal/kg
+  //   Kitten Tender Chicken Dinner  can lists Soy Protein Isolate
+  //                                 pouch lists Modified Rice Starch instead
+  //
+  // Five independent signals disagree — protein, fat, calorie density,
+  // ingredient order and, on the Kitten one, a substituted ingredient — so
+  // this is rule 2, not a transcription difference. Merging them under one
+  // product would hand a reader whichever formula happened to be stored first.
+  //
+  // Since our identity is brand + line + variant, every wet pouch carries
+  // "(Pouch)" in its variant. Applied to all thirteen and not only to the six
+  // that collide today, because a rule with exceptions is one somebody has to
+  // look up, and the next can to arrive would silently create a seventh
+  // collision. See docs/CATALOG-CONFLICTS.md E6.
+  //
+  // Hill's also crosses purpose with life stage on the front — Perfect
+  // Digestion exists for Adult, for Adult 7+ and for Kitten as three separate
+  // decks — so each combination is its own range.
+
+  // ── Hill's Science Diet · Adult 7+ Senior Vitality ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+ Senior Vitality",
+    variant: "Tuna & Vegetables Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna", "vegetables"],
+    lifeStage: "senior",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742011998", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult 7+ ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Tender Chicken Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742032269", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Tender Tuna Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "senior",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742032283", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Ocean Fish Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742177502", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Tuna Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742177205", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Sensitive Stomach & Skin ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Grain Free Salmon & Yellow Pea Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "yellow pea"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 lb", container: BAG, upc: "052742022086", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Healthy Cuisine",
+    variant: "Roasted Chicken & Rice Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "rice"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742007137", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Indoor ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Indoor",
+    variant: "Salmon & Vegetable Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742068398", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Indoor",
+    variant: "Salmon & Vegetables Stew (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742075815", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Perfect Digestion ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Digestion",
+    variant: "Chicken & Barley Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "barley"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "052742038315", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "052742038339", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "052742038346", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Digestion",
+    variant: "Chicken, Vegetable & Rice Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "vegetables", "rice"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742041605", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Digestion",
+    variant: "Salmon & Brown Rice Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "brown rice"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "052742041544", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "052742041469", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "052742041476", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Perfect Weight ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Weight",
+    variant: "Salmon & Vegetables Stew (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742076546", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Weight",
+    variant: "Salmon & Vegetable Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742068435", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Weight",
+    variant: "Vegetable & Turkey Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["turkey", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742068459", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Perfect Weight",
+    variant: "Vegetables & Chicken Stew (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742076539", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Sensitive Stomach & Skin ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Chicken & Beef Dinner (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742046365", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Chicken & Vegetable Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742010243", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Duck & Vegetable Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["duck", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742068411", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Pollock Meal & Barley Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["pollock", "barley"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "052742059150", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "052742059167", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Salmon & Tuna Dinner (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742046341", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Salmon & Vegetable Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742070261", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Tuna & Vegetable Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742010267", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Chicken Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742032207", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Ocean Fish Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742032245", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Tender Tuna Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742032221", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Turkey & Liver Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey", "liver"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742453804", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Urinary Hairball Control ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Urinary Hairball Control",
+    variant: "Vegetables & Salmon Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742075891", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Urinary Hairball Control",
+    variant: "Vegetables & Tuna Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna", "vegetables"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.9 oz", container: CAN, upc: "052742075853", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Sensitive Stomach & Skin ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Sensitive Stomach & Skin",
+    variant: "Salmon & Brown Rice Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "brown rice"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "052742086484", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "052742086408", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "052742086446", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Kitten ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "Chicken & Vegetables Stew (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "vegetables"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742075839", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "Tender Chicken Dinner",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742176901", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Kitten Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten Healthy Cuisine",
+    variant: "Tender Chicken & Rice Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "rice"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742007175", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Kitten ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "Liver & Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["liver", "chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742660004", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Kitten Sensitive Stomach & Skin ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten Sensitive Stomach & Skin",
+    variant: "Salmon & Vegetable Stew",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742069463", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten Sensitive Stomach & Skin",
+    variant: "Salmon & Vegetables Stew (Pouch)",
+    species: "cat",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon", "vegetables"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742076553", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult 7+ Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+ Healthy Cuisine",
+    variant: "Roasted Chicken & Rice Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["chicken", "rice"],
+    lifeStage: "senior",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742007151", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult 7+ Perfect Digestion ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+ Perfect Digestion",
+    variant: "Chicken & Barley Recipe",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "barley"],
+    lifeStage: "senior",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "052742041568", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "052742041483", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Healthy Cuisine",
+    variant: "Seared Tuna & Carrot Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "carrot"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742007090", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Kitten ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Kitten",
+    variant: "Tender Chicken Dinner (Pouch)",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "052742034669", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult 11+ Healthy Cuisine ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult 11+ Healthy Cuisine",
+    variant: "Seared Tuna & Carrot Medley",
+    species: "cat",
+    texture: "stew",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["tuna", "carrot"],
+    lifeStage: "senior",
+    packages: [
+      { size: "2.8 oz", container: CAN, upc: "052742007113", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Hairball Control ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Hairball Control",
+    variant: "Savory Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742452609", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult",
+    variant: "Ocean Fish Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742661209", scope: UNIT },
+    ],
+  },
+
+  // ── Hill's Science Diet · Adult Urinary Hairball Control ─────────────────────────────────────
+  {
+    brand: "Hill's Science Diet",
+    line: "Adult Urinary Hairball Control",
+    variant: "Canned",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "052742010229", scope: UNIT },
+    ],
+  },
 ];

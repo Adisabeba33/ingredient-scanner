@@ -18,10 +18,10 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-14, after batch 017. 230 barcodes across 203 products,
-95 with a conflict note, 10 of those needing a physical pack.
+Last updated: 2026-08-14, after batch 018. 282 barcodes across 247 products,
+99 with a conflict note, 10 of those needing a physical pack.
 
-Two makers: Nestlé Purina (200 barcodes) and Hill's (30). Two food forms since
+Two makers: Nestlé Purina (200 barcodes) and Hill's (82). Two food forms since
 batch 017, which brought the first dry food and the first treats — and with them
 the first products sold under several barcodes at once, one per bag size.
 
@@ -148,7 +148,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (86)
+## B. Settled at the desk — an older record against a current deck (90)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -555,6 +555,43 @@ differently.
 
 **Where this came from:** batch 017.
 
+### B21. Hill's page rounding, twice more (2)
+
+B13 again, on two more products, and by now it is a habit rather than a fault
+worth investigating each time.
+
+| UPC | Product | Page | Label *(stored)* |
+|---|---|---|---|
+| `052742176901` | Science Diet Kitten — Tender Chicken Dinner, 5.5 oz | 1095 kcal/kg · 170 kcal/can | **1133 kcal/kg · 177 kcal/can** |
+| `052742007175` | Science Diet Kitten Healthy Cuisine — Tender Chicken & Rice Medley | 70 kcal/can | **71 kcal/can**, same 898 kcal/kg |
+
+The second is the ordinary one-kcal truncation from B13. **The first is not**,
+and is the reason this is a separate entry: the two sources disagree on
+kcal/**kg** as well, 1095 against 1133, which no rounding produces. That is two
+formulas or two generations of one, and the label is stored because the same
+image carries the current ingredient deck and SKU 1769.
+
+**Where this came from:** batch 018.
+
+### B22. A guaranteed-analysis graphic missing the life stage (2)
+
+| UPC | Product | The fault |
+|---|---|---|
+| `052742041483` `052742041568` | Science Diet Adult 7+ Perfect Digestion — Chicken & Barley, 6 lb and 3.5 lb | the GA image embedded on the Adult 7+ page omits "7+" from its own heading |
+
+Everything else on that page — metadata, item name, ingredient statement,
+back-bag image, sizes and SKUs — identifies the Adult 7+ product, so the panel
+is read as belonging to the page that embeds it and nothing else.
+
+**Worth an entry because of what it would cost to be wrong.** Adult and Adult 7+
+Perfect Digestion are different decks sold beside each other, and a panel
+borrowed from the wrong one would put an adult formula's numbers on a senior
+product with nothing on the page looking odd. The rule applied — *a panel means
+what the page embedding it means, and is not evidence about any other page* —
+is worth having written down before the next graphic arrives unlabelled.
+
+**Where this came from:** batch 018.
+
 ### B15. A maker's own stale marketing asset (1)
 
 | UPC | Product | Gallery graphic | Can-back label (code 6111) |
@@ -781,6 +818,22 @@ without deciding it is worth doing at all — but it is worth writing down that
 the seven-field shape has now been the wrong shape four times (D1, D3, D5, D6),
 and that dry food is where it stops being a small gap.
 
+### D8. Omega-6 and omega-3, printed as percentages
+
+Fifteen products in batch 018 print **Omega-6 Fatty Acids (min)** and eight of
+them **Omega-3 Fatty Acids (min)** as ordinary percentages, beside the six
+figures the model holds.
+
+Different from the rest of section D in one way that matters: these are already
+percentages of the pack, so they need no new unit — they are the plainest
+possible case for the (nutrient, basis, value, unit) list D6 argues for, and the
+cheapest to add if that ever happens.
+
+Worth noticing where they turn up: Sensitive Stomach & Skin and Healthy Cuisine,
+which are ranges sold *on* coat and skin condition. As with the hairball fibre
+minimum in D5, the figure the catalog drops is the one the product is bought
+for.
+
 ### D7. Crude fibre, absent
 
 `050000618958` / `050000619832` Party Pack'd print a **Dietary Fiber** maximum
@@ -877,6 +930,56 @@ test now strips parentheticals from both sides before comparing, which asks the
 question that actually matters — *is this the same food* — and stripping is the
 safe direction: it can only make two lists look more alike, so a pass may be a
 notation difference but a failure is always a real one.
+
+### E6. Hill's pouches carry "(Pouch)" in the variant — batch 018
+
+A Hill's 5.5 oz can and a 2.8 oz pouch under the **same flavour name** hold
+different formulas:
+
+| Product | Can | Pouch |
+|---|---|---|
+| Adult 7+ Tender Tuna Dinner | 7.5% protein, 2.5% fat, 940 kcal/kg | 7.0%, 2.2%, 903 kcal/kg |
+| Adult 7+ Tender Chicken Dinner | 7.5%, 2.5%, 1076 kcal/kg | 6.5%, 3.0%, 968 kcal/kg |
+| Adult Tender Ocean Fish Dinner | 7.8%, 2.5%, 1060 kcal/kg | 7.5%, 2.0%, 921 kcal/kg |
+| Adult Tender Tuna Dinner | 8.0%, 2.5%, 1040 kcal/kg | 7.0%, 2.5%, 934 kcal/kg |
+| Kitten Tender Chicken Dinner | 8.0%, 3.0%, 1133 kcal/kg — **Soy Protein Isolate** | 8.0%, 3.0%, 901 kcal/kg — **Modified Rice Starch** |
+
+Five independent signals disagree, and on the Kitten pair an ingredient is
+substituted outright. **Two products by rule 2**, not one recipe in two
+packages.
+
+Our identity is brand + line + variant, so the two need different variants, and
+the only thing that distinguishes them is the package. Hence "(Pouch)" — a
+parenthesised description, not a claim about the maker's wording.
+
+**Applied to all thirteen pouches, not only the six that collide today.** Six
+of these pouches share a name with a can we already hold; the other seven have
+no canned sibling yet. Suffixing only the six would be a rule with an exception
+somebody has to look up, and the first new can would silently create a seventh
+collision — the failure mode being avoided rather than a hypothetical one.
+
+**Revisitable, and here is what would change it:** if Hill's turns out to print
+a distinguishing word of its own on the pouch, that word replaces this one. The
+research found none — Hill's product names are identical, letter for letter.
+
+### E7. One variant that is a pack format, not a flavour — batch 018
+
+`052742010229` Science Diet Adult Urinary Hairball Control, 5.5 oz, is stored
+with the variant **"Canned"**.
+
+That is not a flavour, and it is not satisfying. The product genuinely has no
+flavour name: Hill's calls it "Science Diet Adult Urinary Hairball Control Cat
+Food" and nothing more, and distinguishes it on its own site only by the URL
+ending `-canned`. The range already holds two 2.9 oz stews with real flavour
+names, so "Canned" does not even separate it from its siblings well.
+
+**Stored as the source gave it rather than as something invented.** The
+alternatives were to make up a flavour from the ingredient list — the deck opens
+Water, Chicken — or to leave the variant empty, and the first writes a label
+nobody printed while the second breaks the identity the catalog is keyed on.
+
+**What settles it:** the physical can. This is the only entry in section E that
+wants a shop trip.
 
 ---
 

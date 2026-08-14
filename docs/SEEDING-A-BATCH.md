@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Seventeen batches, 203 products under 230 barcodes, all with formulas, have gone
+Eighteen batches, 247 products under 282 barcodes, all with formulas, have gone
 through this. Everything below is what was actually done, including the parts
 that were got wrong first.
 
@@ -60,7 +60,7 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 230 have one.
+to go and find, and the import steps over it. Right now all 282 have one.
 
 ---
 
@@ -152,6 +152,14 @@ places where "a canned dinner" had been written down as if it meant "a product".
 6. **Watch for one-word-apart ranges.** Friskies sells *Party Mix* (treats) and
    *Party Pack'd* (a complete dry food). Only one of them should ever be
    excused from the everyday standard.
+7. **Two packages of one flavour are not automatically one product.** Before
+   merging sizes, compare the panels. Hill's sells a 5.5 oz can and a 2.8 oz
+   pouch under identical flavour names with DIFFERENT formulas — different
+   protein, fat, calorie density and, on one, a substituted ingredient. Purina's
+   bags are the opposite: five sizes, one recipe. The test
+   `gives every size of one product the same recipe` catches a merge that was
+   wrong; nothing catches a split that was wrong, so check the panels rather
+   than the names.
 
 ### 2.5 If the batch is a maker we have not seeded before
 

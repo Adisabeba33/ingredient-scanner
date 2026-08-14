@@ -376,6 +376,22 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Adult Urinary Hairball Control",
       "Adult 7+ Senior Vitality",
       "Adult Healthy Cuisine",
+      // Batch 018. Hill's crosses purpose with life stage on the front of the
+      // pack — Perfect Digestion is sold for adults, for 7+ and for kittens as
+      // three different decks — so each combination is its own range rather
+      // than a purpose filed under one stage. The bare "Perfect Weight",
+      // "Perfect Digestion", "Sensitive Stomach & Skin" and "Healthy Cuisine"
+      // above were written from memory before any of this was seeded; nothing
+      // is filed under them and they are kept only because removing an unused
+      // name proves nothing.
+      "Adult Sensitive Stomach & Skin",
+      "Adult Perfect Digestion",
+      "Adult Perfect Weight",
+      "Adult 7+ Perfect Digestion",
+      "Adult 7+ Healthy Cuisine",
+      "Adult 11+ Healthy Cuisine",
+      "Kitten Sensitive Stomach & Skin",
+      "Kitten Healthy Cuisine",
     ],
   },
   {
