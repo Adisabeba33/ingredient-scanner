@@ -4,7 +4,7 @@
   "repository": "Adisabeba33/ingredient-scanner",
   "branch": "agent/deep-research-barcode-ledger",
   "created_at": "2026-08-13",
-  "updated_at": "2026-08-13",
+  "updated_at": "2026-08-14",
   "baseline": {
     "known_product_upcs": 140,
     "canonical_sources": [
@@ -1630,6 +1630,820 @@
         "Target identifies the item as one 5.5 oz can; no multipack or case barcode was substituted.",
         "Deck I608623 states adult-maintenance nutritional adequacy.",
         "The current PDF's vitamin order is preserved exactly, including Menadione Sodium Bisulfite Complex capitalization."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 161,
+      "upc": "050000462896",
+      "canonical_gtin14": "00050000462896",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Savory Farm-Raised Chicken & Turkey Gourmet Cat Food",
+      "variant": "With Savory Farm-Raised Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "16 oz",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, chicken, turkey, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], fish oil, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "chicken",
+        "turkey",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "fish oil",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3966,
+        "kcal_per_unit": 520,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650024",
+      "formula_source": "Purina official product label deck G650024",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6500-g650024_ff_savory_farm-raised_chicken_turkey_gour_cat_dk7.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-chicken-turkey-dry-cat-food",
+        "https://www.fairwaymarket.com/product/fancy-feast-dry-cat-food-with-savory-chicken-and-turkey-16-oz-bag-00050000462896"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Fairway identifies one 16 oz bag and prints GTIN-14/UPC 00050000462896. Removing the two GTIN padding zeros yields individual-package UPC-A 050000462896.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and artificial colors. Purina's current product page links October 2024 deck G650024, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000046289 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000462896.",
+        "The barcode evidence identifies one 16 oz bag; no case or multipack code was substituted.",
+        "Current official deck G650024 provides the complete ingredient order, guaranteed analysis, 3966 kcal/kg, 520 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 162,
+      "upc": "050000463008",
+      "canonical_gtin14": "00050000463008",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Savory Farm-Raised Chicken & Turkey Gourmet Cat Food",
+      "variant": "With Savory Farm-Raised Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, chicken, turkey, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], fish oil, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "chicken",
+        "turkey",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "fish oil",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3966,
+        "kcal_per_unit": 520,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650024",
+      "formula_source": "Purina official product label deck G650024",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6500-g650024_ff_savory_farm-raised_chicken_turkey_gour_cat_dk7.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-chicken-turkey-dry-cat-food",
+        "https://www.target.com/p/-/A-14910487"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, net weight 48 oz (3 lb), and explicitly prints UPC 050000463008 for the Chicken & Turkey bag.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and artificial colors. Purina's current product page links October 2024 deck G650024, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000046300 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000463008.",
+        "The barcode evidence identifies one 3 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650024 provides the complete ingredient order, guaranteed analysis, 3966 kcal/kg, 520 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 163,
+      "upc": "050000463114",
+      "canonical_gtin14": "00050000463114",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Savory Farm-Raised Chicken & Turkey Gourmet Cat Food",
+      "variant": "With Savory Farm-Raised Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "7 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, chicken, turkey, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], fish oil, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "chicken",
+        "turkey",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "fish oil",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3966,
+        "kcal_per_unit": 520,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650024",
+      "formula_source": "Purina official product label deck G650024",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6500-g650024_ff_savory_farm-raised_chicken_turkey_gour_cat_dk7.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-chicken-turkey-dry-cat-food",
+        "https://www.kroger.com/p/fancy-feast-100-complete-and-balanced-dry-cat-food-savory-chicken-turkey/0005000046311",
+        "https://simaro.co/purina-fiesta-de-lujo-gourmet-seco-de-la-comida-para-gatos-con-sabroso-pollo-y-pavo-de-7-lb-bolsa"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Kroger identifies one 7 lb Chicken & Turkey bag and exposes retailer item body 0005000046311. Removing two padding zeros gives UPC-A body 05000046311; its required check digit is 4, yielding 050000463114. Simaro independently prints the full UPC.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and artificial colors. Purina's current product page links October 2024 deck G650024, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000046311 requires check digit 4.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000463114.",
+        "The barcode evidence identifies one 7 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650024 provides the complete ingredient order, guaranteed analysis, 3966 kcal/kg, 520 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 164,
+      "upc": "050000576227",
+      "canonical_gtin14": "00050000576227",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Savory Farm-Raised Chicken & Turkey Gourmet Cat Food",
+      "variant": "With Savory Farm-Raised Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, chicken, turkey, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], fish oil, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "chicken",
+        "turkey",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "fish oil",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3966,
+        "kcal_per_unit": 520,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650024",
+      "formula_source": "Purina official product label deck G650024",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6500-g650024_ff_savory_farm-raised_chicken_turkey_gour_cat_dk7.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-chicken-turkey-dry-cat-food",
+        "https://hardypaw.com/products/fancy-feast-gourmet-savory-chicken-and-turkey-gourmet-dry-cat-food"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "HardyPaw identifies the 12 lb Chicken & Turkey bag and explicitly prints barcode 050000576227.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and artificial colors. Purina's current product page links October 2024 deck G650024, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057622 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000576227.",
+        "The barcode evidence identifies one 12 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650024 provides the complete ingredient order, guaranteed analysis, 3966 kcal/kg, 520 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 165,
+      "upc": "050000572908",
+      "canonical_gtin14": "00050000572908",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast Filet Mignon Flavor With Real Seafood & Shrimp Gourmet Cat Food",
+      "variant": "Filet Mignon Flavor With Real Seafood & Shrimp",
+      "recipe": [
+        "fish",
+        "shrimp",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "16 oz",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, fish, shrimp, calcium carbonate, dried yeast, phosphoric acid, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural filet mignon flavor, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "fish",
+        "shrimp",
+        "calcium carbonate",
+        "dried yeast",
+        "phosphoric acid",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "natural filet mignon flavor",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3914,
+        "kcal_per_unit": 513,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650124",
+      "formula_source": "Purina official product label deck G650124",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6501-g650124_ff_filet_mignon_flavor_real_seafood_shrimp_gour_cat_dn6.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-filet-mignon-seafood-shrimp-dry-cat-food",
+        "https://www.thefreshgrocer.com/sm/pickup/rsid/2000/product/purina-fancy-feast-filet-mignon-flavor-with-real-seafood-%26-shrimp-gourmet-cat-food-16-oz-id-00050000572908"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "The Fresh Grocer identifies one 16 oz Filet Mignon Flavor bag and prints GTIN-14/UPC 00050000572908. Removing the two GTIN padding zeros yields UPC-A 050000572908.",
+      "conflicts": [
+        "Some retailer panels still expose a legacy colored formula with corn gluten meal and Yellow/Red dyes. Purina's current product page links October 2024 deck G650124, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057290 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000572908.",
+        "The barcode evidence identifies one 16 oz bag; no case or multipack code was substituted.",
+        "Current official deck G650124 provides the complete ingredient order, guaranteed analysis, 3914 kcal/kg, 513 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 166,
+      "upc": "050000572830",
+      "canonical_gtin14": "00050000572830",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast Filet Mignon Flavor With Real Seafood & Shrimp Gourmet Cat Food",
+      "variant": "Filet Mignon Flavor With Real Seafood & Shrimp",
+      "recipe": [
+        "fish",
+        "shrimp",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, fish, shrimp, calcium carbonate, dried yeast, phosphoric acid, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural filet mignon flavor, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "fish",
+        "shrimp",
+        "calcium carbonate",
+        "dried yeast",
+        "phosphoric acid",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "natural filet mignon flavor",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3914,
+        "kcal_per_unit": 513,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650124",
+      "formula_source": "Purina official product label deck G650124",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6501-g650124_ff_filet_mignon_flavor_real_seafood_shrimp_gour_cat_dn6.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-filet-mignon-seafood-shrimp-dry-cat-food",
+        "https://www.target.com/p/-/A-47087299"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, net weight 3 lb, and explicitly prints UPC 050000572830 for the Filet Mignon Flavor bag.",
+      "conflicts": [
+        "Some retailer panels still expose a legacy colored formula with corn gluten meal and Yellow/Red dyes. Purina's current product page links October 2024 deck G650124, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057283 requires check digit 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000572830.",
+        "The barcode evidence identifies one 3 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650124 provides the complete ingredient order, guaranteed analysis, 3914 kcal/kg, 513 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 167,
+      "upc": "050000572854",
+      "canonical_gtin14": "00050000572854",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast Filet Mignon Flavor With Real Seafood & Shrimp Gourmet Cat Food",
+      "variant": "Filet Mignon Flavor With Real Seafood & Shrimp",
+      "recipe": [
+        "fish",
+        "shrimp",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "7 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, fish, shrimp, calcium carbonate, dried yeast, phosphoric acid, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural filet mignon flavor, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "fish",
+        "shrimp",
+        "calcium carbonate",
+        "dried yeast",
+        "phosphoric acid",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "natural filet mignon flavor",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3914,
+        "kcal_per_unit": 513,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650124",
+      "formula_source": "Purina official product label deck G650124",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6501-g650124_ff_filet_mignon_flavor_real_seafood_shrimp_gour_cat_dn6.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-filet-mignon-seafood-shrimp-dry-cat-food",
+        "https://www.qfc.com/p/fancy-feast-filet-mignon-flavor-with-real-seafood-shrimp-dry-cat-food/0005000057285",
+        "https://simaro.co/purina-fiesta-de-lujo-gourmet-seco-de-la-comida-para-gatos-filet-mignon-con-sabor-real-de-mariscos-y-camarones-7-lb-bolsa"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "QFC identifies one 7 lb Filet Mignon Flavor bag and exposes retailer item body 0005000057285. Removing two padding zeros gives UPC-A body 05000057285; its required check digit is 4, yielding 050000572854. Simaro independently prints the full UPC.",
+      "conflicts": [
+        "Some retailer panels still expose a legacy colored formula with corn gluten meal and Yellow/Red dyes. Purina's current product page links October 2024 deck G650124, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057285 requires check digit 4.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000572854.",
+        "The barcode evidence identifies one 7 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650124 provides the complete ingredient order, guaranteed analysis, 3914 kcal/kg, 513 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 168,
+      "upc": "050000576241",
+      "canonical_gtin14": "00050000576241",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast Filet Mignon Flavor With Real Seafood & Shrimp Gourmet Cat Food",
+      "variant": "Filet Mignon Flavor With Real Seafood & Shrimp",
+      "recipe": [
+        "fish",
+        "shrimp",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, fish, shrimp, calcium carbonate, dried yeast, phosphoric acid, salt, potassium chloride, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural filet mignon flavor, DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "fish",
+        "shrimp",
+        "calcium carbonate",
+        "dried yeast",
+        "phosphoric acid",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "natural filet mignon flavor",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3914,
+        "kcal_per_unit": 513,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650124",
+      "formula_source": "Purina official product label deck G650124",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6501-g650124_ff_filet_mignon_flavor_real_seafood_shrimp_gour_cat_dn6.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-filet-mignon-seafood-shrimp-dry-cat-food",
+        "https://www.farmandhomesupply.com/fancy-feast-gourmet-filet-mignon-flavor-with-real-seafood-shrimp-dry-cat-food.html",
+        "https://rowdyandarchie.com/products/fancy-feast-filet-mignon-flavor-dry-cat-food-12lb"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Farm & Home Supply prints UPC 050000576241 for the Filet Mignon Flavor dry food, and Rowdy & Archie identifies that code as one 12 lb bag.",
+      "conflicts": [
+        "Some retailer panels still expose a legacy colored formula with corn gluten meal and Yellow/Red dyes. Purina's current product page links October 2024 deck G650124, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057624 requires check digit 1.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000576241.",
+        "The barcode evidence identifies one 12 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650124 provides the complete ingredient order, guaranteed analysis, 3914 kcal/kg, 513 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 169,
+      "upc": "050000467150",
+      "canonical_gtin14": "00050000467150",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Ocean Fish & Salmon and Accents of Garden Greens Gourmet Cat Food",
+      "variant": "With Ocean Fish & Salmon and Accents of Garden Greens",
+      "recipe": [
+        "ocean fish",
+        "salmon",
+        "spinach",
+        "parsley"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, ocean fish, salmon, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, dried spinach, parsley flakes, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "ocean fish",
+        "salmon",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "dried spinach",
+        "parsley flakes",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3961,
+        "kcal_per_unit": 519,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650224",
+      "formula_source": "Purina official product label deck G650224",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6502-g650224_ff_oceanfish_salmon_accents_gard_greens_gour_cat_dk8.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-ocean-fish-salmon-dry-cat-food",
+        "https://www.target.com/p/-/A-14770698"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, net weight 48 oz (3 lb), and explicitly prints UPC 050000467150 for the Ocean Fish & Salmon bag.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and Blue/Yellow/Red dyes. Purina's current product page links October 2024 deck G650224, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000046715 requires check digit 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000467150.",
+        "The barcode evidence identifies one 3 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650224 provides the complete ingredient order, guaranteed analysis, 3961 kcal/kg, 519 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 170,
+      "upc": "050000463916",
+      "canonical_gtin14": "00050000463916",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Ocean Fish & Salmon and Accents of Garden Greens Gourmet Cat Food",
+      "variant": "With Ocean Fish & Salmon and Accents of Garden Greens",
+      "recipe": [
+        "ocean fish",
+        "salmon",
+        "spinach",
+        "parsley"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "7 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, ocean fish, salmon, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, dried spinach, parsley flakes, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "ocean fish",
+        "salmon",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "dried spinach",
+        "parsley flakes",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3961,
+        "kcal_per_unit": 519,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650224",
+      "formula_source": "Purina official product label deck G650224",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6502-g650224_ff_oceanfish_salmon_accents_gard_greens_gour_cat_dk8.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-ocean-fish-salmon-dry-cat-food",
+        "https://www.kroger.com/p/fancy-feast-ocean-fish-salmon-and-accents-of-garden-greens-dry-cat-food/0005000046391",
+        "https://hardypaw.com/products/fancy-feast-gourmet-filet-oceanfish-salmon-and-accents-of-garden-greens-dry-cat-food"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Kroger identifies one 7 lb Ocean Fish & Salmon bag and exposes retailer item body 0005000046391. Removing two padding zeros gives UPC-A body 05000046391; its required check digit is 6, yielding 050000463916. HardyPaw independently prints the full barcode.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and Blue/Yellow/Red dyes. Purina's current product page links October 2024 deck G650224, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000046391 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000463916.",
+        "The barcode evidence identifies one 7 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650224 provides the complete ingredient order, guaranteed analysis, 3961 kcal/kg, 519 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
       ],
       "research_status": "source_verified"
     }
