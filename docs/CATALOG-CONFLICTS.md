@@ -661,9 +661,29 @@ be afraid of.
 
 ---
 
-## D. Data the model cannot hold yet
+## D. Data the model could not hold — closed in batch 018
 
-### D1. Calcium guarantee — 3 products, unresolved
+**All four gaps below are now stored.** `GuaranteedAnalysis` gained an `extras`
+list — `{ nutrient, basis, value, unit }`, as printed — in both repositories,
+and the fifty-two products that print something the eight named fields could not
+hold now carry it. The panel shows each with its own unit, and the report's
+model is given them.
+
+The entries are kept rather than deleted because each is the argument for the
+shape, and because the shape is the thing to defend next time: the tempting fix
+each time was a new named column, and four named columns would have been four
+rounds of coordinated change across two repos to hold figures that are never
+compared, converted or derived from. What stays named is what IS derived from —
+`moistureMax` divides every dry-matter figure, `ashMax` makes carbohydrate
+possible.
+
+One thing did NOT change: none of these figures is converted to a dry-matter
+basis, and the panel shows no dry-matter column for them. A vitamin E minimum in
+IU/kg is not a share of the pack, so dividing it by dry matter would produce a
+number with no referent.
+
+
+### D1. Calcium guarantee — 3 products, STORED in batch 018
 
 `050000502585` carries the 28th conflict note in the catalog, and it is this and
 nothing else: the deck agrees with every other source, and the only thing wrong
@@ -710,7 +730,7 @@ anybody made. That is worth having: a shopper looking at a Senior 7+ can is
 choosing it for the age on the label. But it is the one value here not backed by
 an AAFCO statement, so a test pins it to the range that prints it.
 
-### D3. Vitamin E in IU/kg — 2 products, unresolved
+### D3. Vitamin E in IU/kg — 2 products, STORED in batch 018
 
 Two Senior 7+ decks guarantee **Vitamin E (min) 40 IU/kg** and it is not stored:
 
@@ -766,7 +786,7 @@ letting absence read as an oversight.
 carbohydrate row appear, and that row would then be a number derived from an
 invention, presented identically to a hundred and sixty derived from labels.
 
-### D5. Fibre stated as a MINIMUM
+### D5. Fibre stated as a MINIMUM — STORED in batch 018
 
 `052742453101` Hill's Science Diet Adult Hairball Control guarantees **Crude
 Fiber (min) 2.0%** — in addition to the maximum every other product states.
@@ -782,7 +802,7 @@ so far, but it will recur on every hairball and weight range we seed.
 
 ---
 
-### D6. Everything a bag prints that a tin does not
+### D6. Everything a bag prints that a tin does not — STORED in batch 018
 
 Dry food arrived in batch 017 and brought a panel several times richer than any
 can's. What the model holds is protein, fat, fibre, moisture, ash, taurine and
@@ -811,14 +831,18 @@ cup, and so on. That is the caloric-basis idea the consumer app already
 implements from kcal — the maker has done the arithmetic and printed it, and it
 is discarded on read.
 
-**Nothing here is urgent and all of it is the same fix**: guarantees need to be
-a list of (nutrient, basis, value, unit) rather than seven named fields. That is
-a bigger change than D1's single calcium column and should not be started
-without deciding it is worth doing at all — but it is worth writing down that
-the seven-field shape has now been the wrong shape four times (D1, D3, D5, D6),
-and that dry food is where it stops being a small gap.
+**This is the entry that became the fix.** Guarantees are now a list of
+(nutrient, basis, value, unit) beside the named fields — `extras` — rather than
+a seventh, eighth and ninth named column. The seven-field shape had been the
+wrong shape four times (D1, D3, D5, D6) before anybody added it up, and dry food
+is where it stopped being a small gap.
 
-### D8. Omega-6 and omega-3, printed as percentages
+Stored from these bags: linoleic and arachidonic acid, calcium, phosphorus,
+zinc and selenium in mg/kg, vitamins A and E in IU/kg, DHA, and Party Pack'd's
+printed carbohydrate. **Not** stored: the per-cup column, which is the same
+guarantee measured against a serving — one number twice is not two figures.
+
+### D8. Omega-6 and omega-3 — STORED in batch 018
 
 Fifteen products in batch 018 print **Omega-6 Fatty Acids (min)** and eight of
 them **Omega-3 Fatty Acids (min)** as ordinary percentages, beside the six
@@ -834,7 +858,7 @@ which are ranges sold *on* coat and skin condition. As with the hairball fibre
 minimum in D5, the figure the catalog drops is the one the product is bought
 for.
 
-### D7. Crude fibre, absent
+### D7. Crude fibre, absent — still absent, and correctly so
 
 `050000618958` / `050000619832` Party Pack'd print a **Dietary Fiber** maximum
 of 12.5% and no crude fibre figure at all. Stored as null.

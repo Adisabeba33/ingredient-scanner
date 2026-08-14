@@ -60,6 +60,40 @@ export interface GuaranteedAnalysis {
   kcalPerServing: number | null;
   /** What that serving is called on the pack: "can", "cup", "pouch". */
   servingName: string | null;
+  /**
+   * Everything else the panel prints, as printed.
+   *
+   * SHAPE MIRROR with Ingredients.help, where the long version of this note
+   * lives. In short: four separate batches turned up a guarantee the eight
+   * named fields had nowhere to hold — a kitten calcium minimum, a vitamin E
+   * in IU/kg, a fibre MINIMUM on a hairball formula, and the omega pair Hill's
+   * prints on the ranges sold for coat and skin. Each was a candidate for its
+   * own column and each would have been the wrong shape for the next.
+   *
+   * Nothing here is derived, converted or compared — these are shown to a
+   * reader and given to the model, and both can read a unit. The named fields
+   * stay named because they ARE derived from: `moistureMax` divides every
+   * dry-matter figure and `ashMax` is what makes carbohydrate possible.
+   *
+   * Optional: a panel written before this existed is not missing anything.
+   */
+  extras?: PrintedGuarantee[] | null;
+}
+
+/**
+ * One guarantee the panel prints that the named fields have nowhere to put.
+ *
+ * Stored with its unit, because that is the only way a figure in IU/kg and a
+ * figure in percent sit in one list without one being silently converted into
+ * a number the label never carried.
+ */
+export interface PrintedGuarantee {
+  /** As printed: "Calcium", "Omega-6 Fatty Acids", "Vitamin E". */
+  nutrient: string;
+  basis: "min" | "max";
+  value: number;
+  /** As printed: "%", "IU/kg", "mg/kg", "ppm". */
+  unit: string;
 }
 
 export const NO_ANALYSIS: GuaranteedAnalysis = {
@@ -179,5 +213,12 @@ export function readGuaranteedAnalysis(raw: unknown): GuaranteedAnalysis {
 
 /** Whether anything at all was read — a panel of nothing isn't worth storing. */
 export function hasAnyFigure(analysis: GuaranteedAnalysis): boolean {
-  return Object.values(analysis).some((v) => v !== null);
+  // Extras are counted, and an EMPTY extras array is not a figure. The old
+  // `Object.values(...).some(v => v !== null)` would have said it was: an array
+  // is not null whatever is in it, so `extras: []` alone would have made an
+  // otherwise blank panel look worth storing.
+  if ((analysis.extras?.length ?? 0) > 0) return true;
+  return Object.entries(analysis).some(
+    ([key, value]) => key !== "extras" && value !== null
+  );
 }

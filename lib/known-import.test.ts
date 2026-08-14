@@ -577,6 +577,53 @@ describe("data/known-formulas.ts", () => {
     }
   });
 
+  // Section D of docs/CATALOG-CONFLICTS.md tracked four guarantees the model
+  // could not hold, over four batches, and each entry named the products. The
+  // `extras` list closed all four. This pins the ones the doc named, so that
+  // "unstorable" cannot quietly become "not stored" again.
+  it("stores the guarantees section D spent four batches unable to hold", () => {
+    const extrasOf = (upc: string) =>
+      Object.fromEntries(
+        (KNOWN_FORMULAS[upc]?.analysis.extras ?? []).map((e) => [
+          e.nutrient,
+          `${e.value} ${e.unit} ${e.basis}`,
+        ])
+      );
+    // D1 — the three kitten calcium minima, open since batch 009.
+    for (const upc of ["050000575008", "050000574988", "050000502585"]) {
+      expect({ upc, calcium: extrasOf(upc)["Calcium"] }).toEqual({
+        upc,
+        calcium: "0.3 % min",
+      });
+    }
+    // D3 — vitamin E in IU/kg, a unit the named fields cannot express.
+    for (const upc of ["050000503827", "050000503841"]) {
+      expect({ upc, e: extrasOf(upc)["Vitamin E"] }).toEqual({
+        upc,
+        e: "40 IU/kg min",
+      });
+    }
+    // D5 — a fibre MINIMUM, on the hairball formula that is bought for it.
+    expect(extrasOf("052742453101")["Crude Fiber"]).toBe("2 % min");
+    // D8 — the omega pair, on a Sensitive Stomach & Skin deck, which is a range
+    // sold for exactly the thing these two figures are about.
+    const omega = extrasOf("052742010243");
+    expect(omega["Omega-6 Fatty Acids"]).toBeTruthy();
+    expect(omega["Omega-3 Fatty Acids"]).toBeTruthy();
+  });
+
+  // A unit that is not a percentage is the whole reason this is a list rather
+  // than more named fields, so at least one has to survive in the seed.
+  it("keeps a guarantee whose unit is not a percentage", () => {
+    const units = new Set(
+      Object.values(KNOWN_FORMULAS).flatMap((f) =>
+        (f.analysis.extras ?? []).map((e) => e.unit)
+      )
+    );
+    expect(units.has("%")).toBe(true);
+    expect(units.has("IU/kg")).toBe(true);
+  });
+
   it("has every conflict written down in docs/CATALOG-CONFLICTS.md", () => {
     const doc = readFileSync("docs/CATALOG-CONFLICTS.md", "utf8");
     const undocumented = Object.entries(KNOWN_FORMULAS)

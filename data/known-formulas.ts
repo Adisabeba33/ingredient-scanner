@@ -175,6 +175,30 @@ function ga(
  * against a printed 73 — the two halves of the statement agreeing is a sign the
  * figures came off a real deck rather than out of somebody's head.
  */
+/**
+ * Attach the guarantees the named fields have nowhere to hold.
+ *
+ * Written as a wrapper rather than a seventh argument to `ga` because it
+ * applies to a small minority of decks and an argument would put a `null` on
+ * every one of the other two hundred and seventy.
+ *
+ *   withExtras(ga(...), { "Calcium": ["min", 0.3, "%"] })
+ */
+function withExtras(
+  analysis: GuaranteedAnalysis,
+  extras: Record<string, ["min" | "max", number, string]>
+): GuaranteedAnalysis {
+  return {
+    ...analysis,
+    extras: Object.entries(extras).map(([nutrient, [basis, value, unit]]) => ({
+      nutrient,
+      basis,
+      value,
+      unit,
+    })),
+  };
+}
+
 function withCalories(
   analysis: GuaranteedAnalysis,
   /**
@@ -797,14 +821,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   "050000575008": {
     ingredients: `Turkey, Meat By-Products, Liver, Poultry Broth, Fish, Milk, Dried Egg Product, Artificial And Natural Flavorings, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt.`,
     // 0.07% taurine, not the 0.05% every adult pack in this file states.
-    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1087, 92),
+    analysis: withExtras(withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1087, 92), { "Calcium": ["min", 0.3, "%"] }),
     verifiedAt: VERIFIED_005,
     conflict:
       "Target still exposes an older ingredient field for this barcode containing Added Color. The current Purina deck D662122 has none. Also guarantees Calcium (min) 0.3%, which is not stored.",
   },
   "050000574988": {
     ingredients: `Ocean Whitefish, Meat By-Products, Liver, Fish Broth, Chicken, Milk, Dried Egg Product, Artificial And Natural Flavorings, Tricalcium Phosphate, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, ${V_E_FIRST_A_MID}, Taurine, Salt.`,
-    analysis: withCalories(ga(11.5, 4.0, 1.5, 78.0, 3.5, 0.07), 1067, 90),
+    analysis: withExtras(withCalories(ga(11.5, 4.0, 1.5, 78.0, 3.5, 0.07), 1067, 90), { "Calcium": ["min", 0.3, "%"] }),
     verifiedAt: VERIFIED_005,
     conflict:
       "Target's ingredient text for this barcode is OCR-corrupted; Purina deck D662022 is the master. Also guarantees Calcium (min) 0.3%, which is not stored.",
@@ -1092,7 +1116,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     // consumer app together, since the consumer drops keys it does not know
     // when it reads a stored panel back. Third pack to state one.
     ingredients: `Salmon, Chicken, Liver, Fish Broth, Fish, Milk, Natural Flavors, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Choline Chloride, Taurine, ${V_E_FIRST_A_MID}, Salt.`,
-    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1143, 97),
+    analysis: withExtras(withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.5, 0.07), 1143, 97), { "Calcium": ["min", 0.3, "%"] }),
     verifiedAt: VERIFIED_009,
     conflict: "Also guarantees Calcium (min) 0.3%, which is not stored — there is no field for it yet.",
   },
@@ -1527,13 +1551,13 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // kitten food, so it really is not a life-stage marker.
   "050000503827": {
     ingredients: `Chicken, Fish, Meat By-Products, Liver, Chicken Broth, Artificial And Natural Flavors, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_E_FIRST_A_MID}.`,
-    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.25, 0.07), 1128, 95),
+    analysis: withExtras(withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.25, 0.07), 1128, 95), { "Vitamin E": ["min", 40, "IU/kg"] }),
     verifiedAt: VERIFIED_014,
     conflict: "Also guarantees a minimum Vitamin E of 40 IU/kg, which is not stored: `GuaranteedAnalysis` holds six percentages and has no room for a figure in IU/kg. Same shape as the kitten calcium minimum — see docs/CATALOG-CONFLICTS.md section D — and the same fix, since the consumer app drops keys it does not recognise when it reads a panel back.",
   },
   "050000503841": {
     ingredients: `Beef, Fish, Meat By-Products, Liver, Beef Broth, Chicken, Artificial And Natural Flavors, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_E_FIRST_A_MID}.`,
-    analysis: withCalories(ga(11.5, 5.0, 1.5, 78.0, 3.25, 0.07), 1082, 91),
+    analysis: withExtras(withCalories(ga(11.5, 5.0, 1.5, 78.0, 3.25, 0.07), 1082, 91), { "Vitamin E": ["min", 40, "IU/kg"] }),
     verifiedAt: VERIFIED_014,
     conflict: "Also guarantees a minimum Vitamin E of 40 IU/kg, which is not stored: `GuaranteedAnalysis` holds six percentages and has no room for a figure in IU/kg. Same shape as the kitten calcium minimum — see docs/CATALOG-CONFLICTS.md section D — and the same fix, since the consumer app drops keys it does not recognise when it reads a panel back.",
   },
@@ -1601,7 +1625,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Hairball Control ─────────────────────────────────────
   "052742453101": {
     ingredients: `Water, Pork Liver, Tuna, Pork By-Products, Powdered Cellulose, Chicken Fat, Wheat Flour, Corn Starch, Soybean Oil, Whole Grain Corn, Chicken Liver Flavor, Natural Flavor, Calcium Sulfate, Dicalcium Phosphate, Guar Gum, Locust Bean Gum, Brewers Dried Yeast, Calcium Carbonate, Choline Chloride, Potassium Chloride, Carrageenan, DL-Methionine, Iodized Salt, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Folic Acid), L-Carnitine, Taurine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(8.0, 4.5, 4.0, 78.0, null, null), 1153, 180),
+    analysis: withExtras(withCalories(ga(8.0, 4.5, 4.0, 78.0, null, null), 1153, 180), { "Crude Fiber": ["min", 2.0, "%"] }),
     verifiedAt: VERIFIED_015,
   },
 
@@ -1648,7 +1672,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   },
   "052742454108": {
     ingredients: `Water, Chicken, Pork By-Products, Pork Liver, Wheat Flour, Rice, Corn Starch, Chicken Liver Flavor, Soybean Oil, Guar Gum, Calcium Sulfate, Dicalcium Phosphate, Potassium Chloride, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Calcium Carbonate, Powdered Cellulose, Calcium Chloride, Taurine, Iodized Salt, Choline Chloride, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Magnesium Oxide.`,
-    analysis: withCalories(ga(7.0, 3.5, 1.0, 78.0, null, null), 1072, 167),
+    analysis: withExtras(withCalories(ga(7.0, 3.5, 1.0, 78.0, null, null), 1072, 167), { "Vitamin E": ["min", 15, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 1.5, "ppm"] }),
     verifiedAt: VERIFIED_015,
   },
   "052742177601": {
@@ -1690,7 +1714,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Prescription Diet · i/d ─────────────────────────────────────
   "052742462806": {
     ingredients: `Water, Pork Liver, Chicken, Rice, Potato Protein, Flaxseed, Fish Oil, Calcium Sulfate, Chicken Fat, Chicken Liver Flavor, Hydrolyzed Chicken Flavor, Ground Pecan Shells, Guar Gum, Potassium Chloride, Dicalcium Phosphate, Dried Beet Pulp, Dried Citrus Pulp, Iodized Salt, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Choline Chloride, Taurine, Pressed Cranberries, DL-Methionine, Magnesium Oxide, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(7.2, 4.0, 4.0, 78.0, null, null), 1100, 172),
+    analysis: withExtras(withCalories(ga(7.2, 4.0, 4.0, 78.0, null, null), 1100, 172), { "Carbohydrate": ["max", 13.5, "%"] }),
     verifiedAt: VERIFIED_015,
     conflict:
       "Hill's page prints 171 kcal/can where the PET NUTRITION FACTS panel prints 172, on the same 1100 kcal/kg. The label is stored: 1100 x 0.156 kg = 171.6. See B13.",
@@ -1720,14 +1744,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Prescription Diet · i/d ─────────────────────────────────────
   "052742078205": {
     ingredients: `Water, Pork Liver, Chicken, Rice, Flaxseed, Potato Protein, Fish Oil, Egg Whites, Chicken Fat, Ground Pecan Shells, Calcium Sulfate, Chicken Liver Flavor, Hydrolyzed Chicken Flavor, Guar Gum, Dicalcium Phosphate, Potassium Chloride, Dried Beet Pulp, Iodized Salt, Dried Citrus Pulp, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Pressed Cranberries, DL-Methionine, Choline Chloride, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Magnesium Oxide, Beta-Carotene.`,
-    analysis: withCalories(ga(7.5, 4.0, 4.0, 78.0, null, null), null, 173),
+    analysis: withExtras(withCalories(ga(7.5, 4.0, 4.0, 78.0, null, null), null, 173), { "Carbohydrate": ["max", 13.5, "%"] }),
     verifiedAt: VERIFIED_016,
   },
 
   // ── Hill's Prescription Diet · k/d + z/d ─────────────────────────────────────
   "052742086620": {
     ingredients: `Hydrolyzed Chicken Liver, Water, Corn Starch, Oat Fiber, Soybean Oil, Fish Oil, Calcium Carbonate, Potassium Citrate, Coconut Oil, Oat Bran, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Folic Acid, Vitamin D3 Supplement), Betaine, DL-Methionine, Powdered Cellulose, Fructooligosaccharides (FOS), Iodized Salt, Taurine, Calcium Chloride, Choline Chloride, L-Arginine, Cysteine, Magnesium Oxide, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(5.5, 4.0, 6.5, 78.0, null, null), null, 187),
+    analysis: withExtras(withCalories(ga(5.5, 4.0, 6.5, 78.0, null, null), null, 187), { "Carbohydrate": ["max", 17.3, "%"] }),
     verifiedAt: VERIFIED_016,
   },
 
@@ -1762,12 +1786,12 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Urinary Hairball Control ─────────────────────────────────────
   "052742075556": {
     ingredients: `Chicken Broth, Chicken, Pork Liver, Carrots, Powdered Cellulose, Spinach, Wheat Gluten, Rice Starch, Chicken Fat, Hydrolyzed Chicken Flavor, Rice, Dried Beet Pulp, Potassium Alginate, Soybean Oil, Fish Oil, Calcium Chloride, Potassium Citrate, Dicalcium Phosphate, Choline Chloride, Calcium Sulfate, Sodium Tripolyphosphate, Taurine, Guar Gum, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement), Iodized Salt, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Calcium Carbonate.`,
-    analysis: withCalories(ga(4.5, 2.5, 4.0, 84.0, null, null), 815, 67),
+    analysis: withExtras(withCalories(ga(4.5, 2.5, 4.0, 84.0, null, null), 815, 67), { "Crude Fiber": ["min", 1, "%"] }),
     verifiedAt: VERIFIED_016,
   },
   "052742075877": {
     ingredients: `Chicken Broth, Pork Liver, Turkey, Carrots, Wheat Gluten, Powdered Cellulose, Rice Starch, Spinach, Chicken Fat, Hydrolyzed Chicken Flavor, Rice, Dried Beet Pulp, Potassium Alginate, Fish Oil, Calcium Chloride, Potassium Citrate, Dicalcium Phosphate, Sodium Tripolyphosphate, Calcium Sulfate, Taurine, Guar Gum, Choline Chloride, vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement), Iodized Salt, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Calcium Carbonate.`,
-    analysis: withCalories(ga(4.9, 2.8, 4.0, 84.0, null, null), 856, 70),
+    analysis: withExtras(withCalories(ga(4.9, 2.8, 4.0, 84.0, null, null), 856, 70), { "Crude Fiber": ["min", 1, "%"] }),
     verifiedAt: VERIFIED_016,
   },
 
@@ -1861,14 +1885,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Fancy Feast · Kitten ─────────────────────────────────────
   "050000660681": {
     ingredients: `Poultry by-product meal, rice, corn protein meal, animal fat preserved with mixed-tocopherols, whole grain corn, soybean meal, chicken, turkey, liver flavor, phosphoric acid, dried yeast, calcium carbonate, salt, natural flavor, potassium chloride, fish oil, dried whole milk, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.`,
-    analysis: withCalories(ga(35.0, 17.0, 3.0, 10.0, null, 0.12), 3970, 457, "cup"),
+    analysis: withExtras(withCalories(ga(35.0, 17.0, 3.0, 10.0, null, 0.12), 3970, 457, "cup"), { "Docosahexaenoic Acid (DHA)": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Some retailer panels still expose the prior A512722 formula with chicken by-product meal, corn gluten meal, beef fat, and a different vitamin order. Purina's current product page links deck B512723, which is stored here.",
   },
   "050000660667": {
     ingredients: `Poultry by-product meal, rice, corn protein meal, animal fat preserved with mixed-tocopherols, whole grain corn, soybean meal, chicken, turkey, liver flavor, phosphoric acid, dried yeast, calcium carbonate, salt, natural flavor, potassium chloride, fish oil, dried whole milk, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.`,
-    analysis: withCalories(ga(35.0, 17.0, 3.0, 10.0, null, 0.12), 3970, 457, "cup"),
+    analysis: withExtras(withCalories(ga(35.0, 17.0, 3.0, 10.0, null, 0.12), 3970, 457, "cup"), { "Docosahexaenoic Acid (DHA)": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Some retailer panels still expose the prior A512722 formula with chicken by-product meal, corn gluten meal, beef fat, and a different vitamin order. Purina's current product page links deck B512723, which is stored here.",
@@ -1877,35 +1901,35 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Seafood Sensations ─────────────────────────────────────
   "050000015474": {
     ingredients: `Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order.",
   },
   "050000575770": {
     ingredients: `Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order.",
   },
   "050000168866": {
     ingredients: `Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order. The 17.6 lb retailer panel exposes a legacy Seafood Sensations formula with crab meal and a different ingredient order. Purina's current page still lists the 17.6 lb size and links current deck K600323, which is used for the stored formula.",
   },
   "050000290833": {
     ingredients: `Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order. ShopRite's ingredient panel reflects an older Seafood Sensations generation. The current linked Purina deck K600323 is used for the stored ingredient order and analysis.",
   },
   "050000963584": {
     ingredients: `Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3631, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order.",
@@ -1914,28 +1938,28 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Surfin' & Turfin' Favorites ─────────────────────────────────────
   "050000100347": {
     ingredients: `Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order.",
   },
   "050000576692": {
     ingredients: `Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order.",
   },
   "050000294701": {
     ingredients: `Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order.",
   },
   "050000290215": {
     ingredients: `Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3573, 392, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order.",
@@ -1944,36 +1968,36 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Gravy Swirlers ─────────────────────────────────────
   "050000168583": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
   },
   "050000168620": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
   },
   "050000172559": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
   },
   "050000504121": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, 3.0, 12.0, null, 0.12), 3635, 405, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
   },
 
   // ── Friskies · Tender & Crunchy Combo ─────────────────────────────────────
   "050000084500": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, ground wheat, soybean meal, beef fat preserved with mixed tocopherols, meat and bone meal, glycerin, animal liver flavor, chicken, phosphoric acid, natural flavor, turkey by-product meal, calcium carbonate, salt, choline chloride, dried carrots, dried green beans, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid, biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], Yellow 6, DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3595, 375, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3595, 375, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles and retailer panels labeled I600424 show an older formula/order. The product page now links October 2025 deck J600425, whose complete ingredient order and analysis are stored. Purina's current HTML size selector says 3.5 lb for the smaller bag, while current Rakuten, Petco, Kroger, Chewy, and Walmart listings identify UPC 050000084500 as 3.15 lb. The exact sellable-unit size is stored as 3.15 lb and the manufacturer-page disagreement is retained.",
   },
   "050000575787": {
     ingredients: `Ground yellow corn, corn protein meal, chicken by-product meal, ground wheat, soybean meal, beef fat preserved with mixed tocopherols, meat and bone meal, glycerin, animal liver flavor, chicken, phosphoric acid, natural flavor, turkey by-product meal, calcium carbonate, salt, choline chloride, dried carrots, dried green beans, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid, biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], Yellow 6, DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3595, 375, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 11.0, 3.0, 12.0, null, 0.12), 3595, 375, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's HTML ingredient tiles and retailer panels labeled I600424 show an older formula/order. The product page now links October 2025 deck J600425, whose complete ingredient order and analysis are stored.",
@@ -1982,14 +2006,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Indoor Delights ─────────────────────────────────────
   "050000051472": {
     ingredients: `Whole grain corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, salmon meal, powdered cellulose, meat and bone meal, soybean hulls, liver flavor, phosphoric acid, calcium carbonate, malted barley extract, salt, choline chloride, dried cheese powder, dried peas, dried carrots, potassium chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Yellow 6, Yellow 5, Red 40, Blue 2.`,
-    analysis: withCalories(ga(30.0, 9.0, 5.0, 12.0, null, 0.12), 3410, 368, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 9.0, 5.0, 12.0, null, 0.12), 3410, 368, "cup"), { "Linoleic Acid": ["min", 1.5, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's current HTML ingredient tiles show a materially different order/composition and 3382 kcal/kg / 365 kcal/cup, while the linked official deck J600224 prints 3410 kcal/kg / 368 kcal/cup. The stronger linked deck is used for every stored formula field and the disagreement is retained.",
   },
   "050000376407": {
     ingredients: `Whole grain corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, salmon meal, powdered cellulose, meat and bone meal, soybean hulls, liver flavor, phosphoric acid, calcium carbonate, malted barley extract, salt, choline chloride, dried cheese powder, dried peas, dried carrots, potassium chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Yellow 6, Yellow 5, Red 40, Blue 2.`,
-    analysis: withCalories(ga(30.0, 9.0, 5.0, 12.0, null, 0.12), 3410, 368, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 9.0, 5.0, 12.0, null, 0.12), 3410, 368, "cup"), { "Linoleic Acid": ["min", 1.5, "%"], "Arachidonic Acid": ["min", 0.03, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's current HTML ingredient tiles show a materially different order/composition and 3382 kcal/kg / 365 kcal/cup, while the linked official deck J600224 prints 3410 kcal/kg / 368 kcal/cup. The stronger linked deck is used for every stored formula field and the disagreement is retained.",
@@ -1998,7 +2022,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Land & Sea Adventures ─────────────────────────────────────
   "050000259373": {
     ingredients: `Whole grain corn, corn protein meal, chicken by-product meal, soybean meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, 3.5, 12.0, null, 0.12), 3568, 404, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, 3.5, 12.0, null, 0.12), 3568, 404, "cup"), { "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.2, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 80, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Purina's current HTML ingredient tiles omit corn protein meal near the start and flatten the premix blocks, while the current page links deck A508223 and a current retailer label panel matches the deck's stored complete order. The linked official deck is used for every formula field.",
@@ -2007,14 +2031,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Friskies · Party Pack'd ─────────────────────────────────────
   "050000618958": {
     ingredients: `Whole grain corn, chicken by-product meal, corn protein meal, soybean meal, whole grain wheat, animal fat preserved with mixed tocopherols, liver flavor, phosphoric acid, calcium carbonate, turkey by-product meal, salt, sodium bisulfate, choline chloride, DL-Methionine, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, null, 12.0, null, 0.12), null, 423, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, null, 12.0, null, 0.12), null, 423, "cup"), { "Total Carbohydrate (calculated)": ["max", 47, "%"], "Dietary Fiber": ["max", 12.5, "%"], "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Target classifies both bags as “All Ages,” while current official deck A508325 states “Complete Adult Cat Food” and AAFCO maintenance of adult cats. The official adult-maintenance statement is stored.",
   },
   "050000619832": {
     ingredients: `Whole grain corn, chicken by-product meal, corn protein meal, soybean meal, whole grain wheat, animal fat preserved with mixed tocopherols, liver flavor, phosphoric acid, calcium carbonate, turkey by-product meal, salt, sodium bisulfate, choline chloride, DL-Methionine, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.`,
-    analysis: withCalories(ga(30.0, 12.0, null, 12.0, null, 0.12), null, 423, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 12.0, null, 12.0, null, 0.12), null, 423, "cup"), { "Total Carbohydrate (calculated)": ["max", 47, "%"], "Dietary Fiber": ["max", 12.5, "%"], "Linoleic Acid": ["min", 1.2, "%"], "Arachidonic Acid": ["min", 0.02, "%"], "Calcium (Ca)": ["min", 1, "%"], "Phosphorus (P)": ["min", 0.9, "%"], "Zinc (Zn)": ["min", 125, "mg/kg"], "Selenium (Se)": ["min", 0.3, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
     verifiedAt: VERIFIED_017,
     conflict:
       "Target classifies both bags as “All Ages,” while current official deck A508325 states “Complete Adult Cat Food” and AAFCO maintenance of adult cats. The official adult-maintenance statement is stored.",
@@ -2113,7 +2137,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Sensitive Stomach & Skin ─────────────────────────────────────
   "052742022086": {
     ingredients: `Salmon, Yellow Peas, Potato Starch, Chicken Fat, Potato Protein, Chicken, Chicken Meal, Potatoes, Pea Protein, Chicken Liver Flavor, Dried Beet Pulp, Soybean Oil, Lactic Acid, Calcium Sulfate, Potassium Chloride, Choline Chloride, Iodized Salt, L-Lysine, Fructooligosaccharides (FOS), DL-Methionine, Taurine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(29.5, 19.0, 3.0, 8.0, null, null), 4095, 511, "cup"),
+    analysis: withExtras(withCalories(ga(29.5, 19.0, 3.0, 8.0, null, null), 4095, 511, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "ppm"], "Omega-6 Fatty Acids": ["min", 2.5, "%"] }),
     verifiedAt: VERIFIED_018,
   },
 
@@ -2139,17 +2163,17 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Perfect Digestion ─────────────────────────────────────
   "052742038346": {
     ingredients: `Chicken, Cracked Pearled Barley, Corn Protein Meal, Chicken Fat, Chicken Meal, Whole Grain Oats, Whole Grain Corn, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, Choline Chloride, Soybean Oil, Iodized Salt, L-Lysine, Fish Oil, Pressed Cranberries, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, Pumpkin, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), DL-Methionine, Calcium Carbonate, Dicalcium Phosphate, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 95, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742038339": {
     ingredients: `Chicken, Cracked Pearled Barley, Corn Protein Meal, Chicken Fat, Chicken Meal, Whole Grain Oats, Whole Grain Corn, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, Choline Chloride, Soybean Oil, Iodized Salt, L-Lysine, Fish Oil, Pressed Cranberries, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, Pumpkin, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), DL-Methionine, Calcium Carbonate, Dicalcium Phosphate, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 95, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742038315": {
     ingredients: `Chicken, Cracked Pearled Barley, Corn Protein Meal, Chicken Fat, Chicken Meal, Whole Grain Oats, Whole Grain Corn, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, Choline Chloride, Soybean Oil, Iodized Salt, L-Lysine, Fish Oil, Pressed Cranberries, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, Pumpkin, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), DL-Methionine, Calcium Carbonate, Dicalcium Phosphate, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 95, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742041605": {
@@ -2159,17 +2183,17 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   },
   "052742041476": {
     ingredients: `Salmon, Brown Rice, Corn Protein Meal, Whole Grain Oats, Potato Protein, Chicken Meal, Whole Grain Corn, Chicken Fat, Egg Product, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, L-Lysine, Soybean Oil, Choline Chloride, Iodized Salt, Pressed Cranberries, Pumpkin, Taurine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Calcium Carbonate, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742041469": {
     ingredients: `Salmon, Brown Rice, Corn Protein Meal, Whole Grain Oats, Potato Protein, Chicken Meal, Whole Grain Corn, Chicken Fat, Egg Product, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, L-Lysine, Soybean Oil, Choline Chloride, Iodized Salt, Pressed Cranberries, Pumpkin, Taurine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Calcium Carbonate, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742041544": {
     ingredients: `Salmon, Brown Rice, Corn Protein Meal, Whole Grain Oats, Potato Protein, Chicken Meal, Whole Grain Corn, Chicken Fat, Egg Product, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Calcium Sulfate, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, L-Lysine, Soybean Oil, Choline Chloride, Iodized Salt, Pressed Cranberries, Pumpkin, Taurine, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Calcium Carbonate, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 15.0, 4.0, 8.0, null, null), 3875, 472, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
 
@@ -2203,22 +2227,22 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   },
   "052742010243": {
     ingredients: `Chicken Broth, Chicken, Pork Liver, Carrots, Green Peas, Potatoes, Egg Whites, Spinach, Potato Protein, Soybean Oil, Flaxseed Meal, Calcium Chloride, Calcium Sulfate, Dicalcium Phosphate, L-Lysine, Fish Oil, Fructooligosaccharides (FOS), vitamins (Vitamin E Supplement, Thiamine Mononitrate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Ascorbic Acid (source of Vitamin C), Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Menadione Sodium Bisulfite Complex (source of Vitamin K), Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Iodized Salt, Taurine, DL-Methionine, Choline Chloride, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(4.0, 2.3, 1.5, 78.0, null, null), 1073, 88, "can"),
+    analysis: withExtras(withCalories(ga(4.0, 2.3, 1.5, 78.0, null, null), 1073, 88, "can"), { "Vitamin E": ["min", 15, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 1.5, "ppm"], "Omega-3 Fatty Acids": ["min", 0.1, "%"], "Omega-6 Fatty Acids": ["min", 0.51, "%"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742068411": {
     ingredients: `Water, Pork By-Products, Duck, Pork Liver, Turkey, Carrots, Whole Grain Corn, Green Peas, Green Beans, Potato Protein, Potato Starch, Chicken Fat, Natural Flavor, Powdered Cellulose, Calcium Sulfate, Dicalcium Phosphate, Choline Chloride, Iodized Salt, Fructooligosaccharides (FOS), Potassium Chloride, Fish Oil, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Calcium Pantothenate, Vitamin A Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Calcium Carbonate, Taurine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganese Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(7.0, 3.5, 2.0, 78.0, null, null), 1055, 86, "can"),
+    analysis: withExtras(withCalories(ga(7.0, 3.5, 2.0, 78.0, null, null), 1055, 86, "can"), { "Vitamin E": ["min", 15, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 1.5, "ppm"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742059167": {
     ingredients: `Pollock Meal, Cracked Pearled Barley, Whole Grain Sorghum, Corn Starch, Potato Starch, Chicken Fat, Egg Product, Pea Protein, Soybean Oil, Chicken Liver Flavor, Coconut Oil, Lactic Acid, Calcium Sulfate, Oat Fiber, Potassium Chloride, L-Lysine, Fructooligosaccharides (FOS), Choline Chloride, Calcium Carbonate, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), DL-Methionine, Taurine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(28.5, 19.0, 3.0, 8.0, null, null), 4126, 526, "cup"),
+    analysis: withExtras(withCalories(ga(28.5, 19.0, 3.0, 8.0, null, null), 4126, 526, "cup"), { "Vitamin E": ["min", 550, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 100, "ppm"], "Omega-3 Fatty Acids": ["min", 0.4, "%"], "Omega-6 Fatty Acids": ["min", 3.6, "%"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742059150": {
     ingredients: `Pollock Meal, Cracked Pearled Barley, Whole Grain Sorghum, Corn Starch, Potato Starch, Chicken Fat, Egg Product, Pea Protein, Soybean Oil, Chicken Liver Flavor, Coconut Oil, Lactic Acid, Calcium Sulfate, Oat Fiber, Potassium Chloride, L-Lysine, Fructooligosaccharides (FOS), Choline Chloride, Calcium Carbonate, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), DL-Methionine, Taurine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(28.5, 19.0, 3.0, 8.0, null, null), 4126, 526, "cup"),
+    analysis: withExtras(withCalories(ga(28.5, 19.0, 3.0, 8.0, null, null), 4126, 526, "cup"), { "Vitamin E": ["min", 550, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 100, "ppm"], "Omega-3 Fatty Acids": ["min", 0.4, "%"], "Omega-6 Fatty Acids": ["min", 3.6, "%"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742046341": {
@@ -2233,7 +2257,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   },
   "052742010267": {
     ingredients: `Chicken Broth, Tuna, Chicken, Turkey, Carrots, Green Peas, Potatoes, Egg Whites, Soybean Oil, Spinach, L-Lysine, Choline Chloride, Fish Oil, Calcium Chloride, Dicalcium Phosphate, Fructooligosaccharides (FOS), vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Ascorbic Acid (source of Vitamin C), Niacin Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Vitamin A Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Calcium Sulfate, Iodized Salt, DL-Methionine, Taurine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(8.0, 4.0, 1.5, 78.0, null, null), 1107, 91, "can"),
+    analysis: withExtras(withCalories(ga(8.0, 4.0, 1.5, 78.0, null, null), 1107, 91, "can"), { "Vitamin E": ["min", 15, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 1.5, "ppm"], "Omega-3 Fatty Acids": ["min", 0.17, "%"], "Omega-6 Fatty Acids": ["min", 0.75, "%"] }),
     verifiedAt: VERIFIED_018,
   },
 
@@ -2274,17 +2298,17 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Sensitive Stomach & Skin ─────────────────────────────────────
   "052742086446": {
     ingredients: `Salmon, Brown Rice, Brewers Rice, Pea Protein, Corn Protein Meal, Chicken, Chicken Fat, Cracked Pearled Barley, Egg Product, Chicken Liver Flavor, Calcium Sulfate, Lactic Acid, Potassium Chloride, L-Lysine, Calcium Carbonate, Fructooligosaccharides (FOS), Choline Chloride, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Biotin, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Iodized Salt, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 100, "ppm"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 2, "%"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742086484": {
     ingredients: `Salmon, Brown Rice, Brewers Rice, Pea Protein, Corn Protein Meal, Chicken, Chicken Fat, Cracked Pearled Barley, Egg Product, Chicken Liver Flavor, Calcium Sulfate, Lactic Acid, Potassium Chloride, L-Lysine, Calcium Carbonate, Fructooligosaccharides (FOS), Choline Chloride, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Biotin, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Iodized Salt, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 100, "ppm"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 2, "%"] }),
     verifiedAt: VERIFIED_018,
   },
   "052742086408": {
     ingredients: `Salmon, Brown Rice, Brewers Rice, Pea Protein, Corn Protein Meal, Chicken, Chicken Fat, Cracked Pearled Barley, Egg Product, Chicken Liver Flavor, Calcium Sulfate, Lactic Acid, Potassium Chloride, L-Lysine, Calcium Carbonate, Fructooligosaccharides (FOS), Choline Chloride, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Thiamine Mononitrate, Niacin Supplement, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Biotin, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Taurine, DL-Methionine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), Iodized Salt, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"),
+    analysis: withExtras(withCalories(ga(30.0, 17.0, 1.5, 8.0, null, null), 4030, 514, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 100, "ppm"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 2, "%"] }),
     verifiedAt: VERIFIED_018,
   },
 
@@ -2340,14 +2364,14 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult 7+ Perfect Digestion ─────────────────────────────────────
   "052742041483": {
     ingredients: `Chicken, Cracked Pearled Barley, Corn Protein Meal, Chicken Fat, Whole Grain Oats, Brown Rice, Whole Grain Corn, Chicken Meal, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, L-Lysine, Soybean Oil, Choline Chloride, Calcium Sulfate, Iodized Salt, Fish Oil, Calcium Carbonate, Pressed Cranberries, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Pumpkin, Taurine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), L-Carnitine, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 95, "ppm"] }),
     verifiedAt: VERIFIED_018,
     conflict:
       "The GA graphic embedded on the exact Adult 7+ product page omits '7+' in its formula heading, but the page metadata, item name, ingredient statement, back-bag image, sizes, and SKUs identify the Adult 7+ product; the numeric panel is used only within that exact page context.",
   },
   "052742041568": {
     ingredients: `Chicken, Cracked Pearled Barley, Corn Protein Meal, Chicken Fat, Whole Grain Oats, Brown Rice, Whole Grain Corn, Chicken Meal, Chicken Liver Flavor, Ground Pecan Shells, Lactic Acid, Potassium Chloride, Flaxseed, Dried Beet Pulp, Dried Citrus Pulp, L-Lysine, Soybean Oil, Choline Chloride, Calcium Sulfate, Iodized Salt, Fish Oil, Calcium Carbonate, Pressed Cranberries, vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Calcium Pantothenate, Pyridoxine Hydrochloride, Biotin, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K)), Pumpkin, Taurine, minerals (Ferrous Sulfate, Zinc Oxide, Copper Sulfate, Manganous Oxide, Calcium Iodate, Sodium Selenite), L-Carnitine, Mixed Tocopherols for freshness, Natural Flavors, Beta-Carotene.`,
-    analysis: withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"),
+    analysis: withExtras(withCalories(ga(30.5, 14.5, 4.0, 8.0, null, null), 3848, 469, "cup"), { "Vitamin E": ["min", 500, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 95, "ppm"] }),
     verifiedAt: VERIFIED_018,
     conflict:
       "The GA graphic embedded on the exact Adult 7+ product page omits '7+' in its formula heading, but the page metadata, item name, ingredient statement, back-bag image, sizes, and SKUs identify the Adult 7+ product; the numeric panel is used only within that exact page context.",
@@ -2391,7 +2415,7 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // ── Hill's Science Diet · Adult Urinary Hairball Control ─────────────────────────────────────
   "052742010229": {
     ingredients: `Water, Chicken, Turkey Giblets, Pork By-Products, Pork Liver, Powdered Cellulose, Corn Starch, Rice, Soybean Meal, Dried Beet Pulp, Chicken Liver Flavor, Natural Flavor, Fish Meal, Guar Gum, Brewers Dried Yeast, L-Tryptophan, Monosodium Phosphate, Potassium Citrate, Calcium Carbonate, Fish Oil, Choline Chloride, vitamins (Vitamin E Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Niacin Supplement, Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Biotin, Menadione Sodium Bisulfite Complex (source of Vitamin K), Folic Acid, Vitamin D3 Supplement), L-Lysine, Taurine, L-Carnitine, minerals (Zinc Oxide, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate), Beta-Carotene.`,
-    analysis: withCalories(ga(7.0, 3.5, 4.0, 78.0, null, null), 1019, 159, "can"),
+    analysis: withExtras(withCalories(ga(7.0, 3.5, 4.0, 78.0, null, null), 1019, 159, "can"), { "Crude Fiber": ["min", 1.5, "%"] }),
     verifiedAt: VERIFIED_018,
   },
 };
