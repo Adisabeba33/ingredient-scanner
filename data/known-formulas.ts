@@ -95,6 +95,9 @@ const VERIFIED_012 = "2026-08-13";
 /** Promoted from research/deep-research-barcodes.json, batch 013. */
 const VERIFIED_013 = "2026-08-13";
 
+/** Promoted from the research ledger, batch 014. */
+const VERIFIED_014 = "2026-08-13";
+
 /**
  * The six guarantees every one of these packs prints.
  *
@@ -280,6 +283,21 @@ const V_SHORT =
  */
 const V_PLAIN_K =
   "Vitamins [Thiamine Mononitrate, Vitamin E Supplement, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]";
+
+/**
+ * A thirteenth: the Fish & Shrimp ordering, and the only one that opens E,
+ * niacin, A before reaching thiamine.
+ *
+ * Eight of twelve entries away from its nearest neighbour, which is the widest
+ * gap any new block has had — this is a genuinely different sequence rather
+ * than a notation difference. Found with `scripts/match-vitamins.mjs`.
+ *
+ * The deck it comes from is unusual all through: seven ingredients before the
+ * vitamins, no potassium chloride at all, and iron as ferric pyrophosphate
+ * rather than the ferrous sulfate every other deck here uses.
+ */
+const V_FLAKED_FISH =
+  "Vitamins [Vitamin E Supplement, Niacin, Vitamin A Supplement, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Biotin, Vitamin B-12 Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid, Vitamin D-3 Supplement]";
 
 /** Keyed by the UPC exactly as printed under the bars. */
 export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
@@ -1403,5 +1421,93 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_013,
     conflict:
       "Purina's site routes deck B627823 from a differently named Tasty Treasures page. The deck itself is unambiguous — \u201cWith Turkey and Chicken\u201d — and a Kroger single-can page independently matches that identity and the paté format. Stored on the deck's own wording. A navigation fault on a website is not evidence about a tin.",
+  },
+
+  // ── Fancy Feast · Flaked (continued) ───────────────────────────────────
+  //
+  // 14% minimum protein at 74% moisture on three of the four — the densest wet
+  // panels in the file. Nothing wrong with them; flaked fish in broth simply
+  // carries less water than a pâté.
+  "050000427949": {
+    ingredients: `Poultry Broth, Fish, Chicken, Tuna, Wheat Gluten, Liver, Meat By-Products, Turkey, Soy Flour, Glycine, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Tricalcium Phosphate, Xanthan Gum, Salt, Choline Chloride, Carrageenan, Taurine, ${V}.`,
+    analysis: withCalories(ga(14.0, 3.5, 1.5, 74.0, 3.5, 0.05), 1210, 102),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Target's label data prints 78% maximum moisture where the current Purina-linked deck D690021 prints 74%. Four points of water is not a rounding — it moves every dry-matter figure the app derives — so the deck is stored and the difference is named.",
+  },
+  "050000428748": {
+    // The shortest deck in the seed. No potassium chloride anywhere, and the
+    // iron is ferric pyrophosphate rather than ferrous sulfate: a different
+    // salt, copied as printed.
+    ingredients: `Ocean Fish, Fish Broth, Shrimp, Vegetable Oil, Tricalcium Phosphate, Guar Gum, Choline Chloride, ${V_FLAKED_FISH}, Minerals [Ferric Pyrophosphate, Zinc Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide].`,
+    analysis: withCalories(ga(15.0, 2.0, 1.5, 78.0, 3.0, 0.05), 985, 83),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Purina's live ingredient widget says \u201cvegetable glycerin\u201d where the official PDF it links — deck D690120 — and Target's panel for the same deck both say \u201cvegetable oil\u201d. Glycerin is a humectant and oil is a fat. The linked deck is stored. The same widget-versus-deck fault appeared on Gravy Lovers Salmon & Sole, so it is Purina's renderer rather than one bad page.",
+  },
+  "050000428847": {
+    ingredients: `Fish Broth, Fish, Trout, Wheat Gluten, Chicken, Liver, Meat By-Products, Soy Flour, Glycine, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Xanthan Gum, Salt, Choline Chloride, Carrageenan, Taurine, ${V}.`,
+    analysis: withCalories(ga(14.0, 4.0, 1.5, 74.0, 3.5, 0.05), 1249, 106),
+    verifiedAt: VERIFIED_014,
+  },
+  "050000001248": {
+    ingredients: `Fish Broth, Tuna, Fish, Chicken, Wheat Gluten, Liver, Meat By-Products, Soy Flour, Glycine, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Natural Flavor, Xanthan Gum, Salt, Tricalcium Phosphate, Carrageenan, Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(14.0, 3.5, 1.5, 74.0, 3.25, 0.05), 1197, 101),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Target's panel is a superseded formula for this barcode carrying soy protein concentrate, artificial flavor, added color and sodium nitrite, at 78% moisture and 3.5% ash. Purina's current page links deck D690521, which has none of those and prints 74% and 3.25%. The deck is stored. Sodium nitrite is worth naming: it is a curing salt, and its removal is the sort of change a reader would want to know had happened.",
+  },
+
+  // ── Fancy Feast · Chunky ───────────────────────────────────────────────
+  "050000426942": {
+    ingredients: `Chicken Broth, Chicken, Meat By-Products, Liver, Fish, Wheat Gluten, Turkey, Soy Flour, Glycine, Natural Flavor, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Sodium Tripolyphosphate, Tricalcium Phosphate, Guar Gum, Taurine, Carrageenan, Locust Bean Gum, Choline Chloride, Salt, ${V}.`,
+    analysis: withCalories(ga(11.0, 4.0, 1.5, 78.0, 3.5, 0.05), 1106, 94),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Target's panel is a superseded formula for this barcode with soy protein concentrate and added color. Purina's current page links deck E665022, which drops both and instead carries glycine and magnesium proteinate. The deck is stored.",
+  },
+
+  // ── Fancy Feast · Sliced (continued) ───────────────────────────────────
+  //
+  // Two decks that differ in one entry and one word order: the turkey names
+  // chicken sixth where the chicken names none at all.
+  "050000032648": {
+    ingredients: `Poultry Broth, Chicken, Liver, Wheat Gluten, Meat By-Products, Soy Flour, Corn Starch-Modified, Salt, Glycine, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.7, 0.05), 919, 78),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Target's panel is a superseded formula for this barcode listing turkey, soy protein concentrate, artificial flavor and added color. Purina's current page links deck D700222, which has none of them and adds glycine. The deck is stored.",
+  },
+  "050000426447": {
+    ingredients: `Poultry Broth, Turkey, Liver, Wheat Gluten, Meat By-Products, Chicken, Soy Flour, Corn Starch-Modified, Salt, Glycine, Tricalcium Phosphate, Natural Flavor, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, ${V}.`,
+    analysis: withCalories(ga(11.0, 2.0, 1.5, 78.0, 2.7, 0.05), 917, 78),
+    verifiedAt: VERIFIED_014,
+  },
+
+  // ── Fancy Feast · Senior 7+ ────────────────────────────────────────────
+  //
+  // 0.07% taurine on both — the kitten figure, not the 0.05 the adult ranges
+  // state. Second time a higher taurine guarantee has turned up outside a
+  // kitten food, so it really is not a life-stage marker.
+  "050000503827": {
+    ingredients: `Chicken, Fish, Meat By-Products, Liver, Chicken Broth, Artificial And Natural Flavors, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_E_FIRST_A_MID}.`,
+    analysis: withCalories(ga(11.0, 5.0, 1.5, 78.0, 3.25, 0.07), 1128, 95),
+    verifiedAt: VERIFIED_014,
+    conflict: "Also guarantees a minimum Vitamin E of 40 IU/kg, which is not stored: `GuaranteedAnalysis` holds six percentages and has no room for a figure in IU/kg. Same shape as the kitten calcium minimum — see docs/CATALOG-CONFLICTS.md section D — and the same fix, since the consumer app drops keys it does not recognise when it reads a panel back.",
+  },
+  "050000503841": {
+    ingredients: `Beef, Fish, Meat By-Products, Liver, Beef Broth, Chicken, Artificial And Natural Flavors, Guar Gum, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_E_FIRST_A_MID}.`,
+    analysis: withCalories(ga(11.5, 5.0, 1.5, 78.0, 3.25, 0.07), 1082, 91),
+    verifiedAt: VERIFIED_014,
+    conflict: "Also guarantees a minimum Vitamin E of 40 IU/kg, which is not stored: `GuaranteedAnalysis` holds six percentages and has no room for a figure in IU/kg. Same shape as the kitten calcium minimum — see docs/CATALOG-CONFLICTS.md section D — and the same fix, since the consumer app drops keys it does not recognise when it reads a panel back.",
+  },
+
+  // ── Friskies · Indoor (continued) ──────────────────────────────────────
+  "050000574070": {
+    ingredients: `Water, Turkey, Wheat Gluten, Meat By-Products, Rice, Liver, Chicken, Powdered Cellulose, Corn Starch-Modified, Spinach, Artificial And Natural Flavors, Soy Flour, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Taurine, Choline Chloride, Salt, ${V_PATE}.`,
+    analysis: withCalories(ga(9.0, 2.0, 2.75, 78.0, 2.5, 0.05), 886, 138),
+    verifiedAt: VERIFIED_014,
+    conflict:
+      "Purina's live widget and Target's panel both still show added color and 2.3% maximum fibre. Purina's live page links September 2024 deck I608623, which omits the colour and prints 2.75%. The deck is stored. Fourth Friskies Indoor product to supersede a coloured formula from the same reformulation.",
   },
 };

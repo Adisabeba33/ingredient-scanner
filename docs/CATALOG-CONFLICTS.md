@@ -18,7 +18,7 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-13, after batch 013. 150 products, 42 with a conflict
+Last updated: 2026-08-14, after batch 014. 160 products, 50 with a conflict
 note, 10 of those needing a physical pack.
 
 ---
@@ -139,7 +139,7 @@ the deck's is stored.
 
 ---
 
-## B. Settled at the desk — an older record against a current deck (31)
+## B. Settled at the desk — an older record against a current deck (37)
 
 No shop trip needed. A retailer or an archived copy carries a formula the
 manufacturer has since replaced; the current deck wins by rule 1, and the note
@@ -252,7 +252,7 @@ Inventing the specific name to match a webpage would be writing the label.
 
 **Where this came from:** batch 011.
 
-### B9. A deck's wording against the same maker's webpage (4)
+### B9. A deck's wording against the same maker's webpage (5)
 
 The pattern that arrived in bulk with batch 012: Purina's own site presents an
 ingredient list that differs from the deck it links to. Rule 1 settles all four
@@ -266,6 +266,7 @@ them are not that.
 | `050000292639` | Gravy Lovers — Chicken & Beef, 3 oz | **Chicken and Beef Broth** (one entry) | Chicken Broth, Beef Broth (two) |
 | `050000292615` | Gravy Lovers — Chicken Hearts & Liver, 3 oz | deck C702622 | minor differences incl. the mineral block |
 | `050000434640` | Sliced — Chicken Hearts & Liver, 3 oz | deck E700322 | minor wording and mineral-list differences |
+| `050000428748` | Fancy Feast Flaked — Fish & Shrimp Feast, 3 oz | **Vegetable Oil** (deck D690120) | Vegetable Glycerin |
 
 **Not minor, the first one.** Glycerin is a humectant and oil is a fat; a
 proteinate is a chelated mineral and a sulfate is not. Those are four different
@@ -281,9 +282,18 @@ The other two the source itself described only as "minor", without listing
 what. Recorded anyway: *minor* is a judgement somebody made, and the next
 person to compare the two pages should know it was already looked at.
 
-**Where this came from:** batch 012.
+**The fifth is the glycerin fault again**, two batches and one brand later, and
+on that row Target agrees with the deck against Purina's own widget. That is
+what settles it: a single page showing the wrong ingredient is a bad page, and
+the same wrong ingredient appearing twice — while the retailer reads the deck
+correctly — is Purina's ingredient renderer substituting a term. Worth knowing
+before the next one, because the instinct on seeing one source disagree is to
+go looking for which source is stale, and here neither is: one of them is
+rewriting.
 
-### B10. One maker, two dated decks (5)
+**Where this came from:** batches 012 and 014.
+
+### B10. One maker, two dated decks (6)
 
 The batch that arrived through Deep Research rather than as a pasted document
 brought a kind we had seen singly and never in bulk: Purina's *own* older deck
@@ -299,14 +309,26 @@ maker are a sequence, not a contradiction — rule 1 — so none needs a pack.
 | `050000574124` | Friskies Indoor — Flaked Ocean Whitefish | I608318 | **J608323** | lost added color and Red 3; spinach moved after the meat by-products; fibre 2.2 → 2.6% |
 | `050000293292` | Friskies Extra Gravy — Chunky With Chicken | B626618 | **C626622** | list no longer opens Water, Liver, Meat By-Products; lost poultry and added color; 822 → 818 kcal/kg |
 | `050000293353` | Friskies Extra Gravy — Chunky With Turkey | Target's live panel | **C626822** | Target still shows added color and mono/dicalcium phosphate; Purina's page says no artificial colours and links a deck with neither |
+| `050000574070` | Friskies Indoor — Meaty Bits Homestyle Turkey Dinner | Purina's widget and Target's panel | **I608623** (Sept 2024) | lost added color; fibre 2.3 → 2.75% |
 
-**Three of the five lost an artificial colour.** Read against A1 — where four
-Medleys decks still *list* Added Color and Red 3 against a page that denies
-them — this is the same reformulation reaching different ranges at different
-times, and it is decent evidence that the Medleys decks really are the stale
-ones. Not proof. Still worth a pack.
+**Every row here lost an artificial colour.** Read against A1 — where four Medleys decks still *list* Added Color and Red 3
+against a page that denies them — this is the same reformulation reaching
+different ranges at different times, and it is decent evidence that the Medleys
+decks really are the stale ones. Not proof. Still worth a pack.
 
-**Where this came from:** batch 013, promoted from
+**Four of the five Friskies Indoor products we hold are in this table**, which
+changes what the next Indoor product means. One is coincidence; a range moving
+together is a reformulation with a date on it, so an Indoor panel still showing
+added color should be assumed superseded and checked against Purina's current
+deck, rather than filed as a fresh disagreement. The fibre figure moves with the
+colour every time — 2.2–2.3% up to 2.6–2.75% — which gives a second, independent
+tell on a retailer panel that does not print its deck code.
+
+(The fifth, `050000574001` Indoor Pâté Chicken Dinner, has no conflict note at
+all. That is not evidence it escaped the reformulation — only that no source we
+saw disagreed about it.)
+
+**Where this came from:** batches 013 and 014, promoted from
 `research/deep-research-barcodes.json`.
 
 ### B11. A website that links the right deck from the wrong page (1)
@@ -322,6 +344,37 @@ format. Stored on the deck's own wording.
 **A navigation fault on a website is not evidence about a tin.** Worth its own
 entry because it is the first conflict here that is about a link rather than
 about a list, and the next one will be easier to recognise.
+
+### B12. A retailer's panel is a superseded formula (4)
+
+B10 is two dated decks from one maker. This is the commoner and weaker version:
+a retailer's panel carries a formula the maker has replaced, and only the
+current deck is dated. The verdict is the same by rule 1 — the retailer is not
+publishing artwork — but the older formula is written out here, because a
+retailer panel is what a shopper is most likely to have read before scanning.
+
+| UPC | Product | What Target still shows | Stored (current deck) |
+|---|---|---|---|
+| `050000427949` | Fancy Feast Flaked — Chicken & Tuna Feast, 3 oz | 78% max moisture | 74% (D690021) |
+| `050000001248` | Fancy Feast Flaked — Tuna Feast, 3 oz | soy protein concentrate, artificial flavor, added color, **sodium nitrite**; 78% moisture, 3.5% ash | none of those; 74% and 3.25% (D690521) |
+| `050000426942` | Fancy Feast Chunky — Chunky Chicken Feast, 3 oz | soy protein concentrate, added color | neither; glycine and magnesium proteinate instead (E665022) |
+| `050000032648` | Fancy Feast Sliced — Sliced Chicken Feast in Gravy, 3 oz | turkey, soy protein concentrate, artificial flavor, added color | none of those; glycine added (D700222) |
+
+**The sodium nitrite is the one to notice.** It is a curing salt, and somebody
+who avoids it would want to know it left rather than to find it absent and
+assume they misremembered. It is also the only ingredient in this file whose
+removal a reader might not believe without being told.
+
+**The moisture row is here on its own merits, not as a rounding.** Four points
+of water is not a transcription slip, and moisture is the divisor for every
+dry-matter figure the consumer app derives: at 78% the dry matter is 22% of the
+tin and at 74% it is 26%, so a 10% protein guarantee reads as 45% dry-matter
+protein on the retailer's number and 38% on the deck's — about 18% apart, off a
+difference that looks like nothing. A figure that only *looks* like a small
+difference is
+worth an entry precisely because it will not look worth one next time.
+
+**Where this came from:** batch 014.
 
 ---
 
@@ -401,14 +454,47 @@ it. Every kitten batch from here will add to the list.
 ### D2. Life stage — done, batch 009
 
 Recorded for completeness because it was open for three batches. `lifeStage?:
-"kitten" | "adult" | "all"` now exists on `KnownProduct`. It is optional and
-absent means the deck stated none; reading "adult" out of silence would turn an
-absence into a claim.
+"kitten" | "adult" | "senior" | "all"` now exists on `KnownProduct`. It is
+optional and absent means the deck stated none; reading "adult" out of silence
+would turn an absence into a claim.
 
 The two cases that made a field necessary rather than a naming convention:
 Gourmet Naturals sells a kitten paté inside an otherwise adult range, and
 Friskies Shreds Whitefish & Sardines (`050000579907`) is approved for kitten
 growth *and* adult maintenance in a range where everything else is adult.
+
+**`senior` was added in batch 014 and is a different kind of value.** AAFCO
+recognises growth, maintenance and all-life-stages — there is no senior
+category, and a Senior 7+ tin states *maintenance* on its own panel. So the
+field is recording the range printed on the front, not a nutritional claim
+anybody made. That is worth having: a shopper looking at a Senior 7+ can is
+choosing it for the age on the label. But it is the one value here not backed by
+an AAFCO statement, so a test pins it to the range that prints it.
+
+### D3. Vitamin E in IU/kg — 2 products, unresolved
+
+Two Senior 7+ decks guarantee **Vitamin E (min) 40 IU/kg** and it is not stored:
+
+- `050000503827` Fancy Feast Senior 7+ — Chicken Feast Classic Pâté
+- `050000503841` Fancy Feast Senior 7+ — Beef Feast Classic Pâté
+
+The same shape as D1 and the same two-repo fix, with one extra problem that D1
+does not have: **the unit is not a percentage.** `GuaranteedAnalysis` holds six
+figures that are all percentages of the tin, and every consumer of it — the
+dry-matter conversion, the panel, the comparison — assumes that. 40 IU/kg is a
+count of activity units per kilogram, and there is no conversion to a percentage
+that does not invent an assumption, because IU is defined against a reference
+compound rather than a mass.
+
+So adding it is not adding a seventh percentage. It needs a field that carries
+its own unit, and the dry-matter column has to leave it alone rather than divide
+it by 0.26 — which is exactly the sort of thing that happens quietly if the
+figure is stored as a bare number next to six that behave differently.
+
+**Worth doing anyway, together with D1.** Both are guarantees on packs sold for
+a life stage: calcium on kitten food, vitamin E on senior food. They are the
+figures a buyer chose that pack for, and dropping them silently is worse on
+these two ranges than anywhere else in the catalog.
 
 ---
 

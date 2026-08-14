@@ -320,16 +320,16 @@ describe("data/known-formulas.ts", () => {
     }
   });
 
-  // The field says what a deck said, never what a name suggests. "Kitten" in a
-  // product's own words is the one place it may be inferred from — that is the
-  // range name on the front — and everywhere else it has to come from an AAFCO
+  // The field says what a deck said, never what a name suggests. A range name
+  // on the front of the pack — "Kitten", "Senior 7+" — is the one place it may
+  // be inferred from, and everywhere else it has to come from an AAFCO
   // statement somebody actually read.
   it("claims a life stage only where one was stated", () => {
     const stated = KNOWN_PRODUCTS.filter((p) => p.lifeStage !== undefined);
     for (const p of stated) {
       expect({
         name: `${p.line} ${p.variant}`,
-        ok: ["kitten", "adult", "all"].includes(p.lifeStage as string),
+        ok: ["kitten", "adult", "senior", "all"].includes(p.lifeStage as string),
       }).toEqual({ name: `${p.line} ${p.variant}`, ok: true });
     }
     // And the two that are neither plain adult nor plain kitten are still here:
@@ -340,6 +340,25 @@ describe("data/known-formulas.ts", () => {
         (p) => p.lifeStage === "kitten" && p.line !== "Kitten"
       )
     ).toBe(true);
+  });
+
+  // `senior` is the one value with no AAFCO wording behind it: AAFCO recognises
+  // growth, maintenance and all-life-stages, and nothing else. A Senior 7+ tin
+  // states maintenance on its panel and "7+" on its front, so the field is
+  // recording the range, not the nutritional claim.
+  //
+  // That is fine as long as it stays tied to the range that prints it. Set
+  // `senior` on a tin whose front does not say so and the field has quietly
+  // become a guess about an animal's age — which is not a thing any deck says.
+  it("sets senior only on the range whose front says so", () => {
+    const seniors = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "senior");
+    expect(seniors.length).toBeGreaterThan(0);
+    for (const p of seniors) {
+      expect({ name: p.variant, line: p.line }).toEqual({
+        name: p.variant,
+        line: "Senior 7+",
+      });
+    }
   });
 
   // A Gems box holds two 2 oz mousses and the deck states calories per GEM.

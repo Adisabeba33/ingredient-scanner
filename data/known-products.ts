@@ -104,8 +104,13 @@ export interface KnownProduct {
    * Getting this wrong is not cosmetic. A kitten food fed as an adult food is
    * a real mistake, and it is the sort a catalog quietly causes by having
    * nowhere to put the distinction.
+   *
+   * `senior` arrived with Fancy Feast Senior 7+, which — like Fancy Feast
+   * Kitten — puts the stage in the range name. It is a field value anyway: the
+   * next senior formula to turn up inside an otherwise adult range will need
+   * somewhere to go, and that is exactly how the kitten case went.
    */
-  lifeStage?: "kitten" | "adult" | "all";
+  lifeStage?: "kitten" | "adult" | "senior" | "all";
   packages: KnownPackage[];
 }
 
@@ -2095,5 +2100,152 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["turkey", "chicken"],
     lifeStage: "adult",
     packages: [{ size: "5.5 oz", container: CAN, upc: "050000582334", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Flaked (continued) ───────────────────────────────────
+  //
+  // Four more, taking the range from one product to five. Three of the four are
+  // all-life-stages decks at 14% minimum protein and 74% moisture — the driest
+  // and most protein-dense wet panels in the file, which is what flaked fish
+  // packed in broth actually is.
+  {
+    brand: "Fancy Feast",
+    line: "Flaked",
+    variant: "Chicken & Tuna Feast",
+    species: "cat",
+    texture: "flaked",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "tuna"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000427949", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Flaked",
+    // The shortest deck in the seed: seven ingredients before the vitamins,
+    // and the only one whose iron is ferric pyrophosphate rather than ferrous
+    // sulfate.
+    variant: "Fish & Shrimp Feast",
+    species: "cat",
+    texture: "flaked",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish", "shrimp"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000428748", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Flaked",
+    variant: "Trout Feast",
+    species: "cat",
+    texture: "flaked",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["trout"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000428847", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Flaked",
+    variant: "Tuna Feast",
+    species: "cat",
+    texture: "flaked",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000001248", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Chunky ───────────────────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Chunky",
+    variant: "Chunky Chicken Feast",
+    species: "cat",
+    texture: "chunks",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000426942", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Sliced (continued) ───────────────────────────────────
+  {
+    brand: "Fancy Feast",
+    line: "Sliced",
+    variant: "Sliced Chicken Feast in Gravy",
+    species: "cat",
+    texture: "slices",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000032648", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Sliced",
+    variant: "Sliced Turkey Feast in Gravy",
+    species: "cat",
+    texture: "slices",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000426447", scope: UNIT }],
+  },
+
+  // ── Fancy Feast · Senior 7+ ────────────────────────────────────────────
+  //
+  // The first senior range in the seed, and the reason `lifeStage` gained a
+  // fourth value. Like Fancy Feast Kitten it carries the stage in its range
+  // name — and like the kitten paté that turned up inside Gourmet Naturals,
+  // the next senior formula in an ordinary range will need the field.
+  //
+  // Both decks guarantee 0.07% taurine, the kitten figure rather than the 0.05
+  // the adult ranges state, and both add a minimum Vitamin E in IU/kg that the
+  // panel type cannot hold. See the notes in data/known-formulas.ts.
+  {
+    brand: "Fancy Feast",
+    line: "Senior 7+",
+    variant: "Chicken Feast Classic Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503827", scope: UNIT }],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Senior 7+",
+    variant: "Beef Feast Classic Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "senior",
+    packages: [{ size: "3 oz", container: CAN, upc: "050000503841", scope: UNIT }],
+  },
+
+  // ── Friskies · Indoor (continued) ──────────────────────────────────────
+  {
+    brand: "Friskies",
+    line: "Indoor",
+    variant: "Meaty Bits Homestyle Turkey Dinner With Garden Greens in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey", "rice", "spinach"],
+    lifeStage: "adult",
+    packages: [{ size: "5.5 oz", container: CAN, upc: "050000574070", scope: UNIT }],
   },
 ];

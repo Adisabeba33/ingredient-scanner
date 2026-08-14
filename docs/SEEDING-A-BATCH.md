@@ -4,7 +4,7 @@ How a document of pet food products, pasted into a chat, becomes rows a shopper
 can scan. Written so somebody picking this up in a new conversation can do the
 next batch without being told any of it twice.
 
-Thirteen batches, 150 products and 150 formulas have gone through this. Everything
+Fourteen batches, 160 products and 160 formulas have gone through this. Everything
 below is what was actually done, including the parts that were got wrong first.
 
 ---
@@ -59,7 +59,7 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 150 have one.
+to go and find, and the import steps over it. Right now all 160 have one.
 
 ---
 
