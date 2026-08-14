@@ -2446,6 +2446,1226 @@
         "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 171,
+      "upc": "050000580743",
+      "canonical_gtin14": "00050000580743",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Dry",
+      "product_name": "Fancy Feast With Ocean Fish & Salmon and Accents of Garden Greens Gourmet Cat Food",
+      "variant": "With Ocean Fish & Salmon and Accents of Garden Greens",
+      "recipe": [
+        "ocean fish",
+        "salmon",
+        "spinach",
+        "parsley"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, ocean fish, salmon, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, dried spinach, parsley flakes, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Rice",
+        "poultry by-product meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "natural flavor",
+        "ocean fish",
+        "salmon",
+        "dried yeast",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "dried spinach",
+        "parsley flakes",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3961,
+        "kcal_per_unit": 519,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G650224",
+      "formula_source": "Purina official product label deck G650224",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/6502-g650224_ff_oceanfish_salmon_accents_gard_greens_gour_cat_dk8.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-ocean-fish-salmon-dry-cat-food",
+        "https://www.target.com/p/-/A-81435608"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, a 12 lb bag, and explicitly prints UPC 050000580743 for Fancy Feast Ocean Fish & Salmon.",
+      "conflicts": [
+        "Some retailer panels still expose the legacy colored formula with corn gluten meal and Blue/Yellow/Red dyes. Purina's current product page links October 2024 deck G650224, which uses corn protein meal and prints no artificial colors; the current official deck is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058074 requires check digit 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580743.",
+        "The barcode evidence identifies one 12 lb bag; no case or multipack code was substituted.",
+        "Current official deck G650224 provides the complete ingredient order, guaranteed analysis, 3961 kcal/kg, 519 kcal/cup, manufacturer, and all-life-stages AAFCO statement.",
+        "Ash and taurine guarantees are not printed in the deck's guaranteed analysis and are stored as null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 172,
+      "upc": "050000660681",
+      "canonical_gtin14": "00050000660681",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "Fancy Feast Kitten With Savory Chicken & Turkey Gourmet Kitten Food",
+      "variant": "With Savory Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey",
+        "milk"
+      ],
+      "life_stage": "kitten",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3 lb",
+      "ingredients_verbatim": "Poultry by-product meal, rice, corn protein meal, animal fat preserved with mixed-tocopherols, whole grain corn, soybean meal, chicken, turkey, liver flavor, phosphoric acid, dried yeast, calcium carbonate, salt, natural flavor, potassium chloride, fish oil, dried whole milk, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Poultry by-product meal",
+        "rice",
+        "corn protein meal",
+        "animal fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "chicken",
+        "turkey",
+        "liver flavor",
+        "phosphoric acid",
+        "dried yeast",
+        "calcium carbonate",
+        "salt",
+        "natural flavor",
+        "potassium chloride",
+        "fish oil",
+        "dried whole milk",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 35,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3970,
+        "kcal_per_unit": 457,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "B512723",
+      "formula_source": "Purina official product label deck B512723 (June 2024)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-06/5127-b512723-fancy-feast-kitten-w-savory-chicken-turkey-kitten-food-dry-ae4.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-kitten-chicken-turkey-dry-cat-food",
+        "https://www.thefreshgrocer.com/sm/planning/rsid/456/product/purina-fancy-feast-100-complete-%26-balanced-gourmet-kitten-food-with-savory-chicken-%26-turkey-48-oz-id-00050000660681",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/37563757-purina-fancy-feast-kitten-with-savory-chicken-and-turkey-kitten-dry-food-3-lb"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "The Fresh Grocer and Woodman's identify one 3 lb bag and print GTIN-14 00050000660681. Removing the two standard GTIN padding zeros yields UPC-A 050000660681.",
+      "conflicts": [
+        "Some retailer panels still expose the prior A512722 formula with chicken by-product meal, corn gluten meal, beef fat, and a different vitamin order. Purina's current product page links deck B512723, which is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000066068 requires check digit 1.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000660681.",
+        "The barcode evidence identifies one 3 lb bag; no case or multipack code was substituted.",
+        "Current official deck B512723 provides the complete ingredient order, guaranteed analysis, 3970 kcal/kg and 457 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "DHA, calcium, phosphorus, and taurine guarantees are captured; the deck's growth-of-kittens AAFCO statement supports life_stage=kitten."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 173,
+      "upc": "050000660667",
+      "canonical_gtin14": "00050000660667",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "Fancy Feast Kitten With Savory Chicken & Turkey Gourmet Kitten Food",
+      "variant": "With Savory Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey",
+        "milk"
+      ],
+      "life_stage": "kitten",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "7 lb",
+      "ingredients_verbatim": "Poultry by-product meal, rice, corn protein meal, animal fat preserved with mixed-tocopherols, whole grain corn, soybean meal, chicken, turkey, liver flavor, phosphoric acid, dried yeast, calcium carbonate, salt, natural flavor, potassium chloride, fish oil, dried whole milk, choline chloride, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.",
+      "ingredients_ordered_normalized": [
+        "Poultry by-product meal",
+        "rice",
+        "corn protein meal",
+        "animal fat preserved with mixed-tocopherols",
+        "whole grain corn",
+        "soybean meal",
+        "chicken",
+        "turkey",
+        "liver flavor",
+        "phosphoric acid",
+        "dried yeast",
+        "calcium carbonate",
+        "salt",
+        "natural flavor",
+        "potassium chloride",
+        "fish oil",
+        "dried whole milk",
+        "choline chloride",
+        "glycine",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "DL-Methionine",
+        "VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 35,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3970,
+        "kcal_per_unit": 457,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "B512723",
+      "formula_source": "Purina official product label deck B512723 (June 2024)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-06/5127-b512723-fancy-feast-kitten-w-savory-chicken-turkey-kitten-food-dry-ae4.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-kitten-chicken-turkey-dry-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/38576997-purina-fancy-feast-kitten-with-savory-chicken-and-turkey-kitten-dry-food-7-lb"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Woodman's identifies the 7 lb retail bag and prints GTIN-14 00050000660667. Removing the two standard GTIN padding zeros yields UPC-A 050000660667.",
+      "conflicts": [
+        "Some retailer panels still expose the prior A512722 formula with chicken by-product meal, corn gluten meal, beef fat, and a different vitamin order. Purina's current product page links deck B512723, which is stored here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000066066 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000660667.",
+        "The barcode evidence identifies one 7 lb bag; no case or multipack code was substituted.",
+        "Current official deck B512723 provides the complete ingredient order, guaranteed analysis, 3970 kcal/kg and 457 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "DHA, calcium, phosphorus, and taurine guarantees are captured; the deck's growth-of-kittens AAFCO statement supports life_stage=kitten."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 174,
+      "upc": "050000015474",
+      "canonical_gtin14": "00050000015474",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Seafood Sensations Salmon, Tuna, Shrimp & Seaweed Flavors Cat Food",
+      "variant": "Salmon, Tuna, Shrimp & Seaweed Flavors",
+      "recipe": [
+        "salmon",
+        "tuna",
+        "shrimp",
+        "seaweed",
+        "ocean fish"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3.15 lb",
+      "ingredients_verbatim": "Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "corn protein meal",
+        "poultry by-product meal",
+        "soybean meal",
+        "animal fat preserved with mixed-tocopherols",
+        "meat and bone meal",
+        "liver flavor",
+        "ocean fish meal",
+        "phosphoric acid",
+        "salt",
+        "calcium carbonate",
+        "choline chloride",
+        "dehydrated seaweed meal",
+        "salmon meal",
+        "shrimp meal",
+        "tuna meal",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Blue 2",
+        "Yellow 5"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3631,
+        "kcal_per_unit": 392,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "K600323",
+      "formula_source": "Purina official product label deck K600323 (May 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/6003_k600323_friskies_seafood_sensations_dry_cat_food_012.pdf",
+        "https://www.purina.com/cats/shop/friskies-seafood-sensations-dry-cat-food",
+        "https://www.target.com/p/-/A-14911293"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, net weight 3.15 lb, and explicitly prints UPC 050000015474 for Friskies Seafood Sensations.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000001547 requires check digit 4.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000015474.",
+        "The barcode evidence identifies one 3.15 lb bag; no case or multipack code was substituted.",
+        "Current official deck K600323 provides the complete ingredient order, guaranteed analysis, 3631 kcal/kg and 392 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 175,
+      "upc": "050000575770",
+      "canonical_gtin14": "00050000575770",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Seafood Sensations Salmon, Tuna, Shrimp & Seaweed Flavors Cat Food",
+      "variant": "Salmon, Tuna, Shrimp & Seaweed Flavors",
+      "recipe": [
+        "salmon",
+        "tuna",
+        "shrimp",
+        "seaweed",
+        "ocean fish"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "16 lb",
+      "ingredients_verbatim": "Ground yellow corn, corn protein meal, poultry by-product meal, soybean meal, animal fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, choline chloride, dehydrated seaweed meal, salmon meal, shrimp meal, tuna meal, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Blue 2, Yellow 5.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "corn protein meal",
+        "poultry by-product meal",
+        "soybean meal",
+        "animal fat preserved with mixed-tocopherols",
+        "meat and bone meal",
+        "liver flavor",
+        "ocean fish meal",
+        "phosphoric acid",
+        "salt",
+        "calcium carbonate",
+        "choline chloride",
+        "dehydrated seaweed meal",
+        "salmon meal",
+        "shrimp meal",
+        "tuna meal",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Blue 2",
+        "Yellow 5"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3631,
+        "kcal_per_unit": 392,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "K600323",
+      "formula_source": "Purina official product label deck K600323 (May 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/6003_k600323_friskies_seafood_sensations_dry_cat_food_012.pdf",
+        "https://www.purina.com/cats/shop/friskies-seafood-sensations-dry-cat-food",
+        "https://www.target.com/p/purina-friskies-seafood-sensations-with-flavors-of-salmon-tuna-shrimp-38-seaweed-adult-complete-38-balanced-dry-cat-food-16lbs/-/A-14911292"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 16 lb bag and explicitly prints UPC 050000575770 for Friskies Seafood Sensations.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles currently present several ingredients in a different sequence than the linked label deck. The current official deck K600323 and Target label panel agree on the stored complete order."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057577 requires check digit 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000575770.",
+        "The barcode evidence identifies one 16 lb bag; no case or multipack code was substituted.",
+        "Current official deck K600323 provides the complete ingredient order, guaranteed analysis, 3631 kcal/kg and 392 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 176,
+      "upc": "050000100347",
+      "canonical_gtin14": "00050000100347",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Surfin' & Turfin' Favorites Chicken, Ocean Whitefish, Salmon & Filet Mignon Flavors Cat Food",
+      "variant": "Chicken, Ocean Whitefish, Salmon & Filet Mignon Flavors",
+      "recipe": [
+        "chicken",
+        "ocean whitefish",
+        "salmon",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3.15 lb",
+      "ingredients_verbatim": "Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "chicken by-product meal",
+        "soybean meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "meat and bone meal",
+        "liver flavor",
+        "ocean fish meal",
+        "phosphoric acid",
+        "salt",
+        "calcium carbonate",
+        "salmon meal",
+        "choline chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "taurine",
+        "DL-Methionine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "natural filet mignon flavor",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3573,
+        "kcal_per_unit": 392,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "N600123",
+      "formula_source": "Purina official product label deck N600123 (May 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/6001_n600123_friskies_surfin_turfin_favorites_dry_cat_food_vp8.pdf",
+        "https://www.purina.com/cats/shop/friskies-surfin-turfin-favorites-dry-cat-food",
+        "https://www.target.com/p/-/A-52692906"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, size 3.15 lb, and explicitly prints UPC 050000100347 for Friskies Surfin' & Turfin' Favorites.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000010034 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000100347.",
+        "The barcode evidence identifies one 3.15 lb bag; no case or multipack code was substituted.",
+        "Current official deck N600123 provides the complete ingredient order, guaranteed analysis, 3573 kcal/kg and 392 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 177,
+      "upc": "050000576692",
+      "canonical_gtin14": "00050000576692",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Surfin' & Turfin' Favorites Chicken, Ocean Whitefish, Salmon & Filet Mignon Flavors Cat Food",
+      "variant": "Chicken, Ocean Whitefish, Salmon & Filet Mignon Flavors",
+      "recipe": [
+        "chicken",
+        "ocean whitefish",
+        "salmon",
+        "filet mignon flavor"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "16 lb",
+      "ingredients_verbatim": "Ground yellow corn, chicken by-product meal, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, meat and bone meal, liver flavor, ocean fish meal, phosphoric acid, salt, calcium carbonate, salmon meal, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, taurine, DL-Methionine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], natural filet mignon flavor, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "chicken by-product meal",
+        "soybean meal",
+        "corn protein meal",
+        "beef fat preserved with mixed-tocopherols",
+        "meat and bone meal",
+        "liver flavor",
+        "ocean fish meal",
+        "phosphoric acid",
+        "salt",
+        "calcium carbonate",
+        "salmon meal",
+        "choline chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "taurine",
+        "DL-Methionine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)]",
+        "natural filet mignon flavor",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3573,
+        "kcal_per_unit": 392,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "N600123",
+      "formula_source": "Purina official product label deck N600123 (May 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/6001_n600123_friskies_surfin_turfin_favorites_dry_cat_food_vp8.pdf",
+        "https://www.purina.com/cats/shop/friskies-surfin-turfin-favorites-dry-cat-food",
+        "https://www.target.com/p/-/A-14695622"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies one 16 lb bag and explicitly prints UPC 050000576692 for Friskies Surfin' & Turfin' Favorites.",
+      "conflicts": [
+        "Purina's HTML ingredient tiles currently present phosphoric acid and calcium carbonate in a different sequence than the linked label deck. The current official deck N600123 and Target label panel agree on the stored complete order."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057669 requires check digit 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000576692.",
+        "The barcode evidence identifies one 16 lb bag; no case or multipack code was substituted.",
+        "Current official deck N600123 provides the complete ingredient order, guaranteed analysis, 3573 kcal/kg and 392 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 178,
+      "upc": "050000168583",
+      "canonical_gtin14": "00050000168583",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Gravy Swirlers Flavors of Chicken, Salmon & Gravy Cat Food",
+      "variant": "Flavors of Chicken, Salmon & Gravy",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "gravy"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "3.15 lb",
+      "ingredients_verbatim": "Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "corn protein meal",
+        "chicken by-product meal",
+        "soybean meal",
+        "animal fat preserved with mixed tocopherols",
+        "wheat flour",
+        "meat and bone meal",
+        "animal liver flavor",
+        "fish meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salmon meal",
+        "artificial and natural flavors",
+        "dried chicken flavored gravy",
+        "salt",
+        "choline chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3635,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "E600725",
+      "formula_source": "Purina official product label deck E600725 (October 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/6007_e600725_friskies_gravy_swirlers_dry_cat_food_fs1.pdf",
+        "https://www.purina.com/cats/shop/friskies-gravy-swirld-chicken-salmon-gravy-dry-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/17341005-friskies-dry-cat-food-gravy-swirlers-3-15-lb",
+        "https://www.kroger.com/p/purina-gravy-swirlers-adult-dry-cat-food-chicken-salmon-gravy-flavors/0005000016858"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Woodman's identifies one 3.15 lb bag and prints GTIN-14 00050000168583, equivalent to UPC-A 050000168583. Kroger independently identifies the same size and exposes the corresponding item body.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000016858 requires check digit 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000168583.",
+        "The barcode evidence identifies one 3.15 lb bag; no case or multipack code was substituted.",
+        "Current official deck E600725 provides the complete ingredient order, guaranteed analysis, 3635 kcal/kg and 405 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 179,
+      "upc": "050000168620",
+      "canonical_gtin14": "00050000168620",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Gravy Swirlers Flavors of Chicken, Salmon & Gravy Cat Food",
+      "variant": "Flavors of Chicken, Salmon & Gravy",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "gravy"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "16 lb",
+      "ingredients_verbatim": "Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "corn protein meal",
+        "chicken by-product meal",
+        "soybean meal",
+        "animal fat preserved with mixed tocopherols",
+        "wheat flour",
+        "meat and bone meal",
+        "animal liver flavor",
+        "fish meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salmon meal",
+        "artificial and natural flavors",
+        "dried chicken flavored gravy",
+        "salt",
+        "choline chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3635,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "E600725",
+      "formula_source": "Purina official product label deck E600725 (October 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/6007_e600725_friskies_gravy_swirlers_dry_cat_food_fs1.pdf",
+        "https://www.purina.com/cats/shop/friskies-gravy-swirld-chicken-salmon-gravy-dry-cat-food",
+        "https://www.target.com/p/-/A-52112960",
+        "https://www.kroger.com/p/purina-gravy-swirlers-adult-dry-cat-food-chicken-salmon-gravy-flavors/0005000016862"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Target identifies package quantity 1, a 16 lb bag, and explicitly prints UPC 050000168620. Kroger independently identifies the same retail size and corresponding item body.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000016862 requires check digit 0.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000168620.",
+        "The barcode evidence identifies one 16 lb bag; no case or multipack code was substituted.",
+        "Current official deck E600725 provides the complete ingredient order, guaranteed analysis, 3635 kcal/kg and 405 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": 180,
+      "upc": "050000172559",
+      "canonical_gtin14": "00050000172559",
+      "barcode_scope": "individual_unit",
+      "brand": "Friskies",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Dry Cat Food",
+      "product_name": "Friskies Gravy Swirlers Flavors of Chicken, Salmon & Gravy Cat Food",
+      "variant": "Flavors of Chicken, Salmon & Gravy",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "gravy"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": null,
+      "package_type": "bag",
+      "size": "22 lb",
+      "ingredients_verbatim": "Ground yellow corn, corn protein meal, chicken by-product meal, soybean meal, animal fat preserved with mixed tocopherols, wheat flour, meat and bone meal, animal liver flavor, fish meal, phosphoric acid, calcium carbonate, salmon meal, artificial and natural flavors, dried chicken flavored gravy, salt, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride, DL-Methionine, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Tryptophan, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [
+        "Ground yellow corn",
+        "corn protein meal",
+        "chicken by-product meal",
+        "soybean meal",
+        "animal fat preserved with mixed tocopherols",
+        "wheat flour",
+        "meat and bone meal",
+        "animal liver flavor",
+        "fish meal",
+        "phosphoric acid",
+        "calcium carbonate",
+        "salmon meal",
+        "artificial and natural flavors",
+        "dried chicken flavored gravy",
+        "salt",
+        "choline chloride",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+        "potassium chloride",
+        "DL-Methionine",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 5",
+        "Blue 2"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.12,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Arachidonic Acid",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium (Ca)",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus (P)",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (Zn) [mg/kg]",
+            "basis": "min",
+            "value": 125,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Selenium (Se) [mg/kg]",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3635,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "E600725",
+      "formula_source": "Purina official product label deck E600725 (October 2025)",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/6007_e600725_friskies_gravy_swirlers_dry_cat_food_fs1.pdf",
+        "https://www.purina.com/cats/shop/friskies-gravy-swirld-chicken-salmon-gravy-dry-cat-food",
+        "https://www.ubuy.mv/dv/product/F5U6D4VI-purina-friskies-dry-cat-food-gravy-swirlers-22-lb-bag",
+        "https://www.ebay.com/itm/388882312078"
+      ],
+      "source_accessed_at": "2026-08-14",
+      "barcode_notes": "Ubuy identifies one 22 lb bag and explicitly prints UPC 050000172559 and GTIN-14 00050000172559. eBay independently prints the same GTIN/UPC for the 22 lb retail bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000017255 requires check digit 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000172559.",
+        "The barcode evidence identifies one 22 lb bag; no case or multipack code was substituted.",
+        "Current official deck E600725 provides the complete ingredient order, guaranteed analysis, 3635 kcal/kg and 405 kcal/cup, manufacturer, and nutritional-adequacy statement.",
+        "Ash is not printed in the deck's guaranteed analysis and is stored as null rather than inferred.",
+        "Linoleic acid, arachidonic acid, calcium, phosphorus, zinc, selenium, vitamins A and E, and taurine are all captured from the printed analysis."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }
