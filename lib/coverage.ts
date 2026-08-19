@@ -398,12 +398,20 @@ export function buildCoverage(
   // net weight — so a scanned code that was never seeded shows no size, which
   // is the honest answer rather than a blank that looks like a small pack.
   const packInfo = new Map<string, { printed: string; size: string | null }>();
+  // Which brand the seed says a code belongs to. The seed is CANONICAL about
+  // this: it was typed from the maker's own deck. A scanned row's brand string
+  // is one reading of one photograph, and Hill's is where the difference bit —
+  // a front that says only "Hill's" cannot say WHICH Hill's, so those rows
+  // were becoming their own unseeded "Hill's" card while the same barcode sat
+  // under Hill's Science Diet as still-to-find. One tin, two cards.
+  const seedBrandOf = new Map<string, string>();
   for (const item of known) {
     item.codes.forEach((code, i) => {
       packInfo.set(code, {
         printed: item.printedCodes[i] ?? code,
         size: item.sizes[i] ?? null,
       });
+      seedBrandOf.set(code, item.brand);
     });
   }
   const packFor = (code: string, scanned: boolean): CoveragePack => ({
@@ -434,7 +442,11 @@ export function buildCoverage(
   for (const identity of seededIdentities()) draftFor(identity);
 
   for (const row of byCode.values()) {
+    const seedBrand = seedBrandOf.get(row.code);
     const identity =
+      // Seed first, by barcode — see seedBrandOf above. Only then the row's
+      // own brand string, for codes the seed has never heard of.
+      (seedBrand ? brandIdentity(seedBrand) : null) ??
       brandIdentity(row.brands) ??
       // A real product with an unread brand. Its own bucket rather than
       // silently dropped: a row here means "go and look at this one".
@@ -445,6 +457,7 @@ export function buildCoverage(
         species: null,
         lines: [],
         seeded: false,
+        family: null,
       };
     const draft = draftFor(identity);
 

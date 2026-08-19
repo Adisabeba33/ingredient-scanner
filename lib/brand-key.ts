@@ -68,6 +68,8 @@ export interface BrandIdentity {
   lines: string[];
   /** Whether this brand was in the seed file, or arrived from a scan. */
   seeded: boolean;
+  /** The shelf-family, where several brands share a house name ("Hill's"). */
+  family: string | null;
 }
 
 /** The key a seeded brand is filed under: its own normalised name. */
@@ -156,6 +158,7 @@ export function brandIdentity(
       species: seed.species,
       lines: seed.lines ?? [],
       seeded: true,
+      family: seed.family ?? null,
     };
   }
   return {
@@ -168,6 +171,7 @@ export function brandIdentity(
     species: null,
     lines: [],
     seeded: false,
+    family: null,
   };
 }
 
@@ -185,6 +189,7 @@ export function seededIdentities(): BrandIdentity[] {
     species: brand.species,
     lines: brand.lines ?? [],
     seeded: true,
+    family: brand.family ?? null,
   }));
 }
 

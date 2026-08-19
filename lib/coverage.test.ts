@@ -510,3 +510,60 @@ describe("buildCoverage — packages and food form", () => {
     ]);
   });
 });
+
+describe("buildCoverage — the seed decides a barcode's brand", () => {
+  const sdItem: KnownItem = {
+    brand: "Hill's Science Diet",
+    line: "Adult 7+",
+    variant: "Savory Chicken Entrée",
+    species: "cat",
+    texture: "minced",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    codes: ["0042"],
+    printedCodes: ["42"],
+    sizes: ["5.5 oz"],
+  };
+
+  // The three-Hill's-cards screenshot. A capture whose front says only
+  // "Hill's" cannot say WHICH Hill's, so the row became its own unseeded card
+  // while the same barcode sat under Hill's Science Diet as still-to-find:
+  // one tin, two cards. The seed typed that code from the maker's own deck,
+  // so the seed decides the brand; the row's string is one reading of one
+  // photograph.
+  it("files a row captured as bare Hill's under the seeded brand", () => {
+    const out = buildCoverage(
+      [
+        source({
+          code: "0042",
+          brands: "Hill's",
+          productName: "Adult 7+ Savory Chicken Entrée",
+          foodForm: "wet",
+        }),
+      ],
+      [sdItem]
+    );
+    // No stray card…
+    expect(out.find((b) => b.name === "Hill's")).toBeUndefined();
+    // …and under the right brand it is ONE product, done — not a done copy
+    // beside a to-find copy.
+    const sd = out.find((b) => b.name === "Hill's Science Diet")!;
+    const items = sd.ranges.flatMap((r) => r.items);
+    expect(items).toHaveLength(1);
+    expect(items[0].state).toBe("filled");
+    expect(sd.known).toBe(0);
+  });
+
+  // A code the seed has never heard of keeps the brand it was captured with —
+  // the correction is scoped to what the seed actually knows.
+  it("leaves an unseeded code under its own captured brand", () => {
+    const out = buildCoverage(
+      [source({ code: "9999", brands: "Hill's", productName: "Mystery Stew" })],
+      [sdItem]
+    );
+    const stray = out.find((b) => b.name === "Hill's")!;
+    expect(stray.seeded).toBe(false);
+    expect(stray.filled).toBe(1);
+  });
+});

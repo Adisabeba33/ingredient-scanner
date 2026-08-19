@@ -48,6 +48,22 @@ export interface SeedBrand {
   species: "cat" | "dog" | "both";
   /** Other spellings that mean this same brand. */
   aliases?: string[];
+  /**
+   * The shelf-family this brand belongs to, where several of our brands share
+   * one house name.
+   *
+   * Hill's is the case that made this exist: Science Diet and Prescription
+   * Diet are deliberately separate brands — a shopper reads them as separate
+   * brands, and merging their identities would churn every stored composition
+   * key — but on the coverage page three cards all beginning "Hill's" read as
+   * clutter, and a row whose brand was captured as just "Hill's" has nowhere
+   * honest to go. The family gives the page one card to gather them under
+   * WITHOUT touching any product's identity.
+   *
+   * Set only where the shared name is real. Purina's brands stay separate:
+   * nobody reads "Friskies" and "Fancy Feast" as one shelf.
+   */
+  family?: string;
   /** Ranges within the brand. Flavours are NOT listed — see the note above. */
   lines?: string[];
 }
@@ -347,6 +363,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
   // ── Hill's Pet Nutrition (Colgate-Palmolive) ─────────────────────────────
   {
     name: "Hill's Science Diet",
+    family: "Hill's",
     owner: "Hill's (Colgate)",
     species: "both",
     aliases: ["science diet", "hills science diet", "hill s science diet"],
@@ -396,6 +413,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
   },
   {
     name: "Hill's Prescription Diet",
+    family: "Hill's",
     owner: "Hill's (Colgate)",
     species: "both",
     aliases: ["prescription diet", "hills prescription diet"],
@@ -426,7 +444,13 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Gastrointestinal Biome",
     ],
   },
-  { name: "Hill's Bioactive Recipe", owner: "Hill's (Colgate)", species: "dog", aliases: ["bioactive recipe"] },
+  {
+    name: "Hill's Bioactive Recipe",
+    owner: "Hill's (Colgate)",
+    species: "dog",
+    aliases: ["bioactive recipe"],
+    family: "Hill's",
+  },
 
   // ── General Mills ────────────────────────────────────────────────────────
   {

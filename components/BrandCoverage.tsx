@@ -22,7 +22,7 @@ import {
   type CoverageSort,
   type CoverageSource,
 } from "@/lib/coverage";
-import { brandMatchesQuery } from "@/lib/brand-key";
+import { brandKey, brandMatchesQuery } from "@/lib/brand-key";
 
 /**
  * What has been scanned, arranged by brand, so a shop trip stops repeating
@@ -94,6 +94,48 @@ const SPECIES: { value: SpeciesFilter; label: string }[] = [
   { value: "dog", label: "Dog" },
 ];
 
+/** One row of the brand list: a brand on its own, or a family gathered. */
+type ListEntry =
+  | { kind: "brand"; brand: CoverageBrand }
+  | { kind: "family"; name: string; members: CoverageBrand[] };
+
+/**
+ * Gather brands sharing a house name under one card.
+ *
+ * The family sits at its first member's sorted position and the members keep
+ * their order, so sorting still means what it says. A card whose own NAME is a
+ * family name joins too — that is the unseeded "Hill's" card a capture creates
+ * when a front says only "Hill's", for a barcode the seed does not hold; it
+ * belongs with its family, not beside it.
+ */
+function foldFamilies(list: CoverageBrand[]): ListEntry[] {
+  const familyByKey = new Map<string, string>();
+  for (const b of list) {
+    if (b.family) familyByKey.set(brandKey(b.family), b.family);
+  }
+  const familyOf = (b: CoverageBrand): string | null =>
+    b.family ?? familyByKey.get(brandKey(b.name)) ?? null;
+
+  const grouped = new Map<string, CoverageBrand[]>();
+  const out: ListEntry[] = [];
+  for (const b of list) {
+    const family = familyOf(b);
+    if (!family) {
+      out.push({ kind: "brand", brand: b });
+      continue;
+    }
+    const members = grouped.get(family);
+    if (members) {
+      members.push(b);
+      continue;
+    }
+    const fresh = [b];
+    grouped.set(family, fresh);
+    out.push({ kind: "family", name: family, members: fresh });
+  }
+  return out;
+}
+
 export function BrandCoverage({ adminToken }: { adminToken: string }) {
   const [payload, setPayload] = useState<Payload | null>(null);
   const [loading, setLoading] = useState(true);
@@ -106,6 +148,7 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
   const [sort, setSort] = useState<CoverageSort>("most");
   const [species, setSpecies] = useState<SpeciesFilter>("all");
   const [openBrand, setOpenBrand] = useState<string | null>(null);
+  const [openFamily, setOpenFamily] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -152,6 +195,7 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
     });
     return sortBrands(matching, sort);
   }, [brands, query, sort, species]);
+  const entries = useMemo(() => foldFamilies(visible), [visible]);
 
   const current = openBrand
     ? brands.find((b) => b.key === openBrand) ?? null
@@ -161,6 +205,24 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
     return (
       <BrandPage brand={current} onBack={() => setOpenBrand(null)} />
     );
+  }
+
+  if (openFamily) {
+    // From ALL brands, not the filtered list: a family opened from a search
+    // result should show its whole shelf, not the slice that matched.
+    const members = foldFamilies(brands).find(
+      (e): e is Extract<ListEntry, { kind: "family" }> =>
+        e.kind === "family" && e.name === openFamily
+    );
+    if (members) {
+      return (
+        <FamilyPage
+          name={openFamily}
+          members={members.members}
+          onBack={() => setOpenFamily(null)}
+        />
+      );
+    }
   }
 
   return (
@@ -273,14 +335,83 @@ export function BrandCoverage({ adminToken }: { adminToken: string }) {
         </p>
       ) : (
         <ul className="flex flex-col gap-1.5">
-          {visible.map((brand) => (
-            <li key={brand.key || "no-brand"}>
-              <BrandRow brand={brand} onOpen={() => setOpenBrand(brand.key)} />
-            </li>
-          ))}
+          {entries.map((entry) =>
+            entry.kind === "brand" ? (
+              <li key={entry.brand.key || "no-brand"}>
+                <BrandRow
+                  brand={entry.brand}
+                  onOpen={() => setOpenBrand(entry.brand.key)}
+                />
+              </li>
+            ) : (
+              <li key={`family:${entry.name}`}>
+                <FamilyRow
+                  name={entry.name}
+                  members={entry.members}
+                  onOpen={() => setOpenFamily(entry.name)}
+                />
+              </li>
+            )
+          )}
         </ul>
       )}
     </main>
+  );
+}
+
+/**
+ * A family's row: the house name once, the members' work summed.
+ *
+ * Same anatomy as BrandRow so the list reads as one list — the only tell is
+ * the member count where a brand row shows its owner.
+ */
+function FamilyRow({
+  name,
+  members,
+  onOpen,
+}: {
+  name: string;
+  members: CoverageBrand[];
+  onOpen: () => void;
+}) {
+  const filled = members.reduce((n, b) => n + b.filled, 0);
+  const photo = members.reduce((n, b) => n + b.photo, 0);
+  const known = members.reduce((n, b) => n + b.known, 0);
+  const owner = members.find((b) => b.owner)?.owner ?? null;
+  return (
+    <button
+      onClick={onOpen}
+      className="flex w-full items-center gap-3 rounded-input border border-line bg-surface px-4 py-3 text-left transition active:scale-[0.99]"
+    >
+      <span className="min-w-0 flex-1">
+        <span
+          className={`block truncate text-[15px] font-semibold ${
+            filled + photo === 0 ? "text-muted" : "text-ink"
+          }`}
+        >
+          {name}
+        </span>
+        <span className="mt-0.5 block truncate text-[11.5px] text-faint">
+          {owner ? `${owner} · ` : ""}
+          {members.length} brands
+        </span>
+      </span>
+      <Progress filled={filled} photo={photo} />
+      <span className="flex shrink-0 items-center gap-1.5 text-[12px] font-semibold tabular-nums">
+        {filled > 0 && <span className="text-sage-600">{filled}</span>}
+        {photo > 0 && <span className="text-amber">{photo}</span>}
+        {known > 0 && <span className="text-faint">+{known}</span>}
+        {filled + photo === 0 && known === 0 && (
+          <span className="text-faint">—</span>
+        )}
+      </span>
+      <ChevronRight
+        size={16}
+        strokeWidth={1.8}
+        aria-hidden="true"
+        className="shrink-0 text-faint"
+      />
+    </button>
   );
 }
 
@@ -429,6 +560,73 @@ function BrandPage({
   brand: CoverageBrand;
   onBack: () => void;
 }) {
+  return (
+    <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-4 px-4 pb-[calc(env(safe-area-inset-bottom)_+_2rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
+      <button onClick={onBack} className="btn-ghost -ml-4 self-start">
+        <ArrowLeft size={17} strokeWidth={1.8} aria-hidden="true" />
+        All brands
+      </button>
+      <BrandDetail brand={brand} heading="page" />
+    </main>
+  );
+}
+
+/**
+ * One shelf-family on one screen: every brand sharing the house name, stacked.
+ *
+ * Hill's is why this exists. Science Diet and Prescription Diet stay separate
+ * brands — that is how a shopper reads them, and merging their identities
+ * would churn every stored composition key — but three cards all beginning
+ * "Hill's" read as clutter, and the operator asked for one place, arranged
+ * inside the way Fancy Feast is arranged by range. This is that place: the
+ * grouping is display-only, and nothing about any product's identity moves.
+ */
+function FamilyPage({
+  name,
+  members,
+  onBack,
+}: {
+  name: string;
+  members: CoverageBrand[];
+  onBack: () => void;
+}) {
+  const filled = members.reduce((n, b) => n + b.filled, 0);
+  const photo = members.reduce((n, b) => n + b.photo, 0);
+  return (
+    <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-4 px-4 pb-[calc(env(safe-area-inset-bottom)_+_2rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
+      <button onClick={onBack} className="btn-ghost -ml-4 self-start">
+        <ArrowLeft size={17} strokeWidth={1.8} aria-hidden="true" />
+        All brands
+      </button>
+      <div>
+        <h1 className="text-[20px] font-semibold text-ink">{name}</h1>
+        <p className="mt-1 text-[13px] text-muted">
+          {members[0]?.owner ? `${members[0].owner} · ` : ""}
+          {members.length} brands · {filled} done
+          {photo > 0 ? ` · ${photo} awaiting ingredients` : ""}
+        </p>
+      </div>
+      {members.map((b) => (
+        <section
+          key={b.key || b.name}
+          className="flex flex-col gap-4 border-t border-line pt-4"
+        >
+          <BrandDetail brand={b} heading="section" />
+        </section>
+      ))}
+    </main>
+  );
+}
+
+/** A brand's header, ranges and leftovers — the body both pages share. */
+function BrandDetail({
+  brand,
+  heading,
+}: {
+  brand: CoverageBrand;
+  heading: "page" | "section";
+}) {
+  const Heading = heading === "page" ? "h1" : "h2";
   const withItems = brand.ranges.filter((r) => r.items.length > 0);
   const empty = brand.ranges.filter((r) => r.items.length === 0);
 
@@ -452,14 +650,17 @@ function BrandPage({
     );
 
   return (
-    <main className="mx-auto flex min-h-[100dvh] max-w-mobile flex-col gap-4 px-4 pb-[calc(env(safe-area-inset-bottom)_+_2rem)] pt-[calc(env(safe-area-inset-top)_+_1.25rem)]">
-      <button onClick={onBack} className="btn-ghost -ml-4 self-start">
-        <ArrowLeft size={17} strokeWidth={1.8} aria-hidden="true" />
-        All brands
-      </button>
-
+    <div className="flex flex-col gap-4">
       <div>
-        <h1 className="text-[20px] font-semibold text-ink">{brand.name}</h1>
+        <Heading
+          className={
+            heading === "page"
+              ? "text-[20px] font-semibold text-ink"
+              : "text-[17px] font-semibold text-ink"
+          }
+        >
+          {brand.name}
+        </Heading>
         <p className="mt-1 text-[13px] text-muted">
           {brand.owner ? `${brand.owner} · ` : ""}
           {brand.filled} done
@@ -631,7 +832,7 @@ function BrandPage({
           </ul>
         </section>
       )}
-    </main>
+    </div>
   );
 }
 
