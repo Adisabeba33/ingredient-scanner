@@ -1,0 +1,48 @@
+name: Apply prepared Royal Canin ledger
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message == 'chore: apply prepared Royal Canin ledger'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Decode validated prepared ledger and commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, json, os, urllib.request
+          url = 'https://api.github.com/repos/Adisabeba33/ingredient-scanner/git/blobs/ea15c3d15fff5b3ff869f2d3f6dbffe037a3bf6f'
+          req = urllib.request.Request(url, headers={
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+          })
+          with urllib.request.urlopen(req) as r:
+              payload = json.load(r)
+          encoded_target = base64.b64decode(payload['content'])
+          target = base64.b64decode(encoded_target)
+          parsed = json.loads(target)
+          assert parsed['brand_scope'] == ['Royal Canin']
+          assert len(parsed['records']) == 34
+          assert len({r['upc'] for r in parsed['records']}) == 34
+          assert all(r['research_status'] == 'source_verified' for r in parsed['records'])
+          assert all('ingredients_ordered_normalized' in r and r['ingredients_ordered_normalized'] for r in parsed['records'])
+          open('research/deep-research-royal-canin.json', 'wb').write(target)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-royal-canin.json
+          git commit -m "research: add 10 Royal Canin cat SKUs and restore normalized ingredients"
+          git push origin HEAD:agent/deep-research-barcode-ledger
