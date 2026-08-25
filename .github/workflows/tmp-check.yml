@@ -11,113 +11,29 @@ jobs:
           ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
       - name: Apply validated Royal Canin ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          python - <<'PY2'
-          import base64, gzip, json
-          payload = r"""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
-UqT4ruLB5//8Pzbft7lG9QEA"""
+          python - <<'PY'
+          import base64, gzip, json, os, urllib.request
+          shas = [
+              'f902c09a2a80b75d38abbd33b4db7e443c4da235',
+              'b2fc7e866185f9191d483bfdccf04fe107d8dfd1',
+              '322c9430dfccac43d076e831c3532db253c72628',
+          ]
+          chunks = []
+          for sha in shas:
+              url = f'https://api.github.com/repos/Adisabeba33/ingredient-scanner/git/blobs/{sha}'
+              req = urllib.request.Request(url, headers={
+                  'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                  'Accept': 'application/vnd.github+json',
+                  'X-GitHub-Api-Version': '2022-11-28',
+              })
+              with urllib.request.urlopen(req) as response:
+                  blob = json.load(response)
+              chunks.append(base64.b64decode(blob['content']).decode('ascii'))
+          payload = ''.join(chunks)
+          assert len(payload) == 12384
           target = gzip.decompress(base64.b64decode(payload))
           parsed = json.loads(target)
           assert parsed['brand_scope'] == ['Royal Canin']
@@ -126,8 +42,8 @@ UqT4ruLB5//8Pzbft7lG9QEA"""
           assert len({r['canonical_gtin14'] for r in parsed['records']}) == 34
           assert all(r['research_status'] == 'source_verified' for r in parsed['records'])
           assert all(r.get('ingredients_ordered_normalized') for r in parsed['records'])
-          open('research/deep-research-royal-canin.json','wb').write(target)
-          PY2
+          open('research/deep-research-royal-canin.json', 'wb').write(target)
+          PY
           if git diff --quiet -- research/deep-research-royal-canin.json; then
             echo "Royal Canin ledger is already applied."
             exit 0
