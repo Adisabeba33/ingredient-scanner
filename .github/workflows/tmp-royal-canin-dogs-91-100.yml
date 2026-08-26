@@ -1,0 +1,148 @@
+name: Temporary Royal Canin dogs 91-100
+on:
+  push:
+    branches: [agent/deep-research-barcode-ledger]
+    paths: [.github/workflows/tmp-royal-canin-dogs-91-100.yml]
+permissions:
+  contents: write
+concurrency:
+  group: royal-canin-dogs-ledger
+  cancel-in-progress: false
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Build verified records, validate, append
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          test "$(git hash-object research/deep-research-royal-canin-dogs.json)" = "90aa9f40bf7bf16b98ace545794718d4f25a3d9f"
+          python3 - <<'PY'
+          import json, pathlib
+          TARGET=pathlib.Path('research/deep-research-royal-canin-dogs.json')
+          ADMC='https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf'
+          PAN='https://www.pacificpet.net/Home/ProductListing?FoodAccSpec=FOOD&Itembrand=Royal+Canin&Itemgroup=Dog&Itemtype=Dry'
+          def split_top(s):
+              s=s.strip()
+              if s.endswith('.'): s=s[:-1]
+              out=[]; cur=[]; sq=0; par=0
+              for ch in s:
+                  if ch=='[': sq+=1
+                  elif ch==']': sq-=1
+                  elif ch=='(': par+=1
+                  elif ch==')': par-=1
+                  if ch==',' and sq==0 and par==0:
+                      out.append(''.join(cur).strip()); cur=[]
+                  else: cur.append(ch)
+              if cur: out.append(''.join(cur).strip())
+              assert sq==0 and par==0
+              return out
+          def cd(u):
+              total=sum(int(u[i])*(3 if i%2==0 else 1) for i in range(11)); check=(10-total%10)%10
+              assert check==int(u[-1]),(u,total,check)
+              return total,check
+          def ga(cp,fat,fiber,moist,others=None,taur=None):
+              return {'crude_protein_min_percent':cp,'crude_fat_min_percent':fat,'crude_fiber_max_percent':fiber,'moisture_max_percent':moist,'ash_max_percent':None,'taurine_min_percent':taur,'other_printed_guarantees':others or []}
+          def oth(n,b,v,u): return {'nutrient':n,'basis':b,'value':v,'unit':u}
+          wet=[
+            dict(upc='030111420251',line='Canine Health Nutrition',name='Beauty Adult Loaf in Sauce Canned Dog Food',variant='Beauty Adult Loaf in Sauce',recipe=['chicken','pork'],life='adult',size='5.2 oz',texture='loaf',presentation='in_sauce',
+                 url='https://www.royalcanin.com/us/dogs/products/retail-products/beauty-adult-loaf-in-sauce--4301',
+                 ingredients='Water sufficient for processing, chicken, pork by-products, pork liver, corn meal, brewers rice flour, vegetable oil, powdered cellulose, pork plasma, dried plain beet pulp, fish oil, carob bean gum, natural flavors, carrageenan, taurine, salt, potassium chloride, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, D-calcium pantothenate, biotin, thiamine mononitrate (vitamin B1), riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], sodium silico aluminate, trace minerals [zinc oxide, ferrous sulfate, zinc proteinate, copper sulfate, manganous oxide, sodium selenite, calcium iodate], magnesium oxide, marigold extract (Tagetes erecta L.).',
+                 ga=ga(7.4,4.2,1.7,78.5),cal=(1034,155),adequacy='AAFCO maintenance.',arith='5.2 oz = about 0.14742 kg; 1034 kcal/kg × 0.14742 kg is about 152 kcal versus the printed 155 kcal/can, consistent with normal label rounding.'),
+            dict(upc='030111420152',line='Size Health Nutrition',name='Puppy Loaf in Sauce Canned Dog Food',variant='Puppy Loaf in Sauce',recipe=['chicken','pork'],life='puppy',size='5.2 oz',texture='loaf',presentation='in_sauce',
+                 url='https://www.royalcanin.com/us/dogs/products/retail-products/puppy-loaf-in-sauce-4300/1',
+                 ingredients='Water sufficient for processing, chicken, pork by-products, pork liver, brewers rice flour, pork plasma, wheat gluten, dried plain beet pulp, powdered cellulose, calcium carbonate, carrageenan, fish oil, sodium tripolyphosphate, sodium silico aluminate, natural flavors, taurine, potassium chloride, vitamins [L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], citric acid, choline chloride, magnesium oxide, marigold extract (Tagetes erecta L.), trace minerals [zinc oxide, ferrous sulfate, zinc proteinate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].',
+                 ga=ga(8.2,4.7,1.5,78.5),cal=(1038,156),adequacy='AAFCO growth, including growth of large-size dogs.',arith='5.2 oz = about 0.14742 kg; 1038 kcal/kg × 0.14742 kg is about 153 kcal versus the printed 156 kcal/can, consistent with normal label rounding.'),
+            dict(upc='030111420657',line='Canine Health Nutrition',name='Adult In Gel Canned Dog Food',variant='Adult In Gel',recipe=['chicken','pork','salmon'],life='adult',size='13.5 oz',texture='unknown',presentation='unknown',
+                 url='https://www.royalcanin.com/us/dogs/products/retail-products/adult-canned-in-gel-dog-food-4307',
+                 ingredients='Water sufficient for processing, chicken, pork liver, chicken by-products, pork by-products, corn meal, brewers rice, brewers rice flour, salmon, powdered cellulose, dried plain beet pulp, pork plasma, guar gum, vegetable oil, carrageenan, potassium chloride, natural flavors, sodium tripolyphosphate, DL-methionine, cysteine, glycine, sodium silico aluminate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), biotin, niacin supplement, D-calcium pantothenate, folic acid, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement], trace minerals [zinc oxide, ferrous sulfate, zinc proteinate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].',
+                 ga=ga(6.5,3.0,2.0,77.5),cal=(1002,386),adequacy='AAFCO maintenance.',arith='13.5 oz = about 0.38272 kg; 1002 kcal/kg × 0.38272 kg is about 383 kcal versus the printed 386 kcal/can, consistent with normal label rounding.',vocab='The package wording is “In Gel”. The repository presentation vocabulary has no exact gel value, so presentation remains unknown rather than inventing a near-synonym.'),
+            dict(upc='030111420855',line='Canine Health Nutrition',name='Mature Adult in Gel Canned Dog Food',variant='Mature Adult In Gel',recipe=['pork','chicken'],life='senior',size='13.5 oz',texture='unknown',presentation='unknown',
+                 url='https://www.royalcanin.com/us/dogs/products/retail-products/mature-adult-in-gel-canned-dog-food-4309',
+                 ingredients='Water sufficient for processing, pork by-products, pork liver, chicken, brewers rice flour, chicken by-products, wheat flour, powdered cellulose, wheat gluten, vegetable oil, dried plain beet pulp, carrageenan, fish oil, carob bean gum, pork plasma, calcium sulfate, calcium carbonate, potassium chloride, taurine, guar gum, vitamins [L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, biotin, D-calcium pantothenate, thiamine mononitrate (vitamin B1), riboflavin supplement, pyridoxine hydrochloride (vitamin B6), folic acid, vitamin B12 supplement, vitamin D3 supplement], lecithin, natural flavors, sodium silico aluminate, L-carnitine, glycine, trace minerals [zinc oxide, ferrous sulfate, zinc proteinate, copper sulfate, manganous oxide, sodium selenite, calcium iodate], marigold extract (Tagetes erecta L.).',
+                 ga=ga(7.5,2.0,2.6,78.5),cal=(896,345),adequacy='AAFCO maintenance.',arith='13.5 oz = about 0.38272 kg; 896 kcal/kg × 0.38272 kg is about 343 kcal versus the printed 345 kcal/can, consistent with normal label rounding.',vocab='The package wording is “In Gel”. The repository presentation vocabulary has no exact gel value, so presentation remains unknown rather than inventing a near-synonym.'),
+            dict(upc='030111420558',line='Canine Health Nutrition',name='Puppy Loaf in Sauce Canned Dog Food',variant='Puppy Loaf in Sauce',recipe=['chicken','pork','salmon'],life='puppy',size='13.5 oz',texture='loaf',presentation='in_sauce',
+                 url='https://www.royalcanin.com/us/dogs/products/retail-products/puppy-loaf-in-sauce-4300/2',
+                 ingredients='Water sufficient for processing, chicken by-products, chicken, pork by-products, chicken liver, salmon, corn meal, brewers rice flour, powdered cellulose, brewers rice, dried plain beet pulp, pork plasma, guar gum, vegetable oil, potassium chloride, sodium tripolyphosphate, carrageenan, natural flavors, taurine, tricalcium phosphate, vitamins [L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), biotin, niacin supplement, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], DL-Methionine, fish oil, cysteine, glycine, sodium silico aluminate, trace minerals [zinc oxide, ferrous sulfate, zinc proteinate, copper sulfate, manganous oxide, sodium selenite, calcium iodate], choline chloride, marigold extract (Tagetes erecta L.).',
+                 ga=ga(7.5,4.0,2.0,76.0),cal=(1084,417),adequacy='AAFCO growth, including growth of large-size dogs.',arith='13.5 oz = about 0.38272 kg; 1084 kcal/kg × 0.38272 kg is about 415 kcal versus the printed 417 kcal/can, consistent with normal label rounding.')
+          ]
+          dry=[
+            dict(upc='030111512420',line='Size Health Nutrition',name='X-Small Aging 12+ Dry Dog Food',variant='X-Small Aging 12+',recipe=['chicken'],life='senior',size='2.5 lb',url='https://www.royalcanin.com/us/dogs/products/retail-products/x-small-aging-12%2B-1005',burl='https://www.petscience.ca/royal-canin-size-health-nutrition-x-small-aging-12-dog-2-5lbs-121-51242',bsource='PetScience',
+                 ingredients='Brewers rice, chicken by-product meal, corn gluten meal, corn, chicken fat, brown rice, wheat gluten, natural flavors, dried chicory root, fish oil, vegetable oil, dried tomato pomace, psyllium seed husk, potassium chloride, calcium sulfate, L-arginine, L-tyrosine, calcium carbonate, fructooligosaccharides, sodium tripolyphosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement], L-lysine, taurine, choline chloride, DL-methionine, hydrolyzed yeast, L-tryptophan, magnesium oxide, L-carnitine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], GLA safflower oil, marigold extract (Tagetes erecta L.), green tea extract, rosemary extract, preserved with mixed tocopherols and citric acid.',
+                 ga=ga(22,14,3.6,10,[oth('Eicosapentaenoic Acid (EPA)','min',0.19,'percent'),oth('Docosahexaenoic Acid (DHA)','min',0.08,'percent')]),cal=(3768,343),adequacy='AAFCO maintenance.',conflicts=[]),
+            dict(upc='030111513601',line='Breed Health Nutrition',name='West Highland White Terrier Adult Dry Dog Food',variant='West Highland White Terrier Adult',recipe=['chicken','pork'],life='adult',size='10 lb',url='https://www.royalcanin.com/us/dogs/products/retail-products/west-highland-white-terrier-adult-3981',burl='https://www.kosovo.ubuy.com/en/product/36T1SES-royal-canin-west-highland-white-terrier-adult-breed-specific-dry-dog-food-10-lb-bag',bsource='Ubuy',
+                 ingredients='Brewers rice, chicken by-product meal, corn, chicken fat, brown rice, pork meal, wheat, natural flavors, dried chicory root, vegetable oil, fish oil, sodium silico aluminate, potassium chloride, calcium carbonate, flaxseed, salt, fructooligosaccharides, sodium tripolyphosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement, menadione sodium bisulfite complex], DL-methionine, choline chloride, L-lysine, monocalcium phosphate, trace minerals [zinc proteinate, ferrous sulfate, zinc oxide, manganous oxide, copper sulfate, sodium selenite, calcium iodate], magnesium oxide, marigold extract (Tagetes erecta L.), glucosamine hydrochloride, GLA safflower oil, taurine, green tea extract, L-carnitine, chondroitin sulfate, rosemary extract, preserved with mixed tocopherols and citric acid.',
+                 ga=ga(19,14,3.4,10,[oth('Eicosapentaenoic Acid (EPA)','min',0.13,'percent'),oth('Docosahexaenoic Acid (DHA)','min',0.05,'percent'),oth('Omega-6 fatty acids','min',2.3,'percent'),oth('Glucosamine (mg/kg)','min',371,'other'),oth('Chondroitin sulfate (mg/kg)','min',4,'other')]),cal=(3730,339),adequacy='AAFCO maintenance.',conflicts=[]),
+            dict(upc='030111416872',line='Breed Health Nutrition',name='Golden Retriever Adult Dry Dog Food',variant='Golden Retriever Adult',recipe=['chicken'],life='adult',size='17 lb',url='https://www.royalcanin.com/us/dogs/products/retail-products/golden-retriever-adult-3970',burl='https://www.torontopets.ca/products/royal-canin-dog-dry-golden-retriever-30lbs',bsource='Toronto Pets',
+                 ingredients='Corn, chicken by-product meal, wheat, oat groats, brewers rice, corn protein meal, chicken fat, natural flavors (ONLY FOR MEXICO: including poultry, cow milk), pea fiber, dried plain beet pulp, wheat gluten, fish oil, vegetable oil, sodium aluminosilicate, salt, calcium carbonate, potassium chloride, monocalcium phosphate, powdered psyllium seed husk, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, folic acid, vitamin D3 supplement], fructooligosaccharides, L-lysine, choline chloride, L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid, taurine, DL-methionine, glucosamine hydrochloride, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), magnesium oxide, chondroitin sulfate.',
+                 ga=ga(23,11,4.8,10.5,[oth('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.2,'percent'),oth('Glucosamine (mg/kg)','min',976,'other'),oth('Chondroitin sulfate (mg/kg)','min',4,'other')],0.13),cal=(3513,278),adequacy='AAFCO maintenance.',conflicts=['The Spanish-localized Royal Canin US page currently exposes an older/different Golden Retriever Adult formula generation (5.7% max fiber, 10.0% max moisture, separate EPA 0.17% and DHA 0.07%, taurine 0.20%, 891 mg/kg glucosamine, 9 mg/kg chondroitin, 3489 kcal/kg and 276 kcal/cup). The current English Royal Canin USA page is the stored formula master; generations were not combined.']),
+            dict(upc='030111691040',line='Breed Health Nutrition',name='Golden Retriever Adult Dry Dog Food',variant='Golden Retriever Adult',recipe=['chicken'],life='adult',size='5 lb',url='https://www.royalcanin.com/us/dogs/products/retail-products/golden-retriever-adult-3970',burl=PAN,bsource='Pan Pacific Pet',
+                 ingredients='Corn, chicken by-product meal, wheat, oat groats, brewers rice, corn protein meal, chicken fat, natural flavors (ONLY FOR MEXICO: including poultry, cow milk), pea fiber, dried plain beet pulp, wheat gluten, fish oil, vegetable oil, sodium aluminosilicate, salt, calcium carbonate, potassium chloride, monocalcium phosphate, powdered psyllium seed husk, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, folic acid, vitamin D3 supplement], fructooligosaccharides, L-lysine, choline chloride, L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid, taurine, DL-methionine, glucosamine hydrochloride, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), magnesium oxide, chondroitin sulfate.',
+                 ga=ga(23,11,4.8,10.5,[oth('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.2,'percent'),oth('Glucosamine (mg/kg)','min',976,'other'),oth('Chondroitin sulfate (mg/kg)','min',4,'other')],0.13),cal=(3513,278),adequacy='AAFCO maintenance.',conflicts=['The Spanish-localized Royal Canin US page currently exposes an older/different Golden Retriever Adult formula generation (5.7% max fiber, 10.0% max moisture, separate EPA 0.17% and DHA 0.07%, taurine 0.20%, 891 mg/kg glucosamine, 9 mg/kg chondroitin, 3489 kcal/kg and 276 kcal/cup). The current English Royal Canin USA page is the stored formula master; generations were not combined.']),
+            dict(upc='030111662255',line='Breed Health Nutrition',name='Golden Retriever Puppy Dry Dog Food',variant='Golden Retriever Puppy',recipe=['chicken'],life='puppy',size='2.5 lb',url='https://www.royalcanin.com/us/dogs/products/retail-products/golden-retriever-puppy-3979',burl=PAN,bsource='Pan Pacific Pet',
+                 ingredients='Chicken by-product meal, corn, chicken fat, wheat, brewers rice, wheat gluten, brown rice, pea fiber, chicken meal, natural flavors (ONLY FOR MEXICO: including poultry, cow milk, pork), brewers rice flour, corn protein meal, dried plain beet pulp, vegetable oil, sodium aluminosilicate, potassium chloride, marine microalgae oil, monocalcium phosphate, powdered psyllium seed husk, calcium carbonate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, folic acid, vitamin D3 supplement], fructooligosaccharides, sodium tripolyphosphate, yeast extract, salt, choline chloride, rosemary extract, preserved with mixed tocopherols and citric acid, fish oil, taurine, glucosamine hydrochloride, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), Yucca schidigera extract, L-carnitine, L-threonine, carotene, chondroitin sulfate.',
+                 ga=ga(27,14,5.4,10.5,[oth('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.2,'percent'),oth('Vitamin E','min',413,'IU/kg'),oth('Ascorbic acid (mg/kg)','min',288,'other'),oth('Glucosamine (mg/kg)','min',800,'other'),oth('Chondroitin sulfate (mg/kg)','min',8,'other')]),cal=(3607,339),adequacy='AAFCO growth, including growth of large-size dogs.',conflicts=[])
+          ]
+          batch=[]
+          for f in wet:
+              total,check=cd(f['upc'])
+              notes=[f'UPC-A check digit verified: weighted body sum {total} gives check digit {check}.',f'Canonical GTIN-14 is zero-left-padded UPC-A 00{f["upc"]}.','No repository-wide UPC or GTIN match found before append.','ADMC 2025 South price list maps this UPC to one exact retail can and printed size; the adjacent case quantity is distribution packaging, not the stored barcode scope.','Current Royal Canin USA product page is the formula master for ingredient order, guaranteed analysis, calories and nutritional adequacy.',f['arith'],f['adequacy']]
+              if f.get('vocab'): notes.append(f['vocab'])
+              batch.append({'catalog_number':None,'upc':f['upc'],'canonical_gtin14':'00'+f['upc'],'barcode_scope':'individual_unit','brand':'Royal Canin','manufacturer':'Royal Canin USA, Inc.','species':'dog','product_line':f['line'],'product_name':f['name'],'variant':f['variant'],'recipe':f['recipe'],'life_stage':f['life'],'food_form':'wet','texture':f['texture'],'presentation':f['presentation'],'package_type':'can','size':f['size'],'ingredients_verbatim':f['ingredients'],'ingredients_ordered_normalized':split_top(f['ingredients']),'guaranteed_analysis':f['ga'],'calorie_content':{'kcal_per_kg':f['cal'][0],'kcal_per_unit':f['cal'][1],'unit_name':'can'},'label_deck_code':None,'formula_source':'Current Royal Canin USA product page is the formula master; 2025 ADMC South distributor price list is the exact individual-unit UPC/size source.','source_urls':[f['url'],ADMC],'source_accessed_at':'2026-08-26','barcode_notes':f'ADMC maps UPC {f["upc"]} to {f["variant"]}, {f["size"]}, as the retail can; case quantity is listed separately.','conflicts':[],'verification_notes':notes,'research_status':'source_verified'})
+          for f in dry:
+              total,check=cd(f['upc'])
+              notes=[f'UPC-A check digit verified: weighted body sum {total} gives check digit {check}.',f'Canonical GTIN-14 is zero-left-padded UPC-A 00{f["upc"]}.','No repository-wide UPC or GTIN match found before append.',f'{f["bsource"]} maps UPC {f["upc"]} to the exact {f["variant"]} {f["size"]} retail bag; current Royal Canin USA lists the same package size.','Current Royal Canin USA English product page is the formula master for ingredient order, guaranteed analysis, calories and nutritional adequacy.','Calories are printed per kilogram and per cup; no whole-package calorie value is printed, so package-weight calorie arithmetic does not apply.',f['adequacy']]
+              batch.append({'catalog_number':None,'upc':f['upc'],'canonical_gtin14':'00'+f['upc'],'barcode_scope':'individual_unit','brand':'Royal Canin','manufacturer':'Royal Canin USA, Inc.','species':'dog','product_line':f['line'],'product_name':f['name'],'variant':f['variant'],'recipe':f['recipe'],'life_stage':f['life'],'food_form':'dry','texture':'kibble','presentation':'plain','package_type':'bag','size':f['size'],'ingredients_verbatim':f['ingredients'],'ingredients_ordered_normalized':split_top(f['ingredients']),'guaranteed_analysis':f['ga'],'calorie_content':{'kcal_per_kg':f['cal'][0],'kcal_per_unit':f['cal'][1],'unit_name':'cup'},'label_deck_code':None,'formula_source':f'Current Royal Canin USA English product page is the formula master; {f["bsource"]} is the exact individual-unit UPC/size source.','source_urls':[f['url'],f['burl']],'source_accessed_at':'2026-08-26','barcode_notes':f'{f["bsource"]} maps UPC {f["upc"]} to {f["variant"]}, {f["size"]}, as one retail bag; current Royal Canin USA confirms that package size.','conflicts':f['conflicts'],'verification_notes':notes,'research_status':'source_verified'})
+          expected={'030111420251','030111420152','030111420657','030111420855','030111420558','030111512420','030111513601','030111416872','030111691040','030111662255'}
+          assert len(batch)==10 and {r['upc'] for r in batch}==expected
+          doc=json.loads(TARGET.read_text(encoding='utf-8'))
+          assert len(doc['records'])==90
+          assert len({r['upc'] for r in doc['records']})==90
+          assert len({r['canonical_gtin14'] for r in doc['records']})==90
+          assert not expected & {r['upc'] for r in doc['records']}
+          new_gtins={r['canonical_gtin14'] for r in batch}
+          paths=[pathlib.Path('data/known-products.ts'),pathlib.Path('data/known-formulas.ts'),pathlib.Path('data/wrong-barcodes.ts'),pathlib.Path('docs/CATALOG-CONFLICTS.md')]
+          paths+=sorted(pathlib.Path('research').glob('deep-research-*.json'))
+          for p in paths:
+              if p==TARGET: continue
+              body=p.read_text(encoding='utf-8')
+              for code in expected|new_gtins:
+                  assert code not in body,f'global collision {code} in {p}'
+          for r in batch:
+              cd(r['upc']); assert r['canonical_gtin14']=='00'+r['upc']
+              assert r['catalog_number'] is None and r['barcode_scope']=='individual_unit'
+              assert r['brand']=='Royal Canin' and r['manufacturer']=='Royal Canin USA, Inc.' and r['species']=='dog'
+              assert r['life_stage'] in {'adult','puppy','senior'} and r['food_form'] in {'dry','wet'}
+              assert r['texture'] in {'kibble','loaf','unknown'} and r['presentation'] in {'plain','in_sauce','unknown'}
+              assert r['package_type'] in {'bag','can'} and r['research_status']=='source_verified'
+              assert r['ingredients_verbatim'] and r['ingredients_ordered_normalized']==split_top(r['ingredients_verbatim'])
+              assert '�' not in json.dumps(r,ensure_ascii=False)
+              g=r['guaranteed_analysis']; assert all(g[k] is not None for k in ('crude_protein_min_percent','crude_fat_min_percent','crude_fiber_max_percent','moisture_max_percent'))
+              c=r['calorie_content']; assert c['kcal_per_kg'] is not None and c['kcal_per_unit'] is not None and c['unit_name'] in {'cup','can'}
+              assert len(r['source_urls'])>=2 and all(x.startswith('http') for x in r['source_urls'])
+              assert r['source_accessed_at']=='2026-08-26' and isinstance(r['conflicts'],list) and isinstance(r['verification_notes'],list) and r['verification_notes']
+          doc['records'].extend(batch); doc['updated_at']='2026-08-26'
+          assert len(doc['records'])==100
+          assert len({r['upc'] for r in doc['records']})==100
+          assert len({r['canonical_gtin14'] for r in doc['records']})==100
+          TARGET.write_text(json.dumps(doc,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          check=json.loads(TARGET.read_text(encoding='utf-8'))
+          assert len(check['records'])==100 and all(sum(1 for r in check['records'] if r['upc']==u)==1 for u in expected)
+          print('validated 90->100',sorted(expected))
+          PY
+          git rm .github/workflows/tmp-royal-canin-dogs-91-100.yml
+          git add research/deep-research-royal-canin-dogs.json
+          git diff --cached --check
+          git commit -m "research: add Royal Canin dogs records 91-100"
+          git fetch origin agent/deep-research-barcode-ledger
+          remote_blob="$(git ls-tree origin/agent/deep-research-barcode-ledger research/deep-research-royal-canin-dogs.json | awk '{print $3}')"
+          test "$remote_blob" = "90aa9f40bf7bf16b98ace545794718d4f25a3d9f"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          git push origin HEAD:agent/deep-research-barcode-ledger
