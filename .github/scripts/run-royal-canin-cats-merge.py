@@ -23,60 +23,55 @@ def valid_upca(code):
     return (10-s%10)%10==d[-1]
 
 def ex(n,b,v,u): return {'nutrient':n,'basis':b,'value':v,'unit':u}
-def ga(p,f,fi,m,extras,taurine=None):
-    return {'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':None,'taurine_min_percent':taurine,'other_printed_guarantees':extras}
+def ga(p,f,fi,m,extras):
+    return {'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':extras}
 
-def make(upc,line,name,variant,size,ingredients,analysis,kkg,kcup,murl,burl,recipe,life='adult',manufacturer='Royal Canin USA, Inc.',conflicts=None,note=None,extra_urls=None,formula_source=None):
+def make(upc,name,variant,size,texture,presentation,ingredients,analysis,kkg,kcan,murl,burl,recipe,conflicts=None):
     return {
       'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit',
-      'brand':'Royal Canin','manufacturer':manufacturer,'species':'cat','product_line':line,'product_name':name,'variant':variant,
-      'recipe':recipe,'life_stage':life,'food_form':'dry','texture':'kibble','presentation':'plain','package_type':'bag','size':size,
-      'ingredients_verbatim':ingredients,'ingredients_ordered_normalized':split_top(ingredients),'guaranteed_analysis':analysis,
-      'calorie_content':{'kcal_per_kg':kkg,'kcal_per_unit':kcup,'unit_name':'cup'},'label_deck_code':None,
-      'formula_source':formula_source or 'Current Royal Canin product page supplies current formula, Guaranteed Analysis, calories and marketed size; exact-unit retailer page supplies the individual-bag UPC/size identity.',
-      'source_urls':[murl,burl]+(extra_urls or []),'source_accessed_at':'2026-08-26','barcode_notes':note or 'Exact-unit retailer option maps this UPC to one individual bag of the stated size.',
-      'conflicts':conflicts or [],'verification_notes':['UPC-A check digit independently validated.','Canonical GTIN-14 validated.','Current manufacturer formula and exact individual-unit UPC/size were matched.'],
+      'brand':'Royal Canin','manufacturer':'Royal Canin Canada','species':'cat','product_line':'Feline Care Nutrition',
+      'product_name':name,'variant':variant,'recipe':recipe,'life_stage':'adult','food_form':'wet','texture':texture,
+      'presentation':presentation,'package_type':'can','size':size,'ingredients_verbatim':ingredients,
+      'ingredients_ordered_normalized':split_top(ingredients),'guaranteed_analysis':analysis,
+      'calorie_content':{'kcal_per_kg':kkg,'kcal_per_unit':kcan,'unit_name':'can'},'label_deck_code':None,
+      'formula_source':'Current Royal Canin Canada product page supplies the current formula, Guaranteed Analysis, calories, nutritional adequacy and marketed unit size; current Canadian exact-unit retailer page supplies the individual-can UPC/size identity.',
+      'source_urls':[murl,burl],'source_accessed_at':'2026-08-26',
+      'barcode_notes':'Current Canadian retailer exposes this barcode on the exact individual can/weight variant; UPC-A check digit and canonical GTIN-14 were independently validated.',
+      'conflicts':conflicts or [],
+      'verification_notes':['UPC-A check digit independently validated.','Canonical GTIN-14 validated.','Current Royal Canin Canada formula and exact individual-unit UPC/size were matched.','Barcode is not a case, tray, boxset, or multipack code.'],
       'research_status':'source_verified'
     }
 
-GIK_ING='Chicken by-product meal, corn, chicken fat, wheat gluten, brewers rice flour, natural flavors, chicken meal, egg product, dried plain beet pulp, vegetable oil, potassium chloride, fish oil, pea fiber, sodium aluminosilicate, salt, sodium pyrophosphate, choline chloride, powdered psyllium seed husk, calcium carbonate, fructooligosaccharides, hydrolyzed yeast, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], marine microalgae oil, L-lysine, taurine, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), DL-methionine, magnesium oxide, L-threonine, carotene, rosemary extract, preserved with mixed tocopherols and citric acid.'
-GIK_GA=ga(33,22,3.5,7.5,[ex('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.26,'percent'),ex('Potassium','min',0.62,'percent'),ex('Sodium','min',0.42,'percent'),ex('Vitamin E','min',385,'IU/kg'),ex('Ascorbic acid','min',248,'mg/kg')])
-GIK_M='https://www.royalcanin.com/us/cats/products/vet-products/feline-gastrointestinal-kitten--1228'
-GIK_B='https://www.petcarerx.com/royal-canin-feline-gastrointestinal-kitten-dry-cat-food/37474'
+APP_T_ING='Water sufficient for processing, pork liver, chicken, pork by-products, brewers rice flour, chicken by-products, chicken liver, pork plasma, wheat gluten, powdered cellulose, modified corn starch, glycine, potassium chloride, calcium carbonate, sodium tripolyphosphate, calcium sulfate, guar gum, natural flavors, taurine, choline chloride, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], sodium carbonate, L-carnitine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
+APP_T_GA=ga(6.2,1.4,2.8,84.5,[ex('Crude Fat','max',4.4,'percent'),ex('L-Carnitine','min',25,'mg/kg')])
 
-PD_ING='Peas, duck by product meal, pea protein, coconut oil, natural flavors, hydrolyzed soy protein, vegetable oil, calcium sulfate, sodium bisulfate, DL-methionine, fish oil, sodium pyrophosphate, choline chloride, salt, monocalcium phosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement], taurine, calcium carbonate, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], rosemary extract, preserved with mixed tocopherols and citric acid.'
-PD_GA=ga(30,11,5.8,8,[ex('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.12,'percent'),ex('Omega-3 Fatty Acids','min',0.3,'percent')])
-PD_M='https://www.royalcanin.com/us/cats/products/vet-products/selected-protein-pd-1280'
-PD_B='https://www.petcarerx.com/royal-canin-veterinary-diet-feline-selected-protein-adult-pd-dry-cat-food/24903'
+APP_L_ING='Water sufficient for processing, pork by-products, pork liver, chicken, chicken liver, brewers rice flour, wheat gluten, hydrolyzed chicken liver, pork plasma, powdered cellulose, calcium sulfate, carrageenan, guar gum, potassium chloride, calcium carbonate, natural flavors, carob bean gum, sodium tripolyphosphate, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], choline chloride, glycine, sodium carbonate, L-carnitine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
+APP_L_GA=ga(7.3,1.4,2.6,84.5,[ex('Crude Fat','max',4.9,'percent'),ex('L-Carnitine','min',25,'mg/kg')])
 
-UMC_ING='Chicken by-product meal, brewers rice, corn, pea fiber, wheat gluten, corn protein meal, natural flavors, chicken fat, salt, fish oil, potassium chloride, sodium bisulfate, calcium sulfate, egg product, vegetable oil, sodium pyrophosphate, DL-methionine, fructooligosaccharides, choline chloride, monosodium phosphate, rosemary extract, preserved with mixed tocopherols and citric acid, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], taurine, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], L-carnitine, marigold extract (Tagetes erecta L.).'
-UMC_GA=ga(32,9,8,7.5,[ex('Crude Fat','max',13,'percent'),ex('Calcium','max',1.3,'percent'),ex('Phosphorus','max',1.2,'percent'),ex('Magnesium','max',0.1,'percent')])
-UMC_M='https://www.royalcanin.com/us/cats/products/vet-products/feline-urinary-so-moderate-calorie-3954'
-UMC_B='https://www.petcarerx.com/royal-canin-veterinary-diet-feline-urinary-so-moderate-calorie-dry-cat-food/24922'
+DIG_ING='Water sufficient for processing, pork by-products, chicken, chicken liver, salmon, wheat flour, pork plasma, modified corn starch, powdered cellulose, glycine, gelatin, wheat gluten, natural flavors, vegetable oil, sodium aluminosilicate, potassium chloride, carob bean gum, calcium sulfate, rice flour, taurine, choline chloride, sodium tripolyphosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
+DIG_GA=ga(7.2,1.6,2.5,82.5,[])
 
-APP_ING='Chicken meal, pea fiber, corn, wheat gluten, wheat, corn gluten meal, natural flavors, brewers rice, chicken fat, dried plain beet pulp, vegetable oil, sodium aluminosilicate, sodium pyrophosphate, fish oil, calcium sulfate, choline chloride, potassium chloride, powdered psyllium seed husk, salt, rice flour, fructooligosaccharides, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], taurine, DL-methionine, monosodium phosphate, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid.'
-APP_GA=ga(32,10,10.8,7.5,[ex('Crude Fat','max',14,'percent'),ex('L-carnitine','min',140,'mg/kg')])
-APP_M='https://www.royalcanin.com/ca/cats/products/retail-products/appetite-control-care-2563'
-APP_B='https://www.petscience.ca/royal-canin-feline-care-nutrition-appetite-control-care-adult-cat-3lbs-121-55303'
-APP_B2='https://www.pattesgriffes.com/products/royal-canin-chat-soin-controle-de-lappetit-nourriture-seche-pour-chats'
+HS_ING='Water sufficient for processing, chicken, pork by-products, chicken liver, pork liver, wheat gluten, wheat flour, pork plasma, gelatin, vegetable oil, powdered cellulose, glycine, fish oil, modified corn starch, calcium sulfate, natural flavors, rice flour, potassium chloride, guar gum, sodium tripolyphosphate, choline chloride, taurine, citric acid, vitamins [niacin supplement, DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), D-calcium pantothenate, biotin, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], carrageenan, magnesium oxide, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
+HS_GA=ga(10.0,2.2,2.7,80.0,[])
+
+UR_ING='Water sufficient for processing, pork by-products, chicken by-products, pork liver, chicken, wheat flour, wheat gluten, modified corn starch, powdered cellulose, pork plasma, natural flavors, calcium sulfate, potassium chloride, carob bean gum, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, folic acid, vitamin B12 supplement, vitamin D3 supplement], sodium tripolyphosphate, choline chloride, salt, sodium carbonate, marigold extract (Tagetes erecta L.), trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
+UR_GA=ga(7.7,1.7,1.4,84.0,[])
 
 rows=[
- make('030111588005','Veterinary Diet','Royal Canin Veterinary Diet Feline Gastrointestinal Kitten Dry Cat Food','Gastrointestinal Kitten 4.4 lb','4.4 lb',GIK_ING,GIK_GA,4130,475,GIK_M,GIK_B,['chicken','egg','fish'],life='kitten'),
- make('030111588029','Veterinary Diet','Royal Canin Veterinary Diet Feline Gastrointestinal Kitten Dry Cat Food','Gastrointestinal Kitten 7.7 lb','7.7 lb',GIK_ING,GIK_GA,4130,475,GIK_M,GIK_B,['chicken','egg','fish'],life='kitten'),
- make('030111762085','Veterinary Diet','Royal Canin Veterinary Diet Feline Selected Protein PD Dry Cat Food','Selected Protein PD 8.8 lb','8.8 lb',PD_ING,PD_GA,3531,332,PD_M,PD_B,['duck','pea','hydrolyzed soy']),
- make('030111762016','Veterinary Diet','Royal Canin Veterinary Diet Feline Selected Protein PD Dry Cat Food','Selected Protein PD 17.6 lb','17.6 lb',PD_ING,PD_GA,3531,332,PD_M,PD_B,['duck','pea','hydrolyzed soy']),
- make('030111484338','Veterinary Diet','Royal Canin Veterinary Diet Feline Urinary SO Moderate Calorie Dry Cat Food','Urinary SO Moderate Calorie 3.3 lb','3.3 lb',UMC_ING,UMC_GA,3319,299,UMC_M,UMC_B,['chicken','egg','fish'],conflicts=['PetCareRx currently exposes an older formula/calorie generation (3277 kcal/kg; 275 kcal/cup). Current Royal Canin USA product page is stored as authoritative.']),
- make('030111484369','Veterinary Diet','Royal Canin Veterinary Diet Feline Urinary SO Moderate Calorie Dry Cat Food','Urinary SO Moderate Calorie 6.6 lb','6.6 lb',UMC_ING,UMC_GA,3319,299,UMC_M,UMC_B,['chicken','egg','fish'],conflicts=['PetCareRx currently exposes an older formula/calorie generation (3277 kcal/kg; 275 kcal/cup). Current Royal Canin USA product page is stored as authoritative.']),
- make('030111484376','Veterinary Diet','Royal Canin Veterinary Diet Feline Urinary SO Moderate Calorie Dry Cat Food','Urinary SO Moderate Calorie 17.6 lb','17.6 lb',UMC_ING,UMC_GA,3319,299,UMC_M,UMC_B,['chicken','egg','fish'],conflicts=['PetCareRx currently exposes an older formula/calorie generation (3277 kcal/kg; 275 kcal/cup). Current Royal Canin USA product page is stored as authoritative.']),
- make('030111553034','Feline Care Nutrition','Royal Canin Feline Care Nutrition Appetite Control Care Dry Cat Food','Appetite Control Care 3 lb','3 lb',APP_ING,APP_GA,3302,284,APP_M,APP_B,['chicken','fish'],manufacturer='Royal Canin Canada',extra_urls=[APP_B2],formula_source='Current Royal Canin Canada page proves the active 3 lb size and current formula, Guaranteed Analysis and calories; two current Canadian retailers independently map UPC 030111553034 to the individual 3 lb / 1.4 kg bag.')
+ make('030111735539','Royal Canin Feline Care Nutrition Appetite Control Care Thin Slices in Gravy Canned Cat Food','Appetite Control Care Thin Slices in Gravy','3 oz / 85 g','slices','in_gravy',APP_T_ING,APP_T_GA,652,55,'https://www.royalcanin.com/ca/cats/products/retail-products/appetite-control-care-thin-slices-in-gravy-1469','https://shop.petfinity.ca/206650/product/787381/30242517-Royal_Canin_Feline_Care_Nutrition_Appetite_Control_Care_Spayed_Neutered_Thin_Slices_in_Gravy_Wet_Cat_Food_85g',['pork','chicken']),
+ make('030111700919','Royal Canin Feline Care Nutrition Appetite Control Care Loaf in Sauce Canned Cat Food','Appetite Control Care Loaf in Sauce','5.1 oz / 145 g','loaf','in_sauce',APP_L_ING,APP_L_GA,670,97,'https://www.royalcanin.com/ca/cats/products/retail-products/appetite-control-care-loaf-in-sauce-2569','https://www.domaineanimal.com/royal-canin-pate-controle-de-lappetit-145g.html',['pork','chicken']),
+ make('030111715531','Royal Canin Feline Care Nutrition Digestive Care Thin Slices in Gravy Canned Cat Food','Digestive Care Thin Slices in Gravy','3 oz / 85 g','slices','in_gravy',DIG_ING,DIG_GA,789,67,'https://www.royalcanin.com/ca/cats/products/retail-products/digestive-care-thin-slices-in-gravy-1430/1','https://www.buckerfields.ca/product/royal-canin-fcn-digestive-care-thin-slices-in-gravy-cat-food-85g',['pork','chicken','salmon']),
+ make('030111715289','Royal Canin Feline Care Nutrition Hair & Skin Care Thin Slices in Gravy Canned Cat Food','Hair & Skin Care Thin Slices in Gravy','3 oz / 85 g','slices','in_gravy',HS_ING,HS_GA,900,77,'https://www.royalcanin.com/ca/cats/products/retail-products/hair%26skin-care-thin-slices-in-gravy-1475','https://www.buckerfields.ca/product/royal-canin-fhn-hair-skin-care-thin-slices-in-gravy-cat-food-85g',['chicken','pork','fish']),
+ make('030111716651','Royal Canin Feline Care Nutrition Urinary Care Thin Slices in Gravy Canned Cat Food','Urinary Care Thin Slices in Gravy','3 oz / 85 g','slices','in_gravy',UR_ING,UR_GA,714,61,'https://www.royalcanin.com/ca/cats/products/retail-products/urinary-care--thin-slices-in-gravy-1588','https://animoetc.com/en/products/royal-canin-chats-nourriture-humide-conserve-soin-urinaire-2',['pork','chicken'])
 ]
 
-assert len(rows)==8 and len({r['upc'] for r in rows})==8
+assert len(rows)==5 and len({r['upc'] for r in rows})==5
 for r in rows:
     assert valid_upca(r['upc']),r['upc']
     assert r['canonical_gtin14']==r['upc'].zfill(14)
     assert split_top(r['ingredients_verbatim'])==r['ingredients_ordered_normalized']
     assert r['brand']=='Royal Canin' and r['species']=='cat' and r['barcode_scope']=='individual_unit'
+    assert r['texture'] in {'slices','loaf'} and r['presentation'] in {'in_gravy','in_sauce'}
 
 target=json.loads(TARGET.read_text(encoding='utf-8')); existing=target['records']; initial=len(existing)
 existing_upcs=[r['upc'] for r in existing]; assert len(existing_upcs)==len(set(existing_upcs))
@@ -97,6 +92,6 @@ TARGET.write_text(json.dumps(target,ensure_ascii=False,separators=(',',':'))+'\n
 status_counts={}
 for r in target['records']: status_counts[r.get('research_status')]=status_counts.get(r.get('research_status'),0)+1
 print(f'Validated {len(paths)} mandatory exclusion files.')
-print(f'Target before: {initial}; requested replacement batch: {len(rows)}; added: {len(rows_to_add)}; target after: {len(final)}')
+print(f'Target before: {initial}; requested final replacement batch: {len(rows)}; added: {len(rows_to_add)}; target after: {len(final)}')
 print('Added UPCs: '+(', '.join(r['upc'] for r in rows_to_add) if rows_to_add else 'none'))
 print('Status counts: '+json.dumps(status_counts,sort_keys=True))
