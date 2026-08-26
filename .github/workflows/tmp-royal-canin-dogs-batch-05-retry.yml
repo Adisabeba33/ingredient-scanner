@@ -45,7 +45,16 @@ jobs:
           expected = ['030111517975','030111179302','030111449283','030111517470','030111517432','030111493880','030111493897','030111512512','030111527035','030111447142']
           if candidate_upcs != expected:
               raise SystemExit(f'Unexpected recovered UPC set/order: {candidate_upcs}')
-          # Any replacement character caused by the original staging transport is allowed only in human-readable conflict prose.
+
+          # Repair the one transport-corrupted duplicate copy of Large Adult's vitamins group
+          # only if the intact authoritative verbatim ingredient string contains that exact group.
+          expected_vitamins = 'vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, riboflavin supplement, niacin supplement, vitamin B12 supplement, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin D3 supplement, folic acid]'
+          if '\ufffd' in new[0]['ingredients_ordered_normalized'][15]:
+              if expected_vitamins not in new[0]['ingredients_verbatim']:
+                  raise SystemExit('Cannot prove deterministic Large Adult vitamin-group repair from verbatim source copy')
+              new[0]['ingredients_ordered_normalized'][15] = expected_vitamins
+              print('repaired Large Adult normalized vitamin group from intact verbatim copy')
+
           replacement_paths = []
           def walk(v, path=''):
               if isinstance(v, dict):
@@ -57,13 +66,22 @@ jobs:
           walk(new)
           for p in replacement_paths:
               if '.conflicts[' not in p:
-                  raise SystemExit(f'Encoding replacement escaped conflict prose: {p}')
+                  raise SystemExit(f'Encoding replacement remains outside conflict prose: {p}; all={replacement_paths}')
           if replacement_paths:
               for r in new:
                   r['conflicts'] = [s.replace('\ufffd', '-') for s in r.get('conflicts', [])]
-                  if any('\ufffd' in s for s in r.get('conflicts', [])):
-                      raise SystemExit(f'Could not normalize conflict prose for {r["upc"]}')
               print('normalized staging transport artifact in conflict prose:', replacement_paths)
+          replacement_paths2=[]
+          def walk2(v, path=''):
+              if isinstance(v, dict):
+                  for k,x in v.items(): walk2(x, f'{path}.{k}' if path else k)
+              elif isinstance(v,list):
+                  for i,x in enumerate(v): walk2(x, f'{path}[{i}]')
+              elif isinstance(v,str) and '\ufffd' in v: replacement_paths2.append(path)
+          walk2(new)
+          if replacement_paths2:
+              raise SystemExit(f'Replacement characters remain after deterministic repair: {replacement_paths2}')
+
           scan_paths = [pathlib.Path('data/known-products.ts'), pathlib.Path('data/known-formulas.ts'), pathlib.Path('data/wrong-barcodes.ts'), pathlib.Path('docs/CATALOG-CONFLICTS.md')]
           scan_paths += [p for p in pathlib.Path('research').glob('*.json') if p != target]
           collisions=[]
