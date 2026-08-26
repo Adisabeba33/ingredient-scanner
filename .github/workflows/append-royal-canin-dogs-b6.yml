@@ -1,0 +1,56 @@
+name: Guarded Royal Canin dog append b6
+on:
+  push:
+    branches: [agent/deep-research-barcode-ledger]
+    paths:
+      - '.github/workflows/append-royal-canin-dogs-b6.yml'
+permissions:
+  contents: write
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Guard append validate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,pathlib,re
+          root=pathlib.Path('.')
+          target=root/'research/deep-research-royal-canin-dogs.json'
+          payload=root/'research/.royal-canin-dogs-append-2026-08-26-b6.json'
+          batch=json.loads(payload.read_text())['records']; assert len(batch)==10
+          ledger=json.loads(target.read_text()); assert ledger['brand_scope']==['Royal Canin']
+          scan=[root/'data/known-products.ts',root/'data/known-formulas.ts',root/'data/wrong-barcodes.ts',root/'docs/CATALOG-CONFLICTS.md']+sorted((root/'research').glob('deep-research-*.json'))
+          texts={str(p):p.read_text(errors='ignore') for p in scan if p.exists()}
+          def valid(u):
+            assert re.fullmatch(r'\d{12}',u)
+            s=sum((3 if i%2==0 else 1)*int(u[i]) for i in range(11))
+            return (10-s%10)%10==int(u[-1])
+          ids={(r.get('product_name'),r.get('variant'),r.get('size')) for r in ledger['records']}; seen=set()
+          for r in batch:
+            assert r['brand']=='Royal Canin' and r['species']=='dog' and r['research_status']=='source_verified'
+            u=r['upc']; g=r['canonical_gtin14']; assert valid(u),u; assert g==u.zfill(14); assert u not in seen; seen.add(u)
+            ident=(r.get('product_name'),r.get('variant'),r.get('size')); assert ident not in ids,ident; ids.add(ident)
+            hits=[p for p,t in texts.items() if u in t or g in t]
+            if hits: raise SystemExit(f'duplicate/collision {u} in {hits}')
+          ledger['records'].extend(batch); ledger['updated_at']='2026-08-26'
+          ups=[r['upc'] for r in ledger['records']]; gts=[r['canonical_gtin14'] for r in ledger['records']]
+          assert len(ups)==len(set(ups)); assert len(gts)==len(set(gts)); assert all(r['brand']=='Royal Canin' and r['species']=='dog' for r in ledger['records'])
+          target.write_text(json.dumps(ledger,ensure_ascii=False,separators=(',',':'))+'\n')
+          for p in sorted((root/'research').glob('deep-research-*.json')): json.loads(p.read_text())
+          print('APPENDED',len(batch),'TOTAL',len(ledger['records'])); print('UPCS',','.join(r['upc'] for r in batch))
+          PY
+      - name: Commit ledger and cleanup
+        shell: bash
+        run: |
+          rm research/.royal-canin-dogs-append-2026-08-26-b6.json
+          rm .github/workflows/append-royal-canin-dogs-b6.yml
+          git config user.name 'ingredients-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'research: add 10 verified Royal Canin dog records'
+          git push origin HEAD:agent/deep-research-barcode-ledger
