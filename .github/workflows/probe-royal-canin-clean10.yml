@@ -1,0 +1,18 @@
+name: Probe Royal Canin clean 10
+on: push
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+      - shell: bash
+        run: |
+          python - <<'PY'
+          import pathlib
+          files=[pathlib.Path('data/known-products.ts'),pathlib.Path('data/known-formulas.ts'),pathlib.Path('data/wrong-barcodes.ts'),pathlib.Path('docs/CATALOG-CONFLICTS.md'),*pathlib.Path('research').glob('deep-research-*.json')]
+          text='\n'.join(p.read_text(errors='ignore') for p in files if p.exists())
+          c='030111760227 030111760012 030111760029 030111760074 030111498359 030111498304 030111460462 030111460431 030111428219 030111428271 030111476425 030111476470 030111472120 030111472175 030111488213 030111488275 030111483911 030111483980 030111420619 030111426024 030111426062 030111760432 030111482501'.split()
+          for u in c: print(u, 'EXISTS' if u in text else 'NEW')
+          PY
