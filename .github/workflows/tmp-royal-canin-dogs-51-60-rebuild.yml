@@ -1,0 +1,158 @@
+name: Temporary Royal Canin dogs 51-60 rebuild
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-dogs-51-60-rebuild.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Rebuild from verified source data, validate, append
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          test "$(git hash-object research/deep-research-royal-canin-dogs.json)" = "eb74ed7ecddaf2b2add540f07d8ce834d0e6f5ae"
+          python3 - <<'PY'
+          import json,pathlib,re
+          TARGET=pathlib.Path("research/deep-research-royal-canin-dogs.json")
+          def split_top(s):
+              s=s.strip()
+              if s.endswith("."): s=s[:-1]
+              out=[];cur=[];sq=0;par=0
+              for ch in s:
+                  if ch=="[": sq+=1
+                  elif ch=="]": sq-=1
+                  elif ch=="(": par+=1
+                  elif ch==")": par-=1
+                  if ch=="," and sq==0 and par==0:
+                      out.append("".join(cur).strip());cur=[]
+                  else: cur.append(ch)
+              if cur: out.append("".join(cur).strip())
+              assert sq==0 and par==0
+              return out
+          F={
+            "small_adult_8":{
+              "line":"Size Health Nutrition","name":"Small Adult 8+ Dry Dog Food","variant":"Small Adult 8+","life":"senior","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/small-adult-8%2B-3002",
+              "ingredients":"Corn, chicken by-product meal, brewers rice, corn gluten meal, chicken fat, brown rice, brewers rice flour, natural flavors, dried plain beet pulp, wheat gluten, fish oil, calcium carbonate, potassium chloride, fructooligosaccharides, sodium tripolyphosphate, DL-methionine, choline chloride, L-lysine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, pyridoxine hydrochloride (vitamin B6), niacin supplement, folic acid, thiamine mononitrate (vitamin B1), vitamin B12 supplement, riboflavin supplement, vitamin D3 supplement], salt, magnesium oxide, taurine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], GLA safflower oil, marigold extract (Tagetes erecta L.), green tea extract, L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(25,14,3.5,10,None,None,[("L-Carnitine (mg/kg)","min",35,"other")]),"cal":(3765,343),"adequacy":"Royal Canin USA states adult-maintenance nutritional adequacy for this mature small-dog formula."},
+            "small_aging_12":{
+              "line":"Size Health Nutrition","name":"Small Aging 12+ Dry Dog Food","variant":"Small Aging 12+","life":"senior","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/mini-ageing-12%2B-1007",
+              "ingredients":"Corn, brown rice, brewers rice, wheat gluten, chicken by-product meal, corn protein meal, wheat, chicken fat, natural flavors, dried plain beet pulp, fish oil, dried tomato pomace, vegetable oil, calcium sulfate, potassium chloride, calcium carbonate, choline chloride, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, folic acid, vitamin D3 supplement], L-arginine, sodium tripolyphosphate, fructooligosaccharides, L-lysine, salt, L-tyrosine, rosemary extract, preserved with mixed tocopherols and citric acid, hydrolyzed yeast, taurine, L-tryptophan, magnesium oxide, DL-methionine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], GLA safflower oil, marigold extract (Tagetes erecta L.), L-carnitine.",
+              "ga":(24,12,3.5,10.5,None,0.13,[("Phosphorus","min",0.36,"percent")]),"cal":(3661,308),"adequacy":"Royal Canin USA states adult-maintenance nutritional adequacy for Small Aging 12+."},
+            "small_puppy":{
+              "line":"Size Health Nutrition","name":"Small Puppy Dry Dog Food","variant":"Small Puppy","life":"puppy","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/small-puppy-3000",
+              "ingredients":"Chicken by-product meal, brewers rice, chicken fat, wheat gluten, corn, dried plain beet pulp, natural flavors, corn gluten meal, monocalcium phosphate, pea fiber, vegetable oil, sodium aluminosilicate, calcium carbonate, potassium chloride, fish oil, taurine, fructooligosaccharides, sodium tripolyphosphate, rice flour, hydrolyzed yeast, salt, choline chloride, marine microalgae oil, DL-methionine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, pyridoxine hydrochloride (vitamin B6), folic acid, niacin supplement, vitamin B12 supplement, thiamine mononitrate (vitamin B1), vitamin D3 supplement, riboflavin supplement], trace minerals [zinc proteinate, manganese proteinate, zinc oxide, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), L-lysine, Yucca schidigera extract, carotene, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(29,18,3.9,10.5,None,None,[("Docosahexaenoic Acid (DHA)","min",0.1,"percent"),("Vitamin E","min",400,"IU/kg"),("Ascorbic acid (mg/kg)","min",320,"other")]),"cal":(3832,349),"adequacy":"Royal Canin USA states AAFCO growth nutritional adequacy, including growth of large-size dogs."},
+            "dachshund_adult":{
+              "line":"Breed Health Nutrition","name":"Dachshund Adult Dry Dog Food","variant":"Dachshund Adult","life":"adult","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/dachshund-adult-3059",
+              "ingredients":"Chicken by-product meal, brewers rice, brown rice, oat groats, wheat gluten, chicken fat, natural flavors, dried plain beet pulp, fish oil, powdered cellulose, salt, vegetable oil, sodium silico aluminate, potassium chloride, calcium carbonate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement], fructooligosaccharides, sodium tripolyphosphate, L-lysine, choline chloride, DL-methionine, marigold extract (Tagetes erecta L.), trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], glucosamine hydrochloride, GLA safflower oil, taurine, magnesium oxide, green tea extract, L-carnitine, chondroitin sulfate, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(26,12,4.4,10,None,None,[("Calcium","min",0.6,"percent"),("Phosphorus","min",0.4,"percent"),("L-Carnitine (mg/kg)","min",70,"other"),("Glucosamine (mg/kg)","min",520,"other"),("Chondroitin sulfate (mg/kg)","min",5,"other")]),"cal":(3574,293),"adequacy":"Royal Canin USA states AAFCO adult-maintenance nutritional adequacy."},
+            "poodle_adult":{
+              "line":"Breed Health Nutrition","name":"Poodle Adult Dry Dog Food","variant":"Poodle Adult","life":"adult","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/poodle-adult-3057",
+              "ingredients":"Corn, chicken by-product meal, brewers rice, wheat gluten, chicken fat, corn gluten meal, natural flavors, dried plain beet pulp, vegetable oil, fish oil, powdered cellulose, calcium sulfate, potassium chloride, sodium silico aluminate, L-lysine, DL-methionine, fructooligosaccharides, sodium tripolyphosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement], calcium carbonate, choline chloride, salt, taurine, L-cystine, L-tyrosine, glucosamine hydrochloride, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], magnesium oxide, marigold extract (Tagetes erecta L.), GLA safflower oil, green tea extract, L-carnitine, chondroitin sulfate, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(28,17,4,10,None,None,[("Eicosapentaenoic Acid (EPA)","min",0.13,"percent"),("Docosahexaenoic Acid (DHA)","min",0.05,"percent"),("Omega-3 fatty acids","min",0.44,"percent"),("Glucosamine (mg/kg)","min",371,"other"),("Chondroitin sulfate (mg/kg)","min",4,"other")]),"cal":(3880,353),"adequacy":"Royal Canin USA states AAFCO adult-maintenance nutritional adequacy."},
+            "xsmall_adult":{
+              "line":"Size Health Nutrition","name":"X-Small Adult Dry Dog Food","variant":"X-Small Adult","life":"adult","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/x-small-adult-1003",
+              "ingredients":"Brewers rice, corn, chicken by-product meal, chicken fat, corn gluten meal, wheat gluten, natural flavors, dried chicory root, vegetable oil, fish oil, psyllium seed husk, potassium chloride, calcium sulfate, monocalcium phosphate, salt, L-tyrosine, L-lysine, calcium carbonate, DL-methionine, fructooligosaccharides, sodium tripolyphosphate, L-arginine, choline chloride, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, pyridoxine hydrochloride (vitamin B6), niacin supplement, folic acid, thiamine mononitrate (vitamin B1), vitamin B12 supplement, riboflavin supplement, vitamin D3 supplement], magnesium oxide, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(22,16,3.5,10,None,None,[("Eicosapentaenoic Acid (EPA)","min",0.11,"percent"),("Docosahexaenoic Acid (DHA)","min",0.05,"percent")]),"cal":(3840,369),"adequacy":"Royal Canin USA states AAFCO adult-maintenance nutritional adequacy."},
+            "xsmall_puppy":{
+              "line":"Size Health Nutrition","name":"X-Small Puppy Dry Dog Food","variant":"X-Small Puppy","life":"puppy","recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/puppy-x-small-1002",
+              "ingredients":"Chicken by-product meal, brewers rice, corn, chicken fat, wheat gluten, dried plain beet pulp, natural flavors, corn gluten meal, monocalcium phosphate, vegetable oil, powdered psyllium seed husk, sodium aluminosilicate, calcium carbonate, potassium chloride, pea fiber, fish oil, taurine, fructooligosaccharides, sodium tripolyphosphate, rice flour, choline chloride, hydrolyzed yeast, marine microalgae oil, salt, DL-methionine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, pyridoxine hydrochloride (vitamin B6), folic acid, niacin supplement, vitamin B12 supplement, thiamine mononitrate (vitamin B1), vitamin D3 supplement, riboflavin supplement], L-lysine, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), Yucca schidigera extract, carotene, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(29,18,3.8,10.5,None,None,[("Docosahexaenoic Acid (DHA)","min",0.1,"percent"),("Vitamin E","min",400,"IU/kg"),("Ascorbic acid (mg/kg)","min",320,"other")]),"cal":(3825,405),"adequacy":"Royal Canin USA states AAFCO growth nutritional adequacy, including growth of large-size dogs."},
+            "small_starter":{
+              "line":"Size Health Nutrition","name":"Small Starter Mother & Babydog Dry Dog Food","variant":"Small Starter Mother & Babydog","life":None,"recipe":["chicken"],
+              "url":"https://www.royalcanin.com/us/dogs/products/retail-products/small-starter-mother-%26-babydog-2990",
+              "ingredients":"Chicken by-product meal, brewers rice, chicken fat, corn, wheat gluten, dried plain beet pulp, natural flavors, monocalcium phosphate, vegetable oil, sodium aluminosilicate, potassium chloride, fish oil, pea fiber, salt, taurine, fructooligosaccharides, choline chloride, calcium carbonate, hydrolyzed yeast, rice flour, marine microalgae oil, L-lysine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, niacin supplement, folic acid, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, thiamine mononitrate (vitamin B1), vitamin D3 supplement, riboflavin supplement], DL-methionine, marigold extract (Tagetes erecta L.), L-threonine, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], carotene, rosemary extract, preserved with mixed tocopherols and citric acid.",
+              "ga":(28,20,3.6,10,None,None,[("Docosahexaenoic Acid (DHA)","min",0.12,"percent"),("Vitamin E","min",350,"IU/kg"),("Ascorbic acid (mg/kg)","min",320,"other")]),"cal":(3949,387),"adequacy":"Royal Canin USA states nutritional adequacy for gestation/lactation and puppy growth; the controlled life_stage enum has no faithful combined maternal-plus-puppy value, so life_stage is null rather than mislabelled all."}
+          }
+          M=[
+            ("030111512628","2.5 lb","small_adult_8","https://www.petscience.ca/royal-canin-size-health-nutrition-small-adult-8-dog-2-5lbs-121-51262","PetScience"),
+            ("030111512611","13 lb","small_adult_8","https://www.petscience.ca/royal-canin-size-health-nutrition-small-adult-8-dog-13lbs-121-51261","PetScience"),
+            ("030111512727","2.5 lb","small_aging_12","https://www.torontopets.ca/products/royal-canin-dry-dog-food-small-aging-12-plus","Toronto Pets"),
+            ("030111447555","4 lb","small_puppy","https://www.ebay.com/itm/406918963541","eBay"),
+            ("030111451620","2.5 lb","dachshund_adult","https://www.ebay.com/itm/356461382233","eBay"),
+            ("030111450920","2.5 lb","poodle_adult","https://www.ebay.com/itm/177423232537","eBay"),
+            ("030111512222","2.5 lb","xsmall_adult","https://www.countrymax.com/royal-canin-x-small-adult-dog-food-2-5-pounds/","CountryMax"),
+            ("030111512147","14 lb","xsmall_adult","https://www.torontopets.ca/products/royal-canin-dry-dog-food-x-small-adult","Toronto Pets"),
+            ("030111512109","3 lb","xsmall_puppy","https://feederspetsupply.com/royal-canin-size-health-nutrition-x-small-puppy-dry-dog-food-3-lb/","Feeders Pet Supply"),
+            ("030111445025","2.5 lb","small_starter","https://www.ebay.com/itm/127814546821","eBay")
+          ]
+          def make_ga(t):
+              cp,cf,fib,moist,ash,taur,others=t
+              return {"crude_protein_min_percent":cp,"crude_fat_min_percent":cf,"crude_fiber_max_percent":fib,"moisture_max_percent":moist,"ash_max_percent":ash,"taurine_min_percent":taur,"other_printed_guarantees":[{"nutrient":n,"basis":b,"value":v,"unit":u} for n,b,v,u in others]}
+          batch=[]
+          for upc,size,key,burl,bsource in M:
+              f=F[key]
+              total=sum(int(upc[i])*(3 if i%2==0 else 1) for i in range(11))
+              cd=(10-total%10)%10
+              assert cd==int(upc[-1])
+              conflicts=[]
+              if key=="small_aging_12":
+                  conflicts=["A separate retailer formula panel for this UPC reflects an older generation (different ingredient order, 10.0% max moisture and 0.37% min phosphorus with EPA/DHA guarantees); the current Royal Canin USA page shows the newer formula, 10.5% max moisture, 0.36% min phosphorus and 0.13% min taurine, which are stored."]
+              rec={
+                "catalog_number":None,"upc":upc,"canonical_gtin14":"00"+upc,"barcode_scope":"individual_unit","brand":"Royal Canin","manufacturer":"Royal Canin USA, Inc.","species":"dog","product_line":f["line"],"product_name":f["name"],"variant":f["variant"],"recipe":f["recipe"],"life_stage":f["life"],"food_form":"dry","texture":"kibble","presentation":"plain","package_type":"bag","size":size,
+                "ingredients_verbatim":f["ingredients"],"ingredients_ordered_normalized":split_top(f["ingredients"]),"guaranteed_analysis":make_ga(f["ga"]),"calorie_content":{"kcal_per_kg":f["cal"][0],"kcal_per_unit":f["cal"][1],"unit_name":"cup"},"label_deck_code":None,
+                "formula_source":f"Current Royal Canin USA product page is the formula master for complete ingredients, guaranteed analysis, calories, size availability, and nutritional adequacy; {bsource} listing is used for exact individual-unit UPC and bag-size identity.",
+                "source_urls":[f["url"],burl],"source_accessed_at":"2026-08-25","barcode_notes":f"{bsource} maps UPC {upc} to Royal Canin {f['variant']}, {size} individual retail bag; Royal Canin USA currently lists this size for the formula.","conflicts":conflicts,
+                "verification_notes":[f"UPC-A check digit verified: weighted body sum {total} gives check digit {cd}.",f"Canonical GTIN-14 is zero-left-padded UPC-A 00{upc}.","No repository-wide UPC or GTIN match found before append.","Current Royal Canin USA page is the formula master; barcode source is used only for exact UPC-to-size identity.","Calories are printed per kilogram and per cup; no whole-package calorie value is printed, so package-weight calorie arithmetic does not apply.",f["adequacy"]],"research_status":"source_verified"
+              }
+              if key=="small_aging_12": rec["verification_notes"].append("The older retailer panel and current manufacturer formula were kept as separate generations and were not combined.")
+              batch.append(rec)
+          expected={"030111512628","030111512611","030111512727","030111447555","030111451620","030111450920","030111512222","030111512147","030111512109","030111445025"}
+          assert {r["upc"] for r in batch}==expected and len(batch)==10
+          doc=json.loads(TARGET.read_text(encoding="utf-8"))
+          assert len(doc["records"])==50
+          assert len({r["upc"] for r in doc["records"]})==50
+          assert len({r["canonical_gtin14"] for r in doc["records"]})==50
+          assert not expected & {r["upc"] for r in doc["records"]}
+          new_gtins={r["canonical_gtin14"] for r in batch}
+          paths=[pathlib.Path("data/known-products.ts"),pathlib.Path("data/known-formulas.ts"),pathlib.Path("data/wrong-barcodes.ts"),pathlib.Path("docs/CATALOG-CONFLICTS.md")]
+          paths+=sorted(pathlib.Path("research").glob("deep-research-*.json"))
+          for p in paths:
+              if p==TARGET: continue
+              body=p.read_text(encoding="utf-8")
+              for code in expected|new_gtins:
+                  assert code not in body,f"global collision {code} in {p}"
+          for r in batch:
+              assert r["catalog_number"] is None and r["barcode_scope"]=="individual_unit" and r["brand"]=="Royal Canin" and r["species"]=="dog"
+              assert r["food_form"]=="dry" and r["texture"]=="kibble" and r["presentation"]=="plain" and r["package_type"]=="bag" and r["research_status"]=="source_verified"
+              assert r["ingredients_ordered_normalized"]==split_top(r["ingredients_verbatim"])
+              assert "�" not in json.dumps(r,ensure_ascii=False)
+              ga=r["guaranteed_analysis"]
+              assert all(ga[k] is not None for k in ("crude_protein_min_percent","crude_fat_min_percent","crude_fiber_max_percent","moisture_max_percent"))
+              assert r["calorie_content"]["kcal_per_kg"] is not None and r["calorie_content"]["kcal_per_unit"] is not None and r["calorie_content"]["unit_name"]=="cup"
+              assert len(r["source_urls"])==2 and all(x.startswith("http") for x in r["source_urls"])
+          doc["records"].extend(batch);doc["updated_at"]="2026-08-25"
+          assert len(doc["records"])==60 and len({r["upc"] for r in doc["records"]})==60 and len({r["canonical_gtin14"] for r in doc["records"]})==60
+          TARGET.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+          check=json.loads(TARGET.read_text(encoding="utf-8"))
+          assert len(check["records"])==60 and all(sum(1 for r in check["records"] if r["upc"]==u)==1 for u in expected)
+          print("validated 50->60",sorted(expected))
+          PY
+          git rm .github/workflows/tmp-royal-canin-dogs-51-60.yml .github/workflows/tmp-royal-canin-dogs-51-60-retry.yml .github/workflows/tmp-royal-canin-dogs-51-60-rebuild.yml
+          git add research/deep-research-royal-canin-dogs.json
+          git diff --cached --check
+          git commit -m "research: add Royal Canin dogs records 51-60"
+          git fetch origin agent/deep-research-barcode-ledger
+          remote_blob="$(git ls-tree origin/agent/deep-research-barcode-ledger research/deep-research-royal-canin-dogs.json | awk '{print $3}')"
+          test "$remote_blob" = "eb74ed7ecddaf2b2add540f07d8ce834d0e6f5ae"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          git push origin HEAD:agent/deep-research-barcode-ledger
