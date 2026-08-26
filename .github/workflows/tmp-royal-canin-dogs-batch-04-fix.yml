@@ -1,0 +1,59 @@
+name: Temporary Royal Canin dogs batch 04 identity fix
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.repository == 'Adisabeba33/ingredient-scanner'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Correct Shih Tzu identity typo and validate
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p = pathlib.Path('research/deep-research-royal-canin-dogs.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          if len(d['records']) != 40:
+              raise SystemExit(f"Expected 40 records, found {len(d['records'])}")
+          touched = 0
+          for r in d['records']:
+              if r['upc'] == '030111451514':
+                  if r['product_name'] != 'Shib Tzu Adult Dry Dog Food':
+                      raise SystemExit('Unexpected Adult identity state')
+                  r['product_name'] = 'Shih Tzu Adult Dry Dog Food'
+                  r['verification_notes'].append('Corrected a staging-entry typographical error from Shib Tzu to Shih Tzu after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
+                  touched += 1
+              elif r['upc'] == '030111452252':
+                  if r['variant'] != 'Shib Tzu Puppy' or 'Shib Tzu Puppy' not in r['barcode_notes']:
+                      raise SystemExit('Unexpected Puppy identity state')
+                  r['variant'] = 'Shih Tzu Puppy'
+                  r['barcode_notes'] = r['barcode_notes'].replace('Shib Tzu Puppy', 'Shih Tzu Puppy')
+                  r['verification_notes'].append('Corrected a staging-entry typographical error from Shib Tzu to Shih Tzu after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
+                  touched += 1
+          if touched != 2:
+              raise SystemExit(f'Expected 2 corrected records, touched {touched}')
+          upcs=[r['upc'] for r in d['records']]; gtins=[r['canonical_gtin14'] for r in d['records']]
+          if len(set(upcs)) != 40 or len(set(gtins)) != 40:
+              raise SystemExit('Uniqueness validation failed')
+          if any('Shib Tzu' in json.dumps(r, ensure_ascii=False) for r in d['records']):
+              raise SystemExit('Residual typo remains')
+          p.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':'))+'\n', encoding='utf-8')
+          json.loads(p.read_text(encoding='utf-8'))
+          print('validated', len(d['records']), 'records')
+          PY
+          rm .github/workflows/tmp-royal-canin-dogs-batch-04-fix.yml
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git add research/deep-research-royal-canin-dogs.json .github/workflows/tmp-royal-canin-dogs-batch-04-fix.yml
+          git commit -m "research: correct Royal Canin Shih Tzu staging typo"
+          git push origin HEAD:agent/deep-research-barcode-ledger
