@@ -4,125 +4,24 @@ on:
     paths:
       - '.github/workflows/tmp-royal-canin-cat-finish.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
-  apply:
+  inspect:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-barcode-ledger
-          fetch-depth: 0
-      - name: Append verified cat records and correct US Persian UPC
+      - name: Inspect current Royal Canin cat ledger
         shell: python
         run: |
-          import json, pathlib, subprocess
-          path = pathlib.Path('research/deep-research-royal-canin.json')
-          doc = json.loads(path.read_text())
-          assert len(doc['records']) == 54, f"Expected 54 records, got {len(doc['records'])}"
-
-          def split_top(s):
-              parts=[]; start=0; depth=0
-              for i,ch in enumerate(s):
-                  if ch in '[(': depth += 1
-                  elif ch in '])': depth = max(0, depth-1)
-                  elif ch == ',' and depth == 0:
-                      parts.append(s[start:i].strip())
-                      start=i+1
-              tail=s[start:].strip().rstrip('.')
-              if tail: parts.append(tail)
-              return parts
-
-          def rec(upc, line, name, variant, recipe, life, form, texture, presentation, package, size, ingredients, ga, kcal_kg, kcal_unit, unit_name, sources, notes, conflicts=None):
-              return {
-                'catalog_number': None,
-                'upc': upc,
-                'canonical_gtin14': upc.zfill(14),
-                'barcode_scope': 'individual_unit',
-                'brand': 'Royal Canin',
-                'manufacturer': 'Royal Canin USA, Inc.',
-                'species': 'cat',
-                'product_line': line,
-                'product_name': name,
-                'variant': variant,
-                'recipe': recipe,
-                'life_stage': life,
-                'food_form': form,
-                'texture': texture,
-                'presentation': presentation,
-                'package_type': package,
-                'size': size,
-                'ingredients_verbatim': ingredients,
-                'ingredients_ordered_normalized': split_top(ingredients),
-                'guaranteed_analysis': ga,
-                'calorie_content': {'kcal_per_kg': kcal_kg, 'kcal_per_unit': kcal_unit, 'unit_name': unit_name},
-                'label_deck_code': None,
-                'formula_source': 'Current Royal Canin USA product page for formula/analysis/calories; exact individual-unit UPC and size corroborated by current U.S. distributor or current exact-unit retailer evidence.',
-                'source_urls': sources,
-                'source_accessed_at': '2026-08-25',
-                'barcode_notes': notes,
-                'conflicts': conflicts or [],
-                'verification_notes': ['UPC-A check digit validated.', 'Canonical GTIN-14 is the UPC-A left-padded to 14 digits.', 'Current Royal Canin USA formula, guaranteed analysis, calorie statement, life stage and package size were checked before publication.'],
-                'research_status': 'source_verified'
-              }
-
-          ADMC='https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf'
-          batch=[]
-
-          ing='Water sufficient for processing, pork by-products, chicken, chicken liver, salmon, corn flour, wheat gluten, pork plasma, hydrolyzed chicken liver, powdered cellulose, carrageenan, natural flavors, sodium aluminosilicate, calcium sulfate, guar gum, potassium chloride, sodium tripolyphosphate, taurine, rice flour, glycine, choline chloride, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
-          batch.append(rec('030111411556','Feline Care Nutrition','Royal Canin Digestive Care Loaf in Sauce Wet Cat Food','Digestive Care Loaf in Sauce',['pork','chicken','salmon'],'adult','wet','pate','in_sauce','can','3 oz',ing,{'crude_protein_min_percent':7.3,'crude_fat_min_percent':1.8,'crude_fiber_max_percent':2.7,'moisture_max_percent':82.0,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},806,69,'can',['https://www.royalcanin.com/us/cats/products/retail-products/digestive-care-loaf-in-sauce-4180',ADMC],'ADMC maps UPC 030111411556 to one 3 oz Digest Sensitive Loaf can. Royal Canin now markets the same U.S. care range as Digestive Care; the current official page supplies the current 3 oz formula.',['Distributor nomenclature is Digest Sensitive Loaf while the current Royal Canin USA page uses Digestive Care Loaf in Sauce; exact size/form identity is retained and the current manufacturer formula is stored.']))
-
-          ing='Water sufficient for processing, pork by-products, chicken, chicken liver, salmon, wheat flour, pork plasma, modified corn starch, powdered cellulose, glycine, gelatin, wheat gluten, natural flavors, vegetable oil, sodium aluminosilicate, potassium chloride, carob bean gum, calcium sulfate, rice flour, taurine, choline chloride, sodium tripolyphosphate, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
-          batch.append(rec('030111471550','Feline Care Nutrition','Royal Canin Digestive Care Thin Slices in Gravy Wet Cat Food','Digestive Care Thin Slices in Gravy',['pork','chicken','salmon'],'adult','wet','slices','in_gravy','can','3 oz',ing,{'crude_protein_min_percent':7.2,'crude_fat_min_percent':1.6,'crude_fiber_max_percent':2.5,'moisture_max_percent':82.5,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},789,67,'can',['https://www.royalcanin.com/us/cats/products/retail-products/digestive-care-thin-slices-in-gravy-1430/1',ADMC],'ADMC maps UPC 030111471550 to one 3 oz Digest Sensitive Thin Slices in Gravy can; current Royal Canin USA names the range Digestive Care and confirms the current 3 oz formula.',['Distributor nomenclature is Digest Sensitive while the current manufacturer nomenclature is Digestive Care.']))
-
-          ing='Water sufficient for processing, chicken, pork by-products, chicken liver, pork liver, wheat gluten, wheat flour, pork plasma, gelatin, powdered cellulose, glycine, fish oil, modified corn starch, calcium sulfate, natural flavors, rice flour, potassium chloride, guar gum, sodium tripolyphosphate, choline chloride, taurine, citric acid, vitamins [niacin supplement, DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), D-calcium pantothenate, biotin, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], carrageenan, magnesium oxide, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
-          batch.append(rec('030111604422','Feline Care Nutrition','Royal Canin Hair & Skin Care Thin Slices in Gravy Wet Cat Food','Hair & Skin Care Thin Slices in Gravy',['chicken','pork'],'adult','wet','slices','in_gravy','can','3 oz',ing,{'crude_protein_min_percent':10.0,'crude_fat_min_percent':2.2,'crude_fiber_max_percent':2.7,'moisture_max_percent':80.0,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},900,77,'can',['https://www.royalcanin.com/us/cats/products/retail-products/hair%26skin-care-thin-slices-in-gravy-1475','https://www.thatpetplace.com/royal-canin-feline-intense-beauty-slices-3-oz_2','https://www.kanupets.com/products/royal-canin-hair-skin-care-cat-wet-food',ADMC],'Current exact-unit retailer identifies Hair & Skin Care 3 oz with UPC 030111604422. ADMC retains the former Intense Beauty name for the same individual-unit UPC.',['This UPC is still labeled Intense Beauty in distributor/legacy retailer metadata; current Royal Canin branding is Hair & Skin Care. Current manufacturer formula is stored rather than mixing the legacy ingredient deck.']))
-
-          ing='Water sufficient for processing, pork by-products, chicken, chicken liver, pork liver, wheat gluten, gelatin, powdered cellulose, wheat flour, pork plasma, glycine, modified corn starch, natural flavors, calcium sulfate, potassium chloride, sodium tripolyphosphate, rice flour, guar gum, taurine, choline chloride, citric acid, carrageenan, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement], magnesium oxide, L-carnitine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate].'
-          batch.append(rec('030111604446','Feline Care Nutrition','Royal Canin Weight Care Thin Slices in Gravy Wet Cat Food','Weight Care Thin Slices in Gravy',['pork','chicken'],'adult','wet','slices','in_gravy','can','3 oz',ing,{'crude_protein_min_percent':8.4,'crude_fat_min_percent':1.41,'crude_fiber_max_percent':3.0,'moisture_max_percent':84.4,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[{'nutrient':'L-Carnitine','basis':'min','value':25,'unit':'other'}]},644,55,'can',['https://www.royalcanin.com/us/cats/products/retail-products/weight-care-thin-slices-in-gravy-1433/1','https://www.thatpetplace.com/Royal-Canin-Adult-Ultralight-Cat-Food-3-oz',ADMC],'Current exact-unit retailer maps UPC 030111604446 to Weight Care Thin Slices in Gravy 3 oz. ADMC retains former Ultra Light naming for the same unit UPC.',['Former product name Ultra Light appears in distributor metadata; current Royal Canin USA branding is Weight Care.']))
-
-          ing='Water sufficient for processing, chicken by-products, chicken liver, pork by-products, pork liver, wheat flour, salmon, gelatin, powdered cellulose, pork plasma, natural flavors, wheat gluten, modified corn starch, vegetable oil, guar gum, calcium sulfate, potassium chloride, sodium tripolyphosphate, taurine, fish oil, salt, carrageenan, sodium silico aluminate, magnesium oxide, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate], L-carnitine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), biotin, niacin supplement, D-calcium pantothenate, folic acid, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement].'
-          batch.append(rec('030111471574','Feline Health Nutrition','Royal Canin Spayed/Neutered Thin Slices in Gravy Wet Cat Food','Spayed/Neutered Thin Slices in Gravy',['chicken','pork','salmon'],'adult','wet','slices','in_gravy','can','3 oz',ing,{'crude_protein_min_percent':8.5,'crude_fat_min_percent':1.8,'crude_fiber_max_percent':2.2,'moisture_max_percent':83.0,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},692,59,'can',['https://www.royalcanin.com/us/cats/products/retail-products/spayed--neutered-thin-slices-in-gravy-4095','https://www.petsakes.com/products/ROYAL-CANIN-SPAYED%26NEUTERED-THIN-SLICES-IN-GRAVY-3OZ-p761067146',ADMC],'Current U.S. retailer and ADMC both map UPC 030111471574 to the individual 3 oz Spayed/Neutered Thin Slices in Gravy can.'))
-
-          ing='Chicken by-product meal, brewers rice, corn, wheat gluten, powdered cellulose, pea fiber, natural flavors, chicken fat, dried plain beet pulp, vegetable oil, corn gluten meal, sodium aluminosilicate, sodium pyrophosphate, potassium chloride, powdered psyllium seed husk, taurine, rice flour, salt, calcium carbonate, fish oil, fructooligosaccharides, choline chloride, hydrolyzed yeast, marine microalgae oil, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], DL-methionine, trace minerals [zinc proteinate, manganese proteinate, zinc oxide, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), carotene, rosemary extract, preserved with mixed tocopherols and citric acid.'
-          batch.append(rec('030111541420','Feline Health Nutrition','Royal Canin Kitten Spayed/Neutered Dry Cat Food','Kitten Spayed/Neutered',['chicken'],'kitten','dry','kibble','plain','bag','2.5 lb',ing,{'crude_protein_min_percent':32.0,'crude_fat_min_percent':10.0,'crude_fiber_max_percent':12.3,'moisture_max_percent':7.5,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[{'nutrient':'Calcium','basis':'min','value':0.93,'unit':'percent'},{'nutrient':'Phosphorus','basis':'min','value':0.74,'unit':'percent'},{'nutrient':'Vitamin E','basis':'min','value':294,'unit':'IU/kg'},{'nutrient':'Ascorbic acid','basis':'min','value':144,'unit':'other'}]},3260,280,'cup',['https://www.royalcanin.com/us/cats/products/retail-products/kitten-sterilised-2562','https://www.torontopets.ca/products/royal-canin-dry-cat-food-kitten-spayed-neutered','https://www.petscience.ca/feline-start-of-life-formulas/royal-canin-feline-health-nutrition-kitten-spayed-neutered-cat-2-5lbs-121-54142'],'Exact 2.5 lb sellable bag UPC 030111541420 is exposed in multiple current unit listings; Royal Canin USA confirms the current 2.5 lb package and formula.'))
-
-          ing='Chicken by-product meal, corn, pea fiber, brewers rice, corn gluten meal, natural flavors, chicken fat, wheat, wheat gluten, dried plain beet pulp, vegetable oil, calcium sulfate, sodium pyrophosphate, fish oil, powdered psyllium seed husk, rice flour, choline chloride, fructooligosaccharides, potassium chloride, salt, DL-methionine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], monocalcium phosphate, trace minerals [zinc proteinate, manganese proteinate, zinc oxide, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], taurine, rosemary extract, preserved with mixed tocopherols and citric acid.'
-          batch.append(rec('030111443342','Feline Care Nutrition','Royal Canin Hairball Care Dry Cat Food','Hairball Care',['chicken'],'adult','dry','kibble','plain','bag','14 lb',ing,{'crude_protein_min_percent':32.0,'crude_fat_min_percent':13.0,'crude_fiber_max_percent':8.5,'moisture_max_percent':7.5,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},3564,342,'cup',['https://www.royalcanin.com/us/cats/products/retail-products/hairball-care-2534',ADMC,'https://www.ebay.com/itm/188131401379'],'ADMC maps UPC 030111443342 to the current 14 lb Hairball Care individual bag; current manufacturer page lists 14 lb and current U.S. retail metadata corroborates UPC/size.'))
-
-          def check(upc):
-              total=sum(int(d)*(3 if i%2==0 else 1) for i,d in enumerate(upc[:11]))
-              return str((-total)%10)==upc[-1]
-
-          # Correct the Persian U.S. unit UPC. The prior value is a Canadian-market barcode.
-          pers=[r for r in doc['records'] if r.get('upc')=='030111543578']
-          assert len(pers)==1, f'Expected exactly one prior Canadian Persian record, found {len(pers)}'
-          p=pers[0]
-          assert p['product_name']=='Royal Canin Persian Adult Dry Cat Food' and p['size']=='7 lb'
-          p['upc']='030111843579'; p['canonical_gtin14']='00030111843579'
-          p['source_urls']=['https://www.royalcanin.com/us/cats/products/retail-products/persian-adult-2552', 'https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf', 'https://www.countrymax.com/royal-canin-persian-dry-cat-food-7lb-bag/']
-          p['barcode_notes']='Corrected 2026-08-25 for U.S. scope: current U.S. distributor and U.S. retailer map Persian Adult 7 lb to UPC 030111843579. The prior ledger value 030111543578 is used in Canadian retail listings and was not appropriate for this U.S. ledger identity.'
-          p['conflicts']=list(dict.fromkeys((p.get('conflicts') or [])+['Regional barcode difference: Canadian retailers expose 030111543578 for Persian Adult 7 lb, while current U.S. distributor and U.S. retail evidence use 030111843579. U.S. UPC retained.']))
-          p['verification_notes']=list(dict.fromkeys((p.get('verification_notes') or [])+['UPC corrected from 030111543578 to U.S. UPC 030111843579 after current U.S. distributor cross-check; no formula fields were changed by this barcode correction.','Corrected U.S. UPC-A check digit validated.']))
-
-          existing={r['upc'] for r in doc['records']}
-          for r in batch:
-              assert check(r['upc']), r['upc']
-              assert r['upc'] not in existing, f"duplicate {r['upc']}"
-              assert r['canonical_gtin14']==r['upc'].zfill(14)
-              assert r['ingredients_verbatim'] and r['ingredients_ordered_normalized']
-              existing.add(r['upc'])
-          assert check('030111843579')
-          doc['records'].extend(batch)
-          doc['updated_at']='2026-08-25'
-          assert len(doc['records'])==61
-          assert len({r['upc'] for r in doc['records']})==61
-          assert len({r['canonical_gtin14'] for r in doc['records']})==61
-          assert all(r['brand']=='Royal Canin' and r['species']=='cat' for r in doc['records'])
-          path.write_text(json.dumps(doc,ensure_ascii=False,separators=(',',':'))+'\n')
-          json.loads(path.read_text())
-          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
-          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
-          subprocess.run(['git','add',str(path)],check=True)
-          subprocess.run(['git','commit','-m','research: add 7 verified Royal Canin cat SKUs and correct Persian UPC'],check=True)
-          subprocess.run(['git','push','origin','HEAD:agent/deep-research-barcode-ledger'],check=True)
+          import json
+          d=json.load(open('research/deep-research-royal-canin.json'))
+          print('COUNT',len(d['records']))
+          print('LAST15')
+          for r in d['records'][-15:]: print(r['upc'],'|',r['product_name'],'|',r['size'],'|',r['research_status'])
+          wanted=['030111411556','030111471550','030111604422','030111604446','030111471574','030111541420','030111443342','030111543578','030111843579']
+          print('WANTED')
+          for u in wanted:
+              hits=[(r['product_name'],r['size'],r['research_status']) for r in d['records'] if r['upc']==u]
+              print(u,hits)
