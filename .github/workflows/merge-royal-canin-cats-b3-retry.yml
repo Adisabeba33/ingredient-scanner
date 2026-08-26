@@ -6,6 +6,8 @@ on:
       - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/merge-royal-canin-cats-b3-retry.yml
+      - .github/scripts/run-royal-canin-cats-merge.py
+      - .github/workflows/tmp-royal-canin-cats-120-140.yml
   workflow_dispatch:
 
 permissions:
@@ -19,19 +21,8 @@ jobs:
         with:
           ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Execute validated Royal Canin cats renal GI merge
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          marker="          python - <<'PY'\n"
-          start=src.index(marker)+len(marker)
-          end=src.index("\n          PY\n",start)
-          block=src[start:end]
-          code='\n'.join(line[10:] if line.startswith('          ') else line for line in block.splitlines())+'\n'
-          compiled=compile(code,'royal-canin-cats-renal-gi','exec')
-          exec(compiled,{'__name__':'__main__'})
-          PY
+      - name: Validate and merge Royal Canin cats renal GI records
+        run: python .github/scripts/run-royal-canin-cats-merge.py
       - name: Commit merged ledger
         run: |
           git config user.name "ingredients-research-bot"
