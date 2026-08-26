@@ -1,0 +1,89 @@
+name: Temporary Royal Canin dogs batch 03 apply
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-royal-canin-dogs-batch-03.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Append verified Royal Canin dog records
+        shell: python
+        run: |
+          import base64, copy, json, pathlib, subprocess, zlib
+          path = pathlib.Path('research/deep-research-royal-canin-dogs.json')
+          workflow = pathlib.Path('.github/workflows/tmp-royal-canin-dogs-batch-03.yml')
+          payload = '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'
+          static_records = json.loads(zlib.decompress(base64.b64decode(payload)))
+          raw = path.read_text(encoding='utf-8')
+          data = json.loads(raw)
+          existing = data.get('records', [])
+          by_upc = {r['upc']: r for r in existing}
+
+          clone_specs = [
+              ('030111416735','030111453778','00030111453778','17 lb','Labrador Retriever Adult',62,8),
+              ('030111520449','030111520470','00030111520470','17 lb','Boxer Adult',50,0),
+              ('030111520807','030111520876','00030111520876','17 lb','German Shepherd Adult',54,6),
+          ]
+          cloned = []
+          for source_upc,new_upc,new_gtin,size,variant,weighted_sum,check_digit in clone_specs:
+              if source_upc not in by_upc:
+                  raise SystemExit(f'missing source formula {source_upc}')
+              r = copy.deepcopy(by_upc[source_upc])
+              r['upc'] = new_upc
+              r['canonical_gtin14'] = new_gtin
+              r['size'] = size
+              r['barcode_notes'] = f'ADMC maps UPC {new_upc} to {variant}, {size} individual unit.'
+              r['verification_notes'] = [
+                  f'UPC-A check digit verified: weighted sum {weighted_sum} gives check digit {check_digit}.',
+                  f'Canonical GTIN-14 is zero-left-padded UPC-A {new_gtin}.',
+                  'No repository-wide UPC match found before append.',
+                  'Formula is the same current Royal Canin USA product page formula already verified for another listed bag size of this exact variant.'
+              ]
+              r['research_status'] = 'source_verified'
+              r['conflicts'] = []
+              cloned.append(r)
+
+          new_records = cloned + static_records
+          existing_upcs = {r.get('upc') for r in existing}
+          existing_gtins = {r.get('canonical_gtin14') for r in existing}
+          new_upcs = [r['upc'] for r in new_records]
+          new_gtins = [r['canonical_gtin14'] for r in new_records]
+          if len(new_records) != 10:
+              raise SystemExit('incoming batch must contain exactly 10 records')
+          if len(new_upcs) != len(set(new_upcs)) or len(new_gtins) != len(set(new_gtins)):
+              raise SystemExit('duplicate UPC/GTIN inside incoming batch')
+          overlap_upc = existing_upcs.intersection(new_upcs)
+          overlap_gtin = existing_gtins.intersection(new_gtins)
+          if overlap_upc or overlap_gtin:
+              if set(new_upcs).issubset(existing_upcs) and set(new_gtins).issubset(existing_gtins):
+                  print('Batch already present; removing temporary workflow only.')
+              else:
+                  raise SystemExit(f'partial/collision state: UPC={sorted(overlap_upc)} GTIN={sorted(overlap_gtin)}')
+          else:
+              if not raw.endswith(']}'):
+                  raise SystemExit('unexpected ledger suffix; refusing unsafe append')
+              payload_text = json.dumps(new_records, separators=(',', ':'), ensure_ascii=False)[1:-1]
+              updated = raw[:-2] + ',' + payload_text + ']}'
+              check = json.loads(updated)
+              if len(check['records']) != len(existing) + 10:
+                  raise SystemExit('record-count validation failed')
+              if check['records'][:len(existing)] != existing:
+                  raise SystemExit('pre-existing records changed; refusing write')
+              path.write_text(updated, encoding='utf-8')
+
+          subprocess.run(['git','config','user.name','github-actions[bot]'], check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'], check=True)
+          subprocess.run(['git','add',str(path)], check=True)
+          if workflow.exists():
+              subprocess.run(['git','rm',str(workflow)], check=True)
+          status = subprocess.run(['git','diff','--cached','--quiet'])
+          if status.returncode != 0:
+              subprocess.run(['git','commit','-m','research: add Royal Canin dogs batch 03'], check=True)
+              subprocess.run(['git','push','origin','HEAD:agent/deep-research-barcode-ledger'], check=True)
