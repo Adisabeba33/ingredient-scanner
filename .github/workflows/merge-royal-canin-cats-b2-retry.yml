@@ -1,0 +1,73 @@
+name: Merge Royal Canin Cats batch 2 retry
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/merge-royal-canin-cats-b2-retry.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Validate exclusions and append batch
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          target_path=Path('research/deep-research-royal-canin.json')
+          payload_path=Path('research/.royal-canin-cats-append-2026-08-26-b2.json')
+          target=json.loads(target_path.read_text(encoding='utf-8'))
+          rows=json.loads(payload_path.read_text(encoding='utf-8'))['records']
+          assert len(rows)==10
+          candidates=[r['upc'] for r in rows]
+          assert len(candidates)==len(set(candidates))
+          def valid_upca(code):
+              if len(code)!=12 or not code.isdigit(): return False
+              d=[int(x) for x in code]
+              s=sum(x*(3 if i%2==0 else 1) for i,x in enumerate(d[:11]))
+              return (10-s%10)%10==d[-1]
+          required=['upc','canonical_gtin14','barcode_scope','brand','species','product_name','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','source_urls','research_status']
+          for r in rows:
+              assert all(k in r for k in required)
+              assert r['brand']=='Royal Canin' and r['species']=='cat' and r['barcode_scope']=='individual_unit'
+              assert valid_upca(r['upc']), r['upc']
+              assert r['canonical_gtin14']==r['upc'].zfill(14)
+              assert r['ingredients_verbatim'].strip() and r['ingredients_ordered_normalized'] and r['source_urls']
+          existing=target['records']; initial_count=len(existing)
+          existing_upcs=[r['upc'] for r in existing]
+          assert len(existing_upcs)==len(set(existing_upcs))
+          overlap=sorted(set(candidates)&set(existing_upcs)); assert not overlap, overlap
+          exclusion_paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
+          exclusion_paths += [p for p in Path('research').glob('deep-research-*.json') if p != target_path]
+          hits={}
+          for p in exclusion_paths:
+              if not p.exists(): continue
+              text=p.read_text(encoding='utf-8',errors='replace')
+              for r in rows:
+                  if r['upc'] in text or r['canonical_gtin14'] in text:
+                      hits.setdefault(r['upc'],[]).append(str(p))
+          assert not hits, hits
+          target['records'].extend(rows); target['updated_at']='2026-08-26'
+          assert len(target['records'])==initial_count+10
+          final=[r['upc'] for r in target['records']]; assert len(final)==len(set(final))
+          target_path.write_text(json.dumps(target,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          print(f'Validated {len(exclusion_paths)} exclusion files; {initial_count} + 10 = {len(target["records"])}')
+          print('UPCs: '+', '.join(candidates))
+          PY
+      - name: Commit merged ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-royal-canin.json
+          git commit -m "research: add 10 more Royal Canin Veterinary Feline records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
