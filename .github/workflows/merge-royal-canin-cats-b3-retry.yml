@@ -71,3 +71,5 @@ jobs:
           fi
           git commit -m "research: add 11 more Royal Canin Veterinary Feline records"
           git push origin HEAD:agent/deep-research-barcode-ledger
+
+# retrigger 2026-08-26T12:50-04:00
