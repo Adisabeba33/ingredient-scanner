@@ -27,10 +27,16 @@ jobs:
           if len(d.get('records', [])) != 40:
               raise SystemExit(f"Expected 40 baseline records, found {len(d.get('records', []))}; refusing concurrent overwrite")
           wf = source_wf.read_text(encoding='utf-8')
-          m = re.search(r'RECORDS_B64:\s*"([A-Za-z0-9+/=]+)"', wf)
-          if not m:
-              raise SystemExit('Could not recover staged payload')
-          raw = base64.b64decode(m.group(1))
+          lines = [line for line in wf.splitlines() if 'RECORDS_B64:' in line]
+          if len(lines) != 1:
+              raise SystemExit(f'Expected exactly one RECORDS_B64 line, found {len(lines)}')
+          payload = lines[0].split('RECORDS_B64:', 1)[1].strip()
+          if payload.startswith('"') and payload.endswith('"'):
+              payload = payload[1:-1]
+          payload = ''.join(payload.split())
+          if not payload or re.search(r'[^A-Za-z0-9+/=]', payload):
+              raise SystemExit('Recovered payload still contains non-base64 characters')
+          raw = base64.b64decode(payload, validate=True)
           text = raw.decode('utf-8', errors='replace')
           new = json.loads(text)
           if len(new) != 10:
@@ -39,12 +45,25 @@ jobs:
           expected = ['030111517975','030111179302','030111449283','030111517470','030111517432','030111493880','030111493897','030111512512','030111527035','030111447142']
           if candidate_upcs != expected:
               raise SystemExit(f'Unexpected recovered UPC set/order: {candidate_upcs}')
-          if '\ufffd' in text:
-              # Replacement is acceptable only inside human-readable prose; never in identifiers or structural fields.
+          # Any replacement character caused by the original staging transport is allowed only in human-readable conflict prose.
+          replacement_paths = []
+          def walk(v, path=''):
+              if isinstance(v, dict):
+                  for k, x in v.items(): walk(x, f'{path}.{k}' if path else k)
+              elif isinstance(v, list):
+                  for i, x in enumerate(v): walk(x, f'{path}[{i}]')
+              elif isinstance(v, str) and '\ufffd' in v:
+                  replacement_paths.append(path)
+          walk(new)
+          for p in replacement_paths:
+              if '.conflicts[' not in p:
+                  raise SystemExit(f'Encoding replacement escaped conflict prose: {p}')
+          if replacement_paths:
               for r in new:
-                  critical = json.dumps({k:r.get(k) for k in ['upc','canonical_gtin14','brand','species','product_name','variant','size']}, ensure_ascii=False)
-                  if '\ufffd' in critical:
-                      raise SystemExit(f'Encoding replacement touched critical identity field for {r.get("upc")}')
+                  r['conflicts'] = [s.replace('\ufffd', '-') for s in r.get('conflicts', [])]
+                  if any('\ufffd' in s for s in r.get('conflicts', [])):
+                      raise SystemExit(f'Could not normalize conflict prose for {r["upc"]}')
+              print('normalized staging transport artifact in conflict prose:', replacement_paths)
           scan_paths = [pathlib.Path('data/known-products.ts'), pathlib.Path('data/known-formulas.ts'), pathlib.Path('data/wrong-barcodes.ts'), pathlib.Path('docs/CATALOG-CONFLICTS.md')]
           scan_paths += [p for p in pathlib.Path('research').glob('*.json') if p != target]
           collisions=[]
