@@ -1,0 +1,77 @@
+name: Temporary Royal Canin cat 55-64
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-royal-canin-cat-55-64.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Validate and append batch
+        shell: python
+        run: |
+          import json, pathlib, subprocess
+          ledger_path = pathlib.Path('research/deep-research-royal-canin.json')
+          batch_path = pathlib.Path('research/.tmp-royal-canin-cat-batch-55-64.json')
+          doc = json.loads(ledger_path.read_text())
+          batch = json.loads(batch_path.read_text())
+          expected = [
+            '030111411556','030111471550','030111604422','030111604446','030111471574',
+            '030111416759','030111443342','030111541420','030111549600','030111630131'
+          ]
+          assert len(doc['records']) == 54, len(doc['records'])
+          assert len(batch) == 10
+          assert [r['upc'] for r in batch] == expected
+          existing_upcs = {r['upc'] for r in doc['records']}
+          existing_gtins = {r['canonical_gtin14'] for r in doc['records']}
+          new_upcs, new_gtins = set(), set()
+          textures = {'pate','loaf','mousse','minced','ground','chopped_ground','flaked','shredded','morsels','chunks','cuts','choice_cuts','slices','filets','bits','stew','medley','kibble','biscuit','freeze_dried','air_dried','dehydrated','fresh','raw','unknown'}
+          presentations = {'in_gravy','extra_gravy','in_sauce','in_broth','in_jelly','in_water','gravy_center','gravy_halo','plain','unknown'}
+          def check_digit(upc):
+              body = upc[:11]
+              total = sum(int(d) * (3 if i % 2 == 0 else 1) for i, d in enumerate(body))
+              return str((-total) % 10)
+          for r in batch:
+              assert r['brand'] == 'Royal Canin'
+              assert r['species'] == 'cat'
+              assert r['research_status'] == 'source_verified'
+              assert r['barcode_scope'] == 'individual_unit'
+              assert r['catalog_number'] is None
+              assert len(r['upc']) == 12 and r['upc'].isdigit()
+              assert r['upc'][-1] == check_digit(r['upc'])
+              assert r['canonical_gtin14'] == r['upc'].zfill(14)
+              assert r['upc'] not in existing_upcs and r['upc'] not in new_upcs
+              assert r['canonical_gtin14'] not in existing_gtins and r['canonical_gtin14'] not in new_gtins
+              assert r['texture'] in textures
+              assert r['presentation'] in presentations
+              assert r['food_form'] in {'wet','dry','treat','supplement','unknown'}
+              assert r['package_type'] in {'can','pouch','tub','tray','bag','box','other'}
+              assert isinstance(r['ingredients_verbatim'], str) and r['ingredients_verbatim'].strip()
+              assert isinstance(r['ingredients_ordered_normalized'], list) and r['ingredients_ordered_normalized']
+              assert isinstance(r['source_urls'], list) and r['source_urls']
+              assert isinstance(r['conflicts'], list)
+              assert isinstance(r['verification_notes'], list) and r['verification_notes']
+              new_upcs.add(r['upc']); new_gtins.add(r['canonical_gtin14'])
+          original = json.dumps(doc['records'], sort_keys=True, ensure_ascii=False)
+          doc['records'].extend(batch)
+          doc['updated_at'] = '2026-08-25'
+          assert len(doc['records']) == 64
+          assert len({r['upc'] for r in doc['records']}) == 64
+          assert len({r['canonical_gtin14'] for r in doc['records']}) == 64
+          assert json.dumps(doc['records'][:54], sort_keys=True, ensure_ascii=False) == original
+          ledger_path.write_text(json.dumps(doc, ensure_ascii=False, separators=(',', ':')) + '\n')
+          parsed = json.loads(ledger_path.read_text())
+          assert len(parsed['records']) == 64
+          print('validated_records=64')
+          print('new_upcs=' + ','.join(expected))
+          subprocess.run(['git','config','user.name','github-actions[bot]'], check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'], check=True)
+          subprocess.run(['git','add',str(ledger_path)], check=True)
+          subprocess.run(['git','commit','-m','research: add 10 verified Royal Canin cat SKUs'], check=True)
+          subprocess.run(['git','push','origin','HEAD:agent/deep-research-barcode-ledger'], check=True)
