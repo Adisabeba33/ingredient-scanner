@@ -57,12 +57,12 @@ jobs:
               assert row['source_urls']
 
           existing = target['records']
+          initial_count = len(existing)
           existing_upcs = [r['upc'] for r in existing]
           assert len(existing_upcs) == len(set(existing_upcs)), 'Target already contains duplicate UPCs'
           overlap_target = sorted(set(candidates) & set(existing_upcs))
           assert not overlap_target, f'Batch already overlaps target: {overlap_target}'
 
-          # Mandatory exclusion sources from research/AGENTS.md.
           exclusion_paths = [
               Path('data/known-products.ts'),
               Path('data/known-formulas.ts'),
@@ -86,10 +86,10 @@ jobs:
           target['updated_at'] = '2026-08-26'
           final_upcs = [r['upc'] for r in target['records']]
           assert len(final_upcs) == len(set(final_upcs)), 'Final target contains duplicate UPCs'
-          assert len(target['records']) == len(existing) + 10
+          assert len(target['records']) == initial_count + 10
           target_path.write_text(json.dumps(target, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
           print(f'Validated exclusions: {len(exclusion_paths)} files checked')
-          print(f'Target before: {len(existing)}')
+          print(f'Target before: {initial_count}')
           print('New UPCs: ' + ', '.join(candidates))
           print(f'Target after: {len(target["records"])}')
           PY
