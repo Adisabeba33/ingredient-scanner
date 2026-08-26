@@ -1,0 +1,92 @@
+name: Temporary Royal Canin dogs batch 05 retry
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.repository == 'Adisabeba33/ingredient-scanner'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Recover staged payload append and validate 41-50
+        run: |
+          python - <<'PY'
+          import base64, json, pathlib, re
+          target = pathlib.Path('research/deep-research-royal-canin-dogs.json')
+          source_wf = pathlib.Path('.github/workflows/tmp-royal-canin-dogs-batch-05.yml')
+          d = json.loads(target.read_text(encoding='utf-8'))
+          if len(d.get('records', [])) != 40:
+              raise SystemExit(f"Expected 40 baseline records, found {len(d.get('records', []))}; refusing concurrent overwrite")
+          wf = source_wf.read_text(encoding='utf-8')
+          m = re.search(r'RECORDS_B64:\s*"([A-Za-z0-9+/=]+)"', wf)
+          if not m:
+              raise SystemExit('Could not recover staged payload')
+          raw = base64.b64decode(m.group(1))
+          text = raw.decode('utf-8', errors='replace')
+          new = json.loads(text)
+          if len(new) != 10:
+              raise SystemExit(f"Expected 10 new records, got {len(new)}")
+          candidate_upcs = [r['upc'] for r in new]
+          expected = ['030111517975','030111179302','030111449283','030111517470','030111517432','030111493880','030111493897','030111512512','030111527035','030111447142']
+          if candidate_upcs != expected:
+              raise SystemExit(f'Unexpected recovered UPC set/order: {candidate_upcs}')
+          if '\ufffd' in text:
+              # Replacement is acceptable only inside human-readable prose; never in identifiers or structural fields.
+              for r in new:
+                  critical = json.dumps({k:r.get(k) for k in ['upc','canonical_gtin14','brand','species','product_name','variant','size']}, ensure_ascii=False)
+                  if '\ufffd' in critical:
+                      raise SystemExit(f'Encoding replacement touched critical identity field for {r.get("upc")}')
+          scan_paths = [pathlib.Path('data/known-products.ts'), pathlib.Path('data/known-formulas.ts'), pathlib.Path('data/wrong-barcodes.ts'), pathlib.Path('docs/CATALOG-CONFLICTS.md')]
+          scan_paths += [p for p in pathlib.Path('research').glob('*.json') if p != target]
+          collisions=[]
+          for p in scan_paths:
+              if not p.exists(): continue
+              txt=p.read_text(encoding='utf-8', errors='ignore')
+              for upc in candidate_upcs:
+                  if upc in txt: collisions.append((upc,str(p)))
+          if collisions:
+              raise SystemExit('Repository collision(s): '+repr(collisions))
+          existing={r['upc'] for r in d['records']}
+          if existing.intersection(candidate_upcs):
+              raise SystemExit('Candidate UPC already exists in dog ledger')
+          def check_upc(upc):
+              if not re.fullmatch(r'\d{12}',upc): return False
+              s=sum((3 if i%2==0 else 1)*int(ch) for i,ch in enumerate(upc[:-1]))
+              return ((10-s%10)%10)==int(upc[-1])
+          required=['upc','canonical_gtin14','barcode_scope','brand','species','product_name','variant','food_form','package_type','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','formula_source','source_urls','source_accessed_at','verification_notes','research_status']
+          for r in new:
+              missing=[k for k in required if k not in r]
+              if missing: raise SystemExit(f'Missing fields for {r.get("upc")}: {missing}')
+              if not check_upc(r['upc']): raise SystemExit(f'Invalid UPC check digit {r["upc"]}')
+              if r['canonical_gtin14'] != r['upc'].zfill(14): raise SystemExit(f'Bad GTIN14 {r["upc"]}')
+              if r['barcode_scope']!='individual_unit' or r['brand']!='Royal Canin' or r['species']!='dog' or r['research_status']!='source_verified': raise SystemExit(f'Controlled field failure {r["upc"]}')
+              if not r['ingredients_verbatim'].strip() or not r['ingredients_ordered_normalized']: raise SystemExit(f'Incomplete ingredients {r["upc"]}')
+              ga=r['guaranteed_analysis']
+              for k in ['crude_protein_min_percent','crude_fat_min_percent','crude_fiber_max_percent','moisture_max_percent']:
+                  if ga.get(k) is None: raise SystemExit(f'Missing GA {k} for {r["upc"]}')
+              if len(r['source_urls'])<2: raise SystemExit(f'Need formula + barcode source for {r["upc"]}')
+          d['records'].extend(new)
+          if len(d['records'])!=50: raise SystemExit(f'Expected 50 final records, found {len(d["records"])}')
+          upcs=[r['upc'] for r in d['records']]; gtins=[r['canonical_gtin14'] for r in d['records']]
+          if len(set(upcs))!=50 or len(set(gtins))!=50: raise SystemExit('Final ledger uniqueness failed')
+          d['updated_at']='2026-08-25'
+          target.write_text(json.dumps(d,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          json.loads(target.read_text(encoding='utf-8'))
+          print('validated 50 records; appended',candidate_upcs)
+          PY
+          rm .github/workflows/tmp-royal-canin-dogs-batch-05.yml
+          rm .github/workflows/tmp-royal-canin-dogs-batch-05-retry.yml
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git add research/deep-research-royal-canin-dogs.json .github/workflows/tmp-royal-canin-dogs-batch-05.yml .github/workflows/tmp-royal-canin-dogs-batch-05-retry.yml
+          git commit -m "research: add Royal Canin dogs batch 05"
+          git push origin HEAD:agent/deep-research-barcode-ledger
