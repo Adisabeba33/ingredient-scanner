@@ -31,14 +31,14 @@ jobs:
                   if r['product_name'] != 'Shib Tzu Adult Dry Dog Food':
                       raise SystemExit('Unexpected Adult identity state')
                   r['product_name'] = 'Shih Tzu Adult Dry Dog Food'
-                  r['verification_notes'].append('Corrected a staging-entry typographical error from Shib Tzu to Shih Tzu after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
+                  r['verification_notes'].append('Corrected a staging-entry breed-name typographical error after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
                   touched += 1
               elif r['upc'] == '030111452252':
                   if r['variant'] != 'Shib Tzu Puppy' or 'Shib Tzu Puppy' not in r['barcode_notes']:
                       raise SystemExit('Unexpected Puppy identity state')
                   r['variant'] = 'Shih Tzu Puppy'
                   r['barcode_notes'] = r['barcode_notes'].replace('Shib Tzu Puppy', 'Shih Tzu Puppy')
-                  r['verification_notes'].append('Corrected a staging-entry typographical error from Shib Tzu to Shih Tzu after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
+                  r['verification_notes'].append('Corrected a staging-entry breed-name typographical error after remote re-fetch; barcode, size, formula, and source evidence were unchanged.')
                   touched += 1
           if touched != 2:
               raise SystemExit(f'Expected 2 corrected records, touched {touched}')
