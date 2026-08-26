@@ -1,0 +1,89 @@
+name: Temporary Royal Canin dogs 111-120 unique append
+on:
+  push:
+    branches: [agent/deep-research-barcode-ledger]
+    paths: ['.github/workflows/tmp-royal-canin-dogs-111-120-unique.yml']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Guard, append, validate, commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          python3 - <<'PY'
+          import json,pathlib
+          T=pathlib.Path('research/deep-research-royal-canin-dogs.json')
+          doc=json.loads(T.read_text())
+          assert len(doc['records'])==110, len(doc['records'])
+          ADMC='https://savma.vetmed.ucdavis.edu/sites/g/files/dgvnsk5966/files/inline-files/Royal%20Canin%20Price%20List%202023_0.pdf'
+          def split(s):
+            s=s.rstrip('.'); out=[]; cur=[]; a=b=0
+            for c in s:
+              if c=='[': a+=1
+              elif c==']': a-=1
+              elif c=='(': b+=1
+              elif c==')': b-=1
+              if c==',' and a==0 and b==0: out.append(''.join(cur).strip()); cur=[]
+              else: cur.append(c)
+            if cur: out.append(''.join(cur).strip())
+            return out
+          def check(u):
+            assert isinstance(u,str) and len(u)==12 and u.isdigit()
+            total=sum(int(u[i])*(3 if i%2==0 else 1) for i in range(11)); cd=(10-total%10)%10
+            assert cd==int(u[-1]),(u,cd)
+            return total,cd
+          def og(n,b,v,u): return {'nutrient':n,'basis':b,'value':v,'unit':u}
+          GI_ING='Chicken by-product meal, brown rice, corn, brewers rice, chicken fat, natural flavors, egg product, corn protein meal, dried plain beet pulp, vegetable oil, monocalcium phosphate, fish oil, calcium carbonate, powdered cellulose, salt, potassium chloride, powdered psyllium seed husk, sodium aluminosilicate, fructooligosaccharides, choline chloride, marine microalgae oil, vitamins[L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), biotin, D-calcium pantothenate, vitamin A acetate, riboflavin supplement, niacin supplement, vitamin B12 supplement, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin D3 supplement, folic acid], hydrolyzed yeast, DL-methionine, trace minerals[zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], taurine, marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          HF_ING='Chicken by-product meal, brewers rice, pea fiber, chicken fat, wheat, corn, powdered cellulose, natural flavors, wheat gluten, corn protein meal, dried plain beet pulp, vegetable oil, powdered psyllium seed husk, sodium aluminosilicate, potassium chloride, salt, fish oil, calcium carbonate, monocalcium phosphate, fructooligosaccharides, DL-methionine, marine microalgae oil, hydrolyzed yeast, vitamins[L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), biotin, D-calcium pantothenate, vitamin A acetate, riboflavin supplement, niacin supplement, vitamin B12 supplement, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin D3 supplement, folic acid], choline chloride, L-lysine, taurine, trace minerals[zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          LF_ING='Brewers rice, chicken by-product meal, barley, natural flavors, pork digest, pea fiber, dried plain beet pulp, chicken fat, monocalcium phosphate, salt, potassium chloride, calcium carbonate, powdered psyllium seed husk, sodium aluminosilicate, fish oil, fructooligosaccharides, choline chloride, vitamins[DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, D-calcium pantothenate, vitamin A acetate, riboflavin supplement, niacin supplement, vitamin B12 supplement, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin D3 supplement, folic acid], rosemary extract, preserved with mixed tocopherols and citric acid, hydrolyzed yeast, DL-methionine, marigold extract (Tagetes erecta L.), trace minerals[zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], taurine.'
+          PUP_ING='Brewers rice, chicken by-product meal, chicken fat, natural flavors, dried plain beet pulp, wheat gluten, egg product, corn protein meal, monocalcium phosphate, vegetable oil, pea fiber, fish oil, sodium aluminosilicate, potassium chloride, salt, taurine, powdered psyllium seed husk, calcium carbonate, fructooligosaccharides, hydrolyzed yeast, marine microalgae oil, vitamins[L-ascorbyl-2-polyphosphate (source of vitamin C), DL-alpha tocopherol acetate (source of vitamin E), biotin, D-calcium pantothenate, vitamin A acetate, riboflavin supplement, niacin supplement, vitamin B12 supplement, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin D3 supplement, folic acid], DL-methionine, L-threonine, choline chloride, trace minerals[zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), carotene, rosemary extract, preserved with mixed tocopherols and citric acid.'
+          specs=[
+          ('030111484000','Canine Gastrointestinal','8.8 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-3911',GI_ING,23,18,3.7,10,3902,394,[og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.24,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.25,'percent'),og('Vitamin E','min',350,'IU/kg'),og('Ascorbic acid (mg/kg)','min',240,'other')]),
+          ('030111484024','Canine Gastrointestinal','22 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-3911',GI_ING,23,18,3.7,10,3902,394,[og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.24,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.25,'percent'),og('Vitamin E','min',350,'IU/kg'),og('Ascorbic acid (mg/kg)','min',240,'other')]),
+          ('030111483980','Canine Gastrointestinal High Fiber','8.8 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-high-fibre-3959',HF_ING,21,14,13.3,10.5,3334,287,[og('Crude Fiber','min',7.9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.20,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.27,'percent'),og('Vitamin E','min',294,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483911','Canine Gastrointestinal High Fiber','17.6 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-high-fibre-3959',HF_ING,21,14,13.3,10.5,3334,287,[og('Crude Fiber','min',7.9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.20,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.27,'percent'),og('Vitamin E','min',294,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483805','Canine Gastrointestinal Low Fat','1.5 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-low-fat-3932',LF_ING,20,5,4.8,10.5,3210,247,[og('Crude Fat','max',9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.08,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.28,'percent'),og('Vitamin E','min',280,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483867','Canine Gastrointestinal Low Fat','6.6 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-low-fat-3932',LF_ING,20,5,4.8,10.5,3210,247,[og('Crude Fat','max',9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.08,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.28,'percent'),og('Vitamin E','min',280,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483812','Canine Gastrointestinal Low Fat','17.6 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-low-fat-3932',LF_ING,20,5,4.8,10.5,3210,247,[og('Crude Fat','max',9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.08,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.28,'percent'),og('Vitamin E','min',280,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483829','Canine Gastrointestinal Low Fat','28.6 lb','adult','https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-low-fat-3932',LF_ING,20,5,4.8,10.5,3210,247,[og('Crude Fat','max',9,'percent'),og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.08,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.28,'percent'),og('Vitamin E','min',280,'IU/kg'),og('Ascorbic acid (mg/kg)','min',200,'other')]),
+          ('030111483584','Canine Gastrointestinal Puppy','8.8 lb',None,'https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-puppy-3957',PUP_ING,27,20,3.8,10,3942,426,[og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.26,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.27,'percent'),og('Vitamin E','min',350,'IU/kg'),og('Ascorbic acid (mg/kg)','min',320,'other')]),
+          ('030111483522','Canine Gastrointestinal Puppy','22 lb',None,'https://www.royalcanin.com/us/dogs/products/vet-products/gastrointestinal-puppy-3957',PUP_ING,27,20,3.8,10,3942,426,[og('Eicosapentaenoic + Docosahexaenoic acid (EPA + DHA)','min',0.26,'percent'),og('Potassium','min',0.54,'percent'),og('Sodium','min',0.27,'percent'),og('Vitamin E','min',350,'IU/kg'),og('Ascorbic acid (mg/kg)','min',320,'other')])]
+          batch=[]
+          for u,v,size,life,url,ing,p,f,fi,m,kg,cup,other in specs:
+            total,cd=check(u)
+            notes=[f'UPC-A check digit verified: weighted body sum {total} gives check digit {cd}.',f'Canonical GTIN-14 is zero-left-padded UPC-A 00{u}.','Repository-wide guarded checkout found no UPC or GTIN collision before append.','Current Royal Canin USA product page is the formula master; distributor price list supplies exact UPC-to-unit-size identity.']
+            if life is None: notes.append('Life stage is left null because the official formula covers mothers during gestation/lactation and puppies from weaning through growth; the controlled enum has no honest combined value.')
+            batch.append({'catalog_number':None,'upc':u,'canonical_gtin14':'00'+u,'barcode_scope':'individual_unit','brand':'Royal Canin','manufacturer':'Royal Canin USA, Inc.','species':'dog','product_line':'Veterinary Health Nutrition','product_name':v+' Dry Dog Food','variant':v,'recipe':['chicken'],'life_stage':life,'food_form':'dry','texture':'kibble','presentation':'plain','package_type':'bag','size':size,'ingredients_verbatim':ing,'ingredients_ordered_normalized':split(ing),'guaranteed_analysis':{'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':other},'calorie_content':{'kcal_per_kg':kg,'kcal_per_unit':cup,'unit_name':'cup'},'label_deck_code':None,'formula_source':'Current Royal Canin USA English product page for formula/GA/calories/adequacy; Royal Canin veterinary distributor price list for exact individual UPC and unit size.','source_urls':[url,ADMC],'source_accessed_at':'2026-08-26','barcode_notes':f'Royal Canin veterinary price list maps UPC {u} to {v}, {size} under Unit Size. Case/shipping identifiers are not used.','conflicts':[],'verification_notes':notes,'research_status':'source_verified'})
+          expected={x[0] for x in specs}; assert len(expected)==10
+          old_u={r['upc'] for r in doc['records']}; old_g={r['canonical_gtin14'] for r in doc['records']}
+          assert not expected&old_u, expected&old_u
+          assert not {'00'+u for u in expected}&old_g
+          paths=[pathlib.Path('data/known-products.ts'),pathlib.Path('data/known-formulas.ts'),pathlib.Path('data/wrong-barcodes.ts'),pathlib.Path('docs/CATALOG-CONFLICTS.md')]+sorted(pathlib.Path('research').glob('deep-research-*.json'))
+          for p in paths:
+            if p==T: continue
+            body=p.read_text(errors='strict')
+            for code in expected|{'00'+u for u in expected}: assert code not in body,f'collision {code} in {p}'
+          for r in batch:
+            assert r['canonical_gtin14']=='00'+r['upc'] and r['ingredients_verbatim'] and r['ingredients_ordered_normalized'] and r['source_urls'] and r['research_status']=='source_verified'
+            assert '\ufffd' not in json.dumps(r,ensure_ascii=False)
+          doc['records'].extend(batch); doc['updated_at']='2026-08-26'
+          assert len(doc['records'])==120
+          assert len({r['upc'] for r in doc['records']})==120
+          assert len({r['canonical_gtin14'] for r in doc['records']})==120
+          T.write_text(json.dumps(doc,separators=(',',':'),ensure_ascii=False)+'\n')
+          json.loads(T.read_text())
+          PY
+          git rm .github/workflows/tmp-royal-canin-dogs-111-120-unique.yml
+          git add research/deep-research-royal-canin-dogs.json
+          git commit -m "research: add Royal Canin dogs records 111-120"
+          git push origin agent/deep-research-barcode-ledger
