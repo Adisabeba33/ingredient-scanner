@@ -1,129 +1,49 @@
-name: Temporary Royal Canin cat next 10 apply
+name: Temporary Royal Canin cat next 10 verify
 on:
   push:
     paths:
       - '.github/workflows/tmp-royal-canin-cat-55-64.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
-  apply:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-barcode-ledger
-          fetch-depth: 0
-      - name: Build validate and append 10 cat records
+      - name: Verify committed cat ledger
         shell: python
         run: |
-          import copy, json, pathlib, subprocess
-
-          ledger_path = pathlib.Path('research/deep-research-royal-canin.json')
-          doc = json.loads(ledger_path.read_text())
-          original_records = copy.deepcopy(doc['records'])
-          expected = [
-            '030111444264','030111701619','030111710314','030111710987','030111716750',
-            '030111701350','030111710413','030111711083','030111701114','030111715388'
-          ]
-
-          V_DRY = 'vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, vitamin D3 supplement, folic acid]'
-          M_DRY = 'trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate]'
-          V_WET = 'vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement]'
-          M_WET = 'trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, copper sulfate, manganous oxide, sodium selenite, calcium iodate]'
-          V_URINARY = 'vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, folic acid, vitamin B12 supplement, vitamin D3 supplement]'
-          M_HAIRBALL = 'trace minerals [zinc oxide, zinc proteinate, ferrous sulfate, copper sulfate, manganous oxide, calcium iodate, sodium selenite]'
-
-          digestive_dry = [
-            'Brewers rice','chicken by-product meal','wheat gluten','soy protein isolate','chicken fat','corn gluten meal','natural flavors','pea fiber','wheat','corn','dried chicory root','calcium sulfate','fish oil','vegetable oil','sodium aluminosilicate','sodium pyrophosphate','potassium chloride','choline chloride','powdered psyllium seed husk','sodium bisulfate','monocalcium phosphate','rice flour','fructooligosaccharides','salt','hydrolyzed yeast',V_DRY,M_DRY,'rosemary extract','preserved with mixed tocopherols and citric acid'
-          ]
-          digestive_51 = [
-            'Water sufficient for processing','pork by-products','chicken by-products','chicken liver','salmon meal','wheat flour','pork plasma','modified corn starch','powdered cellulose','glycine','gelatin','wheat gluten','natural flavors','vegetable oil','sodium aluminosilicate','potassium chloride','carob bean gum','calcium sulfate','taurine','choline chloride','sodium tripolyphosphate',V_WET,M_WET
-          ]
-          hair_skin_loaf = [
-            'Water sufficient for processing','pork by-products','chicken','chicken liver','pork liver','brewers rice flour','gelatin','wheat gluten','pork plasma','powdered cellulose','vegetable oil','hydrolyzed chicken liver','fish oil','calcium sulfate','potassium chloride','carob bean gum','carrageenan','taurine','guar gum','natural flavors','sodium tripolyphosphate','choline chloride','citric acid','vitamins [niacin supplement, DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), D-calcium pantothenate, biotin, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin B12 supplement, folic acid, vitamin D3 supplement]','glycine','magnesium oxide',M_WET
-          ]
-          hairball = [
-            'Water sufficient for processing','chicken by-products','pork by-products','chicken liver','pork liver','corn flour','powdered cellulose','modified corn starch','pork plasma','natural flavors','carob bean gum','sodium tripolyphosphate','tricalcium phosphate','calcium carbonate','potassium chloride','hydrolyzed yeast','sodium aluminosilicate','DL-methionine','taurine','vitamins [DL-alpha tocopherol acetate (source of vitamin E), thiamine mononitrate (vitamin B1), niacin supplement, biotin, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, folic acid, vitamin B12 supplement, vitamin D3 supplement]','cysteine','glycine','sodium carbonate','calcium sulfate','psyllium seed husk',M_HAIRBALL
-          ]
-          urinary = [
-            'Water sufficient for processing','pork by-products','chicken by-products','pork liver','chicken','wheat flour','wheat gluten','modified corn starch','powdered cellulose','pork plasma','natural flavors','calcium sulfate','potassium chloride','carob bean gum','taurine',V_URINARY,'sodium tripolyphosphate','choline chloride','salt','sodium carbonate','marigold extract (Tagetes erecta L.)',M_WET
-          ]
-          weight_loaf = [
-            'Water sufficient for processing','pork by-products','chicken','chicken liver','pork liver','wheat gluten','brewers rice flour','powdered cellulose','gelatin','pork plasma','hydrolyzed chicken liver','calcium sulfate','carrageenan','guar gum','potassium chloride','carob bean gum','natural flavors','taurine','sodium tripolyphosphate','choline chloride',V_WET,'glycine','L-carnitine',M_WET
-          ]
-          weight_thin_51 = [
-            'Water sufficient for processing','pork by-products','chicken by-products','chicken liver','wheat gluten','gelatin','powdered cellulose','wheat flour','pork plasma','glycine','modified corn starch','natural flavors','calcium sulfate','potassium chloride','sodium tripolyphosphate','guar gum','taurine','choline chloride','citric acid','carrageenan',V_WET,'magnesium oxide','L-carnitine',M_WET
-          ]
-          weight_thin_3 = [
-            'Water sufficient for processing','pork by-products','chicken','chicken liver','pork liver','wheat gluten','gelatin','powdered cellulose','wheat flour','pork plasma','glycine','modified corn starch','natural flavors','calcium sulfate','potassium chloride','sodium tripolyphosphate','rice flour','guar gum','taurine','choline chloride','citric acid','carrageenan',V_WET,'magnesium oxide','L-carnitine',M_WET
-          ]
-
-          def ga(p,f,fi,m,other=None):
-              return {'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':other or []}
-
-          def rec(upc, line, name, variant, recipe, form, texture, presentation, package, size, ingredients, analysis, kcalkg, kcalunit, unit_name, official, barcode_source, barcode_notes, conflicts=None):
-              return {
-                'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Royal Canin','manufacturer':'Royal Canin USA, Inc.','species':'cat','product_line':line,'product_name':name,'variant':variant,'recipe':recipe,'life_stage':'adult','food_form':form,'texture':texture,'presentation':presentation,'package_type':package,'size':size,
-                'ingredients_verbatim':', '.join(ingredients)+'.','ingredients_ordered_normalized':ingredients,
-                'guaranteed_analysis':analysis,'calorie_content':{'kcal_per_kg':kcalkg,'kcal_per_unit':kcalunit,'unit_name':unit_name},'label_deck_code':None,
-                'formula_source':'Current Royal Canin manufacturer product page for complete formula/analysis/calories; exact sellable-unit barcode and size independently mapped by a current North American distributor or retailer.',
-                'source_urls':[official,barcode_source,'https://www.pacificpet.net/Home/ProductListing?FoodAccSpec=FOOD&Itembrand=Royal+Canin&Itemgroup=Cat'],
-                'source_accessed_at':'2026-08-25','barcode_notes':barcode_notes,'conflicts':conflicts or [],
-                'verification_notes':['UPC-A check digit validated.','Canonical GTIN-14 is the UPC-A left-padded to 14 digits.','Barcode evidence identifies the exact individual retail size; the 24/CS or 24-can notation is distributor case quantity and was not substituted as the barcode scope.','Current manufacturer formula, complete ingredient order, guaranteed analysis, calories, and adult-maintenance adequacy statement were captured without mixing package sizes or formula generations.'],
-                'research_status':'source_verified'
-              }
-
-          batch = [
-            rec('030111444264','Feline Care Nutrition','Royal Canin Digestive Care Dry Cat Food','Digestive Care',['chicken'],'dry','kibble','plain','bag','14 lb',digestive_dry,ga(36.0,13.0,4.8,7.5),3659,333,'cup','https://www.royalcanin.com/us/cats/products/retail-products/digestive-care-dry-cat-food-2555','https://www.petscience.ca/royal-canin-feline-care-nutrition-digestive-care-adult-cat-14lbs-121-44426','Pet Science maps UPC 030111444264 to the 14 lb individual Digestive Care bag; Pan Pacific independently lists item 801-44426 / UPC 030111444264.'),
-            rec('030111701619','Feline Care Nutrition','Royal Canin Digestive Care Thin Slices in Gravy Wet Cat Food','Digestive Care Thin Slices in Gravy',['pork','chicken','salmon'],'wet','slices','in_gravy','can','5.1 oz',digestive_51,ga(7.2,1.6,2.5,82.5),789,114,'can','https://www.royalcanin.com/us/cats/products/retail-products/digestive-care-thin-slices-in-gravy-1430/2','https://www.petscience.ca/fr/royal-canin-feline-care-nutrition-digestive-care-thin-slices-in-gravy-24-5-1oz-121-70161','Pet Science and current retailer variant data map UPC 030111701619 to one 5.1 oz (145 g) can; case quantity is 24.'),
-            rec('030111710314','Feline Care Nutrition','Royal Canin Hair & Skin Care Loaf in Sauce Wet Cat Food','Hair & Skin Care Loaf in Sauce',['pork','chicken'],'wet','loaf','in_sauce','can','5.1 oz',hair_skin_loaf,ga(10.5,2.9,3.0,79.0),959,139,'can','https://www.royalcanin.com/us/cats/products/retail-products/hair%26skin-care-loaf-in-sauce-1202','https://www.kibblesandbiscuits.com/products/royal-canin-cat-intense-beauty-loaf-145g','Retailer variant maps barcode/SKU 030111710314 to the 145 g / 5.1 oz individual can; Pan Pacific independently maps the same UPC to item 301-71031.', ['Retail barcode sources retain the former Intense Beauty name; Royal Canin now markets the formula as Hair & Skin Care Loaf in Sauce. Current manufacturer naming/formula are stored.']),
-            rec('030111710987','Feline Care Nutrition','Royal Canin Hair & Skin Care Loaf in Sauce Wet Cat Food','Hair & Skin Care Loaf in Sauce',['pork','chicken'],'wet','loaf','in_sauce','can','3 oz',hair_skin_loaf,ga(10.5,2.9,3.0,79.0),959,82,'can','https://www.royalcanin.com/us/cats/products/retail-products/hair%26skin-care-loaf-in-sauce-1202/1','https://fetchy.co/products/royal-canin-feline-care-nutrition-intense-beauty-loaf-in-sauce-wet-cat-food','Fetchy variant data maps barcode 030111710987 to the 3 oz individual can; Pan Pacific independently maps item 801-71098 to the same UPC.', ['Retail barcode sources retain the former Intense Beauty name; Royal Canin now markets the formula as Hair & Skin Care Loaf in Sauce. Current manufacturer naming/formula are stored.']),
-            rec('030111716750','Feline Care Nutrition','Royal Canin Hairball Care Thin Slices in Gravy Wet Cat Food','Hairball Care Thin Slices in Gravy',['chicken','pork'],'wet','slices','in_gravy','can','3 oz',hairball,ga(6.7,2.3,1.0,84.5),652,55,'can','https://www.royalcanin.com/us/cats/products/retail-products/hairball-care-thin-slices-in-gravy-1589','https://www.petscience.ca/royal-canin-feline-care-nutrition-hairball-care-thin-slices-in-gravy-cat-24-3oz-121-71675','Pet Science explicitly maps UPC 030111716750 to the 3 oz individual Hairball Care can; Pan Pacific independently maps item 801-71675.'),
-            rec('030111701350','Feline Care Nutrition','Royal Canin Urinary Care Thin Slices in Gravy Wet Cat Food','Urinary Care Thin Slices in Gravy',['pork','chicken'],'wet','slices','in_gravy','can','5.1 oz',urinary,ga(7.7,1.7,1.4,84.0),714,104,'can','https://www.royalcanin.com/us/cats/products/retail-products/urinary-care--thin-slices-in-gravy-1588/2','https://www.torontopets.ca/products/royal-canin-wet-cat-food-urinary-care-thin-slices-in-gravy-canned','Toronto Pets variant data maps barcode 030111701350 to the 5.1 oz individual can; Pan Pacific independently maps item 301-70135.'),
-            rec('030111710413','Feline Care Nutrition','Royal Canin Weight Care Loaf in Sauce Wet Cat Food','Weight Care Loaf in Sauce',['pork','chicken'],'wet','loaf','in_sauce','can','5.1 oz',weight_loaf,ga(8.1,1.4,3.0,84.5,[{'nutrient':'L-carnitine','basis':'min','value':25,'unit':'other'}]),661,96,'can','https://www.royalcanin.com/us/cats/products/retail-products/weight-care-loaf-in-sauce-1478/2','https://animoetc.com/en/products/royal-canin-chat-adulte-ensemble-multi-conserve-digestive','Retailer variant data maps barcode 030111710413 to the 145 g / 5.1 oz individual Weight Care Loaf can; Pan Pacific independently maps item 301-71041.'),
-            rec('030111711083','Feline Care Nutrition','Royal Canin Weight Care Loaf in Sauce Wet Cat Food','Weight Care Loaf in Sauce',['pork','chicken'],'wet','loaf','in_sauce','can','3 oz',weight_loaf,ga(8.1,1.4,3.0,84.5,[{'nutrient':'L-carnitine','basis':'min','value':25,'unit':'other'}]),661,56,'can','https://www.royalcanin.com/us/cats/products/retail-products/weight-care-loaf-in-sauce-1478/1','https://animoetc.com/en/products/royal-canin-chat-adulte-ensemble-multi-conserve-digestive','Retailer variant data maps barcode 030111711083 to the 85 g / 3 oz individual Weight Care Loaf can; Pan Pacific independently maps item 801-71108.'),
-            rec('030111701114','Feline Care Nutrition','Royal Canin Weight Care Thin Slices in Gravy Wet Cat Food','Weight Care Thin Slices in Gravy',['pork','chicken'],'wet','slices','in_gravy','can','5.1 oz',weight_thin_51,ga(8.4,1.41,3.0,84.4,[{'nutrient':'L-carnitine','basis':'min','value':25,'unit':'other'}]),644,93,'can','https://www.royalcanin.com/us/cats/products/retail-products/weight-care-thin-slices-in-gravy-1433/2','https://www.petscience.ca/royal-canin-feline-care-nutrition-weight-care-adult-cat-thin-slices-in-gravy-24-5-1oz-121-70111','Pet Science and Pan Pacific map UPC 030111701114 to the 145 g / 5.1 oz individual Weight Care Thin Slices can.'),
-            rec('030111715388','Feline Care Nutrition','Royal Canin Weight Care Thin Slices in Gravy Wet Cat Food','Weight Care Thin Slices in Gravy',['pork','chicken'],'wet','slices','in_gravy','can','3 oz',weight_thin_3,ga(8.4,1.41,3.0,84.4,[{'nutrient':'L-carnitine','basis':'min','value':25,'unit':'other'}]),644,55,'can','https://www.royalcanin.com/us/cats/products/retail-products/weight-care-thin-slices-in-gravy-1433/1','https://pettoba.ca/collections/royal-canin-dog-cat/products/weight-care-thin-slices-in-gravy-canned-cat-food-wet-cat-food-royal-canin','PetToba variant data maps barcode 030111715388 to the 3 oz individual can; Pan Pacific independently maps item 801-71538.', ['Some retailer/distributor copies still show the former Ultra Light naming and an older 9.0% protein / 1.6% fat / 635 kcal/kg formula. Current Royal Canin USA shows Weight Care with 8.4% protein / 1.41% fat / 644 kcal/kg; current manufacturer formula is stored.'])
-          ]
-
-          assert [r['upc'] for r in batch] == expected
-          existing_upcs = {r['upc'] for r in doc['records']}
-          existing_gtins = {r['canonical_gtin14'] for r in doc['records']}
-          # Global exclusion check across production files and sibling research ledgers.
-          exclusion_paths = [pathlib.Path('data/known-products.ts'), pathlib.Path('data/wrong-barcodes.ts')]
-          exclusion_paths += [p for p in pathlib.Path('research').glob('deep-research-*.json') if p.name != 'deep-research-royal-canin.json']
-          exclusion_text = '\n'.join(p.read_text(errors='ignore') for p in exclusion_paths if p.exists())
-
-          def check_digit(upc):
-              total = sum(int(d)*(3 if i%2==0 else 1) for i,d in enumerate(upc[:11]))
-              return str((-total)%10)
-
-          for r in batch:
-              assert r['upc'] not in existing_upcs, ('live collision', r['upc'])
-              assert r['canonical_gtin14'] not in existing_gtins
-              assert r['upc'] not in exclusion_text, ('global exclusion collision', r['upc'])
-              assert r['upc'][-1] == check_digit(r['upc'])
-              assert r['canonical_gtin14'] == r['upc'].zfill(14)
+          import json, pathlib
+          doc=json.loads(pathlib.Path('research/deep-research-royal-canin.json').read_text())
+          expected={
+            '030111444264':('Royal Canin Digestive Care Dry Cat Food','14 lb'),
+            '030111701619':('Royal Canin Digestive Care Thin Slices in Gravy Wet Cat Food','5.1 oz'),
+            '030111710314':('Royal Canin Hair & Skin Care Loaf in Sauce Wet Cat Food','5.1 oz'),
+            '030111710987':('Royal Canin Hair & Skin Care Loaf in Sauce Wet Cat Food','3 oz'),
+            '030111716750':('Royal Canin Hairball Care Thin Slices in Gravy Wet Cat Food','3 oz'),
+            '030111701350':('Royal Canin Urinary Care Thin Slices in Gravy Wet Cat Food','5.1 oz'),
+            '030111710413':('Royal Canin Weight Care Loaf in Sauce Wet Cat Food','5.1 oz'),
+            '030111711083':('Royal Canin Weight Care Loaf in Sauce Wet Cat Food','3 oz'),
+            '030111701114':('Royal Canin Weight Care Thin Slices in Gravy Wet Cat Food','5.1 oz'),
+            '030111715388':('Royal Canin Weight Care Thin Slices in Gravy Wet Cat Food','3 oz')
+          }
+          assert len(doc['records'])==79, len(doc['records'])
+          assert len({r['upc'] for r in doc['records']})==79
+          assert len({r['canonical_gtin14'] for r in doc['records']})==79
+          def cd(u): return str((-sum(int(d)*(3 if i%2==0 else 1) for i,d in enumerate(u[:11])))%10)
+          found={}
+          for r in doc['records']:
               assert r['brand']=='Royal Canin' and r['species']=='cat'
-              assert r['barcode_scope']=='individual_unit' and r['research_status']=='source_verified'
-              assert r['catalog_number'] is None
-              assert r['ingredients_verbatim'] and r['ingredients_ordered_normalized']
-              assert isinstance(r['source_urls'],list) and len(r['source_urls'])>=2
-              assert isinstance(r['conflicts'],list) and isinstance(r['verification_notes'],list)
-
-          pre_count = len(doc['records'])
-          doc['records'].extend(batch)
-          doc['updated_at']='2026-08-25'
-          assert len(doc['records']) == pre_count + 10
-          assert doc['records'][:pre_count] == original_records
-          assert len({r['upc'] for r in doc['records']}) == len(doc['records'])
-          assert len({r['canonical_gtin14'] for r in doc['records']}) == len(doc['records'])
-          ledger_path.write_text(json.dumps(doc,ensure_ascii=False,separators=(',',':'))+'\n')
-          json.loads(ledger_path.read_text())
-          print('PRE_COUNT',pre_count,'POST_COUNT',len(doc['records']))
-          print('NEW_UPCS',','.join(expected))
-          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
-          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
-          subprocess.run(['git','add',str(ledger_path)],check=True)
-          subprocess.run(['git','commit','-m','research: add next 10 verified Royal Canin cat SKUs'],check=True)
-          subprocess.run(['git','push','origin','HEAD:agent/deep-research-barcode-ledger'],check=True)
+              assert r['upc'][-1]==cd(r['upc'])
+              assert r['canonical_gtin14']==r['upc'].zfill(14)
+              if r['upc'] in expected:
+                  assert r['research_status']=='source_verified'
+                  assert r['barcode_scope']=='individual_unit'
+                  assert (r['product_name'],r['size'])==expected[r['upc']]
+                  assert r['ingredients_verbatim'] and r['ingredients_ordered_normalized']
+                  found[r['upc']]=1
+          assert set(found)==set(expected)
+          print('VERIFIED_TOTAL',len(doc['records']))
+          print('VERIFIED_BATCH',','.join(expected))
