@@ -1,4 +1,4 @@
-name: Temporary Royal Canin cat 55-64 inspect
+name: Temporary Royal Canin cat candidate check
 on:
   push:
     paths:
@@ -12,22 +12,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-barcode-ledger
-      - name: Inspect current cat ledger
+      - name: Check candidate UPCs against live cat ledger
         shell: python
         run: |
           import json, pathlib
           doc = json.loads(pathlib.Path('research/deep-research-royal-canin.json').read_text())
-          batch = json.loads(pathlib.Path('research/.tmp-royal-canin-cat-batch-55-64.json').read_text())
           existing = {r['upc']: r for r in doc['records']}
+          candidates = [
+            '030111444264','030111711557','030111701619','030111710314','030111710987',
+            '030111716750','030111701350','030111710413','030111711083','030111701114',
+            '030111715388','030111710215','030111710284','030111715180','030111549600','030111416759'
+          ]
           print('CURRENT_COUNT', len(doc['records']))
-          print('LAST_15_BEGIN')
-          for r in doc['records'][-15:]:
-              print(r['upc'], '|', r['product_name'], '|', r['size'], '|', r['research_status'])
-          print('LAST_15_END')
-          print('BATCH_COLLISIONS_BEGIN')
-          for r in batch:
-              if r['upc'] in existing:
-                  e = existing[r['upc']]
-                  print(r['upc'], '| BATCH=', r['product_name'], r['size'], '| EXISTING=', e['product_name'], e['size'], e['research_status'])
-          print('BATCH_COLLISIONS_END')
-          print('BATCH_NEW', [r['upc'] for r in batch if r['upc'] not in existing])
+          for u in candidates:
+              if u in existing:
+                  r = existing[u]
+                  print('EXISTS', u, r['product_name'], r['size'], r['research_status'])
+              else:
+                  print('NEW', u)
