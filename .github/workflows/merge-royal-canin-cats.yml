@@ -1,0 +1,88 @@
+name: Merge Royal Canin Cats research
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/merge-royal-canin-cats.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+
+      - name: Validate and append 30 records
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          target_path = Path('research/deep-research-royal-canin.json')
+          append_path = Path('research/.royal-canin-cats-append-2026-08-26.json')
+
+          target = json.loads(target_path.read_text(encoding='utf-8'))
+          payload = json.loads(append_path.read_text(encoding='utf-8'))
+
+          old = target['records']
+          new = payload['records']
+          assert len(old) == 48, f'Expected 48 existing records, found {len(old)}'
+          assert len(new) == 30, f'Expected 30 append records, found {len(new)}'
+
+          old_upcs = [r['upc'] for r in old]
+          new_upcs = [r['upc'] for r in new]
+          assert len(old_upcs) == len(set(old_upcs)), 'Existing ledger already has duplicate UPCs'
+          assert len(new_upcs) == len(set(new_upcs)), 'Append payload has duplicate UPCs'
+          overlap = sorted(set(old_upcs) & set(new_upcs))
+          assert not overlap, f'Append UPCs already exist in ledger: {overlap}'
+
+          def valid_upca(code: str) -> bool:
+              if len(code) != 12 or not code.isdigit():
+                  return False
+              digits = [int(x) for x in code]
+              body_sum = sum(d * (3 if i % 2 == 0 else 1) for i, d in enumerate(digits[:11]))
+              return (10 - body_sum % 10) % 10 == digits[-1]
+
+          required = [
+              'upc','canonical_gtin14','barcode_scope','brand','species','product_name',
+              'size','ingredients_verbatim','guaranteed_analysis','calorie_content',
+              'source_urls','research_status'
+          ]
+          for i, row in enumerate(new, 1):
+              missing = [k for k in required if k not in row]
+              assert not missing, f'New record {i} missing fields: {missing}'
+              assert row['brand'] == 'Royal Canin', f'Unexpected brand in {row["upc"]}'
+              assert row['species'] == 'cat', f'Non-cat record in append: {row["upc"]}'
+              assert row['barcode_scope'] == 'individual_unit', f'Non-unit barcode: {row["upc"]}'
+              assert valid_upca(row['upc']), f'Invalid UPC-A check digit: {row["upc"]}'
+              assert row['canonical_gtin14'] == row['upc'].zfill(14), f'GTIN-14 mismatch: {row["upc"]}'
+              assert row['research_status'] in {'source_verified','needs_physical_label'}, f'Bad status: {row["upc"]}'
+              assert row['ingredients_verbatim'].strip(), f'Empty ingredients: {row["upc"]}'
+              assert isinstance(row.get('ingredients_ordered_normalized'), list) and row['ingredients_ordered_normalized'], f'Empty normalized ingredients: {row["upc"]}'
+              assert row['source_urls'], f'No sources: {row["upc"]}'
+
+          target['records'].extend(new)
+          target['updated_at'] = '2026-08-26'
+          assert len(target['records']) == 78, f'Expected 78 final records, found {len(target["records"])}'
+          final_upcs = [r['upc'] for r in target['records']]
+          assert len(final_upcs) == len(set(final_upcs)), 'Final ledger contains duplicate UPCs'
+
+          target_path.write_text(json.dumps(target, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
+          print(f'Validated merge: 48 + 30 = {len(target["records"])} records; 0 duplicate UPCs.')
+          PY
+
+      - name: Commit merged Royal Canin Cats ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-royal-canin.json
+          git commit -m "research: append 30 Royal Canin cat records (48 -> 78)"
+          git push origin HEAD:agent/deep-research-barcode-ledger
