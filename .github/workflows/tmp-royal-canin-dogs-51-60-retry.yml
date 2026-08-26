@@ -1,0 +1,146 @@
+name: Temporary Royal Canin dogs 51-60 retry
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-dogs-51-60-retry.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Recover staged payload, validate, append
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Adisabeba33"
+          git config user.email "lezzgo2@gmail.com"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          test "$(git hash-object research/deep-research-royal-canin-dogs.json)" = "eb74ed7ecddaf2b2add540f07d8ce834d0e6f5ae"
+          python3 - <<'PY'
+          import base64,gzip,json,pathlib,re,string
+          TARGET=pathlib.Path("research/deep-research-royal-canin-dogs.json")
+          STAGED=pathlib.Path(".github/workflows/tmp-royal-canin-dogs-51-60.yml")
+          text=STAGED.read_text(encoding="utf-8")
+          m=re.search(r'B64="""([A-Za-z0-9+/=\r\n]+)"""',text)
+          assert m, "staged base64 payload not found"
+          raw="".join(m.group(1).split())
+          def unpack(s):
+              try:
+                  s=s + "="*((4-len(s)%4)%4)
+                  b=base64.b64decode(s,validate=True)
+                  return json.loads(gzip.decompress(b).decode("utf-8"))
+              except Exception:
+                  return None
+          recovered=[]
+          direct=unpack(raw)
+          if direct is not None: recovered.append(("direct",direct))
+          # A single accidental extra base64 character.
+          if direct is None:
+              for i in range(len(raw)):
+                  v=unpack(raw[:i]+raw[i+1:])
+                  if v is not None:
+                      recovered.append((f"delete@{i}",v))
+          # A single omitted base64 character. gzip CRC/ISIZE and JSON parsing are
+          # independent integrity checks; require exactly one recovered payload.
+          if not recovered:
+              alphabet=string.ascii_uppercase+string.ascii_lowercase+string.digits+"+/"
+              for i in range(len(raw)+1):
+                  for ch in alphabet:
+                      v=unpack(raw[:i]+ch+raw[i:])
+                      if v is not None:
+                          recovered.append((f"insert {ch}@{i}",v))
+                          if len(recovered)>1:
+                              break
+                  if len(recovered)>1:
+                      break
+          assert len(recovered)==1, f"payload recovery not unique: {len(recovered)} candidates"
+          repair,batch=recovered[0]
+          print("payload recovery:",repair)
+          doc=json.loads(TARGET.read_text(encoding="utf-8"))
+          assert len(doc["records"])==50, f"expected 50 records, got {len(doc['records'])}"
+          assert isinstance(batch,list) and len(batch)==10
+          def split_top(s):
+              s=s.strip()
+              if s.endswith("."): s=s[:-1]
+              out=[];cur=[];sq=0;par=0
+              for ch in s:
+                  if ch=="[": sq+=1
+                  elif ch=="]": sq-=1
+                  elif ch=="(": par+=1
+                  elif ch==")": par-=1
+                  if ch=="," and sq==0 and par==0:
+                      out.append("".join(cur).strip());cur=[]
+                  else: cur.append(ch)
+              if cur: out.append("".join(cur).strip())
+              assert sq==0 and par==0
+              return out
+          existing_upcs=[r["upc"] for r in doc["records"]]
+          existing_gtins=[r["canonical_gtin14"] for r in doc["records"]]
+          new_upcs=[r["upc"] for r in batch]
+          new_gtins=[r["canonical_gtin14"] for r in batch]
+          assert len(existing_upcs)==len(set(existing_upcs))==50
+          assert len(existing_gtins)==len(set(existing_gtins))==50
+          assert len(new_upcs)==len(set(new_upcs))==10
+          assert len(new_gtins)==len(set(new_gtins))==10
+          assert not set(existing_upcs)&set(new_upcs)
+          assert not set(existing_gtins)&set(new_gtins)
+          expected={"030111512628","030111512611","030111512727","030111447555","030111451620","030111450920","030111512222","030111512147","030111512109","030111445025"}
+          assert set(new_upcs)==expected
+          paths=[pathlib.Path("data/known-products.ts"),pathlib.Path("data/known-formulas.ts"),pathlib.Path("data/wrong-barcodes.ts"),pathlib.Path("docs/CATALOG-CONFLICTS.md")]
+          paths+=sorted(pathlib.Path("research").glob("deep-research-*.json"))
+          for p in paths:
+              if p==TARGET: continue
+              body=p.read_text(encoding="utf-8")
+              for code in new_upcs+new_gtins:
+                  assert code not in body, f"global collision {code} in {p}"
+          life_ok={"adult","senior","kitten","puppy","all",None}
+          for r in batch:
+              u=r["upc"]
+              assert re.fullmatch(r"\d{12}",u)
+              total=sum(int(u[i])*(3 if i%2==0 else 1) for i in range(11))
+              assert (10-total%10)%10==int(u[-1]),(u,total)
+              assert r["canonical_gtin14"]=="00"+u
+              assert r["catalog_number"] is None
+              assert r["barcode_scope"]=="individual_unit"
+              assert r["brand"]=="Royal Canin" and r["manufacturer"]=="Royal Canin USA, Inc."
+              assert r["species"]=="dog" and r["life_stage"] in life_ok
+              assert r["food_form"]=="dry" and r["texture"]=="kibble" and r["presentation"]=="plain" and r["package_type"]=="bag"
+              assert r["research_status"]=="source_verified"
+              assert r["ingredients_verbatim"] and "�" not in r["ingredients_verbatim"]
+              assert r["ingredients_ordered_normalized"]==split_top(r["ingredients_verbatim"])
+              ga=r["guaranteed_analysis"]
+              for k in ("crude_protein_min_percent","crude_fat_min_percent","crude_fiber_max_percent","moisture_max_percent"):
+                  assert ga[k] is not None
+              cal=r["calorie_content"]
+              assert cal["kcal_per_kg"] is not None and cal["kcal_per_unit"] is not None and cal["unit_name"]=="cup"
+              assert len(r["source_urls"])>=2 and all(x.startswith("http") for x in r["source_urls"])
+              assert r["source_accessed_at"]=="2026-08-25"
+              assert isinstance(r["conflicts"],list) and isinstance(r["verification_notes"],list) and r["verification_notes"]
+              assert r["barcode_notes"] and "�" not in json.dumps(r,ensure_ascii=False)
+          doc["records"].extend(batch)
+          doc["updated_at"]="2026-08-25"
+          assert len(doc["records"])==60
+          assert len({r["upc"] for r in doc["records"]})==60
+          assert len({r["canonical_gtin14"] for r in doc["records"]})==60
+          TARGET.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+          check=json.loads(TARGET.read_text(encoding="utf-8"))
+          assert len(check["records"])==60
+          assert all(sum(1 for r in check["records"] if r["upc"]==u)==1 for u in expected)
+          print("validated 50->60:",",".join(new_upcs))
+          PY
+          git rm .github/workflows/tmp-royal-canin-dogs-51-60.yml .github/workflows/tmp-royal-canin-dogs-51-60-retry.yml
+          git add research/deep-research-royal-canin-dogs.json
+          git diff --cached --check
+          git commit -m "research: add Royal Canin dogs records 51-60"
+          git fetch origin agent/deep-research-barcode-ledger
+          remote_blob="$(git ls-tree origin/agent/deep-research-barcode-ledger research/deep-research-royal-canin-dogs.json | awk '{print $3}')"
+          test "$remote_blob" = "eb74ed7ecddaf2b2add540f07d8ce834d0e6f5ae"
+          git pull --rebase origin agent/deep-research-barcode-ledger
+          git push origin HEAD:agent/deep-research-barcode-ledger
