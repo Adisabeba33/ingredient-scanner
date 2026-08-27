@@ -3869,22 +3869,15 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     foodForm: "dry",
     proteins: ["chicken"],
     lifeStage: "adult",
-    packages: [
-      { size: "14 lb", container: BAG, upc: "030111646149", scope: UNIT },
-    ],
-  },
-  {
-    brand: "Royal Canin",
-    line: "Feline Care Nutrition",
-    variant: "Dental Care",
-    species: "cat",
-    texture: "kibble",
-    presentation: "plain",
-    foodForm: "dry",
-    proteins: ["chicken"],
+    // Three bags of one recipe. The research ledgers reached this product under
+    // two names — "Dental Care Adult Dry Cat Food" for the 14 lb and "Dental
+    // Care Dry Cat Food" for the smaller two — because two agents wrote it
+    // concurrently, and the seeding pass filed those as separate products.
+    // Identical composition and one shelf: one product.
     packages: [
       { size: "3 lb", container: BAG, upc: "030111646040", scope: UNIT },
       { size: "6 lb", container: BAG, upc: "030111646071", scope: UNIT },
+      { size: "14 lb", container: BAG, upc: "030111646149", scope: UNIT },
     ],
   },
   {
@@ -4275,21 +4268,11 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     foodForm: "dry",
     proteins: ["chicken"],
     lifeStage: "adult",
-    packages: [
-      { size: "7 lb", container: BAG, upc: "030111622075", scope: UNIT },
-    ],
-  },
-  {
-    brand: "Royal Canin",
-    line: "Feline Health Nutrition",
-    variant: "Fit & Active",
-    species: "cat",
-    texture: "kibble",
-    presentation: "plain",
-    foodForm: "dry",
-    proteins: ["chicken"],
+    // Same concurrent-naming twin as Dental Care above: "Fit & Active Adult"
+    // and "Fit & Active", one recipe, two bags.
     packages: [
       { size: "3 lb", container: BAG, upc: "030111431837", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "030111622075", scope: UNIT },
     ],
   },
   {

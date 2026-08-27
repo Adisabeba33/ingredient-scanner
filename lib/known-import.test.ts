@@ -150,25 +150,50 @@ describe("data/known-formulas.ts", () => {
     const ALLOWED_SHARED = new Set([
       "Royal Canin Canine Care Nutrition Large Dental Care / Royal Canin Canine Care Nutrition Medium Dental Care",
     ]);
-    const productOf = new Map<string, string>();
-    for (const p of KNOWN_PRODUCTS) {
+    // Keyed by the product's POSITION, not its printed name. Two entries can
+    // carry an identical `brand line variant` and still be two products — that
+    // is exactly what a duplicate looks like, and while this map was keyed by
+    // name the check read those as one product and passed. Royal Canin arrived
+    // with two of them (Dental Care, Fit & Active), each written twice by
+    // concurrent research agents under names one word apart.
+    const productOf = new Map<string, { id: number; name: string }>();
+    KNOWN_PRODUCTS.forEach((p, id) => {
       for (const pkg of p.packages) {
-        productOf.set(pkg.upc, `${p.brand} ${p.line} ${p.variant}`);
+        productOf.set(pkg.upc, { id, name: `${p.brand} ${p.line} ${p.variant}` });
       }
-    }
-    const seen = new Map<string, string>();
+    });
+    const seen = new Map<string, { id: number; name: string }>();
     const dupes: string[] = [];
     for (const [upc, formula] of Object.entries(KNOWN_FORMULAS)) {
       const key = compositionKey("Purina", formula.ingredients);
       if (!key) continue;
-      const name = productOf.get(upc) ?? upc;
+      const here = productOf.get(upc) ?? { id: -1, name: upc };
       const already = seen.get(key);
-      if (already && already !== name) {
-        const pair = [already, name].sort().join(" / ");
+      if (already && already.id !== here.id) {
+        const pair = [already.name, here.name].sort().join(" / ");
         if (!ALLOWED_SHARED.has(pair)) dupes.push(pair);
-      } else if (!already) seen.set(key, name);
+      } else if (!already) seen.set(key, here);
     }
-    expect(dupes).toEqual([]);
+    expect([...new Set(dupes)]).toEqual([]);
+  });
+
+  // Two entries that print the same thing ARE the same product, and the seed
+  // must hold them as one row with two package sizes rather than as twins.
+  //
+  // This is the failure the composition check could not see — it deduplicated
+  // by printed name, so a pair whose names matched exactly read as one product
+  // and passed. Both instances came from Royal Canin's concurrent research
+  // agents reaching one bag under names one word apart ("Dental Care Adult Dry
+  // Cat Food" / "Dental Care Dry Cat Food"), which the seeding pass filed
+  // apart. On the coverage page they merge anyway, so the split is invisible
+  // there — and the count of products quietly disagrees with the seed.
+  it("holds one product per brand, range and variant", () => {
+    const seen = new Map<string, number>();
+    for (const p of KNOWN_PRODUCTS) {
+      const key = `${p.brand} | ${p.line} | ${p.variant}`;
+      seen.set(key, (seen.get(key) ?? 0) + 1);
+    }
+    expect([...seen].filter(([, n]) => n > 1).map(([k]) => k)).toEqual([]);
   });
 
   // Every pack size of one product must carry the SAME RECIPE — the sibling of
