@@ -328,7 +328,14 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Size Health Nutrition",
       "Feline Care Nutrition",
       "Feline Health Nutrition",
+      "Feline Breed Nutrition",
+      "Canine Care Nutrition",
+      "Canine Health Nutrition",
+      // The two vet channels. The cat one is "Veterinary Diet" on the bag;
+      // the dog one is "Veterinary Health Nutrition" — lib/vet-diet.ts knows
+      // both phrases, and a test there holds it to that.
       "Veterinary Diet",
+      "Veterinary Health Nutrition",
     ],
   },
   {

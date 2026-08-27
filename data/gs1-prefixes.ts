@@ -37,4 +37,5 @@ export interface Gs1Prefix {
 export const GS1_PREFIXES: Gs1Prefix[] = [
   { prefix: "050000", maker: "Nestlé Purina" },
   { prefix: "052742", maker: "Hill's Pet Nutrition" },
+  { prefix: "030111", maker: "Royal Canin (Mars Petcare)" },
 ];

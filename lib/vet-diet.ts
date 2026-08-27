@@ -41,6 +41,11 @@ const VET_PHRASES = [
   "vet diets",
   "veterinary formula",
   "veterinary care nutrition",
+  // Royal Canin's dog vet channel. The cat one says "Veterinary Diet" and is
+  // already matched above; the dog bags print this phrase instead, and the
+  // product names under it ("Canine Gastrointestinal", "Renal Support A")
+  // carry no vet word of their own — the range name is the whole evidence.
+  "veterinary health nutrition",
   "vet life",
   "vet essentials",
   "therapeutic diet",

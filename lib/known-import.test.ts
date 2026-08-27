@@ -142,6 +142,14 @@ describe("data/known-formulas.ts", () => {
   // on a shelf. Two DIFFERENT products with one fingerprint is still the paste
   // error, and still caught.
   it("no two products share a composition", () => {
+    // The one pair allowed to share, because the shelf really does: Royal
+    // Canin prints ONE recipe for Medium and Large Dental Care. They are
+    // different products — kibble size, and the panels prove independent
+    // manufacture (3712 vs 3705 kcal/kg, 260 vs 304 kcal/cup) — not a
+    // copy-paste, which is what this test exists to catch.
+    const ALLOWED_SHARED = new Set([
+      "Royal Canin Canine Care Nutrition Large Dental Care / Royal Canin Canine Care Nutrition Medium Dental Care",
+    ]);
     const productOf = new Map<string, string>();
     for (const p of KNOWN_PRODUCTS) {
       for (const pkg of p.packages) {
@@ -155,8 +163,10 @@ describe("data/known-formulas.ts", () => {
       if (!key) continue;
       const name = productOf.get(upc) ?? upc;
       const already = seen.get(key);
-      if (already && already !== name) dupes.push(`${already} / ${name}`);
-      else if (!already) seen.set(key, name);
+      if (already && already !== name) {
+        const pair = [already, name].sort().join(" / ");
+        if (!ALLOWED_SHARED.has(pair)) dupes.push(pair);
+      } else if (!already) seen.set(key, name);
     }
     expect(dupes).toEqual([]);
   });
@@ -452,7 +462,10 @@ describe("data/known-formulas.ts", () => {
     for (const p of stated) {
       expect({
         name: `${p.line} ${p.variant}`,
-        ok: ["kitten", "adult", "senior", "all"].includes(p.lifeStage as string),
+        // `puppy` joined with the first dog foods (Royal Canin, batch 019).
+        ok: ["kitten", "puppy", "adult", "senior", "all"].includes(
+          p.lifeStage as string
+        ),
       }).toEqual({ name: `${p.line} ${p.variant}`, ok: true });
     }
     // And the two that are neither plain adult nor plain kitten are still here:
@@ -488,7 +501,14 @@ describe("data/known-formulas.ts", () => {
     const seniors = KNOWN_PRODUCTS.filter((p) => p.lifeStage === "senior");
     expect(seniors.length).toBeGreaterThan(0);
     for (const p of seniors) {
-      const printsAge = /\bsenior\b|\b\d+\s*\+/i.test(p.line);
+      // Matched against line AND variant: Fancy Feast prints the age in the
+      // range name ("Senior 7+"), Royal Canin prints it in the product name
+      // inside an ageless range — "Indoor 7+" and "Aging 12+" sit in "Feline
+      // Health Nutrition". "Mature" joined the markers with Royal Canin too:
+      // "Mature Adult in Gel" is that pack's whole front-of-tin age claim.
+      const printsAge = /\bsenior\b|\bmature\b|\bag(e)?ing\b|\b\d+\s*\+/i.test(
+        `${p.line} ${p.variant}`
+      );
       expect({ name: `${p.line} ${p.variant}`, printsAge }).toEqual({
         name: `${p.line} ${p.variant}`,
         printsAge: true,
@@ -561,15 +581,29 @@ describe("data/known-formulas.ts", () => {
     const vet = KNOWN_PRODUCTS.filter((p) =>
       isVeterinaryDiet(p.brand, p.line, p.variant)
     );
-    // Every Prescription Diet product we hold, and nothing else.
+    // Every vet-channel product we hold, and nothing else. Two shapes of
+    // evidence: Hill's puts it in the BRAND ("Prescription Diet"), Royal
+    // Canin in the LINE ("Veterinary Diet" for cats, "Veterinary Health
+    // Nutrition" for dogs) under one retail brand name.
+    const RC_VET_LINES = new Set(["Veterinary Diet", "Veterinary Health Nutrition"]);
     expect(vet.map((p) => `${p.brand} ${p.line}`).sort()).toEqual(
-      KNOWN_PRODUCTS.filter((p) => p.brand.includes("Prescription Diet"))
+      KNOWN_PRODUCTS.filter(
+        (p) => p.brand.includes("Prescription Diet") || RC_VET_LINES.has(p.line)
+      )
         .map((p) => `${p.brand} ${p.line}`)
         .sort()
     );
     expect(vet.length).toBeGreaterThan(0);
-    // Named explicitly: the shelf brand that shares a maker with the vet one.
+    // Named explicitly: the shelf ranges that share a maker with a vet channel.
     for (const p of KNOWN_PRODUCTS.filter((p) => p.brand === "Hill's Science Diet")) {
+      expect({
+        name: `${p.line} ${p.variant}`,
+        vet: isVeterinaryDiet(p.brand, p.line, p.variant),
+      }).toEqual({ name: `${p.line} ${p.variant}`, vet: false });
+    }
+    for (const p of KNOWN_PRODUCTS.filter(
+      (p) => p.brand === "Royal Canin" && !RC_VET_LINES.has(p.line)
+    )) {
       expect({
         name: `${p.line} ${p.variant}`,
         vet: isVeterinaryDiet(p.brand, p.line, p.variant),
