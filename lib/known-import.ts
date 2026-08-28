@@ -1,4 +1,5 @@
 import { sourceRank } from "./barcode";
+import { normalizeComposition } from "./composition-key";
 
 /**
  * What to do with a seeded formula when the catalog already holds the barcode.
@@ -61,7 +62,13 @@ export interface ExistingRow {
 export function importVerdict(
   existing: ExistingRow | null | undefined,
   incomingKey: string | null,
-  force = false
+  force = false,
+  /**
+   * The composition we are offering, for the case the fingerprint cannot
+   * settle. Optional so every existing caller keeps working; passing it is
+   * what lets an unfingerprintable row be recognised as already ours.
+   */
+  incomingText?: string | null
 ): ImportVerdict {
   if (!existing) return "write";
   if (existing.source === "verified") return "ours-is-better";
@@ -74,11 +81,30 @@ export function importVerdict(
   // Both fingerprinted and equal — the same recipe, already stored.
   if (incomingKey && existing.composition_key === incomingKey) return "identical";
 
+  // Neither could be fingerprinted, so compare the lists themselves.
+  //
+  // A fingerprint is a cheap way to ask "same recipe?", and it declines to
+  // answer for a composition under five ingredients — which is not a defect
+  // but a fact about short lists. Ziwi Peak's chews are exactly that: a lamb
+  // trachea's whole ingredient list is "Lamb Trachea". Without this the
+  // importer wrote those eight rows and then, on every later run, reported
+  // them as conflicts against themselves — a permanent false alarm, and the
+  // kind that teaches an operator to stop reading the conflict count.
+  if (
+    !incomingKey &&
+    incomingText != null &&
+    normalizeComposition(existing.ingredients_text) ===
+      normalizeComposition(incomingText)
+  ) {
+    return "identical";
+  }
+
   // A worse-sourced list. Replacing it is what the ranking is for.
   if (sourceRank(existing.source) < sourceRank(INCOMING_SOURCE)) return "write";
 
-  // Equal standing, different composition. Includes a stored list too thin to
-  // fingerprint, which is still a list somebody put there.
+  // Equal standing, different composition. Still includes a stored list too
+  // thin to fingerprint whose TEXT differs from ours — that is a real
+  // disagreement about a short list, and it wants a person.
   return force ? "write" : "conflict";
 }
 

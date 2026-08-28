@@ -153,7 +153,7 @@ async function decide(
       const held = existing.get(c.code);
       return {
         ...c,
-        verdict: importVerdict(held, c.compositionKey, force),
+        verdict: importVerdict(held, c.compositionKey, force, c.ingredients),
         // Only meaningful for a row we are leaving alone; null elsewhere.
         heldPanel: held ? hasAnyFigure(readGuaranteedAnalysis(held.guaranteed_analysis)) : null,
       };

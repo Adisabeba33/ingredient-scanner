@@ -93,6 +93,26 @@ describe("importVerdict", () => {
     ).toBe("conflict");
   });
 
+  // …unless it is the list we are offering. Ziwi Peak's chews are one dried
+  // organ each, so neither side can be fingerprinted (the key needs five
+  // ingredients) — and without comparing the text, the importer wrote those
+  // eight rows and then reported them as conflicts AGAINST THEMSELVES on
+  // every later run. A permanent false alarm is worse than no alarm: it is
+  // what teaches an operator to stop reading the conflict list.
+  it("recognises its own short composition instead of conflicting forever", () => {
+    const stored = row({
+      source: "community",
+      composition_key: null,
+      ingredients_text: "Lamb Trachea.",
+    });
+    expect(importVerdict(stored, null, false, "Lamb Trachea.")).toBe("identical");
+    // Punctuation and case are not a difference; the same normalisation the
+    // fingerprint uses decides that.
+    expect(importVerdict(stored, null, false, "lamb trachea")).toBe("identical");
+    // A genuinely different short list still wants a person.
+    expect(importVerdict(stored, null, false, "Lamb Ears.")).toBe("conflict");
+  });
+
   it("has wording for every verdict", () => {
     for (const v of ["write", "identical", "ours-is-better", "conflict"] as const) {
       expect(verdictLabel(v).length).toBeGreaterThan(0);
