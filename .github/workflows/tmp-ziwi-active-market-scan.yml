@@ -1,0 +1,78 @@
+name: Inspect active ZIWI regional retailer barcodes
+on:
+  push:
+    branches: [agent/deep-research-ziwi-peak]
+    paths: [.github/workflows/tmp-ziwi-active-market-scan.yml]
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-ziwi-peak
+          fetch-depth: 1
+      - name: Scan active Shopify retailer variants and subtract repository exclusions
+        run: |
+          python - <<'PY'
+          import json,re,urllib.request,urllib.error
+          from pathlib import Path
+
+          domains=[
+            'https://www.torontopets.ca',
+            'https://kornapet.com',
+            'https://www.habitatpets.com.au',
+            'https://www.luckypet.com.au',
+            'https://www.yourpetpa.co.nz',
+            'https://petdirect.co.nz',
+            'https://www.petstock.co.nz',
+            'https://www.petstock.com.au',
+          ]
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
+          txt='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
+          existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',txt)); canon={x.zfill(14) for x in existing}
+
+          def get(url):
+            req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+            with urllib.request.urlopen(req,timeout=20) as r:return json.load(r)
+
+          all_new=[]
+          for domain in domains:
+            print('\nDOMAIN',domain)
+            products=[]
+            ok=False
+            for page in range(1,11):
+              url=f'{domain}/products.json?limit=250&page={page}'
+              try:d=get(url)
+              except Exception as e:
+                if page==1: print('ERROR',type(e).__name__,str(e))
+                break
+              ok=True
+              ps=d.get('products',[])
+              if not ps: break
+              products += ps
+              if len(ps)<250: break
+            if not ok: continue
+            ziwi=[]
+            for p in products:
+              hay=' '.join([str(p.get('title') or ''),str(p.get('vendor') or ''),str(p.get('handle') or '')]).lower()
+              if 'ziwi' not in hay: continue
+              for v in p.get('variants',[]):
+                if not v.get('available'): continue
+                bc=str(v.get('barcode') or '').strip()
+                if not bc.isdigit(): continue
+                item={'domain':domain,'barcode':bc,'product':p.get('title'),'variant':v.get('title'),'sku':v.get('sku'),'handle':p.get('handle'),'grams':v.get('grams'),'available':v.get('available')}
+                ziwi.append(item)
+                if bc not in existing and bc.zfill(14) not in canon:
+                  all_new.append(item)
+            print('ACTIVE_ZIWI_BARCODE_VARIANTS',len(ziwi))
+            for x in ziwi:
+              print(('NEW ' if x in all_new else 'KNOWN ')+json.dumps(x,ensure_ascii=False,sort_keys=True))
+          uniq=[]; seen=set()
+          for x in all_new:
+            if x['barcode'] in seen: continue
+            seen.add(x['barcode']); uniq.append(x)
+          print('\nUNIQUE_NEW_ACTIVE',len(uniq))
+          for x in uniq: print(json.dumps(x,ensure_ascii=False,sort_keys=True))
+          PY
