@@ -11297,6 +11297,1129 @@
         "The same official product page explicitly lists 3.5 oz trial size and the current formula/GA/calories."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016597024",
+      "canonical_gtin14": "09421016597024",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Provenance Canned Wet",
+      "product_name": "ZIWI Peak Provenance Otago Valley Recipe Wet Dog Food",
+      "variant": "Otago Valley Recipe",
+      "recipe": [
+        "beef",
+        "venison",
+        "southern blue whiting",
+        "lamb",
+        "hoki"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "6 oz (170 g)",
+      "ingredients_verbatim": "Beef, Beef Broth, Venison, Whole Southern Blue Whiting, Lamb Tripe, Beef Kidney, Lamb Lung, New Zealand Green Mussel, Lamb Plasma, Venison Tripe, Hoki, Lecithin, Beef Liver, Venison Lung, Beef Bone, Lamb Liver, Lamb Kidney, Lamb, Venison Kidney, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Venison Bone, Dried Kelp, Lamb Bone, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin B5 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Broth",
+        "Venison",
+        "Whole Southern Blue Whiting",
+        "Lamb Tripe",
+        "Beef Kidney",
+        "Lamb Lung",
+        "New Zealand Green Mussel",
+        "Lamb Plasma",
+        "Venison Tripe",
+        "Hoki",
+        "Lecithin",
+        "Beef Liver",
+        "Venison Lung",
+        "Beef Bone",
+        "Lamb Liver",
+        "Lamb Kidney",
+        "Lamb",
+        "Venison Kidney",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex)",
+        "Venison Bone",
+        "Dried Kelp",
+        "Lamb Bone",
+        "Salt",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin B5 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 7,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 4,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1250,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "PetZoo proves the exact 170 g individual-unit barcode; Vet Warehouse and League of Pets provide the matching Otago Valley ingredient statement, full guaranteed analysis and 1250 kcal/kg energy statement.",
+      "source_urls": [
+        "https://www.petzoo.com.au/ziwi-peak-provenance-wet-dog-food-otago-valley-170g",
+        "https://vetwarehouse.co.nz/ziwi-provenance-otago-valley-wet-dog-food/",
+        "https://leagueofpets.com.au/products/ziwi-peak-provenance-otago-valley-wet-dog-food-170g"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016597024 is explicitly mapped to one 170 g Otago Valley dog-food can; it is not a tray/case code.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact individual-unit barcode and nominal 170 g size are proven.",
+        "Ingredients, GA and energy were taken from matching Otago Valley wet-dog formula sources; no sibling recipe was substituted."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016592678",
+      "canonical_gtin14": "09421016592678",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Historical/Regional Canned Wet",
+      "product_name": "ZIWI Peak Venison Recipe Canned Cat Food",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Venison, Venison Broth, Venison Liver, Venison Lung, Venison Heart, Venison Kidney, Venison Tripe, Chick Peas, New Zealand Green Mussel, Venison Bone, Dried Kelp, Minerals (Zinc Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Vitamins (Vitamin E Supplement, Vitamin B1 Supplement, Folic Acid, Vitamin D3 Supplement).",
+      "ingredients_ordered_normalized": [
+        "Venison",
+        "Venison Broth",
+        "Venison Liver",
+        "Venison Lung",
+        "Venison Heart",
+        "Venison Kidney",
+        "Venison Tripe",
+        "Chick Peas",
+        "New Zealand Green Mussel",
+        "Venison Bone",
+        "Dried Kelp",
+        "Minerals (Zinc Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex)",
+        "Vitamins (Vitamin E Supplement, Vitamin B1 Supplement, Folic Acid, Vitamin D3 Supplement)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Petzone UAE and Petsky independently bind EAN-13 9421016592678 to the 85 g Venison cat can and preserve the same older ingredient generation. A matching complete nutrition panel for this exact historical generation was not located, so newer replacement-code nutrition is intentionally not copied.",
+      "source_urls": [
+        "https://petzone.com/uae/ziwi-peak-venison-recipe-cat-food-85g",
+        "https://petskyonline.com/products/ziwi-peak-venison-recipe-cat-food-85g",
+        "https://www.petcity.com.au/product/ziwi-peak-cat-can-venison-85g"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016592678 is a historical/regional 85 g Venison cat-can code. Current-market copies also use 9421016594566, and one retailer exposes both identifiers on the same product page.",
+      "conflicts": [
+        "The surviving 9421016592678 ingredient statement is materially older than current 9421016594566 formula copies. The exact old-generation guaranteed analysis/calorie panel is unresolved and must not be borrowed from the newer code.",
+        "PetCity exposes current SKU 9421016594566 while also listing Barcode # 9421016592678, demonstrating generation/region coexistence rather than proving equivalence of formula panels."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact 85 g unit identity is independently corroborated.",
+        "Stored ingredients come only from sources carrying the historical barcode generation; nutrition fields remain null pending physical label."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016595877",
+      "canonical_gtin14": "09421016595877",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Historical Canned Wet",
+      "product_name": "ZIWI Peak New Zealand Hoki Recipe Wet Cat Food",
+      "variant": "New Zealand Hoki Recipe",
+      "recipe": [
+        "hoki"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Hoki, Water Sufficient for Processing, Chickpeas, Hoki Liver, New Zealand Green Mussel, Fish Bone, DL-Methionine, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Dried Kelp, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Salt, Taurine.",
+      "ingredients_ordered_normalized": [
+        "Hoki",
+        "Water Sufficient for Processing",
+        "Chickpeas",
+        "Hoki Liver",
+        "New Zealand Green Mussel",
+        "Fish Bone",
+        "DL-Methionine",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex)",
+        "Dried Kelp",
+        "Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid)",
+        "Salt",
+        "Taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 300,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1050,
+        "kcal_per_unit": 89,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "TorontoPets archived product copy supplies the Hoki formula, complete GA, 1050 kcal/kg and 89 kcal/85 g; its Shopify variant data maps the 3 oz/85 g variant directly to EAN-13 9421016595877. Independent Asian inventory copies corroborate 9421016595877 as the discontinued 85 g Hoki cat can.",
+      "source_urls": [
+        "https://www.torontopets.ca/products/ziwi-peak-wet-cat-food-new-zealand-hoki-recipe-canned",
+        "https://zooart.com.pl/product-pol-48870-ZiwiPeak-Hoki-Cat-Wet-Food.html"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016595877 is the exact historical 3 oz/85 g Hoki cat-can variant barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact retailer Shopify variant data binds 9421016595877 to the 3 oz/85 g individual can.",
+        "Visible product copy and label-oriented retailer evidence agree on ingredient order, 10/3.5/2/78/3.5 GA, 1050 kcal/kg and 89 kcal per 85 g can."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016595839",
+      "canonical_gtin14": "09421016595839",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Historical Canned Wet",
+      "product_name": "ZIWI Peak New Zealand Hoki Recipe Wet Cat Food",
+      "variant": "New Zealand Hoki Recipe",
+      "recipe": [
+        "hoki"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "6.5 oz (185 g)",
+      "ingredients_verbatim": "Hoki, Water Sufficient for Processing, Chickpeas, Hoki Liver, New Zealand Green Mussel, Fish Bone, DL-Methionine, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Dried Kelp, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Salt, Taurine.",
+      "ingredients_ordered_normalized": [
+        "Hoki",
+        "Water Sufficient for Processing",
+        "Chickpeas",
+        "Hoki Liver",
+        "New Zealand Green Mussel",
+        "Fish Bone",
+        "DL-Methionine",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex)",
+        "Dried Kelp",
+        "Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid)",
+        "Salt",
+        "Taurine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 300,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1050,
+        "kcal_per_unit": 194,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "TorontoPets visible archived product copy supplies the Hoki formula, GA and 194 kcal/185 g, while its embedded Shopify variant exposes EAN-13 9421016595839 for the larger can. Independent historical inventory copies identify the same EAN as the discontinued 185 g Hoki can.",
+      "source_urls": [
+        "https://www.torontopets.ca/products/ziwi-peak-wet-cat-food-new-zealand-hoki-recipe-canned",
+        "https://zooart.com.pl/product-pol-48870-ZiwiPeak-Hoki-Cat-Wet-Food.html"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016595839 consistently identifies the larger historical Hoki cat can, but one stale Shopify variant labels it 6 OZ/170 g while visible product/label evidence and independent inventory identify 6.5 oz/185 g.",
+      "conflicts": [
+        "TorontoPets embedded Shopify metadata calls the larger variant 6 OZ and reports 170 g, while the visible product copy prints 6.5 oz/185 g and 194 kcal/185 g; multiple independent inventory systems also identify 9421016595839 as 185 g. Physical label is required to settle the exact printed size tied to this historical barcode."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Barcode is not inferred: it is present in embedded retailer variant data and independent historical inventory references.",
+        "Formula/GA/calories are stored from the Hoki product page, but status remains needs_physical_label because exact large-can size metadata conflicts."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210833",
+      "canonical_gtin14": "09421038210833",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Cat Food Variety Pack — All Flavors",
+      "variant": "Beef / Chicken / Lamb / Mackerel & Lamb / Mackerel / Venison",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.integrativeconnections.com/products/ziwi-peak-wet-cat-food-variety-pack-beef-chicken-lamb-mackerel-lamb-mackerel-venison-6-pack-3oz-each-1"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210833 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210826",
+      "canonical_gtin14": "09421038210826",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Cat Food Variety Pack — Chicken, Lamb & Mackerel + Lamb",
+      "variant": "Chicken / Lamb / Mackerel & Lamb",
+      "recipe": [
+        "chicken",
+        "lamb",
+        "mackerel"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.torontopets.ca/products/ziwi-peak-wet-cat-food-variety-pack-chicken-lamb-and-mackerel-lamb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210826 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210819",
+      "canonical_gtin14": "09421038210819",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Cat Food Variety Pack — Beef, Lamb & Venison",
+      "variant": "Beef / Lamb / Venison",
+      "recipe": [
+        "beef",
+        "lamb",
+        "venison"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.torontopets.ca/products/ziwi-peak-wet-cat-food-variety-pack-beef-lamb-venison"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210819 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210802",
+      "canonical_gtin14": "09421038210802",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Cat Food Variety Pack — Chicken, Lamb & Venison",
+      "variant": "Chicken / Lamb / Venison",
+      "recipe": [
+        "chicken",
+        "lamb",
+        "venison"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.torontopets.ca/products/ziwi-peak-wet-cat-food-variety-pack-chicken-lamb-venison"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210802 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210840",
+      "canonical_gtin14": "09421038210840",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Dog Food Variety Pack — Beef & Chicken",
+      "variant": "Beef / Chicken",
+      "recipe": [
+        "beef",
+        "chicken"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 6 oz (170 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.pacificpet.net/Home/ProductListing?FoodAccSpec=Food&ItemBrand=ZIWI&ItemGroup=Dog"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210840 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210857",
+      "canonical_gtin14": "09421038210857",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Dog Food Variety Pack — Beef & Lamb",
+      "variant": "Beef / Lamb",
+      "recipe": [
+        "beef",
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 6 oz (170 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.pacificpet.net/Home/ProductListing?FoodAccSpec=Food&ItemBrand=ZIWI&ItemGroup=Dog"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210857 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038210864",
+      "canonical_gtin14": "09421038210864",
+      "barcode_scope": "multipack",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Wet Dog Food Variety Pack — All Flavors",
+      "variant": "Beef / Chicken / Lamb / Mackerel & Lamb / Tripe & Lamb / Venison",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 x 6 oz (170 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.integrativeconnections.com/products/ziwi-peak-wet-dog-food-variety-pack-beef-chicken-lamb-mackerel-tripe-venison-6-pack-6oz-each-1",
+        "https://www.pacificpet.net/Home/ProductListing?FoodAccSpec=Food&ItemBrand=ZIWI&ItemGroup=Dog"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421038210864 identifies the stated outer multipack package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594511",
+      "canonical_gtin14": "09421016594511",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Beef Recipe Wet Cat Food Case",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://kornapet.com/products/ziwi-cat-beef-85g-cs24"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594511 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594917",
+      "canonical_gtin14": "09421016594917",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Chicken Recipe Wet Cat Food Case",
+      "variant": "Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.petshopdirect.com.au/shop/item/ziwi-peak-cat-can-chicken-85g-x-24-case"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594917 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594450",
+      "canonical_gtin14": "09421016594450",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Lamb Recipe Wet Cat Food Case",
+      "variant": "Lamb Recipe",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.luckypet.com.au/ziwi-peak-cat-can-85g-lamb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594450 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594337",
+      "canonical_gtin14": "09421016594337",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Mackerel & Lamb Recipe Wet Cat Food Case",
+      "variant": "Mackerel & Lamb Recipe",
+      "recipe": [
+        "mackerel",
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.luckypet.com.au/ziwi-peak-cat-can-85g-mackerel-lamb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594337 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016595969",
+      "canonical_gtin14": "09421016595969",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Mackerel Recipe Wet Cat Food Case",
+      "variant": "Mackerel Recipe",
+      "recipe": [
+        "mackerel"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.petshopdirect.com.au/shop/item/ziwi-peak-cat-can-mackerel-85g-x-24-case"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016595969 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594634",
+      "canonical_gtin14": "09421016594634",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Rabbit & Lamb Recipe Wet Cat Food Case",
+      "variant": "Rabbit & Lamb Recipe",
+      "recipe": [
+        "rabbit",
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.luckypet.com.au/ziwi-peak-cat-can-85g-rabbit-lamb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594634 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594573",
+      "canonical_gtin14": "09421016594573",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Venison Recipe Wet Cat Food Case",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 x 3 oz (85 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.luckypet.com.au/ziwi-peak-cat-can-85g-venison"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594573 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594474",
+      "canonical_gtin14": "09421016594474",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Beef Recipe Wet Dog Food Case",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "12 x 13.75 oz (390 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://www.habitatpets.com.au/collections/puppy-food/products/zp-can-beef-390gx12",
+        "https://peto.com.au/ziwi-peak-wet-dog-food-beef/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594474 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594870",
+      "canonical_gtin14": "09421016594870",
+      "barcode_scope": "case",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Canned Wet",
+      "product_name": "ZIWI Peak Chicken Recipe Wet Dog Food Case",
+      "variant": "Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "12 x 13.75 oz (390 g) cans",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Retailer/distributor evidence proves the exact outer sellable package barcode and package count/recipe assortment. Formula fields are intentionally blank: this barcode belongs to an outer case or retail multipack, not to one contained can, so copying a contained unit formula into the outer-pack identity would violate the research contract.",
+      "source_urls": [
+        "https://peto.com.au/ziwi-peak-wet-dog-food-chicken/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EAN-13 9421016594870 identifies the stated outer case package. It must never be substituted for a contained individual-can UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact outer package count/recipe identity is supported by the cited retailer/distributor source.",
+        "research_status is candidate because source_verified is reserved for proven individual-unit barcodes; contained can UPCs remain separate records."
+      ],
+      "research_status": "candidate"
     }
   ]
 }
