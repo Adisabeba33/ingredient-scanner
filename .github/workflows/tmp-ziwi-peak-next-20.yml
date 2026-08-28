@@ -1,0 +1,97 @@
+name: Merge ZIWI Peak next 20 research records
+
+on:
+  push:
+    branches:
+      - agent/deep-research-ziwi-peak
+    paths:
+      - .github/workflows/tmp-ziwi-peak-next-20.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-ziwi-peak
+          fetch-depth: 0
+      - name: Validate exclusions and append ZIWI batch
+        run: |
+          python - <<'PY'
+          import base64, json, zlib
+          from collections import Counter
+          from pathlib import Path
+
+          DATA = '''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'''
+          rows = json.loads(zlib.decompress(base64.b64decode(DATA)).decode('utf-8'))['records']
+          assert len(rows) == 20, len(rows)
+          assert Counter(r['research_status'] for r in rows) == Counter({'candidate': 8, 'needs_physical_label': 5, 'source_verified': 7})
+
+          def valid_gtin(code):
+              if len(code) not in (8, 12, 13, 14) or not code.isdigit(): return False
+              body = [int(x) for x in code[:-1]]
+              total = sum(d * (3 if i % 2 == 0 else 1) for i, d in enumerate(reversed(body)))
+              return (10 - total % 10) % 10 == int(code[-1])
+
+          required = ['upc','canonical_gtin14','barcode_scope','brand','species','product_name','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','source_urls','conflicts','verification_notes','research_status']
+          allowed = {'candidate','source_verified','needs_physical_label','rejected','promoted_to_seed'}
+          for r in rows:
+              assert all(k in r for k in required), r.get('upc')
+              assert r['brand'] == 'ZIWI Peak'
+              assert r['barcode_scope'] == 'individual_unit'
+              assert r['research_status'] in allowed
+              assert valid_gtin(r['upc']), r['upc']
+              assert r['canonical_gtin14'] == r['upc'].zfill(14), r['upc']
+              assert r['source_urls'] and isinstance(r['conflicts'], list) and isinstance(r['verification_notes'], list)
+              if r['research_status'] != 'candidate':
+                  assert r['ingredients_verbatim'].strip(), r['upc']
+                  assert r['ingredients_ordered_normalized'], r['upc']
+              if r['research_status'] == 'source_verified':
+                  g = r['guaranteed_analysis']; c = r['calorie_content']
+                  assert g['crude_protein_min_percent'] is not None and g['crude_fat_min_percent'] is not None
+                  assert g['crude_fiber_max_percent'] is not None and g['moisture_max_percent'] is not None
+                  assert c['kcal_per_kg'] is not None or c['kcal_per_unit'] is not None
+
+          target_path = Path('research/deep-research-ziwi-peak.json')
+          target = json.loads(target_path.read_text(encoding='utf-8'))
+          existing = target['records']
+          initial = len(existing)
+          old_upcs = [r['upc'] for r in existing]
+          new_upcs = [r['upc'] for r in rows]
+          assert len(old_upcs) == len(set(old_upcs)), 'existing ZIWI ledger contains duplicate UPCs'
+          assert len(new_upcs) == len(set(new_upcs)), 'new batch contains duplicate UPCs'
+          overlap = sorted(set(old_upcs) & set(new_upcs))
+          assert not overlap, f'ZIWI ledger overlap: {overlap}'
+
+          exclusion_paths = [Path('data/known-products.ts'), Path('data/known-formulas.ts'), Path('data/wrong-barcodes.ts'), Path('docs/CATALOG-CONFLICTS.md')]
+          exclusion_paths += [p for p in Path('research').glob('deep-research-*.json') if p != target_path]
+          hits = {}
+          for p in exclusion_paths:
+              if not p.exists(): continue
+              text = p.read_text(encoding='utf-8', errors='replace')
+              for r in rows:
+                  if r['upc'] in text or r['canonical_gtin14'] in text:
+                      hits.setdefault(r['upc'], []).append(str(p))
+          assert not hits, f'exclusion collisions: {hits}'
+
+          target['records'].extend(rows)
+          target['updated_at'] = '2026-08-28'
+          final_upcs = [r['upc'] for r in target['records']]
+          assert len(final_upcs) == len(set(final_upcs))
+          assert len(final_upcs) == initial + 20, (initial, len(final_upcs))
+          target_path.write_text(json.dumps(target, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'Validated {len(exclusion_paths)} exclusion files; {initial} + 20 = {len(final_upcs)}')
+          print('Status counts:', dict(Counter(r['research_status'] for r in rows)))
+          print('UPCs:', ', '.join(new_upcs))
+          PY
+      - name: Commit merged ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-ziwi-peak.json
+          git commit -m "research: add 20 more ZIWI Peak records"
+          git push origin HEAD:agent/deep-research-ziwi-peak
