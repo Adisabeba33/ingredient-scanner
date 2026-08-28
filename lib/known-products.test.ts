@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
+  gtinCheckDigit,
+  isValidGtin,
   isValidUpcA,
   knownItems,
   lookupKnown,
@@ -45,16 +47,63 @@ describe("upcCheckDigit", () => {
   });
 });
 
+describe("gtinCheckDigit / isValidGtin", () => {
+  // Pinned against real packs at two lengths, because the point of the general
+  // function is that ONE rule serves both — and a rule written for twelve
+  // digits still returns a plausible digit for thirteen.
+  it("agrees with the UPC-A rule on American packs", () => {
+    expect(gtinCheckDigit("05000042994")).toBe(3);
+    expect(isValidGtin("050000429943")).toBe(true);
+    expect(isValidGtin("050000529943")).toBe(false);
+  });
+
+  it("validates the EAN-13 Ziwi Peak actually prints", () => {
+    // Read off New Zealand bags: air-dried cat recipes, 400 g and 1 kg.
+    expect(isValidGtin("9421016594177")).toBe(true);
+    expect(isValidGtin("9421016595792")).toBe(true);
+    // One digit wrong in the middle.
+    expect(isValidGtin("9421016594977")).toBe(false);
+  });
+
+  it("accepts a UPC-A written in its 13- and 14-digit forms", () => {
+    // The same code, zero-padded. This is what canonicalBarcode stores, and a
+    // validator that refused it would call our own database keys malformed.
+    expect(isValidGtin("0050000429943")).toBe(true);
+    expect(isValidGtin("00050000429943")).toBe(true);
+  });
+
+  it("refuses a length no retail barcode comes in", () => {
+    expect(isValidGtin("05000042994")).toBe(false); // 11
+    expect(isValidGtin("94210165941770")).toBe(false); // 14 digits, wrong digit
+    expect(isValidGtin("")).toBe(false);
+  });
+});
+
 describe("data/known-products.ts", () => {
   // The check that has to run in a test rather than in an aisle. A number that
   // fails this is definitely wrong, and finding that out in a shop costs a trip.
-  it("every barcode passes the UPC-A check digit", () => {
+  it("every barcode passes its GTIN check digit", () => {
+    // `isValidGtin`, not `isValidUpcA`: the seed held only American packs
+    // until Ziwi Peak, whose New Zealand bags carry EAN-13. The check-digit
+    // rule is the same at every length — see lib/known-products.ts.
     const bad = KNOWN_PRODUCTS.flatMap((p) =>
       p.packages
-        .filter((pkg) => !isValidUpcA(pkg.upc))
+        .filter((pkg) => !isValidGtin(pkg.upc))
         .map((pkg) => `${p.brand} ${p.line} ${p.variant} — ${pkg.upc}`)
     );
     expect(bad).toEqual([]);
+  });
+
+  // Length is a fact about the maker's country, not about correctness — but a
+  // code of some OTHER length is a mistyped digit, and that is worth catching
+  // separately from the checksum, which a wrong-length code cannot even reach.
+  it("holds only real barcode lengths", () => {
+    const odd = KNOWN_PRODUCTS.flatMap((p) =>
+      p.packages
+        .filter((pkg) => ![8, 12, 13, 14].includes(pkg.upc.length))
+        .map((pkg) => `${p.variant} — ${pkg.upc} (${pkg.upc.length} digits)`)
+    );
+    expect(odd).toEqual([]);
   });
 
   // A code under a prefix belonging to nobody we seed is either a typo or a

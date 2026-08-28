@@ -84,14 +84,20 @@ const GRAMS_PER_OZ = 28.3495;
  */
 const KCAL_SLACK = 1.3;
 
-function checkDigit(upc11) {
+function checkDigit(body) {
+  // One rule for every GTIN length — 3,1,3,1… weighted from the RIGHT of the
+  // body. It was written for eleven digits, which held until Ziwi Peak's New
+  // Zealand EAN-13 arrived; see lib/known-products.ts for the same note.
   let sum = 0;
-  for (let i = 0; i < 11; i += 1) {
-    const d = Number(upc11[i]);
-    sum += i % 2 === 0 ? d * 3 : d;
+  for (let i = 0; i < body.length; i += 1) {
+    const fromRight = body.length - 1 - i;
+    sum += Number(body[i]) * (fromRight % 2 === 0 ? 3 : 1);
   }
   return (10 - (sum % 10)) % 10;
 }
+
+/** The lengths a real retail barcode comes in. */
+const GTIN_LENGTHS = [8, 12, 13, 14];
 
 /**
  * Every barcode the seed already holds.
@@ -157,16 +163,23 @@ console.log(`\nChecking ${rows.length} product${rows.length === 1 ? "" : "s"}\n`
 for (const r of rows) {
   const problems = [];
 
-  if (r.upc.length !== 12) {
-    problems.push(`${r.upc.length} digits, expected 12`);
-  } else if (checkDigit(r.upc.slice(0, 11)) !== Number(r.upc[11])) {
-    problems.push(`check digit ${r.upc[11]}, should be ${checkDigit(r.upc.slice(0, 11))}`);
+  if (!GTIN_LENGTHS.includes(r.upc.length)) {
+    problems.push(`${r.upc.length} digits, expected one of ${GTIN_LENGTHS.join("/")}`);
+  } else {
+    const body = r.upc.slice(0, -1);
+    const last = Number(r.upc[r.upc.length - 1]);
+    if (checkDigit(body) !== last) {
+      problems.push(`check digit ${last}, should be ${checkDigit(body)}`);
+    }
   }
 
-  const maker = makers.get(r.upc.slice(0, 6));
+  // Matched by PREFIX rather than by a fixed six digits: a UPC-A carries a
+  // six-digit company prefix, an EAN-13 carries a country code and a longer
+  // one, and the file says how many digits each maker's is worth.
+  const maker = [...makers].find(([prefix]) => r.upc.startsWith(prefix))?.[1];
   if (!maker) {
     problems.push(
-      `prefix ${r.upc.slice(0, 6)} belongs to no maker we have seeded. ` +
+      `prefix ${r.upc.slice(0, 7)} belongs to no maker we have seeded. ` +
         `If this is a new maker rather than a mistyped digit, add the prefix ` +
         `to data/gs1-prefixes.ts and say whose it is.`
     );

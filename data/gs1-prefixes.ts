@@ -38,4 +38,11 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   { prefix: "050000", maker: "Nestlé Purina" },
   { prefix: "052742", maker: "Hill's Pet Nutrition" },
   { prefix: "030111", maker: "Royal Canin (Mars Petcare)" },
+  // New Zealand, and the first non-American maker here — so the first entries
+  // that are EAN-13 rather than UPC-A. "942" is GS1 New Zealand; the seven
+  // digits below are Ziwi's own two company prefixes under it, and matching is
+  // by string prefix rather than by a fixed six digits precisely so that a
+  // maker's prefix may be as long as GS1 made it.
+  { prefix: "9421016", maker: "Ziwi (New Zealand)" },
+  { prefix: "9421038", maker: "Ziwi (New Zealand)" },
 ];

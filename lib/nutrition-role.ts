@@ -159,6 +159,14 @@ const KNOWN_TREAT_LINES = [
   "tricky trainers",
   "pill pockets",
   "snacky mouse",
+  // Ziwi Peak's snack ranges. "Air-Dried Chews" is a trachea, an ear, a lung
+  // — single dried organs sold to be chewed, and the range name says chews.
+  // Getting this wrong is the §2.4 error in its purest form: a lamb trachea
+  // is 81% protein on a dry-matter basis and would otherwise be judged, and
+  // praised, as an extraordinary complete diet.
+  "air-dried chews",
+  "air dried chews",
+  "good dog rewards",
 ];
 
 const KNOWN_TOPPER_LINES = [

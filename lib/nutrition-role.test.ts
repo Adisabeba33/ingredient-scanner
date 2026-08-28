@@ -50,6 +50,23 @@ describe("detectNutritionRole", () => {
     expect(detectNutritionRole({ parts: ["Milk-Bone", "MaroSnacks"] })).toBe("treat");
   });
 
+  // Ziwi Peak sells single dried organs to chew beside complete air-dried
+  // DIETS, and the two shelves are one word apart: "Original Air-Dried" is
+  // dinner, "Air-Dried Chews" is a trachea. A lamb trachea is 81% protein on
+  // a dry-matter basis, so reading it as a diet does not just mislabel it —
+  // it hands a snack the best score in the catalog.
+  it("tells Ziwi's chews from Ziwi's air-dried dinners", () => {
+    const ziwi = (line: string, variant: string) =>
+      detectNutritionRole({ parts: ["Ziwi Peak", line, variant] });
+    expect(ziwi("Air-Dried Chews", "Lamb Green Tripe Dog Chews")).toBe("treat");
+    expect(ziwi("Air-Dried Chews", "Venison Shank Dog Chew — Full")).toBe("treat");
+    expect(ziwi("Good Dog Rewards", "Beef Recipe")).toBe("treat");
+    // The complete foods, which must NOT be excused from the everyday standard.
+    expect(ziwi("Original Air-Dried", "Mackerel & Lamb Recipe")).not.toBe("treat");
+    expect(ziwi("Provenance Air-Dried", "East Cape Recipe")).not.toBe("treat");
+    expect(ziwi("Steam & Dried", "Beef with Pumpkin Recipe")).not.toBe("treat");
+  });
+
   it("knows the ranges that go on top of a meal", () => {
     expect(detectNutritionRole({ parts: ["Stella & Chewy's", "Meal Mixers", "Chicken"] })).toBe("topper");
     expect(detectNutritionRole({ parts: ["Wellness", "Bowl Boosters", "Bare Chicken"] })).toBe("topper");

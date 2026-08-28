@@ -4,6 +4,7 @@ import { importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
 import { isVeterinaryDiet } from "./vet-diet";
+import { detectNutritionRole } from "./nutrition-role";
 import { CONFUSABLE_PAIRS, WRONG_BARCODES } from "../data/wrong-barcodes";
 import { compositionKey } from "./composition-key";
 import { hasAnyFigure } from "./guaranteed-analysis";
@@ -123,7 +124,20 @@ describe("data/known-formulas.ts", () => {
   // A composition that can't be fingerprinted can't be compared against a later
   // capture, which is how a duplicate gets in unnoticed.
   it("every composition is long enough to fingerprint", () => {
+    // Treats excepted, and only treats. The fingerprint exists to recognise
+    // one recipe met under a second barcode, and it needs enough words to be
+    // sure; a single dried organ has three ("Beef Weasand (Oesophagus)"), so
+    // the null it returns is the right answer rather than a thin list. What
+    // this still catches, and must, is a DIET whose composition arrived
+    // truncated.
+    const treatCodes = new Set(
+      KNOWN_PRODUCTS.filter(
+        (p) =>
+          detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat"
+      ).flatMap((p) => p.packages.map((pkg) => pkg.upc))
+    );
     const thin = Object.entries(KNOWN_FORMULAS)
+      .filter(([upc]) => !treatCodes.has(upc))
       .filter(([, f]) => compositionKey("Purina", f.ingredients) === null)
       .map(([upc]) => upc);
     expect(thin).toEqual([]);
@@ -274,13 +288,28 @@ describe("data/known-formulas.ts", () => {
   // and in a DRY panel it reads as moisture near zero — dry matter of a 10%
   // moisture food is 90% of it, so its dry-matter protein is only about a
   // ninth higher than as-fed, and the floor on moisture is what catches it.
+  //
+  // ── And a third shelf: a chew is not a bag of kibble either ────────────
+  //
+  // Ziwi Peak sells single dried organs — a lamb trachea, a beef weasand —
+  // whose whole ingredient list is that organ. Dried, they run 60–80% protein
+  // AS FED, which under the dry bounds reads exactly like the transcription
+  // error this test hunts. They are not food in the sense the bounds are about,
+  // so they get their own ceiling: the moisture floor still applies (it is what
+  // actually catches a dry-matter figure), and the protein ceiling is the one
+  // a piece of dried meat can really reach.
   const BOUNDS = {
     wet: { moisture: [60, 90], protein: [0, 20] },
     dry: { moisture: [5, 20], protein: [0, 50] },
+    treat: { moisture: [5, 20], protein: [0, 90] },
   } as const;
-  const formOf = new Map<string, "wet" | "dry">();
+  const formOf = new Map<string, "wet" | "dry" | "treat">();
   for (const p of KNOWN_PRODUCTS) {
-    for (const pkg of p.packages) formOf.set(pkg.upc, p.foodForm);
+    const isTreat =
+      detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat";
+    for (const pkg of p.packages) {
+      formOf.set(pkg.upc, isTreat ? "treat" : p.foodForm);
+    }
   }
 
   it("reads as an as-fed panel, not a dry-matter one", () => {
@@ -570,10 +599,13 @@ describe("data/known-formulas.ts", () => {
   // stops matching its own siblings and the report loses tokens it can read.
   it("carries no source shorthand in a stored composition", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
-      expect({ upc, shorthand: /\bKCl\b|\bB\d\s|\bHCl\b/.test(f.ingredients) }).toEqual({
-        upc,
-        shorthand: false,
-      });
+      // A BARE B-number is the shorthand ("B3 niacin"); "Vitamin B5
+      // Supplement" is not — that is what Ziwi's labels actually print, and
+      // refusing it would be refusing the label. The lookbehind is the whole
+      // difference between the two, and the pattern was written before any
+      // deck in the seed printed the second form.
+      const shorthand = /\bKCl\b|\bHCl\b|(?<!vitamin )\bB\d\s/i.test(f.ingredients);
+      expect({ upc, shorthand }).toEqual({ upc, shorthand: false });
     }
   });
 

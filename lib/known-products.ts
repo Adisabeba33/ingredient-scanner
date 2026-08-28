@@ -58,6 +58,44 @@ export function isValidUpcA(code: string): boolean {
   return Number(digits[11]) === upcCheckDigit(digits);
 }
 
+/**
+ * The check digit of any GTIN — EAN-8, UPC-A, EAN-13 or GTIN-14.
+ *
+ * ONE rule covers all four lengths: weight the digits 3,1,3,1… from the right
+ * of the body, and the check digit is what takes the total to the next
+ * multiple of ten. `upcCheckDigit` above is that rule with the length written
+ * into it, which was fine while every product in the seed was American.
+ *
+ * Ziwi Peak is not. It is a New Zealand maker and its packs carry EAN-13
+ * (9421016…), so the twelve-digit assumption stopped being a property of
+ * barcodes and became a property of the shelf we happened to have shopped.
+ * Everything that guards the seed now asks THIS question instead, and the
+ * function above stays exactly as narrow as its name claims.
+ */
+export function gtinCheckDigit(body: string): number {
+  const digits = body.replace(/\D+/g, "");
+  let total = 0;
+  for (let i = 0; i < digits.length; i += 1) {
+    // From the RIGHT, so the alternation lands correctly at any length.
+    const fromRight = digits.length - 1 - i;
+    total += Number(digits[i]) * (fromRight % 2 === 0 ? 3 : 1);
+  }
+  return (10 - (total % 10)) % 10;
+}
+
+/** The lengths a real retail barcode comes in. */
+const GTIN_LENGTHS = new Set([8, 12, 13, 14]);
+
+/** Is this a well-formed barcode of any GTIN length? */
+export function isValidGtin(code: string): boolean {
+  const digits = code.replace(/\D+/g, "");
+  if (!GTIN_LENGTHS.has(digits.length)) return false;
+  return (
+    Number(digits[digits.length - 1]) ===
+    gtinCheckDigit(digits.slice(0, digits.length - 1))
+  );
+}
+
 function toItem(product: KnownProduct): KnownItem {
   return {
     brand: product.brand,

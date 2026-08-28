@@ -102,6 +102,7 @@ const VERIFIED_016 = "2026-08-14";
 const VERIFIED_017 = "2026-08-14";
 const VERIFIED_018 = "2026-08-14";
 const VERIFIED_019 = "2026-08-27";
+const VERIFIED_020 = "2026-08-28";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -198,6 +199,21 @@ function withExtras(
       unit,
     })),
   };
+}
+
+/**
+ * Energy stated per kilogram only.
+ *
+ * Fourteen Ziwi packs print a kcal/kg figure and no per-cup or per-can one at
+ * all. `withCalories` cannot express that — its serving figure is required —
+ * and the alternative was to divide a bag into servings nobody printed, which
+ * is the invention `withCalories`'s own note refuses in the other direction.
+ */
+function withKcalPerKg(
+  analysis: GuaranteedAnalysis,
+  kcalPerKg: number
+): GuaranteedAnalysis {
+  return { ...analysis, kcalPerKg, kcalPerServing: null, servingName: null };
 }
 
 function withCalories(
@@ -4130,5 +4146,538 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Brewers rice, corn, wheat, egg product, chicken fat, corn gluten meal, natural flavors, wheat gluten, monocalcium phosphate, calcium carbonate, potassium chloride, fish oil, fructooligosaccharides, salt, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, folic acid, vitamin B12 supplement, vitamin D3 supplement], taurine, L-lysine, potassium citrate, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], choline chloride, GLA safflower oil, marigold extract (Tagetes erecta L.), L-carnitine, rosemary extract, preserved with mixed tocopherols and citric acid.`,
     analysis: withExtras(withCalories(ga(18.0, 13.0, 3.0, 10.0, null, null), 3729, 339, "cup"), { "Methionine-cystine": ["min", 0.74, "%"] }),
     verifiedAt: VERIFIED_019,
+  },
+
+  // ── Ziwi Peak — batch 020 (100 barcodes, cats + dogs, EAN-13) ───────────
+  "9421016593309": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, DL-Methionine, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "The current global-market ZIWI page prints 469 kcal ME/Cup, while the exact US-market page and US back-of-pack labels for these US SKUs print 465 kcal ME/Cup. The US-market label value is stored.",
+  },
+  "9421016595778": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, DL-Methionine, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "The current global-market ZIWI page prints 469 kcal ME/Cup, while the exact US-market page and US back-of-pack labels for these US SKUs print 465 kcal ME/Cup. The US-market label value is stored.",
+  },
+  "9421016594849": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595815": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016590537": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, DL-Methionine, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595754": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, DL-Methionine, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.2), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594177": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Lamb Cartilage, Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.2), 4550, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595792": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Inulin (from Chicory Root), Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Lamb Cartilage, Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.2), 4550, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016590551": {
+    ingredients: `Venison, Venison Tripe, Venison Heart, Venison Lung, Venison Liver, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Inulin (from Chicory Root), Dried Apple Pomace, Venison Cartilage, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Dried Organic Kelp, Salt, DL-Methionine, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.2), 4650, 441, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594504": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Tripe, Beef Liver, Chickpeas, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1125, 96, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer formula copies retain older Beef calorie/formula data; the current exact ZIWI US page prints 1125 kcal/kg and is stored. Retailer evidence is used only for individual-can barcode identity.",
+  },
+  "9421016594481": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Tripe, Beef Liver, Chickpeas, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1125, 208, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer formula copies retain older Beef calorie/formula data; the current exact ZIWI US page prints 1125 kcal/kg and is stored. Retailer evidence is used only for individual-can barcode identity.",
+  },
+  "9421038211090": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Liver, Beef Tripe, Chickpeas, Whole Southern Blue Whiting, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 5, 3, 78, 5, null), 1100, 94, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038211151": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Liver, Beef Tripe, Chickpeas, Whole Southern Blue Whiting, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 5, 3, 78, 5, null), 1100, 204, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594900": {
+    ingredients: `Chicken, Water Sufficient for Processing, Chicken Liver, Chicken Heart, Chickpeas, Chicken Bone, New Zealand Green Mussel, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1225, 104, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Current ZIWI US variety-sampler page lists Crude Fiber (max) 1% for the Chicken cat recipe, while the exact current Chicken Recipe product page lists 2%. The exact product page is more specific and 2% is stored.",
+  },
+  "9421016594887": {
+    ingredients: `Chicken, Water Sufficient for Processing, Chicken Liver, Chicken Heart, Chickpeas, Chicken Bone, New Zealand Green Mussel, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1225, 227, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Current ZIWI US variety-sampler page lists Crude Fiber (max) 1% for the Chicken cat recipe, while the exact current Chicken Recipe product page lists 2%. The exact product page is more specific and 2% is stored.",
+  },
+  "9421038211106": {
+    ingredients: `Chicken, Water Sufficient for Processing, Mackerel, Chicken Liver, Chickpeas, New Zealand Green Mussel, Chicken Bone, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Chicken Heart, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(12, 4, 3, 78, 5, null), 1075, 91, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038211168": {
+    ingredients: `Chicken, Water Sufficient for Processing, Mackerel, Chicken Liver, Chickpeas, New Zealand Green Mussel, Chicken Bone, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Choline Chloride, Chicken Heart, Dried Kelp, DL-Methionine, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(12, 4, 3, 78, 5, null), 1075, 199, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016598342": {
+    ingredients: `Whole Kahawai, Fish Broth, New Zealand Green Mussel, Lecithin, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Organic Kelp, Taurine.`,
+    analysis: withExtras(withCalories(ga(11.5, 4.5, 2, 78, 4, null), 1200, 102, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "The current global ZIWI renderer omits the moisture line from its visible GA, while the exact 85 g package listing prints moisture max 78%; the package-specific value is stored.",
+  },
+  "9421016598328": {
+    ingredients: `Whole Kahawai, Fish Broth, New Zealand Green Mussel, Lecithin, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Organic Kelp, Taurine.`,
+    analysis: withExtras(withKcalPerKg(ga(11.5, 4.5, 2, 78, 4, null), 1200), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Current ZIWI page offers 185 g, while the exact older Japanese listing maps this EAN to 170 g. The record intentionally preserves the older package generation and does not infer a 185 g barcode.",
+  },
+  "9421016594443": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Lamb Heart, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 6, 2, 78, 3, null), 1200, 102, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594429": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Lamb Heart, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 6, 2, 78, 3, null), 1200, 222, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038211113": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Venison, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 6.5, 3, 78, 4.5, null), 1200, 102, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038211175": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Venison, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 6.5, 3, 78, 4.5, null), 1200, 222, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594320": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Lamb Lung, Lamb, Chickpeas, Lamb Tripe, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Lamb Cartilage, Dried Kelp, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyrodoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10.5, 4, 2, 78, 3, null), 1050, 89, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer pages still carry an older Mackerel & Lamb formula/calorie block (including 1200 kcal/kg). The current exact ZIWI US page prints 1050 kcal/kg and 89 kcal per 85 g can and is stored.",
+  },
+  "9421016594306": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Lamb Lung, Lamb, Chickpeas, Lamb Tripe, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Lamb Cartilage, Dried Kelp, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyrodoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10.5, 4, 2, 78, 3, null), 1050, 194, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer pages still carry an older Mackerel & Lamb formula/calorie block (including 1200 kcal/kg / 222 kcal per 185 g). The current exact ZIWI US page prints 1050 kcal/kg / 194 kcal per 185 g and is stored.",
+  },
+  "9421016595952": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Chickpeas, New Zealand Green Mussel, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Dried Kelp, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(12, 3, 2, 78, 4, null), 950, 81, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595914": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Chickpeas, New Zealand Green Mussel, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Dried Kelp, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(12, 3, 2, 78, 4, null), 950, 176, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594627": {
+    ingredients: `Rabbit Meat, Water Sufficient for Processing, Lamb, Lamb Lung, Lamb Liver, Chickpeas, Lamb Kidney, Hare Meat, Lamb Tripe, Lamb Heart, New Zealand Green Mussel, Lamb Bone, DL-Methionine, Dried Kelp, Minerals (Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(11, 3.5, 2, 78, 3, null), 1000, 85, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer copies still carry an older Rabbit & Lamb calorie statement of 1100 kcal/kg / 94 kcal per 85 g. The current exact ZIWI US page prints 1000 kcal/kg / 85 kcal per 85 g and is stored.",
+  },
+  "9421016594603": {
+    ingredients: `Rabbit Meat, Water Sufficient for Processing, Lamb, Lamb Lung, Lamb Liver, Chickpeas, Lamb Kidney, Hare Meat, Lamb Tripe, Lamb Heart, New Zealand Green Mussel, Lamb Bone, DL-Methionine, Dried Kelp, Minerals (Magnesium Sulfate, Zinc Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(11, 3.5, 2, 78, 3, null), 1000, 185, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer copies still carry an older Rabbit & Lamb calorie statement of 1100 kcal/kg / 203 kcal per 185 g. The current exact ZIWI US page prints 1000 kcal/kg / 185 kcal per 185 g and is stored.",
+  },
+  "9421016594566": {
+    ingredients: `Venison, Water Sufficient for Processing, Venison Tripe, Venison Liver, Chickpeas, Venison Lung, Venison Heart, New Zealand Green Mussel, Venison Kidney, Venison Bone, Venison Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10, 4, 2, 78, 3, null), 1025, 87, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594542": {
+    ingredients: `Venison, Water Sufficient for Processing, Venison Tripe, Venison Liver, Chickpeas, Venison Lung, Venison Heart, New Zealand Green Mussel, Venison Kidney, Venison Bone, Venison Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Sodium Selenite), DL-Methionine, Dried Kelp, Choline Chloride, Salt, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10, 4, 2, 78, 3, null), 1025, 190, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016597376": {
+    ingredients: `Mutton, Goat, Whole Kahawai, Goat Tripe, Whole White Trevally, Mutton Lung, Whole Mackerel, Mutton Tripe, New Zealand Green Mussel, Goat Liver, Mutton Liver, Lamb Bone, Lecithin, Goat Heart, Goat Lung, Goat Kidney, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Mutton Bone, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Preservative (Citric Acid, Mixed Tocopherols), Goat Bone, Salt, DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withKcalPerKg(ga(38, 32, 3, 14, 12, 0.14), 5000), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Earlier retailer formula generation uses Selenium Yeast, Parsley and lacks the later DL-Methionine/Taurine ingredient ending; late-generation copies use Sodium Selenite and the stored order. Taurine 0.14% and chondroitin 1300 mg/kg are retained from the printed cat guarantee panel.",
+  },
+  "9421016597406": {
+    ingredients: `Mutton, Goat, Whole Kahawai, Goat Tripe, Whole White Trevally, Mutton Lung, Whole Mackerel, Mutton Tripe, New Zealand Green Mussel, Goat Liver, Mutton Liver, Lamb Bone, Lecithin, Goat Heart, Goat Lung, Goat Kidney, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Mutton Bone, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Preservative (Citric Acid, Mixed Tocopherols), Goat Bone, Salt, DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withExtras(withKcalPerKg(ga(38, 32, 3, 14, 12, 0.14), 5000), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer formula copies show the earlier Selenium Yeast/Parsley generation; stored ingredient order follows later Sodium Selenite/DL-Methionine/Taurine copies while the printed 0.14% taurine and 1300 mg/kg chondroitin guarantees are preserved.",
+  },
+  "9421016597499": {
+    ingredients: `Chicken, Whole Kahawai, Duck, Chicken Heart, Turkey, Chicken Necks, Chicken Liver, Whole Eggs, New Zealand Green Mussel, Chicken Bone, Lecithin, Duck Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Turkey Gizzard, Turkey Liver, Turkey Bone, Preservative (Citric Acid, Mixed Tocopherols), Salt, DL-Methionine, Turkey Heart, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withKcalPerKg(ga(38, 32, 3, 14, 12, 0.15), 5000),
+    verifiedAt: VERIFIED_020,
+    conflict: "Older Hauraki copies use Selenium Yeast and a different vitamin/mineral tail; late-generation Sodium Selenite/DL-Methionine/Taurine order is stored.",
+  },
+  "9421016597529": {
+    ingredients: `Chicken, Whole Kahawai, Duck, Chicken Heart, Turkey, Chicken Necks, Chicken Liver, Whole Eggs, New Zealand Green Mussel, Chicken Bone, Lecithin, Duck Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Turkey Gizzard, Turkey Liver, Turkey Bone, Preservative (Citric Acid, Mixed Tocopherols), Salt, DL-Methionine, Turkey Heart, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withKcalPerKg(ga(38, 32, 3, 14, 12, 0.15), 5000),
+    verifiedAt: VERIFIED_020,
+    conflict: "Older retailer copies expose an earlier Selenium Yeast formula generation; stored order uses later Sodium Selenite/DL-Methionine/Taurine generation.",
+  },
+  "9421016596782": {
+    ingredients: `Beef, Venison, Lamb, Whole Southern Blue Whiting, Hoki, Beef Kidney, Lamb Tripe, Beef Heart, Venison Lung, New Zealand Green Mussel, Venison Tripe, Lamb Lung, Lamb Liver, Beef Liver, Venison Kidney, Lamb Kidney, Lecithin, Lamb Bone, Beef Bone, Venison Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Preservative (Citric Acid, Mixed Tocopherols), Salt, DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withKcalPerKg(ga(38, 32, 3, 14, 12, 0.15), 5000),
+    verifiedAt: VERIFIED_020,
+    conflict: "Older copies use Selenium Yeast/Parsley and omit later DL-Methionine/Taurine tail. Stored order follows the later Sodium Selenite generation.",
+  },
+  "9421016597284": {
+    ingredients: `Beef, Venison, Lamb, Whole Southern Blue Whiting, Hoki, Beef Kidney, Lamb Tripe, Beef Heart, Venison Lung, New Zealand Green Mussel, Venison Tripe, Lamb Lung, Lamb Liver, Beef Liver, Venison Kidney, Lamb Kidney, Lecithin, Lamb Bone, Beef Bone, Venison Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Preservative (Citric Acid, Mixed Tocopherols), Salt, DL-Methionine, Vitamins (Choline Chloride, Thiamine Mononitrate, Pyridoxine Hydrochloride, Folic Acid, Vitamin D3 Supplement), Taurine.`,
+    analysis: withKcalPerKg(ga(38, 32, 3, 14, 12, 0.15), 5000),
+    verifiedAt: VERIFIED_020,
+    conflict: "The barcode retailer's descriptive copy is corrupted and describes another Provenance recipe; formula fields therefore come from a separate Otago-specific source. Older Otago formula copies also use Selenium Yeast/Parsley instead of the stored later generation.",
+  },
+  "9421016596850": {
+    ingredients: `Mutton, Lamb Broth, Goat, Whole Kahawai, Goat Tripe, Whole White Trevally, Mutton Tripe, Mutton Lung, New Zealand Green Mussel, Lamb Plasma, Whole Mackerel, Goat Liver, Lamb Bone, Mutton Liver, Lecithin, Goat Heart, Mutton Bone, Goat Lung, Goat Kidney, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), DL-Methionine, Goat Bone, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Kelp, Taurine.`,
+    analysis: withKcalPerKg(ga(10.5, 8.5, 1.5, 78, 4, 0.1), 1500),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596942": {
+    ingredients: `Mutton, Lamb Broth, Goat, Whole Kahawai, Goat Tripe, Whole White Trevally, Mutton Tripe, Mutton Lung, New Zealand Green Mussel, Lamb Plasma, Whole Mackerel, Goat Liver, Lamb Bone, Mutton Liver, Lecithin, Goat Heart, Mutton Bone, Goat Lung, Goat Kidney, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), DL-Methionine, Goat Bone, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Kelp, Taurine.`,
+    analysis: withKcalPerKg(ga(10.5, 8.5, 1.5, 78, 4, 0.1), 1500),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596874": {
+    ingredients: `Beef, Beef Broth, Venison, Whole Southern Blue Whiting, Lamb Tripe, Beef Kidney, Lamb Lung, New Zealand Green Mussel, Lamb Plasma, Venison Tripe, Hoki, Beef Liver, Venison Lung, Beef Bone, Lamb Liver, Lamb Kidney, Lamb, Lecithin, Venison Kidney, Venison Bone, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), DL-Methionine, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Kelp, Lamb Bone, Taurine.`,
+    analysis: withKcalPerKg(ga(9, 7, 1.5, 78, 4, null), 1250),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer pages for this product mistakenly paste the air-dried 38/32/3/14 panel and air-dried ingredient list. Those corrupted panels are rejected; the wet-specific 9/7/1.5/78/4 and 1250 kcal/kg panel is stored.",
+  },
+  "9421016596966": {
+    ingredients: `Beef, Beef Broth, Venison, Whole Southern Blue Whiting, Lamb Tripe, Beef Kidney, Lamb Lung, New Zealand Green Mussel, Lamb Plasma, Venison Tripe, Hoki, Beef Liver, Venison Lung, Beef Bone, Lamb Liver, Lamb Kidney, Lamb, Lecithin, Venison Kidney, Venison Bone, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex), DL-Methionine, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Pyridoxine Hydrochloride, Riboflavin, Vitamin D3 Supplement, Folic Acid), Dried Kelp, Lamb Bone, Taurine.`,
+    analysis: withKcalPerKg(ga(9, 7, 1.5, 78, 4, null), 1250),
+    verifiedAt: VERIFIED_020,
+    conflict: "Polypet's current body contains an air-dried formula/GA under the canned product title; it is used only for barcode identity. Wet-specific formula source is stored separately.",
+  },
+  "9421038210079": {
+    ingredients: `Beef, Beef Lung, Whole Southern Blue Whiting, Beef Tripe, Beef Liver, Beef Heart, Beef Plasma, Beef Spleen, Beef Fat, Beef Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Yellow Peas, Dried Green Lentils, Beef Cartilage, Lecithin, Dried Quinoa, Dried Apple Pomace, Natural Flavour, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Choline Chloride, Dried Kelp, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(38, 28, 4, 12, 12, 0.1), 4500, 365, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2500, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210086": {
+    ingredients: `Beef, Beef Lung, Whole Southern Blue Whiting, Beef Tripe, Beef Liver, Beef Heart, Beef Plasma, Beef Spleen, Beef Fat, Beef Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Yellow Peas, Dried Green Lentils, Beef Cartilage, Lecithin, Dried Quinoa, Dried Apple Pomace, Natural Flavour, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Sodium Selenite), Choline Chloride, Dried Kelp, Preservative (Citric Acid, Mixed Tocopherols), DL-Methionine, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Pyridoxine Hydrochloride, Riboflavin, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(38, 28, 4, 12, 12, 0.1), 4500, 365, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2500, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210062": {
+    ingredients: `Chicken, Chicken Liver, Chicken Necks, Whole Mackerel, Chicken Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Egg White, Dried Yellow Peas, Dried Green Lentils, Chicken Fat, Dried Quinoa, Dried Apple Pomace, Chicken Cartilage, Natural Flavour, Chicken Heart, Choline Chloride, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Calcium Pantothenate, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(38, 28, 4, 12, 12, 0.1), 4500, 383, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2500, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210048": {
+    ingredients: `Chicken, Chicken Liver, Chicken Necks, Whole Mackerel, Chicken Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Egg White, Dried Yellow Peas, Dried Green Lentils, Chicken Fat, Dried Quinoa, Dried Apple Pomace, Chicken Cartilage, Natural Flavour, Chicken Heart, Choline Chloride, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Calcium Pantothenate, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(38, 28, 4, 12, 12, 0.1), 4500, 383, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2500, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210055": {
+    ingredients: `Whole Jack Mackerel (Source of Glucosamine and Chondroitin Sulfate), Hoki, Whole Southern Blue Whiting, Whole Mackerel, Chicken, Chicken Fat, Dried Yellow Peas, Dried Green Lentils, Dried Egg White, Lecithin, Dried Quinoa, Dried Apple Pomace, Natural Flavor, Choline Chloride, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Calcium Pantothenate, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(40, 24, 4, 12, 11, 0.1), 4400, 374, "cup"), { "Iodine": ["min", 2, "mg/kg"], "Omega-3 Fatty Acids": ["min", 2, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer copies still carry a prior Wild South Pacific Fish formula with Whole Sardine and a 26% minimum-fat guarantee. The current exact ZIWI US page removes sardine and prints 24% minimum fat; current manufacturer data is stored.",
+  },
+  "9421038210031": {
+    ingredients: `Whole Jack Mackerel (Source of Glucosamine and Chondroitin Sulfate), Hoki, Whole Southern Blue Whiting, Whole Mackerel, Chicken, Chicken Fat, Dried Yellow Peas, Dried Green Lentils, Dried Egg White, Lecithin, Dried Quinoa, Dried Apple Pomace, Natural Flavor, Choline Chloride, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Calcium Pantothenate, Folic Acid, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(40, 24, 4, 12, 11, 0.1), 4400, 374, "cup"), { "Iodine": ["min", 2, "mg/kg"], "Omega-3 Fatty Acids": ["min", 2, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "Some retailer copies still carry a prior Wild South Pacific Fish formula with Whole Sardine and a 26% minimum-fat guarantee. The current exact ZIWI US page removes sardine and prints 24% minimum fat; current manufacturer data is stored.",
+  },
+  "9421016595679": {
+    ingredients: `Beef Weasand (Oesophagus).`,
+    analysis: withCalories(ga(61, 14, 0.5, 10, null, null), 3950, 60, "piece"),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596904": {
+    ingredients: `Lamb Ear, Lamb Liver.`,
+    analysis: withCalories(ga(50, 17, 3, 10, null, null), 4200, 38, "piece"),
+    verifiedAt: VERIFIED_020,
+    conflict: "A separate wholesale copy incorrectly assigns 9421016593965 to Lamb Ears; that code is already proven in the ZIWI ledger as an Air-Dried Lamb dog-food bag and is rejected as a sibling collision.",
+  },
+  "9421016597185": {
+    ingredients: `Lamb Green Tripe.`,
+    analysis: withCalories(ga(73, 6, 2, 10, null, null), 3650, 10, "cup"),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595693": {
+    ingredients: `Lamb Trachea.`,
+    analysis: withCalories(ga(55, 20, 8, 10, null, null), 5750, 98, "piece"),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596812": {
+    ingredients: `Venison Tripe.`,
+    analysis: withCalories(ga(55, 20, 8, 10, null, null), 4750, 166, "piece"),
+    verifiedAt: VERIFIED_020,
+    conflict: "The current ZIWI US renderer says 4750 kcal ME/lb, while exact retailer nutrition panels say 4750 kcal/kg and 166 kcal/piece. The kg basis is stored because the per-piece energy is compatible with the kg figure and not with 4750 kcal/lb.",
+  },
+  "9421016597147": {
+    ingredients: `Venison Lung, Venison Kidney.`,
+    analysis: withCalories(ga(70, 7, 3, 10, null, null), 3800, 114, "cup"),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016592050": {
+    ingredients: `Venison Shank Bone, Beef Esophagus.`,
+    analysis: withCalories(ga(26, 4, 3, 12, 59, null), 2100, 410, "piece"),
+    verifiedAt: VERIFIED_020,
+    conflict: "ZIWI's current renderer garbles the calorie basis/order. 2100 kcal/kg × 0.195 kg = 409.5 kcal, resolving the intended full-shank value as 410 kcal.",
+  },
+  "9421016592043": {
+    ingredients: `Venison Shank Bone, Beef Esophagus.`,
+    analysis: withCalories(ga(26, 4, 3, 12, 59, null), 2100, 200, "piece"),
+    verifiedAt: VERIFIED_020,
+    conflict: "ZIWI's renderer currently displays '2100 kcal ME/piece' and '410 half 200/full'. Arithmetic resolves the intended statement as 2100 kcal/kg, about 200 kcal for the 95 g half and about 410 kcal for the 195 g full; the displayed labels are transposed/garbled.",
+  },
+  "9421016593187": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.05), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593170": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.05), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593163": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.05), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593989": {
+    ingredients: `Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.05), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594825": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.23), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594801": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.23), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594788": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.23), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594764": {
+    ingredients: `Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.23), 5000, 474, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593071": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.15), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016590599": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.15), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016592982": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.15), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593965": {
+    ingredients: `Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(38, 30, 3, 14, 12, 0.15), 4950, 469, "cup"), { "Chondroitin Sulfate": ["min", 3000, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594153": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.26), 4500, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594139": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.26), 4500, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594115": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.26), 4500, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016595648": {
+    ingredients: `Whole Mackerel, Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lamb Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.26), 4500, 427, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594047": {
+    ingredients: `Lamb Tripe, Lamb Lung, Lamb Heart, Lamb, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.1), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594023": {
+    ingredients: `Lamb Tripe, Lamb Lung, Lamb Heart, Lamb, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.1), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594009": {
+    ingredients: `Lamb Tripe, Lamb Lung, Lamb Heart, Lamb, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Lamb Cartilage, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.1), 4900, 465, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016593064": {
+    ingredients: `Venison, Venison Tripe, Venison Heart, Venison Lung, Venison Liver, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Venison Cartilage, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(44, 24, 3, 14, 12, 0.09), 4650, 441, "cup"), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"], "Glucosamine": ["min", 1000, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596669": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Tripe, Chickpeas, Beef Liver, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Lecithin, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1125, 191, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594467": {
+    ingredients: `Beef, Water Sufficient for Processing, Beef Lung, Beef Kidney, Beef Tripe, Chickpeas, Beef Liver, New Zealand Green Mussel, Beef Bone, Beef Cartilage, Lecithin, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1125, 439, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596744": {
+    ingredients: `Chicken, Water Sufficient for Processing, Chicken Liver, Chicken Heart, Chickpeas, Chicken Bone, New Zealand Green Mussel, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1225, 208, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594863": {
+    ingredients: `Chicken, Water Sufficient for Processing, Chicken Liver, Chicken Heart, Chickpeas, Chicken Bone, New Zealand Green Mussel, Chicken Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 5.5, 2, 78, 4, null), 1225, 478, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016596645": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Lamb Heart, Lamb Bone, New Zealand Green Mussel, Lecithin, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 6, 2, 78, 3, null), 1200, 204, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594405": {
+    ingredients: `Lamb, Water Sufficient for Processing, Lamb Lung, Lamb Tripe, Chickpeas, Lamb Liver, Lamb Heart, Lamb Bone, New Zealand Green Mussel, Lecithin, Lamb Kidney, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9.5, 6, 2, 78, 3, null), 1200, 468, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "A separate retailer was found incorrectly assigning this Lamb 390 g code to Mackerel & Lamb 390 g; that corrupted mapping was rejected because independent exact-unit evidence gives Mackerel & Lamb code 9421016594283.",
+  },
+  "9421016596720": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Lamb Lung, Lamb, Chickpeas, Lamb Tripe, Lamb Liver, Lamb Heart, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lecithin, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Lamb Cartilage, Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10.5, 4, 2, 78, 3, null), 1050, 179, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "A conflicting retailer copy maps Lamb 170 g code 9421016596645 to this recipe; independent Lamb evidence proves that code belongs to Lamb, while two exact Mackerel & Lamb 170 g sources agree on 9421016596720.",
+  },
+  "9421016594283": {
+    ingredients: `Mackerel, Water Sufficient for Processing, Lamb Lung, Lamb, Chickpeas, Lamb Tripe, Lamb Liver, Lamb Heart, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lecithin, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex), Lamb Cartilage, Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10.5, 4, 2, 78, 3, null), 1050, 410, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "A corrupted retailer listing was found using sibling Lamb 390 g code 9421016594405 for this product; exact Mackerel & Lamb listings instead identify 9421016594283.",
+  },
+  "9421016596706": {
+    ingredients: `Lamb Tripe, Water Sufficient for Processing, Lamb, Lamb Lung, Chickpeas, Lamb Liver, Lamb Heart, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lecithin, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 4, 2, 78, 3, null), 1000, 170, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "The current ZIWI page has a unit-label typo, printing '170 kcal ME/390g (6 oz)'. Six ounces is the 170 g can; the 170 kcal value is internally confirmed by 1000 kcal/kg × 0.170 kg = 170 kcal.",
+  },
+  "9421016594269": {
+    ingredients: `Lamb Tripe, Water Sufficient for Processing, Lamb, Lamb Lung, Chickpeas, Lamb Liver, Lamb Heart, New Zealand Green Mussel, Lamb Bone, Lamb Kidney, Lecithin, Lamb Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(9, 4, 2, 78, 3, null), 1000, 390, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+    conflict: "The manufacturer page's neighboring 6 oz calorie line incorrectly labels 6 oz as 390 g; the 13.75 oz line itself prints 390 kcal/390 g and is internally exact.",
+  },
+  "9421016596683": {
+    ingredients: `Venison, Water Sufficient for Processing, Venison Tripe, Venison Liver, Chickpeas, Venison Lung, Venison Heart, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Venison Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10, 4, 2, 78, 3, null), 1025, 174, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016594528": {
+    ingredients: `Venison, Water Sufficient for Processing, Venison Tripe, Venison Liver, Chickpeas, Venison Lung, Venison Heart, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Venison Cartilage, Minerals (Potassium Chloride, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid).`,
+    analysis: withExtras(withCalories(ga(10, 4, 2, 78, 3, null), 1025, 400, "can"), { "Chondroitin Sulfate": ["min", 300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016597307": {
+    ingredients: `Beef, Venison, Lamb, Whole Southern Blue Whiting, Hoki, Beef Kidney, Lamb Tripe, Beef Heart, Venison Lung, New Zealand Green Mussel, Venison Tripe, Lamb Lung, Lamb Liver, Beef Liver, Venison Kidney, Lamb Kidney, Lecithin, Lamb Bone, Beef Bone, Venison Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Parsley, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withKcalPerKg(ga(38, 32, 3, 14, 12, 0.1), 5000), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016597338": {
+    ingredients: `Beef, Venison, Lamb, Whole Southern Blue Whiting, Hoki, Beef Kidney, Lamb Tripe, Beef Heart, Venison Lung, New Zealand Green Mussel, Venison Tripe, Lamb Lung, Lamb Liver, Beef Liver, Venison Kidney, Lamb Kidney, Lecithin, Lamb Bone, Beef Bone, Venison Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Parsley, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withKcalPerKg(ga(38, 32, 3, 14, 12, 0.1), 5000), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016597352": {
+    ingredients: `Beef, Venison, Lamb, Whole Southern Blue Whiting, Hoki, Beef Kidney, Lamb Tripe, Beef Heart, Venison Lung, New Zealand Green Mussel, Venison Tripe, Lamb Lung, Lamb Liver, Beef Liver, Venison Kidney, Lamb Kidney, Lecithin, Lamb Bone, Beef Bone, Venison Bone, Inulin from Chicory, Dried Kelp, Dried Apple Pomace, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Parsley, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withExtras(withKcalPerKg(ga(38, 32, 3, 14, 12, 0.1), 5000), { "Chondroitin Sulfate": ["min", 1300, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421016597000": {
+    ingredients: `Mutton, Lamb Broth, Goat, Whole Kahawai, Goat Tripe, Whole White Trevally, Mutton Tripe, Mutton Lung, New Zealand Green Mussel, Lamb Plasma, Whole Mackerel, Goat Liver, Lamb Bone, Lecithin, Mutton Liver, Goat Heart, Mutton Bone, Goat Lung, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Goat Kidney, Goat Bone, Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin B5 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
+    analysis: withCalories(ga(10.5, 8.5, 1.5, 78, 4, 0.06), 1500, 255, "can"),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210000": {
+    ingredients: `Beef, Beef Lung, Beef Tripe, Beef Liver, Beef Heart, Beef Plasma, Beef Spleen, Beef Bone (Source of Glucosamine and Chondroitin Sulfate), Lecithin, Beef Fat, Dried Green Peas, Dried Green Lentils, Pumpkin, Beef Cartilage, Dried Pumpkin, Dried Apple Pomace, Natural Flavour, Dried Quinoa, Fish Oil, Rutabaga, Carrot, Beets, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 12, null), 4400, 334, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210017": {
+    ingredients: `Beef, Beef Lung, Beef Tripe, Beef Liver, Beef Heart, Beef Plasma, Beef Spleen, Beef Bone (Source of Glucosamine and Chondroitin Sulfate), Lecithin, Beef Fat, Dried Green Peas, Dried Green Lentils, Pumpkin, Beef Cartilage, Dried Pumpkin, Dried Apple Pomace, Natural Flavour, Dried Quinoa, Fish Oil, Rutabaga, Carrot, Beets, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 12, null), 4400, 334, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210024": {
+    ingredients: `Beef, Beef Lung, Beef Tripe, Beef Liver, Beef Heart, Beef Plasma, Beef Spleen, Beef Bone (Source of Glucosamine and Chondroitin Sulfate), Lecithin, Beef Fat, Dried Green Peas, Dried Green Lentils, Pumpkin, Beef Cartilage, Dried Pumpkin, Dried Apple Pomace, Natural Flavour, Dried Quinoa, Fish Oil, Rutabaga, Carrot, Beets, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 12, null), 4400, 334, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210123": {
+    ingredients: `Chicken, Chicken Liver, Chicken Necks, Dried Egg White, Chicken Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Green Peas, Dried Green Lentils, Dried Quinoa, Chicken Fat, Chicken Cartilage, Dried Apple Pomace, Natural Flavour, Apple, Pear, Kiwifruit, Blueberries, Persimmons, Fish Oil, Chicken Heart, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Choline Chloride, Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(36, 26, 4, 12, 11, null), 4300, 305, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210130": {
+    ingredients: `Chicken, Chicken Liver, Chicken Necks, Dried Egg White, Chicken Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Green Peas, Dried Green Lentils, Dried Quinoa, Chicken Fat, Chicken Cartilage, Dried Apple Pomace, Natural Flavour, Apple, Pear, Kiwifruit, Blueberries, Persimmons, Fish Oil, Chicken Heart, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Choline Chloride, Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(36, 26, 4, 12, 11, null), 4300, 305, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210147": {
+    ingredients: `Chicken, Chicken Liver, Chicken Necks, Dried Egg White, Chicken Bone (Source of Glucosamine and Chondroitin Sulfate), Dried Green Peas, Dried Green Lentils, Dried Quinoa, Chicken Fat, Chicken Cartilage, Dried Apple Pomace, Natural Flavour, Apple, Pear, Kiwifruit, Blueberries, Persimmons, Fish Oil, Chicken Heart, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Choline Chloride, Preservative (Citric Acid, Mixed Tocopherols), Dried Kelp, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Vitamin D3 Supplement), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(36, 26, 4, 12, 11, null), 4300, 305, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210093": {
+    ingredients: `Lamb, Lamb Lung, Lamb Tripe, Lamb Liver, Lamb Heart, Lamb Plasma, Lamb Bone (Source of Glucosamine and Chondroitin Sulfate), Lamb Spleen, Dried Green Peas, Dried Green Lentils, Lamb Fat, Lecithin, Lamb Cartilage, Dried Quinoa, Dried Apple Pomace, Natural Flavour, Fish Oil, Spinach, Kale, Green Beans, Beet Greens, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 11, null), 4400, 308, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210109": {
+    ingredients: `Lamb, Lamb Lung, Lamb Tripe, Lamb Liver, Lamb Heart, Lamb Plasma, Lamb Bone (Source of Glucosamine and Chondroitin Sulfate), Lamb Spleen, Dried Green Peas, Dried Green Lentils, Lamb Fat, Lecithin, Lamb Cartilage, Dried Quinoa, Dried Apple Pomace, Natural Flavour, Fish Oil, Spinach, Kale, Green Beans, Beet Greens, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 11, null), 4400, 308, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
+  },
+  "9421038210116": {
+    ingredients: `Lamb, Lamb Lung, Lamb Tripe, Lamb Liver, Lamb Heart, Lamb Plasma, Lamb Bone (Source of Glucosamine and Chondroitin Sulfate), Lamb Spleen, Dried Green Peas, Dried Green Lentils, Lamb Fat, Lecithin, Lamb Cartilage, Dried Quinoa, Dried Apple Pomace, Natural Flavour, Fish Oil, Spinach, Kale, Green Beans, Beet Greens, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Dried Chicory Root, Dried Kelp, Choline Chloride, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(34, 28, 4, 12, 11, null), 4400, 308, "cup"), { "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Chondroitin Sulfate": ["min", 2000, "mg/kg"], "Glucosamine": ["min", 800, "mg/kg"] }),
+    verifiedAt: VERIFIED_020,
   },
 };

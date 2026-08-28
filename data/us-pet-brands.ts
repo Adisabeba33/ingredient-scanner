@@ -745,7 +745,21 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Independent",
     species: "both",
     aliases: ["ziwi", "ziwipeak"],
-    lines: ["Air-Dried", "Provenance", "Steam & Dried", "Wet Canned"],
+    // Named as Ziwi names them on the bag. The first four here were written
+    // from memory of the shelf before any Ziwi product was seeded, and three
+    // of them were wrong in the way that matters: "Air-Dried" and
+    // "Provenance" are not ranges but halves of range names, so every product
+    // would have filed under "Other" on the coverage page.
+    lines: [
+      "Original Air-Dried",
+      "Original Canned Wet",
+      "Provenance Air-Dried",
+      "Provenance Canned Wet",
+      "Steam & Dried",
+      "Air-Dried Chews",
+      "Good Dog Rewards",
+      "Raw Superboost",
+    ],
   },
   {
     name: "Farmina",

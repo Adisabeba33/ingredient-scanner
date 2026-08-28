@@ -56,6 +56,16 @@ export type Texture =
   | "biscuit"
   | "freeze_dried"
   | "air_dried"
+  /**
+   * Steamed, then dried — Ziwi Peak's second pillar and the whole basis of a
+   * range, which is the test §3 of docs/SEEDING-A-BATCH.md sets for a new
+   * value. It is neither of the neighbours: `air_dried` means no heat was
+   * applied, and `dehydrated` says nothing about the cooking step that
+   * precedes the drying here. The distinction is printed on the front of
+   * every bag, and it predicts a different product — steam-set proteins
+   * rather than raw ones carried through.
+   */
+  | "steam_dried"
   | "dehydrated"
   | "fresh"
   | "raw"
@@ -95,7 +105,7 @@ const TEXTURES = new Set<string>([
   "pate", "loaf", "mousse", "minced", "ground", "chopped_ground", "flaked",
   "shredded", "morsels", "chunks", "cuts", "choice_cuts", "slices", "filets",
   "bits", "stew", "medley", "kibble", "biscuit", "freeze_dried", "air_dried",
-  "dehydrated", "fresh", "raw", "unknown",
+  "steam_dried", "dehydrated", "fresh", "raw", "unknown",
 ]);
 
 const PRESENTATIONS = new Set<string>([
