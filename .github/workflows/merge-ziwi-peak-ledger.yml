@@ -1,0 +1,39 @@
+name: Merge ZIWI Peak staged ledgers
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/merge-ziwi-peak-ledger.yml
+      - .github/scripts/merge-ziwi-peak-ledger.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Consolidate all ZIWI Peak staged records
+        run: python .github/scripts/merge-ziwi-peak-ledger.py
+      - name: Commit canonical ledger and remove staged duplicates
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-ziwi-peak.json
+          git rm -f \
+            research/.ziwi-peak-cats-append-2026-08-27-b1.json \
+            research/.ziwi-peak-cats-append-2026-08-27-b2.json \
+            research/.ziwi-peak-append-2026-08-27-b3.json \
+            research/.ziwi-peak-append-2026-08-27-b4.json \
+            research/.ziwi-peak-append-2026-08-27-b5.json \
+            research/.ziwi-peak-append-2026-08-28-b6.json
+          git diff --cached --check
+          git commit -m "research: consolidate 116 ZIWI Peak records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
