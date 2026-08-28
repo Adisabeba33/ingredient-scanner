@@ -1,5 +1,5 @@
 import { sourceRank } from "./barcode";
-import { normalizeComposition } from "./composition-key";
+import { normalizeComposition } from "./composition-text";
 
 /**
  * What to do with a seeded formula when the catalog already holds the barcode.
