@@ -9846,6 +9846,1457 @@
         "Because ingredient-generation evidence conflicts, status is needs_physical_label rather than source_verified."
       ],
       "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211250",
+      "canonical_gtin14": "09421038211250",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Air-Dried Puppy",
+      "product_name": "ZIWI Peak Air-Dried Chicken & Lamb Recipe for Puppies",
+      "variant": "Chicken & Lamb Recipe",
+      "recipe": [
+        "chicken",
+        "lamb"
+      ],
+      "life_stage": "puppy",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "14 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211243",
+      "canonical_gtin14": "09421038211243",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Steam & Dried Kitten",
+      "product_name": "ZIWI Peak Steam & Dried Chicken with Southern Blue Whiting Recipe for Kittens",
+      "variant": "Chicken with Southern Blue Whiting Recipe",
+      "recipe": [
+        "chicken",
+        "southern blue whiting"
+      ],
+      "life_stage": "kitten",
+      "food_form": "dry",
+      "texture": "steam_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "1.5 lb",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211212",
+      "canonical_gtin14": "09421038211212",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté Kitten",
+      "product_name": "ZIWI Peak Canned Pâté Beef with Mackerel Recipe for Kittens",
+      "variant": "Beef with Mackerel Recipe",
+      "recipe": [
+        "beef",
+        "mackerel"
+      ],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211267",
+      "canonical_gtin14": "09421038211267",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté Kitten",
+      "product_name": "ZIWI Peak Canned Pâté Chicken with Lamb Recipe for Kittens",
+      "variant": "Chicken with Lamb Recipe",
+      "recipe": [
+        "chicken",
+        "lamb"
+      ],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211564",
+      "canonical_gtin14": "09421038211564",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté",
+      "product_name": "ZIWI Peak Canned Pâté Salmon with Chicken Recipe for Cats",
+      "variant": "Salmon with Chicken Recipe",
+      "recipe": [
+        "salmon",
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211571",
+      "canonical_gtin14": "09421038211571",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté",
+      "product_name": "ZIWI Peak Canned Pâté Salmon with Chicken Recipe for Cats",
+      "variant": "Salmon with Chicken Recipe",
+      "recipe": [
+        "salmon",
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "6.5 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211595",
+      "canonical_gtin14": "09421038211595",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté",
+      "product_name": "ZIWI Peak Canned Pâté Salmon with South Pacific Fish Recipe for Cats",
+      "variant": "Salmon with South Pacific Fish Recipe",
+      "recipe": [
+        "salmon",
+        "south pacific fish"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421038211588",
+      "canonical_gtin14": "09421038211588",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Canned Pâté",
+      "product_name": "ZIWI Peak Canned Pâté Salmon with South Pacific Fish Recipe for Cats",
+      "variant": "Salmon with South Pacific Fish Recipe",
+      "recipe": [
+        "salmon",
+        "south pacific fish"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "6.5 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "ZIWI first-party SuperZoo 2026 launch material proves the exact product, sellable size, and EAN-13; FernMark corroborates the launched range. A complete current formula/GA/calorie label deck was not located, so formula fields remain intentionally unfilled.",
+      "source_urls": [
+        "https://us.ziwipets.com/pages/superzoo-2026",
+        "https://www.fernmark.nzstory.govt.nz/brands/100204"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "ZIWI's own launch table maps this EAN-13 directly to the stated individual retail unit and size; no sequential barcode inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact first-party barcode-to-product/size identity is established.",
+        "Candidate status is deliberate because the complete current ingredient order, guaranteed analysis, and calorie statement were not located."
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590193",
+      "canonical_gtin14": "09421016590193",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Raw Superboost",
+      "product_name": "ZIWI Peak Freeze-Dried Skin & Coat Health Recipe Meal Enhancer for Dogs",
+      "variant": "Skin & Coat Health",
+      "recipe": [
+        "mackerel",
+        "hoki",
+        "southern whiting"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "freeze_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 oz (114 g)",
+      "ingredients_verbatim": "Whole Mackerel, Hoki, Whole Southern Whiting, New Zealand Green Mussel, Blackfoot Abalone, Fish Broth, Marine Microalgae Oil, Mixed Tocopherols (a preservative), Dried Organic Kelp, Dandelion Greens, Rosehips, Green Tea Leaf, Elder Flowers, Dried Chicory Root, Parsley, Rosemary Extract, Dried Bacillus subtilis Fermentation Product.",
+      "ingredients_ordered_normalized": [
+        "Whole Mackerel",
+        "Hoki",
+        "Whole Southern Whiting",
+        "New Zealand Green Mussel",
+        "Blackfoot Abalone",
+        "Fish Broth",
+        "Marine Microalgae Oil",
+        "Mixed Tocopherols (a preservative)",
+        "Dried Organic Kelp",
+        "Dandelion Greens",
+        "Rosehips",
+        "Green Tea Leaf",
+        "Elder Flowers",
+        "Dried Chicory Root",
+        "Parsley",
+        "Rosemary Extract",
+        "Dried Bacillus subtilis Fermentation Product"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 50,
+        "crude_fat_min_percent": 22,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 100000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 56,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin",
+            "basis": "min",
+            "value": 0.08,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Collagen",
+            "basis": "min",
+            "value": 2.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (Bacillus subtilis)",
+            "basis": "min",
+            "value": 100000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4500,
+        "kcal_per_unit": 144,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "PetZoo proves the exact 114 g EAN; a newer Australian formula panel supplies the stored composition, GA, and calories.",
+      "source_urls": [
+        "https://www.petzoo.com.au/ziwi-peak-booster-dog-meal-topper-skin-coat-health",
+        "https://www.aspenspantry.com.au/product/ziwi-peak-dog-raw-superboost-freeze-dried-skin-coat-health/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "PetZoo explicitly lists barcode 9421016590193 for the 114 g Skin & Coat Health unit.",
+      "conflicts": [
+        "ZIWI booster copies expose more than one probiotic generation: Bacillus-only versus Bacillus plus Enterococcus. A physical 114 g pack is required to bind the exact generation to this barcode."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Barcode was not inferred from a sibling size."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590056",
+      "canonical_gtin14": "09421016590056",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Raw Superboost",
+      "product_name": "ZIWI Peak Raw Freeze-Dried Superboost Beef Recipe Meal Enhancer for Dogs",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "freeze_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 oz (114 g)",
+      "ingredients_verbatim": "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate), Beef Tripe, New Zealand Green Mussel, Beef Heart, Mixed Tocopherols (a preservative), Dried Organic Kelp, Rosemary Extract, Dried Bacillus subtilis Fermentation Product.",
+      "ingredients_ordered_normalized": [
+        "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate)",
+        "Beef Tripe",
+        "New Zealand Green Mussel",
+        "Beef Heart",
+        "Mixed Tocopherols (a preservative)",
+        "Dried Organic Kelp",
+        "Rosemary Extract",
+        "Dried Bacillus subtilis Fermentation Product"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 42,
+        "crude_fat_min_percent": 38,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 4,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.07,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.12,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 3000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 5000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (Bacillus subtilis)",
+            "basis": "min",
+            "value": 100000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 5600,
+        "kcal_per_unit": 213,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact retailer SKU evidence proves barcode/size; newer Australian formula copy supplies the stored Bacillus-only formula, GA, and calories.",
+      "source_urls": [
+        "https://www.petzoo.com.au/ziwi-peak-booster-dog-meal-topper-raw-superboost-b",
+        "https://www.aspenspantry.com.au/product/ziwi-peak-dog-raw-superboost-freeze-dried-beef-recipe/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Exact retailer evidence maps EAN-13 9421016590056 to the stated individual bag size.",
+      "conflicts": [
+        "Older exact/sibling product copies include Dried Enterococcus faecium Fermentation Product while newer copies list Bacillus subtilis only. A physical pack is required to settle the generation."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact unit mapping, not sequential-EAN inference."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590087",
+      "canonical_gtin14": "09421016590087",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Raw Superboost",
+      "product_name": "ZIWI Peak Raw Freeze-Dried Superboost Beef Recipe Meal Enhancer for Dogs",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "freeze_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "11.3 oz (320 g)",
+      "ingredients_verbatim": "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate), Beef Tripe, New Zealand Green Mussel, Beef Heart, Mixed Tocopherols (a preservative), Dried Organic Kelp, Rosemary Extract, Dried Bacillus subtilis Fermentation Product.",
+      "ingredients_ordered_normalized": [
+        "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate)",
+        "Beef Tripe",
+        "New Zealand Green Mussel",
+        "Beef Heart",
+        "Mixed Tocopherols (a preservative)",
+        "Dried Organic Kelp",
+        "Rosemary Extract",
+        "Dried Bacillus subtilis Fermentation Product"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 42,
+        "crude_fat_min_percent": 38,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 4,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.07,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.12,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 3000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 5000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (Bacillus subtilis)",
+            "basis": "min",
+            "value": 100000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 5600,
+        "kcal_per_unit": 213,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact retailer SKU evidence proves barcode/size; newer Australian formula copy supplies the stored Bacillus-only formula, GA, and calories.",
+      "source_urls": [
+        "https://www.habitatpets.com.au/products/ziwi-peak-dog-freeze-dried-superboost-beef-320g",
+        "https://www.aspenspantry.com.au/product/ziwi-peak-dog-raw-superboost-freeze-dried-beef-recipe/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Exact retailer evidence maps EAN-13 9421016590087 to the stated individual bag size.",
+      "conflicts": [
+        "Older exact/sibling product copies include Dried Enterococcus faecium Fermentation Product while newer copies list Bacillus subtilis only. A physical pack is required to settle the generation."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact unit mapping, not sequential-EAN inference."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590124",
+      "canonical_gtin14": "09421016590124",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Raw Superboost",
+      "product_name": "ZIWI Peak Raw Freeze-Dried Superboost Beef Recipe Meal Enhancer for Cats",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "freeze_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate), Beef Tripe, New Zealand Green Mussel, Beef Heart, Mixed Tocopherols (a preservative), Dried Organic Kelp, Rosemary Extract, Dried Bacillus subtilis Fermentation Product.",
+      "ingredients_ordered_normalized": [
+        "Beef with Ground Bone (Source of Glucosamine and Chondroitin Sulfate)",
+        "Beef Tripe",
+        "New Zealand Green Mussel",
+        "Beef Heart",
+        "Mixed Tocopherols (a preservative)",
+        "Dried Organic Kelp",
+        "Rosemary Extract",
+        "Dried Bacillus subtilis Fermentation Product"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 42,
+        "crude_fat_min_percent": 38,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 4,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.07,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.12,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 3000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 5000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (Bacillus subtilis)",
+            "basis": "min",
+            "value": 100000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 5600,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Mishcats proves the exact 85 g cat barcode and current Bacillus-only ingredient line; a detailed current-like panel supplies GA/energy, but older copies expose a conflicting probiotic/formula generation.",
+      "source_urls": [
+        "https://www.mishcats.com.au/shop/ziwi-peak-raw-superboost-beef-recipe/",
+        "https://petdirect.co.nz/p/ziwi-peak-freeze-dried-raw-superboost-beef-cat-food-topper/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Mishcats explicitly maps barcode 9421016590124 to the 85 g cat Beef Superboost unit.",
+      "conflicts": [
+        "Older/corrupted copies disagree on organ/probiotic wording, including Enterococcus in some generations. A physical 85 g pack is required before source_verified status."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Barcode-to-85 g cat identity is explicit."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590117",
+      "canonical_gtin14": "09421016590117",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "cat",
+      "product_line": "Raw Superboost",
+      "product_name": "ZIWI Peak Raw Freeze-Dried Superboost Venison Recipe Meal Enhancer for Cats",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "freeze_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Venison With Ground Bone (Source of Glucosamine and Chondroitin Sulfate), Venison Tripe, New Zealand Green Mussel, Venison Heart, Mixed Tocopherols (a preservative), Dried Organic Kelp, Rosemary Extract, Dried Bacillus subtilis Fermentation Product.",
+      "ingredients_ordered_normalized": [
+        "Venison With Ground Bone (Source of Glucosamine and Chondroitin Sulfate)",
+        "Venison Tripe",
+        "New Zealand Green Mussel",
+        "Venison Heart",
+        "Mixed Tocopherols (a preservative)",
+        "Dried Organic Kelp",
+        "Rosemary Extract",
+        "Dried Bacillus subtilis Fermentation Product"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Mishcats proves the exact 85 g EAN and current Bacillus-only ingredient statement. A complete exact current GA/calorie panel was not located.",
+      "source_urls": [
+        "https://www.mishcats.com.au/shop/ziwi-peak-raw-superboost-venison-recipe/"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Mishcats explicitly maps barcode 9421016590117 to the 85 g cat Venison Superboost unit.",
+      "conflicts": [
+        "Exact current complete guaranteed analysis/calorie evidence is missing; physical label is required."
+      ],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Exact unit barcode is proven; missing nutrition evidence is not filled by inference."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594672",
+      "canonical_gtin14": "09421016594672",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Good Dog Rewards",
+      "product_name": "ZIWI Peak Good Dog Rewards Lamb Recipe Dog Treats",
+      "variant": "Lamb Recipe",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "treat",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Lamb, Lamb Heart*, Lamb Liver*, Lamb Tripe*, Lamb Kidney*, Lamb Lung*, Lamb Bone, New Zealand Green Mussel, Inulin from Chicory, Dried Kelp, Sea Salt, Parsley, Minerals (Potassium Bicarbonate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Vitamins (Vitamin E Supplement, Vitamin B1 Supplement, Vitamin D3 Supplement, Folic Acid). Naturally preserved with mixed tocopherols. *Depending on seasonal availability will be temporarily substituted with sheep.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Lamb Heart*",
+        "Lamb Liver*",
+        "Lamb Tripe*",
+        "Lamb Kidney*",
+        "Lamb Lung*",
+        "Lamb Bone",
+        "New Zealand Green Mussel",
+        "Inulin from Chicory",
+        "Dried Kelp",
+        "Sea Salt",
+        "Parsley",
+        "Minerals (Potassium Bicarbonate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex)",
+        "Vitamins (Vitamin E Supplement, Vitamin B1 Supplement, Vitamin D3 Supplement, Folic Acid)",
+        "Naturally preserved with mixed tocopherols"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 35,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 8,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": 5.6,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact single-product retailer page prints the 3 oz UPC, complete ingredient statement, guaranteed analysis, and 5.6 kcal/piece statement.",
+      "source_urls": [
+        "https://houstonrawpetfood.com/products/peak-good-dog-rewards-grain-free-new-zealand-lamb-dog-treats"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Exact product page maps EAN-13 9421016594672 to one 3 oz/85 g Lamb Good Dog Rewards bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Product is explicitly a treat and not represented as a complete daily diet."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016594641",
+      "canonical_gtin14": "09421016594641",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Good Dog Rewards",
+      "product_name": "ZIWI Peak Good Dog Rewards Venison Recipe Dog Treats",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3 oz (85 g)",
+      "ingredients_verbatim": "Venison, Venison Tripe, Venison Heart, Venison Lung, Venison Liver, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Inulin from Chicory, Dried Kelp, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Salt, Parsley, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Venison",
+        "Venison Tripe",
+        "Venison Heart",
+        "Venison Lung",
+        "Venison Liver",
+        "Venison Kidney",
+        "New Zealand Green Mussel",
+        "Venison Bone",
+        "Lecithin",
+        "Inulin from Chicory",
+        "Dried Kelp",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Copper Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Salt",
+        "Parsley",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 45,
+        "crude_fat_min_percent": 23,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 1300,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4700,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "PetZoo proves exact 85 g barcode identity; English retailer copy supplies the complete ingredient line; ZIWI-authorized Japanese retail evidence prints the JAN/EAN, complete GA, 470 kcal/100 g (4700 kcal/kg), and all-life-stages statement.",
+      "source_urls": [
+        "https://www.petzoo.com.au/ziwi-peak-dog-dog-rewards-treats-venison-85g",
+        "https://www.countrymax.com/ziwi-good-dog-rewards-venison-recipe-dog-treats-3-oz/",
+        "https://store.shopping.yahoo.co.jp/monolith-net/ziwi-gd-veni-09421016594641.html"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Independent exact-unit sources map EAN-13 9421016594641 to the 85 g Venison Good Dog Rewards bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "470 kcal/100 g is stored as 4700 kcal/kg without inventing a per-piece value."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016590612",
+      "canonical_gtin14": "09421016590612",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Air-Dried",
+      "product_name": "ZIWI Peak Original Air-Dried Venison Recipe for Dogs",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "2.2 lb (1 kg)",
+      "ingredients_verbatim": "Venison, Venison Tripe, Venison Heart, Venison Lung, Venison Liver, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Venison Cartilage, Minerals (Dipotassium Phosphate, Magnesium Sulphate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Venison",
+        "Venison Tripe",
+        "Venison Heart",
+        "Venison Lung",
+        "Venison Liver",
+        "Venison Kidney",
+        "New Zealand Green Mussel",
+        "Venison Bone",
+        "Lecithin",
+        "Parsley",
+        "Dried Apple Pomace",
+        "Inulin (from Chicory Root)",
+        "Venison Cartilage",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulphate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Dried Organic Kelp",
+        "Salt",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 44,
+        "crude_fat_min_percent": 24,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": 0.09,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 1300,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 1000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4650,
+        "kcal_per_unit": 441,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current exact ZIWI product page supplies the current formula, complete GA, calories, and all-life-stages adequacy; live retailer variant data maps the exact EAN to the stated size.",
+      "source_urls": [
+        "https://ziwipets.com/products/air-dried-venison-recipe-for-dogs",
+        "https://www.ormskirkpets.co.uk/products/ziwipeak-daily-dog-air-dried-cuisine-venison-new25"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Live sellable-variant data maps EAN-13 9421016590612 directly to the 2.2 lb (1 kg) Venison bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Barcode/size mapping is explicit and was not generated from sibling codes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016592975",
+      "canonical_gtin14": "09421016592975",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Air-Dried",
+      "product_name": "ZIWI Peak Original Air-Dried Venison Recipe for Dogs",
+      "variant": "Venison Recipe",
+      "recipe": [
+        "venison"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "5.5 lb (2.5 kg)",
+      "ingredients_verbatim": "Venison, Venison Tripe, Venison Heart, Venison Lung, Venison Liver, Venison Kidney, New Zealand Green Mussel, Venison Bone, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Venison Cartilage, Minerals (Dipotassium Phosphate, Magnesium Sulphate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Venison",
+        "Venison Tripe",
+        "Venison Heart",
+        "Venison Lung",
+        "Venison Liver",
+        "Venison Kidney",
+        "New Zealand Green Mussel",
+        "Venison Bone",
+        "Lecithin",
+        "Parsley",
+        "Dried Apple Pomace",
+        "Inulin (from Chicory Root)",
+        "Venison Cartilage",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulphate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Dried Organic Kelp",
+        "Salt",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 44,
+        "crude_fat_min_percent": 24,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": 0.09,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 1300,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 1000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4650,
+        "kcal_per_unit": 441,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current exact ZIWI product page supplies the current formula, complete GA, calories, and all-life-stages adequacy; live retailer variant data maps the exact EAN to the stated size.",
+      "source_urls": [
+        "https://ziwipets.com/products/air-dried-venison-recipe-for-dogs",
+        "https://www.ormskirkpets.co.uk/products/ziwipeak-daily-dog-air-dried-cuisine-venison-new25"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Live sellable-variant data maps EAN-13 9421016592975 directly to the 5.5 lb (2.5 kg) Venison bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Barcode/size mapping is explicit and was not generated from sibling codes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016598014",
+      "canonical_gtin14": "09421016598014",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Air-Dried",
+      "product_name": "ZIWI Peak Original Air-Dried Beef Recipe for Dogs",
+      "variant": "Beef Recipe",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3.5 oz (100 g) trial size",
+      "ingredients_verbatim": "Beef, Beef Tripe, Beef Heart, Beef Lung, Beef Liver, Beef Kidney, Beef Bone, New Zealand Green Mussel, Beef Cartilage, Beef Spleen, Lecithin, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Tripe",
+        "Beef Heart",
+        "Beef Lung",
+        "Beef Liver",
+        "Beef Kidney",
+        "Beef Bone",
+        "New Zealand Green Mussel",
+        "Beef Cartilage",
+        "Beef Spleen",
+        "Lecithin",
+        "Parsley",
+        "Dried Apple Pomace",
+        "Inulin (from Chicory Root)",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Dried Organic Kelp",
+        "Salt",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 30,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 1300,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 1000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4900,
+        "kcal_per_unit": 465,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current ZIWI US product page supplies the complete current formula, full printed GA, calories and adequacy; ZIWI's own Shopify variant JSON maps EAN-13 9421016598014 to trial variant 3.5oz, SKU ZPDDB0100P-US, weight 100 g.",
+      "source_urls": [
+        "https://us.ziwipets.com/products/air-dried-beef-dog-food",
+        "https://us.ziwipets.com/products/air-dried-beef-dog-food.js"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Official ZIWI Shopify JSON directly maps 9421016598014 to the available 3.5 oz trial Beef bag; no retailer reconstruction or sequential inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Official variant JSON reports SKU ZPDDB0100P-US and weight 100 g.",
+        "The same official product page explicitly lists 3.5 oz trial size and the current formula/GA/calories."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016598076",
+      "canonical_gtin14": "09421016598076",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Air-Dried",
+      "product_name": "ZIWI Peak Original Air-Dried Chicken Recipe for Dogs",
+      "variant": "Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3.5 oz (100 g) trial size",
+      "ingredients_verbatim": "Chicken, Chicken Liver, Chicken Bone, Chicken Necks, New Zealand Green Mussel, Chicken Heart, Chicken Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Liver",
+        "Chicken Bone",
+        "Chicken Necks",
+        "New Zealand Green Mussel",
+        "Chicken Heart",
+        "Chicken Cartilage",
+        "Parsley",
+        "Dried Apple Pomace",
+        "Inulin (from Chicory Root)",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Dried Organic Kelp",
+        "Salt",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 30,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": 0.23,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 3000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 1000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 5000,
+        "kcal_per_unit": 474,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current ZIWI US product page supplies the complete current formula, full printed GA, calories and adequacy; ZIWI's own Shopify variant JSON maps EAN-13 9421016598076 to trial variant 3.5oz, SKU ZPDDC0100P-US.",
+      "source_urls": [
+        "https://us.ziwipets.com/products/air-dried-chicken-recipe-for-dogs",
+        "https://us.ziwipets.com/products/air-dried-chicken-recipe-for-dogs.js"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Official ZIWI Shopify JSON directly maps 9421016598076 to the available 3.5 oz trial Chicken bag; no retailer reconstruction or sequential inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Official variant JSON reports SKU ZPDDC0100P-US.",
+        "The same official product page explicitly lists 3.5 oz trial size and the current formula/GA/calories."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "9421016598038",
+      "canonical_gtin14": "09421016598038",
+      "barcode_scope": "individual_unit",
+      "brand": "ZIWI Peak",
+      "manufacturer": "ZIWI Ltd.",
+      "species": "dog",
+      "product_line": "Original Air-Dried",
+      "product_name": "ZIWI Peak Original Air-Dried Lamb Recipe for Dogs",
+      "variant": "Lamb Recipe",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "air_dried",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "3.5 oz (100 g) trial size",
+      "ingredients_verbatim": "Lamb, Lamb Tripe, Lamb Lung, Lamb Heart, Lamb Liver, Lamb Bone, New Zealand Green Mussel, Lamb Kidney, Lamb Spleen, Lecithin, Lamb Cartilage, Parsley, Dried Apple Pomace, Inulin (from Chicory Root), Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast), Dried Organic Kelp, Salt, Preservative (Citric Acid, Mixed Tocopherols), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Lamb Tripe",
+        "Lamb Lung",
+        "Lamb Heart",
+        "Lamb Liver",
+        "Lamb Bone",
+        "New Zealand Green Mussel",
+        "Lamb Kidney",
+        "Lamb Spleen",
+        "Lecithin",
+        "Lamb Cartilage",
+        "Parsley",
+        "Dried Apple Pomace",
+        "Inulin (from Chicory Root)",
+        "Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Manganese Amino Acid Complex, Selenium Yeast)",
+        "Dried Organic Kelp",
+        "Salt",
+        "Preservative (Citric Acid, Mixed Tocopherols)",
+        "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 30,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 14,
+        "ash_max_percent": 12,
+        "taurine_min_percent": 0.15,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chondroitin Sulfate",
+            "basis": "min",
+            "value": 3000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Glucosamine",
+            "basis": "min",
+            "value": 1000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4950,
+        "kcal_per_unit": 469,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current ZIWI US product page supplies the complete current formula, full printed GA, calories and adequacy; ZIWI's own Shopify variant JSON maps EAN-13 9421016598038 to trial variant 3.5oz, SKU ZPDDL0100P-US, weight 100 g.",
+      "source_urls": [
+        "https://us.ziwipets.com/products/air-dried-lamb-recipe-for-dogs",
+        "https://us.ziwipets.com/products/air-dried-lamb-recipe-for-dogs.js"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Official ZIWI Shopify JSON directly maps 9421016598038 to the available 3.5 oz trial Lamb bag; no retailer reconstruction or sequential inference was used.",
+      "conflicts": [],
+      "verification_notes": [
+        "GTIN-13 check digit validated independently.",
+        "Official variant JSON reports SKU ZPDDL0100P-US and weight 100 g.",
+        "The same official product page explicitly lists 3.5 oz trial size and the current formula/GA/calories."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }
