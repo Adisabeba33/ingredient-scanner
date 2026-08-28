@@ -1,0 +1,48 @@
+name: Validate ZIWI next 20 exclusion set
+on:
+  push:
+    branches: [agent/deep-research-ziwi-peak]
+    paths: [.github/workflows/tmp-ziwi-next20-exclusion.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-ziwi-peak
+          fetch-depth: 0
+      - name: Validate proposed 20 against every exclusion source
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          codes=[
+            '9421016597024','9421016592678','9421016595877','9421016595839',
+            '9421038210833','9421038210826','9421038210819','9421038210802',
+            '9421038210840','9421038210857','9421038210864',
+            '9421016594511','9421016594917','9421016594450','9421016594337',
+            '9421016595969','9421016594634','9421016594573',
+            '9421016594474','9421016594870'
+          ]
+          assert len(codes)==20 and len(set(codes))==20
+          def valid_gtin(code):
+            body=[int(x) for x in code[:-1]]
+            total=sum(d*(3 if i%2==0 else 1) for i,d in enumerate(reversed(body)))
+            return (10-total%10)%10==int(code[-1])
+          for c in codes: assert len(c)==13 and valid_gtin(c),c
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
+          hits={}
+          for p in paths:
+            if not p.exists(): continue
+            text=p.read_text(encoding='utf-8',errors='replace')
+            for c in codes:
+              if c in text or c.zfill(14) in text: hits.setdefault(c,[]).append(str(p))
+          print('CHECKED_FILES',len(paths))
+          print('HITS',json.dumps(hits,sort_keys=True))
+          print('CLEAN',[c for c in codes if c not in hits])
+          assert not hits,hits
+          print('ALL_20_CLEAN_AND_VALID')
+          PY
