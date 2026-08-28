@@ -1,0 +1,36 @@
+name: Merge Royal Canin Cats batch 3 retry
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/merge-royal-canin-cats-b3-retry.yml
+      - .github/scripts/run-royal-canin-cats-merge.py
+      - .github/workflows/tmp-royal-canin-cats-120-140.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+      - name: Validate and merge Royal Canin cats renal GI records
+        run: python .github/scripts/run-royal-canin-cats-merge.py
+      - name: Commit merged ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger

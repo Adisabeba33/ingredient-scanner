@@ -1,0 +1,190 @@
+name: Temporary Royal Canin cats 120-140
+
+on:
+  push:
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-cats-120-140.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-barcode-ledger
+          fetch-depth: 0
+
+      - name: Validate and merge missing Royal Canin feline records
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          TARGET = Path('research/deep-research-royal-canin.json')
+          STAGED = Path('research/.royal-canin-cats-append-2026-08-26-b3.json')
+          target = json.loads(TARGET.read_text(encoding='utf-8'))
+          staged = json.loads(STAGED.read_text(encoding='utf-8'))['records']
+          assert len(staged) == 11
+
+          def top_level_ingredients(s):
+              out=[]; buf=[]; depth=0
+              for ch in s.strip().rstrip('.'):
+                  if ch=='[': depth += 1
+                  elif ch==']': depth = max(0, depth-1)
+                  if ch==',' and depth==0:
+                      item=''.join(buf).strip()
+                      if item: out.append(item)
+                      buf=[]
+                  else:
+                      buf.append(ch)
+              item=''.join(buf).strip()
+              if item: out.append(item)
+              return out
+
+          def ga(protein, fat, fiber, moisture, extras):
+              return {
+                  'crude_protein_min_percent':protein,
+                  'crude_fat_min_percent':fat,
+                  'crude_fiber_max_percent':fiber,
+                  'moisture_max_percent':moisture,
+                  'ash_max_percent':None,
+                  'taurine_min_percent':None,
+                  'other_printed_guarantees':extras,
+              }
+
+          def extra(nutrient,basis,value,unit):
+              return {'nutrient':nutrient,'basis':basis,'value':value,'unit':unit}
+
+          def make(upc, product_name, variant, size, ingredients, analysis, kcalkg, kcalcup, manufacturer_url, barcode_url, recipe, conflicts=None, barcode_note=None):
+              return {
+                  'catalog_number':None,
+                  'upc':upc,
+                  'canonical_gtin14':upc.zfill(14),
+                  'barcode_scope':'individual_unit',
+                  'brand':'Royal Canin',
+                  'manufacturer':'Royal Canin USA, Inc.',
+                  'species':'cat',
+                  'product_line':'Veterinary Diet',
+                  'product_name':product_name,
+                  'variant':variant,
+                  'recipe':recipe,
+                  'life_stage':'adult',
+                  'food_form':'dry',
+                  'texture':'kibble',
+                  'presentation':'plain',
+                  'package_type':'bag',
+                  'size':size,
+                  'ingredients_verbatim':ingredients,
+                  'ingredients_ordered_normalized':top_level_ingredients(ingredients),
+                  'guaranteed_analysis':analysis,
+                  'calorie_content':{'kcal_per_kg':kcalkg,'kcal_per_unit':kcalcup,'unit_name':'cup'},
+                  'label_deck_code':None,
+                  'formula_source':'Current Royal Canin USA veterinary product page supplies the current formula, Guaranteed Analysis, calories and marketed size; current PetCareRx option table supplies exact individual-bag UPC/size identity.',
+                  'source_urls':[manufacturer_url,barcode_url],
+                  'source_accessed_at':'2026-08-26',
+                  'barcode_notes':barcode_note or 'PetCareRx exact option table maps this UPC to one individual bag of the stated size.',
+                  'conflicts':conflicts or [],
+                  'verification_notes':['UPC-A check digit independently validated.','Canonical GTIN-14 validated.','Current manufacturer formula and exact individual-unit UPC/size were matched.'],
+                  'research_status':'source_verified',
+              }
+
+          F_ING = 'Brewers rice, corn, wheat gluten, chicken fat, pork digest, pea fiber, corn gluten meal, natural flavors, dried chicory root, fish oil, calcium carbonate, vegetable oil, potassium citrate, sodium silico aluminate, sodium pyrophosphate, potassium chloride, DL-methionine, powdered psyllium seed husk, fructooligosaccharides, choline chloride, salt, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], calcium sulfate, L-lysine, trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          F_GA = ga(24,15,5.9,8,[extra('Crude Protein','max',28,'percent'),extra('EPA + DHA','min',0.24,'percent'),extra('Phosphorus','max',0.62,'percent'),extra('Vitamin E','min',160,'IU/kg'),extra('Ascorbic acid','min',350,'mg/kg')])
+          F_M = 'https://www.royalcanin.com/us/cats/products/vet-products/renal-support-f-3949'
+          F_B = 'https://www.petcarerx.com/royal-canin-veterinary-diet-feline-renal-support-f-dry-cat-food/25573'
+
+          A_ING = 'Brewers rice, corn, chicken fat, wheat gluten, corn gluten meal, soy protein isolate, powdered cellulose, natural flavors, chicken by-product meal, wheat, dried chicory root, fish oil, calcium carbonate, potassium citrate, sodium silico aluminate, powdered psyllium seed husk, potassium chloride, sodium pyrophosphate, L-arginine, choline chloride, fructooligosaccharides, salt, DL-methionine, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], L-lysine, trace minerals [zinc oxide, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate], marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          A_GA = ga(21,15,6.3,8,[extra('Crude Protein','max',25,'percent'),extra('EPA + DHA','min',0.24,'percent'),extra('Phosphorus','max',0.6,'percent'),extra('Vitamin E','min',350,'IU/kg'),extra('Ascorbic acid','min',160,'mg/kg')])
+          A_M = 'https://www.royalcanin.com/us/cats/products/vet-products/renal-3900'
+          A_B = 'https://www.petcarerx.com/royal-canin-veterinary-diet-feline-renal-support-a-dry-cat-food/25571'
+
+          S_ING = 'Corn, chicken fat, pork digest, brewers rice, corn gluten meal, pea fiber, fish meal, natural flavors, dried chicory root, wheat gluten, fish oil, calcium carbonate, vegetable oil, sodium silico aluminate, potassium chloride, powdered psyllium seed husk, potassium citrate, salt, DL-methionine, sodium pyrophosphate, L-arginine, fructooligosaccharides, choline chloride, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), biotin, niacin supplement, D-calcium pantothenate, riboflavin supplement, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), folic acid, vitamin B12 supplement, vitamin D3 supplement], trace minerals [zinc proteinate, zinc oxide, ferrous sulfate, manganese proteinate, manganous oxide, copper sulfate, calcium iodate, sodium selenite, copper proteinate], magnesium oxide, marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          S_GA = ga(22.5,19.5,5,8,[extra('Crude Protein','max',26.5,'percent'),extra('EPA + DHA','min',0.25,'percent'),extra('Phosphorus','max',0.57,'percent'),extra('Vitamin E','min',355,'IU/kg'),extra('Ascorbic acid','min',170,'mg/kg')])
+          S_M = 'https://www.royalcanin.com/us/cats/products/vet-products/renal-support-s-4171'
+          S_B = 'https://www.petcarerx.com/royal-canin-veterinary-diet-feline-renal-support-s-dry-cat-food/25575'
+
+          RH_ING = 'Brewers rice, hydrolized soy protein, chicken fat, dried chicory root, natural flavors, powdered cellulose, vegetable oil, fish oil, calcium carbonate, potassium chloride, fructooligosaccharides, sodium pyrophosphate, calcium sulfate, sodium silico aluminate, DL-methionine, choline chloride, taurine, vitamins [DL-alpha tocopherol acetate (source of vitamin E), niacin supplement, L-ascorbyl-2-polyphosphate (source of vitamin C), D-calcium pantothenate, biotin, pyridoxine hydrochloride (vitamin B6), riboflavin supplement, thiamine mononitrate (vitamin B1), vitamin A acetate, vitamin B12 supplement, folic acid], trace minerals [zinc proteinate, zinc oxide, manganese proteinate, manganous oxide, copper sulfate, ferrous sulfate, sodium selenite, copper proteinate, calcium iodate], GLA safflower oil, marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          RH_GA = ga(24,18,5.4,8,[extra('Crude Protein','max',28,'percent'),extra('EPA + DHA','min',0.24,'percent'),extra('Phosphorus','max',0.57,'percent'),extra('Vitamin E','min',420,'IU/kg'),extra('Ascorbic acid','min',160,'mg/kg')])
+          RH_M = 'https://www.royalcanin.com/us/cats/products/vet-products/renal-%2B-hyppoallergenic-6531'
+          RH_B = 'https://www.petcarerx.com/royal-canin-veterinary-diet-feline-multifunction-renal-support-hydrolyzed-protein-dry-cat-food/34435'
+
+          GI_ING = 'Brewers rice, chicken by-product meal, corn, chicken fat, powdered psyllium seed husk, wheat gluten, natural flavors, corn protein meal, dried chicory root, egg product, potassium chloride, vegetable oil, calcium sulfate, fish oil, sodium pyrophosphate, monocalcium phosphate, DL-methionine, choline chloride, fructooligosaccharides, salt, vitamins [DL-alpha tocopherol acetate (source of vitamin E), L-ascorbyl-2-polyphosphate (source of vitamin C), niacin supplement, biotin, riboflavin supplement, D-calcium pantothenate, pyridoxine hydrochloride (vitamin B6), vitamin A acetate, thiamine mononitrate (vitamin B1), vitamin B12 supplement, folic acid, vitamin D3 supplement], marine microalgae oil, taurine, hydrolyzed yeast, trace minerals [zinc proteinate, zinc oxide, manganese proteinate, ferrous sulfate, manganous oxide, copper sulfate, sodium selenite, calcium iodate, copper proteinate], marigold extract (Tagetes erecta L.), rosemary extract, preserved with mixed tocopherols and citric acid.'
+          GI_GA = ga(29,13,4.7,7.5,[extra('EPA + DHA','min',0.24,'percent'),extra('Potassium','min',0.6,'percent'),extra('Sodium','min',0.30,'percent'),extra('Vitamin E','min',350,'IU/kg'),extra('Ascorbic acid','min',160,'mg/kg')])
+          GI_M = 'https://www.royalcanin.com/us/cats/products/vet-products/---4007'
+          GI_B = 'https://www.petcarerx.com/royal-canin-veterinary-diet-feline-gastrointestinal-fiber-response-dry-cat-food/24897'
+
+          new = [
+              make('030111583024','Royal Canin Veterinary Diet Feline Renal Support F Dry Cat Food','Renal Support F 12 oz','12 oz',F_ING,F_GA,3836,376,F_M,F_B,['pork','fish']),
+              make('030111583031','Royal Canin Veterinary Diet Feline Renal Support F Dry Cat Food','Renal Support F 3 lb','3 lb',F_ING,F_GA,3836,376,F_M,F_B,['pork','fish']),
+              make('030111583062','Royal Canin Veterinary Diet Feline Renal Support F Dry Cat Food','Renal Support F 6.6 lb','6.6 lb',F_ING,F_GA,3836,376,F_M,F_B,['pork','fish']),
+              make('030111983527','Royal Canin Veterinary Diet Feline Renal Support A Dry Cat Food','Renal Support A 12 oz','12 oz',A_ING,A_GA,3811,347,A_M,A_B,['chicken','soy','fish']),
+              make('030111583536','Royal Canin Veterinary Diet Feline Renal Support A Dry Cat Food','Renal Support A 3 lb','3 lb',A_ING,A_GA,3811,347,A_M,A_B,['chicken','soy','fish']),
+              make('030111583567','Royal Canin Veterinary Diet Feline Renal Support A Dry Cat Food','Renal Support A 6.6 lb','6.6 lb',A_ING,A_GA,3811,347,A_M,A_B,['chicken','soy','fish']),
+              make('030111582638','Royal Canin Veterinary Diet Feline Renal Support S Dry Cat Food','Renal Support S 3 lb','3 lb',S_ING,S_GA,4054,397,S_M,S_B,['pork','fish']),
+              make('030111582669','Royal Canin Veterinary Diet Feline Renal Support S Dry Cat Food','Renal Support S 6.6 lb','6.6 lb',S_ING,S_GA,4054,397,S_M,S_B,['pork','fish']),
+              make('030111583734','Royal Canin Veterinary Diet Feline Renal Support + Hydrolyzed Protein Dry Cat Food','Renal Support + Hydrolyzed Protein 6.6 lb','6.6 lb',RH_ING,RH_GA,3982,402,RH_M,RH_B,['hydrolyzed soy'],barcode_note='PetCareRx exposes zero-suppressed UPC/SKU 30111583734 for the individual 6.6 lb bag; restoring the standard leading zero gives valid UPC-A 030111583734.'),
+              make('030111484284','Royal Canin Veterinary Diet Feline Gastrointestinal Fiber Response Dry Cat Food','Gastrointestinal Fiber Response 8.8 lb','8.8 lb',GI_ING,GI_GA,3693,362,GI_M,GI_B,['chicken','egg'],conflicts=['Older retailer copies show a prior formula/calorie generation. Current Royal Canin USA formula and 3693 kcal/kg / 362 kcal/cup are stored.']),
+          ]
+
+          rows = staged + new
+          assert len(rows)==21
+          upcs=[r['upc'] for r in rows]
+          assert len(upcs)==len(set(upcs))
+
+          def valid_upca(code):
+              if len(code)!=12 or not code.isdigit(): return False
+              d=list(map(int,code)); s=sum(x*(3 if i%2==0 else 1) for i,x in enumerate(d[:11])); return (10-s%10)%10==d[-1]
+
+          required=['upc','canonical_gtin14','barcode_scope','brand','species','product_name','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','source_urls','research_status']
+          for r in rows:
+              assert all(k in r for k in required), r['upc']
+              assert r['brand']=='Royal Canin' and r['species']=='cat' and r['barcode_scope']=='individual_unit'
+              assert valid_upca(r['upc']), r['upc']
+              assert r['canonical_gtin14']==r['upc'].zfill(14), r['upc']
+              assert r['ingredients_verbatim'].strip() and r['ingredients_ordered_normalized'] and r['source_urls']
+
+          existing=target['records']; initial=len(existing)
+          existing_upcs=[r['upc'] for r in existing]
+          assert len(existing_upcs)==len(set(existing_upcs)), 'Target already has duplicate UPCs'
+          existing_set=set(existing_upcs)
+          to_add=[r for r in rows if r['upc'] not in existing_set]
+
+          exclusion_paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
+          exclusion_paths += [p for p in Path('research').glob('deep-research-*.json') if p != TARGET]
+          hits={}
+          for p in exclusion_paths:
+              if not p.exists(): continue
+              text=p.read_text(encoding='utf-8',errors='replace')
+              for r in to_add:
+                  if r['upc'] in text or r['canonical_gtin14'] in text:
+                      hits.setdefault(r['upc'],[]).append(str(p))
+          assert not hits, 'Candidate found in mandatory exclusion sources: '+json.dumps(hits,sort_keys=True)
+
+          target['records'].extend(to_add)
+          target['updated_at']='2026-08-26'
+          final=[r['upc'] for r in target['records']]
+          assert len(final)==len(set(final))
+          assert len(final)==initial+len(to_add)
+          TARGET.write_text(json.dumps(target,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          print(f'Validated {len(exclusion_paths)} mandatory exclusion files.')
+          print(f'Target before: {initial}; missing from 21-row combined batch: {len(to_add)}; target after: {len(final)}')
+          print('Added UPCs: '+(', '.join(r['upc'] for r in to_add) if to_add else 'none'))
+          PY
+
+      - name: Commit merged Royal Canin cats ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: extend Royal Canin cats veterinary coverage"
+          git push origin HEAD:agent/deep-research-barcode-ledger
