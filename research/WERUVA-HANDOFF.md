@@ -10,10 +10,11 @@ Post-30 working index: `research/WERUVA-POST-30-INDEX.md`
 
 Binding contract: `research/AGENTS.md`
 
-As of 2026-08-29 the strict ledger contains **50 complete schema-v2 records**:
+As of 2026-08-29 the strict ledger contains **68 complete schema-v2 records**:
 
 - 30 records that were already in the canonical Weruva ledger before the promotion task.
 - 20 TruLuxe records promoted from the post-30 index in commit `c76af91805f2f9be588bf6e2676cde4393fc6fe9`.
+- 18 Cat Stew records promoted on 2026-08-29 after a fresh exclusion/check-digit/schema validation pass.
 
 The TruLuxe promotion updated the strict ledger and consumed the corresponding index rows atomically in the same Git commit.
 
@@ -29,7 +30,7 @@ For this batch the repository exclusion set was rebuilt from `data/known-product
 
 Exact unit UPC/size mapping came from the ADMC distributor table, where UPC, UNIT SIZE and case quantity are separate columns. Current ingredient statements, GA and calories came from current Weruva TruLuxe product pages. `life_stage` was kept `null` where no pack-printed life-stage statement was captured; marketing categorization was not promoted into a label claim. Kawa Booty carries an explicit conflict note because an older distributor row calls the 3 oz SKU “Kawa Bunga” while current Weruva evidence calls it Kawa Booty.
 
-## Cat Stew — 18 records fully re-researched, strict append still pending
+## Cat Stew — 18 records promoted to strict ledger
 
 The next promotion block remains the 18-row Cat Stew section in `WERUVA-POST-30-INDEX.md`:
 
@@ -183,3 +184,8 @@ When consuming a batch, update `research/deep-research-weruva.json` and `researc
 2. Then promote the **12 individual-unit Senior / Freeze Dried records** and disposition the six five-pack UPCs as non-promotable unless individual-stick barcodes are found.
 3. Then promote the **20 individually re-researched early post-30 records** above after a fresh exclusion pass.
 4. Continue through the remaining index in groups of roughly 20.
+
+
+## 2026-08-29 Cat Stew strict promotion
+
+Promoted 18 Cat Stew individual-unit UPCs to the canonical ledger: `813778018111`, `813778017978`, `813778018104`, `813778017961`, `813778018098`, `813778017954`, `813778018081`, `813778017947`, `813778018074`, `813778017930`, `813778018067`, `813778017923`, `813778017725`, `813778017749`, `813778017756`, `813778017732`, `813778017763`, `813778017770`. Fresh exclusion scan found zero collisions. Canonical Weruva strict count after this batch: **68**.

@@ -2,7 +2,7 @@
 
 This file is a visibility/index companion to `research/deep-research-weruva.json`.
 
-- Canonical strict ledger currently contains **50** complete schema-v2 records: the original 30 plus 20 promoted TruLuxe records.
+- Canonical strict ledger currently contains **68** complete schema-v2 records: the original 30, 20 promoted TruLuxe records, and 18 promoted Cat Stew records.
 - This index now describes only work that has not yet been consumed into the strict ledger, plus explicit conflict/pending notes.
 - **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy where printed, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
 
@@ -39,28 +39,9 @@ Known barcode-scope warning: `878408000171` and `878408000072` are case barcodes
 
 All 20 TruLuxe rows previously listed here were promoted in full to `research/deep-research-weruva.json` in the same commit as this index update. The strict ledger now holds the exact UPC/size mapping, complete current ingredient statement, complete displayed guaranteed analysis, printed calories, source URLs, barcode proof and verification notes for each of those 20 records. No TruLuxe index-only row remains.
 
-## Cat Stew — 18 verified candidates awaiting strict promotion
+## Cat Stew — consumed
 
-| UPC | Product | Size |
-|---|---|---:|
-| `813778018111` | Goody Stew Shoes Chicken & Salmon | 2.8 oz |
-| `813778017978` | Goody Stew Shoes Chicken & Salmon | 5.5 oz |
-| `813778018104` | Stewbacca Chicken, Duck & Salmon | 2.8 oz |
-| `813778017961` | Stewbacca Chicken, Duck & Salmon | 5.5 oz |
-| `813778018098` | Stewlander Duck & Salmon | 2.8 oz |
-| `813778017954` | Stewlander Duck & Salmon | 5.5 oz |
-| `813778018081` | Stew’s Clues Turkey, Chicken & Salmon | 2.8 oz |
-| `813778017947` | Stew’s Clues Turkey, Chicken & Salmon | 5.5 oz |
-| `813778018074` | Stewy Lewis Lamb, Chicken & Salmon | 2.8 oz |
-| `813778017930` | Stewy Lewis Lamb, Chicken & Salmon | 5.5 oz |
-| `813778018067` | Taco Stewsday Beef, Chicken & Salmon | 2.8 oz |
-| `813778017923` | Taco Stewsday Beef, Chicken & Salmon | 5.5 oz |
-| `813778017725` | Kettle Call Beef, Chicken & Salmon | 3 oz pouch |
-| `813778017749` | Simmer Down Turkey, Chicken & Salmon | 3 oz pouch |
-| `813778017756` | Stick a Spork in It Duck & Salmon | 3 oz pouch |
-| `813778017732` | Stir the Pot Lamb, Chicken & Salmon | 3 oz pouch |
-| `813778017763` | Too Hot to Handle Chicken, Duck & Salmon | 3 oz pouch |
-| `813778017770` | What a Crock Chicken & Salmon | 3 oz pouch |
+All 18 Cat Stew rows were promoted into `research/deep-research-weruva.json` as complete `source_verified` schema-v2 individual-unit records after a fresh repository exclusion pass. No Cat Stew index-only row remains.
 
 ## Senior / Freeze Dried / Puddy Pops / Wx treats — awaiting strict promotion
 
