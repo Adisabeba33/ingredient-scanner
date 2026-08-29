@@ -2,14 +2,13 @@
 
 This file is a visibility/index companion to `research/deep-research-weruva.json`.
 
-- Canonical strict ledger currently contains the first **30** full `source_verified` records.
-- This index preserves the Weruva work researched after those first 30 so it is visible in the repository in one place.
-- **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
-- Running research count reported in the campaign reached **253 verified UPCs total**, i.e. **223 post-30 positions**, but one early +18 batch was reported from a 20-candidate set without identifying which two were still pending. That ambiguity is preserved below rather than guessed.
+- Canonical strict ledger currently contains **50** complete schema-v2 records: the original 30 plus 20 promoted TruLuxe records.
+- This index now describes only work that has not yet been consumed into the strict ledger, plus explicit conflict/pending notes.
+- **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy where printed, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
 
 ## Early validation batch after first 30
 
-The following 20 candidates were researched in the first post-30 validation pass. The campaign report counted **18 as verified and 2 as pending final formula check**, but the response did not identify which two. Therefore all 20 are preserved here with `RECHECK_BATCH_STATUS` rather than inventing the missing mapping.
+The following 20 candidates were researched in the first post-30 validation pass. The campaign report counted **18 as verified and 2 as pending final formula check**, but the response did not identify which two. Therefore all 20 remain unconsumed and must be re-verified individually rather than inheriting that count.
 
 | UPC | Product / variant | Size | Index status |
 |---|---|---:|---|
@@ -34,34 +33,13 @@ The following 20 candidates were researched in the first post-30 validation pass
 | `878408002410` | Classic Paw Lickin’ Chicken | 10 oz | RECHECK_BATCH_STATUS |
 | `878408001086` | Classic Polynesian BBQ | 3 oz | RECHECK_BATCH_STATUS |
 
-Known barcode-scope warning from this pass: `878408000171` and `878408000072` were identified as case barcodes for Mideast Feast and must not be promoted as individual-unit UPCs.
+Known barcode-scope warning: `878408000171` and `878408000072` are case barcodes for Mideast Feast. They are not individual-unit candidates and must never be promoted as single cans.
 
-## TruLuxe — 20 verified
+## TruLuxe — consumed
 
-| UPC | Product | Size |
-|---|---|---:|
-| `878408003219` | Steak Frites Beef & Pumpkin | 3 oz |
-| `878408003318` | Steak Frites Beef & Pumpkin | 6 oz |
-| `878408003264` | Mediterranean Harvest Tuna & Veggies | 3 oz |
-| `878408003363` | Mediterranean Harvest Tuna & Veggies | 6 oz |
-| `878408003202` | On the Cat Wok Chicken & Beef | 3 oz |
-| `878408003301` | On the Cat Wok Chicken & Beef | 6 oz |
-| `878408003196` | Peking Ducken Chicken & Duck | 3 oz |
-| `878408003295` | Peking Ducken Chicken & Duck | 6 oz |
-| `878408003233` | Pretty in Pink Salmon | 3 oz |
-| `878408003332` | Pretty in Pink Salmon | 6 oz |
-| `878408003257` | Meow Me a River Basa | 3 oz |
-| `878408003356` | Meow Me a River Basa | 6 oz |
-| `878408003271` | Kawa Booty Tuna | 3 oz |
-| `878408003370` | Kawa Booty Tuna | 6 oz |
-| `878408003288` | Glam N' Punk Lamb & Duck | 3 oz |
-| `878408003387` | Glam N' Punk Lamb & Duck | 6 oz |
-| `878408003226` | Quick N' Quirky Chicken & Turkey | 3 oz |
-| `878408003325` | Quick N' Quirky Chicken & Turkey | 6 oz |
-| `878408003240` | Honor Roll Saba | 3 oz |
-| `878408003349` | Honor Roll Saba | 6 oz |
+All 20 TruLuxe rows previously listed here were promoted in full to `research/deep-research-weruva.json` in the same commit as this index update. The strict ledger now holds the exact UPC/size mapping, complete current ingredient statement, complete displayed guaranteed analysis, printed calories, source URLs, barcode proof and verification notes for each of those 20 records. No TruLuxe index-only row remains.
 
-## Cat Stew — 18 verified
+## Cat Stew — 18 verified candidates awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -84,7 +62,7 @@ Known barcode-scope warning from this pass: `878408000171` and `878408000072` we
 | `813778017763` | Too Hot to Handle Chicken, Duck & Salmon | 3 oz pouch |
 | `813778017770` | What a Crock Chicken & Salmon | 3 oz pouch |
 
-## Senior / Freeze Dried / Puddy Pops / Wx treats — 18 verified
+## Senior / Freeze Dried / Puddy Pops / Wx treats — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -107,7 +85,7 @@ Known barcode-scope warning from this pass: `878408000171` and `878408000072` we
 | `810028246881` | Wx Lickable Chicken & Tilapia | 0.5 oz × 5 |
 | `810028246898` | Wx Lickable Tuna Formula | 0.5 oz × 5 |
 
-## Kitten / Wx / Freeze Dried / Cat Paté — 20 verified
+## Kitten / Wx / Freeze Dried / Cat Paté — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -132,34 +110,32 @@ Known barcode-scope warning from this pass: `878408000171` and `878408000072` we
 | `813778018241` | Meows N' Holler PurrAmid — Chicken & Shrimp | 5.5 oz |
 | `813778018340` | Tic Tac Whoa — Tuna & Salmon | 3 oz |
 
-## Slide N' Serve / Classic / Pantry Pours batch
+## Slide N' Serve / Classic / Pantry Pours batch — awaiting strict promotion
 
-The campaign counted 18 fully closed records in this batch; two were left pending at that time and later revisited.
-
-| UPC | Product | Size | Batch status |
+| UPC | Product | Size | Research note |
 |---|---|---:|---|
-| `813778018203` | Tic Tac Whoa! — Tuna & Salmon | 5.5 oz | verified |
-| `813778018920` | Family Food — Chicken Breast & Tuna | 2.8 oz | verified |
-| `813778018609` | Family Food — Chicken Breast & Tuna | 5.5 oz | verified |
-| `813778018999` | Jeopurrdy Licious — Chicken Breast | 2.8 oz | verified |
-| `813778018753` | Jeopurrdy Licious — Chicken Breast | 5.5 oz | verified |
-| `813778018975` | Let's Make a Meal — Lamb & Mackerel | 2.8 oz | verified |
-| `813778018982` | Love Connection — Chicken & Salmon | 2.8 oz | verified |
-| `813778018951` | Meal of Fortune — Chicken & Chicken Liver | 2.8 oz | verified |
-| `813778018944` | Name 'Dat Tuna — Tuna Dinner | 2.8 oz | verified |
-| `813778018708` | Name 'Dat Tuna — Tuna Dinner | 5.5 oz | verified |
-| `813778018968` | The Newly Feds — Beef & Salmon | 2.8 oz | verified |
-| `813778018722` | The Newly Feds — Beef & Salmon | 5.5 oz | verified |
-| `813778018937` | The Slice Is Right — Wild Caught Salmon | 2.8 oz | verified |
-| `813778018692` | The Slice Is Right — Wild Caught Salmon | 5.5 oz | verified |
-| `878408001031` | Classic Asian Fusion — Tuna & Shirasu | 3 oz | verified |
-| `878408002038` | Classic Asian Fusion — Tuna & Shirasu | 5.5 oz | verified |
-| `878408001123` | Classic Grandma's Chicken Soup | 3 oz | verified |
-| `810192811335` | Pantry Pours Chicken & Pumpkin Bisque with Senior Support | 1.4 oz | verified |
-| `878408001147` | Classic Amazon Livin' / Nine Liver | 3 oz | pending in this batch; later verified |
-| `810028246072` | Wx Chicken & Tilapia in Gravy | 5.5 oz | pending in this batch; later verified |
+| `813778018203` | Tic Tac Whoa! — Tuna & Salmon | 5.5 oz | reverify full gate |
+| `813778018920` | Family Food — Chicken Breast & Tuna | 2.8 oz | reverify full gate |
+| `813778018609` | Family Food — Chicken Breast & Tuna | 5.5 oz | reverify full gate |
+| `813778018999` | Jeopurrdy Licious — Chicken Breast | 2.8 oz | reverify full gate |
+| `813778018753` | Jeopurrdy Licious — Chicken Breast | 5.5 oz | reverify full gate |
+| `813778018975` | Let's Make a Meal — Lamb & Mackerel | 2.8 oz | reverify full gate |
+| `813778018982` | Love Connection — Chicken & Salmon | 2.8 oz | reverify full gate |
+| `813778018951` | Meal of Fortune — Chicken & Chicken Liver | 2.8 oz | reverify full gate |
+| `813778018944` | Name 'Dat Tuna — Tuna Dinner | 2.8 oz | reverify full gate |
+| `813778018708` | Name 'Dat Tuna — Tuna Dinner | 5.5 oz | reverify full gate |
+| `813778018968` | The Newly Feds — Beef & Salmon | 2.8 oz | reverify full gate |
+| `813778018722` | The Newly Feds — Beef & Salmon | 5.5 oz | reverify full gate |
+| `813778018937` | The Slice Is Right — Wild Caught Salmon | 2.8 oz | reverify full gate |
+| `813778018692` | The Slice Is Right — Wild Caught Salmon | 5.5 oz | reverify full gate |
+| `878408001031` | Classic Asian Fusion — Tuna & Shirasu | 3 oz | reverify full gate |
+| `878408002038` | Classic Asian Fusion — Tuna & Shirasu | 5.5 oz | reverify full gate |
+| `878408001123` | Classic Grandma's Chicken Soup | 3 oz | reverify full gate |
+| `810192811335` | Pantry Pours Chicken & Pumpkin Bisque with Senior Support | 1.4 oz | reverify full gate |
+| `878408001147` | Classic Amazon Livin' / Nine Liver | 3 oz | later research resolved earlier pending identity; still needs strict record |
+| `810028246072` | Wx Chicken & Tilapia in Gravy | 5.5 oz | later research resolved earlier pending identity; still needs strict record |
 
-## BFF PLAY / Originals — 20 verified
+## BFF PLAY / Originals — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -184,7 +160,7 @@ The campaign counted 18 fully closed records in this batch; two were left pendin
 | `878408007576` | Originals Tuna & Chicken 4Eva | 5.5 oz |
 | `878408007675` | Originals Tuna & Chicken 4Eva | 10 oz |
 
-## BFF OMG — 20 verified
+## BFF OMG — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -209,9 +185,9 @@ The campaign counted 18 fully closed records in this batch; two were left pendin
 | `878408004032` | QT Patootie! Chicken & Turkey | 5.5 oz |
 | `878408003929` | Selfie Cam! Chicken & Lamb | 2.8 oz |
 
-Known corrections from earlier candidate pool: Charge Me Up `813778016216` supersedes the earlier candidate `813778016285`; Purr-Fect Plannin' `878408000423` supersedes candidate `878408004094`.
+Known corrections: Charge Me Up `813778016216` supersedes candidate `813778016285`; Purr-Fect Plannin' `878408000423` supersedes candidate `878408004094`.
 
-## BFF OMG / Originals / Classic — 20 verified
+## BFF OMG / Originals / Classic — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -236,9 +212,9 @@ Known corrections from earlier candidate pool: Charge Me Up `813778016216` super
 | `878408007583` | Originals Chuckles Tuna & Chicken | 5.5 oz |
 | `878408001147` | Classic Amazon Livin' / Nine Liver | 3 oz |
 
-Rejected/conflict candidates noted during this pass: `878408000393`, `878408008894`, `878408008924`, `878408008931`.
+Rejected/conflict candidates retained for investigation only: `878408000393`, `878408008894`, `878408008924`, `878408008931`.
 
-## PLAY / OMG / Originals / Classic — 20 verified
+## PLAY / OMG / Originals / Classic — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -263,9 +239,9 @@ Rejected/conflict candidates noted during this pass: `878408000393`, `8784080088
 | `878408002144` | Classic Amazon Livin' / Nine Liver | 5.5 oz |
 | `878408001017` | Classic Outback Grill | 3 oz |
 
-Historical/replacement notes preserved from campaign: older Topsy Turvy, Checkmate, Love Munchkin, Best Day Eva and Valentine codes require version/conflict handling rather than silent overwrite.
+Historical/replacement notes: older Topsy Turvy, Checkmate, Love Munchkin, Best Day Eva and Valentine codes require explicit version/conflict handling rather than silent overwrite.
 
-## Kitten / Cat Paté / Wx / Pantry Pours / Pumpkin / Pamper Like Paris — 18 verified
+## Kitten / Cat Paté / Wx / Pantry Pours / Pumpkin / Pamper Like Paris — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -288,7 +264,7 @@ Historical/replacement notes preserved from campaign: older Topsy Turvy, Checkma
 | `810028241206` | Pumpkin Patch Up! Pumpkin + Coconut Oil & Flaxseeds | 2.8 oz |
 | `810028247123` | Pamper Like Paris Chicken Breast Dinner Paté | 2.47 oz |
 
-## Latest BFF OMG / PLAY batch — 13 verified
+## Latest BFF OMG / PLAY batch — awaiting strict promotion
 
 | UPC | Product | Size |
 |---|---|---:|
@@ -306,8 +282,8 @@ Historical/replacement notes preserved from campaign: older Topsy Turvy, Checkma
 | `813778015325` | PLAY Turkey & Tuna Twinkles | 3 oz pouch |
 | `813778014793` | PLAY Chicken & Duck Destiny | 3 oz pouch |
 
-Pending from this latest family, not included in verified count until variant-level proof is clean: Tweet Me 5.5 oz, Tell Me 5.5 oz, Chase Me 5.5 oz, Lights Out 2.8 oz, Double Dare 5.5 oz and other PLAY variants.
+Pending from this family and not promotable until exact variant-level proof is complete: Tweet Me 5.5 oz, Tell Me 5.5 oz, Chase Me 5.5 oz, Lights Out 2.8 oz, Double Dare 5.5 oz and other PLAY variants.
 
-## Campaign count note
+## Promotion progress
 
-The running research conversation reached **253 verified Weruva UPCs total**. Since the strict ledger contains the first **30**, the post-30 running count is **223**. However, because the first +18 pass was reported from a 20-candidate set without naming the two pending records, this index intentionally preserves that ambiguity. Do not derive a schema-v2 `source_verified` ledger append from the count alone; recheck that early 20-candidate section before promotion.
+Strict ledger: **50 complete records** after consuming TruLuxe. Remaining index rows are not considered strict records until their own promotion batch completes the full gate. Counts from the earlier conversational research are not inherited as proof.
