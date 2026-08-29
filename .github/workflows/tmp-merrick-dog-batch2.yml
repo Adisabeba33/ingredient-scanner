@@ -1,30 +1,37 @@
-name: Audit Merrick batch 3 normalization
+name: Repair Merrick batch 3 normalization
 on:
   push:
     branches: [agent/deep-research-merrick]
     paths: [.github/workflows/tmp-merrick-dog-batch2.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  audit:
+  repair:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-merrick
-      - name: Audit premix grouping
+      - name: Repair one premix grouping and push
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          data=json.loads(Path('research/deep-research-merrick.json').read_text())
-          batch=set(['022808260219','022808260264','022808006688','022808008125','022808002888','022808002123','022808004868','022808002666','022808004844','022808001751','022808260295','022808260271','022808260240','022808370017','022808260202','022808260233','022808260226','022808010388','022808010401','022808010425'])
-          anomalies=[]
-          for r in data['records']:
-            if r['upc'] not in batch: continue
-            a=r['ingredients_ordered_normalized']
-            for i,v in enumerate(a):
-              if v.strip().upper() in {'VITAMINS','MINERALS'}:
-                anomalies.append((r['upc'],i,v,a[i+1] if i+1<len(a) else None))
-          print('ANOMALIES',anomalies)
+          p=Path('research/deep-research-merrick.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          r=next(x for x in d['records'] if x['upc']=='022808260219')
+          a=r['ingredients_ordered_normalized']
+          i=a.index('VITAMINS')
+          assert i+1 < len(a) and a[i+1].startswith('(')
+          a[i:i+2]=['VITAMINS, '+a[i+1]]
+          note='Normalization repair on 2026-08-29: the printed VITAMINS, (...) premix is kept as one top-level normalized ingredient per research/AGENTS.md; verbatim ingredients, barcode identity, GA, calories, size, and sources are unchanged.'
+          if note not in r['verification_notes']: r['verification_notes'].append(note)
+          assert 'VITAMINS' not in r['ingredients_ordered_normalized']
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('REPAIRED',r['upc'],r['ingredients_ordered_normalized'][i])
           PY
+          git config user.name "OpenAI Research Agent"
+          git config user.email "noreply@openai.com"
+          git add research/deep-research-merrick.json
+          git commit -m "research: repair Merrick premix normalization"
+          git push origin HEAD:agent/deep-research-merrick
