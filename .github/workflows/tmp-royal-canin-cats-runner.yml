@@ -1,47 +1,74 @@
-name: Run Royal Canin cats 120-140 merge
+name: Second-pass verify Blue Buffalo True Solutions wet cat records
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Promote verified True Solutions wet records
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          updates={
+            '840243135615': {
+              'ingredients':'Chicken, Chicken Broth, Potatoes, Chicken Liver, Whitefish, Potato Starch, Potato Protein, Dried Plain Beet Pulp, Natural Flavor, Brown Rice, Flaxseed, Carrageenan, Taurine, Fructooligosaccharide, Guar Gum, Potassium Chloride, Carrots, Apples, Peas, DL-Methionine, Salt, Choline Chloride, Vitamin E Supplement, Calcium Carbonate, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Niacin Supplement (Vitamin B3), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Riboflavin Supplement (Vitamin B2), Vitamin A Supplement, Biotin (Vitamin B7), Potassium Iodide, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9).',
+              'ga': {'crude_protein_min_percent':8.5,'crude_fat_min_percent':3.0,'crude_fiber_max_percent':3.0,'moisture_max_percent':78.0,'ash_max_percent':None,'taurine_min_percent':0.1,'other_printed_guarantees':['Vitamin E 85 IU/kg min','Ascorbic Acid (Vitamin C) 30 mg/kg min']},
+              'cal': {'kcal_per_kg':1009,'kcal_per_unit':86,'unit_name':'can'},
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-80850645','https://www.chewy.com/blue-buffalo-true-solutions-blissful/dp/244843','https://www.petland.ca/products/blue-true-solutions-digestive-care-adult-canned-cat-food','https://www.doordash.com/products/blue-buffalo-true-solutions-blissful-belly-digestive-care-wet-adult-cat-food-can-3-oz/urpc_23921dfa-0ede-489d-aaa2-4734929e59b9'],
+              'note':'Current Blue Buffalo qualifying list and Target bind UPC 840243135615 to the individual 3 oz True Solutions Digestive Care adult cat can. Target and current Chewy agree on the complete ingredient order; Chewy and Petland agree on 8.5/3/3/78 GA and 1,009 kcal/kg / 86 kcal per can. Petland and DoorDash state the adult-maintenance AAFCO nutrition statement.'
+            },
+            '840243135691': {
+              'ingredients':'Whitefish, Fish Broth, Potatoes, Pea Flour, Potato Protein, Flaxseed (source of Omega 3 and 6 Fatty Acids), Brown Rice, Salmon Hydrolysate, Sunflower Oil, Powdered Cellulose, Fish Oil, Natural Flavor, Carrageenan, Cassia Gum, Guar Gum, Salt, Taurine, Potassium Chloride, Cranberries, Blueberries, Choline Chloride, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Niacin Supplement (Vitamin B3), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Riboflavin Supplement (Vitamin B2), Vitamin A Supplement, Biotin (Vitamin B7), Potassium Iodide, Vitamin B12 Supplement, Vitamin D3 Supplement, Folic Acid (Vitamin B9), preserved with Mixed Tocopherols.',
+              'ga': {'crude_protein_min_percent':8.5,'crude_fat_min_percent':2.0,'crude_fiber_max_percent':1.5,'moisture_max_percent':78.0,'ash_max_percent':None,'taurine_min_percent':0.1,'other_printed_guarantees':['Vitamin E 100 IU/kg min','Omega 3 Fatty Acids 0.3% min','Omega 6 Fatty Acids 0.5% min','Ascorbic Acid (Vitamin C) 40 mg/kg min']},
+              'cal': {'kcal_per_kg':875,'kcal_per_unit':74,'unit_name':'can'},
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-80850646','https://www.chewy.com/blue-buffalo-true-solutions-perfect/dp/244854','https://www.doordash.com/products/blue-true-solutions-whitefish-perfect-skin-coat-natural-adult-wet-cat-food-3-oz/urpc_919aeace-5ec5-4b2a-a030-30ecc691c0e9'],
+              'note':'Current Blue Buffalo qualifying list and Target bind UPC 840243135691 to the individual 3 oz True Solutions Perfect Skin & Coat adult cat can. Target and current Chewy agree on the complete ingredient order and 8.5/2/1.5/78 GA; Chewy and DoorDash agree on 875 kcal/kg / 74 kcal per can. DoorDash states the AAFCO maintenance nutrition statement.'
+            }
+          }
+          promoted=[]
+          for r in d['records']:
+            u=r.get('upc')
+            if u not in updates: continue
+            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
+            q=updates[u]
+            r['ingredients_verbatim']=q['ingredients']
+            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
+            r['guaranteed_analysis']=q['ga']
+            r['calorie_content']=q['cal']
+            r['formula_source']='Second-pass current-source verification using exact UPC identity from Blue Buffalo and current U.S./Canadian retail label data.'
+            r['source_urls']=q['sources']
+            r['source_accessed_at']='2026-08-29'
+            r['conflicts']=[]
+            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case or multipack UPC substitution was used.','Product is formulated for adult maintenance; no formula generation was mixed across ingredients, GA, calories, or nutrition statement.']
+            r['research_status']='source_verified'
+            promoted.append(u)
+          assert len(promoted)==2, promoted
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          print('PROMOTED',len(promoted),','.join(promoted))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify two Blue Buffalo True Solutions wet cat foods"
+          git push origin HEAD:agent/deep-research-blue-buffalo
