@@ -12262,9 +12262,16 @@
         "Six 4 oz child bags reconcile to the printed 24 oz / 6 pack outer variant.",
         "Child physical barcode is not asserted from the outer pack; current manufacturer standalone barcode is stored as standalone_upc only.",
         "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Nice Jerky! - Chicken + Duck -> 818336012068 (https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-duck)."
       ],
-      "research_status": "source_verified"
+      "research_status": "source_verified",
+      "pack_count": 6,
+      "unit_size": "4 oz bag",
+      "contains": [
+        "818336012068"
+      ]
     },
     {
       "catalog_number": null,
@@ -12330,7 +12337,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 24 OZ BAG (6 PACK) barcode 10818336012072.",
         "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012075 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Chicken + Salmon -> 818336012075 (https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12347,6 +12356,11 @@
             "https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon.js"
           ]
         }
+      ],
+      "pack_count": 6,
+      "unit_size": "4 oz bag",
+      "contains": [
+        "818336012075"
       ]
     },
     {
@@ -12413,7 +12427,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 12 OZ BAG (6 PACK) barcode 10818336014670.",
-        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014666 is stored only as standalone_upc."
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014666 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Fillin Good Chicken Flavor with Digestive Support -> 818336014666 (https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12430,6 +12446,11 @@
             "https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support.js"
           ]
         }
+      ],
+      "pack_count": 6,
+      "unit_size": "2 oz bag",
+      "contains": [
+        "818336014666"
       ]
     },
     {
@@ -12500,7 +12521,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 12 OZ BAG (6 PACK) barcode 20818336014677.",
-        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014673 is stored only as standalone_upc."
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014673 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Fillin Good Seafood Flavor with Immune Support -> 818336014673 (https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12517,6 +12540,11 @@
             "https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support.js"
           ]
         }
+      ],
+      "pack_count": 6,
+      "unit_size": "2 oz bag",
+      "contains": [
+        "818336014673"
       ]
     },
     {
@@ -12581,7 +12609,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013819.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012112 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012112 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Treat Meow - Digestion Support -> 818336012112 (https://iandloveandyou.com/products/treat-meow-digestion-support)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12598,6 +12628,11 @@
             "https://iandloveandyou.com/products/treat-meow-digestion-support.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "1 pouch (4 treats)",
+      "contains": [
+        "818336012112"
       ]
     },
     {
@@ -12682,7 +12717,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013857.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013843 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013843 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Treat Meow - Immune Support -> 818336013843 (https://iandloveandyou.com/products/treat-meow-immune-support)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12699,6 +12736,11 @@
             "https://iandloveandyou.com/products/treat-meow-immune-support.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "1 pouch (4 treats)",
+      "contains": [
+        "818336013843"
       ]
     },
     {
@@ -12776,7 +12818,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013833.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013829 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013829 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Treat Meow - Skin & Coat Support -> 818336013829 (https://iandloveandyou.com/products/treat-meow-skin-coat-support)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12793,6 +12837,11 @@
             "https://iandloveandyou.com/products/treat-meow-skin-coat-support.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "1 pouch (4 treats)",
+      "contains": [
+        "818336013829"
       ]
     },
     {
@@ -12902,7 +12951,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012850.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012723 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Top That Tummy - Chicken Recipe -> 818336012723 (https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12919,6 +12970,11 @@
             "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336012723"
       ]
     },
     {
@@ -13038,7 +13094,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012867.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012709 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Shine - Beef Recipe -> 818336012709 (https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13055,6 +13113,11 @@
             "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336012709"
       ]
     },
     {
@@ -13127,7 +13190,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012713.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012716 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Boost - Duck Recipe -> 818336012716 (https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13144,6 +13209,11 @@
             "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336012716"
       ]
     },
     {
@@ -13264,7 +13334,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014601.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014215 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Move - Beef with Bison Recipe in Gravy -> 818336014215 (https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13281,6 +13353,11 @@
             "https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336014215"
       ]
     },
     {
@@ -13364,7 +13441,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014618.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014222 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Thrive - Turkey Recipe in Gravy -> 818336014222 (https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13381,6 +13460,11 @@
             "https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336014222"
       ]
     },
     {
@@ -13462,7 +13546,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014595.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014581 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Wit - Lamb Recipe in Gravy -> 818336014581 (https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13479,6 +13565,11 @@
             "https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336014581"
       ]
     },
     {
@@ -13593,7 +13684,9 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014632.",
         "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014628 is stored only as standalone_upc.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Gaze - Salmon Recipe in Gravy -> 818336014628 (https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13610,6 +13703,11 @@
             "https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz pouch",
+      "contains": [
+        "818336014628"
       ]
     },
     {
@@ -13699,7 +13797,9 @@
         "Manufacturer page separately prints 1091 kcal/kg; 93 kcal/can for the 3 oz product and 1238 kcal/kg; 193 kcal/5.5 oz can for the larger size; this record stores only the 3 oz basis.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336011686.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011689 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011689 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Purrky Turkey Pâté -> 818336011689 (https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13716,6 +13816,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336011689"
       ]
     },
     {
@@ -13805,7 +13910,9 @@
         "Manufacturer page separately prints 1095 kcal/kg; 93 kcal/can for the 3 oz product and 1203 kcal/kg; 188 kcal/5.5 oz can for the larger size; this record stores only the 3 oz basis.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336011907.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011900 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011900 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Savory Salmon Paté -> 818336011900 (https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13822,6 +13929,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336011900"
       ]
     },
     {
@@ -13912,7 +14024,9 @@
         "Calorie cross-check: 1017 kcal/kg × 0.0850486 kg nominal 3 oz can = 86.5 kcal, consistent with printed 86 kcal/can after label rounding.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010238.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010231 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010231 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Oh My Cod! Pâté -> 818336010231 (https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13929,6 +14043,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336010231"
       ]
     },
     {
@@ -14016,7 +14135,9 @@
         "Calorie cross-check: 1130 kcal/kg × 0.0850486 kg nominal 3 oz can = 96.1 kcal, consistent with printed 96 kcal/can after label rounding.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010221.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010224 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010224 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Chicken Me Out Pâté -> 818336010224 (https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14033,6 +14154,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336010224"
       ]
     },
     {
@@ -14124,7 +14250,9 @@
         "Calorie cross-check: 1076 kcal/kg × 0.0850486 kg nominal 3 oz can = 91.5 kcal, consistent with printed 91 kcal/can within normal label rounding.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010214.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010217 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010217 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Beef Right Meow! Pâté -> 818336010217 (https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14141,6 +14269,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336010217"
       ]
     },
     {
@@ -14233,7 +14366,9 @@
         "The retrieved manufacturer HTML does not expose the formal 'formulated to meet...' sentence for Whascally Wabbit, but explicitly states the product is complete & balanced for growing kittens, adult and senior cats according to AAFCO and gives kitten/gestation feeding directions; life_stage is stored as all on that first-party evidence.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010207.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010200 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010200 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Whascally Wabbit Pâté -> 818336010200 (https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14250,6 +14385,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336010200"
       ]
     },
     {
