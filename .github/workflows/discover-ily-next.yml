@@ -1,0 +1,18 @@
+name: Discover next ILY UPCs
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths:
+      - .github/workflows/discover-ily-next.yml
+      - .github/scripts/discover-ily-next.py
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+          fetch-depth: 0
+      - run: python .github/scripts/discover-ily-next.py
