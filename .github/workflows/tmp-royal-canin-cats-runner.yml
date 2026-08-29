@@ -1,47 +1,102 @@
-name: Run Royal Canin cats 120-140 merge
-
+name: Append Blue Buffalo cats 272-291
 on:
   push:
-    branches:
-      - agent/deep-research-barcode-ledger
-    paths:
-      - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
-
+    branches: [agent/deep-research-blue-buffalo]
+    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
 permissions:
   contents: write
-
 jobs:
-  merge:
+  append:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Validate and append 20 current cat SKUs
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json, pathlib, re
+          P=pathlib.Path('research/deep-research-blue-buffalo.json')
+          data=json.loads(P.read_text())
+          official='https://www.bluebuffalo.com/incentive-requests/qualifying-products/'
+          target12='https://www.target.com/p/-/A-80778977'
+          target24='https://www.target.com/p/-/A-87560038'
+          items=[
+          ('840243155798','Tastefuls Adult Cat Tuna Mini Purees','Tuna','treat','individual_unit','0.5 oz tube',[]),
+          ('840243155835','Tastefuls Adult Cat Chicken, Tuna & Salmon Mini Purees 24ct Variety Pack','Chicken / Tuna / Salmon','treat','multipack','24 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',8),('Tuna Mini Puree','0.5 oz',8),('Salmon Mini Puree','0.5 oz',8)]),
+          ('840243155828','Tastefuls Adult Cat Chicken, Tuna & Salmon Mini Purees 12ct Variety Pack','Chicken / Tuna / Salmon','treat','multipack','12 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',4),('Tuna Mini Puree','0.5 oz',4),('Salmon Mini Puree','0.5 oz',4)]),
+          ('840243155811','Tastefuls Adult Cat Chicken & Tuna Mini Purees 4ct Variety Pack','Chicken / Tuna','treat','multipack','4 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',2),('Tuna Mini Puree','0.5 oz',2)]),
+          ('840243153954','Tastefuls Adult Cat Salmon Entree Pate 4ct Multi-Pack','Salmon','wet','multipack','4 x 3 oz cans',[('Salmon Entree Pate','3 oz',4)]),
+          ('840243153961','Tastefuls Adult Cat Ocean Fish and Tuna Entree Pate 4ct Multi-Pack','Ocean Fish & Tuna','wet','multipack','4 x 3 oz cans',[('Ocean Fish and Tuna Entree Pate','3 oz',4)]),
+          ('840243153992','Tastefuls Adult Cat Fish and Shrimp Entree in Gravy Flaked 4ct','Fish & Shrimp','wet','multipack','4 x 3 oz cans',[('Fish and Shrimp Entree in Gravy Flaked','3 oz',4)]),
+          ('840243140732','Tastefuls Chicken, Turkey & Chicken, Ocean Fish & Tuna Pate Variety Pack 12ct','Chicken / Turkey & Chicken / Ocean Fish & Tuna','wet','multipack','12 x 5.5 oz cans',[('Chicken Entree Pate','5.5 oz',4),('Turkey & Chicken Entree Pate','5.5 oz',4),('Ocean Fish and Tuna Entree Pate','5.5 oz',4)]),
+          ('840243145690','Tastefuls Chicken, Turkey & Chicken, Ocean Fish & Tuna Pate Variety Pack 24ct','Chicken / Turkey & Chicken / Ocean Fish & Tuna','wet','multipack','24 x 5.5 oz cans',[('Chicken Entree Pate','5.5 oz',8),('Turkey & Chicken Entree Pate','5.5 oz',8),('Ocean Fish and Tuna Entree Pate','5.5 oz',8)]),
+          ('840243158508','Tastefuls Mature Chicken Pate 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Mature Chicken Entree Pate','3 oz',4)]),
+          ('840243158492','Tastefuls Kitten Chicken Pate 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Kitten Chicken Entree Pate','3 oz',4)]),
+          ('840243158584','Tastefuls Chicken Pate and Ocean Fish Pate Variety Pack 4pk','Chicken / Ocean Fish','wet','multipack','4 x 3 oz cans',[('Chicken Entree Pate','3 oz',2),('Ocean Fish and Tuna Entree Pate','3 oz',2)]),
+          ('840243158614','True Solutions Weight Control 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Weight Control Adult Cat','3 oz',4)]),
+          ('840243158607','True Solutions Urinary Care 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Urinary Care Adult Cat','3 oz',4)]),
+          ('840243158621','True Solutions Digestive Care 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Digestive Care Adult Cat','3 oz',4)]),
+          ('840243137008','BLUE Bursts Liver & Beef Crunchy & Creamy Cat Treats','Liver & Beef','treat','individual_unit','2 oz',[]),
+          ('840243135196','Baby BLUE Kitten Grain Free High Protein Chicken/Salmon Variety Pack','Chicken / Salmon','wet','multipack','6 x 3 oz cans',[('Grain Free High Protein Kitten Chicken','3 oz',3),('Grain Free High Protein Kitten Salmon','3 oz',3)]),
+          ('840243134748','Baby BLUE Kitten Crunchy Treat Chicken','Chicken','treat','individual_unit','2 oz',[]),
+          ('840243137091','Baby BLUE Kitten Crunchy Grain-Free Salmon Recipe','Salmon','treat','individual_unit','2 oz',[]),
+          ('840243135172','Baby BLUE Kitten Chicken Pate Multipack','Chicken','wet','multipack','6 x 3 oz cans',[('Kitten Chicken Pate','3 oz',6)]),
+          ]
+          def valid(u):
+            d=list(map(int,u)); return len(d)==12 and (10-(sum(d[0:11:2])*3+sum(d[1:11:2]))%10)%10==d[11]
+          assert len(items)==20 and len({x[0] for x in items})==20
+          assert all(valid(x[0]) for x in items)
+          candidates={x[0] for x in items}
+          # live exclusion scan: all ledgers except owned file + production exclusions
+          files=[pathlib.Path('data/known-products.ts'),pathlib.Path('data/known-formulas.ts'),pathlib.Path('data/wrong-barcodes.ts'),pathlib.Path('docs/CATALOG-CONFLICTS.md')]
+          files += [x for x in pathlib.Path('research').glob('deep-research-*.json') if x.name!=P.name]
+          hits={u:[] for u in candidates}
+          for f in files:
+            if f.exists():
+              txt=f.read_text(errors='ignore')
+              for u in candidates:
+                if u in txt: hits[u].append(str(f))
+          bad={u:v for u,v in hits.items() if v}
+          assert not bad, f'exclusion collisions: {bad}'
+          existing={str(r.get('upc')) for r in data['records']}
+          dup=sorted(candidates & existing)
+          assert not dup, f'owned-ledger duplicates: {dup}'
+          def child(name,size,q):
+            return {'upc':None,'canonical_gtin14':None,'product_name':name,'size':size,'quantity':q,'evidence_status':'unresolved','source_urls':[official]}
+          recs=[]
+          for u,name,var,form,scope,size,children in items:
+            urls=[official]
+            if u=='840243140732': urls.append(target12)
+            if u=='840243145690': urls.append(target24)
+            recs.append({
+              'catalog_number':None,'upc':u,'canonical_gtin14':u.zfill(14),'barcode_scope':scope,
+              'multipack_contents':[child(*c) for c in children],
+              'brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat',
+              'product_line':'Baby BLUE' if name.startswith('Baby BLUE') else ('True Solutions' if name.startswith('True Solutions') else ('BLUE Bursts' if 'Bursts' in name else 'Tastefuls')),
+              'product_name':name,'variant':var,'recipe':[var],'life_stage':'kitten' if 'Kitten' in name else 'adult',
+              'food_form':form,'texture':None,'presentation':None,'package_type':'box' if scope=='multipack' else 'bag','size':size,
+              'ingredients_verbatim':None,'ingredients_ordered_normalized':[],
+              'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},
+              'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,
+              'formula_source':'Current Blue Buffalo U.S. qualifying-products list establishes current sellable UPC/package identity; full exact-package label deck remains unresolved.',
+              'source_urls':urls,'source_accessed_at':'2026-08-29','barcode_notes':'UPC-A check digit validated. Outer-pack UPC retained for multipacks; child UPCs intentionally null until proven on inner units.',
+              'conflicts':[],'verification_notes':['Current U.S. Blue Buffalo qualifying-products listing checked 2026-08-29.','UPC-A check digit validated.','Repository-wide live exclusion scan passed before append.','Multipack child identities/counts recorded where package description supports them; inner UPCs not inferred.'],
+              'research_status':'needs_physical_label'})
+          before=len(data['records']); data['records'].extend(recs); data['updated_at']='2026-08-29'
+          assert len(data['records'])==before+20
+          assert len({r['upc'] for r in data['records']})==len(data['records'])
+          P.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+          print(f'APPEND_OK before={before} added=20 after={len(data["records"])} verified=0 needs=20 multipacks={sum(r["barcode_scope"]=="multipack" for r in recs)} individual={sum(r["barcode_scope"]=="individual_unit" for r in recs)}')
+          print('UPCS='+','.join(x[0] for x in items))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: add 20 current Blue Buffalo cat SKUs with multipack mapping"
+          git push origin HEAD:agent/deep-research-blue-buffalo
