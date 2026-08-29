@@ -1,76 +1,47 @@
-name: Second-pass verify Blue Buffalo crunchy cat treats
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote verified crunchy treat records
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          updates={
-            '840243120291': {
-              'ingredients':'Deboned Chicken, Chicken Meal, Potato Starch, Peas, Brewers Dried Yeast, Chicken Fat, Natural Flavor, Citric Acid, Potassium Chloride, Preserved With Mixed Tocopherols, Oil Of Rosemary.',
-              'ga':(28,12,4,10),'kcalkg':3800,'kcalunit':1.3,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/blue-buffalo-wilderness-chicken/dp/141460','https://www.target.com/p/-/A-54552069'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 840243120291 to Wilderness Crunchy Chicken 2 oz. Current Chewy provides the complete formula, 28/12/4/10 GA, 3,800 kcal/kg and 1.3 kcal/treat; Target independently confirms the current 2 oz product family and formula presentation.'},
-            '840243125319': {
-              'ingredients':'Deboned Chicken, Chicken Meal, Potato Starch, Peas, Brewers Dried Yeast, Chicken Fat, Natural Flavor, Citric Acid, Potassium Chloride, Preserved With Mixed Tocopherols, Oil Of Rosemary.',
-              'ga':(28,12,4,10),'kcalkg':3800,'kcalunit':1.3,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-75878602','https://www.chewy.com/blue-buffalo-wilderness-chicken/dp/176712'],
-              'note':'Current Blue Buffalo qualifying list and Target both bind UPC 840243125319 to the 12 oz Chicken crunchy-treat tub. Target and current Chewy agree on the complete ingredient deck and 28/12/4/10 GA; Chewy supplies 3,800 kcal/kg and 1.3 kcal/treat.'},
-            '840243120338': {
-              'ingredients':'Trout, Chicken Meal, Potato Starch, Peas, Brewers Dried Yeast, Chicken Fat, Natural Flavor, Citric Acid, Potassium Chloride, Preserved With Mixed Tocopherols, Oil Of Rosemary.',
-              'ga':(28,12,3,10),'kcalkg':3700,'kcalunit':1.3,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/blue-buffalo-wilderness-trout-formula/dp/141464','https://www.petland.ca/products/blue-wilderness-crunchy-cat-treats-trout-flavor'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 840243120338 to Wilderness Crunchy Trout 2 oz. Current Chewy and Petland Canada independently agree on the complete formula, 28/12/3/10 GA, 3,700 kcal/kg and 1.3 kcal/treat.'}
-          }
-          promoted=[]
-          for r in d['records']:
-            u=r.get('upc')
-            if u not in updates: continue
-            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
-            q=updates[u]
-            r['ingredients_verbatim']=q['ingredients']
-            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
-            pr,fa,fi,mo=q['ga']
-            r['guaranteed_analysis']={'crude_protein_min_percent':pr,'crude_fat_min_percent':fa,'crude_fiber_max_percent':fi,'moisture_max_percent':mo,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
-            r['calorie_content']={'kcal_per_kg':q['kcalkg'],'kcal_per_unit':q['kcalunit'],'unit_name':'treat'}
-            r['formula_source']='Second-pass current-source verification using exact UPC identity from Blue Buffalo and current U.S./Canadian retail label data.'
-            r['source_urls']=q['sources']
-            r['source_accessed_at']='2026-08-29'
-            r['conflicts']=[]
-            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case or multipack barcode substitution was used.','This is a treat for intermittent or supplemental feeding, not a complete-and-balanced maintenance diet.']
-            r['research_status']='source_verified'
-            promoted.append(u)
-          assert len(promoted)==3, promoted
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          print('PROMOTED',len(promoted),','.join(promoted))
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify three Blue Buffalo crunchy cat treats"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
