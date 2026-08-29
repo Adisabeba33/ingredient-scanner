@@ -1,0 +1,75 @@
+name: Map Merrick batch 2 active dog candidates
+on:
+  push:
+    branches: [agent/deep-research-merrick]
+    paths: [.github/workflows/tmp-merrick-batch2-map.yml]
+permissions:
+  contents: read
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Map active Merrick dog wet candidates
+        run: |
+          python - <<'PY'
+          import urllib.request,re,json,html,time
+          from pathlib import Path
+          H={'User-Agent':'Mozilla/5.0'}
+          def get(u):
+            req=urllib.request.Request(u,headers=H)
+            with urllib.request.urlopen(req,timeout=30) as r:
+              return r.read().decode('utf-8','replace')
+          def clean(s):
+            s=re.sub(r'<script\b[^>]*>.*?</script>',' ',s,flags=re.I|re.S)
+            s=re.sub(r'<style\b[^>]*>.*?</style>',' ',s,flags=re.I|re.S)
+            s=re.sub(r'<[^>]+>',' ',s)
+            return re.sub(r'\s+',' ',html.unescape(s)).strip()
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
+          repo='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
+          existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',repo)); canon={x.zfill(14) for x in existing}
+          found=[]
+          for page in range(0,8):
+            u='https://www.merrickpetcare.com/dog-food/wet'+(f'?page={page}' if page else '')
+            try:t=get(u)
+            except Exception as e:
+              print('PAGE_ERR',page,repr(e)); continue
+            for m in re.finditer(r'<div class="ps-widget" ps-sku="(\d+)"[^>]*>',t,re.I):
+              upc=m.group(1)
+              w=t[max(0,m.start()-4200):m.end()+400]
+              hrefs=re.findall(r'href="([^"]*/shop/[^"]+)"',w,re.I)
+              titles=re.findall(r'(?:data-content_name|title)="([^"]+)"',w,re.I)
+              href=html.unescape(hrefs[-1]).split('?')[0] if hrefs else None
+              if href and href.startswith('/'): href='https://www.merrickpetcare.com'+href
+              title=html.unescape(titles[-1]) if titles else None
+              row=(upc,title,href)
+              if row not in found: found.append(row)
+          uniq=[]; seen=set()
+          for upc,title,url in found:
+            if upc in seen: continue
+            seen.add(upc)
+            if upc in existing or upc.zfill(14) in canon: continue
+            uniq.append((upc,title,url))
+          print('NEW_WET_CARD_UPCS',len(uniq))
+          for upc,title,url in uniq:
+            if not url: continue
+            try:t=get(url)
+            except Exception as e:
+              print('ERR',upc,repr(e)); continue
+            txt=clean(t)
+            a=txt.find('Available Sizes')
+            size=txt[a:a+230] if a>=0 else ''
+            g=txt.find('Guaranteed Analysis:')
+            ga=txt[g:g+700] if g>=0 else ''
+            c=txt.find('Calorie Content')
+            cal=txt[c:c+280] if c>=0 else ''
+            # Find the real label ingredient line, preferring uppercase INGREDIENTS or a nutrition-adjacent Ingredients line.
+            candidates=[]
+            for pat in ['INGREDIENTS:', 'Ingredients:']:
+              for mm in re.finditer(re.escape(pat),txt):
+                candidates.append(txt[mm.start():mm.start()+1800])
+            ingr=max(candidates,key=len) if candidates else ''
+            pdp_skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
+            print('CAND',json.dumps({'upc':upc,'title':title,'url':url,'size':size,'ga':ga,'cal':cal,'ingredient':ingr,'pdp_skus':pdp_skus[:10]},ensure_ascii=False))
+            time.sleep(.05)
+          PY
