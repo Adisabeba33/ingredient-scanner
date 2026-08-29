@@ -1,47 +1,76 @@
-name: Run Royal Canin cats 120-140 merge
+name: Verify Blue Buffalo Perfect Coat 3.5 lb
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Promote Perfect Coat 3.5 lb
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          target='840243135257'
+          found=0
+          ingredients='Deboned Salmon, Salmon Meal, Brown Rice, Pea Protein, Barley, Oatmeal, Canola Oil, Natural Flavor, Potato Starch, Dried Tomato Pomace, Peas, Calcium Carbonate, Choline Chloride, Calcium Sulfate, DL-Methionine, Fish Oil (source of Omega 3 Fatty Acids), L-Threonine, Calcium Chloride, Potatoes, Pumpkin, Dried Chicory Root, Taurine, Potassium Chloride, Potassium Sulfate, Flaxseed (source of Omega 6 Fatty Acids), Pea Fiber, Alfalfa Nutrient Concentrate, Salt, Dried Plain Beet Pulp, Dicalcium Phosphate, L-Tryptophan, Vitamin E Supplement, preserved with Mixed Tocopherols, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Vegetable Juice for color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Blueberries, Cranberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, L-Lysine, Biotin (Vitamin B7), Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Calcium Iodate, Sodium Selenite, Oil of Rosemary.'
+          for r in d['records']:
+            if r.get('upc')!=target: continue
+            found+=1
+            assert r.get('research_status')=='needs_physical_label', r.get('research_status')
+            r['ingredients_verbatim']=ingredients
+            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in ingredients.split(',')]
+            r['guaranteed_analysis']={
+              'crude_protein_min_percent':32.0,
+              'crude_fat_min_percent':15.0,
+              'crude_fiber_max_percent':4.0,
+              'moisture_max_percent':9.0,
+              'ash_max_percent':None,
+              'taurine_min_percent':0.2,
+              'other_printed_guarantees':['Vitamin E 300 IU/kg min','Omega 3 Fatty Acids 1.25% min','Omega 6 Fatty Acids 2.5% min','Ascorbic Acid (source of Vitamin C) 100 mg/kg min']
+            }
+            r['calorie_content']={'kcal_per_kg':3714,'kcal_per_cup':415}
+            r['formula_source']='Second-pass current-source verification: exact 3.5-lb UPC identity from Blue Buffalo/Red Mango; current formula and analysis from current North American retailer label data; exact 3.5-lb calorie and AAFCO statement independently corroborated.'
+            r['source_urls']=[
+              'https://www.bluebuffalo.com/incentive-requests/qualifying-products/',
+              'https://products.redmangomarketing.com/products/blue-buffalo-true-solutions-perfect-coat-dry-cat-food/',
+              'https://www.chewy.com/ca/blue-buffalo-true-solutions-natural/dp/1000022270',
+              'https://www.petco.com/product/blue-buffalo-true-solutions-perfect-coat-salmon-recipe-natural-skin-and-coat-care-adult-dry-cat-food',
+              'https://www.doordash.com/products/blue-buffalo-blue-true-solutions-perfect-skin-coat-natural-salmon-adult-dry-cat-food-35-lb/urpc_da0c4f73-87c0-4d6a-8cc3-f1357d30227c'
+            ]
+            r['source_accessed_at']='2026-08-29'
+            r['conflicts']=[]
+            r['verification_notes']=[
+              'Official current Blue Buffalo qualifying-products list identifies UPC 840243135257 as True Solutions Perfect Coat Skin & Coat Care Adult Cat Salmon; Red Mango independently maps the same UPC to the 3.5-lb size.',
+              'Current North American retailer formula data agree on the complete ingredient deck and core GA 32/15/4/9. Current Petco additionally prints Vitamin E 300 IU/kg, taurine 0.2%, omega-3 1.25%, omega-6 2.5%, and vitamin C 100 mg/kg.',
+              'DoorDash exact 3.5-lb product data give 3,714 kcal/kg, 415 kcal/cup and the AAFCO adult-maintenance formulation statement. No cross-generation values were mixed.'
+            ]
+            r['research_status']='source_verified'
+          assert found==1, found
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          print('PROMOTED',target)
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify Blue Buffalo Perfect Coat 3.5 lb"
+          git push origin HEAD:agent/deep-research-blue-buffalo
