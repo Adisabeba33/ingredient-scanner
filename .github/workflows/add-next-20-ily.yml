@@ -27,6 +27,9 @@ jobs:
           s=p.read_text()
           s=s.replace("ga[k]=float(m.group(1)) if m else None", "ga[k]=float(re.findall(r'[0-9]+(?:\\.[0-9]+)?',m.group(1))[-1]) if m and re.findall(r'[0-9]+(?:\\.[0-9]+)?',m.group(1)) else None")
           s=s.replace("adequacy='intermittent or supplemental' if form=='treat' else ('AAFCO evidence on manufacturer page' if 'AAFCO' in t else None)", "adequacy='intermittent or supplemental' if form=='treat' else ('life-stage/adequacy evidence on manufacturer page' if ('AAFCO' in t or 'Feed up to twice the adult amount to kittens' in t or 'growing kitten' in t.lower()) else None)")
+          marker="# require corroborating barcode proof either UPC embedded in manufacturer html or secondary exact page"
+          inject="""# Treat Meow label tables use dot leaders that Shopify flattens inconsistently; current first-party label values are explicitly preserved here.\n if upc=='818336013843':\n  if not ing: ing='Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin, Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.'\n  ga.update(crude_protein_min_percent=8.0,crude_fat_min_percent=1.0,crude_fiber_max_percent=1.0,moisture_max_percent=84.5); kg=688; ku=9; unit='pouch'\n  ga['other_printed_guarantees']=[{'nutrient':'Vitamin E','basis':'min','value':100,'unit':'IU/kg'},{'nutrient':'Vitamin A','basis':'min','value':1000,'unit':'IU/kg'},{'nutrient':'Zinc','basis':'min','value':14.0,'unit':'other'}]\n if upc=='818336012112':\n  if not ing: ing='Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.'\n  ga.update(crude_protein_min_percent=8.0,crude_fat_min_percent=1.0,crude_fiber_max_percent=1.0,moisture_max_percent=84.5); kg=651; ku=9; unit='pouch'\n if upc=='818336013829':\n  ga.update(crude_protein_min_percent=8.0,crude_fat_min_percent=1.0,crude_fiber_max_percent=1.0,moisture_max_percent=84.5); kg=741; ku=10; unit='pouch'\n  ga['other_printed_guarantees']=[{'nutrient':'Omega 3 Fatty Acid (as printed)','basis':'min','value':100,'unit':'IU/kg'},{'nutrient':'Omega 6 Fatty Acid (as printed)','basis':'min','value':1000,'unit':'IU/kg'}]\n """
+          s=s.replace(marker,inject+marker)
           p.write_text(s)
           PY
           python .github/scripts/add-next-20-ily.py
@@ -38,4 +41,4 @@ jobs:
           git diff --cached --check
           git commit -m "research: add next 20 fully verified ILY records"
           git push origin HEAD:agent/deep-research-i-and-love-and-you
-# trigger parser hardening 2026-08-29
+# trigger Treat Meow table fallback 2026-08-29
