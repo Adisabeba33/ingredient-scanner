@@ -1,4 +1,4 @@
-name: Map Merrick batch 2 active dog candidates
+name: Map Merrick batch 2 exact PDP candidates
 on:
   push:
     branches: [agent/deep-research-merrick]
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Map active Merrick dog wet candidates
+      - name: Map current dog wet PDP identities
         run: |
           python - <<'PY'
           import urllib.request,re,json,html,time
@@ -28,48 +28,47 @@ jobs:
           paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
           repo='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
           existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',repo)); canon={x.zfill(14) for x in existing}
-          found=[]
-          for page in range(0,8):
+          urls=[]
+          for page in range(0,6):
             u='https://www.merrickpetcare.com/dog-food/wet'+(f'?page={page}' if page else '')
-            try:t=get(u)
-            except Exception as e:
-              print('PAGE_ERR',page,repr(e)); continue
-            for m in re.finditer(r'<div class="ps-widget" ps-sku="(\d+)"[^>]*>',t,re.I):
-              upc=m.group(1)
-              w=t[max(0,m.start()-4200):m.end()+400]
-              hrefs=re.findall(r'href="([^"]*/shop/[^"]+)"',w,re.I)
-              titles=re.findall(r'(?:data-content_name|title)="([^"]+)"',w,re.I)
-              href=html.unescape(hrefs[-1]).split('?')[0] if hrefs else None
-              if href and href.startswith('/'): href='https://www.merrickpetcare.com'+href
-              title=html.unescape(titles[-1]) if titles else None
-              row=(upc,title,href)
-              if row not in found: found.append(row)
-          uniq=[]; seen=set()
-          for upc,title,url in found:
-            if upc in seen: continue
-            seen.add(upc)
-            if upc in existing or upc.zfill(14) in canon: continue
-            uniq.append((upc,title,url))
-          print('NEW_WET_CARD_UPCS',len(uniq))
-          for upc,title,url in uniq:
-            if not url: continue
+            t=get(u)
+            for href in re.findall(r'href=["\']([^"\']*/shop/[^"\']+)["\']',t,re.I):
+              href=html.unescape(href).split('?')[0].split('#')[0]
+              if href.startswith('/'): href='https://www.merrickpetcare.com'+href
+              if href not in urls: urls.append(href)
+          print('PDP_URLS',len(urls))
+          rows=[]
+          for url in urls:
+            if 'variety-pack' in url: continue
             try:t=get(url)
             except Exception as e:
-              print('ERR',upc,repr(e)); continue
+              print('ERR',url,repr(e)); continue
             txt=clean(t)
+            h1=re.search(r'<h1\b[^>]*>(.*?)</h1>',t,re.I|re.S)
+            title=clean(h1.group(1)) if h1 else url.rsplit('/',1)[-1]
+            skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
+            if not skus: continue
+            upc=skus[0]
+            if upc in existing or upc.zfill(14) in canon: continue
             a=txt.find('Available Sizes')
-            size=txt[a:a+230] if a>=0 else ''
-            g=txt.find('Guaranteed Analysis:')
-            ga=txt[g:g+700] if g>=0 else ''
-            c=txt.find('Calorie Content')
-            cal=txt[c:c+280] if c>=0 else ''
-            # Find the real label ingredient line, preferring uppercase INGREDIENTS or a nutrition-adjacent Ingredients line.
-            candidates=[]
-            for pat in ['INGREDIENTS:', 'Ingredients:']:
-              for mm in re.finditer(re.escape(pat),txt):
-                candidates.append(txt[mm.start():mm.start()+1800])
-            ingr=max(candidates,key=len) if candidates else ''
-            pdp_skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
-            print('CAND',json.dumps({'upc':upc,'title':title,'url':url,'size':size,'ga':ga,'cal':cal,'ingredient':ingr,'pdp_skus':pdp_skus[:10]},ensure_ascii=False))
-            time.sleep(.05)
+            p=txt.find('Product Description',a if a>=0 else 0)
+            size=txt[a+len('Available Sizes'):p].strip() if a>=0 and p>a else ''
+            n=txt.find('Nutrition')
+            i=txt.find('Ingredients',n if n>=0 else 0)
+            g=txt.find('Guaranteed Analysis',i if i>=0 else 0)
+            ingr=txt[i+len('Ingredients'):g].strip() if i>=0 and g>i else ''
+            f=txt.find('Feeding',g if g>=0 else 0)
+            ga_chunk=txt[g:f].strip() if g>=0 and f>g else ''
+            c=txt.find('Calorie Content',g if g>=0 else 0)
+            cal=txt[c:c+220].strip() if c>=0 else ''
+            adequacy=''
+            for phrase in ['is formulated to meet','is formulated to meet the nutritional levels','provides complete and balanced','complete and balanced']:
+              pos=txt.lower().find(phrase.lower())
+              if pos>=0:
+                adequacy=txt[pos:pos+420]; break
+            rows.append({'upc':upc,'title':title,'url':url,'size':size,'ingredients':ingr,'ga':ga_chunk[:1100],'calories':cal,'adequacy':adequacy,'pdp_skus':skus[:6]})
+            time.sleep(.03)
+          print('NEW_PDP_ROWS',len(rows))
+          for r in rows:
+            print('PDP',json.dumps(r,ensure_ascii=False))
           PY
