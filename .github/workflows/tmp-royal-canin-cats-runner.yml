@@ -1,52 +1,47 @@
-name: Second-pass verify Blue Buffalo wet cat records
+name: Run Royal Canin cats 120-140 merge
+
 on:
   push:
-    branches: [agent/deep-research-blue-buffalo]
-    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote verified records
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'; d=json.load(open(p,encoding='utf-8'))
-          by={r['upc']:r for r in d['records']}
-          patches={
-          '840243135639':{
-            'ingredients_verbatim':'Chicken, Chicken Broth, Chicken Liver, Potatoes, Whitefish, Potato Protein, Pea Fiber, Brown Rice, Powdered Cellulose, Flaxseed, Natural Flavor, Carrageenan, Taurine, Guar Gum, Potassium Chloride, L-Threonine, Choline Chloride, Carrots, Cranberries, Green Beans, DL-Methionine, L-Ascorbyl-2-Polyphosphate (Source of Vitamin C), L-Tryptophan, Salt, Vitamin E Supplement, L-Carnitine, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Niacin Supplement (Vitamin B3), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Riboflavin Supplement (Vitamin B2), Vitamin A Supplement, Biotin (Vitamin B7), Potassium Iodide, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9).',
-            'ga':{'crude_protein_min_percent':8.5,'crude_fat_min_percent':4,'crude_fiber_max_percent':3,'moisture_max_percent':78,'ash_max_percent':None,'taurine_min_percent':0.1,'other_printed_guarantees':[{'nutrient':'Crude Fat','basis':'max','value':9,'unit':'percent'},{'nutrient':'Vitamin E','basis':'min','value':85,'unit':'IU/kg'},{'nutrient':'L-Carnitine','basis':'min','value':100,'unit':'mg/kg'}]},
-            'cal':{'kcal_per_kg':1007,'kcal_per_unit':86,'unit_name':'can'},
-            'urls':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-80850647','https://products.redmangomarketing.com/products/blue-buffalo-true-solutions-fit-healthy-wet-cat-food/'],
-            'note':'Second-pass recovery: current exact-UPC Target label supplies complete ingredients and GA; exact-UPC distributor data supplies 1,007 kcal/kg and 86 kcal/can; Blue Buffalo current qualifying list anchors UPC/package identity.'},
-          '840243140718':{
-            'ingredients_verbatim':'Tuna, Fish Broth, Water, Chicken, Chicken Liver, Dried Egg Product, Natural Flavor, Potato Starch, Brewers Dried Yeast, Brown Rice, Calcium Carbonate, Fish Oil, Sweet Potatoes, Guar Gum, Sodium Phosphate, Potassium Chloride, Salt, Carrageenan, Taurine, Choline Chloride, Thiamine Mononitrate (Vitamin B1), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Vitamin E Supplement, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Niacin Supplement (Vitamin B3), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Riboflavin Supplement (Vitamin B2), Vitamin A Supplement, Biotin (Vitamin B7), Potassium Iodide, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Preserved With Mixed Tocopherols.',
-            'ga':{'crude_protein_min_percent':9,'crude_fat_min_percent':2,'crude_fiber_max_percent':1.5,'moisture_max_percent':82,'ash_max_percent':None,'taurine_min_percent':0.1,'other_printed_guarantees':[]},
-            'cal':{'kcal_per_kg':823,'kcal_per_unit':70,'unit_name':'can'},
-            'urls':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petfood.express/products/blue-tastefuls-meaty-morsels-tuna-entree-in-gravy-canned-cat-food.html','https://petfriendlysite.com/collections/cat/products/blue-buffalo-blue-tastefuls-tender-morsels-of-tuna-in-savory-sauce-wet-cat-food','https://www.countrymax.com/blue-buffalo-tastefuls-tender-morsels-tuna-entree-canned-cat-food-3-oz/'],
-            'note':'Second-pass recovery: multiple current exact-UPC retail sources agree on 3 oz identity, complete formula, 9/2/1.5/82 GA, taurine 0.10%, 823 kcal/kg and 70 kcal/can; adult-maintenance AAFCO statement is also printed.'}}
-          for up,x in patches.items():
-            r=by[up]; assert r['research_status']=='needs_physical_label'
-            r['ingredients_verbatim']=x['ingredients_verbatim']; r['ingredients_ordered_normalized']=[s.strip().rstrip('.') for s in x['ingredients_verbatim'].split(',')]
-            r['guaranteed_analysis']=x['ga']; r['calorie_content']=x['cal']; r['source_urls']=x['urls']; r['source_accessed_at']='2026-08-29'; r['formula_source']=x['note']; r['conflicts']=[]
-            r.setdefault('verification_notes',[]).append(x['note']); r['research_status']='source_verified'
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':')); open(p,'a').write('\n')
-          print('SECOND_PASS_PROMOTED',','.join(patches),'count',len(patches))
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: second-pass verify Blue Buffalo wet cat records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
