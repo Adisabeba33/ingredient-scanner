@@ -1,0 +1,23 @@
+name: Reissue ILY multipack batch 1
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths: [.github/workflows/reissue-ily-multipack-batch1.yml]
+permissions:
+  contents: write
+jobs:
+  reissue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+          fetch-depth: 0
+      - run: python .github/scripts/reissue-ily-multipack-batch1.py
+      - run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-i-and-love-and-you.json
+          git diff --cached --check
+          git commit -m "research: reissue first 20 ILY multipacks under contains contract"
+          git push origin HEAD:agent/deep-research-i-and-love-and-you
