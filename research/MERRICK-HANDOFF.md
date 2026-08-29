@@ -9,6 +9,7 @@ This is the current handoff for Merrick barcode research in `Adisabeba33/ingredi
 Before any new Merrick work, read `research/AGENTS.md` and treat it as binding. Rebuild the live exclusion set from the repository before every batch; never rely only on the UPC list in this handoff.
 
 Current branch: `agent/deep-research-merrick`
+Current review surface: draft PR #4 — `Research first 20 active Merrick barcodes`
 Primary ledger: `research/deep-research-merrick.json`
 Research mode: **ACTIVE MARKET ONLY**
 
