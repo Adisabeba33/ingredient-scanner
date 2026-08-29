@@ -1,73 +1,47 @@
-name: Backfill Blue Buffalo multipack child mapping
+name: Run Royal Canin cats 120-140 merge
+
 on:
   push:
-    branches: [agent/deep-research-blue-buffalo]
-    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  patch:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Sync contract and backfill multipack contents
+      - name: Execute validated merge script
         run: |
-          git fetch origin agent/deep-research-barcode-ledger
-          git checkout origin/agent/deep-research-barcode-ledger -- research/AGENTS.md
           python - <<'PY'
-          import json
           from pathlib import Path
-          p=Path('research/deep-research-blue-buffalo.json')
-          d=json.loads(p.read_text())
-          for r in d['records']:
-              r.setdefault('multipack_contents',[])
-          by={r['upc']:r for r in d['records']}
-          def child(name,size,qty,standalone,sources):
-              return {'upc':None,'canonical_gtin14':None,'standalone_upc':standalone,'product_name':name,'size':size,'quantity':qty,'evidence_status':'matched_standalone_sku','source_urls':sources}
-          us='https://www.bluebuffalo.com/incentive-requests/qualifying-products/'
-          target='https://www.target.com/p/-/A-75878608'
-          kitten='https://www.target.com/p/-/A-75878610'
-          pan='https://www.pacificpet.ca/Home/Product?Itemno=402-12127'
-          dc12='https://www.desertcart.us/products/609935111-blue-buffalo-wilderness-high-protein-grain-free-natural-adult-pate-wet-cat-food-variety-pack-chicken-salmon-turkey-5-5-oz-can-12-count-4-of-each-flavor'
-          dc24='https://guam.desertcart.com/products/296327318-blue-buffalo-wilderness-high-protein-natural-adult-pate-wet-cat-food-variety-pack-chicken-salmon-duck-3-oz-cans-24-count-8-of-each-flavor'
-          mappings={
-            '840243121267':[
-              child('BLUE Wilderness Adult Cat Chicken Recipe','3 oz (85 g)',4,'840243104987',[us,target]),
-              child('BLUE Wilderness Adult Cat Salmon Recipe','3 oz (85 g)',4,'840243104994',[us,target]),
-              child('BLUE Wilderness Adult Cat Duck Recipe','3 oz (85 g)',4,'840243105625',[us,target])],
-            '840243121274':[
-              child('BLUE Wilderness Kitten Chicken Recipe','3 oz (85 g)',3,'859610006205',[us,kitten,pan]),
-              child('BLUE Wilderness Kitten Salmon Recipe','3 oz (85 g)',3,'840243101849',[us,kitten,pan])],
-            '840243151622':[
-              child('BLUE Wilderness Adult Cat Chicken Recipe','5.5 oz (156 g)',4,'859610007646',[us,dc12]),
-              child('BLUE Wilderness Adult Cat Salmon Recipe','5.5 oz (156 g)',4,'859610007660',[us,dc12]),
-              child('BLUE Wilderness Adult Cat Turkey Recipe','5.5 oz (156 g)',4,'859610007684',[us,dc12])],
-            '840243140084':[
-              child('BLUE Wilderness Adult Cat Chicken Recipe','3 oz (85 g)',8,'840243104987',[us,dc24]),
-              child('BLUE Wilderness Adult Cat Salmon Recipe','3 oz (85 g)',8,'840243104994',[us,dc24]),
-              child('BLUE Wilderness Adult Cat Duck Recipe','3 oz (85 g)',8,'840243105625',[us,dc24])]
-          }
-          for upc,contents in mappings.items():
-              assert upc in by
-              by[upc]['multipack_contents']=contents
-              by[upc]['verification_notes'].append('Multipack contents backfilled 2026-08-29. Child recipe identities and quantities are source-supported; standalone_upc is a matching standalone SKU reference, not yet proof of the barcode printed on the inner multipack unit.')
-          d['updated_at']='2026-08-29'
-          assert all('multipack_contents' in r for r in d['records'])
-          assert all(r['multipack_contents']==[] for r in d['records'] if r['barcode_scope']=='individual_unit')
-          for upc in mappings:
-              assert by[upc]['barcode_scope']=='multipack'
-              assert sum(x['quantity'] for x in by[upc]['multipack_contents']) in (6,12,24)
-          p.write_text(json.dumps(d,separators=(',',':'),ensure_ascii=False)+'\n')
-          print('MULTIPACK_BACKFILL_OK records=',len(d['records']),'mapped=',len(mappings))
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/AGENTS.md research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: map Blue Buffalo multipack child SKUs"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
