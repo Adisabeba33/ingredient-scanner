@@ -1,4 +1,4 @@
-name: Inspect Merrick dog wet batch 2
+name: Resolve Merrick Petite Pate unit UPCs
 on:
   push:
     branches: [agent/deep-research-merrick]
@@ -10,70 +10,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect active dog wet products
+      - name: Inspect size and UPC bindings
         run: |
           python - <<'PY'
-          import urllib.request,re,json,html
-          from pathlib import Path
+          import urllib.request,re,html,json
           H={'User-Agent':'Mozilla/5.0'}
+          urls=[
+            'https://www.merrickpetcare.com/shop/lil-plates-petite-pates-chicken-wet-dog-food',
+            'https://www.merrickpetcare.com/shop/lil-plates-petite-pates-lamb-wet-dog-food',
+            'https://www.merrickpetcare.com/shop/lil-plates-petite-pates-turkey-wet-dog-food',
+            'https://www.merrickpetcare.com/shop/lil-plates-petite-pates-beef-wet-dog-food',
+          ]
           def get(u):
             req=urllib.request.Request(u,headers=H)
-            with urllib.request.urlopen(req,timeout=30) as r:
-              return r.read().decode('utf-8','replace')
+            with urllib.request.urlopen(req,timeout=30) as r:return r.read().decode('utf-8','replace')
           def clean(s):
-            s=re.sub(r'<script\b[^>]*>.*?</script>',' ',s,flags=re.I|re.S)
-            s=re.sub(r'<style\b[^>]*>.*?</style>',' ',s,flags=re.I|re.S)
-            s=re.sub(r'<[^>]+>',' ',s)
-            return re.sub(r'\s+',' ',html.unescape(s)).strip()
-          # live exclusions
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
-          repo='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
-          existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',repo)); canon={x.zfill(14) for x in existing}
-          cards=[]
-          for page in range(0,6):
-            u='https://www.merrickpetcare.com/dog-food/wet'+(f'?page={page}' if page else '')
-            try: t=get(u)
+            return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',s))).strip()
+          for u in urls:
+            try: raw=get(u)
             except Exception as e:
-              print('CATALOG_ERR',page,repr(e)); continue
-            for m in re.finditer(r'<div class="ps-widget" ps-sku="(\d+)"[^>]*>',t,re.I):
-              sku=m.group(1)
-              w=t[max(0,m.start()-5000):m.end()+500]
-              hrefs=re.findall(r'href="([^"]*/shop/[^"]+)"',w,re.I)
-              titles=re.findall(r'(?:data-content_name|title)="([^"]+)"',w,re.I)
-              href=html.unescape(hrefs[-1]).split('?')[0] if hrefs else None
-              if href and href.startswith('/'): href='https://www.merrickpetcare.com'+href
-              title=html.unescape(titles[-1]) if titles else None
-              row={'page':page,'upc':sku,'title':title,'url':href,'known':sku in existing or sku.zfill(14) in canon}
-              if row not in cards: cards.append(row)
-          uniq=[]; seen=set()
-          for x in cards:
-            if x['upc'] in seen: continue
-            seen.add(x['upc']); uniq.append(x)
-          print('DOG_WET_UNIQUE_CARD_UPCS',len(uniq))
-          for x in uniq: print('CARD',json.dumps(x,ensure_ascii=False,sort_keys=True))
-          print('\nNEW_DETAILS')
-          count=0
-          for x in uniq:
-            if x['known'] or not x['url']: continue
-            try: t=get(x['url'])
-            except Exception as e:
-              print('DETAIL_ERR',x['upc'],repr(e)); continue
-            text=clean(t)
-            def chunk(label,n):
-              i=text.find(label)
-              return text[i:i+n] if i>=0 else ''
-            pdp_skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
-            data={
-              'upc':x['upc'],'title':x['title'],'url':x['url'],'pdp_skus':pdp_skus[:10],
-              'sizes':chunk('Available Sizes',350),
-              'ingredients':chunk('Ingredients:',3200),
-              'ga':chunk('Guaranteed Analysis:',1800),
-              'calories':chunk('Calorie Content',700),
-              'adequacy':chunk('Nutritional Adequacy',900),
-              'desc':chunk('Product Description',900)
-            }
-            print('DETAIL',json.dumps(data,ensure_ascii=False,sort_keys=True))
-            count+=1
-            if count>=35: break
-          print('NEW_DETAIL_COUNT',count)
+              print('ERR',u,repr(e)); continue
+            h1=re.search(r'<h1[^>]*>(.*?)</h1>',raw,re.I|re.S)
+            print('\nPDP',clean(h1.group(1)) if h1 else u)
+            print('URL',u)
+            skus=list(re.finditer(r'ps-sku="(\d+)"',raw,re.I))
+            print('ALL_SKUS',[m.group(1) for m in skus[:12]])
+            for i,m in enumerate(skus[:4]):
+              print('SKU_CONTEXT',i,m.group(1),clean(raw[max(0,m.start()-1800):m.end()+1200])[:2500])
+            # Any structured data containing gtin/upc/sku and package-size strings.
+            for pat in [r'.{0,350}(?:3-3 oz|3 oz\.? Can|3 oz|gtin|upc).{0,500}',r'.{0,500}ps-sku="\d+".{0,500}']:
+              vals=[]
+              for m in re.finditer(pat,raw,re.I|re.S):
+                c=clean(m.group(0))
+                if c not in vals: vals.append(c)
+              for c in vals[:12]: print('STRUCT',c[:1800])
           PY
