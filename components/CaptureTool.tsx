@@ -25,6 +25,7 @@ import { DuplicateProductDialog } from "@/components/DuplicateProductDialog";
 import { CorrectionsReview } from "@/components/CorrectionsReview";
 import { ExpressDesk } from "@/components/ExpressDesk";
 import { SeedImport } from "@/components/SeedImport";
+import { MissedScans } from "@/components/MissedScans";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
@@ -1262,6 +1263,10 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
       <ExpressDesk adminToken={adminToken} />
 
       <SeedImport adminToken={adminToken} />
+
+      {/* Directly under the import, because the first thing this list reports
+          is usually "we hold these and never pressed the button above". */}
+      <MissedScans adminToken={adminToken} />
 
       <CorrectionsReview adminToken={adminToken} />
 
