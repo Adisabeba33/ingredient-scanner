@@ -1,4 +1,4 @@
-name: Map active Merrick dog UPCs
+name: Validate targeted Merrick dog batch
 on:
   push:
     branches: [agent/deep-research-merrick]
@@ -6,67 +6,80 @@ on:
 permissions:
   contents: read
 jobs:
-  map:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect current Merrick dog catalog
+      - name: Validate direct PDP identity and formula
         run: |
           python - <<'PY'
           import urllib.request,re,json,html
           from pathlib import Path
           H={'User-Agent':'Mozilla/5.0'}
+          BASE='https://www.merrickpetcare.com'
+          items=[
+            ('022808260219','/shop/lil-plates-grain-free-itsy-bitsy-beef-stew-wet-dog-food'),
+            ('022808260264','/shop/lil-plates-teeny-texas-steak-tips-wet-dog-food'),
+            ('022808010425','/shop/lil-plates-petite-pates-lamb-wet-dog-food'),
+            ('022808010401','/shop/lil-plates-petite-pates-chicken-wet-dog-food'),
+            ('022808010456','/shop/lil-plates-petite-pates-turkey-wet-dog-food'),
+            ('022808006688','/shop/grain-free-thanksgiving-dinner-wet-dog-food'),
+            ('022808008125','/shop/grain-free-puppy-plate-beef-in-gravy-wet-dog-food'),
+            ('022808002888','/shop/grain-free-puppy-plate-chicken-in-gravy-wet-dog-food'),
+            ('022808002123','/shop/grain-free-duck-wet-dog-food'),
+            ('022808004868','/shop/grain-free-beef-wet-dog-food'),
+            ('022808002666','/shop/grain-free-turducken-in-gravy-wet-dog-food'),
+            ('022808004844','/shop/grain-free-chicken-wet-dog-food'),
+            ('022808001751','/shop/grain-free-grammys-pot-pie-wet-dog-food'),
+            ('022808260295','/shop/lil-plates-small-surfin-turfin-supper-wet-dog-food'),
+            ('022808260271','/shop/lil-plates-grain-free-pint-sized-puppy-plate-in-gravy-wet-dog-food'),
+            ('022808260240','/shop/lil-plates-grain-free-dainty-duck-medley-wet-dog-food'),
+            ('022808370017','/shop/backcountry-grain-free-chicken-wet-dog-food'),
+            ('022808260202','/shop/lil-plates-grain-free-tiny-thanksgiving-dinner-wet-dog-food'),
+            ('022808260233','/shop/lil-plates-grain-free-little-lamb-chop-stew-wet-dog-food'),
+            ('022808260226','/shop/lil-plates-grain-free-petite-pot-pie-wet-dog-food'),
+          ]
           def get(u):
             req=urllib.request.Request(u,headers=H)
-            with urllib.request.urlopen(req,timeout=30) as r:
-              return r.read().decode('utf-8','replace')
+            with urllib.request.urlopen(req,timeout=30) as r: return r.read().decode('utf-8','replace')
           def clean(s):
             s=re.sub(r'<script\b[^>]*>.*?</script>',' ',s,flags=re.I|re.S)
             s=re.sub(r'<style\b[^>]*>.*?</style>',' ',s,flags=re.I|re.S)
             s=re.sub(r'<[^>]+>',' ',s)
             return re.sub(r'\s+',' ',html.unescape(s)).strip()
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
-          repo='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
-          existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',repo)); canon={x.zfill(14) for x in existing}
-          print('EXCLUSION_FILES',len(paths),'CODES',len(existing))
-          found=[]
-          for page in range(0,6):
-            u='https://www.merrickpetcare.com/dog-food/wet'+(f'?page={page}' if page else '')
-            try: t=get(u)
-            except Exception as e:
-              print('PAGE_ERR',page,repr(e)); continue
-            for m in re.finditer(r'<div class="ps-widget" ps-sku="(\d+)"[^>]*>',t,re.I):
-              sku=m.group(1); w=t[max(0,m.start()-4500):m.end()+500]
-              titles=re.findall(r'(?:data-content_name|title)="([^"]+)"',w,re.I)
-              hrefs=re.findall(r'href="([^"]*/shop/[^"]+)"',w,re.I)
-              title=html.unescape(titles[-1]) if titles else None
-              href=html.unescape(hrefs[-1]).split('?')[0] if hrefs else None
-              if href and href.startswith('/'): href='https://www.merrickpetcare.com'+href
-              found.append({'page':page,'upc':sku,'title':title,'url':href,'known':sku in existing or sku.zfill(14) in canon})
-          uniq=[]; seen=set()
-          for x in found:
-            if x['upc'] in seen: continue
-            seen.add(x['upc']); uniq.append(x)
-          print('DOG_WET_ACTIVE_UNIQUE',len(uniq))
-          for x in uniq: print('CARD',json.dumps(x,ensure_ascii=False,sort_keys=True))
-          print('NEW_CARDS',sum(not x['known'] for x in uniq))
-          print('\nDETAILS_NEW')
-          for x in uniq:
-            if x['known'] or not x['url']: continue
-            try: t=get(x['url'])
-            except Exception as e:
-              print('DETAIL_ERR',x['upc'],repr(e)); continue
-            text=clean(t)
-            pdp_skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
-            def chunk(label,n):
-              i=text.find(label)
-              return text[i:i+n] if i>=0 else ''
-            print('DETAIL',json.dumps({
-              'upc':x['upc'],'title':x['title'],'url':x['url'],'pdp_skus':pdp_skus[:10],
-              'sizes':chunk('Available Sizes',300),
-              'ingredients':chunk('Ingredients',2600),
-              'ga':chunk('Guaranteed Analysis',1400),
-              'calories':chunk('Calorie Content',650),
-              'feeding':chunk('Feeding',800)
-            },ensure_ascii=False,sort_keys=True))
+          def valid_upca(s):
+            total=sum(int(s[i])*(3 if i%2==0 else 1) for i in range(11))
+            return len(s)==12 and s.isdigit() and (10-total%10)%10==int(s[-1])
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+[p for p in Path('research').glob('deep-research-*.json')]
+          collisions=[]
+          for p in paths:
+            txt=p.read_text(encoding='utf-8',errors='replace') if p.exists() else ''
+            for code,_ in items:
+              if re.search(r'(?<!\d)'+code+r'(?!\d)',txt) or re.search(r'(?<!\d)'+code.zfill(14)+r'(?!\d)',txt):
+                collisions.append((code,str(p)))
+          print('BATCH',len(items),'UNIQUE',len({x[0] for x in items}),'COLLISIONS',collisions)
+          assert len(items)==20 and len({x[0] for x in items})==20 and not collisions
+          assert all(valid_upca(x[0]) for x in items)
+          rows=[]
+          for expected,path in items:
+            url=BASE+path; raw=get(url); text=clean(raw)
+            skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',raw,re.I)
+            h1=re.search(r'<h1[^>]*>(.*?)</h1>',raw,re.I|re.S)
+            title=clean(h1.group(1)) if h1 else ''
+            assert skus and skus[0]==expected,(expected,skus[:4],url)
+            msize=re.search(r'Available Sizes\s+(.{0,180}?)Product Description',text,re.I)
+            size_chunk=msize.group(1).strip() if msize else ''
+            mi=text.find('Ingredients'); mg=text.find('Guaranteed Analysis',mi+1); mc=text.find('Calorie Content',mg+1); mf=text.find('Feeding',mc+1)
+            assert min(mi,mg,mc,mf)>=0,(expected,mi,mg,mc,mf)
+            ingredients=text[mi+len('Ingredients'):mg].strip()
+            ga=text[mg+len('Guaranteed Analysis'):mc].strip()
+            calories=text[mc+len('Calorie Content'):mf].strip()
+            deck=None
+            d=re.search(r'\b([A-Z]\d{6}(?:-\d+)?)\b',ingredients)
+            if d:
+              deck=d.group(1); ingredients=ingredients[:d.start()].strip().rstrip('.')
+            row={'upc':expected,'url':url,'title':title,'size_chunk':size_chunk,'ingredients':ingredients,'deck':deck,'ga':ga,'calories':calories,'all_pdp_skus':skus[:8]}
+            rows.append(row)
+            print('TARGET',json.dumps(row,ensure_ascii=False,sort_keys=True))
+          print('TARGETED_VALIDATION_OK',len(rows))
           PY
