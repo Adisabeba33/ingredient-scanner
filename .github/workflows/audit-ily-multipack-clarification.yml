@@ -1,0 +1,15 @@
+name: Audit ILY multipack clarification
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths: [.github/workflows/audit-ily-multipack-clarification.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+      - run: python .github/scripts/audit-ily-multipack-clarification.py
