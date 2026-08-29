@@ -1,47 +1,35 @@
-name: Run Royal Canin cats 120-140 merge
-
+name: Refine research multipack child barcode evidence
 on:
   push:
-    branches:
-      - agent/deep-research-barcode-ledger
-    paths:
-      - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
-
+    branches: [agent/deep-research-barcode-ledger]
+    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
 permissions:
   contents: write
-
 jobs:
-  merge:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Refine AGENTS child barcode evidence model
         run: |
           python - <<'PY'
           from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          p=Path('research/AGENTS.md')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('- For each child component, record its exact UPC when proven, product identity, printed size, quantity in the outer pack, and evidence status. If the child UPC is not proven, store `upc: null`; never infer it from neighboring products or from the outer code.\n', '- For each child component, record its exact UPC printed on the inner unit when proven, plus product identity, printed size, quantity in the outer pack, and evidence status. If the inner-unit barcode itself is not proven, keep `upc: null`. A separately proven UPC for the matching standalone SKU may be stored in `standalone_upc`, but it must never be represented as the barcode physically proven inside the multipack.\n')
+          s=s.replace('      "upc": "zero-padded child UPC string or null",\n      "canonical_gtin14": "14-digit child GTIN or null",\n', '      "upc": "inner-unit UPC proven from the multipack/inner label or null",\n      "canonical_gtin14": "14-digit inner-unit GTIN or null",\n      "standalone_upc": "proven UPC for matching standalone SKU or null",\n')
+          s=s.replace('      "evidence_status": "verified | unresolved",\n', '      "evidence_status": "verified_inner_barcode | matched_standalone_sku | unresolved",\n')
+          s=s.replace('- Every non-null child UPC in `multipack_contents` has a valid check digit, canonical GTIN-14, and does not conflict with the stated child identity.\n', '- Every non-null child `upc` in `multipack_contents` has a valid check digit, canonical GTIN-14, and direct evidence that this barcode is on the inner unit. `standalone_upc` must also validate but is only a reference match until inner packaging proves equivalence.\n')
+          p.write_text(s,encoding='utf-8')
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit contract
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
+          git show HEAD^:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/AGENTS.md .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: distinguish inner UPCs from standalone matches"
           git push origin HEAD:agent/deep-research-barcode-ledger
