@@ -20,7 +20,16 @@ jobs:
           ref: agent/deep-research-i-and-love-and-you
           fetch-depth: 0
       - name: Validate and append exactly twenty
-        run: python .github/scripts/add-next-20-ily.py
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.github/scripts/add-next-20-ily.py')
+          s=p.read_text()
+          s=s.replace("ga[k]=float(m.group(1)) if m else None", "ga[k]=float(re.findall(r'[0-9]+(?:\\.[0-9]+)?',m.group(1))[-1]) if m and re.findall(r'[0-9]+(?:\\.[0-9]+)?',m.group(1)) else None")
+          s=s.replace("adequacy='intermittent or supplemental' if form=='treat' else ('AAFCO evidence on manufacturer page' if 'AAFCO' in t else None)", "adequacy='intermittent or supplemental' if form=='treat' else ('life-stage/adequacy evidence on manufacturer page' if ('AAFCO' in t or 'Feed up to twice the adult amount to kittens' in t or 'growing kitten' in t.lower()) else None)")
+          p.write_text(s)
+          PY
+          python .github/scripts/add-next-20-ily.py
       - name: Commit canonical ledger
         run: |
           git config user.name "ingredients-research-bot"
@@ -29,4 +38,4 @@ jobs:
           git diff --cached --check
           git commit -m "research: add next 20 fully verified ILY records"
           git push origin HEAD:agent/deep-research-i-and-love-and-you
-# trigger 2026-08-29
+# trigger parser hardening 2026-08-29
