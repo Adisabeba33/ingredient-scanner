@@ -1,9 +1,9 @@
-name: Run Royal Canin cats 120-140 merge
+name: Append Blue Buffalo wet batch 20
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
   workflow_dispatch:
@@ -11,37 +11,51 @@ on:
 permissions:
   contents: write
 
+env:
+  BATCH_ZLIB_B64: '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'
+
 jobs:
-  merge:
+  append:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Append validated Blue Buffalo batch
         run: |
           python - <<'PY'
+          import base64, json, os, zlib
           from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          path=Path('research/deep-research-blue-buffalo.json')
+          ledger=json.loads(path.read_text(encoding='utf-8'))
+          batch=json.loads(zlib.decompress(base64.b64decode(os.environ['BATCH_ZLIB_B64'])).decode('utf-8'))
+          assert len(batch)==20
+          existing={r['upc'] for r in ledger['records']}
+          upcs=[r['upc'] for r in batch]
+          assert len(set(upcs))==20
+          assert not(existing & set(upcs)), f'duplicate UPCs: {existing & set(upcs)}'
+          def ok(code):
+              d=[int(x) for x in code]
+              total=sum(d[:11:2])*3+sum(d[1:11:2])
+              return (10-total%10)%10==d[-1]
+          for r in batch:
+              assert r['brand']=='Blue Buffalo'
+              assert r['catalog_number'] is None
+              assert r['barcode_scope']=='individual_unit'
+              assert r['canonical_gtin14']==r['upc'].zfill(14)
+              assert ok(r['upc']), r['upc']
+              assert r['research_status'] in {'source_verified','needs_physical_label'}
+          ledger['records'].extend(batch)
+          ledger['updated_at']='2026-08-29'
+          assert len({r['upc'] for r in ledger['records']})==len(ledger['records'])
+          path.write_text(json.dumps(ledger,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+          print('appended',len(batch),'records; total',len(ledger['records']))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Commit ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git add research/deep-research-blue-buffalo.json
+          git commit -m "research: add 20 more Blue Buffalo records"
+          git push origin HEAD:agent/deep-research-blue-buffalo
