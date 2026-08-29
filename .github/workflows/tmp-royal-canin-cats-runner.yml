@@ -1,47 +1,71 @@
-name: Run Royal Canin cats 120-140 merge
+name: Verify Blue Buffalo Wild Cuts chicken and duck
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Promote two Wild Cuts records
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json, collections
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          specs={
+            '840243110056':{
+              'size':'3 oz','ingredients':['Chicken','Chicken Broth','Water','Chicken Liver','Dried Egg Product','Potato Starch','Natural Flavor','Guar Gum','Sodium Phosphate','Salt','Sodium Carbonate'],
+              'kcal':910,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.bluebuffalo.com/wet-cat-food/wilderness/chicken-gravy/','https://www.petco.com/product/blue-buffalo-blue-wilderness-wild-cuts-tasty-chicken-morsels-wet-cat-food-3-oz-case-of-24-2524351','https://www.pawdiet.com/reviews/blue-buffalo-wilderness-tasty-toppers-wild-cuts-tasty-chicken-morsels-in-savory-gravy-wet-cat-food/','https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf']
+            },
+            '840243110063':{
+              'size':'3 oz','ingredients':['Duck','Chicken Broth','Water','Chicken Liver','Dried Egg Product','Potato Starch','Natural Flavor','Guar Gum','Sodium Phosphate','Salt','Sodium Carbonate'],
+              'kcal':900,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.bluebuffalo.com/wet-cat-food/wilderness/duck-gravy/','https://www.petco.com/product/blue-buffalo-wild-cuts-duck-cat-food-pouch','https://www.pawdiet.com/reviews/blue-buffalo-wilderness-tasty-toppers-wild-cuts-tasty-duck-morsels-in-savory-gravy-wet-cat-food/','https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf']
+            }
+          }
+          for u,s in specs.items():
+            r=next(x for x in d['records'] if x.get('upc')==u)
+            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
+            r['size']=s['size']
+            r['ingredients']=s['ingredients']
+            r['guaranteed_analysis']={'crude_protein_min_percent':8.0,'crude_fat_min_percent':2.5,'crude_fiber_max_percent':1.5,'moisture_max_percent':82.0,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
+            r['calorie_content']={'kcal_per_kg':s['kcal'],'kcal_per_unit':None,'unit':None}
+            r['aafco_statement']='Intended for intermittent or supplemental feeding only; feed daily along with a complete and balanced diet.'
+            r['form']='morsels in gravy pouch'
+            r['source_urls']=s['sources']
+            r['source_accessed_at']='2026-08-29'
+            r['conflicts']=[]
+            notes=r.get('verification_notes') or []
+            notes.append(f"2026-08-29 second pass: current Blue Buffalo qualifying-products list confirms exact UPC identity; North American distributor catalog confirms exact UPC/3 oz unit; current Blue Buffalo/Petco formula evidence matches PawDiet ingredient deck and GA; PawDiet reports {s['kcal']} kcal/kg and supplemental-feeding scope. No per-pouch calorie value was inferred.")
+            r['verification_notes']=notes
+            r['research_status']='source_verified'
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          c=collections.Counter(r.get('research_status') for r in d['records'])
+          print('TOTAL',len(d['records']))
+          print('STATUS',dict(c))
+          print('PROMOTED',','.join(specs))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify Blue Buffalo Wild Cuts chicken and duck"
+          git push origin HEAD:agent/deep-research-blue-buffalo
