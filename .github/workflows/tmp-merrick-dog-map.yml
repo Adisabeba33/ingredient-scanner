@@ -48,38 +48,37 @@ jobs:
             s=re.sub(r'<[^>]+>',' ',s)
             return re.sub(r'\s+',' ',html.unescape(s)).strip()
           def valid_upca(s):
+            if len(s)!=12 or not s.isdigit(): return False
             total=sum(int(s[i])*(3 if i%2==0 else 1) for i in range(11))
-            return len(s)==12 and s.isdigit() and (10-total%10)%10==int(s[-1])
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+[p for p in Path('research').glob('deep-research-*.json')]
+            return (10-total%10)%10==int(s[-1])
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
           collisions=[]
           for p in paths:
             txt=p.read_text(encoding='utf-8',errors='replace') if p.exists() else ''
             for code,_ in items:
-              if re.search(r'(?<!\d)'+code+r'(?!\d)',txt) or re.search(r'(?<!\d)'+code.zfill(14)+r'(?!\d)',txt):
-                collisions.append((code,str(p)))
+              if re.search(r'(?<!\d)'+code+r'(?!\d)',txt) or re.search(r'(?<!\d)'+code.zfill(14)+r'(?!\d)',txt): collisions.append((code,str(p)))
           print('BATCH',len(items),'UNIQUE',len({x[0] for x in items}),'COLLISIONS',collisions)
-          assert len(items)==20 and len({x[0] for x in items})==20 and not collisions
-          assert all(valid_upca(x[0]) for x in items)
+          assert len(items)==20 and len({x[0] for x in items})==20 and not collisions and all(valid_upca(x[0]) for x in items)
           rows=[]
           for expected,path in items:
-            url=BASE+path; raw=get(url); text=clean(raw)
+            url=BASE+path; raw=get(url); text=clean(raw); low=text.lower()
             skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',raw,re.I)
-            h1=re.search(r'<h1[^>]*>(.*?)</h1>',raw,re.I|re.S)
-            title=clean(h1.group(1)) if h1 else ''
+            h1=re.search(r'<h1[^>]*>(.*?)</h1>',raw,re.I|re.S); title=clean(h1.group(1)) if h1 else ''
             assert skus and skus[0]==expected,(expected,skus[:4],url)
-            msize=re.search(r'Available Sizes\s+(.{0,180}?)Product Description',text,re.I)
+            msize=re.search(r'available sizes\s+(.{0,220}?)product description',text,re.I)
             size_chunk=msize.group(1).strip() if msize else ''
-            mi=text.find('Ingredients'); mg=text.find('Guaranteed Analysis',mi+1); mc=text.find('Calorie Content',mg+1); mf=text.find('Feeding',mc+1)
-            assert min(mi,mg,mc,mf)>=0,(expected,mi,mg,mc,mf)
-            ingredients=text[mi+len('Ingredients'):mg].strip()
-            ga=text[mg+len('Guaranteed Analysis'):mc].strip()
-            calories=text[mc+len('Calorie Content'):mf].strip()
+            mi=low.find('ingredients'); mg=low.find('guaranteed analysis',mi+1); mc=low.find('calorie content',mg+1)
+            assert min(mi,mg,mc)>=0,(expected,mi,mg,mc)
+            mf=low.find('feeding',mc+1)
+            if mf<0: mf=len(text)
+            ingredients=text[mi+len('ingredients'):mg].strip()
+            ga=text[mg+len('guaranteed analysis'):mc].strip()
+            calories=text[mc+len('calorie content'):mf].strip()
             deck=None
             d=re.search(r'\b([A-Z]\d{6}(?:-\d+)?)\b',ingredients)
             if d:
               deck=d.group(1); ingredients=ingredients[:d.start()].strip().rstrip('.')
             row={'upc':expected,'url':url,'title':title,'size_chunk':size_chunk,'ingredients':ingredients,'deck':deck,'ga':ga,'calories':calories,'all_pdp_skus':skus[:8]}
-            rows.append(row)
-            print('TARGET',json.dumps(row,ensure_ascii=False,sort_keys=True))
+            rows.append(row); print('TARGET',json.dumps(row,ensure_ascii=False,sort_keys=True))
           print('TARGETED_VALIDATION_OK',len(rows))
           PY
