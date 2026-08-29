@@ -10,7 +10,7 @@ Post-30 working index: `research/WERUVA-POST-30-INDEX.md`
 
 Binding contract: `research/AGENTS.md`
 
-As of 2026-08-29 the strict ledger contains **100 complete schema-v2 records**:
+As of 2026-08-29 the strict ledger contains **120 complete schema-v2 records**:
 
 - 30 records that were already in the canonical Weruva ledger before the promotion task.
 - 20 TruLuxe records promoted from the post-30 index in commit `c76af91805f2f9be588bf6e2676cde4393fc6fe9`.
@@ -199,3 +199,8 @@ Promoted **12** additional individual-unit records: 8 Senior and 4 Freeze Dried.
 ## 2026-08-29 early post-30 strict promotion
 
 Promoted all **20** individually re-researched early post-30 records after a fresh exclusion pass. Canonical Weruva strict count: **100**. Pumpkin Lickin’ Chicken was refreshed to the current manufacturer calorie generation (59 kcal/3 oz; 696 kcal/kg), with older 60/701 evidence preserved as a conflict.
+
+
+## 2026-08-29 Kitten / Wx / Freeze Dried / Cat Paté strict promotion
+
+Promoted all **20** prepared individual-unit records after a fresh exclusion/check-digit/current-formula pass. Canonical Weruva strict count: **120**. This completes the entire 70-record strict-promotion backlog that was previously summarized as 18 Cat Stew + 8 Senior + 4 Freeze Dried + 20 early recheck + 20 prepared Kitten/Wx/Freeze Dried/Cat Paté. Later index sections remain a separate research queue and are not implied complete by the 120 count.

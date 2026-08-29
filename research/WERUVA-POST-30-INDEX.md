@@ -2,7 +2,7 @@
 
 This file is a visibility/index companion to `research/deep-research-weruva.json`.
 
-- Canonical strict ledger currently contains **100** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, and 20 promoted early post-30 recheck records.
+- Canonical strict ledger currently contains **120** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, 20 early post-30 recheck records, and 20 promoted Kitten/Wx/Freeze Dried/Cat Paté records.
 - This index now describes only work that has not yet been consumed into the strict ledger, plus explicit conflict/pending notes.
 - **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy where printed, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
 
@@ -31,30 +31,9 @@ The six retail five-pack UPCs below are **non-promotable as individual sticks** 
 - `810028246881` — retail UPC identifies five-pack; no proven individual-stick barcode
 - `810028246898` — retail UPC identifies five-pack; no proven individual-stick barcode
 
-## Kitten / Wx / Freeze Dried / Cat Paté — awaiting strict promotion
+## Kitten / Wx / Freeze Dried / Cat Paté — consumed
 
-| UPC | Product | Size |
-|---|---|---:|
-| `810028242784` | Kitten Chicken Formula Au Jus | 3 oz |
-| `810028242791` | Kitten Chicken & Pumpkin in Gravy | 3 oz |
-| `810028242821` | Kitten Chicken Breast Hydrating Purée | 3 oz |
-| `810028242814` | Kitten Tuna & Salmon Hydrating Purée | 3 oz |
-| `810028242432` | Wx Chicken & Tilapia in Gravy | 3 oz |
-| `810028242647` | Wx Chicken Hydrating Purée | 3 oz |
-| `810028242678` | Wx Chicken in Gravy | 3 oz |
-| `810028242661` | Wx Tilapia & Chicken Hydrating Purée | 3 oz |
-| `810028242654` | Wx Tilapia & Tuna Hydrating Purée | 3 oz |
-| `810028245297` | Freeze Dried Mideast Feast | 1 oz |
-| `810028245310` | Freeze Dried Mideast Feast | 7 oz |
-| `813778018357` | Who Wants to Be a Meowionaire — Chicken & Pumpkin | 3 oz |
-| `813778018210` | Who Wants to Be a Meowionaire — Chicken & Pumpkin | 5.5 oz |
-| `813778018395` | Press Your Lunch — Chicken | 3 oz |
-| `813778018258` | Press Your Lunch — Chicken | 5.5 oz |
-| `810028241442` | Press Your Dinner | 3 oz |
-| `810028241473` | Press Your Dinner | 5.5 oz |
-| `813778018388` | Meows N' Holler PurrAmid — Chicken & Shrimp | 3 oz |
-| `813778018241` | Meows N' Holler PurrAmid — Chicken & Shrimp | 5.5 oz |
-| `813778018340` | Tic Tac Whoa — Tuna & Salmon | 3 oz |
+All **20** rows in this prepared block were promoted into `research/deep-research-weruva.json` as complete `source_verified` individual-unit records after a fresh exclusion/check-digit/current-formula pass. For Wx, the printed `Adult, Senior` dual lifestage is preserved in verification notes with scalar `life_stage: null`; Freeze Dried Mideast Feast 7 oz keeps `kcal_per_unit: null` because no bag-total calorie value is printed.
 
 ## Slide N' Serve / Classic / Pantry Pours batch — awaiting strict promotion
 
