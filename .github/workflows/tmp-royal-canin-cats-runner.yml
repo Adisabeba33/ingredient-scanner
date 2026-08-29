@@ -1,70 +1,47 @@
-name: Append Blue Buffalo dry batch 20
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  append:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Append validated Blue Buffalo batch
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import base64, json, zlib
           from pathlib import Path
-          b64 = ''.join([
-          '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'
-          ])
-          path = Path('research/deep-research-blue-buffalo.json')
-          ledger = json.loads(path.read_text(encoding='utf-8'))
-          batch = json.loads(zlib.decompress(base64.b64decode(b64)).decode('utf-8'))
-          assert ledger.get('brand_scope') == ['Blue Buffalo']
-          assert len(batch) == 20
-          existing = {r['upc'] for r in ledger['records']}
-          batch_upcs = [r['upc'] for r in batch]
-          assert len(set(batch_upcs)) == 20
-          assert not (existing & set(batch_upcs)), f'duplicate UPCs: {existing & set(batch_upcs)}'
-          def upc_ok(code):
-              body = [int(x) for x in code[:11]]
-              total = sum(body[0::2]) * 3 + sum(body[1::2])
-              return len(code) == 12 and code.isdigit() and (10 - total % 10) % 10 == int(code[-1])
-          for rec in batch:
-              assert rec['brand'] == 'Blue Buffalo'
-              assert rec['catalog_number'] is None
-              assert rec['barcode_scope'] == 'individual_unit'
-              assert rec['canonical_gtin14'] == rec['upc'].zfill(14)
-              assert upc_ok(rec['upc']), rec['upc']
-              assert rec['research_status'] in {'source_verified','needs_physical_label'}
-          ledger['records'].extend(batch)
-          ledger['updated_at'] = '2026-08-29'
-          assert len(ledger['records']) == 31
-          assert len({r['upc'] for r in ledger['records']}) == 31
-          path.write_text(json.dumps(ledger, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore inherited runner and commit ledger only
+      - name: Commit Royal Canin cat ledger
         run: |
-          git fetch origin agent/deep-research-barcode-ledger
-          git checkout origin/agent/deep-research-barcode-ledger -- .github/workflows/tmp-royal-canin-cats-runner.yml
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: add 20 Blue Buffalo dry records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
