@@ -96,7 +96,7 @@ Current printed calories:
 
 Current Weruva Paw Lickin' Chicken Freeze Dried panel: 66% protein min, 11% fat min, 1% fiber max, 8% moisture max; 3902 kcal/kg and 111 kcal per 1 oz. Manufacturer prints `Lifestage: Adult`. Do not invent a 7 oz bag calorie value from 111 kcal/oz; if the pack/page does not print kcal per 7 oz bag, store `kcal_per_unit: null` for that size while retaining the printed kcal/kg.
 
-Current Weruva Wx Freeze Dried panel: 60% protein min, 19% fat min, 1% fiber max, 8% moisture max, Omega-3 min 1%, Omega-6 min 3%; 4267 kcal/kg and 121 kcal per 1 oz. Manufacturer prints `Lifestage: Adult, Senior` and Supplemental Feeding. Preserve the printed Omega guarantees in structured `other_printed_guarantees`. Do not manufacture a single life-stage value if the schema cannot faithfully represent both; use the repository convention required by `AGENTS.md`/existing records and explain the printed dual claim in `verification_notes`.
+Current Weruva Wx Freeze Dried panel: 60% protein min, 19% fat min, 1% fiber max, 8% moisture max, Omega-3 min 1%, Omega-6 min 3%; 4267 kcal/kg and 121 kcal per 1 oz. Manufacturer prints `Lifestage: Adult, Senior` and Supplemental Feeding. Preserve the printed Omega guarantees in structured `other_printed_guarantees`. Do not manufacture a single life-stage value if the schema cannot faithfully represent both; explain the printed dual claim in `verification_notes` and follow repository convention.
 
 ### Six index UPCs are retail five-packs, not individual sticks
 
@@ -111,6 +111,50 @@ The following codes identify sellable packs containing five 0.5 oz tubes/sticks.
 
 Current Weruva/retailer evidence explicitly identifies these as 5-packs. Unless an individual tube barcode is recovered, consume these index rows by leaving a one-line non-promotable reason in the index: `retail UPC identifies five-pack; no proven individual-stick barcode`.
 
+## Early post-30 recheck batch — all 20 individually re-researched
+
+The ambiguous historical “18 verified / 2 pending” count has now been replaced by an item-by-item pass. All 20 candidates below have current manufacturer formula evidence plus independent exact-size/unit identity evidence; no candidate in this set should inherit an unnamed pending status.
+
+### Cats in the Kitchen / Kitten / pouch records
+
+- `810028244269` — Kitten Gone Wild — 3 oz can. Current Weruva: Fish Broth, Salmon, Tuna, Sardine, Mackerel, Sunflower Oil, Dried Egg, Agar-Agar, Guar Gum, Fish Oil, Choline Chloride, Taurine, vitamin/mineral deck. GA 10% protein, 1.5% fat, 0.5% fiber, 86% moisture, 2% ash. 54 kcal/3 oz, 632 kcal/kg. Printed lifestage Kitten.
+- `878408008238` — Love Me Tender Chicken & Duck in Gravy — 3 oz pouch. Current Weruva GA 9/1.4/0.5/85 plus ash 2%, Ca/P/Mg/Taurine printed; 65 kcal/3 oz, 763 kcal/kg; Adult.
+- `878408008269` — Mack, Jack & Sam Salmon, Mackerel & Skipjack Tuna in Gravy — 3 oz pouch. Current Weruva GA 9/1.4/0.5/85 plus ash 2%, Ca/P/Mg/Taurine printed; 64 kcal/3 oz, 757 kcal/kg; Adult.
+- `878408008245` — Pumpkin Jack Splash Tuna in Pumpkin Soup — 3 oz pouch. Current Weruva GA 9/1.4/0.5/85 plus ash 2%, Ca/P/Mg/Taurine printed; 60 kcal/3 oz, 709 kcal/kg; Adult.
+- `878408008214` — Pumpkin Lickin’ Chicken Chicken in Pumpkin Soup — 3 oz pouch. Independent retailer variant data explicitly identifies single 3 oz barcode `878408008214`. Current/near-current panel evidence prints 60 kcal/3 oz and 701 kcal/kg. Treat exact current Weruva manufacturer page as authoritative for verbatim formula when constructing the strict record.
+
+### Slide N' Serve / Cats in the Kitchen Paté
+
+All five are genuine 3 oz individual pouches. Current Weruva identifies the range as smooth/creamy hydrating paté and prints Adult lifestage.
+
+- `813778017275` — Meowiss Bueller Chicken & Lamb in Hydrating Purée — current ingredients start Chicken Broth, Chicken, Lamb, Tuna; GA 8% protein, 3.5% fat, 1% fiber, 85% moisture, 1.5% ash; 69 kcal/3 oz, 810 kcal/kg.
+- `813778017282` — Cat to the Future Chicken & Salmon in Hydrating Purée — ingredients start Chicken Broth, Chicken, Tuna, Salmon; GA 9/2/1/85, ash 2%; 64 kcal/3 oz, 750 kcal/kg.
+- `813778017299` — The Breakfast Cat Chicken & Pumpkin in Hydrating Purée — ingredients start Chicken Broth, Chicken, Tuna, Pumpkin; GA 8/2/1/86, ash 2%; 58 kcal/3 oz, 677 kcal/kg.
+- `813778017251` — The Karate Kitty Beef & Salmon in Hydrating Purée — ingredients start Beef Broth, Beef, Tuna, Salmon; GA 9/1/1/86, ash 2.5%; 46 kcal/3 oz, 543 kcal/kg.
+- `813778017268` — Cat Times at Fridgemont Duck & Tuna in Hydrating Purée — ingredients start Duck Broth, Duck, Tuna; GA 8/2/1/86, ash 2%; 55 kcal/3 oz, 642 kcal/kg.
+
+### Cats in the Kitchen can
+
+- `878408009051` — The Double Dip Chicken & Beef Recipe Au Jus — 6 oz can. ADMC and current retailer mapping both identify the exact 6 oz unit UPC. Current Weruva ingredients start Chicken Broth, Chicken, Beef, Beef Lung; GA 8% protein, 2.5% fat, 0.5% fiber, 87% moisture, 1.5% ash with Ca/P/Mg/Taurine printed; 111 kcal/6 oz, 652 kcal/kg; Adult.
+
+### Classic Cat size variants
+
+Current Weruva manufacturer pages supply one current formula/GA panel and print per-size calories. Exact UPC/size mappings are independently corroborated by ADMC/current retailers. These size variants therefore do not borrow calorie values from sibling cans.
+
+- `878408001130` — Funky Chunky — 3 oz can: current formula begins Chicken Broth, Chicken (Boneless, Skinless Breast), Pumpkin, Carrot, Pea; GA 8/1.2/0.5/87.5 with ash/Ca/P/Mg/Taurine printed; 53 kcal/3 oz, 618 kcal/kg; Adult.
+- `878408001048` — Mack & Jack — 3 oz can: 66 kcal/3 oz, 774 kcal/kg; current GA 12/1.7/1/82 with ash/Ca/P/Mg/Taurine; Adult.
+- `878408001024` — Marbella Paella — 3 oz can: 61 kcal/3 oz, 718 kcal/kg; current GA 12/1.6/0.5/86 with ash/Ca/P/Mg/Taurine; Adult.
+- `878408001062` — Meow Luau — 3 oz can: 62 kcal/3 oz, 733 kcal/kg; current GA 12/1.5/1/84 with ash/Ca/P/Mg/Taurine; Adult.
+- `878408001079` — Mideast Feast — 3 oz can: 63 kcal/3 oz, 746 kcal/kg; current GA 12/1.5/1/84 with ash/Ca/P/Mg/Taurine; Adult.
+- `878408002373` — Mideast Feast — 10 oz can: 218 kcal/10 oz, 746 kcal/kg; exact 10 oz UPC independently confirmed.
+- `878408001116` — Paw Lickin’ Chicken — 3 oz can: 57 kcal/3 oz, 673 kcal/kg; current GA 10/1.4/0.5/85 with ash/Ca/P/Mg/Taurine; Adult.
+- `878408002410` — Paw Lickin’ Chicken — 10 oz can: 192 kcal/10 oz, 673 kcal/kg; exact 10 oz UPC independently confirmed.
+- `878408001086` — Polynesian BBQ — 3 oz can: 61 kcal/3 oz, 723 kcal/kg; current GA 12/1.7/1/82 with ash/Ca/P/Mg/Taurine; Adult.
+
+**Source conflict to preserve:** an older Weruva CDN/image filename on a stale Paw Lickin' Chicken page embeds `878408001086` in a Paw Lickin' Chicken 3 oz image name. Independent distributor/current retailer evidence maps `878408001086` to Polynesian BBQ 3 oz, while Paw Lickin' Chicken 3 oz is independently `878408001116`. Treat the stale image filename as a labeling/CDN artifact, not barcode proof, and record this conflict in verification notes.
+
+Before promoting these 20, rebuild the repository-wide exclusion set exactly as required by `AGENTS.md`. Assuming that exclusion pass is clean, the old `RECHECK_BATCH_STATUS` label can be removed for all 20 individually.
+
 ## Write-state note
 
 Low-level GitHub `fetch_blob` has now been confirmed to return the **complete** minified strict ledger blob rather than a truncated preview. This removes the earlier uncertainty about whether the existing 50 records can be read intact. The remaining constraint is applying a safe transformed full blob through the connected writer without manually reconstructing or mutating existing records. Do not create temporary workflow files and do not use a sidecar ledger. The next successful write should still atomically update `research/deep-research-weruva.json` and `research/WERUVA-POST-30-INDEX.md` in one Git commit.
@@ -118,7 +162,6 @@ Low-level GitHub `fetch_blob` has now been confirmed to return the **complete** 
 ## Known traps that remain binding
 
 - `878408000171` and `878408000072` are Mideast Feast **case** barcodes. Never represent either as an individual can.
-- The first 20 index rows marked `RECHECK_BATCH_STATUS` still need individual re-verification. The old “18 verified, 2 pending” conversational count does not identify the two pending entries and must not be inherited.
 - Every size requires its own UPC proof and its own printed calorie value.
 - BFF records must use `brand: "B.F.F."`; use only the range naming justified by the package/current manufacturer evidence. Do not silently turn older BFF Originals products into OMG or Play without proof.
 - Historical/replacement UPCs already noted in the index must remain explicit conflicts; never silently overwrite a prior code with a newer one.
@@ -137,5 +180,6 @@ When consuming a batch, update `research/deep-research-weruva.json` and `researc
 ## Resume point
 
 1. Promote **Cat Stew (18 rows)** first. Research gate is complete; rebuild the mandatory repository-wide exclusion set immediately before write.
-2. Then promote the **12 individual-unit Senior / Freeze Dried records** above and disposition the six five-pack UPCs in the index as non-promotable unless individual-stick barcodes are found.
-3. Continue through the remaining index in groups of roughly 20.
+2. Then promote the **12 individual-unit Senior / Freeze Dried records** and disposition the six five-pack UPCs as non-promotable unless individual-stick barcodes are found.
+3. Then promote the **20 individually re-researched early post-30 records** above after a fresh exclusion pass.
+4. Continue through the remaining index in groups of roughly 20.
