@@ -1,76 +1,47 @@
-name: Append Blue Buffalo Wilderness batch 20
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  append:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Append validated Blue Buffalo batch
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
           from pathlib import Path
-          items=[
-          ('840243109982','Wilderness Wild Delights','Flaked Kitten Chicken & Trout','kitten','wet','can','3 oz (85 g)', ['chicken','trout']),
-          ('840243103720','Wilderness Wild Delights','Minced Adult Chicken & Turkey','adult','wet','can','5.5 oz (156 g)', ['chicken','turkey']),
-          ('859610007127','Wilderness Wild Delights','Chicken & Turkey Entrée','adult','wet','can','3 oz (85 g)', ['chicken','turkey']),
-          ('840243101870','Wilderness Wild Delights','Flaked Adult Chicken & Turkey','adult','wet','can','5.5 oz (156 g)', ['chicken','turkey']),
-          ('840243103737','Wilderness Wild Delights','Minced Adult Chicken & Trout','adult','wet','can','5.5 oz (156 g)', ['chicken','trout']),
-          ('859610007080','Wilderness Wild Delights','Chicken & Trout Entrée','adult','wet','can','3 oz (85 g)', ['chicken','trout']),
-          ('840243101863','Wilderness Wild Delights','Flaked Adult Chicken & Trout','adult','wet','can','5.5 oz (156 g)', ['chicken','trout']),
-          ('859610007103','Wilderness Wild Delights','Chicken & Salmon Entrée','adult','wet','can','3 oz (85 g)', ['chicken','salmon']),
-          ('840243130658','Wilderness','Weight Control Adult Cat Chicken','adult','dry','bag','4 lb (1.8 kg)', ['chicken']),
-          ('840243103683','Wilderness Rocky Mountain Recipe','Flaked Adult Cat Trout','adult','wet','can','5.5 oz (156 g)', ['trout']),
-          ('840243103669','Wilderness Rocky Mountain Recipe','Flaked Adult Cat Red Meat','adult','wet','can','5.5 oz (156 g)', ['red meat']),
-          ('840243101955','Wilderness Rocky Mountain Recipe','Adult Cat Red Meat','adult','wet','can','5.5 oz (156 g)', ['red meat']),
-          ('840243105809','Wilderness','Mature Chicken','senior','dry','bag','5 lb (2.27 kg)', ['chicken']),
-          ('840243159277','Wilderness','Kitten Salmon','kitten','dry','bag','5 lb (2.27 kg)', ['salmon']),
-          ('859610008964','Wilderness','Mature Chicken','senior','wet','can','3 oz (85 g)', ['chicken']),
-          ('840243101856','Wilderness','Mature Cat Chicken','senior','wet','can','5.5 oz (156 g)', ['chicken']),
-          ('840243159291','Wilderness','Mature Salmon','senior','dry','bag','5 lb (2.27 kg)', ['salmon']),
-          ('840243101849','Wilderness','Kitten Salmon','kitten','wet','can','3 oz (85 g)', ['salmon']),
-          ('840243134403','Baby BLUE','Kitten Grain Free High Protein Salmon','kitten','wet','can','3 oz (85 g)', ['salmon']),
-          ('840243134427','Baby BLUE','Kitten Grain Free High Protein Chicken','kitten','wet','can','3 oz (85 g)', ['chicken'])]
-          def valid(u):
-              s=sum((3 if i%2==0 else 1)*int(d) for i,d in enumerate(u[:11])); return len(u)==12 and (10-s%10)%10==int(u[-1])
-          assert len(items)==20 and len({x[0] for x in items})==20 and all(valid(x[0]) for x in items)
-          target=Path('research/deep-research-blue-buffalo.json'); ledger=json.loads(target.read_text())
-          upcs=[x[0] for x in items]
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
-          paths += [p for p in Path('research').glob('deep-research-*.json') if p!=target]
-          for p in paths:
-              if p.exists():
-                  txt=p.read_text(encoding='utf-8',errors='ignore'); hits=[u for u in upcs if u in txt]; assert not hits, f'duplicates in {p}: {hits}'
-          existing={r['upc'] for r in ledger['records']}; assert not existing.intersection(upcs), sorted(existing.intersection(upcs))
-          sources=['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf','https://pacificpet.net/Mobile/ProductListing?FoodAccSpec=Food&Itembrand=Blue+Buffalo&Itemgroup=Cat']
-          batch=[]
-          for upc,line,var,life,form,pkg,size,recipe in items:
-              batch.append({'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':line,'product_name':f'BLUE {line} {var}','variant':var,'recipe':recipe,'life_stage':life,'food_form':form,'texture':None,'presentation':None,'package_type':pkg,'size':size,'ingredients_verbatim':'','ingredients_ordered_normalized':[],'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,'formula_source':'Exact individual-unit UPC and printed size are established from current Blue Buffalo/retailer catalog evidence; current complete formula deck was not resolved strongly enough to combine with the barcode identity, so physical-label confirmation is required.','source_urls':sources,'source_accessed_at':'2026-08-29','barcode_notes':f'Exact individual cat-food unit and size are independently cataloged under UPC {upc}; UPC-A check digit validated.','conflicts':['Complete current ingredient statement, guaranteed analysis, calories, and formula-generation identity remain unresolved; no older formula was silently substituted.'],'verification_notes':[f'UPC-A check digit validated for {upc}; canonical GTIN-14 is {upc.zfill(14)}.','Repository-wide exclusion scan completed before append.','Manufacturer/retailer catalog evidence establishes product and size identity.','Formula fields intentionally remain unresolved rather than combining historical and current formula generations; physical package label is required before promotion.'],'research_status':'needs_physical_label'})
-          before=len(ledger['records']); ledger['records'].extend(batch); ledger['updated_at']='2026-08-29'
-          assert len(ledger['records'])==before+20 and len({r['upc'] for r in ledger['records']})==len(ledger['records'])
-          target.write_text(json.dumps(ledger,separators=(',',':'),ensure_ascii=False)+'\n',encoding='utf-8')
-          print(f'APPEND_OK before={before} added=20 after={len(ledger["records"])} verified=0 needs=20')
-          print('UPCS='+','.join(upcs))
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit ledger
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git diff --cached --quiet && { echo "No target changes"; exit 1; }
-          git commit -m "research: add 20 more Blue Buffalo cat records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
