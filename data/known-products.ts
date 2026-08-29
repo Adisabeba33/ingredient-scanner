@@ -6948,6 +6948,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["beef"],
     lifeStage: "all",
     packages: [
+      { size: "3.5 oz (100 g) trial size", container: BAG, upc: "9421016598014", scope: UNIT },
       { size: "1 lb (454 g)", container: BAG, upc: "9421016593187", scope: UNIT },
       { size: "2.2 lb (1 kg)", container: BAG, upc: "9421016593170", scope: UNIT },
       { size: "5.5 lb (2.5 kg)", container: BAG, upc: "9421016593163", scope: UNIT },
@@ -6965,6 +6966,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["chicken"],
     lifeStage: "all",
     packages: [
+      { size: "3.5 oz (100 g) trial size", container: BAG, upc: "9421016598076", scope: UNIT },
       { size: "1 lb (454 g)", container: BAG, upc: "9421016594825", scope: UNIT },
       { size: "2.2 lb (1 kg)", container: BAG, upc: "9421016594801", scope: UNIT },
       { size: "5.5 lb (2.5 kg)", container: BAG, upc: "9421016594788", scope: UNIT },
@@ -6982,6 +6984,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["lamb"],
     lifeStage: "all",
     packages: [
+      { size: "3.5 oz (100 g) trial size", container: BAG, upc: "9421016598038", scope: UNIT },
       { size: "1 lb (454 g)", container: BAG, upc: "9421016593071", scope: UNIT },
       { size: "2.2 lb (1 kg)", container: BAG, upc: "9421016590599", scope: UNIT },
       { size: "5.5 lb (2.5 kg)", container: BAG, upc: "9421016592982", scope: UNIT },
@@ -7033,6 +7036,8 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "all",
     packages: [
       { size: "1 lb (454 g)", container: BAG, upc: "9421016593064", scope: UNIT },
+      { size: "2.2 lb (1 kg)", container: BAG, upc: "9421016590612", scope: UNIT },
+      { size: "5.5 lb (2.5 kg)", container: BAG, upc: "9421016592975", scope: UNIT },
     ],
   },
 
@@ -7209,6 +7214,63 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "1.8 lb (800 g)", container: BAG, upc: "9421038210093", scope: UNIT },
       { size: "3.3 lb (1.5 kg)", container: BAG, upc: "9421038210109", scope: UNIT },
       { size: "7.1 lb (3.2 kg)", container: BAG, upc: "9421038210116", scope: UNIT },
+    ],
+  },
+
+  // ── Ziwi Peak · batch 021 (active-market delta) ─────────────────────────
+  {
+    brand: "Ziwi Peak",
+    line: "Original Canned Wet",
+    variant: "New Zealand Hoki Recipe for Cats",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["hoki"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz (85 g)", container: CAN, upc: "9421016595877", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Ziwi Peak",
+    line: "Good Dog Rewards",
+    variant: "Lamb Recipe",
+    species: "dog",
+    texture: "air_dried",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3 oz (85 g)", container: BAG, upc: "9421016594672", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Ziwi Peak",
+    line: "Good Dog Rewards",
+    variant: "Venison Recipe",
+    species: "dog",
+    texture: "air_dried",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["venison"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz (85 g)", container: BAG, upc: "9421016594641", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Ziwi Peak",
+    line: "Provenance Canned Wet",
+    variant: "Otago Valley Recipe for Dogs",
+    species: "dog",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef", "venison", "southern blue whiting", "lamb", "hoki"],
+    lifeStage: "all",
+    packages: [
+      { size: "6 oz (170 g)", container: CAN, upc: "9421016597024", scope: UNIT },
     ],
   },
 ];
