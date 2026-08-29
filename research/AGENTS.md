@@ -112,7 +112,7 @@ Every material field must be traceable to a direct URL or a clearly described ph
 - Prove that the code belongs to the exact individual product and printed size.
 - Set `barcode_scope` honestly: `individual_unit`, `multipack`, `case`, `tray`, or `unknown`.
 - Every `multipack`, `case`, or `tray` record must also describe its proven child sellable units in `multipack_contents`. Never treat the outer barcode as an inner-unit barcode.
-- For each child component, record its exact UPC when proven, product identity, printed size, quantity in the outer pack, and evidence status. If the child UPC is not proven, store `upc: null`; never infer it from neighboring products or from the outer code.
+- For each child component, record its exact UPC printed on the inner unit when proven, plus product identity, printed size, quantity in the outer pack, and evidence status. If the inner-unit barcode itself is not proven, keep `upc: null`. A separately proven UPC for the matching standalone SKU may be stored in `standalone_upc`, but it must never be represented as the barcode physically proven inside the multipack.
 - When an outer pack contains several flavors/recipes, list each distinct child component separately. If the same child appears multiple times, use `quantity` rather than duplicating rows.
 - `multipack_contents` is an empty array for true individual-unit records.
 - Validate the check digit. For UPC-A, compute it from the 11-digit body; do not merely trust a search snippet.
@@ -163,12 +163,13 @@ Every object in `records` must follow this contract:
   "barcode_scope": "individual_unit | multipack | case | tray | unknown",
   "multipack_contents": [
     {
-      "upc": "zero-padded child UPC string or null",
-      "canonical_gtin14": "14-digit child GTIN or null",
+      "upc": "inner-unit UPC proven from the multipack/inner label or null",
+      "canonical_gtin14": "14-digit inner-unit GTIN or null",
+      "standalone_upc": "proven UPC for matching standalone SKU or null",
       "product_name": "exact child product identity",
       "size": "printed child-unit size or null",
       "quantity": 1,
-      "evidence_status": "verified | unresolved",
+      "evidence_status": "verified_inner_barcode | matched_standalone_sku | unresolved",
       "source_urls": ["direct URL proving child identity/UPC or pack contents"]
     }
   ],
@@ -265,7 +266,7 @@ Run or perform all of these checks:
 - Controlled values match the contract.
 - `source_urls`, `conflicts`, and `verification_notes` are arrays.
 - `multipack_contents` is an array on every record; it is empty for `individual_unit`. For `multipack`, `case`, and `tray`, quantities must reconcile with the documented pack count when that count is known.
-- Every non-null child UPC in `multipack_contents` has a valid check digit, canonical GTIN-14, and does not conflict with the stated child identity.
+- Every non-null child `upc` in `multipack_contents` has a valid check digit, canonical GTIN-14, and direct evidence that this barcode is on the inner unit. `standalone_upc` must also validate but is only a reference match until inner packaging proves equivalence.
 - `ingredients_verbatim` is complete and agrees in order with `ingredients_ordered_normalized`.
 - Guaranteed analysis, calories, and missing values follow the evidence rules.
 - No previously reviewed record changed unintentionally.
