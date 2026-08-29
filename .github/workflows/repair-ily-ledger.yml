@@ -1,0 +1,36 @@
+name: Repair I and love and you ledger
+
+on:
+  push:
+    branches:
+      - agent/deep-research-i-and-love-and-you
+    paths:
+      - .github/workflows/repair-ily-ledger.yml
+      - .github/scripts/repair-ily-ledger.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+          fetch-depth: 0
+      - name: Rebuild and validate all 50 historical candidates
+        run: python .github/scripts/repair-ily-ledger.py
+      - name: Commit canonical ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-i-and-love-and-you.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No ledger changes"
+          else
+            git commit -m "research: repair 50 ILY candidates to full contract"
+            git push origin HEAD:agent/deep-research-i-and-love-and-you
+          fi
