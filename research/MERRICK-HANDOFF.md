@@ -40,6 +40,7 @@ The canonical ledger now contains **60 records**:
 - all canonical GTIN-14 values valid and unique
 - all records use the controlled `Texture` and `Presentation` vocabularies from `lib/presentation.ts`
 - remote post-commit exclusion sweep for batch 3 found 0 collisions
+- final PR diff after cleanup contains only this handoff and `research/deep-research-merrick.json`; temporary Merrick workflows were removed
 
 Data commits:
 
