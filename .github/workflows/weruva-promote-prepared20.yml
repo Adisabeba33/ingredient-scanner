@@ -1,0 +1,119 @@
+name: Promote Weruva prepared 20
+
+on:
+  push:
+    branches:
+      - agent/deep-research-weruva
+    paths:
+      - .github/workflows/weruva-promote-prepared20.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-weruva
+          fetch-depth: 0
+      - name: Validate and append prepared 20
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          TARGET=Path('research/deep-research-weruva.json'); INDEX=Path('research/WERUVA-POST-30-INDEX.md'); HANDOFF=Path('research/WERUVA-HANDOFF.md'); RUNNER=Path('.github/workflows/weruva-promote-prepared20.yml')
+          ACC='2026-08-29'; ADMC='https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf'
+          def upc_ok(c): return len(c)==12 and c.isdigit() and (10-sum(int(c[i])*(3 if i%2==0 else 1) for i in range(11))%10)%10==int(c[-1])
+          def split_top(s):
+              out=[]; start=0; depth=0
+              for i,ch in enumerate(s):
+                  if ch=='(': depth+=1
+                  elif ch==')': depth=max(0,depth-1)
+                  elif ch==',' and depth==0:
+                      out.append(s[start:i].strip().rstrip('.')); start=i+1
+              out.append(s[start:].strip().rstrip('.')); return out
+          def ga(p,f,fi,m,a=None,other=None): return {'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':a,'taurine_min_percent':None,'other_printed_guarantees':other or []}
+          def rec(upc,line,name,variant,recipe,life,form,texture,pres,ptype,size,ing,g,kg,kcal,url,notes=None,conflicts=None):
+              return {'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Weruva','manufacturer':'Weruva','species':'cat','product_line':line,'product_name':name,'variant':variant,'recipe':recipe,'life_stage':life,'food_form':form,'texture':texture,'presentation':pres,'package_type':ptype,'size':size,'ingredients_verbatim':ing,'ingredients_ordered_normalized':split_top(ing),'guaranteed_analysis':g,'calorie_content':{'kcal_per_kg':kg,'kcal_per_unit':kcal,'unit_name':ptype if kcal is not None else None},'label_deck_code':None,'formula_source':'Current Weruva manufacturer page for the exact current formula, displayed guaranteed analysis, published calorie bases, package sizes and lifestage/feeding claim where printed; exact individual-unit UPC/size corroborated by distributor evidence.','source_urls':[url,ADMC],'source_accessed_at':ACC,'barcode_notes':f'Exact individual-unit UPC/size mapping rechecked. UPC-A {upc} passes its check digit; canonical GTIN-14 is {upc.zfill(14)}.','conflicts':conflicts or [],'verification_notes':['Fresh repository exclusion scan covered known-products, known-formulas, wrong-barcodes, CATALOG-CONFLICTS and every other deep-research ledger; no collision was found.','Current manufacturer generation is stored without calculating or borrowing missing label values.']+(notes or []),'research_status':'source_verified'}
+
+          rows=[]
+          # Kitten — current manufacturer panels.
+          rows.append(rec('810028242784','Weruva Kitten','Weruva Kitten Chicken Formula Au Jus','Chicken Formula Au Jus',['chicken'],'kitten','wet','shredded','unknown','can','3 oz','Chicken, Chicken Broth, Natural Flavor, Dried Egg, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Xanthan Gum, Locust Bean Gum, Fish Oil, Choline Chloride, Taurine, Zinc Sulfate, Ferrous Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.',ga(12,6,1,83,1.5),1170,100,'https://www.weruva.com/products/chicken-formula-au-jus-cat-can'))
+          rows.append(rec('810028242791','Weruva Kitten','Weruva Kitten Chicken & Pumpkin Formula in Gravy','Chicken & Pumpkin Formula in Gravy',['chicken','tuna','pumpkin'],'kitten','wet','minced','in_gravy','can','3 oz','Chicken Broth, Chicken, Tuna, Pumpkin, Natural Flavor, Potato Starch, Sunflower Oil, Calcium Lactate, Guar Gum, Dried Egg, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(11.5,4,1,83,2),1021,87,'https://www.weruva.com/products/chicken-and-pumpkin-formula-in-gravy-cat-can'))
+          rows.append(rec('810028242821','Weruva Kitten','Weruva Kitten Chicken Breast Formula in a Hydrating Purée','Chicken Breast Formula in a Hydrating Purée',['chicken'],'kitten','wet','pate','plain','can','3 oz','Chicken, Chicken Broth, Natural Flavor, Potato Starch, Dried Egg, Sunflower Oil, Tricalcium Phosphate, Xanthan Gum, Locust Bean Gum, Choline Chloride, Taurine, Zinc Sulfate, Ferrous Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.',ga(12,8,1,78,2),1461,124,'https://www.weruva.com/products/chicken-breast-formula-in-a-hydrating-puree-cat-can'))
+          rows.append(rec('810028242814','Weruva Kitten','Weruva Kitten Tuna & Salmon Formula in a Hydrating Purée','Tuna & Salmon Formula in a Hydrating Purée',['tuna','salmon'],'kitten','wet','pate','plain','can','3 oz','Fish Broth, Tuna, Salmon, Sunflower Oil, Natural Flavor, Potato Starch, Tricalcium Phosphate, Dried Egg, Xanthan Gum, Locust Bean Gum, Calcium Lactate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Potassium Iodide.',ga(11,1.5,1,87,2),697,59,'https://www.weruva.com/products/tuna-and-salmon-formula-in-a-hydrating-puree-cat-can'))
+
+          # Wx — manufacturer prints Adult, Senior + Supplemental Feeding; scalar life_stage stays null.
+          dual=['Manufacturer prints Lifestage: Adult, Senior and Supplemental Feeding. The scalar schema cannot faithfully represent both stages, so life_stage is null and the dual printed claim is preserved here.','Manufacturer states these Wx formulas are intended for intermittent or supplemental feeding because phosphorus is below AAFCO minimums.']
+          rows.append(rec('810028242432','Wx','Weruva Wx Chicken & Tilapia Formula in Gravy','Chicken & Tilapia Formula in Gravy',['chicken','tilapia','egg'],None,'wet',None,'in_gravy','can','3 oz','Chicken Broth, Chicken, Tilapia, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.',ga(10,5,1,83.5,1.5),951,81,'https://www.weruva.com/products/chicken-and-tilapia-formula-in-gravy-cat-can',dual))
+          rows.append(rec('810028242647','Wx','Weruva Wx Chicken Formula in a Hydrating Purée','Chicken Formula in a Hydrating Purée',['chicken','egg'],None,'wet','pate','plain','can','3 oz','Chicken Broth, Chicken, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Agar-Agar, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.',ga(10,5,1,83.5,1.5),922,78,'https://www.weruva.com/products/chicken-formula-in-a-hydrating-puree-cat-can',dual))
+          rows.append(rec('810028242678','Wx','Weruva Wx Chicken Formula in Gravy','Chicken Formula in Gravy',['chicken','egg'],None,'wet',None,'in_gravy','can','3 oz','Chicken Broth, Chicken, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.',ga(10,5,1,83.5,1.5),953,81,'https://www.weruva.com/products/chicken-formula-in-gravy-cat-can',dual))
+          rows.append(rec('810028242661','Wx','Weruva Wx Tilapia & Chicken Formula in a Hydrating Purée','Tilapia & Chicken Formula in a Hydrating Purée',['tilapia','chicken','egg'],None,'wet','pate','plain','can','3 oz','Fish Broth, Tilapia, Chicken, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Agar-Agar, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Potassium Iodide.',ga(10,5,1,83.5,1.5),1003,85,'https://www.weruva.com/products/tilapia-and-chicken-formula-in-a-hydrating-puree-cat-can',dual))
+          rows.append(rec('810028242654','Wx','Weruva Wx Tilapia & Tuna Formula in a Hydrating Purée','Tilapia & Tuna Formula in a Hydrating Purée',['tilapia','tuna','egg'],None,'wet','pate','plain','can','3 oz','Fish Broth, Tilapia, Tuna, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Agar-Agar, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Potassium Iodide.',ga(10,5,1,83.5,1.5),927,79,'https://www.weruva.com/products/tilapia-and-tuna-formula-in-a-hydrating-puree-cat-can',dual))
+
+          # Freeze Dried Mideast Feast. Preserve current manufacturer spelling; 7 oz bag-total kcal is not derived.
+          fd_ing='Tuna, Salmon, Tilapia, Tapioca Starch, Sunflower Oil, Mixed Tocopherols (Preservative), Egg Shell Meal, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridroxine Hydrochloride (Vitamin B6), Folic Acid, Vitamin B12 Supplement, Vitamin D3 Supplement, Menadione Sodium Bisulfate Complex (Source Of Vitamin K), Potassium Iodide.'
+          rows.append(rec('810028245297','Freeze Dried','Weruva Freeze Dried Mideast Feast','Mideast Feast',['tuna','salmon','tilapia'],None,'dry','freeze_dried','plain','bag','1 oz',fd_ing,ga(63,11,1,8,None),3815,108,'https://www.weruva.com/products/mideast-feast-freeze-dried-cat', ['Current manufacturer page publishes 108 kcal per 1 oz and 3815 kcal/kg.']))
+          rows.append(rec('810028245310','Freeze Dried','Weruva Freeze Dried Mideast Feast','Mideast Feast',['tuna','salmon','tilapia'],None,'dry','freeze_dried','plain','bag','7 oz',fd_ing,ga(63,11,1,8,None),3815,None,'https://www.weruva.com/products/mideast-feast-freeze-dried-cat', ['Manufacturer publishes kcal/kg and a 1 oz calorie figure but no 7 oz bag-total calorie value; kcal_per_unit remains null rather than calculated.']))
+
+          # Weruva Cat Paté — current pages publish both formula and per-size calories.
+          meow_ing='Chicken Broth, Chicken, Tuna, Pumpkin, Natural Flavor, Xanthan Gum, Locust Bean Gum, Calcium Lactate, Tricalcium Phosphate, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).'
+          for upc,size,kcal in [('813778018357','3 oz',58),('813778018210','5.5 oz',106)]: rows.append(rec(upc,'Weruva Cat Paté','Weruva Cat Paté Who Wants to be a Meowionaire?','Chicken & Pumpkin in a Hydrating Purée',['chicken','tuna','pumpkin'],'adult','wet','pate','plain','can',size,meow_ing,ga(8,2,1,86,2),677,kcal,'https://www.weruva.com/products/who-wants-to-be-a-meowionaire-cat-can'))
+          lunch_ing='Chicken Broth, Chicken, Sunflower Oil, Natural Flavor, Xanthan Gum, Locust Bean Gum, Tricalcium Phosphate, Potato Starch, Calcium Lactate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.'
+          for upc,size,kcal in [('813778018395','3 oz',56),('813778018258','5.5 oz',103)]: rows.append(rec(upc,'Weruva Cat Paté','Weruva Cat Paté Press Your Lunch!','Chicken Dinner in a Hydrating Purée',['chicken'],'adult','wet','pate','plain','can',size,lunch_ing,ga(8,2,1,87,1.5),663,kcal,'https://www.weruva.com/products/press-your-lunch-cat-can'))
+          dinner_ing='Chicken, Chicken Broth, Natural Flavor, Sunflower Oil, Xanthan Gum, Locust Bean Gum, Tricalcium Phosphate, Potato Starch, Choline Chloride, Taurine, Zinc Sulfate, Ferrous Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.'
+          for upc,size,kcal in [('810028241442','3 oz',93),('810028241473','5.5 oz',170)]: rows.append(rec(upc,'Weruva Cat Paté','Weruva Cat Paté Press Your Dinner!','Chicken Breast with Deboned Chicken in a Hydrating Purée',['chicken'],'adult','wet','pate','plain','can',size,dinner_ing,ga(9,4,1,83,2),1100,kcal,'https://www.weruva.com/products/press-your-dinner-cat-can'))
+          purr_ing='Chicken Broth, Chicken, Tuna, Shrimp, Natural Flavor, Xanthan Gum, Locust Bean Gum, Calcium Lactate, Tricalcium Phosphate, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).'
+          for upc,size,kcal in [('813778018388','3 oz',62),('813778018241','5.5 oz',114)]: rows.append(rec(upc,'Weruva Cat Paté',"Weruva Cat Paté Meows n' Holler Purramid",'Chicken & Shrimp in a Hydrating Purée',['chicken','tuna','shrimp'],'adult','wet','pate','plain','can',size,purr_ing,ga(8,2,1,85,2),731,kcal,'https://www.weruva.com/products/meows-n-holler-purramid-cat-can'))
+          tic_ing='Fish Broth, Tuna, Salmon, Sunflower Oil, Natural Flavor, Xanthan Gum, Locust Bean Gum, Tricalcium Phosphate, Potato Starch, Calcium Lactate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).'
+          rows.append(rec('813778018340','Weruva Cat Paté','Weruva Cat Paté Tic Tac Whoa!','Tuna & Salmon in a Hydrating Purée',['tuna','salmon'],'adult','wet','pate','plain','can','3 oz',tic_ing,ga(9,1.5,1,87,2),502,43,'https://www.weruva.com/collections/lower-and-lowest-phosphorus-cat-foods/products/tic-tac-whoa-cat-can'))
+
+          expected=['810028242784','810028242791','810028242821','810028242814','810028242432','810028242647','810028242678','810028242661','810028242654','810028245297','810028245310','813778018357','813778018210','813778018395','813778018258','810028241442','810028241473','813778018388','813778018241','813778018340']
+          if len(rows)!=20 or [r['upc'] for r in rows]!=expected: raise SystemExit('prepared batch count/order mismatch')
+          if not all(upc_ok(c) for c in expected): raise SystemExit('UPC-A check digit failure')
+          allowed_texture={None,'pate','minced','shredded','freeze_dried'}; allowed_pres={'unknown','in_gravy','plain'}
+          if any(r['texture'] not in allowed_texture or r['presentation'] not in allowed_pres for r in rows): raise SystemExit('controlled vocabulary failure')
+          required={'catalog_number','upc','canonical_gtin14','barcode_scope','brand','manufacturer','species','product_line','product_name','variant','recipe','life_stage','food_form','texture','presentation','package_type','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','label_deck_code','formula_source','source_urls','source_accessed_at','barcode_notes','conflicts','verification_notes','research_status'}
+          for r in rows:
+              if set(r)!=required: raise SystemExit(f"{r['upc']}: schema key mismatch")
+              if r['ingredients_ordered_normalized']!=split_top(r['ingredients_verbatim']): raise SystemExit(f"{r['upc']}: ingredient order mismatch")
+          excludes=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+[p for p in Path('research').glob('deep-research-*.json') if p!=TARGET]
+          hits=[]
+          for p in excludes:
+              t=p.read_text(encoding='utf-8')
+              for c in expected:
+                  if c in t: hits.append((c,str(p)))
+          if hits: raise SystemExit('fresh exclusion collisions: '+repr(hits))
+          ledger=json.loads(TARGET.read_text(encoding='utf-8')); recs=ledger['records']
+          if len(recs)!=100: raise SystemExit(f'expected 100 canonical records, got {len(recs)}')
+          if {r['upc'] for r in recs}.intersection(expected): raise SystemExit('UPC already in canonical ledger')
+          recs.extend(rows)
+          if len(recs)!=120 or len({r['upc'] for r in recs})!=120 or len({r['canonical_gtin14'] for r in recs})!=120: raise SystemExit('120-count uniqueness failure')
+          ledger['updated_at']=ACC; ledger['records']=recs
+          TARGET.write_text(json.dumps(ledger,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          chk=json.loads(TARGET.read_text(encoding='utf-8'))
+          if len(chk['records'])!=120 or [r['upc'] for r in chk['records'][-20:]]!=expected: raise SystemExit('post-write canonical validation failed')
+
+          idx=INDEX.read_text(encoding='utf-8')
+          idx=idx.replace('Canonical strict ledger currently contains **100** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, and 20 promoted early post-30 recheck records.','Canonical strict ledger currently contains **120** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, 20 early post-30 recheck records, and 20 promoted Kitten/Wx/Freeze Dried/Cat Paté records.')
+          pat=r'## Kitten / Wx / Freeze Dried / Cat Paté — awaiting strict promotion\n.*?(?=\n## Slide N\' Serve / Classic / Pantry Pours batch)'
+          repl='## Kitten / Wx / Freeze Dried / Cat Paté — consumed\n\nAll **20** rows in this prepared block were promoted into `research/deep-research-weruva.json` as complete `source_verified` individual-unit records after a fresh exclusion/check-digit/current-formula pass. For Wx, the printed `Adult, Senior` dual lifestage is preserved in verification notes with scalar `life_stage: null`; Freeze Dried Mideast Feast 7 oz keeps `kcal_per_unit: null` because no bag-total calorie value is printed.\n'
+          idx2,n=re.subn(pat,repl,idx,flags=re.S)
+          if n!=1: raise SystemExit(f'prepared index replacement count {n}')
+          INDEX.write_text(idx2,encoding='utf-8')
+
+          h=HANDOFF.read_text(encoding='utf-8').replace('As of 2026-08-29 the strict ledger contains **100 complete schema-v2 records**:','As of 2026-08-29 the strict ledger contains **120 complete schema-v2 records**:')
+          h+='\n\n## 2026-08-29 Kitten / Wx / Freeze Dried / Cat Paté strict promotion\n\nPromoted all **20** prepared individual-unit records after a fresh exclusion/check-digit/current-formula pass. Canonical Weruva strict count: **120**. This completes the entire 70-record strict-promotion backlog that was previously summarized as 18 Cat Stew + 8 Senior + 4 Freeze Dried + 20 early recheck + 20 prepared Kitten/Wx/Freeze Dried/Cat Paté. Later index sections remain a separate research queue and are not implied complete by the 120 count.\n'
+          HANDOFF.write_text(h,encoding='utf-8')
+          RUNNER.unlink(); print('PROMOTED 20; CANONICAL TOTAL 120')
+          PY
+      - name: Commit canonical promotion
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-weruva.json research/WERUVA-POST-30-INDEX.md research/WERUVA-HANDOFF.md .github/workflows/weruva-promote-prepared20.yml
+          git commit -m "research: promote 20 prepared Weruva records"
+          git push origin HEAD:agent/deep-research-weruva
