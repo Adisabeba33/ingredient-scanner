@@ -1,47 +1,76 @@
-name: Run Royal Canin cats 120-140 merge
+name: Second-pass verify Blue Buffalo Bursts treats
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Promote verified Bursts records
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          updates={
+            '840243137039': {
+              'ingredients':'Deboned Salmon, Brown Rice, Tuna Meal, Barley, Pork Fat, Tapioca Starch, Oatmeal, Salmon Meal, Natural Flavor, Deboned Cod, Peas, Shrimp, Canola Oil, Brewers Dried Yeast, Dried Whey, Lecithin, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, DL-Methionine, Taurine, Oil of Rosemary.',
+              'ga':(21,19,2,10),'kcalkg':4200,'kcalunit':2.1,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petco.com/product/blue-buffalo-bursts-feline-seafood-flavour-cat-treats-5-oz-3128018','https://www.chewy.com/blue-buffalo-bursts-savory-seafood/dp/241902','https://www.cub.com/store/cub/products/21109640-blue-buffalo-bursts-crunchy-cat-treats-seafood-5-oz'],
+              'note':'Current Blue Buffalo list maps UPC 840243137039 to Bursts Seafood 5 oz. Cub independently binds the same UPC to the 5 oz retail bag. Current Petco and Chewy agree on complete ingredient order and 21/19/2/10 GA; Chewy supplies 4,200 kcal/kg and 2.1 kcal/piece.'},
+            '840243137077': {
+              'ingredients':'Deboned Salmon, Brown Rice, Tuna Meal, Barley, Pork Fat, Tapioca Starch, Oatmeal, Salmon Meal, Natural Flavor, Deboned Cod, Peas, Shrimp, Canola Oil, Brewers Dried Yeast, Dried Whey, Lecithin, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, DL-Methionine, Taurine, Oil of Rosemary.',
+              'ga':(21,19,2,10),'kcalkg':4200,'kcalunit':2.1,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/ca/blue-buffalo-bursts-natural-filled/dp/1000021110','https://www.petco.com/product/blue-buffalo-bursts-feline-seafood-flavour-cat-treats-5-oz-3128018'],
+              'note':'Current Blue Buffalo list maps UPC 840243137077 to Bursts Seafood 12 oz. Current Chewy Canada 12 oz retail jar provides the complete formula, 21/19/2/10 GA and 4,200 kcal/kg / 2.1 kcal/treat; current Petco independently corroborates the same Seafood formula and GA.'},
+            '840243137053': {
+              'ingredients':'Deboned Chicken, Chicken Meal, Chicken Fat, Brown Rice, Barley, Tapioca Starch, Oatmeal, Peas, Natural Flavor, Brewers Dried Yeast, Pork Fat, Dried Whey, Lecithin, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, DL-Methionine, Taurine, Oil of Rosemary.',
+              'ga':(23,21,2,10),'kcalkg':4300,'kcalunit':2.1,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petco.com/product/blue-buffalo-bursts-feline-chicken-flavour-cat-treats','https://www.chewy.com/ca/blue-buffalo-bursts-natural-filled/dp/1000021086'],
+              'note':'Current Blue Buffalo list maps UPC 840243137053 to Bursts Chicken 12 oz. Current Petco explicitly identifies a 12 oz tub and supplies complete ingredients and 23/21/2/10 GA; current Chewy Canada independently agrees and supplies 4,300 kcal/kg / 2.1 kcal/treat.'}
+          }
+          promoted=[]
+          for r in d['records']:
+            u=r.get('upc')
+            if u not in updates: continue
+            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
+            q=updates[u]
+            r['ingredients_verbatim']=q['ingredients']
+            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
+            pr,fa,fi,mo=q['ga']
+            r['guaranteed_analysis']={'crude_protein_min_percent':pr,'crude_fat_min_percent':fa,'crude_fiber_max_percent':fi,'moisture_max_percent':mo,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
+            r['calorie_content']={'kcal_per_kg':q['kcalkg'],'kcal_per_unit':q['kcalunit'],'unit_name':'treat'}
+            r['formula_source']='Second-pass current-source verification using exact UPC identity from Blue Buffalo and current U.S./Canadian retail label data.'
+            r['source_urls']=q['sources']
+            r['source_accessed_at']='2026-08-29'
+            r['conflicts']=[]
+            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case/multipack UPC substitution was used.','Product is a treat intended for intermittent or supplemental feeding only, not represented as a complete-and-balanced diet.']
+            r['research_status']='source_verified'
+            promoted.append(u)
+          assert len(promoted)==3, promoted
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          print('PROMOTED',len(promoted),','.join(promoted))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify three Blue Buffalo Bursts cat treats"
+          git push origin HEAD:agent/deep-research-blue-buffalo
