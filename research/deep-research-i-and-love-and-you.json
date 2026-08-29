@@ -14478,7 +14478,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336012034.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012037 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012037 is stored only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Salmon Chanted Evening Stew -> 818336012037 (https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14495,6 +14497,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336012037"
       ]
     },
     {
@@ -14583,7 +14590,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 818336013676 = 3 OZ (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Boost Chicken Feast -> 818336013645 (https://iandloveandyou.com/products/feed-meow-boost)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14600,6 +14609,11 @@
             "https://iandloveandyou.com/products/feed-meow-boost.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013645"
       ]
     },
     {
@@ -14688,7 +14702,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013673 = 3 OZ (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Boost Chicken Feast -> 818336013645 (https://iandloveandyou.com/products/feed-meow-boost)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14705,6 +14721,11 @@
             "https://iandloveandyou.com/products/feed-meow-boost.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013645"
       ]
     },
     {
@@ -14795,7 +14816,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 818336013683 = 3 OZ (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Shine Salmon & Tuna Feast -> 818336013652 (https://iandloveandyou.com/products/feed-meow-shine)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14812,6 +14835,11 @@
             "https://iandloveandyou.com/products/feed-meow-shine.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013652"
       ]
     },
     {
@@ -14902,7 +14930,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013680 = 3 OZ (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Shine Salmon & Tuna Feast -> 818336013652 (https://iandloveandyou.com/products/feed-meow-shine)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -14919,6 +14949,11 @@
             "https://iandloveandyou.com/products/feed-meow-shine.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013652"
       ]
     },
     {
@@ -14990,7 +15025,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 818336013690 = 3 OZ (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Tummy Tuna with Pumpkin Feast -> 818336013669 (https://iandloveandyou.com/products/feed-meow-tummy)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15007,6 +15044,11 @@
             "https://iandloveandyou.com/products/feed-meow-tummy.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013669"
       ]
     },
     {
@@ -15078,7 +15120,9 @@
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013697 = 3 OZ (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Tummy Tuna with Pumpkin Feast -> 818336013669 (https://iandloveandyou.com/products/feed-meow-tummy)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15095,6 +15139,11 @@
             "https://iandloveandyou.com/products/feed-meow-tummy.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013669"
       ]
     },
     {
@@ -15195,7 +15244,9 @@
         "Formal AAFCO Adult Maintenance statement controls life-stage classification.",
         "Unusual glucosamine/chondroitin values are retained as source-printed data and flagged rather than silently repaired.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013932 = 3 OZ (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013928 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013928 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Move Chicken Feast -> 818336013928 (https://iandloveandyou.com/products/feed-meow-move)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15212,6 +15263,11 @@
             "https://iandloveandyou.com/products/feed-meow-move.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013928"
       ]
     },
     {
@@ -15296,7 +15352,9 @@
         "Manufacturer describes the food as complete and balanced for kitten, adult, and senior cats.",
         "Product of Thailand as printed by manufacturer.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013901 = 3 OZ (24 Pack).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013898 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013898 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Feed Meow Indoor Mackerel Feast -> 818336013898 (https://iandloveandyou.com/products/feed-meow-indoor)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15313,6 +15371,11 @@
             "https://iandloveandyou.com/products/feed-meow-indoor.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [
+        "818336013898"
       ]
     },
     {
@@ -15382,7 +15445,9 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013581 = 3 OZ CAN (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013584 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013584 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: XOXOs Salmon & Tuna Pâté -> 818336013584 (https://iandloveandyou.com/products/xoxo-salmon-tuna-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15399,6 +15464,11 @@
             "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336013584"
       ]
     },
     {
@@ -15467,7 +15537,9 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013604 = 3 OZ CAN (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013607 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013607 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: XOXOs Beef & Chicken Pâté -> 818336013607 (https://iandloveandyou.com/products/xoxo-beef-chicken-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15484,6 +15556,11 @@
             "https://iandloveandyou.com/products/xoxo-beef-chicken-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336013607"
       ]
     },
     {
@@ -15553,7 +15630,9 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013574 = 3 OZ CAN (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013577 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013577 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: XOXOs Whitefish & Tuna Pâté -> 818336013577 (https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15570,6 +15649,11 @@
             "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336013577"
       ]
     },
     {
@@ -15638,7 +15722,9 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013598 = 3 OZ CAN (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013591 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013591 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: XOXOs Chicken & Tuna Pâté -> 818336013591 (https://iandloveandyou.com/products/xoxo-chicken-tuna-pate)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15655,6 +15741,11 @@
             "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336013591"
       ]
     },
     {
@@ -15710,7 +15801,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336010009 = 12 INCH (30 COUNT).",
-        "Pack count 30 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack."
+        "Pack count 30 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains unresolved: one or more member UPCs are not proven, so contains is intentionally empty. Missing member UPC proof for: No Stink! Free Ranger Bully Stix 12 inch chew."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15727,7 +15820,10 @@
             "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix.js"
           ]
         }
-      ]
+      ],
+      "pack_count": 30,
+      "unit_size": "No Stink! Free Ranger Bully Stix 12 inch chew",
+      "contains": []
     },
     {
       "catalog_number": null,
@@ -15782,7 +15878,9 @@
         "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013918 = 6 INCH (18 COUNT).",
         "Pack count 18 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack.",
-        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred."
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains unresolved: one or more member UPCs are not proven, so contains is intentionally empty. Missing member UPC proof for: Free Ranger Braided Bully Stix 6 inch chew."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15799,7 +15897,10 @@
             "https://iandloveandyou.com/products/braided-bully-sticks.js"
           ]
         }
-      ]
+      ],
+      "pack_count": 18,
+      "unit_size": "Free Ranger Braided Bully Stix 6 inch chew",
+      "contains": []
     },
     {
       "catalog_number": null,
@@ -15896,7 +15997,9 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336011969 = 13 OZ CAN (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336011962 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336011962 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Moo Moo Venison Stew -> 818336011962 (https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15913,6 +16016,11 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "13 oz can",
+      "contains": [
+        "818336011962"
       ]
     },
     {
@@ -16007,7 +16115,9 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336010184 = 13 OZ CAN (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010187 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010187 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Gobble It Up Stew -> 818336010187 (https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16024,6 +16134,11 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "13 oz can",
+      "contains": [
+        "818336010187"
       ]
     },
     {
@@ -16117,7 +16232,9 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336010191 = 13 OZ CAN (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010194 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010194 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Cluckin' Good Stew -> 818336010194 (https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16134,6 +16251,11 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "13 oz can",
+      "contains": [
+        "818336010194"
       ]
     },
     {
@@ -16229,7 +16351,9 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336010177 = 13 OZ CAN (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010170 is retained only as standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010170 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Beef Booyah Stew -> 818336010170 (https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16246,6 +16370,11 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew.js"
           ]
         }
+      ],
+      "pack_count": 12,
+      "unit_size": "13 oz can",
+      "contains": [
+        "818336010170"
       ]
     },
     {
@@ -16336,7 +16465,9 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336012041 = 3 OZ CAN (24 PACK).",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336012044 is retained only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336012044 is retained only as standalone_upc.",
+        "2026-08-29 multipack clarification reissue: single-flavour multipack. Top-level ingredients, guaranteed analysis and calories are retained because every contained unit is the same recipe.",
+        "2026-08-29 contains relation proven: Original Recipe - Tuna Fintastic Stew -> 818336012044 (https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew)."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16353,6 +16484,11 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew.js"
           ]
         }
+      ],
+      "pack_count": 24,
+      "unit_size": "3 oz can",
+      "contains": [
+        "818336012044"
       ]
     },
     {
