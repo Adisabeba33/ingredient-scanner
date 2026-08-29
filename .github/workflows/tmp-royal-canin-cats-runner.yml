@@ -1,54 +1,47 @@
-name: Verify Blue Buffalo Wild Cuts salmon
+name: Run Royal Canin cats 120-140 merge
+
 on:
   push:
-    branches: [agent/deep-research-blue-buffalo]
-    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
+    branches:
+      - agent/deep-research-barcode-ledger
+    paths:
+      - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote Wild Cuts salmon
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json, collections
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          r=next(x for x in d['records'] if x.get('upc')=='840243110070')
-          assert r.get('research_status')=='needs_physical_label'
-          r['research_status']='source_verified'
-          r['ingredients']=['Salmon','Chicken Broth','Water','Chicken Liver','Dried Egg Product','Potato Starch','Natural Flavor','Guar Gum','Sodium Phosphate','Salt','Sodium Carbonate']
-          r['guaranteed_analysis']={'crude_protein_min_percent':8.0,'crude_fat_min_percent':2.5,'crude_fiber_max_percent':1.5,'moisture_max_percent':82.0,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
-          r['calorie_content']={'kcal_per_kg':840,'kcal_per_unit':70,'unit':'3 oz pouch'}
-          r['life_stage']='adult'
-          r['aafco_statement']='Intended for intermittent or supplemental feeding only; feed daily along with a complete and balanced diet.'
-          r['form']='morsels in gravy pouch'
-          r['size']='3 oz'
-          urls=r.get('source_urls') or []
-          for u in ['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://products.redmangomarketing.com/products/blue-buffalo-wilderness-wild-cuts-tasty-toppers-salmon-adult-cat-food/','https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf']:
-            if u not in urls: urls.append(u)
-          r['source_urls']=urls
-          r['source_accessed_at']='2026-08-29'
-          notes=r.get('verification_notes') or []
-          notes.append('2026-08-29 second pass: current Blue Buffalo qualifying-products list confirms exact UPC identity; North American distributor list confirms exact UPC/3 oz unit; Red Mango exact-UPC listing supplies full ingredient deck, printed GA, 840 kcal/kg / 70 kcal per pouch, and supplemental-feeding scope.')
-          r['verification_notes']=notes
-          r['conflicts']=[]
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':')); open(p,'a').write('\n')
-          c=collections.Counter(x.get('research_status') for x in d['records'])
-          print('TOTAL',len(d['records'])); print('STATUS',dict(c)); print('PROMOTED',r['upc'])
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify Blue Wild Cuts salmon topper"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
