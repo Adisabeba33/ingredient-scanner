@@ -1,0 +1,15 @@
+name: Verify ILY candidate children
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths: [.github/workflows/verify-ily-candidate-children.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+      - run: python .github/scripts/verify-ily-candidate-children.py
