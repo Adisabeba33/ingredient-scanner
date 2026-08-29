@@ -10,33 +10,71 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect Merrick site
+      - name: Map current Merrick cat products and UPCs
         run: |
           python - <<'PY'
           import urllib.request,re,json,html
-          urls=[
-            'https://www.merrickpetcare.com/cat-food',
-            'https://www.merrickpetcare.com/cat-food/wet',
-            'https://www.merrickpetcare.com/cat-food/dry',
-            'https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-beef-wet-cat-food',
-            'https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-tuna-wet-cat-food',
-          ]
-          h={'User-Agent':'Mozilla/5.0'}
-          for u in urls:
-            print('\nURL',u)
-            try:
-              req=urllib.request.Request(u,headers=h)
-              with urllib.request.urlopen(req,timeout=30) as r: t=r.read().decode('utf-8','replace'); print('STATUS',r.status,'LEN',len(t))
-              for pat in ['gtin','upc','barcode','sku','productID','Available Sizes']:
-                hits=list(re.finditer(pat,t,re.I)); print(pat,len(hits))
-                for m in hits[:6]: print(html.unescape(re.sub(r'\s+',' ',t[max(0,m.start()-220):m.start()+380]))[:650])
-              hrefs=re.findall(r'href=["\']([^"\']+)["\']',t,re.I)
-              links=[]
-              for href in hrefs:
-                if '/shop/' in href:
-                  if href.startswith('/'): href='https://www.merrickpetcare.com'+href
-                  links.append(href.split('?')[0].split('#')[0])
-              print('SHOP_LINKS',len(set(links)))
-              for x in sorted(set(links))[:120]: print(x)
-            except Exception as e: print('ERR',repr(e))
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          H={'User-Agent':'Mozilla/5.0'}
+          def get(u):
+            req=urllib.request.Request(u,headers=H)
+            with urllib.request.urlopen(req,timeout=30) as r:
+              return r.read().decode('utf-8','replace')
+          def clean(s):
+            s=re.sub(r'<script\b[^>]*>.*?</script>',' ',s,flags=re.I|re.S)
+            s=re.sub(r'<style\b[^>]*>.*?</style>',' ',s,flags=re.I|re.S)
+            s=re.sub(r'<[^>]+>',' ',s)
+            s=html.unescape(s)
+            return re.sub(r'\s+',' ',s).strip()
+
+          # Live repository exclusions.
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+list(Path('research').glob('deep-research-*.json'))
+          repo='\n'.join(p.read_text(encoding='utf-8',errors='replace') for p in paths if p.exists())
+          existing=set(re.findall(r'(?<!\d)(?:\d{8}|\d{12,14})(?!\d)',repo)); canon={x.zfill(14) for x in existing}
+
+          found=[]
+          for page in range(0,3):
+            u='https://www.merrickpetcare.com/cat-food'+(f'?page={page}' if page else '')
+            t=get(u)
+            # Product card: title, product link and PriceSpider SKU (UPC).
+            # Capture a generous window around each ps-widget.
+            for m in re.finditer(r'<div class="ps-widget" ps-sku="(\d+)"[^>]*>',t,re.I):
+              sku=m.group(1)
+              w=t[max(0,m.start()-3500):m.end()+300]
+              titles=re.findall(r'(?:data-content_name|title)="([^"]+)"',w,re.I)
+              hrefs=re.findall(r'href="([^"]*/shop/[^"]+)"',w,re.I)
+              title=html.unescape(titles[-1]) if titles else None
+              href=html.unescape(hrefs[-1]).split('?')[0] if hrefs else None
+              if href and href.startswith('/'): href='https://www.merrickpetcare.com'+href
+              row={'page':page,'upc':sku,'title':title,'url':href,'known': sku in existing or sku.zfill(14) in canon}
+              if row not in found: found.append(row)
+          # Dedupe by UPC while retaining first clean card.
+          uniq=[]; seen=set()
+          for x in found:
+            if x['upc'] in seen: continue
+            seen.add(x['upc']); uniq.append(x)
+          print('CAT_ACTIVE_UNIQUE_UPCS',len(uniq))
+          for x in uniq: print('CARD',json.dumps(x,ensure_ascii=False,sort_keys=True))
+
+          print('\nDETAILS')
+          for x in uniq:
+            if not x['url']: continue
+            try: t=get(x['url'])
+            except Exception as e:
+              print('DETAIL_ERR',x['upc'],repr(e)); continue
+            text=clean(t)
+            # Pull exact current PDP PriceSpider SKUs, available sizes, ingredient/GA/calorie neighborhoods.
+            pdp_skus=re.findall(r'<div class="ps-widget" ps-sku="(\d+)"',t,re.I)
+            size=''
+            i=text.find('Available Sizes')
+            if i>=0: size=text[i:i+260]
+            j=text.find('Ingredients:')
+            ingred=text[j:j+2600] if j>=0 else ''
+            k=text.find('Guaranteed Analysis:')
+            ga=text[k:k+1200] if k>=0 else ''
+            c=text.find('Calorie Content')
+            cal=text[c:c+500] if c>=0 else ''
+            print('DETAIL',json.dumps({'upc':x['upc'],'title':x['title'],'url':x['url'],'pdp_skus':pdp_skus[:8],'size_chunk':size,'ingredient_chunk':ingred,'ga_chunk':ga,'calorie_chunk':cal},ensure_ascii=False,sort_keys=True))
           PY
