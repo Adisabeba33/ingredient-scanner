@@ -1,0 +1,43 @@
+name: Retry Merrick batch 2
+on:
+  push:
+    branches: [agent/deep-research-merrick]
+    paths: [.github/workflows/tmp-merrick-batch2-retry.yml]
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-merrick
+      - name: Run corrected batch generator
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import textwrap
+          src=Path('.github/workflows/tmp-merrick-batch2-map.yml').read_text(encoding='utf-8')
+          lines=src.splitlines()
+          start=next(i for i,l in enumerate(lines) if "python - <<'PY'" in l)
+          end=next(i for i in range(start+1,len(lines)) if lines[i].strip()=='PY')
+          code=textwrap.dedent('\n'.join(lines[start+1:end]))
+          old="assert 'adult' in (desc+' '+txt[f:f+1200]).lower(),(upc,'adult marker missing')"
+          new="stage_text=(desc+' '+txt[f:f+1800]).lower(); life_stage='adult' if __import__('re').search(r'\\badult dogs?\\b|maintenance of adult dogs',stage_text) else None"
+          assert old in code
+          code=code.replace(old,new)
+          old2="'variant':variant,'recipe':recipe,'life_stage':'adult','food_form':'wet','texture':texture,'presentation':presentation,"
+          new2="'variant':variant,'recipe':recipe,'life_stage':life_stage,'food_form':'wet','texture':texture,'presentation':presentation,"
+          assert old2 in code
+          code=code.replace(old2,new2)
+          old3="'Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, adult feeding/life-stage context, and single-can package size.',"
+          new3="('Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, explicit adult life-stage context, and single-can package size.' if life_stage=='adult' else 'Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, and single-can package size; it does not explicitly print a life stage in the captured product/formula text, so life_stage is null rather than inferred.'),"
+          assert old3 in code
+          code=code.replace(old3,new3)
+          exec(compile(code,'batch2_generator','exec'))
+          PY
+          git config user.name "OpenAI Research Agent"
+          git config user.email "noreply@openai.com"
+          git add research/deep-research-merrick.json
+          git commit -m "research: add second 20 active Merrick barcodes"
+          git push origin HEAD:agent/deep-research-merrick
