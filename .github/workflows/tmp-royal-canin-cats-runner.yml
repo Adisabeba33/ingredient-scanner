@@ -1,86 +1,47 @@
-name: Verify Blue Buffalo Baby BLUE salmon
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Update Baby BLUE wet records
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json, collections
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          by={r.get('upc'):r for r in d['records']}
-          # Salmon grain-free high-protein 3 oz: coherent current standalone formula.
-          r=by['840243134403']
-          assert r.get('research_status')=='needs_physical_label'
-          r['size']='3 oz'
-          r['ingredients']=['Salmon','Chicken','Fish Broth','Chicken Liver','Peas','Natural Flavor','Potatoes','Sodium Acid Pyrophosphate','Fish Oil (source of DHA-Docosahexaenoic Acid)','Guar Gum','Flaxseed','Potassium Chloride','Calcium Carbonate','Taurine','Salt','Choline Chloride','Carrageenan','Cassia Gum','Magnesium Sulfate','Iron Amino Acid Chelate','Zinc Amino Acid Chelate','Thiamine Mononitrate (Vitamin B1)','Vitamin E Supplement','Niacin Supplement (Vitamin B3)','Copper Amino Acid Chelate','Manganese Amino Acid Chelate','Sodium Selenite','Vitamin A Supplement','Calcium Pantothenate (Vitamin B5)','Vitamin B12 Supplement','Riboflavin Supplement (Vitamin B2)','Pyridoxine Hydrochloride (Vitamin B6)','Biotin (Vitamin B7)','Folic Acid (Vitamin B9)','Potassium Iodide','Vitamin D3 Supplement','preserved with Mixed Tocopherols']
-          r['guaranteed_analysis']={'crude_protein_min_percent':10.5,'crude_fat_min_percent':7.0,'crude_fiber_max_percent':1.5,'moisture_max_percent':78.0,'ash_max_percent':None,'taurine_min_percent':0.10,'other_printed_guarantees':['DHA 0.10% min']}
-          r['calorie_content']={'kcal_per_kg':1340,'kcal_per_unit':114,'unit':'3 oz can'}
-          r['aafco_statement']='Formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for growth.'
-          r['form']='pate canned wet food'
-          r['source_urls']=['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petco.com/product/blue-buffalo-baby-blue-healthy-growth-formula-natural-grain-free-high-protein-salmon-recipe-kitten-pate-wet-food','https://www.chewy.com/blue-buffalo-baby-blue-healthy-growth/dp/502278']
-          r['source_accessed_at']='2026-08-29'
-          r['conflicts']=[]
-          notes=r.get('verification_notes') or []
-          notes.append('2026-08-29 second pass: current Blue Buffalo qualifying-products list confirms exact UPC 840243134403 / 3 oz Salmon identity; current Petco and Chewy standalone Salmon listings agree on ingredient deck and GA; Chewy supplies 1340 kcal/kg, 114 kcal/can and explicit AAFCO growth statement. Variety-pack data was not substituted for the standalone SKU.')
-          r['verification_notes']=notes
-          r['research_status']='source_verified'
-          # Chicken grain-free HP: explicitly record current source conflict, no promotion.
-          c=by['840243134427']
-          assert c.get('research_status')=='needs_physical_label'
-          c['size']='3 oz'
-          c['conflicts']=['Current U.S. sources disagree on the grain-free high-protein Chicken 3 oz formula generation: Petco reports GA 10.5% protein / 8.0% fat / 1.5% fiber / 76% moisture with fish in the ingredient deck, while current Chewy reports 10.5% protein / 9.0% fat / 1.5% fiber / 78% moisture and 1392 kcal/kg / 118 kcal/can with a materially different parsed ingredient deck. Do not mix these generations; exact current package-generation evidence is required.']
-          c['source_urls']=list(dict.fromkeys((c.get('source_urls') or [])+['https://www.petco.com/product/blue-buffalo-baby-blue-healthy-growth-formula-natural-grain-free-high-protein-chicken-recipe-kitten-pate-wet-food-3-oz-3080430','https://www.chewy.com/blue-buffalo-baby-blue-healthy-growth/dp/502302']))
-          c['source_accessed_at']='2026-08-29'
-          cnotes=c.get('verification_notes') or []
-          cnotes.append('2026-08-29 second pass found current formula-generation disagreement across U.S. retailers; record intentionally remains needs_physical_label.')
-          c['verification_notes']=cnotes
-          # Standard Chicken 3 oz: enrich coherent formula but retain status until explicit nutrition statement is directly sourced.
-          s=by['840243134380']
-          assert s.get('research_status')=='needs_physical_label'
-          s['size']='3 oz'
-          s['ingredients']=['Chicken','Chicken Liver','Chicken Broth','Dried Egg Product','Fish Oil (source of DHA-Docosahexaenoic Acid)','Natural Flavor','Flaxseed','Brown Rice','Guar Gum','Carrots','Sweet Potatoes','Potassium Chloride','Taurine','Salt','Carrageenan','Cassia Gum','Cranberries','Magnesium Oxide','Choline Chloride','Iron Amino Acid Chelate','Zinc Amino Acid Chelate','Vitamin E Supplement','Thiamine Mononitrate (Vitamin B1)','Copper Amino Acid Chelate','Manganese Amino Acid Chelate','Sodium Selenite','Niacin Supplement (Vitamin B3)','Calcium Pantothenate (Vitamin B5)','Pyridoxine Hydrochloride (Vitamin B6)','Riboflavin Supplement (Vitamin B2)','Vitamin A Supplement','Biotin (Vitamin B7)','Potassium Iodide','Vitamin D3 Supplement','Vitamin B12 Supplement','Folic Acid (Vitamin B9)','preserved with Mixed Tocopherols']
-          s['guaranteed_analysis']={'crude_protein_min_percent':11.0,'crude_fat_min_percent':7.5,'crude_fiber_max_percent':1.5,'moisture_max_percent':78.0,'ash_max_percent':None,'taurine_min_percent':0.10,'other_printed_guarantees':['DHA 0.07% min']}
-          s['calorie_content']={'kcal_per_kg':1440,'kcal_per_unit':122,'unit':'3 oz can'}
-          s['form']='pate canned wet food'
-          s['source_urls']=list(dict.fromkeys((s.get('source_urls') or [])+['https://www.petco.com/product/blue-buffalo-baby-blue-healthy-growth-formula-natural-chicken-recipe-kitten-pate-wet-food-3-oz-3080448','https://www.chewy.com/blue-buffalo-baby-blue-healthy-growth/dp/502254']))
-          s['source_accessed_at']='2026-08-29'
-          s['conflicts']=['Current ingredient deck, GA and calories are coherent across U.S. retailer sources, but this second pass did not independently retrieve the exact printed AAFCO/nutritional-adequacy statement for UPC 840243134380; keep status conservative until that label statement is directly sourced.']
-          sn=s.get('verification_notes') or []
-          sn.append('2026-08-29 second pass enriched full formula, GA and calories (1440 kcal/kg, 122 kcal/can); retained needs_physical_label solely pending exact nutritional-adequacy statement.')
-          s['verification_notes']=sn
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          cnt=collections.Counter(x.get('research_status') for x in d['records'])
-          print('TOTAL',len(d['records']))
-          print('STATUS',dict(cnt))
-          print('PROMOTED',r['upc'])
-          print('CONFLICT',c['upc'])
-          print('ENRICHED',s['upc'])
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify Baby BLUE salmon and audit kitten wet formulas"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
