@@ -1,67 +1,47 @@
-name: Second-pass enrich Blue Buffalo veterinary cat records
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Enrich veterinary records without over-promoting
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          updates={
-            '840243126279': {
-              'ingredients':'Deboned Chicken, Chicken Meal, Pea Protein, Tapioca Starch, Powdered Cellulose, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed (source of Omega 3 and 6 Fatty Acids), Gelatin, Peas, Calcium Chloride, L-Threonine, Calcium Sulfate, DL-Methionine, Potassium Chloride, Choline Chloride, Cranberries, Dried Chicory Root, Betaine Hydrochloride, Potato Starch, Taurine, Potatoes, Pea Fiber, Alfalfa Nutrient Concentrate, Calcium Carbonate, L-Tryptophan, L-Lysine, Vitamin E Supplement, Sweet Potatoes, Carrots, L-Carnitine, preserved with Mixed Tocopherols, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Vegetable Juice for color, Salt, Niacin (Vitamin B3), Copper Amino Acid Chelate, Blueberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Manganese Amino Acid Chelate, Thiamine Mononitrate (Vitamin B1), L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Biotin (Vitamin B7), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Ferrous Sulfate, Zinc Sulfate, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Copper Sulfate, Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Manganese Sulfate, Calcium Iodate, Sodium Selenite, Oil of Rosemary.',
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petcarerx.com/blue-natural-veterinarian-diet-wu-weight-management-urinary-support-dry-cat-food/38347?sku=58321','https://feederspetsupply.com/blue-natural-veterinary-diet-w-u-weight-management-urinary-care-for-cats-dry/'],
-              'note':'Second pass confirmed exact 16-lb UPC 840243126279, complete current ingredient order, prescription veterinary scope, and AAFCO feeding-test maintenance statement. Complete printed guaranteed analysis and calorie statement were not independently recovered, so status remains needs_physical_label.'
-            },
-            '840243118748': {
-              'ingredients':'Deboned Chicken, Peas, Pea Starch, Potato Starch, Dried Egg Product, Pea Protein, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Flaxseed (source of Omega 3 and 6 Fatty Acids), Powdered Cellulose, Fish Oil (source of DHA-Docosahexaenoic Acid), Potassium Citrate, Calcium Carbonate, DL-Methionine, L-Threonine, Dehydrated Alfalfa Meal, Potatoes, Taurine, Dried Chicory Root, Pea Fiber, Alfalfa Nutrient Concentrate, Choline Chloride, L-Lysine, Turmeric, Vitamin E Supplement, L-Tryptophan, Sweet Potatoes, Carrots, Natural Flavor, L-Carnitine, preserved with Mixed Tocopherols, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Glucosamine Hydrochloride, Vegetable Juice for color, Salt, Chondroitin Sulfate, Niacin (Vitamin B3), Copper Amino Acid Chelate, Blueberries, Cranberries, Barley Grass, Parsley, Dried Kelp, Yucca Schidigera Extract, Manganese Amino Acid Chelate, Thiamine Mononitrate (Vitamin B1), L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Biotin (Vitamin B7), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Ferrous Sulfate, Zinc Sulfate, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Copper Sulfate, Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Copper Amino Acid Chelate, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Manganese Sulfate, Sodium Selenite, Oil of Rosemary, Calcium Iodate.',
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://feederspetsupply.com/blue-natural-veterinary-diet-k-m-kidney-mobility-support-for-cats-dry/','https://www.ebay.com/itm/226009204853'],
-              'note':'Second pass confirmed exact 7-lb UPC 840243118748, complete ingredient order, prescription kidney/mobility scope, and AAFCO feeding-test adult-maintenance statement. Complete printed guaranteed analysis and calorie statement remain unresolved, so status remains needs_physical_label.'
-            }
-          }
-          changed=[]
-          for r in d['records']:
-            u=r.get('upc')
-            if u not in updates: continue
-            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
-            q=updates[u]
-            r['ingredients_verbatim']=q['ingredients']
-            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
-            r['formula_source']='Second-pass current-source verification; exact package identity and full ingredient deck recovered, but contract-complete GA/calories remain unresolved.'
-            r['source_urls']=q['sources']
-            r['source_accessed_at']='2026-08-29'
-            r['verification_notes']=[q['note'],'No missing guaranteed-analysis or calorie values were inferred from related sizes or formulas.']
-            r['conflicts']=['Complete current printed guaranteed analysis and calorie content still require direct label-quality evidence.']
-            changed.append(u)
-          assert len(changed)==2, changed
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          print('PARTIALLY_ENRICHED',len(changed),','.join(changed))
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: enrich two Blue Buffalo veterinary cat records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
