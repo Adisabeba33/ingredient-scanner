@@ -18605,6 +18605,333 @@
           }
         }
       ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013553",
+      "canonical_gtin14": "00818336013553",
+      "barcode_scope": "multipack",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": null,
+          "product_name": "XOXOs Chicken and Tuna Stew",
+          "size": "3 oz can",
+          "quantity": 6,
+          "evidence_status": "unresolved",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-chicken-tuna-stew-variety-pack"
+          ]
+        },
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": null,
+          "product_name": "XOXOs Tuna and Egg Stew",
+          "size": "3 oz can",
+          "quantity": 6,
+          "evidence_status": "unresolved",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-chicken-tuna-stew-variety-pack"
+          ]
+        }
+      ],
+      "brand": "I and love and you",
+      "manufacturer": "I and love and you",
+      "species": "cat",
+      "product_line": "XOXOs",
+      "product_name": "XOXOs Chicken & Tuna Stew Variety Pack",
+      "variant": "3 OZ (12 PACK)",
+      "recipe": [],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ (12 PACK)",
+      "ingredients_verbatim": "Chicken and Tuna Stew: CHICKEN BROTH, CHICKEN, DRIED EGG PRODUCT, TUNA, TAPIOCA STARCH, TRICALCIUM PHOSPHATE, SALT, GUAR GUM, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), CHOLINE CHLORIDE. Tuna and Egg Stew: FISH BROTH, TUNA, DRIED EGG PRODUCT, TAPIOCA STARCH, SUNFLOWER OIL, TRICALCIUM PHOSPHATE, SALT, GUAR GUM, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), CHOLINE CHLORIDE.",
+      "ingredients_ordered_normalized": [
+        "Chicken and Tuna Stew: CHICKEN BROTH, CHICKEN, DRIED EGG PRODUCT, TUNA, TAPIOCA STARCH, TRICALCIUM PHOSPHATE, SALT, GUAR GUM, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), CHOLINE CHLORIDE.",
+        "Tuna and Egg Stew: FISH BROTH, TUNA, DRIED EGG PRODUCT, TAPIOCA STARCH, SUNFLOWER OIL, TRICALCIUM PHOSPHATE, SALT, GUAR GUM, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), CHOLINE CHLORIDE."
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chicken and Tuna Stew crude fat",
+            "basis": "min",
+            "value": 3.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Tuna and Egg Stew crude fat",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1046,
+        "kcal_per_unit": 88,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer product page for exact variety pack; current manufacturer Shopify .js for exact outer barcode/variant.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/xoxo-chicken-tuna-stew-variety-pack",
+        "https://iandloveandyou.com/products/xoxo-chicken-tuna-stew-variety-pack.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013553 exactly to 3 OZ (12 PACK). Outer barcode is not asserted as any child-can barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "2026-08-29: outer barcode 818336013553 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
+        "Manufacturer page explicitly states Chicken & Tuna (6 cans) + Tuna & Egg (6 cans) for the 12-pack. Child physical UPCs are not proven and remain null.",
+        "Structured calorie fields carry Chicken & Tuna Stew 1046 kcal/kg and 88 kcal/can; Tuna & Egg Stew is also printed on the same source at 938 kcal/kg and 79 kcal/can and is preserved here in this verification note."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336012310",
+      "canonical_gtin14": "00818336012310",
+      "barcode_scope": "multipack",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012020",
+          "product_name": "Original Recipe - Chicky Da Lish Stew",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-ninja-cat-jiu-jit-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-chicky-da-lish-stew",
+            "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-chicky-da-lish-stew"
+          ]
+        },
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012037",
+          "product_name": "Original Recipe - Salmon Chanted Evening Stew",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-ninja-cat-jiu-jit-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew"
+          ]
+        },
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012044",
+          "product_name": "Original Recipe - Tuna Fintastic Stew",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-ninja-cat-jiu-jit-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew"
+          ]
+        }
+      ],
+      "brand": "I and love and you",
+      "manufacturer": "I and love and you",
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Cat Can Variety Pack - Ninja Cat Jiu Jit Stew",
+      "variant": "3 OZ CAN (12 PACK)",
+      "recipe": [],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "CHICKY-DA-LISH: CHICKEN, CHICKEN BROTH, VEGETABLE BROTH, CHICKEN LIVER, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, CALCIUM CARBONATE, TAURINE, TRICALCIUM PHOSPHATE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. SALMON CHANTED EVENING: SALMON, SALMON BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, CALCIUM CARBONATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. TUNA FINTASTIC: TUNA, FISH BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, SUNFLOWER OIL, GUAR GUM, DRIED EGG PRODUCT, CALCIUM CARBONATE, SODIUM PHOSPHATE, SALT, TRICALCIUM PHOSPHATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "CHICKY-DA-LISH: CHICKEN, CHICKEN BROTH, VEGETABLE BROTH, CHICKEN LIVER, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, CALCIUM CARBONATE, TAURINE, TRICALCIUM PHOSPHATE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "SALMON CHANTED EVENING: SALMON, SALMON BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, CALCIUM CARBONATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "TUNA FINTASTIC: TUNA, FISH BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, SUNFLOWER OIL, GUAR GUM, DRIED EGG PRODUCT, CALCIUM CARBONATE, SODIUM PHOSPHATE, SALT, TRICALCIUM PHOSPHATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID."
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.0,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Chicky-Da-Lish crude fat",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Salmon Chanted Evening crude fat",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Tuna Fintastic crude fat",
+            "basis": "min",
+            "value": 2.0,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 918,
+        "kcal_per_unit": 78,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer product page for exact variety pack; current manufacturer Shopify .js for exact outer barcode/variant.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-ninja-cat-jiu-jit-stew",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-ninja-cat-jiu-jit-stew.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336012310 exactly to 3 OZ CAN (12 PACK). Outer barcode is not asserted as any child-can barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "2026-08-29: outer barcode 818336012310 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
+        "Manufacturer page explicitly states Chicky-Da-Lish 4 cans + Salmon Chanted Evening 4 cans + Tuna Fintastic 4 cans.",
+        "Structured calorie fields carry Chicky-Da-Lish 918 kcal/kg and 78 kcal/can; same manufacturer page also prints Salmon Chanted Evening 888/75 and Tuna Fintastic 844/72, preserved in this note."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336012303",
+      "canonical_gtin14": "00818336012303",
+      "barcode_scope": "multipack",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010217",
+          "product_name": "Original Recipe - Beef Right Meow! Pâté",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-farm-to-sea",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate",
+            "https://iandloveandyou.com/cdn/shop/files/818336010217_-_Beef_Right_Meow_Pate_3_oz_-_FRONT.png?v=1772660714",
+            "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-beef-right-meow-pate"
+          ]
+        },
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336011900",
+          "product_name": "Original Recipe - Savory Salmon Paté",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-farm-to-sea",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate",
+            "https://iandloveandyou.com/cdn/shop/files/818336011900_-_Savory_Salmon_Pate_3_oz_-_FRONT.png?v=1772660659",
+            "https://www.upcitemdb.com/upc/818336011900"
+          ]
+        },
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336011689",
+          "product_name": "Original Recipe - Purrky Turkey Pâté",
+          "size": "3 oz",
+          "quantity": 4,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-farm-to-sea",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
+            "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
+            "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate"
+          ]
+        }
+      ],
+      "brand": "I and love and you",
+      "manufacturer": "I and love and you",
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Cat Can Variety Pack - Farm To Sea",
+      "variant": "3 OZ CAN (12 PACK)",
+      "recipe": [],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "BEEF RIGHT MEOW: BEEF, BEEF BROTH, BEEF LIVER, CANOLA OIL, NATURAL FLAVOR, GUAR GUM, TRICALCIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, TAURINE, CALCIUM CARBONATE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. SAVORY SALMON: SALMON, CHICKEN, SALMON BROTH, CHICKEN LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. PURRKY TURKEY: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "BEEF RIGHT MEOW: BEEF, BEEF BROTH, BEEF LIVER, CANOLA OIL, NATURAL FLAVOR, GUAR GUM, TRICALCIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, TAURINE, CALCIUM CARBONATE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "SAVORY SALMON: SALMON, CHICKEN, SALMON BROTH, CHICKEN LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "PURRKY TURKEY: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID."
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10.0,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Beef Right Meow crude fat",
+            "basis": "min",
+            "value": 4.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Savory Salmon crude fat",
+            "basis": "min",
+            "value": 5.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Purrky Turkey crude fat",
+            "basis": "min",
+            "value": 5.0,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1082,
+        "kcal_per_unit": 92,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer product page for exact variety pack; current manufacturer Shopify .js for exact outer barcode/variant.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-farm-to-sea",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-farm-to-sea.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336012303 exactly to 3 OZ CAN (12 PACK). Outer barcode is not asserted as any child-can barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "2026-08-29: outer barcode 818336012303 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
+        "Manufacturer page explicitly states Beef Right Meow 4 cans + Savory Salmon 4 cans + Purrky Turkey 4 cans.",
+        "Structured calorie fields carry Beef Right Meow 1082 kcal/kg and 92 kcal/can; same manufacturer page also prints Savory Salmon 1128/96 and Purrky Turkey 1181/100, preserved in this note."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }
