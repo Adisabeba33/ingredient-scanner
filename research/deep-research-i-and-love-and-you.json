@@ -4393,7 +4393,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5381,7 +5382,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5452,7 +5454,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5571,7 +5574,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5684,7 +5688,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5766,7 +5771,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -5846,7 +5852,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -6017,7 +6024,8 @@
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -9708,7 +9716,8 @@
       "verification_notes": [
         "UPC-A check digit validated.",
         "Manufacturer Shopify variant maps barcode 818336013911 to 6 INCH (3 COUNT).",
-        "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred."
+        "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": []
@@ -11253,7 +11262,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336012853 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012723 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012723 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11388,7 +11398,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336012860 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012709 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012709 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11476,7 +11487,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336012877 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012716 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336012716 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11612,7 +11624,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336014604 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014215 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014215 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11711,7 +11724,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336014611 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014222 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014222 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11808,7 +11822,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336014598 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014581 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014581 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -11938,7 +11953,8 @@
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29 multipack contract: outer multipack barcode check digit validated.",
         "Current manufacturer .js maps 818336014635 exactly to 3 OZ POUCH (12 PACK).",
-        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014628 is stored only in standalone_upc."
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Proven matching standalone SKU 818336014628 is stored only in standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12029,7 +12045,8 @@
         "GTIN-14 outer barcode check digit independently validated.",
         "Six 4 oz child bags reconcile to the printed 24 oz / 6 pack outer variant.",
         "Child physical barcode is not asserted from the outer pack; current manufacturer standalone barcode is stored as standalone_upc only.",
-        "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies."
+        "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified"
     },
@@ -12106,7 +12123,8 @@
         "GTIN-14 outer barcode check digit independently validated.",
         "Six 4 oz child bags reconcile to the printed 24 oz / 6 pack outer variant.",
         "Child physical barcode is not asserted from the outer pack; current manufacturer standalone barcode is stored as standalone_upc only.",
-        "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies."
+        "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified"
     },
@@ -12173,7 +12191,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 24 OZ BAG (6 PACK) barcode 10818336012072.",
-        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012075 is stored only as standalone_upc."
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012075 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12744,7 +12763,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012850.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012723 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012723 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12879,7 +12899,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012867.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012709 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012709 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -12967,7 +12988,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012713.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012716 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012716 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13103,7 +13125,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014601.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014215 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014215 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13202,7 +13225,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014618.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014222 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014222 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13299,7 +13323,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014595.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014581 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014581 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -13429,7 +13454,8 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014632.",
-        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014628 is stored only as standalone_upc."
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014628 is stored only as standalone_upc.",
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -15477,7 +15503,8 @@
         "Manufacturer Shopify variant maps barcode 818336013911 to 6 INCH (3 COUNT).",
         "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred.",
         "2026-08-29: current manufacturer Shopify variant proves 10818336013918 = 6 INCH (18 COUNT).",
-        "Pack count 18 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack."
+        "Pack count 18 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16232,7 +16259,9 @@
         "UPC-A check digit validated.",
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013874 = 3 OZ (12 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013874 = 3 OZ (12 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16242,10 +16271,11 @@
           "product_name": "Feed Meow Zen Sardine & Tuna Feast",
           "size": "3 oz pouch",
           "quantity": 12,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/feed-meow-zen-sardine-tuna-feast"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -16325,7 +16355,9 @@
         "UPC-A check digit validated.",
         "AAFCO statement supports all life stages.",
         "Product of Thailand as printed by manufacturer.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013881 = 3 OZ (24 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013881 = 3 OZ (24 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -16335,10 +16367,11 @@
           "product_name": "Feed Meow Zen Sardine & Tuna Feast",
           "size": "3 oz pouch",
           "quantity": 24,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/feed-meow-zen-sardine-tuna-feast"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -16397,13 +16430,16 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013567 = 3 OZ CAN (24 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336013591",
-          "canonical_gtin14": "00818336013591",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Chicken & Tuna Pâté",
           "size": "3 oz",
           "quantity": 12,
@@ -16411,11 +16447,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336013607",
-          "canonical_gtin14": "00818336013607",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Beef & Chicken Pâté",
           "size": "3 oz",
           "quantity": 12,
@@ -16423,7 +16460,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013607_-_XOXOs_Beef_Chicken_Pate_3_oz_-_FRONT.png?v=1762442191"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -16518,13 +16556,16 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013560 = 3 OZ (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336013591",
-          "canonical_gtin14": "00818336013591",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Chicken & Tuna Pâté",
           "size": "3 oz",
           "quantity": 6,
@@ -16532,11 +16573,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336013607",
-          "canonical_gtin14": "00818336013607",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Beef & Chicken Pâté",
           "size": "3 oz",
           "quantity": 6,
@@ -16544,7 +16586,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013607_-_XOXOs_Beef_Chicken_Pate_3_oz_-_FRONT.png?v=1762442191"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -16639,13 +16682,16 @@
         "UPC-A check digit validated.",
         "AAFCO Growth and Maintenance statement supports all life stages.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013546 = 3 OZ (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336013584",
-          "canonical_gtin14": "00818336013584",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Salmon & Tuna Pâté",
           "size": "3 oz",
           "quantity": 6,
@@ -16653,11 +16699,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013584_-_XOXOs_Salmon_Tuna_Pate_3_oz_-_FRONT.png?v=1762442214"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336013577",
-          "canonical_gtin14": "00818336013577",
+          "canonical_gtin14": null,
           "product_name": "XOXOs Whitefish & Tuna Pâté",
           "size": "3 oz",
           "quantity": 6,
@@ -16665,7 +16712,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336013577_-_XOXOs_Whitefish_Tuna_Pate_3oz_-_FRONT.png?v=1762442189"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -16763,13 +16811,16 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013867 = 12 PACK.",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336013843",
-          "canonical_gtin14": "00818336013843",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Immune Support",
           "size": "4 x 0.5 oz",
           "quantity": 4,
@@ -16777,11 +16828,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-immune-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336012112",
-          "canonical_gtin14": "00818336012112",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Digestion Support",
           "size": "4 x 0.5 oz",
           "quantity": 4,
@@ -16789,11 +16841,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-digestion-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-digestion-support-chicken-puree-recipe"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336013829",
-          "canonical_gtin14": "00818336013829",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Skin & Coat Support",
           "size": "4 x 0.5 oz",
           "quantity": 4,
@@ -16801,7 +16854,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-skin-and-coat-support-tuna-puree-recipe"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -16948,13 +17002,16 @@
         "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
         "Repository exclusion scan passed before append.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013864 = 48 PACK.",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336013843",
-          "canonical_gtin14": "00818336013843",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Immune Support",
           "size": "4 x 0.5 oz",
           "quantity": 16,
@@ -16962,11 +17019,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-immune-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336012112",
-          "canonical_gtin14": "00818336012112",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Digestion Support",
           "size": "4 x 0.5 oz",
           "quantity": 16,
@@ -16974,11 +17032,12 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-digestion-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-digestion-support-chicken-puree-recipe"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336013829",
-          "canonical_gtin14": "00818336013829",
+          "canonical_gtin14": null,
           "product_name": "Treat Meow - Skin & Coat Support",
           "size": "4 x 0.5 oz",
           "quantity": 16,
@@ -16986,7 +17045,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
             "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-skin-and-coat-support-tuna-puree-recipe"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -17144,7 +17204,9 @@
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013751 = 9 OZ (4 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013751 = 9 OZ (4 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -17154,10 +17216,11 @@
           "product_name": "Irresist-A-Bowls - Chicken & Duck Recipe",
           "size": "9 oz pouch",
           "quantity": 4,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/irresist-a-bowls-chicken-duck-recipe-1"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -17230,7 +17293,9 @@
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013758 = 9 OZ (8 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013758 = 9 OZ (8 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -17240,10 +17305,11 @@
           "product_name": "Irresist-A-Bowls - Chicken & Duck Recipe",
           "size": "9 oz pouch",
           "quantity": 8,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/irresist-a-bowls-chicken-duck-recipe-1"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -17316,7 +17382,9 @@
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013775 = 9 OZ (4 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336013775 = 9 OZ (4 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -17326,10 +17394,11 @@
           "product_name": "Irresist-A-Bowls - Chicken & Beef Recipe",
           "size": "9 oz pouch",
           "quantity": 4,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/irresist-a-bowls-chicken-beef-recipe"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -17402,7 +17471,9 @@
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013772 = 9 OZ (8 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336013772 = 9 OZ (8 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -17412,10 +17483,11 @@
           "product_name": "Irresist-A-Bowls - Chicken & Beef Recipe",
           "size": "9 oz pouch",
           "quantity": 8,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/irresist-a-bowls-chicken-beef-recipe"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -17477,13 +17549,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336012334 = 13 OZ CAN (6 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010194",
-          "canonical_gtin14": "00818336010194",
+          "canonical_gtin14": null,
           "product_name": "Cluckin' Good Stew",
           "size": "13 oz",
           "quantity": 3,
@@ -17492,11 +17567,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336010187",
-          "canonical_gtin14": "00818336010187",
+          "canonical_gtin14": null,
           "product_name": "Gobble It Up Stew",
           "size": "13 oz",
           "quantity": 3,
@@ -17505,7 +17581,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -17603,13 +17680,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 20818336012338 = 13 OZ (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010194",
-          "canonical_gtin14": "00818336010194",
+          "canonical_gtin14": null,
           "product_name": "Cluckin' Good Stew",
           "size": "13 oz",
           "quantity": 6,
@@ -17618,11 +17698,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336010187",
-          "canonical_gtin14": "00818336010187",
+          "canonical_gtin14": null,
           "product_name": "Gobble It Up Stew",
           "size": "13 oz",
           "quantity": 6,
@@ -17631,7 +17712,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -17729,13 +17811,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336012327 = 13 OZ CAN (6 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
-          "canonical_gtin14": "00818336010170",
+          "canonical_gtin14": null,
           "product_name": "Beef Booyah Stew",
           "size": "13 oz",
           "quantity": 3,
@@ -17744,11 +17829,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336011962",
-          "canonical_gtin14": "00818336011962",
+          "canonical_gtin14": null,
           "product_name": "Moo Moo Venison Stew",
           "size": "13 oz",
           "quantity": 3,
@@ -17757,7 +17843,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -17855,13 +17942,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 20818336012321 = 13 oz (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
-          "canonical_gtin14": "00818336010170",
+          "canonical_gtin14": null,
           "product_name": "Beef Booyah Stew",
           "size": "13 oz",
           "quantity": 6,
@@ -17870,11 +17960,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336011962",
-          "canonical_gtin14": "00818336011962",
+          "canonical_gtin14": null,
           "product_name": "Moo Moo Venison Stew",
           "size": "13 oz",
           "quantity": 6,
@@ -17883,7 +17974,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -18017,7 +18109,9 @@
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336011976 = 13 OZ CAN (12 PACK)."
+        "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336011976 = 13 OZ CAN (12 PACK).",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract repair: inner physical UPC is not proven; child upc/canonical_gtin14 remain null as required by AGENTS.md. Outer barcode and child identity/quantity evidence are retained."
       ],
       "research_status": "source_verified",
       "multipack_contents": [
@@ -18027,10 +18121,11 @@
           "product_name": "Lambarama Stew",
           "size": "13 oz can",
           "quantity": 12,
-          "evidence_status": "unit_not_for_individual_sale",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew"
-          ]
+          ],
+          "upc": null
         }
       ]
     },
@@ -18092,13 +18187,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336012341 = 13 OZ CAN (6 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
-          "canonical_gtin14": "00818336010170",
+          "canonical_gtin14": null,
           "product_name": "Beef Booyah Stew",
           "size": "13 oz",
           "quantity": 3,
@@ -18107,11 +18205,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "10818336011976",
-          "canonical_gtin14": "10818336011976",
+          "canonical_gtin14": null,
           "product_name": "Lambarama Stew",
           "size": "13 OZ CAN (12 PACK)",
           "quantity": 3,
@@ -18122,7 +18221,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -18220,13 +18320,16 @@
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 20818336012345 = 13 OZ (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
-          "canonical_gtin14": "00818336010170",
+          "canonical_gtin14": null,
           "product_name": "Beef Booyah Stew",
           "size": "13 oz",
           "quantity": 6,
@@ -18235,11 +18338,12 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "10818336011976",
-          "canonical_gtin14": "10818336011976",
+          "canonical_gtin14": null,
           "product_name": "Lambarama Stew",
           "size": "13 OZ CAN (12 PACK)",
           "quantity": 6,
@@ -18250,7 +18354,8 @@
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
             "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
             "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -18351,13 +18456,16 @@
         "Calorie cross-check: 1017 kcal/kg × 0.0850486 kg nominal 3 oz can = 86.5 kcal, consistent with printed 86 kcal/can after label rounding.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 818336011764 = 3 OZ CAN (12 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010231",
-          "canonical_gtin14": "00818336010231",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Oh My Cod! Pâté",
           "size": "3 oz",
           "quantity": 4,
@@ -18366,11 +18474,12 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336010231_-_Oh_My_Cod_Pate_3_oz_-_FRONT.png?v=1772660256",
             "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336011689",
-          "canonical_gtin14": "00818336011689",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Purrky Turkey Pâté",
           "size": "3 oz",
           "quantity": 4,
@@ -18379,11 +18488,12 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
             "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336010224",
-          "canonical_gtin14": "00818336010224",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Chicken Me Out Pâté",
           "size": "3 oz",
           "quantity": 4,
@@ -18391,7 +18501,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336010224_-_Chicken_Me_Out_Pate_3_oz_-_FRONT.png?v=1772660529"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -18509,13 +18620,16 @@
         "Calorie cross-check: 1017 kcal/kg × 0.0850486 kg nominal 3 oz can = 86.5 kcal, consistent with printed 86 kcal/can after label rounding.",
         "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
         "2026-08-29: current manufacturer product page and Shopify variant prove outer barcode 10818336011761 = 3oz (48 PACK).",
-        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values."
+        "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
+        "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
+        "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
       ],
-      "research_status": "source_verified",
+      "research_status": "candidate",
       "multipack_contents": [
         {
           "standalone_upc": "818336010231",
-          "canonical_gtin14": "00818336010231",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Oh My Cod! Pâté",
           "size": "3 oz",
           "quantity": 16,
@@ -18524,11 +18638,12 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336010231_-_Oh_My_Cod_Pate_3_oz_-_FRONT.png?v=1772660256",
             "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336011689",
-          "canonical_gtin14": "00818336011689",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Purrky Turkey Pâté",
           "size": "3 oz",
           "quantity": 16,
@@ -18537,11 +18652,12 @@
             "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
             "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate"
-          ]
+          ],
+          "upc": null
         },
         {
           "standalone_upc": "818336010224",
-          "canonical_gtin14": "00818336010224",
+          "canonical_gtin14": null,
           "product_name": "Original Recipe - Chicken Me Out Pâté",
           "size": "3 oz",
           "quantity": 16,
@@ -18549,7 +18665,8 @@
           "source_urls": [
             "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
             "https://iandloveandyou.com/cdn/shop/files/818336010224_-_Chicken_Me_Out_Pate_3_oz_-_FRONT.png?v=1772660529"
-          ]
+          ],
+          "upc": null
         }
       ],
       "component_guaranteed_analyses": [
@@ -18694,7 +18811,8 @@
       "verification_notes": [
         "2026-08-29: outer barcode 818336013553 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
         "Manufacturer page explicitly states Chicken & Tuna (6 cans) + Tuna & Egg (6 cans) for the 12-pack. Child physical UPCs are not proven and remain null.",
-        "Structured calorie fields carry Chicken & Tuna Stew 1046 kcal/kg and 88 kcal/can; Tuna & Egg Stew is also printed on the same source at 938 kcal/kg and 79 kcal/can and is preserved here in this verification note."
+        "Structured calorie fields carry Chicken & Tuna Stew 1046 kcal/kg and 88 kcal/can; Tuna & Egg Stew is also printed on the same source at 938 kcal/kg and 79 kcal/can and is preserved here in this verification note.",
+        "2026-08-29 contract repair: parent crude_fat_min_percent remains null because component recipes print different minimum-fat values; all component-specific printed fat values are retained in other_printed_guarantees/verification notes rather than inventing a false single pack-wide value."
       ],
       "research_status": "source_verified"
     },
@@ -18809,7 +18927,8 @@
       "verification_notes": [
         "2026-08-29: outer barcode 818336012310 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
         "Manufacturer page explicitly states Chicky-Da-Lish 4 cans + Salmon Chanted Evening 4 cans + Tuna Fintastic 4 cans.",
-        "Structured calorie fields carry Chicky-Da-Lish 918 kcal/kg and 78 kcal/can; same manufacturer page also prints Salmon Chanted Evening 888/75 and Tuna Fintastic 844/72, preserved in this note."
+        "Structured calorie fields carry Chicky-Da-Lish 918 kcal/kg and 78 kcal/can; same manufacturer page also prints Salmon Chanted Evening 888/75 and Tuna Fintastic 844/72, preserved in this note.",
+        "2026-08-29 contract repair: parent crude_fat_min_percent remains null because component recipes print different minimum-fat values; all component-specific printed fat values are retained in other_printed_guarantees/verification notes rather than inventing a false single pack-wide value."
       ],
       "research_status": "source_verified"
     },
@@ -18929,7 +19048,8 @@
       "verification_notes": [
         "2026-08-29: outer barcode 818336012303 check digit validated and exact current variant confirmed from manufacturer Shopify .js.",
         "Manufacturer page explicitly states Beef Right Meow 4 cans + Savory Salmon 4 cans + Purrky Turkey 4 cans.",
-        "Structured calorie fields carry Beef Right Meow 1082 kcal/kg and 92 kcal/can; same manufacturer page also prints Savory Salmon 1128/96 and Purrky Turkey 1181/100, preserved in this note."
+        "Structured calorie fields carry Beef Right Meow 1082 kcal/kg and 92 kcal/can; same manufacturer page also prints Savory Salmon 1128/96 and Purrky Turkey 1181/100, preserved in this note.",
+        "2026-08-29 contract repair: parent crude_fat_min_percent remains null because component recipes print different minimum-fat values; all component-specific printed fat values are retained in other_printed_guarantees/verification notes rather than inventing a false single pack-wide value."
       ],
       "research_status": "source_verified"
     }
