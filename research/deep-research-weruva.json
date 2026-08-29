@@ -1,0 +1,1081 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Weruva"
+  ],
+  "created_at": "2026-08-28",
+  "updated_at": "2026-08-28",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "878408002076",
+      "canonical_gtin14": "00878408002076",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Mideast Feast",
+      "variant": "Grilled Tilapia in Gravy",
+      "recipe": [
+        "tuna",
+        "tilapia"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Tuna, Water Sufficient For Processing, Tilapia, Potato Starch, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Vitamin E Supplement, Zinc Sulfate, Thiamine Mononitrate (Vitamin B1), Nicotinic Acid (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Copper Sulfate, Ferrous Sulfate, Folic Acid, Potassium Iodide, Vitamin D3 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Tuna",
+        "Water Sufficient For Processing",
+        "Tilapia",
+        "Potato Starch",
+        "Sunflower Seed Oil",
+        "Calcium Lactate",
+        "Xanthan Gum",
+        "Tricalcium Phosphate",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Nicotinic Acid (Vitamin B3)",
+        "Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Manganese Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Copper Sulfate",
+        "Ferrous Sulfate",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Menadione Sodium Bisulfite Complex (Source Of Vitamin K)",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 1.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 84,
+        "ash_max_percent": 1.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.024,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 746,
+        "kcal_per_unit": 118,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/mideast-feast-cat-can",
+        "https://shop.dogkrazy.com/202385/product/116183/20540606-Weruva_Cat_Mideast_Feast_5_5oz",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Dog Krazy lists the 5.5 oz single item with SKU 878408002076; ADMC independently maps the same UPC to Classic Mideast Feast, unit size 5.5 oz. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 25 × 3 + even-position sum 19 = 94; required check digit 6, matching 6.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002076.",
+        "Calorie arithmetic cross-check: 746 kcal/kg × 5.5 oz (0.1559 kg) = 116.3 kcal; manufacturer prints 118 kcal/5.5 oz can (rounding difference +1.7 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Weruva describes the fish as hand-flaked, so repository texture `flaked` is used."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002045",
+      "canonical_gtin14": "00878408002045",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Mack & Jack",
+      "variant": "Mackerel & Grilled Skipjack in Gravy",
+      "recipe": [
+        "tuna",
+        "mackerel",
+        "skipjack"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Water Sufficient For Processing, Tuna, Mackerel, Skipjack, Sunflower Seed Oil, Locust Bean Gum, Calcium Lactate, Guar Gum, Tricalcium Phosphate, Potassium Chloride, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Thiamine Mononitrate (Vitamin B1), Vitamin A Supplement, Calcium Pantothenate, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Water Sufficient For Processing",
+        "Tuna",
+        "Mackerel",
+        "Skipjack",
+        "Sunflower Seed Oil",
+        "Locust Bean Gum",
+        "Calcium Lactate",
+        "Guar Gum",
+        "Tricalcium Phosphate",
+        "Potassium Chloride",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid (Vitamin B3)",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Vitamin A Supplement",
+        "Calcium Pantothenate",
+        "Manganese Sulfate",
+        "Ferrous Sulfate",
+        "Copper Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Menadione Sodium Bisulfite (Source Of Vitamin K)",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 1.7,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.024,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 774,
+        "kcal_per_unit": 121,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/mack-and-jack-cat-can",
+        "https://www.countrymax.com/weruva-mack-jack-grain-free-canned-cat-food-5-5-ounces/",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "CountryMax identifies the 5.5 oz can with UPC 878408002045; ADMC independently maps that UPC to the 5.5 oz unit. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [
+        "CountryMax's descriptive ingredient copy is an older carrageenan-era formula. Weruva's current page states carrageenan-free and provides the current ingredient panel; retailer is used only for unit UPC identity."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 22 × 3 + even-position sum 19 = 85; required check digit 5, matching 5.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002045.",
+        "Calorie arithmetic cross-check: 774 kcal/kg × 5.5 oz (0.1559 kg) = 120.7 kcal; manufacturer prints 121 kcal/5.5 oz can (rounding difference +0.3 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Weruva describes the fish as hand-flaked, so repository texture `flaked` is used."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002021",
+      "canonical_gtin14": "00878408002021",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Marbella Paella",
+      "variant": "Mackerel, Shrimp & Mussels in Gravy",
+      "recipe": [
+        "mackerel",
+        "shrimp",
+        "squid",
+        "mussel"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Mackerel, Water Sufficient For Processing, Shrimp, Squid, Mussel, Sunflower Seed Oil, Locust Bean Gum, Guar Gum, Potassium Chloride, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Ferrous Sulfate, Canthaxanthin, Pyridoxine Hydrochloride (Vitamin B6), Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Mackerel",
+        "Water Sufficient For Processing",
+        "Shrimp",
+        "Squid",
+        "Mussel",
+        "Sunflower Seed Oil",
+        "Locust Bean Gum",
+        "Guar Gum",
+        "Potassium Chloride",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Manganese Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Ferrous Sulfate",
+        "Canthaxanthin",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Copper Sulfate",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Menadione Sodium Bisulfite (Source Of Vitamin K)",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 1.6,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 86,
+        "ash_max_percent": 2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.03,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 718,
+        "kcal_per_unit": 113,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/marbella-paella-cat-can",
+        "https://alaskamillandfeed.com/shop/8002021/",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Alaska Mill & Feed identifies the 5.5 oz Marbella Paella can with UPC 878408002021; ADMC independently maps the same UPC and unit size. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [
+        "Older retailer/market copies describe Marbella Paella 'in aspic' and show carrageenan. Weruva's current package/page says 'in Gravy' and is carrageenan-free; current manufacturer evidence is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 20 × 3 + even-position sum 19 = 79; required check digit 1, matching 1.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002021.",
+        "Calorie arithmetic cross-check: 718 kcal/kg × 5.5 oz (0.1559 kg) = 112.0 kcal; manufacturer prints 113 kcal/5.5 oz can (rounding difference +1.0 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Current Weruva wording does not name one repository-controlled protein texture unambiguously; texture is null rather than inferred from older 'flakes' copy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002069",
+      "canonical_gtin14": "00878408002069",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Meow Luau",
+      "variant": "Mackerel & Pumpkin in Gravy",
+      "recipe": [
+        "mackerel",
+        "pumpkin"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Mackerel, Water Sufficient For Processing, Pumpkin, Potato Starch, Sunflower Seed Oil, Xanthan Gum, Choline Chloride, Taurine, Tricalcium Phosphate, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Manganese Sulfate, Vitamin A Supplement, Ferrous Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Copper Sulfate, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Sodium Selenite, Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Mackerel",
+        "Water Sufficient For Processing",
+        "Pumpkin",
+        "Potato Starch",
+        "Sunflower Seed Oil",
+        "Xanthan Gum",
+        "Choline Chloride",
+        "Taurine",
+        "Tricalcium Phosphate",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid (Vitamin B3)",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Manganese Sulfate",
+        "Vitamin A Supplement",
+        "Ferrous Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin D3 Supplement",
+        "Copper Sulfate",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Menadione Sodium Bisulfite Complex (Source Of Vitamin K)",
+        "Sodium Selenite",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 1.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 84,
+        "ash_max_percent": 1.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.024,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 733,
+        "kcal_per_unit": 115,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/meow-luau-cat-can",
+        "https://www.bestwest.ca/BWPFSTJAMES/product/715050/27330505-Weruva_Classic_Cat_Meow_Luau_with_Mackerel_Pumpkin_in_Gravy_Wet_Cat_Food_Can_5_5_oz",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Best West lists the exact 5.5 oz single can with SKU 878408002069; ADMC independently maps the same UPC to 5.5 oz Meow Luau. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 24 × 3 + even-position sum 19 = 91; required check digit 9, matching 9.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002069.",
+        "Calorie arithmetic cross-check: 733 kcal/kg × 5.5 oz (0.1559 kg) = 114.3 kcal; manufacturer prints 115 kcal/5.5 oz can (rounding difference +0.7 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Current Weruva wording confirms gravy but does not name a repository-controlled protein texture; texture is null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002014",
+      "canonical_gtin14": "00878408002014",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Outback Grill",
+      "variant": "Sardine and Seabass in Gravy",
+      "recipe": [
+        "sardine",
+        "trevally",
+        "barramundi"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Sardine, Water Sufficient For Processing, Trevally, Barramundi, Sunflower Seed Oil, Locust Bean Gum, Guar Gum, Choline Chloride, Potassium Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3),Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Riboflavin Supplement (Vitamin B2), Ferrous Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin A Supplement, Copper Sulfate, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite (Source Of Vitamin K), Biotin, Sodium Selenite, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Sardine",
+        "Water Sufficient For Processing",
+        "Trevally",
+        "Barramundi",
+        "Sunflower Seed Oil",
+        "Locust Bean Gum",
+        "Guar Gum",
+        "Choline Chloride",
+        "Potassium Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid (Vitamin B3)",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Ferrous Sulfate",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin A Supplement",
+        "Copper Sulfate",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Menadione Sodium Bisulfite (Source Of Vitamin K)",
+        "Biotin",
+        "Sodium Selenite",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 1.4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.03,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 663,
+        "kcal_per_unit": 104,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/outback-grill-cat-can",
+        "https://statelypetsupply.com/products/weruva-cat-5-5oz-can-outback-grill",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Stately Pet Supply identifies a single 5.5 oz Outback Grill can with UPC 878408002014; ADMC independently maps the same UPC to the 5.5 oz unit. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [
+        "Older retailer copies carry a pre-reformulation Outback Grill formula with carrageenan and different GA/calories. Weruva's current page is carrageenan-free and is stored as the current formula."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 19 × 3 + even-position sum 19 = 76; required check digit 4, matching 4.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002014.",
+        "Calorie arithmetic cross-check: 663 kcal/kg × 5.5 oz (0.1559 kg) = 103.4 kcal; manufacturer prints 104 kcal/5.5 oz can (rounding difference +0.6 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "The current page describes pieces in gravy but does not name one repository-controlled protein texture; texture is null rather than inferred.",
+        "The exact manufacturer ingredient renderer contains no space after the comma in 'Nicotinic Acid (Vitamin B3),Thiamine...'; ingredients_verbatim preserves that source text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002113",
+      "canonical_gtin14": "00878408002113",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Paw Lickin' Chicken",
+      "variant": "Chicken Breast in Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Chicken (Boneless, Skinless Breast), Chicken Broth, Potato Starch, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Nicotinic Acid (Vitamin B3), Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin A Supplement, Manganese Sulfate, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Sodium Selenite, Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken (Boneless, Skinless Breast)",
+        "Chicken Broth",
+        "Potato Starch",
+        "Sunflower Seed Oil",
+        "Calcium Lactate",
+        "Xanthan Gum",
+        "Tricalcium Phosphate",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "Nicotinic Acid (Vitamin B3)",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Copper Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin A Supplement",
+        "Manganese Sulfate",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Sodium Selenite",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 1.4,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 85,
+        "ash_max_percent": 1.2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.17,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.018,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 673,
+        "kcal_per_unit": 105,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/paw-lickin-chicken-cat-can",
+        "https://www.countrymax.com/weruva-paw-lickin-chicken-grain-free-canned-cat-food-5-5-ounces/",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "CountryMax identifies the 5.5 oz single can with UPC 878408002113; ADMC independently maps the same UPC to the 5.5 oz unit. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [
+        "CountryMax's ingredient copy is an older formula using 'Water Sufficient For Processing' and other legacy wording. Weruva's current page uses Chicken Broth and the current panel is stored; retailer is used only for the unit UPC."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 19 × 3 + even-position sum 20 = 77; required check digit 3, matching 3.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002113.",
+        "Calorie arithmetic cross-check: 673 kcal/kg × 5.5 oz (0.1559 kg) = 104.9 kcal; manufacturer prints 105 kcal/5.5 oz can (rounding difference +0.1 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Weruva's current package imagery describes shredded boneless chicken; repository texture `shredded` is used."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002083",
+      "canonical_gtin14": "00878408002083",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Polynesian BBQ",
+      "variant": "Grilled Red Bigeye in Gravy",
+      "recipe": [
+        "sardine",
+        "tuna",
+        "red bigeye"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Water Sufficient For Processing, Sardine, Tuna, Red Bigeye, Sunflower Seed Oil, Locust Bean Gum, Guar Gum, Potassium Chloride, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid, Thiamine Mononitrate (Vitamin B1), Vitamin A Supplement, Calcium Pantothenate, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Copper Sulfate, Folic Acid, Potassium Iodide, Vitamin D3 Supplement, Menadione Sodium Bisulfite (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Water Sufficient For Processing",
+        "Sardine",
+        "Tuna",
+        "Red Bigeye",
+        "Sunflower Seed Oil",
+        "Locust Bean Gum",
+        "Guar Gum",
+        "Potassium Chloride",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Vitamin A Supplement",
+        "Calcium Pantothenate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Manganese Sulfate",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Copper Sulfate",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Menadione Sodium Bisulfite (Source Of Vitamin K)",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 1.7,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.03,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 723,
+        "kcal_per_unit": 115,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/polynesian-bbq-cat-can",
+        "https://www.thepetbeastro.com/weruva-classics-canned-cat-food-polynesian-bbq-55.html",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "The Pet Beastro sells Polynesian BBQ as a 5.5 oz single and uses SKU 878408002083; ADMC independently maps the same UPC to the 5.5 oz unit. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [
+        "Some older retailer copies describe this recipe as 'in aspic' and expose legacy case-level codes. Weruva's current package/page says 'in Gravy'; the single-unit UPC 878408002083 is kept distinct from case/multipack identifiers."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 26 × 3 + even-position sum 19 = 97; required check digit 3, matching 3.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002083.",
+        "Calorie arithmetic cross-check: 723 kcal/kg × 5.5 oz (0.1559 kg) = 112.7 kcal; manufacturer prints 115 kcal/5.5 oz can (rounding difference +2.3 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Current Weruva wording confirms gravy but does not name one repository-controlled protein texture; texture is null rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002137",
+      "canonical_gtin14": "00878408002137",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Funky Chunky",
+      "variant": "Chicken Soup with Pumpkin",
+      "recipe": [
+        "chicken",
+        "pumpkin",
+        "carrot",
+        "pea"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Chicken Broth, Chicken (Boneless, Skinless Breast), Pumpkin, Carrot, Pea, Potato Starch, Sunflower Seed Oil, Calcium Lactate, Tricalcium Phosphate, Xanthan Gum, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin A Supplement, Manganese Sulfate, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Sodium Selenite, Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken Broth",
+        "Chicken (Boneless, Skinless Breast)",
+        "Pumpkin",
+        "Carrot",
+        "Pea",
+        "Potato Starch",
+        "Sunflower Seed Oil",
+        "Calcium Lactate",
+        "Tricalcium Phosphate",
+        "Xanthan Gum",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid (Vitamin B3)",
+        "Ferrous Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Copper Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin A Supplement",
+        "Manganese Sulfate",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Sodium Selenite",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 1.2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 87.5,
+        "ash_max_percent": 1.2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.17,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.018,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 618,
+        "kcal_per_unit": 96,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/funky-chunky-cat-can",
+        "https://www.torontopets.ca/products/weruva-wet-cat-food-classic-cat-funky-chunky-chicken-soup-with-pumpkin-canned",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Toronto Pets exposes a distinct 5.5 OZ single variant with barcode 878408002137; ADMC independently maps the same UPC to Classic Funky Chunky, unit size 5.5 oz. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 21 × 3 + even-position sum 20 = 83; required check digit 7, matching 7.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002137.",
+        "Calorie arithmetic cross-check: 618 kcal/kg × 5.5 oz (0.1559 kg) = 96.4 kcal; manufacturer prints 96 kcal/5.5 oz can (rounding difference -0.4 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Weruva's current imagery identifies shredded white breast meat chicken; repository texture `shredded` is used.",
+        "The product is explicitly named 'Chicken Soup with Pumpkin' and begins with Chicken Broth, so repository presentation `in_broth` is used rather than inventing a `soup` value."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002151",
+      "canonical_gtin14": "00878408002151",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Green Eggs & Chicken",
+      "variant": "Chicken & Egg in Pea Soup",
+      "recipe": [
+        "chicken",
+        "egg",
+        "pea"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Chicken (Boneless, Skinless), Chicken Broth, Egg, Potato Starch, Pea, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Vitamin A Supplement, Copper Sulfate, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Folic Acid, Vitamin D3 Supplement, Potassium Iodide, Sodium Selenite, Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken (Boneless, Skinless)",
+        "Chicken Broth",
+        "Egg",
+        "Potato Starch",
+        "Pea",
+        "Sunflower Seed Oil",
+        "Calcium Lactate",
+        "Xanthan Gum",
+        "Tricalcium Phosphate",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Nicotinic Acid (Vitamin B3)",
+        "Ferrous Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Folic Acid",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide",
+        "Sodium Selenite",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 1.6,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 85,
+        "ash_max_percent": 1.2,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.018,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 752,
+        "kcal_per_unit": 117,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/green-eggs-and-chicken-cat-can",
+        "https://www.thepetbeastro.com/weruva-classics-canned-cat-food-green-eggs-chicken.html",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "The Pet Beastro identifies Green Eggs & Chicken as a 5.5 oz single with SKU 878408002151; ADMC independently maps the same UPC and unit size. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 23 × 3 + even-position sum 20 = 89; required check digit 1, matching 1.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002151.",
+        "Calorie arithmetic cross-check: 752 kcal/kg × 5.5 oz (0.1559 kg) = 117.3 kcal; manufacturer prints 117 kcal/5.5 oz can (rounding difference -0.3 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "The title says 'Chicken & Egg in Pea Soup' and the formula contains Chicken Broth; repository presentation `in_broth` is used. Current page does not name a controlled protein texture, so texture is null."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "878408002120",
+      "canonical_gtin14": "00878408002120",
+      "barcode_scope": "individual_unit",
+      "brand": "Weruva",
+      "manufacturer": "Weruva",
+      "species": "cat",
+      "product_line": "Classic Cat",
+      "product_name": "Weruva Classic Cat Grandma's Chicken Soup",
+      "variant": "Chicken & Veggies",
+      "recipe": [
+        "chicken",
+        "pumpkin",
+        "carrot",
+        "pea"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "can",
+      "size": "5.5 oz",
+      "ingredients_verbatim": "Chicken Broth, Chicken (Boneless, Skinless Breast), Pumpkin, Carrot, Pea, Tapioca Starch, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Nicotinic Acid (Vitamin B3), Calcium Pantothenate, Thiamine Mononitrate (Vitamin B1), Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin A Supplement, Manganese Sulfate, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Sodium Selenite, Biotin, Vitamin B12 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken Broth",
+        "Chicken (Boneless, Skinless Breast)",
+        "Pumpkin",
+        "Carrot",
+        "Pea",
+        "Tapioca Starch",
+        "Sunflower Seed Oil",
+        "Calcium Lactate",
+        "Xanthan Gum",
+        "Tricalcium Phosphate",
+        "Choline Chloride",
+        "Taurine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "Nicotinic Acid (Vitamin B3)",
+        "Calcium Pantothenate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Copper Sulfate",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin A Supplement",
+        "Manganese Sulfate",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Potassium Iodide",
+        "Sodium Selenite",
+        "Biotin",
+        "Vitamin B12 Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 1.2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 87.5,
+        "ash_max_percent": 1,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "max",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "max",
+            "value": 0.17,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Magnesium",
+            "basis": "max",
+            "value": 0.018,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 683,
+        "kcal_per_unit": 106,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Weruva product page for exact Classic Cat recipe, ingredient order, guaranteed analysis, calories, 5.5 oz size availability, and adult lifestage; exact-size retailer plus ADMC distributor listing used to corroborate the individual-unit UPC.",
+      "source_urls": [
+        "https://www.weruva.com/products/grandmas-chicken-soup-cat-can",
+        "https://shop.earthwisepetmadison.com/product/586560/24829992-Weruva_Grandma_s_Chicken_Soup_Cat_Food_5_5oz_Can",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "EarthWise Pet identifies the exact 5.5 oz can with SKU 878408002120; ADMC independently maps the same UPC to Classic Grandma's Chicken Soup, unit size 5.5 oz. The 12-digit UPC-A was retained exactly and zero-left-padded only for canonical GTIN-14.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: odd-position sum 20 × 3 + even-position sum 20 = 80; required check digit 0, matching 0.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits: 00878408002120.",
+        "Calorie arithmetic cross-check: 683 kcal/kg × 5.5 oz (0.1559 kg) = 106.5 kcal; manufacturer prints 106 kcal/5.5 oz can (rounding difference -0.5 kcal).",
+        "Current Weruva page confirms 5.5 oz can availability, the complete ingredient order, complete printed guaranteed analysis shown on the page, calorie content, and Adult lifestage.",
+        "Repository exclusion sources and all existing brand ledgers were checked before append; no Weruva or matching 878408 UPC was found in the checked research ledgers.",
+        "Weruva's own nutrition comparison identifies Protein Texture as Shredded; repository texture `shredded` is used.",
+        "Current description says the ingredients are in a savory broth; repository presentation `in_broth` is used."
+      ],
+      "research_status": "source_verified"
+    }
+  ]
+}
