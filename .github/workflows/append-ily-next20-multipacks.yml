@@ -1,0 +1,23 @@
+name: Append next 20 ILY multipacks
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths: [.github/workflows/append-ily-next20-multipacks.yml]
+permissions:
+  contents: write
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+          fetch-depth: 0
+      - run: python .github/scripts/append-ily-next20-multipacks.py
+      - run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-i-and-love-and-you.json
+          git diff --cached --check
+          git commit -m "research: add next 20 current ILY multipacks"
+          git push origin HEAD:agent/deep-research-i-and-love-and-you
