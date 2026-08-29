@@ -1,47 +1,43 @@
-name: Run Royal Canin cats 120-140 merge
-
+name: Update research multipack schema contract
 on:
   push:
-    branches:
-      - agent/deep-research-barcode-ledger
-    paths:
-      - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
-
+    branches: [agent/deep-research-barcode-ledger]
+    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
 permissions:
   contents: write
-
 jobs:
-  merge:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Patch AGENTS multipack contract
         run: |
           python - <<'PY'
           from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          p=Path('research/AGENTS.md')
+          s=p.read_text(encoding='utf-8')
+          anchor='- Set `barcode_scope` honestly: `individual_unit`, `multipack`, `case`, `tray`, or `unknown`.\n'
+          insert='''- Set `barcode_scope` honestly: `individual_unit`, `multipack`, `case`, `tray`, or `unknown`.\n- Every `multipack`, `case`, or `tray` record must also describe its proven child sellable units in `multipack_contents`. Never treat the outer barcode as an inner-unit barcode.\n- For each child component, record its exact UPC when proven, product identity, printed size, quantity in the outer pack, and evidence status. If the child UPC is not proven, store `upc: null`; never infer it from neighboring products or from the outer code.\n- When an outer pack contains several flavors/recipes, list each distinct child component separately. If the same child appears multiple times, use `quantity` rather than duplicating rows.\n- `multipack_contents` is an empty array for true individual-unit records.\n'''
+          assert anchor in s
+          s=s.replace(anchor,insert,1)
+          schema_anchor='  "barcode_scope": "individual_unit | multipack | case | tray | unknown",\n'
+          schema_insert='''  "barcode_scope": "individual_unit | multipack | case | tray | unknown",\n  "multipack_contents": [\n    {\n      "upc": "zero-padded child UPC string or null",\n      "canonical_gtin14": "14-digit child GTIN or null",\n      "product_name": "exact child product identity",\n      "size": "printed child-unit size or null",\n      "quantity": 1,\n      "evidence_status": "verified | unresolved",\n      "source_urls": ["direct URL proving child identity/UPC or pack contents"]\n    }\n  ],\n'''
+          assert schema_anchor in s
+          s=s.replace(schema_anchor,schema_insert,1)
+          val_anchor='- `source_urls`, `conflicts`, and `verification_notes` are arrays.\n'
+          val_insert='''- `source_urls`, `conflicts`, and `verification_notes` are arrays.\n- `multipack_contents` is an array on every record; it is empty for `individual_unit`. For `multipack`, `case`, and `tray`, quantities must reconcile with the documented pack count when that count is known.\n- Every non-null child UPC in `multipack_contents` has a valid check digit, canonical GTIN-14, and does not conflict with the stated child identity.\n'''
+          assert val_anchor in s
+          s=s.replace(val_anchor,val_insert,1)
+          p.write_text(s,encoding='utf-8')
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit contract
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
+          git show HEAD^:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/AGENTS.md .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: require multipack child barcode mapping"
           git push origin HEAD:agent/deep-research-barcode-ledger
