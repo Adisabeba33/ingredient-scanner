@@ -1,78 +1,47 @@
-name: Append Blue Buffalo Tastefuls batch 20
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
-env:
-  BATCH_ZLIB_B64: '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'
-
 jobs:
-  append:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Append validated Tastefuls batch
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import base64,json,os,zlib
           from pathlib import Path
-          data=json.loads(zlib.decompress(base64.b64decode(os.environ['BATCH_ZLIB_B64'])).decode())
-          formulas=data['formulas']; items=data['items']
-          def split_top(s):
-              out=[]; cur=''; depth=0
-              for ch in s:
-                  if ch=='(': depth+=1
-                  elif ch==')': depth=max(0,depth-1)
-                  if ch==',' and depth==0:
-                      out.append(cur.strip().rstrip('.')); cur=''
-                  else: cur+=ch
-              if cur.strip(): out.append(cur.strip().rstrip('.'))
-              return out
-          def upc_sum(u): return sum((3 if i%2==0 else 1)*int(d) for i,d in enumerate(u[:11]))
-          batch=[]
-          for upc,size,key,status,note in items:
-              F=formulas[key]; g=F['ga']; s=upc_sum(upc)
-              assert len(upc)==12 and upc.isdigit() and (10-s%10)%10==int(upc[-1]), upc
-              others=[{'nutrient':x[0],'basis':x[1],'value':x[2],'unit':x[3]} for x in g[6]]
-              batch.append({'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':'Tastefuls','product_name':'BLUE '+F['variant']+' Dry Cat Food','variant':F['variant'],'recipe':F['recipe'],'life_stage':F['life'],'food_form':F['form'],'texture':F['texture'],'presentation':F['presentation'],'package_type':F['package'],'size':size,'ingredients_verbatim':F['ingredients'],'ingredients_ordered_normalized':split_top(F['ingredients']),'guaranteed_analysis':{'crude_protein_min_percent':g[0],'crude_fat_min_percent':g[1],'crude_fiber_max_percent':g[2],'moisture_max_percent':g[3],'ash_max_percent':g[4],'taurine_min_percent':g[5],'other_printed_guarantees':others},'calorie_content':{'kcal_per_kg':F['cal'][0],'kcal_per_unit':F['cal'][1],'unit_name':F['cal'][2]},'label_deck_code':None,'formula_source':'Blue Buffalo current qualifying-products list establishes exact UPC and package size. Current Chewy exact-size page is used where available; otherwise the current recipe-family page is retained only as a candidate formula pending physical-label confirmation.','source_urls':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/',F['url']],'source_accessed_at':'2026-08-29','barcode_notes':f'Blue Buffalo current official qualifying-products list maps UPC {upc} to this exact individual {size} cat-food bag; not a case or multipack code.','conflicts':[] if status=='source_verified' else ['Current exact UPC/size is verified, but a complete exact-size current formula page was not independently resolved; physical label is required before catalog promotion.'],'verification_notes':[f'UPC-A check digit validated for {upc}; canonical GTIN-14 is {upc.zfill(14)}.',note,'Formula generations were not silently merged. The current 10-lb Active Adult formula is stored separately from the current 3/7/15-lb generation.','No ash guarantee or label/deck code was inferred.'],'research_status':status})
-          assert len(batch)==20 and len({r['upc'] for r in batch})==20
-          target=Path('research/deep-research-blue-buffalo.json')
-          ledger=json.loads(target.read_text(encoding='utf-8'))
-          upcs=[r['upc'] for r in batch]
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
-          paths += [p for p in Path('research').glob('deep-research-*.json') if p!=target]
-          for p in paths:
-              if p.exists():
-                  txt=p.read_text(encoding='utf-8',errors='ignore')
-                  hits=[u for u in upcs if u in txt]
-                  assert not hits, f'duplicates in {p}: {hits}'
-          existing={r['upc'] for r in ledger['records']}
-          assert not existing.intersection(upcs), sorted(existing.intersection(upcs))
-          before=len(ledger['records'])
-          ledger['records'].extend(batch)
-          ledger['updated_at']='2026-08-29'
-          assert len(ledger['records'])==before+20
-          assert len({r['upc'] for r in ledger['records']})==len(ledger['records'])
-          target.write_text(json.dumps(ledger,separators=(',',':'),ensure_ascii=False)+'\n',encoding='utf-8')
-          print(f'APPEND_OK before={before} added=20 after={len(ledger["records"])} verified={sum(r["research_status"]=="source_verified" for r in batch)} needs={sum(r["research_status"]=="needs_physical_label" for r in batch)}')
-          print('UPCS='+','.join(upcs))
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit ledger
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git diff --cached --quiet && { echo "No target changes"; exit 1; }
-          git commit -m "research: add 20 more Blue Buffalo Tastefuls records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
