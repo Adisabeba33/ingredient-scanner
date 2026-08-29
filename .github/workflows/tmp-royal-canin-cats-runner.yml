@@ -24,27 +24,26 @@ jobs:
           ('840243134380','Baby BLUE','Kitten Chicken Recipe','kitten','wet','can','3 oz (85 g)',['chicken']),
           ('840243134687','Baby BLUE','Grain-Free High Protein Kitten Chicken Recipe','kitten','dry','bag','4.5 lb (2.04 kg)',['chicken']),
           ('840243135141','Baby BLUE','Grain-Free High Protein Kitten Chicken Recipe','kitten','dry','bag','2 lb (0.91 kg)',['chicken']),
-          ('840243155507','Tastefuls','Multi-Protein Adult Salmon & Fish Recipe','adult','dry','bag','7 lb (3.18 kg)',['salmon','fish']),
-          ('840243155491','Tastefuls','Multi-Protein Adult Chicken & Turkey Recipe','adult','dry','bag','7 lb (3.18 kg)',['chicken','turkey']),
-          ('840243109982','Wilderness Wild Delights','Kitten Chicken & Trout Flaked','kitten','wet','can','5.5 oz (156 g)',['chicken','trout']),
-          ('840243103720','Wilderness Wild Delights','Adult Chicken & Turkey Minced','adult','wet','can','5.5 oz (156 g)',['chicken','turkey']),
-          ('859610007127','Wilderness Wild Delights','Adult Chicken & Turkey Meaty','adult','wet','can','5.5 oz (156 g)',['chicken','turkey']),
-          ('840243101870','Wilderness Wild Delights','Adult Chicken & Turkey Flaked','adult','wet','can','5.5 oz (156 g)',['chicken','turkey']),
-          ('840243103737','Wilderness Wild Delights','Adult Chicken & Trout Minced','adult','wet','can','5.5 oz (156 g)',['chicken','trout']),
-          ('859610007080','Wilderness Wild Delights','Adult Chicken & Trout Meaty','adult','wet','can','5.5 oz (156 g)',['chicken','trout']),
-          ('840243101863','Wilderness Wild Delights','Adult Chicken & Trout Flaked','adult','wet','can','5.5 oz (156 g)',['chicken','trout']),
-          ('859610007103','Wilderness Wild Delights','Adult Chicken & Salmon Meaty','adult','wet','can','5.5 oz (156 g)',['chicken','salmon']),
-          ('840243103683','Wilderness Rocky Mountain Recipe','Adult Trout Flaked','adult','wet','can','5.5 oz (156 g)',['trout']),
-          ('840243103669','Wilderness Rocky Mountain Recipe','Adult Red Meat Flaked','adult','wet','can','5.5 oz (156 g)',['red meat']),
-          ('840243101955','Wilderness Rocky Mountain Recipe','Adult Red Meat Recipe','adult','wet','can','5.5 oz (156 g)',['red meat']),
-          ('859610008964','Wilderness','Mature Chicken Recipe','senior','wet','can','3 oz (85 g)',['chicken']),
-          ('840243101856','Wilderness','Mature Chicken Recipe','senior','wet','can','5.5 oz (156 g)',['chicken'])]
+          ('840243110070','Wild Cuts Tasty Toppers','Tasty Salmon Morsels in Savory Gravy','adult','wet','pouch',None,['salmon']),
+          ('840243110063','Wild Cuts Tasty Toppers','Tasty Duck Morsels in Savory Gravy','adult','wet','pouch',None,['duck']),
+          ('840243110056','Wild Cuts Tasty Toppers','Tasty Chicken Morsels in Savory Gravy','adult','wet','pouch',None,['chicken']),
+          ('840243126279','Natural Veterinary Diet','WU Weight Management + Urinary Care Chicken','adult','dry','bag','16 lb (7.3 kg)',['chicken']),
+          ('840243118748','Natural Veterinary Diet','KM Kidney + Mobility Support Chicken','adult','dry','bag','7 lb (3.2 kg)',['chicken']),
+          ('840243117963','Natural Veterinary Diet','WU Weight Management + Urinary Care','adult','dry','bag',None,[]),
+          ('840243122202','Natural Veterinary Diet','NP Novel Protein Cat Wet','adult','wet','can','5.5 oz (156 g)',[]),
+          ('840243120048','Natural Veterinary Diet','KM Kidney + Mobility Support Cat Wet','adult','wet','can',None,[]),
+          ('840243116805','Natural Veterinary Diet','HF Hydrolyzed for Food Intolerance Salmon','adult','dry','bag',None,['salmon']),
+          ('840243116799','Natural Veterinary Diet','GI Gastrointestinal Support Chicken','adult','dry','bag','7 lb (3.2 kg)',['chicken']),
+          ('840243118038','Natural Veterinary Diet','WU Weight Management + Urinary Care','adult','wet','can',None,[]),
+          ('840243118731','Natural Veterinary Diet','NP Novel Protein Alligator','adult','dry','bag','7 lb (3.2 kg)',['alligator']),
+          ('840243120024','Natural Veterinary Diet','HF Hydrolyzed for Food Intolerance','adult','wet','can',None,[]),
+          ('840243117994','Natural Veterinary Diet','GI Gastrointestinal Support','adult','wet','can',None,[]),
+          ('859610006243','Basics','LID Grain-Free Indoor Adult Duck Recipe','adult','wet','can','3 oz (85 g)',['duck'])]
           def valid(u):
               if len(u)!=12 or not u.isdigit(): return False
               s=sum((3 if i%2==0 else 1)*int(d) for i,d in enumerate(u[:11])); return (10-s%10)%10==int(u[-1])
           assert len(items)==20 and len({x[0] for x in items})==20 and all(valid(x[0]) for x in items)
-          target=Path('research/deep-research-blue-buffalo.json'); ledger=json.loads(target.read_text())
-          upcs=[x[0] for x in items]
+          target=Path('research/deep-research-blue-buffalo.json'); ledger=json.loads(target.read_text()); upcs=[x[0] for x in items]
           paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
           paths += [p for p in Path('research').glob('deep-research-*.json') if p!=target]
           for p in paths:
@@ -54,12 +53,11 @@ jobs:
           official='https://www.bluebuffalo.com/incentive-requests/qualifying-products/'
           batch=[]
           for upc,line,var,life,form,pkg,size,recipe in items:
-              batch.append({'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':line,'product_name':f'BLUE {line} {var}','variant':var,'recipe':recipe,'life_stage':life,'food_form':form,'texture':None,'presentation':None,'package_type':pkg,'size':size,'ingredients_verbatim':'','ingredients_ordered_normalized':[],'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,'formula_source':'Blue Buffalo current qualifying-products list establishes current/qualifying product and UPC identity. Complete current formula deck was not combined from potentially different generations; formula fields remain unresolved pending one coherent current label.','source_urls':[official],'source_accessed_at':'2026-08-29','barcode_notes':f'Blue Buffalo current qualifying-products list includes UPC {upc} for this cat-food SKU; UPC-A check digit validated.','conflicts':['Complete current formula-generation evidence remains incomplete; no historical ingredient/GA/calorie deck was silently substituted.'],'verification_notes':[f'UPC-A check digit validated for {upc}; canonical GTIN-14 is {upc.zfill(14)}.','Repository-wide mandatory exclusion scan completed before append.','Blue Buffalo current qualifying-products list includes this SKU as of 2026-08-29.','Formula fields intentionally remain unresolved until one coherent current label deck including ingredients, guarantees and calories can be proven.'],'research_status':'needs_physical_label'})
+              batch.append({'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':line,'product_name':f'BLUE {line} {var}','variant':var,'recipe':recipe,'life_stage':life,'food_form':form,'texture':None,'presentation':None,'package_type':pkg,'size':size,'ingredients_verbatim':'','ingredients_ordered_normalized':[],'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,'formula_source':'Blue Buffalo current qualifying-products list establishes current/qualifying product and UPC identity. Complete current label deck was not combined from potentially different formula generations.','source_urls':[official],'source_accessed_at':'2026-08-29','barcode_notes':f'Blue Buffalo current qualifying-products list includes UPC {upc} for this cat-food SKU; UPC-A check digit validated.','conflicts':['Complete current formula-generation evidence remains incomplete; no historical ingredient/GA/calorie deck was silently substituted.'],'verification_notes':[f'UPC-A check digit validated for {upc}; canonical GTIN-14 is {upc.zfill(14)}.','Repository-wide mandatory exclusion scan completed before append.','Blue Buffalo current qualifying-products list includes this SKU as of 2026-08-29.','Unresolved size/recipe fields are left null/empty rather than inferred where the official description is truncated.','Formula fields intentionally remain unresolved until one coherent current label deck including ingredients, guarantees and calories can be proven.'],'research_status':'needs_physical_label'})
           before=len(ledger['records']); ledger['records'].extend(batch); ledger['updated_at']='2026-08-29'
           assert len(ledger['records'])==before+20 and len({r['upc'] for r in ledger['records']})==len(ledger['records'])
           target.write_text(json.dumps(ledger,separators=(',',':'),ensure_ascii=False)+'\n',encoding='utf-8')
-          print(f'APPEND_OK before={before} added=20 after={len(ledger["records"])} verified=0 needs=20')
-          print('UPCS='+','.join(upcs))
+          print(f'APPEND_OK before={before} added=20 after={len(ledger["records"])} verified=0 needs=20'); print('UPCS='+','.join(upcs))
           PY
       - name: Restore runner and commit ledger
         run: |
