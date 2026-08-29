@@ -1,73 +1,47 @@
-name: Second-pass verify Blue Buffalo True Solutions dry cat records
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote verified True Solutions dry records
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          updates={
-            '840243135219': {
-              'ingredients':'Deboned Chicken, Chicken Meal, Brown Rice, Pea Protein, Barley, Dried Egg Product, Oatmeal, Chicken Fat (preserved with Mixed Tocopherols), Potato Starch, Dried Plain Beet Pulp, Flaxseed (source of Omega 3 Fatty Acids), Natural Flavor, Dried Tomato Pomace, Peas, Calcium Chloride, Choline Chloride, DL-Methionine, Calcium Sulfate, L-Threonine, Calcium Carbonate, Canola Oil (source of Omega 6 Fatty Acids), Potassium Chloride, Potatoes, Hydrolyzed Yeast, Fructooligosaccharides, Potassium Sulfate, Taurine, Dehydrated Alfalfa Meal, Pea Fiber, Alfalfa Nutrient Concentrate, Salt, Vitamin E Supplement, preserved with Mixed Tocopherols, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), L-Tryptophan, Vegetable Juice for color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Blueberries, Cranberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, Biotin (Vitamin B7), L-Lysine, Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Calcium Iodate, Sodium Selenite, Oil of Rosemary.',
-              'ga':(34,16,4,9),'kcalkg':3749,'kcalcup':419,
-              'other':['Vitamin E 300 IU/kg min','Taurine 0.2% min','Omega 3 Fatty Acids 0.5% min','Omega 6 Fatty Acids 2.75% min','Ascorbic Acid 100 mg/kg min'],
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/blue-buffalo-true-solutions-blissful/dp/244841','https://petgoods.com/products/blue-true-solutions-blissful-belly-adult-cats-digestive-care-formula','https://www.pet-go-round.com/products/blue-buffalo-true-solutions-blissful-belly-natural-digestive-care-chicken-recipe-adult-dry-cat-food'],
-              'note':'Exact UPC 840243135219 is current for the 11-lb adult cat SKU. Current Chewy and Pet Goods agree on formula, 34/16/4/9 GA and 3,749 kcal/kg / 419 kcal/cup. Pet Goods states formulation meets AAFCO Cat Food Nutrient Profiles for maintenance; Pet-Go-Round independently binds barcode 840243135219 to the 11-lb SKU.'},
-            '840243135240': {
-              'ingredients':'Salmon, Salmon Meal, Brown Rice, Pea Protein, Barley, Oatmeal, Canola Oil, Natural Flavor, Potato Starch, Dried Tomato Pomace, Peas, Calcium Carbonate, Choline Chloride, Calcium Sulfate, DL-Methionine, Fish Oil (source of Omega 3 Fatty Acids), L-Threonine, Calcium Chloride, Potatoes, Pumpkin, Dried Chicory Root, Taurine, Potassium Chloride, Potassium Sulfate, Flaxseed (source of Omega 6 Fatty Acids), Pea Fiber, Alfalfa Nutrient Concentrate, Salt, Dried Plain Beet Pulp, Dicalcium Phosphate, L-Tryptophan, Vitamin E Supplement, preserved with Mixed Tocopherols, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), Vegetable Juice for color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Blueberries, Cranberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, L-Lysine, Biotin (Vitamin B7), Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Calcium Iodate, Sodium Selenite, Oil of Rosemary.',
-              'ga':(32,15,4,9),'kcalkg':3714,'kcalcup':415,
-              'other':['Taurine 0.2% min','Omega 3 Fatty Acids 1.25% min','Omega 6 Fatty Acids 2.5% min','Ascorbic Acid 100 mg/kg min'],
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-80265241','https://www.1800petmeds.com/cat/food/product/blue-buffalo-true-solutions-perfect-coat-skin-coat-dry/66827.html','https://www.pawdiet.com/reviews/blue-buffalo-true-solutions-perfect-coat-skin-coat-care-formula-for-cats-dry-cat-food/'],
-              'note':'Target binds exact UPC 840243135240 to the 11-lb adult cat SKU and provides the current ingredient deck. 1800PetMeds independently matches the formula and supplies 32/15/4/9 GA plus 3,714 kcal/kg / 415 kcal/cup. PawDiet reproduces the AAFCO adult-maintenance adequacy statement.'}
-          }
-          promoted=[]
-          for r in d['records']:
-            u=r.get('upc')
-            if u not in updates: continue
-            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
-            q=updates[u]
-            r['ingredients_verbatim']=q['ingredients']
-            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
-            pr,fa,fi,mo=q['ga']
-            r['guaranteed_analysis']={'crude_protein_min_percent':pr,'crude_fat_min_percent':fa,'crude_fiber_max_percent':fi,'moisture_max_percent':mo,'ash_max_percent':None,'taurine_min_percent':0.2,'other_printed_guarantees':q['other']}
-            r['calorie_content']={'kcal_per_kg':q['kcalkg'],'kcal_per_unit':q['kcalcup'],'unit_name':'cup'}
-            r['formula_source']='Second-pass current-source verification using exact UPC identity and current U.S. retail label data.'
-            r['source_urls']=q['sources']
-            r['source_accessed_at']='2026-08-29'
-            r['conflicts']=[]
-            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case or multipack UPC substitution was used.']
-            r['research_status']='source_verified'
-            promoted.append(u)
-          assert len(promoted)==2, promoted
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          print('PROMOTED',len(promoted),','.join(promoted))
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify two Blue Buffalo True Solutions dry cat records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
