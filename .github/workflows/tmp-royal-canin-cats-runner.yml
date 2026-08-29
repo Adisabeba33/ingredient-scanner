@@ -1,47 +1,38 @@
-name: Run Royal Canin cats 120-140 merge
+name: Inspect Blue Buffalo Wild Cuts records
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  inspect:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Inspect records
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          d=json.load(open('research/deep-research-blue-buffalo.json',encoding='utf-8'))
+          for u in ['840243110056','840243110063','840243110070']:
+            r=next(x for x in d['records'] if x.get('upc')==u)
+            print('RECORD',u,json.dumps(r,ensure_ascii=False,indent=2))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "chore: restore research runner"
+          git push origin HEAD:agent/deep-research-blue-buffalo
