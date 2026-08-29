@@ -16396,32 +16396,47 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "3 OZ CAN (24 PACK)",
-      "ingredients_verbatim": "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). | XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE.",
+      "ingredients_verbatim": "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE.",
       "ingredients_ordered_normalized": [
-        "XOXOs Chicken & Tuna Pâté: CHICKEN > CHICKEN BROTH > TUNA > TAPIOCA STARCH > SALT > TRICALCIUM PHOSPHATE > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > MAGNESIUM SULFATE > POTASSIUM CHLORIDE > CELERY POWDER > TAURINE > CHOLINE CHLORIDE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))",
-        "XOXOs Beef & Chicken Pâté: BEEF BROTH > BEEF > CHICKEN > TUNA > TAPIOCA STARCH > SALT > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > CHOLINE CHLORIDE > POTASSIUM CHLORIDE > CELERY POWDER > TAURINE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)) > MAGNESIUM SULFATE"
+        "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)).",
+        "XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "XOXOs Chicken & Tuna Pâté taurine_min_percent",
+            "basis": "min",
+            "value": 0.05,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "XOXOs Beef & Chicken Pâté taurine_min_percent",
+            "basis": "min",
+            "value": 0.07,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 868,
+        "kcal_per_unit": 72,
+        "unit_name": "can"
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/xoxo-chicken-beef-pate-variety-pack",
         "https://iandloveandyou.com/products/xoxo-chicken-beef-pate-variety-pack.js",
         "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
-        "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189"
+        "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189",
+        "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336013607_-_XOXOs_Beef_Chicken_Pate_3_oz_-_FRONT.png?v=1762442191"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013567 exactly to 3 OZ CAN (24 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -16433,9 +16448,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: XOXOs Chicken & Tuna Pâté: 868 kcal/kg, 72 kcal/can; XOXOs Beef & Chicken Pâté: 868 kcal/kg, 72 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336013591",
@@ -16522,32 +16540,47 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "3 OZ (12 PACK)",
-      "ingredients_verbatim": "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). | XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE.",
+      "ingredients_verbatim": "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE.",
       "ingredients_ordered_normalized": [
-        "XOXOs Chicken & Tuna Pâté: CHICKEN > CHICKEN BROTH > TUNA > TAPIOCA STARCH > SALT > TRICALCIUM PHOSPHATE > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > MAGNESIUM SULFATE > POTASSIUM CHLORIDE > CELERY POWDER > TAURINE > CHOLINE CHLORIDE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))",
-        "XOXOs Beef & Chicken Pâté: BEEF BROTH > BEEF > CHICKEN > TUNA > TAPIOCA STARCH > SALT > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > CHOLINE CHLORIDE > POTASSIUM CHLORIDE > CELERY POWDER > TAURINE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)) > MAGNESIUM SULFATE"
+        "XOXOs Chicken & Tuna Pâté: CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)).",
+        "XOXOs Beef & Chicken Pâté: BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "XOXOs Chicken & Tuna Pâté taurine_min_percent",
+            "basis": "min",
+            "value": 0.05,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "XOXOs Beef & Chicken Pâté taurine_min_percent",
+            "basis": "min",
+            "value": 0.07,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 868,
+        "kcal_per_unit": 72,
+        "unit_name": "can"
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/xoxo-chicken-beef-pate-variety-pack",
         "https://iandloveandyou.com/products/xoxo-chicken-beef-pate-variety-pack.js",
         "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
-        "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189"
+        "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189",
+        "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336013607_-_XOXOs_Beef_Chicken_Pate_3_oz_-_FRONT.png?v=1762442191"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013560 exactly to 3 OZ (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -16559,9 +16592,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: XOXOs Chicken & Tuna Pâté: 868 kcal/kg, 72 kcal/can; XOXOs Beef & Chicken Pâté: 868 kcal/kg, 72 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336013591",
@@ -16648,19 +16684,19 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "3 OZ (12 PACK)",
-      "ingredients_verbatim": "XOXOs Salmon & Tuna Pâté: FISH BROTH, SALMON, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, CHOLINE CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). | XOXOs Whitefish & Tuna Pâté: FISH BROTH, WHITEFISH, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE, CHOLINE CHLORIDE, POTASSIUM CHLORIDE.",
+      "ingredients_verbatim": "XOXOs Salmon & Tuna Pâté: FISH BROTH, SALMON, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, CHOLINE CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)). XOXOs Whitefish & Tuna Pâté: FISH BROTH, WHITEFISH, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE, CHOLINE CHLORIDE, POTASSIUM CHLORIDE.",
       "ingredients_ordered_normalized": [
-        "XOXOs Salmon & Tuna Pâté: FISH BROTH > SALMON > CHICKEN > TUNA > TAPIOCA STARCH > SALT > TRICALCIUM PHOSPHATE > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > POTASSIUM CHLORIDE > MAGNESIUM SULFATE > CHOLINE CHLORIDE > CELERY POWDER > TAURINE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))",
-        "XOXOs Whitefish & Tuna Pâté: FISH BROTH > WHITEFISH > CHICKEN > TUNA > TAPIOCA STARCH > SALT > TRICALCIUM PHOSPHATE > NATURAL FLAVOR > MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE) > CELERY POWDER > TAURINE > VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)) > MAGNESIUM SULFATE > CHOLINE CHLORIDE > POTASSIUM CHLORIDE"
+        "XOXOs Salmon & Tuna Pâté: FISH BROTH, SALMON, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, CHOLINE CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)).",
+        "XOXOs Whitefish & Tuna Pâté: FISH BROTH, WHITEFISH, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE, CHOLINE CHLORIDE, POTASSIUM CHLORIDE."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [],
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": 0.07
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -16668,12 +16704,14 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/xoxo-salmon-whitefish-pate-variety-pack",
         "https://iandloveandyou.com/products/xoxo-salmon-whitefish-pate-variety-pack.js",
         "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate",
-        "https://iandloveandyou.com/cdn/shop/files/818336013584_-_XOXOs_Salmon_Tuna_Pate_3_oz_-_FRONT.png?v=1762442214"
+        "https://iandloveandyou.com/cdn/shop/files/818336013584_-_XOXOs_Salmon_Tuna_Pate_3_oz_-_FRONT.png?v=1762442214",
+        "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336013577_-_XOXOs_Whitefish_Tuna_Pate_3oz_-_FRONT.png?v=1762442189"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013546 exactly to 3 OZ (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -16685,9 +16723,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: XOXOs Salmon & Tuna Pâté: 1292 kcal/kg, 109 kcal/can; XOXOs Whitefish & Tuna Pâté: 868 kcal/kg, 72 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336013584",
@@ -16775,20 +16816,51 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "12 PACK",
-      "ingredients_verbatim": "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. | Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. | Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+      "ingredients_verbatim": "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
       "ingredients_ordered_normalized": [
-        "Treat Meow - Immune Support: Fish Broth > Sardine > Tuna > Tapioca Starch > Pumpkin > Canola Oil (Preserved with Mixed Tocopherols) > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement",
-        "Treat Meow - Digestion Support: Chicken Broth > Chicken > Tapioca Starch > Pumpkin > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement",
-        "Treat Meow - Skin & Coat Support: Fish Broth > Tuna > Tapioca Starch > Canola Oil (Preserved with Mixed Tocopherols) > Fish Oil > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement"
+        "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+        "Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+        "Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Treat Meow - Immune Support — Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Immune Support — Vitamin A",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Immune Support — Zinc",
+            "basis": "min",
+            "value": 14.0,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Treat Meow - Skin & Coat Support — Omega 3 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Skin & Coat Support — Omega 6 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          }
+        ],
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 1.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.5,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -16796,12 +16868,16 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/treat-meow-variety-pack",
         "https://iandloveandyou.com/products/treat-meow-variety-pack.js",
         "https://iandloveandyou.com/products/treat-meow-immune-support",
-        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe"
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe",
+        "https://iandloveandyou.com/products/treat-meow-digestion-support",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-digestion-support-chicken-puree-recipe",
+        "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-skin-and-coat-support-tuna-puree-recipe"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013867 exactly to 12 PACK; this is the retail multipack barcode, not an inner-unit UPC.",
@@ -16814,9 +16890,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Treat Meow - Immune Support: 688 kcal/kg, 9 kcal/pouch; Treat Meow - Digestion Support: 651 kcal/kg, 9 kcal/pouch; Treat Meow - Skin & Coat Support: 741 kcal/kg, 10 kcal/pouch. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336013843",
@@ -16966,20 +17045,51 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "48 PACK",
-      "ingredients_verbatim": "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. | Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. | Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+      "ingredients_verbatim": "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement. Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
       "ingredients_ordered_normalized": [
-        "Treat Meow - Immune Support: Fish Broth > Sardine > Tuna > Tapioca Starch > Pumpkin > Canola Oil (Preserved with Mixed Tocopherols) > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement",
-        "Treat Meow - Digestion Support: Chicken Broth > Chicken > Tapioca Starch > Pumpkin > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement",
-        "Treat Meow - Skin & Coat Support: Fish Broth > Tuna > Tapioca Starch > Canola Oil (Preserved with Mixed Tocopherols) > Fish Oil > Inulin > Guar Gum > Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide) > Vitamin E Supplement > Vitamin A Supplement"
+        "Treat Meow - Immune Support: Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+        "Treat Meow - Digestion Support: Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+        "Treat Meow - Skin & Coat Support: Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Treat Meow - Immune Support — Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Immune Support — Vitamin A",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Immune Support — Zinc",
+            "basis": "min",
+            "value": 14.0,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Treat Meow - Skin & Coat Support — Omega 3 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Treat Meow - Skin & Coat Support — Omega 6 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          }
+        ],
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 1.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.5,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -16987,12 +17097,16 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/treat-meow-variety-pack",
         "https://iandloveandyou.com/products/treat-meow-variety-pack.js",
         "https://iandloveandyou.com/products/treat-meow-immune-support",
-        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe"
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe",
+        "https://iandloveandyou.com/products/treat-meow-digestion-support",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-digestion-support-chicken-puree-recipe",
+        "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-skin-and-coat-support-tuna-puree-recipe"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013864 exactly to 48 PACK; this is the retail multipack barcode, not an inner-unit UPC.",
@@ -17005,9 +17119,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Treat Meow - Immune Support: 688 kcal/kg, 9 kcal/pouch; Treat Meow - Digestion Support: 651 kcal/kg, 9 kcal/pouch; Treat Meow - Skin & Coat Support: 741 kcal/kg, 10 kcal/pouch. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336013843",
@@ -17512,19 +17629,19 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 OZ CAN (6 PACK)",
-      "ingredients_verbatim": "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_verbatim": "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Cluckin' Good Stew: Chicken > Chicken Broth > Vegetable Broth > Chicken Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Green Beans > Salt > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Zinc Proteinate > Iron Proteinate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Gobble It Up Stew: Turkey > Turkey Broth > Vegetable Broth > Turkey Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Salmon Oil (Preserved With Mixed Tocopherols) > Zinc Proteinate > Iron Proteinate > Calcium Carbonate > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid"
+        "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [],
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -17532,13 +17649,14 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-cluckin-good-stew-gobble-it-up-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-cluckin-good-stew-gobble-it-up-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336012334 exactly to 13 OZ CAN (6 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -17552,9 +17670,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Cluckin' Good Stew: 852 kcal/kg, 314 kcal/can; Gobble It Up Stew: 837 kcal/kg, 309 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010194",
@@ -17643,19 +17764,19 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 OZ (12 PACK)",
-      "ingredients_verbatim": "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_verbatim": "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Cluckin' Good Stew: Chicken > Chicken Broth > Vegetable Broth > Chicken Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Green Beans > Salt > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Zinc Proteinate > Iron Proteinate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Gobble It Up Stew: Turkey > Turkey Broth > Vegetable Broth > Turkey Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Salmon Oil (Preserved With Mixed Tocopherols) > Zinc Proteinate > Iron Proteinate > Calcium Carbonate > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid"
+        "Cluckin' Good Stew: Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Gobble It Up Stew: Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "other_printed_guarantees": [],
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -17663,13 +17784,14 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-cluckin-good-stew-gobble-it-up-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-cluckin-good-stew-gobble-it-up-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 20818336012338 exactly to 13 OZ (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -17683,9 +17805,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Cluckin' Good Stew: 852 kcal/kg, 314 kcal/can; Gobble It Up Stew: 837 kcal/kg, 309 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010194",
@@ -17774,19 +17899,32 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 OZ CAN (6 PACK)",
-      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Beef Booyah Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosphate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Moo Moo Venison Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Venison > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosophate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid"
+        "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Beef Booyah Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Moo Moo Venison Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 7.5,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -17794,13 +17932,14 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-moo-moo-venison-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-moo-moo-venison-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336012327 exactly to 13 OZ CAN (6 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -17814,9 +17953,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Beef Booyah Stew: 824 kcal/kg, 304 kcal/can; Moo Moo Venison Stew: 829 kcal/kg, 306 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_fat_min_percent, ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
@@ -17905,19 +18047,32 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 oz (12 PACK)",
-      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Beef Booyah Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosphate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Moo Moo Venison Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Venison > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosophate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid"
+        "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Moo Moo Venison Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Beef Booyah Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Moo Moo Venison Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 7.5,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -17925,13 +18080,14 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-moo-moo-venison-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-moo-moo-venison-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 20818336012321 exactly to 13 oz (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -17945,9 +18101,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Beef Booyah Stew: 824 kcal/kg, 304 kcal/can; Moo Moo Venison Stew: 829 kcal/kg, 306 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_fat_min_percent, ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
@@ -18150,19 +18309,44 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 OZ CAN (6 PACK)",
-      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid.",
+      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Beef Booyah Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosphate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Lambarama Stew: Lamb > Lamb Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Guar Gum > Salt > Dicalcium Phosphate > Green Beans > Sunflower Oil > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Zinc Proteinate > Iron Proteinate > Calcium Carbonate > Magnesium Sulfate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Cobalt Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Niacin Supplement > d-Calcium Pantothenate > Riboflavin Supplement > Vitamin D3 Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Vitamin A Supplement > Pyridoxine Hydrochloride > Folic Acid"
+        "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid."
       ],
       "guaranteed_analysis": {
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Beef Booyah Stew crude_protein_min_percent",
+            "basis": "min",
+            "value": 7.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Lambarama Stew crude_protein_min_percent",
+            "basis": "min",
+            "value": 8.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Beef Booyah Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Lambarama Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 5.0,
+            "unit": "percent"
+          }
+        ],
         "crude_protein_min_percent": null,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -18170,13 +18354,15 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-lambarama-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-lambarama-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew.js"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336012341 exactly to 13 OZ CAN (6 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -18190,9 +18376,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Beef Booyah Stew: 824 kcal/kg, 304 kcal/can; Lambarama Stew: 987 kcal/kg, 364 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_protein_min_percent, crude_fat_min_percent, ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
@@ -18209,12 +18398,12 @@
           "upc": null
         },
         {
-          "standalone_upc": "10818336011976",
+          "standalone_upc": null,
           "canonical_gtin14": null,
           "product_name": "Lambarama Stew",
           "size": "13 OZ CAN (12 PACK)",
           "quantity": 3,
-          "evidence_status": "matched_standalone_sku",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew",
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew.js",
@@ -18283,19 +18472,44 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "13 OZ (12 PACK)",
-      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. | Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid.",
+      "ingredients_verbatim": "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid. Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid.",
       "ingredients_ordered_normalized": [
-        "Beef Booyah Stew: Beef > Beef Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Dried Egg Product > Guar Gum > Sunflower Oil > Salt > Green Beans > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Cranberries > Choline Chloride > Zinc Proteinate > Iron Proteinate > Tricalcium Phosphate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Cobalt Proteinate > Niacin Supplement > d-Calcium Pantothenate > Vitamin A Supplement > Riboflavin Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Pyridoxine Hydrochloride > Vitamin D3 Supplement > Folic Acid",
-        "Lambarama Stew: Lamb > Lamb Broth > Vegetable Broth > Beef Liver > Carrots > Dried Egg Whites > Dried Peas > Sweet Potatoes > Guar Gum > Salt > Dicalcium Phosphate > Green Beans > Sunflower Oil > Sodium Phosphate > Natural Flavor > Potassium Chloride > Pumpkin > Choline Chloride > Cranberries > Zinc Proteinate > Iron Proteinate > Calcium Carbonate > Magnesium Sulfate > Salmon Oil (Preserved With Mixed Tocopherols) > Vitamin E Supplement > Copper Proteinate > Cobalt Proteinate > Manganese Proteinate > Sodium Selenite > Thiamine Mononitrate > Niacin Supplement > d-Calcium Pantothenate > Riboflavin Supplement > Vitamin D3 Supplement > Biotin > Vitamin B12 Supplement > Potassium Iodide > Vitamin A Supplement > Pyridoxine Hydrochloride > Folic Acid"
+        "Beef Booyah Stew: Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+        "Lambarama Stew: Lamb, Lamb Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Guar Gum, Salt, Dicalcium Phosphate, Green Beans, Sunflower Oil, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Magnesium Sulfate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride, Folic Acid."
       ],
       "guaranteed_analysis": {
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Beef Booyah Stew crude_protein_min_percent",
+            "basis": "min",
+            "value": 7.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Lambarama Stew crude_protein_min_percent",
+            "basis": "min",
+            "value": 8.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Beef Booyah Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Lambarama Stew crude_fat_min_percent",
+            "basis": "min",
+            "value": 5.0,
+            "unit": "percent"
+          }
+        ],
         "crude_protein_min_percent": null,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": null
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -18303,13 +18517,15 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-lambarama-stew",
         "https://iandloveandyou.com/products/dog-can-variety-pack-stew-beef-booyah-stew-lambarama-stew.js",
         "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
         "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
-        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew.js"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 20818336012345 exactly to 13 OZ (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -18323,9 +18539,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Beef Booyah Stew: 824 kcal/kg, 304 kcal/can; Lambarama Stew: 987 kcal/kg, 364 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_protein_min_percent, crude_fat_min_percent, ash_max_percent, taurine_min_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010170",
@@ -18342,12 +18561,12 @@
           "upc": null
         },
         {
-          "standalone_upc": "10818336011976",
+          "standalone_upc": null,
           "canonical_gtin14": null,
           "product_name": "Lambarama Stew",
           "size": "13 OZ CAN (12 PACK)",
           "quantity": 6,
-          "evidence_status": "matched_standalone_sku",
+          "evidence_status": "unresolved",
           "source_urls": [
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew",
             "https://iandloveandyou.com/products/wet-canned-stew-dog-food-lambarama-stew.js",
@@ -18417,20 +18636,39 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "3 OZ CAN (12 PACK)",
-      "ingredients_verbatim": "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. | Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. | Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_verbatim": "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
       "ingredients_ordered_normalized": [
-        "Original Recipe - Oh My Cod! Pâté: COD > CHICKEN > FISH BROTH > CHICKEN LIVER > CANOLA OIL > GROUND FLAXSEED > NATURAL FLAVOR > GUAR GUM > SALT > POTASSIUM CHLORIDE > TAURINE > DL-METHIONINE > CHOLINE CHLORIDE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > IRON PROTEINATE > ZINC PROTEINATE > THIAMINE MONONITRATE > VITAMIN E SUPPLEMENT > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID",
-        "Original Recipe - Purrky Turkey Pâté: TURKEY > TURKEY BROTH > TURKEY LIVER > NATURAL FLAVOR > GUAR GUM > SALT > POTASSIUM CHLORIDE > TAURINE > CHOLINE CHLORIDE > DL-METHIONINE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > IRON PROTEINATE > SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS) > ZINC PROTEINATE > VITAMIN E SUPPLEMENT > THIAMINE MONONITRATE > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID",
-        "Original Recipe - Chicken Me Out Pâté: CHICKEN > CHICKEN BROTH > CHICKEN LIVER > NATURAL FLAVOR > SALT > GUAR GUM > POTASSIUM CHLORIDE > TAURINE > DL-METHIONINE > CHOLINE CHLORIDE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS) > IRON PROTEINATE > ZINC PROTEINATE > VITAMIN E SUPPLEMENT > THIAMINE MONONITRATE > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID"
+        "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Original Recipe - Oh My Cod! Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 4.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Original Recipe - Purrky Turkey Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 5.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Original Recipe - Chicken Me Out Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 7.0,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 9.5,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": 0.1
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -18438,13 +18676,18 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-pate-all-day",
         "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-pate-all-day.js",
         "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
         "https://iandloveandyou.com/cdn/shop/files/818336010231_-_Oh_My_Cod_Pate_3_oz_-_FRONT.png?v=1772660256",
-        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate"
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336010224_-_Chicken_Me_Out_Pate_3_oz_-_FRONT.png?v=1772660529"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336011764 exactly to 3 OZ CAN (12 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -18459,9 +18702,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Original Recipe - Oh My Cod! Pâté: 1017 kcal/kg, 86 kcal/can; Original Recipe - Purrky Turkey Pâté: 1091 kcal/kg, 93 kcal/can; Original Recipe - Chicken Me Out Pâté: 1130 kcal/kg, 96 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_fat_min_percent, ash_max_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010231",
@@ -18581,20 +18827,39 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "3oz (48 PACK)",
-      "ingredients_verbatim": "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. | Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. | Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_verbatim": "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID. Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
       "ingredients_ordered_normalized": [
-        "Original Recipe - Oh My Cod! Pâté: COD > CHICKEN > FISH BROTH > CHICKEN LIVER > CANOLA OIL > GROUND FLAXSEED > NATURAL FLAVOR > GUAR GUM > SALT > POTASSIUM CHLORIDE > TAURINE > DL-METHIONINE > CHOLINE CHLORIDE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > IRON PROTEINATE > ZINC PROTEINATE > THIAMINE MONONITRATE > VITAMIN E SUPPLEMENT > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID",
-        "Original Recipe - Purrky Turkey Pâté: TURKEY > TURKEY BROTH > TURKEY LIVER > NATURAL FLAVOR > GUAR GUM > SALT > POTASSIUM CHLORIDE > TAURINE > CHOLINE CHLORIDE > DL-METHIONINE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > IRON PROTEINATE > SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS) > ZINC PROTEINATE > VITAMIN E SUPPLEMENT > THIAMINE MONONITRATE > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID",
-        "Original Recipe - Chicken Me Out Pâté: CHICKEN > CHICKEN BROTH > CHICKEN LIVER > NATURAL FLAVOR > SALT > GUAR GUM > POTASSIUM CHLORIDE > TAURINE > DL-METHIONINE > CHOLINE CHLORIDE > CASSIA GUM > XANTHAN GUM > MAGNESIUM SULFATE > SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS) > IRON PROTEINATE > ZINC PROTEINATE > VITAMIN E SUPPLEMENT > THIAMINE MONONITRATE > COPPER PROTEINATE > MANGANESE PROTEINATE > SODIUM SELENITE > NIACIN SUPPLEMENT > d-CALCIUM PANTOTHENATE > PYRIDOXINE HYDROCHLORIDE > RIBOFLAVIN SUPPLEMENT > VITAMIN A SUPPLEMENT > BIOTIN > POTASSIUM IODIDE > VITAMIN D3 SUPPLEMENT > VITAMIN B12 SUPPLEMENT > FOLIC ACID"
+        "Original Recipe - Oh My Cod! Pâté: COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "Original Recipe - Purrky Turkey Pâté: TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+        "Original Recipe - Chicken Me Out Pâté: CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID."
       ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Original Recipe - Oh My Cod! Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 4.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Original Recipe - Purrky Turkey Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 5.0,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Original Recipe - Chicken Me Out Pâté crude_fat_min_percent",
+            "basis": "min",
+            "value": 7.0,
+            "unit": "percent"
+          }
+        ],
+        "crude_protein_min_percent": 9.5,
         "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
         "ash_max_percent": null,
-        "taurine_min_percent": null,
-        "other_printed_guarantees": []
+        "taurine_min_percent": 0.1
       },
       "calorie_content": {
         "kcal_per_kg": null,
@@ -18602,13 +18867,18 @@
         "unit_name": null
       },
       "label_deck_code": null,
-      "formula_source": "Current manufacturer variety-pack page plus source-verified component records in this ledger; component formulas and analyses are preserved separately because the outer pack contains multiple recipes.",
+      "formula_source": "Current manufacturer outer-pack page/Shopify variant proves pack identity and composition; each component formula, printed guaranteed analysis, calories, and adequacy are inherited only from its separately source-verified matching recipe record and cited direct sources.",
       "source_urls": [
         "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-pate-all-day",
         "https://iandloveandyou.com/products/wet-canned-cat-food-variety-pack-pate-all-day.js",
         "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
         "https://iandloveandyou.com/cdn/shop/files/818336010231_-_Oh_My_Cod_Pate_3_oz_-_FRONT.png?v=1772660256",
-        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate"
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
+        "https://iandloveandyou.com/cdn/shop/files/818336010224_-_Chicken_Me_Out_Pate_3_oz_-_FRONT.png?v=1772660529"
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336011761 exactly to 3oz (48 PACK); this is the retail multipack barcode, not an inner-unit UPC.",
@@ -18623,9 +18893,12 @@
         "Outer variety pack contains multiple formulas; complete component ingredient statements, analyses, and calories are captured in ingredients_verbatim/component_guaranteed_analyses rather than collapsed into false single values.",
         "2026-08-29 contract repair: multipack child schema normalized to current AGENTS.md; no inner-unit UPC was invented.",
         "2026-08-29 contract audit: calorie fields remain null because no calorie value is present in the cited evidence captured for this record; no calorie value was inferred.",
-        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented."
+        "2026-08-29 contract repair: status downgraded from source_verified to candidate because the current record does not yet capture complete pack-level guaranteed analysis/calorie evidence for all recipes. Outer barcode evidence is retained; no formula values were invented.",
+        "2026-08-29 candidate completion: every listed component recipe was cross-checked against a separately source-verified formula record before promotion; no child physical UPC was invented.",
+        "2026-08-29 component calories: Original Recipe - Oh My Cod! Pâté: 1017 kcal/kg, 86 kcal/can; Original Recipe - Purrky Turkey Pâté: 1091 kcal/kg, 93 kcal/can; Original Recipe - Chicken Me Out Pâté: 1130 kcal/kg, 96 kcal/can. Where component calorie values differ, pack-level calorie fields remain null because no single aggregate calorie value is printed for the variety pack.",
+        "2026-08-29 component-specific GA: pack-level crude_fat_min_percent, ash_max_percent remain null where component recipes print different values or no common pack-wide value; all non-null component-specific printed values are preserved in other_printed_guarantees."
       ],
-      "research_status": "candidate",
+      "research_status": "source_verified",
       "multipack_contents": [
         {
           "standalone_upc": "818336010231",
