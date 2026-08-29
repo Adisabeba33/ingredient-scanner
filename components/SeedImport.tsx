@@ -29,6 +29,24 @@ interface PreviewProduct {
   heldPanel?: boolean | null;
 }
 
+/**
+ * The boxes, counted apart from the formulas.
+ *
+ * Deliberately not folded into `counts`: a multipack row asserts that a code
+ * names NO food, and adding it to the same tally would make "write 41 to the
+ * catalog" mean two opposite things at once.
+ */
+interface BoxCounts {
+  total?: number;
+  write?: number;
+  identical?: number;
+  conflict?: number;
+  /** Boxes read with no inner code proven. Marked anyway — see below. */
+  withoutMembers?: number;
+  written?: number;
+  error?: string;
+}
+
 interface Preview {
   /** Products the import can act on — the ones that have a formula. */
   total: number;
@@ -36,6 +54,7 @@ interface Preview {
   seeded?: number;
   counts: Record<ImportVerdict, number>;
   products?: PreviewProduct[];
+  boxes?: BoxCounts;
   error?: string;
   message?: string;
 }
@@ -45,6 +64,7 @@ interface Result {
   written?: number;
   reportsCleared?: number;
   counts?: Record<ImportVerdict, number>;
+  boxes?: BoxCounts;
   conflicts?: { code: string; name: string }[];
   flagged?: { code: string; note: string | null }[];
   error?: string;
@@ -159,6 +179,12 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   }, [clearing, adminToken]);
 
   const toWrite = preview?.counts?.write ?? 0;
+  // The button is one press that does two things, so it must not read
+  // "Nothing to write" while 85 cartons are still open to the discovery
+  // screen. Counted together for the label only; the panels above keep them
+  // apart, because they are opposite claims about a barcode.
+  const boxesToMark = preview?.boxes?.write ?? 0;
+  const anythingToDo = toWrite + boxesToMark;
   const ours = (preview?.products ?? []).filter(
     (p) => p.verdict === "ours-is-better"
   );
@@ -216,6 +242,43 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         </ul>
       ) : null}
 
+      {/* The boxes, said separately because they are the opposite claim: not
+          "here is what is in this product" but "this code is not a product".
+          Shown even when there is nothing to write, because the interesting
+          answer is usually "all 85 are already marked" and a panel that
+          disappears when it succeeds makes you wonder whether it ran. */}
+      {preview?.boxes && !preview.boxes.error && (preview.boxes.total ?? 0) > 0 ? (
+        <div className="rounded-input bg-surfaceSoft px-3 py-2.5">
+          <p className="text-[12px] font-semibold text-ink">
+            {preview.boxes.total} variety packs and cases
+          </p>
+          <p className="mt-0.5 text-[11px] leading-snug text-muted">
+            {preview.boxes.write ? `${preview.boxes.write} to mark, ` : ""}
+            {preview.boxes.identical ?? 0} already marked
+            {preview.boxes.conflict
+              ? `, ${preview.boxes.conflict} holding a reading and left alone`
+              : ""}
+            . A box has no ingredient list of its own — marking it stops the app
+            inviting somebody to photograph the back of the carton, where every
+            member&apos;s list is printed one after another.
+          </p>
+          {preview.boxes.withoutMembers ? (
+            <p className="mt-1 text-[11px] leading-snug text-faint">
+              {preview.boxes.withoutMembers} of them name no inner barcode yet.
+              They are still marked — the mark is what stops the bad capture —
+              and the members can be added on a later pass.
+            </p>
+          ) : null}
+        </div>
+      ) : null}
+      {preview?.boxes?.error ? (
+        <p className="text-[11.5px] leading-snug text-amber">
+          Couldn&apos;t check the variety packs: {preview.boxes.error}. If this
+          says the <span className="font-mono">contains</span> column is
+          missing, the catalog predates migration 0022.
+        </p>
+      ) : null}
+
       {error && <p className="text-[12.5px] text-risk-high">{error}</p>}
 
       {result && (
@@ -223,8 +286,14 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
           <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-sage-700">
             <Check size={14} strokeWidth={2.5} aria-hidden="true" />
             {result.written} written
+            {result.boxes?.written ? `, ${result.boxes.written} boxes marked` : ""}
             {result.reportsCleared ? `, ${result.reportsCleared} stale reports cleared` : ""}
           </p>
+          {result.boxes?.error && (
+            <p className="mt-1 text-[11px] leading-snug text-amber">
+              The variety packs were not marked: {result.boxes.error}
+            </p>
+          )}
           {result.flagged && result.flagged.length > 0 && (
             <p className="mt-1 text-[11px] leading-snug text-muted">
               {result.flagged.length} of them have older records under the same
@@ -288,7 +357,7 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
 
       <button
         onClick={run}
-        disabled={running || loading || toWrite === 0}
+        disabled={running || loading || anythingToDo === 0}
         className="btn-secondary"
       >
         {running ? (
@@ -296,7 +365,13 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         ) : (
           <Download size={16} strokeWidth={1.8} aria-hidden="true" />
         )}
-        {toWrite === 0 ? "Nothing to write" : `Write ${toWrite} to the catalog`}
+        {anythingToDo === 0
+          ? "Nothing to write"
+          : toWrite === 0
+            ? `Mark ${boxesToMark} variety pack${boxesToMark === 1 ? "" : "s"}`
+            : boxesToMark === 0
+              ? `Write ${toWrite} to the catalog`
+              : `Write ${toWrite} and mark ${boxesToMark} boxes`}
       </button>
 
       {/* Separate from the write, because it is a separate decision: the

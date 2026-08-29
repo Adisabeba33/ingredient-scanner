@@ -48,4 +48,10 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // Merrick keeps its own prefix under Nestlé Purina, which bought it in
   // 2015 — the packs still carry 022808 rather than Purina's 050000.
   { prefix: "022808", maker: "Merrick (Nestlé Purina)" },
+  // The first maker whose codes arrive at more than one packaging level: the
+  // single can is 818336…, the twelve-pack it sits in is 10818336… and the
+  // case is 20818336…. That leading digit is a GS1 packaging indicator, not a
+  // different company, so ONE entry covers all three — see `gs1Body` in
+  // lib/known-products.ts for the normalisation both askers now do first.
+  { prefix: "818336", maker: "I and love and you" },
 ];

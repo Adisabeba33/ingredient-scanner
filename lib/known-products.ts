@@ -96,6 +96,34 @@ export function isValidGtin(code: string): boolean {
   );
 }
 
+/**
+ * The part of a barcode the GS1 company prefix is read from.
+ *
+ * A GTIN-14 whose first digit is 1–8 is not a different company's code — it is
+ * a PACKAGING LEVEL of the code beneath it. "10818336014311" is the inner pack
+ * of "0818336014311" and "20818336014311" is the case, and all three belong to
+ * the same maker. Matching a prefix against the raw digits reads that indicator
+ * as part of the company's number and answers "belongs to no maker we have
+ * seeded" about a barcode printed by a maker we just seeded a hundred products
+ * from.
+ *
+ * So both askers — `scripts/check-batch.mjs` and the test below — normalise
+ * first: pad to fourteen, drop the indicator, and compare on the thirteen
+ * digits that are left. A UPC-A's six-digit prefix then sits one zero in
+ * ("0818336…"), which is why the match allows a leading zero rather than
+ * demanding the caller write the padding into `data/gs1-prefixes.ts`. An
+ * EAN-13's prefix starts at the front and matches directly.
+ */
+export function gs1Body(code: string): string {
+  return code.replace(/\D+/g, "").padStart(14, "0").slice(1);
+}
+
+/** Does this barcode sit under `prefix`, whatever packaging level it is? */
+export function underGs1Prefix(code: string, prefix: string): boolean {
+  const body = gs1Body(code);
+  return body.startsWith(prefix) || body.startsWith(`0${prefix}`);
+}
+
 function toItem(product: KnownProduct): KnownItem {
   return {
     brand: product.brand,

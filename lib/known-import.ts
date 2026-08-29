@@ -108,6 +108,64 @@ export function importVerdict(
   return force ? "write" : "conflict";
 }
 
+/**
+ * The same decision for a BOX, which is a different question.
+ *
+ * A multipack row asserts an absence — this code names no food — so there is no
+ * composition to compare and the three interesting states are: it is not marked
+ * yet, it is marked and we have nothing to add, or something else is under the
+ * code.
+ *
+ * ── Why it refuses a stored reading whatever its source ───────────────────
+ *
+ * `app/api/multipack/route.ts` already answers this for an operator standing in
+ * a shop with the box in their hands, and it refuses on `found &&
+ * ingredients_text` without asking who wrote it. This agrees with it on
+ * purpose. The two paths write the same row into the same column for the same
+ * reason, and the day they disagree is the day marking a box by hand and
+ * marking it from the seed stop meaning the same thing.
+ *
+ * The refusal is also the right answer on its own terms. A code holding a real
+ * ingredient list is either genuinely a product — in which case calling it a
+ * box would make the capture route bounce every future scan of it, and nobody
+ * would be able to see why — or somebody photographed the back of the carton,
+ * which is the mistake this whole mechanism exists to prevent and which
+ * deserves a correction rather than a silent overwrite.
+ *
+ * ── Why re-marking an already-marked box is a `write` and not `identical` ──
+ *
+ * Coming back to add member codes once the tins have been read is the normal
+ * second visit. `identical` is reserved for the case where there is genuinely
+ * nothing to add: already marked, and offering no member the row does not
+ * already hold.
+ */
+export interface ExistingBoxRow {
+  found: boolean | null;
+  reason: string | null;
+  ingredients_text: string | null;
+  contains: string[] | null;
+}
+
+export function multipackVerdict(
+  existing: ExistingBoxRow | null | undefined,
+  /** The members we are offering, canonicalised by the caller. */
+  incoming: string[]
+): ImportVerdict {
+  if (!existing) return "write";
+
+  if (existing.reason === "multipack") {
+    const held = new Set(existing.contains ?? []);
+    return incoming.some((code) => !held.has(code)) ? "write" : "identical";
+  }
+
+  // Somebody's reading is under this code. Never walked over — see above.
+  if (existing.found && (existing.ingredients_text ?? "").trim()) return "conflict";
+
+  // A row with no composition is a shadow over the open databases, which is
+  // the state marking the box is meant to end.
+  return "write";
+}
+
 /** Human wording for the summary the operator reads. */
 export function verdictLabel(verdict: ImportVerdict): string {
   if (verdict === "write") return "to write";

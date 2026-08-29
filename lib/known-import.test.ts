@@ -1,12 +1,18 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { importVerdict, verdictLabel, type ExistingRow } from "./known-import";
+import { multipackVerdict, type ExistingBoxRow, importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
 import { isVeterinaryDiet } from "./vet-diet";
 import { detectNutritionRole } from "./nutrition-role";
 import { CONFUSABLE_PAIRS, WRONG_BARCODES } from "../data/wrong-barcodes";
 import { compositionKey } from "./composition-key";
+import { canonicalBarcode } from "./barcode";
+import { isValidGtin, underGs1Prefix } from "./known-products";
+import { brandKey } from "./brand-key";
+import { US_PET_BRANDS } from "../data/us-pet-brands";
+import { GS1_PREFIXES } from "../data/gs1-prefixes";
+import { KNOWN_MULTIPACKS } from "../data/known-multipacks";
 import { hasAnyFigure } from "./guaranteed-analysis";
 
 function row(over: Partial<ExistingRow> = {}): ExistingRow {
@@ -183,6 +189,19 @@ describe("data/known-formulas.ts", () => {
     // copy-paste, which is what this test exists to catch.
     const ALLOWED_SHARED = new Set([
       "Royal Canin Canine Care Nutrition Large Dental Care / Royal Canin Canine Care Nutrition Medium Dental Care",
+      // A rename caught mid-shelf. I and love and you is moving Lovingly
+      // Simple to Baked & Saucy, and for one recipe both names are in the
+      // shops at once under four barcodes — a 3.85 lb and a 21 lb bag on the
+      // old name, a 4 lb, 10.25 lb and 21 lb on the new. The deck, the panel
+      // and the calorie statement are identical to the digit (3506 kcal/kg,
+      // 547 kcal/cup), which is what a rename looks like and not what a
+      // copy-paste looks like: a paste error would be two DIFFERENT flavours
+      // wearing one list, and here the flavour is the same food.
+      //
+      // Both are seeded because both are printed on packs somebody will scan,
+      // and a shopper holding the old bag should not be told we have never
+      // heard of it. See section I of docs/CATALOG-CONFLICTS.md.
+      "I and love and you Baked & Saucy Lamb + Sweet Potato / I and love and you Lovingly Simple Lamb + Sweet Potato",
     ]);
     // Keyed by the product's POSITION, not its printed name. Two entries can
     // carry an identical `brand line variant` and still be two products — that
@@ -221,10 +240,25 @@ describe("data/known-formulas.ts", () => {
   // Cat Food" / "Dental Care Dry Cat Food"), which the seeding pass filed
   // apart. On the coverage page they merge anyway, so the split is invisible
   // there — and the count of products quietly disagrees with the seed.
-  it("holds one product per brand, range and variant", () => {
+  //
+  // ── Species is part of the key, and had to become part of it ───────────
+  //
+  // I and love and you prints "Naked Essentials Chicken + Duck" on a cat bag
+  // and on a dog bag. They are two products with two barcodes and two
+  // different recipes — the cat one runs 34% protein on garbanzo beans, the
+  // dog one 30% on chickpeas and lentils — and nothing but the species tells
+  // them apart, because the maker did not put a word for it in the range or
+  // the flavour.
+  //
+  // Without species in the key this test called them a duplicate. The fix is
+  // NOT to write "(dog)" into the variant: `variant` is copied off the pack
+  // and becomes the product_name a shopper is shown, so decorating it would
+  // put a word on the label that the label does not carry. The seed already
+  // holds the distinction in a field of its own; the key just has to read it.
+  it("holds one product per brand, range, variant and species", () => {
     const seen = new Map<string, number>();
     for (const p of KNOWN_PRODUCTS) {
-      const key = `${p.brand} | ${p.line} | ${p.variant}`;
+      const key = `${p.brand} | ${p.line} | ${p.variant} | ${p.species}`;
       seen.set(key, (seen.get(key) ?? 0) + 1);
     }
     expect([...seen].filter(([, n]) => n > 1).map(([k]) => k)).toEqual([]);
@@ -318,24 +352,42 @@ describe("data/known-formulas.ts", () => {
   // so they get their own ceiling: the moisture floor still applies (it is what
   // actually catches a dry-matter figure), and the protein ceiling is the one
   // a piece of dried meat can really reach.
-  const BOUNDS = {
-    wet: { moisture: [60, 90], protein: [0, 20] },
-    dry: { moisture: [5, 20], protein: [0, 50] },
-    treat: { moisture: [5, 20], protein: [0, 90] },
-  } as const;
-  const formOf = new Map<string, "wet" | "dry" | "treat">();
+  //
+  // ── And "treat" is not a fourth shelf, it is a second AXIS ─────────────
+  //
+  // That is what this got wrong while every treat in the seed was a dried
+  // organ. Role and form were flattened into one key, so "treat" silently
+  // meant "dry treat" — and I and love and you sells Treat Meow, a lickable
+  // puree pouch at 84.5% moisture that is a treat by role and wet by form.
+  // Under the flattened key it was judged against a chew's moisture ceiling
+  // and failed for being wet, which is the check being loudest exactly where
+  // it is wrong.
+  //
+  // So the two questions are asked separately. Form sets the moisture window,
+  // because moisture is a fact about the process; role raises the protein
+  // ceiling, because that is the thing a snack can really reach and a dinner
+  // cannot. The dry ceiling on a treat is 35% rather than 20% for the same
+  // reason: semi-moist is a real shelf between kibble and canned — a
+  // soft-baked biscuit runs 18–26% — and the moisture check's actual work is
+  // done by the FLOOR, which is what catches a dry-matter panel.
+  const MOISTURE = { wet: [60, 92], dry: [5, 20], dryTreat: [5, 35] } as const;
+  const PROTEIN = { wet: [0, 20], dry: [0, 50], treat: [0, 90] } as const;
+  const shelfOf = new Map<string, { moisture: readonly number[]; protein: readonly number[] }>();
   for (const p of KNOWN_PRODUCTS) {
     const isTreat =
       detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat";
-    for (const pkg of p.packages) {
-      formOf.set(pkg.upc, isTreat ? "treat" : p.foodForm);
-    }
+    const moisture =
+      p.foodForm === "wet" ? MOISTURE.wet : isTreat ? MOISTURE.dryTreat : MOISTURE.dry;
+    // A wet treat is still wet: a puree pouch cannot carry a chew's protein,
+    // and letting it try would reopen the hole this check exists to close.
+    const protein = isTreat && p.foodForm !== "wet" ? PROTEIN.treat : PROTEIN[p.foodForm];
+    for (const pkg of p.packages) shelfOf.set(pkg.upc, { moisture, protein });
   }
 
   it("reads as an as-fed panel, not a dry-matter one", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
       const a = f.analysis;
-      const b = BOUNDS[formOf.get(upc) ?? "wet"];
+      const b = shelfOf.get(upc) ?? { moisture: MOISTURE.wet, protein: PROTEIN.wet };
       const m = a.moistureMax ?? 0;
       const pr = a.crudeProteinMin ?? 0;
       expect({ upc, ok: m >= b.moisture[0] && m <= b.moisture[1] }).toEqual({
@@ -358,6 +410,51 @@ describe("data/known-formulas.ts", () => {
         });
       }
     }
+  });
+
+  // A calorie figure the panel beside it cannot physically produce.
+  //
+  // The panel is a second, independent measurement of the same food, and the
+  // two have to be able to coexist. Feed the guarantees through modified
+  // Atwater — protein and carbohydrate at 4 kcal/g, fat at 9 — treating
+  // whatever the panel does not name as carbohydrate, and that is the most
+  // energy the stated composition can carry.
+  //
+  // ── Why the slack is so wide, and why the check still catches things ───
+  //
+  // Protein and fat are MINIMA and moisture is a MAXIMUM, so a real food
+  // routinely beats its own ceiling; wet food beats it hardest, because a
+  // maker guaranteeing 8% protein on a pâté that assays 11% has told the truth
+  // twice. Across the 749 seeded panels that state calories the worst honest
+  // ratio is 1.69, on a Merrick wet food.
+  //
+  // At 2.0 the check therefore says nothing about any real pack we hold, and
+  // it still catches what it was written for: I and love and you's bully-stick
+  // ledger prints 7484 kcal/kg beside a panel whose own arithmetic tops out at
+  // 3560 — 2.10, and a figure no dried beef reaches. Those three records were
+  // seeded with the panel and WITHOUT the calorie line, which is what null
+  // means everywhere else here: no figure was established.
+  //
+  // A future FAIL is a question, not a verdict — read the source before
+  // assuming somebody mistyped. See data/gs1-prefixes.ts on why a check that
+  // cries wolf is worse than no check.
+  it("states no more calories than its own panel can carry", () => {
+    const impossible: string[] = [];
+    for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
+      const a = f.analysis;
+      if (a.kcalPerKg === null) continue;
+      const protein = a.crudeProteinMin ?? 0;
+      const fat = a.crudeFatMin ?? 0;
+      const rest = Math.max(
+        0,
+        100 - (a.moistureMax ?? 0) - protein - fat - (a.ashMax ?? 0)
+      );
+      const ceiling = (protein * 4 + fat * 9 + rest * 4) * 10;
+      if (ceiling > 0 && a.kcalPerKg > ceiling * 2) {
+        impossible.push(`${upc} — ${a.kcalPerKg} kcal/kg against a ceiling of ${Math.round(ceiling)}`);
+      }
+    }
+    expect(impossible).toEqual([]);
   });
 
   // The order IS the data — American labels print by descending weight — so a
@@ -749,5 +846,143 @@ describe("data/known-formulas.ts", () => {
     expect(KNOWN_FORMULAS["050000423347"].conflict).toBeTruthy();
     // And no note where the source raised none.
     expect(KNOWN_FORMULAS["050000429943"].conflict).toBeUndefined();
+  });
+});
+
+/**
+ * The boxes.
+ *
+ * Everything here is about one guarantee — a multipack row never carries a
+ * composition — and about the codes being real, because a member barcode that
+ * is one digit wrong sends a shopper to a product that does not exist.
+ */
+describe("data/known-multipacks.ts", () => {
+  const boxCodes = KNOWN_MULTIPACKS.map((b) => canonicalBarcode(b.upc));
+  const unitCodes = new Set(
+    KNOWN_PRODUCTS.flatMap((p) => p.packages.map((pkg) => canonicalBarcode(pkg.upc)))
+  );
+
+  // The guarantee this file exists for, asked of the data rather than trusted
+  // to the type: no box's barcode may key a formula. If one ever does, the
+  // import route would have a composition to offer for a carton, and the whole
+  // separation would be decorative.
+  it("has no formula under any box's barcode", () => {
+    const withFormula = KNOWN_MULTIPACKS.filter((b) => KNOWN_FORMULAS[b.upc]).map(
+      (b) => b.upc
+    );
+    expect(withFormula).toEqual([]);
+  });
+
+  // The other half of the same guarantee, and the one a refactor would break
+  // first: a box is not a product, so its code must not turn up in the list
+  // the import route reads compositions from.
+  it("shares no barcode with a seeded product", () => {
+    expect(boxCodes.filter((code) => unitCodes.has(code))).toEqual([]);
+  });
+
+  it("has no barcode twice", () => {
+    expect(boxCodes.length).toBe(new Set(boxCodes).size);
+  });
+
+  it("holds only well-formed barcodes, box and member alike", () => {
+    const bad: string[] = [];
+    for (const box of KNOWN_MULTIPACKS) {
+      if (!isValidGtin(box.upc)) bad.push(`${box.upc} (box)`);
+      for (const member of box.contains) {
+        if (!isValidGtin(member)) bad.push(`${member} (member of ${box.upc})`);
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it("sits under a maker's GS1 prefix at whatever packaging level", () => {
+    const known = GS1_PREFIXES.map((g) => g.prefix);
+    const orphans = KNOWN_MULTIPACKS.filter(
+      (b) => !known.some((prefix) => underGs1Prefix(b.upc, prefix))
+    ).map((b) => b.upc);
+    expect(orphans).toEqual([]);
+  });
+
+  // A carton listing itself would send the chooser straight back to the screen
+  // the person is already looking at.
+  it("never names itself as a member", () => {
+    const selfish = KNOWN_MULTIPACKS.filter((b) =>
+      b.contains.some((m) => canonicalBarcode(m) === canonicalBarcode(b.upc))
+    ).map((b) => b.upc);
+    expect(selfish).toEqual([]);
+  });
+
+  it("names each member once", () => {
+    const repeats = KNOWN_MULTIPACKS.filter(
+      (b) => new Set(b.contains.map(canonicalBarcode)).size !== b.contains.length
+    ).map((b) => b.upc);
+    expect(repeats).toEqual([]);
+  });
+
+  // A range name that is not in the brand's list files every product under
+  // "Other" on the coverage page — the same check the products get.
+  it("files every box under a range the brand entry knows", () => {
+    const brand = US_PET_BRANDS.find((b) => brandKey(b.name) === brandKey("I and love and you"));
+    const lines = new Set(brand?.lines ?? []);
+    const orphans = [
+      ...new Set(
+        KNOWN_MULTIPACKS.filter((b) => !lines.has(b.line)).map((b) => `${b.brand} — ${b.line}`)
+      ),
+    ];
+    expect(orphans).toEqual([]);
+  });
+
+  // Empty is an honest answer — it means the box was read and no inner code
+  // could be proven — so this is a floor, not a demand. It exists to catch a
+  // generator that silently dropped the members it was given.
+  it("proved members for most of the boxes", () => {
+    const withMembers = KNOWN_MULTIPACKS.filter((b) => b.contains.length > 0).length;
+    expect(withMembers).toBeGreaterThan(KNOWN_MULTIPACKS.length / 2);
+  });
+});
+
+describe("multipackVerdict", () => {
+  const box = (over: Partial<ExistingBoxRow> = {}): ExistingBoxRow => ({
+    found: false,
+    reason: "multipack",
+    ingredients_text: null,
+    contains: ["00818336010200"],
+    ...over,
+  });
+
+  it("marks a code nothing is under", () => {
+    expect(multipackVerdict(null, ["00818336010200"])).toBe("write");
+  });
+
+  // The shadow this whole mechanism exists to end: a name with no ingredients,
+  // which reads to the consumer app as a recent miss.
+  it("marks a row that holds no composition", () => {
+    expect(
+      multipackVerdict(box({ reason: null, found: true, ingredients_text: "" }), [])
+    ).toBe("write");
+  });
+
+  it("leaves a real reading alone", () => {
+    expect(
+      multipackVerdict(
+        box({ reason: null, found: true, ingredients_text: "Chicken, water." }),
+        ["00818336010200"]
+      )
+    ).toBe("conflict");
+  });
+
+  // Coming back once the tins have been read is the normal second visit.
+  it("adds a member to a box already marked", () => {
+    expect(multipackVerdict(box(), ["00818336010200", "00818336010217"])).toBe("write");
+  });
+
+  it("does nothing when the box already holds every member", () => {
+    expect(multipackVerdict(box(), ["00818336010200"])).toBe("identical");
+    expect(multipackVerdict(box(), [])).toBe("identical");
+  });
+
+  // A box read with no member proven must not undo one read with members.
+  it("does not erase members by offering none", () => {
+    expect(multipackVerdict(box({ contains: ["00818336010200"] }), [])).toBe("identical");
   });
 });

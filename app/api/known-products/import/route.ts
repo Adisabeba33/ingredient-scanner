@@ -7,9 +7,16 @@ import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis"
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
 import { detectNutritionRole } from "@/lib/nutrition-role";
-import { importVerdict, type ExistingRow, type ImportVerdict } from "@/lib/known-import";
+import {
+  importVerdict,
+  multipackVerdict,
+  type ExistingBoxRow,
+  type ExistingRow,
+  type ImportVerdict,
+} from "@/lib/known-import";
 import { KNOWN_PRODUCTS } from "@/data/known-products";
 import { KNOWN_FORMULAS } from "@/data/known-formulas";
+import { KNOWN_MULTIPACKS } from "@/data/known-multipacks";
 
 /**
  * Put the seeded formulas into the catalog.
@@ -163,6 +170,90 @@ async function decide(
 
 type Decided = Candidate & { verdict: ImportVerdict; heldPanel: boolean | null };
 
+/**
+ * The boxes, decided the same way and written in the same pass.
+ *
+ * A box carries no composition and never will, so it goes nowhere near
+ * `candidates()` — see the head of data/known-multipacks.ts for why that
+ * separation is structural rather than a filter somebody has to maintain.
+ */
+interface BoxCandidate {
+  code: string;
+  printed: string;
+  name: string;
+  /** Members, canonicalised. The box is never its own member. */
+  contains: string[];
+}
+
+function boxes(): BoxCandidate[] {
+  return KNOWN_MULTIPACKS.map((box) => {
+    const code = canonicalBarcode(box.upc);
+    const contains: string[] = [];
+    for (const member of box.contains) {
+      const key = canonicalBarcode(member);
+      // A carton listing itself would send the chooser straight back to the
+      // screen the person is already looking at. Same rule as the route.
+      if (!key || key === code) continue;
+      if (!contains.includes(key)) contains.push(key);
+    }
+    return {
+      code,
+      printed: box.upc,
+      name: `${box.brand} ${box.line} ${box.variant} — ${box.size}`.replace(/\s+/g, " "),
+      contains,
+    };
+  });
+}
+
+async function decideBoxes(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>
+) {
+  const list = boxes();
+  if (list.length === 0) return { error: null, decided: [] as DecidedBox[] };
+
+  const { data, error } = await admin
+    .from("barcode_cache")
+    .select("code, found, reason, ingredients_text, contains")
+    .in(
+      "code",
+      list.map((b) => b.code)
+    );
+  // A catalog that predates migration 0022 has no `contains` column, and the
+  // whole point of these rows is that column — so this is reported rather than
+  // worked around. `withoutColumns` would write boxes with no members, which
+  // is a row saying "not a product" and nothing else.
+  if (error) return { error: error.message, decided: [] as DecidedBox[] };
+
+  const existing = new Map<string, ExistingBoxRow>();
+  for (const row of (data ?? []) as unknown as (ExistingBoxRow & { code: string })[]) {
+    existing.set(row.code, row);
+  }
+  return {
+    error: null,
+    decided: list.map((b) => ({
+      ...b,
+      held: existing.get(b.code) ?? null,
+      verdict: multipackVerdict(existing.get(b.code), b.contains),
+    })),
+  };
+}
+
+type DecidedBox = BoxCandidate & { held: ExistingBoxRow | null; verdict: ImportVerdict };
+
+function summariseBoxes(decided: { verdict: ImportVerdict; contains: string[] }[]) {
+  return {
+    total: decided.length,
+    write: decided.filter((d) => d.verdict === "write").length,
+    identical: decided.filter((d) => d.verdict === "identical").length,
+    conflict: decided.filter((d) => d.verdict === "conflict").length,
+    // Boxes read with no member code proven. Not an error and not a failure —
+    // marking the code still stops the app inviting a photograph of the
+    // carton, which is the point of marking it. Worth a number, because it is
+    // the queue somebody can shorten by reading one more box.
+    withoutMembers: decided.filter((d) => d.contains.length === 0).length,
+  };
+}
+
 function summarise(decided: { verdict: ImportVerdict }[]) {
   const counts: Record<ImportVerdict, number> = {
     write: 0,
@@ -172,6 +263,58 @@ function summarise(decided: { verdict: ImportVerdict }[]) {
   };
   for (const d of decided) counts[d.verdict] += 1;
   return counts;
+}
+
+/**
+ * Mark the boxes.
+ *
+ * The row asserts an absence, so almost every column is deliberately null: a
+ * box has no composition, no mode and no source, and writing any of them would
+ * be inventing the product this row exists to deny. Only `contains` and the
+ * name carry anything.
+ *
+ * `contains` is written only when this pass actually has members. An upsert
+ * sends every column, so passing an empty list through would let a later run —
+ * one where the research had not proven an inner code — silently erase members
+ * an earlier run recorded. Same guard as `app/api/multipack/route.ts`.
+ */
+async function writeBoxes(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>
+) {
+  const { error, decided } = await decideBoxes(admin);
+  if (error) return { error, written: 0 };
+
+  const toWrite = decided.filter((d) => d.verdict === "write");
+  const counts = summariseBoxes(decided);
+  if (toWrite.length === 0) return { ...counts, written: 0 };
+
+  const now = new Date().toISOString();
+  const { error: writeError } = await admin.from("barcode_cache").upsert(
+    toWrite.map((b) => ({
+      code: b.code,
+      found: false,
+      reason: "multipack",
+      mode: null,
+      source: null,
+      ingredients_text: null,
+      product_name: b.name,
+      contains: b.contains.length > 0 ? b.contains : (b.held?.contains ?? null),
+      created_at: now,
+    })),
+    { onConflict: "code" }
+  );
+  if (writeError) return { ...counts, written: 0, error: writeError.message };
+
+  return {
+    ...counts,
+    written: toWrite.length,
+    // Named, because a box the catalog now refuses to treat as a product is
+    // exactly the thing somebody will want to check if a scan starts bouncing.
+    marked: toWrite.map((b) => ({ code: b.printed, name: b.name, members: b.contains.length })),
+    conflicts: decided
+      .filter((d) => d.verdict === "conflict")
+      .map((d) => ({ code: d.printed, name: d.name })),
+  };
 }
 
 /** What WOULD happen, so the button can say it before anybody presses it. */
@@ -187,8 +330,15 @@ export async function GET(req: Request) {
   if (error) {
     return Response.json({ error: "lookup_failed", message: error }, { status: 500 });
   }
+  const boxResult = await decideBoxes(admin);
   return Response.json({
     total: decided.length,
+    // Separate from `counts` on purpose: a box is not a formula waiting to be
+    // written, and adding it to that tally would make "write 41 to the catalog"
+    // mean two different kinds of thing at once.
+    boxes: boxResult.error
+      ? { error: boxResult.error }
+      : summariseBoxes(boxResult.decided),
     // Seeded products WITHOUT a formula are not in `decided` at all — the
     // import has nothing to write for them. Said out loud so "27 of 40" reads
     // as a known state rather than as thirteen products having gone missing.
@@ -235,11 +385,17 @@ export async function POST(req: Request) {
     return Response.json({ error: "lookup_failed", message: error }, { status: 500 });
   }
 
+  // Boxes first, and independently: they are a different kind of row and a
+  // batch of formulas that is already all written is no reason to leave a
+  // carton open to the discovery screen.
+  const boxes = await writeBoxes(admin);
+
   const toWrite = decided.filter((d) => d.verdict === "write");
   if (toWrite.length === 0) {
     return Response.json({
       ok: true,
       written: 0,
+      boxes,
       counts: summarise(decided),
       conflicts: decided
         .filter((d) => d.verdict === "conflict")
@@ -334,6 +490,7 @@ export async function POST(req: Request) {
     ok: true,
     written: toWrite.length,
     reportsCleared,
+    boxes,
     counts: summarise(decided),
     conflicts: decided
       .filter((d) => d.verdict === "conflict")

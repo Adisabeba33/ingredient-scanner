@@ -5,6 +5,7 @@ import {
   isValidUpcA,
   knownItems,
   lookupKnown,
+  underGs1Prefix,
   upcCheckDigit,
 } from "./known-products";
 import { KNOWN_PRODUCTS } from "../data/known-products";
@@ -117,7 +118,7 @@ describe("data/known-products.ts", () => {
     const known = GS1_PREFIXES.map((g) => g.prefix);
     const wrong = KNOWN_PRODUCTS.flatMap((p) =>
       p.packages
-        .filter((pkg) => !known.some((prefix) => pkg.upc.startsWith(prefix)))
+        .filter((pkg) => !known.some((prefix) => underGs1Prefix(pkg.upc, prefix)))
         .map((pkg) => `${p.variant} — ${pkg.upc}`)
     );
     expect(wrong).toEqual([]);

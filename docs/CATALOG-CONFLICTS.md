@@ -1144,3 +1144,48 @@ into the composition.
 2. **`022808385103`** — Merrick Purrfect Bistro — Rabbit Recipe Pâté — 3 oz: A currently indexed retailer page for the same UPC still carries a legacy Rabbit formula and 900 kcal/kg / 77 kcal-can panel. Merrick current official B294423 page is newer and is stored here; do not merge the legacy deck into this current record.
 3. **`022808383123`** — Merrick Purrfect Bistro — Salmon & Sweet Potato — 12 lb: Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276325 formula generation, while the retailer source is used only for exact size-to-UPC identity.
 4. **`022808260295`** — Merrick Lil' Plates — Small Surfin' + Turfin' Supper in Gravy — 3.5 oz: Merrick current PDP lists the package as a 3.5 oz tub but prints the calorie unit as kcal/pouch; the printed calorie wording is preserved rather than silently changed.
+
+## I. I and love and you (batch 023) — a rename in flight, and three panels that argue with themselves
+
+Nine records carry a flag. Two of them are about which generation of a
+formula a barcode names, four are about a maker's own page contradicting
+itself, and three are a calorie line the panel beside it cannot produce.
+
+1. **`818336010361`** — In The Raw / Stir & Boom — Beef Recipe — 5.5 lb: Historical 5.5 lb generation. The maker's current Raw Raw Beef formula is a different food (3391 kcal/kg, 22% protein); the archived exact-size deck is stored for this UPC rather than the newer one.
+2. **`818336010378`** — In The Raw / Stir & Boom — Chicken Recipe — 5.5 lb: Historical 5.5 lb generation, kept as its own deck rather than mixed with the current Raw Raw Chicken recipe.
+3. **`818336013348`** — Meow & Zen Hearties — Chicken — 4 oz: Older retailer data prints an earlier 19% protein / 9% fat / 5% fiber / 24% moisture deck and 3196 kcal/kg; the current manufacturer page prints 18% / 8% / 2% / 26% and 3166 kcal/kg, and the current generation is stored.
+4. **`818336013928`** — Feed Meow — Move Chicken Feast — 3 oz: Marketing copy surfaces broad age collections, but the formal AAFCO statement is adult maintenance, so `lifeStage` is adult.
+5. **`818336014222`** — Top That — Thrive Turkey Recipe in Gravy — 3 oz: The manufacturer's own page titles this Turkey and then serves a Beef ingredient module beneath it. The exact Chewy listing for the Turkey SKU supplies a Turkey deck matching the calories and panel printed on the same page, and that is what is stored.
+6. **`818336014581`** — Top That — Wit Lamb Recipe in Gravy — 3 oz: The same defect on the Lamb SKU, resolved the same way.
+7. **`818336010033`**, **`818336010002`**, **`818336010019`** — the bully sticks: the source prints 7484 kcal/kg beside a 79% protein, 1.6% fat, 13% moisture panel whose own arithmetic tops out near 3560. No dried beef reaches it and nothing else in the ledger comes within half of it, so the panel is stored and **the calorie line is not**. `lib/known-import.test.ts` now refuses any calorie figure above twice its panel's ceiling, which is the check that found these.
+
+### The rename: Lovingly Simple → Baked & Saucy
+
+One recipe is in the shops under both names at once. Lamb + Sweet Potato
+is sold as **Lovingly Simple** in 3.85 lb and 21 lb bags and as **Baked &
+Saucy** in 4 lb, 10.25 lb and 21 lb bags, and the deck, the panel and the
+calorie statement are identical to the digit — 3506 kcal/kg, 547 kcal/cup.
+
+Both are seeded as separate products, and `lib/known-import.test.ts`
+carries the pair as its second allowed shared composition. A shopper
+holding the old bag should not be told we have never heard of it, and
+merging the two would put a name on one of the bags that the bag does not
+have.
+
+### Three records held back, and why
+
+These are not rejected barcodes — the check digits pass and the codes are
+real. What is unproven is which product each one names, which is the one
+thing the seed cannot get wrong.
+
+- **`818336012068`** — a 4 oz bag of Nice Jerky! Chicken + Duck carrying the Naked Essentials Chicken + Duck **kibble** deck: the same ingredients, the same 30/14/4.5/10 panel, and the same 3524 kcal/kg and 412 kcal **per cup** as the 4 lb bag. A four-ounce bag of jerky has no kcal/cup. Either the deck belongs to a different barcode or the range name does, and the ledger cannot say which.
+- **`818336012051`** — the same failure against Naked Essentials Ancient Grains Beef + Lamb: identical deck, identical 30/15/5/10 panel, identical 3480 kcal/kg and 380 kcal/cup.
+- **`818336012075`** — Nice Jerky! Chicken + Salmon, whose panel guarantees 27% protein, 11% fat and a maximum of **82% moisture**. Those sum past the whole pack; at least one figure was mistranscribed and there is no way from here to know which.
+
+### A rounding the checker flags and we keep
+
+Three XOXOs 3 oz pâtés (`818336013577`, `818336013591`, `818336013607`)
+print 868 kcal/kg and 72 kcal/can, where the arithmetic gives 73.8. All
+three are off by the same 1.8, which is a maker rounding rather than a
+typo — a mistyped digit does not repeat itself identically across three
+cans. Stored as printed.

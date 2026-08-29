@@ -100,6 +100,24 @@ function checkDigit(body) {
 const GTIN_LENGTHS = [8, 12, 13, 14];
 
 /**
+ * The digits a GS1 company prefix is read from — the same rule as `gs1Body` in
+ * lib/known-products.ts, which is where it is explained.
+ *
+ * In short: the first digit of a GTIN-14 is a packaging level, not part of
+ * anybody's company number. Reading it as one makes every case and inner-pack
+ * code on a batch report FAIL for belonging to nobody, which is how an operator
+ * learns to read past the word FAIL.
+ */
+function gs1Body(code) {
+  return code.replace(/\D+/g, "").padStart(14, "0").slice(1);
+}
+
+function underPrefix(code, prefix) {
+  const body = gs1Body(code);
+  return body.startsWith(prefix) || body.startsWith(`0${prefix}`);
+}
+
+/**
  * Every barcode the seed already holds.
  *
  * Read out of the TypeScript with a regular expression rather than by importing
@@ -176,10 +194,14 @@ for (const r of rows) {
   // Matched by PREFIX rather than by a fixed six digits: a UPC-A carries a
   // six-digit company prefix, an EAN-13 carries a country code and a longer
   // one, and the file says how many digits each maker's is worth.
-  const maker = [...makers].find(([prefix]) => r.upc.startsWith(prefix))?.[1];
+  //
+  // Asked of the GTIN-13 body rather than the raw digits, so that a case or
+  // inner-pack code matches its maker — see `gs1Body` in lib/known-products.ts
+  // for why the leading indicator digit is not part of anybody's prefix.
+  const maker = [...makers].find(([prefix]) => underPrefix(r.upc, prefix))?.[1];
   if (!maker) {
     problems.push(
-      `prefix ${r.upc.slice(0, 7)} belongs to no maker we have seeded. ` +
+      `prefix ${gs1Body(r.upc).slice(0, 7)} belongs to no maker we have seeded. ` +
         `If this is a new maker rather than a mistyped digit, add the prefix ` +
         `to data/gs1-prefixes.ts and say whose it is.`
     );

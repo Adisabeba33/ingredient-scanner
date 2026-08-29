@@ -838,7 +838,52 @@ export const US_PET_BRANDS: SeedBrand[] = [
   { name: "Small Batch", owner: "Independent", species: "both", aliases: ["smallbatch"] },
   { name: "OC Raw", owner: "Independent", species: "both" },
   { name: "Answers", owner: "Independent", species: "both", aliases: ["answers pet food"] },
-  { name: "I and Love and You", owner: "Independent", species: "both" },
+  {
+    name: "I and love and you",
+    owner: "Independent",
+    species: "both",
+    // The brand's own spelling is lower case and spells out "and" three
+    // times, which nothing else on a shelf does — so the aliases carry the
+    // ampersand and the plus, which is how retailers, Open Food Facts and a
+    // model reading a photograph render it.
+    aliases: ["i and love and you", "i & love & you", "i+love+you", "iandloveandyou"],
+    // Every range named here came off a pack in the research ledger rather
+    // than out of shelf memory, which is why the list is unusually long and
+    // unusually odd. This maker names ranges the way it names flavours — "Nice
+    // Jerky!", "Good Golly Gullet Stix", "Whascally Wabbit" — and several
+    // ranges hold one product. Listing them anyway is what keeps a hundred
+    // products off "Other" on the coverage page.
+    //
+    // "In The Raw / Stir & Boom" is a rename caught mid-flight: two 5.5 lb
+    // bags carry the old name and a barcode the maker now sells under the new
+    // one. Both halves are listed because both are printed on packs that exist.
+    lines: [
+      "Original Recipe",
+      "Naked Essentials",
+      "Naked Essentials Ancient Grains",
+      "Naked Essentials Puppy",
+      "Nude Super Food",
+      "Lovingly Simple",
+      "Baked & Saucy",
+      "Stir & Boom",
+      "In The Raw / Stir & Boom",
+      "Raw Raw",
+      "XOXOs",
+      "Feed Meow",
+      "Irresist-A-Bowls",
+      "Top That",
+      "Treat Meow",
+      "Fillin Good",
+      "Nice Jerky!",
+      "Meow & Zen Hearties",
+      "Hip Hoppin' Hearties",
+      "Ear Candy",
+      "No Stink! Bully Sticks",
+      "Free Ranger Bully Stick",
+      "Free Ranger Braided Bully Stix",
+      "Good Golly Gullet Stix",
+    ],
+  },
   { name: "Only Natural Pet", owner: "PetSmart", species: "both" },
   { name: "Wild Earth", owner: "Independent", species: "dog" },
   { name: "Tender & True", owner: "Independent", species: "both", aliases: ["tender and true"] },

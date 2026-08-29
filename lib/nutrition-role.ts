@@ -167,6 +167,23 @@ const KNOWN_TREAT_LINES = [
   "air-dried chews",
   "air dried chews",
   "good dog rewards",
+  // I and love and you names its snack ranges the way other makers name
+  // flavours, so none of them contain the words "treat" or "chew" and every
+  // one of them would otherwise be judged as dinner. They are the §2.4 error
+  // in the same form Ziwi's chews were: a beef pizzle is 79% protein and a
+  // beef ear 83%, and both would be read as extraordinary complete foods.
+  //
+  // "bully stick" and "bully stix" are both here because the maker prints
+  // both, on packs sold beside each other.
+  "bully stick",
+  "bully sticks",
+  "bully stix",
+  "gullet stix",
+  "ear candy",
+  // Two ranges of soft-baked snacks, cat and dog, that share the word.
+  "hearties",
+  // Freeze-dried cat snacks. "Fillin" is the maker's spelling.
+  "fillin good",
 ];
 
 const KNOWN_TOPPER_LINES = [
@@ -179,6 +196,11 @@ const KNOWN_TOPPER_LINES = [
   "broths",
   "appetizers",
   "raw toppers",
+  // I and love and you's functional pouches — "Top That Move", "Top That
+  // Tummy". A three-ounce pouch of stew poured over dinner, and the range
+  // name is the instruction. Safe as a compound in the way a bare "topper" is
+  // not: two words, and the maker's own range name.
+  "top that",
 ];
 
 function hasPhrase(haystack: string, phrase: string): boolean {
