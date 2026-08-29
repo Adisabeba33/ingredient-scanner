@@ -2,38 +2,13 @@
 
 This file is a visibility/index companion to `research/deep-research-weruva.json`.
 
-- Canonical strict ledger currently contains **80** complete schema-v2 records: the original 30, 20 promoted TruLuxe, 18 Cat Stew, 8 Senior, and 4 Freeze Dried records.
+- Canonical strict ledger currently contains **100** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, and 20 promoted early post-30 recheck records.
 - This index now describes only work that has not yet been consumed into the strict ledger, plus explicit conflict/pending notes.
 - **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy where printed, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
 
-## Early validation batch after first 30
+## Early validation batch after first 30 — consumed
 
-The following 20 candidates were researched in the first post-30 validation pass. The campaign report counted **18 as verified and 2 as pending final formula check**, but the response did not identify which two. Therefore all 20 remain unconsumed and must be re-verified individually rather than inheriting that count.
-
-| UPC | Product / variant | Size | Index status |
-|---|---|---:|---|
-| `810028244269` | Kitten Gone Wild | 3 oz | RECHECK_BATCH_STATUS |
-| `878408008238` | Love Me Tender | 3 oz | RECHECK_BATCH_STATUS |
-| `878408008269` | Mack, Jack & Sam | 3 oz | RECHECK_BATCH_STATUS |
-| `878408008245` | Pumpkin Jack Splash | 3 oz | RECHECK_BATCH_STATUS |
-| `878408008214` | Pumpkin Lickin’ Chicken | 3 oz | RECHECK_BATCH_STATUS |
-| `813778017275` | Meowiss Bueller | 3 oz | RECHECK_BATCH_STATUS |
-| `813778017282` | Cat to the Future | 3 oz | RECHECK_BATCH_STATUS |
-| `813778017299` | The Breakfast Cat | 3 oz | RECHECK_BATCH_STATUS |
-| `813778017251` | The Karate Kitty | 3 oz | RECHECK_BATCH_STATUS |
-| `813778017268` | Cat Times at Fridgemont | 3 oz | RECHECK_BATCH_STATUS |
-| `878408009051` | The Double Dip | 6 oz | RECHECK_BATCH_STATUS |
-| `878408001130` | Classic Funky Chunky | 3 oz | RECHECK_BATCH_STATUS |
-| `878408001048` | Classic Mack & Jack | 3 oz | RECHECK_BATCH_STATUS |
-| `878408001024` | Classic Marbella Paella | 3 oz | RECHECK_BATCH_STATUS |
-| `878408001062` | Classic Meow Luau | 3 oz | RECHECK_BATCH_STATUS |
-| `878408001079` | Classic Mideast Feast | 3 oz | RECHECK_BATCH_STATUS |
-| `878408002373` | Classic Mideast Feast | 10 oz | RECHECK_BATCH_STATUS |
-| `878408001116` | Classic Paw Lickin’ Chicken | 3 oz | RECHECK_BATCH_STATUS |
-| `878408002410` | Classic Paw Lickin’ Chicken | 10 oz | RECHECK_BATCH_STATUS |
-| `878408001086` | Classic Polynesian BBQ | 3 oz | RECHECK_BATCH_STATUS |
-
-Known barcode-scope warning: `878408000171` and `878408000072` are case barcodes for Mideast Feast. They are not individual-unit candidates and must never be promoted as single cans.
+All 20 formerly `RECHECK_BATCH_STATUS` rows were individually re-researched, passed a fresh exclusion/check-digit/formula-generation gate, and were promoted into the canonical strict ledger. Pumpkin Lickin’ Chicken uses the current Weruva 59 kcal/3 oz and 696 kcal/kg panel; the older 60/701 evidence is retained as a generation conflict.
 
 ## TruLuxe — consumed
 

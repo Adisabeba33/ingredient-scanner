@@ -10,7 +10,7 @@ Post-30 working index: `research/WERUVA-POST-30-INDEX.md`
 
 Binding contract: `research/AGENTS.md`
 
-As of 2026-08-29 the strict ledger contains **80 complete schema-v2 records**:
+As of 2026-08-29 the strict ledger contains **100 complete schema-v2 records**:
 
 - 30 records that were already in the canonical Weruva ledger before the promotion task.
 - 20 TruLuxe records promoted from the post-30 index in commit `c76af91805f2f9be588bf6e2676cde4393fc6fe9`.
@@ -194,3 +194,8 @@ Promoted 18 Cat Stew individual-unit UPCs to the canonical ledger: `813778018111
 ## 2026-08-29 Senior / Freeze Dried strict promotion
 
 Promoted **12** additional individual-unit records: 8 Senior and 4 Freeze Dried. Canonical Weruva strict count: **80**. The six Puddy Pops/Wx lickable UPCs in this block are explicitly consumed as non-promotable individual-stick candidates because each identifies a five-pack and no separate stick barcode is proven.
+
+
+## 2026-08-29 early post-30 strict promotion
+
+Promoted all **20** individually re-researched early post-30 records after a fresh exclusion pass. Canonical Weruva strict count: **100**. Pumpkin Lickin’ Chicken was refreshed to the current manufacturer calorie generation (59 kcal/3 oz; 696 kcal/kg), with older 60/701 evidence preserved as a conflict.
