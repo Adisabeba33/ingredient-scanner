@@ -1,0 +1,31 @@
+name: Add next 20 ILY verified records
+
+on:
+  push:
+    branches:
+      - agent/deep-research-i-and-love-and-you
+    paths:
+      - .github/workflows/add-next-20-ily.yml
+      - .github/scripts/add-next-20-ily.py
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+          fetch-depth: 0
+      - name: Validate and append exactly twenty
+        run: python .github/scripts/add-next-20-ily.py
+      - name: Commit canonical ledger
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-i-and-love-and-you.json
+          git diff --cached --check
+          git commit -m "research: add next 20 fully verified ILY records"
+          git push origin HEAD:agent/deep-research-i-and-love-and-you
