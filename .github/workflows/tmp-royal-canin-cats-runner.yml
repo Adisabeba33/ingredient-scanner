@@ -1,9 +1,9 @@
-name: Run Royal Canin cats 120-140 merge
+name: Verify Blue Buffalo Multi-Cat 15 lb
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
   workflow_dispatch:
@@ -12,36 +12,50 @@ permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Update verified record
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          upc='840243105786'
+          r=next(x for x in d['records'] if x.get('upc')==upc)
+          assert r['research_status']=='needs_physical_label'
+          ing="Deboned Chicken, Deboned Turkey, Chicken Meal, Brown Rice, Barley, Oatmeal, Pea Protein, Peas, Menhaden Fish Meal, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Dried Tomato Pomace, Flaxseed (Source Of Omega 6 Fatty Acids), Potato Starch, Calcium Chloride, Fish Oil (Source Of Omega 3 Fatty Acids), Calcium Sulfate, DL-Methionine, Choline Chloride, Potassium Chloride, Potatoes, Dried Chicory Root, Taurine, L-Lysine, Dehydrated Alfalfa Meal, Pea Fiber, Alfalfa Nutrient Concentrate, Calcium Carbonate, Salt, L-Ascorbyl-2-Polyphosphate (Source Of Vitamin C), Preserved With Mixed Tocopherols, Vitamin E Supplement, Cranberries, Sweet Potatoes, Carrots, L-Carnitine, Vegetable Juice For Color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Blueberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, Biotin (Vitamin B7), Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Dried Yeast, Dried Enterococcus Faecium Fermentation Product, Dried Lactobacillus Acidophilus Fermentation Product, Dried Aspergillus Niger Fermentation Extract, Dried Trichoderma Longibrachiatum Fermentation Extract, Dried Bacillus Subtilis Fermentation Extract, Calcium Iodate, Sodium Selenite, Oil Of Rosemary."
+          r['ingredients_verbatim']=ing
+          r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in ing.split(',')]
+          r['guaranteed_analysis']={'crude_protein_min_percent':32,'crude_fat_min_percent':16,'crude_fiber_max_percent':3.5,'moisture_max_percent':9,'ash_max_percent':None,'taurine_min_percent':0.15,'other_printed_guarantees':[{'nutrient':'Magnesium','basis':'min','value':0.14,'unit':'percent'},{'nutrient':'Omega 3 Fatty Acids','basis':'min','value':0.5,'unit':'percent'},{'nutrient':'Omega 6 Fatty Acids','basis':'min','value':3.0,'unit':'percent'},{'nutrient':'L-Carnitine','basis':'min','value':100,'unit':'mg/kg'},{'nutrient':'Ascorbic Acid (Vitamin C)','basis':'min','value':200,'unit':'mg/kg'}]}
+          r['calorie_content']={'kcal_per_kg':3759,'kcal_per_unit':420,'unit_name':'cup'}
+          r['formula_source']='Current exact 15-lb PetCareRx listing supplies UPC, complete ingredient deck, guaranteed analysis and calories; current Blue Buffalo qualifying-products list independently anchors UPC/size; current exact-UPC Petstore listing confirms adult-maintenance AAFCO adequacy.'
+          r['source_urls']=['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petcarerx.com/blue-buffalo-multi-cat-health-chicken-and-turkey-recipe-adult-dry-cat-food/30728?sku=47940','https://petstore.com/products/47168']
+          r['source_accessed_at']='2026-08-29'
+          r['conflicts']=[]
+          r['verification_notes']=[
+            'UPC-A 840243105786 is current and mapped by Blue Buffalo to the individual 15 lb Multi-Cat Chicken & Turkey bag; check digit is valid.',
+            'Current PetCareRx exact 15-lb option exposes barcode 840243105786 and supplies the complete formula, GA, 3,759 kcal/kg and 420 kcal/cup.',
+            'A current exact-UPC 15-lb Petstore listing states the formula meets AAFCO Cat Food Nutrient Profiles for adult maintenance.',
+            'The earlier incomplete record was re-audited on 2026-08-29; no formula-generation conflict remains for the U.S. UPC after exact-package corroboration.'
+          ]
+          r['research_status']='source_verified'
+          d['updated_at']='2026-08-29'
+          assert r['ingredients_verbatim'] and r['guaranteed_analysis']['crude_protein_min_percent'] is not None and r['calorie_content']['kcal_per_kg'] is not None
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          print('PROMOTED',upc,'status',r['research_status'])
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify Blue Buffalo Multi-Cat 15 lb"
+          git push origin HEAD:agent/deep-research-blue-buffalo
