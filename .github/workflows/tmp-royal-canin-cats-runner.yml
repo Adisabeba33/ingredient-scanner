@@ -1,47 +1,49 @@
-name: Run Royal Canin cats 120-140 merge
-
+name: Inventory Blue Buffalo second-pass backlog
 on:
   push:
-    branches:
-      - agent/deep-research-barcode-ledger
-    paths:
-      - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
-
+    branches: [agent/deep-research-blue-buffalo]
+    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
 permissions:
   contents: write
-
 jobs:
-  merge:
+  inventory:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Print deep backlog
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          d=json.load(open('research/deep-research-blue-buffalo.json',encoding='utf-8'))
+          def missing(r):
+            m=[]
+            if not r.get('ingredients_verbatim'): m.append('ingredients')
+            ga=r.get('guaranteed_analysis') or {}
+            for k in ['crude_protein_min_percent','crude_fat_min_percent','crude_fiber_max_percent','moisture_max_percent']:
+              if ga.get(k) is None: m.append('ga')
+            cc=r.get('calorie_content') or {}
+            if cc.get('kcal_per_kg') is None or cc.get('kcal_per_unit') is None: m.append('calories')
+            if not r.get('life_stage'): m.append('life_stage')
+            if not r.get('source_urls'): m.append('sources')
+            return sorted(set(m))
+          rows=[]
+          for r in d['records']:
+            if r.get('research_status')!='needs_physical_label': continue
+            m=missing(r)
+            if len(m)>=3:
+              rows.append((r['upc'],r.get('product_line'),r.get('product_name'),r.get('size'),','.join(m)))
+          print('DEEP_BACKLOG_COUNT',len(rows))
+          for x in rows: print('|'.join('' if v is None else str(v) for v in x))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "chore: restore research runner"
+          git push origin HEAD:agent/deep-research-blue-buffalo
