@@ -1,4 +1,4 @@
-name: Inspect ILY can variants
+name: Inspect ILY legacy evidence
 on:
   push:
     branches: [agent/deep-research-i-and-love-and-you]
