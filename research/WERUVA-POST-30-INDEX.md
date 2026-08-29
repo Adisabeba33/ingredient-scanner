@@ -2,7 +2,7 @@
 
 This file is a visibility/index companion to `research/deep-research-weruva.json`.
 
-- Canonical strict ledger currently contains **68** complete schema-v2 records: the original 30, 20 promoted TruLuxe records, and 18 promoted Cat Stew records.
+- Canonical strict ledger currently contains **80** complete schema-v2 records: the original 30, 20 promoted TruLuxe, 18 Cat Stew, 8 Senior, and 4 Freeze Dried records.
 - This index now describes only work that has not yet been consumed into the strict ledger, plus explicit conflict/pending notes.
 - **Do not treat this file as a substitute for the schema-v2 ledger.** A product may be promoted into `deep-research-weruva.json` only after its full schema-v2 record is assembled with complete ingredient statement, guaranteed analysis, calories, life stage/adequacy where printed, exact unit-barcode proof, source URLs, access date, conflicts, and verification notes required by `research/AGENTS.md`.
 
@@ -43,28 +43,18 @@ All 20 TruLuxe rows previously listed here were promoted in full to `research/de
 
 All 18 Cat Stew rows were promoted into `research/deep-research-weruva.json` as complete `source_verified` schema-v2 individual-unit records after a fresh repository exclusion pass. No Cat Stew index-only row remains.
 
-## Senior / Freeze Dried / Puddy Pops / Wx treats — awaiting strict promotion
+## Senior / Freeze Dried / Puddy Pops / Wx treats — consumed
 
-| UPC | Product | Size |
-|---|---|---:|
-| `810028246317` | Senior Chicken Hydrating Purée | 3 oz |
-| `810028246324` | Senior Chicken Gravy | 3 oz |
-| `810028246348` | Senior Chicken & Tuna Gravy | 3 oz |
-| `810028246331` | Senior Tuna & Salmon Gravy | 3 oz |
-| `810028246430` | Senior Chicken Hydrating Purée | 5.5 oz |
-| `810028246447` | Senior Chicken Gravy | 5.5 oz |
-| `810028246461` | Senior Chicken & Tuna Gravy | 5.5 oz |
-| `810028246454` | Senior Tuna & Salmon Gravy | 5.5 oz |
-| `810028242944` | Freeze Dried Paw Lickin' Chicken | 1 oz |
-| `810028242951` | Freeze Dried Paw Lickin' Chicken | 7 oz |
-| `810028244535` | Wx Freeze Dried Chicken Breast & Tilapia | 1 oz |
-| `810028244559` | Wx Freeze Dried Chicken Breast & Tilapia | 7 oz |
-| `810028246782` | Puddy Pops Chicken | 0.5 oz × 5 |
-| `810028246805` | Puddy Pops Chicken & Pumpkin | 0.5 oz × 5 |
-| `810028246799` | Puddy Pops Tuna & Salmon | 0.5 oz × 5 |
-| `810028246874` | Wx Lickable Chicken Formula | 0.5 oz × 5 |
-| `810028246881` | Wx Lickable Chicken & Tilapia | 0.5 oz × 5 |
-| `810028246898` | Wx Lickable Tuna Formula | 0.5 oz × 5 |
+Promoted to strict ledger: **8 Senior individual units + 4 Freeze Dried individual units**.
+
+The six retail five-pack UPCs below are **non-promotable as individual sticks** because the barcode identifies the outer five-pack and no separate individual-stick barcode is proven:
+
+- `810028246782` — retail UPC identifies five-pack; no proven individual-stick barcode
+- `810028246805` — retail UPC identifies five-pack; no proven individual-stick barcode
+- `810028246799` — retail UPC identifies five-pack; no proven individual-stick barcode
+- `810028246874` — retail UPC identifies five-pack; no proven individual-stick barcode
+- `810028246881` — retail UPC identifies five-pack; no proven individual-stick barcode
+- `810028246898` — retail UPC identifies five-pack; no proven individual-stick barcode
 
 ## Kitten / Wx / Freeze Dried / Cat Paté — awaiting strict promotion
 
