@@ -1,0 +1,1510 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified Merrick active-market pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Merrick"
+  ],
+  "created_at": "2026-08-28",
+  "updated_at": "2026-08-28",
+  "rules_source": "research/AGENTS.md",
+  "market_scope": "ACTIVE MARKET ONLY; priority USA/Canada, then other current markets. Historical/discontinued SKUs are intentionally excluded unless later requested.",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "022808000839",
+      "canonical_gtin14": "00022808000839",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Simmered Beef, Tomato & Wild Rice Recipe Grilled in Sauce Wet Cat Food",
+      "variant": "Simmered Beef, Tomato & Wild Rice",
+      "recipe": [
+        "beef",
+        "tomato",
+        "wild rice"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "grilled in sauce",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Beef broth, beef, wheat gluten, liver, chicken, tomatoes, wild rice, natural flavor, egg product, tricalcium phosphate, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Beef broth",
+        "beef",
+        "wheat gluten",
+        "liver",
+        "chicken",
+        "tomatoes",
+        "wild rice",
+        "natural flavor",
+        "egg product",
+        "tricalcium phosphate",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 843,
+        "kcal_per_unit": 71,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A276625",
+      "formula_source": "Merrick current official US product page, current formula deck A276625.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-beef-tomato-wild-rice-gravy-grilled-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000839 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000839; canonical GTIN-14 is 00022808000839.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808000754",
+      "canonical_gtin14": "00022808000754",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Savory Salmon & Sweet Potato Recipe in Rich Gravy Wet Cat Food",
+      "variant": "Savory Salmon & Sweet Potato",
+      "recipe": [
+        "salmon",
+        "sweet potato"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks in rich gravy",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Salmon broth, salmon, chicken, wheat gluten, liver, sweet potatoes, natural flavor, dried egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Salmon broth",
+        "salmon",
+        "chicken",
+        "wheat gluten",
+        "liver",
+        "sweet potatoes",
+        "natural flavor",
+        "dried egg product",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "tricalcium phosphate",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "salt",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.2,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 838,
+        "kcal_per_unit": 71,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A280425",
+      "formula_source": "Merrick current official US product page, current formula deck A280425.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-salmon-sweet-potato-gravy-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000754 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000754; canonical GTIN-14 is 00022808000754.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808000891",
+      "canonical_gtin14": "00022808000891",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Braised Pork, Carrot & Barley Recipe Grilled in Sauce Wet Cat Food",
+      "variant": "Braised Pork, Carrot & Barley",
+      "recipe": [
+        "pork",
+        "carrot",
+        "barley"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "grilled in sauce",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Pork broth, pork, wheat gluten, chicken, liver, carrots, barley, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Pork broth",
+        "pork",
+        "wheat gluten",
+        "chicken",
+        "liver",
+        "carrots",
+        "barley",
+        "natural flavor",
+        "egg product",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "tricalcium phosphate",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 864,
+        "kcal_per_unit": 73,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A276825",
+      "formula_source": "Merrick current official US product page, current formula deck A276825.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-braised-pork-carrot-barley-gravy-grilled-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000891 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000891; canonical GTIN-14 is 00022808000891.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808000778",
+      "canonical_gtin14": "00022808000778",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Stewed Chicken, Beef & Carrot Recipe in Rich Gravy Wet Cat Food",
+      "variant": "Stewed Chicken, Beef & Carrot",
+      "recipe": [
+        "chicken",
+        "beef",
+        "carrot"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks in rich gravy",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken and beef broth, chicken, liver, wheat gluten, beef, carrots, natural flavor, dried egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, taurine, carrageenan, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Chicken and beef broth",
+        "chicken",
+        "liver",
+        "wheat gluten",
+        "beef",
+        "carrots",
+        "natural flavor",
+        "dried egg product",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "tricalcium phosphate",
+        "taurine",
+        "carrageenan",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.2,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1149,
+        "kcal_per_unit": 97,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A280525",
+      "formula_source": "Merrick current official US product page, current formula deck A280525.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-chicken-beef-carrot-gravy-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000778 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000778; canonical GTIN-14 is 00022808000778.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808000853",
+      "canonical_gtin14": "00022808000853",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Wild-Caught Cod, Spinach & Wild Rice Recipe Grilled in Sauce Wet Cat Food",
+      "variant": "Wild-Caught Cod, Spinach & Wild Rice",
+      "recipe": [
+        "cod",
+        "spinach",
+        "wild rice"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "grilled in sauce",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Cod broth, cod, wheat gluten, fish, liver, chicken, spinach, wild rice, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Cod broth",
+        "cod",
+        "wheat gluten",
+        "fish",
+        "liver",
+        "chicken",
+        "spinach",
+        "wild rice",
+        "natural flavor",
+        "egg product",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "tricalcium phosphate",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 797,
+        "kcal_per_unit": 67,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A276725",
+      "formula_source": "Merrick current official US product page, current formula deck A276725.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-cod-spinach-wild-rice-gravy-grilled-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000853 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000853; canonical GTIN-14 is 00022808000853.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808000792",
+      "canonical_gtin14": "00022808000792",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Wild-Caught Tuna, Cod & Carrot Recipe in Rich Gravy Wet Cat Food",
+      "variant": "Wild-Caught Tuna, Cod & Carrot",
+      "recipe": [
+        "tuna",
+        "cod",
+        "carrot"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks in rich gravy",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Tuna and cod broth, tuna, chicken, wheat gluten, liver, carrots, cod, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Tuna and cod broth",
+        "tuna",
+        "chicken",
+        "wheat gluten",
+        "liver",
+        "carrots",
+        "cod",
+        "natural flavor",
+        "egg product",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "xanthan gum",
+        "tricalcium phosphate",
+        "carrageenan",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.2,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 816,
+        "kcal_per_unit": 69,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A280325",
+      "formula_source": "Merrick current official US product page, current formula deck A280325.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-tuna-cod-carrot-gravy-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808000792 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808000792; canonical GTIN-14 is 00022808000792.",
+        "Current official Merrick PDP identifies a 3 oz can and supplies the complete current ingredients, guaranteed analysis, calorie statement, and adult-maintenance adequacy statement.",
+        "Active-market gate: this SKU is in Merrick current US wet-cat catalog and is linked through the manufacturer Where to Buy/PriceSpider purchase flow."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382539",
+      "canonical_gtin14": "00022808382539",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Chicken Recipe Pâté Wet Cat Food",
+      "variant": "Chicken Recipe Pâté",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned Chicken, Chicken Liver, Chicken Broth, Dried Egg Product, Natural Flavors, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].",
+      "ingredients_ordered_normalized": [
+        "Deboned Chicken",
+        "Chicken Liver",
+        "Chicken Broth",
+        "Dried Egg Product",
+        "Natural Flavors",
+        "Tricalcium Phosphate",
+        "Dried Cranberries",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Guar Gum",
+        "Menhaden Fish Oil",
+        "Salt",
+        "Taurine",
+        "Choline Chloride",
+        "Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1199,
+        "kcal_per_unit": 101,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B290623-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck B290623-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-chicken-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382539 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382539; canonical GTIN-14 is 00022808382539.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382614",
+      "canonical_gtin14": "00022808382614",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Duck Recipe Pâté Wet Cat Food",
+      "variant": "Duck Recipe Pâté",
+      "recipe": [
+        "duck"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned Duck, Chicken Liver, Duck Broth, Chicken, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].",
+      "ingredients_ordered_normalized": [
+        "Deboned Duck",
+        "Chicken Liver",
+        "Duck Broth",
+        "Chicken",
+        "Natural Flavor",
+        "Tricalcium Phosphate",
+        "Dried Cranberries",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Guar Gum",
+        "Menhaden Fish Oil",
+        "Salt",
+        "Taurine",
+        "Choline Chloride",
+        "Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.4,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1086,
+        "kcal_per_unit": 92,
+        "unit_name": "can"
+      },
+      "label_deck_code": "E280123-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck E280123-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-duck-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382614 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382614; canonical GTIN-14 is 00022808382614.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382577",
+      "canonical_gtin14": "00022808382577",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Tuna Recipe Pâté Wet Cat Food",
+      "variant": "Tuna Recipe Pâté",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Tuna, Tuna Broth, Chicken, Chicken Liver, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Taurine, Choline Chloride, Vitamins [Vitamin E supplement, Thiamine Mononitrate, Niacin, d-Calcium Pantothenate, Vitamin A supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.",
+      "ingredients_ordered_normalized": [
+        "Tuna",
+        "Tuna Broth",
+        "Chicken",
+        "Chicken Liver",
+        "Natural Flavor",
+        "Tricalcium Phosphate",
+        "Dried Cranberries",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Guar Gum",
+        "Menhaden Fish Oil",
+        "Taurine",
+        "Choline Chloride",
+        "Vitamins [Vitamin E supplement, Thiamine Mononitrate, Niacin, d-Calcium Pantothenate, Vitamin A supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12, Biotin, Folic Acid, Vitamin D-3 Supplement]",
+        "Salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1110,
+        "kcal_per_unit": 94,
+        "unit_name": "can"
+      },
+      "label_deck_code": "E280023-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck E280023-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-tuna-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382577 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382577; canonical GTIN-14 is 00022808382577.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382638",
+      "canonical_gtin14": "00022808382638",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Beef Recipe Pâté Wet Cat Food",
+      "variant": "Beef Recipe Pâté",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned Beef, Chicken Liver, Beef Broth, Chicken, Natural Flavor, Dried Cranberries, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Menhaden Fish Oil, Choline Chloride, Taurine, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.",
+      "ingredients_ordered_normalized": [
+        "Deboned Beef",
+        "Chicken Liver",
+        "Beef Broth",
+        "Chicken",
+        "Natural Flavor",
+        "Dried Cranberries",
+        "Guar Gum",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Menhaden Fish Oil",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]",
+        "Salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.4,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1178,
+        "kcal_per_unit": 100,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B290523-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck B290523-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-beef-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382638 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382638; canonical GTIN-14 is 00022808382638.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382591",
+      "canonical_gtin14": "00022808382591",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Turkey Recipe Pâté Wet Cat Food",
+      "variant": "Turkey Recipe Pâté",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned Turkey, Chicken Liver, Turkey Broth, Chicken, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Chicken Liver",
+        "Turkey Broth",
+        "Chicken",
+        "Natural Flavor",
+        "Tricalcium Phosphate",
+        "Dried Cranberries",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Guar Gum",
+        "Menhaden Fish Oil",
+        "Salt",
+        "Taurine",
+        "Choline Chloride",
+        "Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.4,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1238,
+        "kcal_per_unit": 105,
+        "unit_name": "can"
+      },
+      "label_deck_code": "E280223-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck E280223-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-turkey-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382591 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382591; canonical GTIN-14 is 00022808382591.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808383277",
+      "canonical_gtin14": "00022808383277",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Land & Sea Recipe Pâté Wet Cat Food",
+      "variant": "Land & Sea Recipe Pâté",
+      "recipe": [
+        "beef",
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned beef, beef broth, chicken giblets, chicken, salmon, natural flavor, cranberries, Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, fish oil, taurine, choline chloride, Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Deboned beef",
+        "beef broth",
+        "chicken giblets",
+        "chicken",
+        "salmon",
+        "natural flavor",
+        "cranberries",
+        "Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "guar gum",
+        "fish oil",
+        "taurine",
+        "choline chloride",
+        "Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.2,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1185,
+        "kcal_per_unit": 100,
+        "unit_name": "can"
+      },
+      "label_deck_code": "C290425",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck C290425.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-land-sea-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808383277 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808383277; canonical GTIN-14 is 00022808383277.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808382553",
+      "canonical_gtin14": "00022808382553",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Salmon Recipe Pâté Wet Cat Food",
+      "variant": "Salmon Recipe Pâté",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned Salmon, Salmon Broth, Chicken, Chicken Liver, Natural Flavor, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Choline Chloride, Taurine, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.",
+      "ingredients_ordered_normalized": [
+        "Deboned Salmon",
+        "Salmon Broth",
+        "Chicken",
+        "Chicken Liver",
+        "Natural Flavor",
+        "Dried Cranberries",
+        "Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide]",
+        "Guar Gum",
+        "Menhaden Fish Oil",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement]",
+        "Salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.4,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1251,
+        "kcal_per_unit": 106,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B290323-3",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck B290323-3.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-salmon-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808382553 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808382553; canonical GTIN-14 is 00022808382553.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808385103",
+      "canonical_gtin14": "00022808385103",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Rabbit Recipe Pâté Wet Cat Food",
+      "variant": "Rabbit Recipe Pâté",
+      "recipe": [
+        "rabbit"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "grain free",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Deboned rabbit, chicken livers, rabbit broth, chicken giblets, chicken, natural flavor, calcium carbonate, cranberries, guar gum, Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], fish oil, taurine, Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], choline chloride, salt.",
+      "ingredients_ordered_normalized": [
+        "Deboned rabbit",
+        "chicken livers",
+        "rabbit broth",
+        "chicken giblets",
+        "chicken",
+        "natural flavor",
+        "calcium carbonate",
+        "cranberries",
+        "guar gum",
+        "Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "fish oil",
+        "taurine",
+        "Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement]",
+        "choline chloride",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.4,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1174,
+        "kcal_per_unit": 99,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B294423",
+      "formula_source": "Merrick current official US product page, current 3 oz formula deck B294423.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-rabbit-wet-cat-food",
+        "https://www.merrickpetcare.com/cat-food/wet"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official product-card/PDP HTML exposes UPC 022808385103 in the PriceSpider ps-sku field for this exact 3 oz can; current official catalog lists the SKU with Where to Buy.",
+      "conflicts": [
+        "A currently indexed retailer page for the same UPC still carries a legacy Rabbit formula and 900 kcal/kg / 77 kcal-can panel. Merrick current official B294423 page is newer and is stored here; do not merge the legacy deck into this current record."
+      ],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808385103; canonical GTIN-14 is 00022808385103.",
+        "Current official Merrick PDP identifies the 3 oz can and supplies the complete current ingredient order, guaranteed analysis, calories, and adult-maintenance AAFCO statement.",
+        "Active-market gate: current Merrick US catalog and manufacturer Where to Buy/PriceSpider flow confirm this is a live retail SKU."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808001317",
+      "canonical_gtin14": "00022808001317",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Chicken & Sweet Potato Recipe Dry Cat Food",
+      "variant": "Chicken & Sweet Potato",
+      "recipe": [
+        "chicken",
+        "sweet potato"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, dried egg product, pea starch, pea protein, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "cassava root flour",
+        "potato protein",
+        "dried yeast",
+        "beef fat preserved with mixed tocopherols",
+        "canola meal",
+        "dried egg product",
+        "pea starch",
+        "pea protein",
+        "sweet potatoes",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "potassium chloride",
+        "flaxseed",
+        "sodium bisulfate",
+        "calcium carbonate",
+        "salt",
+        "choline chloride",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.3%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.2%",
+          "Omega-6 Fatty Acids* (Min) 1.4%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3759,
+        "kcal_per_unit": 459,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276425",
+      "formula_source": "Merrick current official US product page, current formula deck A276425; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-chicken-dry-cat-food",
+        "https://hardypaw.com/products/merrick-purrfect-bistro-grain-free-savory-chicken-sweet-potato-recipe-dry-cat-food-4-lb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official catalog/PDP directly exposes UPC 022808001317 for the 4 lb product via PriceSpider, and the linked current retailer listing independently maps that barcode to the 4 lb bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808001317; canonical GTIN-14 is 00022808001317.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808001355",
+      "canonical_gtin14": "00022808001355",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Salmon & Sweet Potato Recipe Dry Cat Food",
+      "variant": "Salmon & Sweet Potato",
+      "recipe": [
+        "salmon",
+        "sweet potato"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Salmon, chicken meal, pea starch, potato protein, cassava root flour, dried yeast, canola meal, beef fat preserved with mixed tocopherols, dried egg product, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, flaxseed, sodium bisulfate, potassium chloride, choline chloride, salt, calcium carbonate, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Salmon",
+        "chicken meal",
+        "pea starch",
+        "potato protein",
+        "cassava root flour",
+        "dried yeast",
+        "canola meal",
+        "beef fat preserved with mixed tocopherols",
+        "dried egg product",
+        "sweet potatoes",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "flaxseed",
+        "sodium bisulfate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "calcium carbonate",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.4%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.5%",
+          "Omega-6 Fatty Acids* (Min) 1.5%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3822,
+        "kcal_per_unit": 467,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276325",
+      "formula_source": "Merrick current official US product page, current formula deck A276325; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-salmon-dry-cat-food",
+        "https://hardypaw.com/products/merrick-purrfect-bistro-grain-free-salmon-sweet-potato-recipe-dry-cat-food-4-lb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official catalog/PDP directly exposes UPC 022808001355 for the 4 lb product via PriceSpider, and the linked current retailer listing independently maps that barcode to the 4 lb bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808001355; canonical GTIN-14 is 00022808001355.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808001393",
+      "canonical_gtin14": "00022808001393",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Wild-Caught Ocean Whitefish & Spinach Recipe Dry Cat Food",
+      "variant": "Wild-Caught Ocean Whitefish & Spinach",
+      "recipe": [
+        "ocean whitefish",
+        "spinach"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Ocean whitefish, chicken meal, potato protein, cassava root flour, pea starch, dried yeast, dried egg product, beef fat preserved with mixed tocopherols, canola meal, dried spinach, pea protein, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, taurine, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Ocean whitefish",
+        "chicken meal",
+        "potato protein",
+        "cassava root flour",
+        "pea starch",
+        "dried yeast",
+        "dried egg product",
+        "beef fat preserved with mixed tocopherols",
+        "canola meal",
+        "dried spinach",
+        "pea protein",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "potassium chloride",
+        "flaxseed",
+        "sodium bisulfate",
+        "calcium carbonate",
+        "salt",
+        "taurine",
+        "choline chloride",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.1%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.2%",
+          "Omega-6 Fatty Acids* (Min) 1.2%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3785,
+        "kcal_per_unit": 469,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276225",
+      "formula_source": "Merrick current official US product page, current formula deck A276225; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-wild-ocean-whitefish-spinach-dry-cat-food",
+        "https://hardypaw.com/products/merrick-purrfect-bistro-grain-free-wild-caught-ocean-whitefish-spinach-recipe-dry-cat-food-4-lb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official catalog/PDP directly exposes UPC 022808001393 for the 4 lb product via PriceSpider, and the linked current retailer listing independently maps that barcode to the 4 lb bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808001393; canonical GTIN-14 is 00022808001393.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808001454",
+      "canonical_gtin14": "00022808001454",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Pasture-Raised Lamb & Carrots Recipe Dry Cat Food",
+      "variant": "Pasture-Raised Lamb & Carrots",
+      "recipe": [
+        "lamb",
+        "carrot"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Lamb, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, pea starch, carrots, pea protein, dried egg product, natural flavor, dried chicory root, phosphoric acid, sunflower oil, flaxseed, potassium chloride, sodium bisulfate, choline chloride, calcium carbonate, salt, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "chicken meal",
+        "cassava root flour",
+        "potato protein",
+        "dried yeast",
+        "beef fat preserved with mixed tocopherols",
+        "canola meal",
+        "pea starch",
+        "carrots",
+        "pea protein",
+        "dried egg product",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "sunflower oil",
+        "flaxseed",
+        "potassium chloride",
+        "sodium bisulfate",
+        "choline chloride",
+        "calcium carbonate",
+        "salt",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.4%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.2%",
+          "Omega-6 Fatty Acids* (Min) 1.4%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3852,
+        "kcal_per_unit": 477,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276525",
+      "formula_source": "Merrick current official US product page, current formula deck A276525; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-lamb-carrot-dry-cat-food",
+        "https://hardypaw.com/products/merrick-purrfect-bistro-grain-free-pasture-raised-lamb-carrots-recipe-dry-cat-food-4-lb"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Merrick current official catalog/PDP directly exposes UPC 022808001454 for the 4 lb product via PriceSpider, and the linked current retailer listing independently maps that barcode to the 4 lb bag.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808001454; canonical GTIN-14 is 00022808001454.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808383109",
+      "canonical_gtin14": "00022808383109",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Chicken & Sweet Potato Recipe Dry Cat Food",
+      "variant": "Chicken & Sweet Potato",
+      "recipe": [
+        "chicken",
+        "sweet potato"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, dried egg product, pea starch, pea protein, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "cassava root flour",
+        "potato protein",
+        "dried yeast",
+        "beef fat preserved with mixed tocopherols",
+        "canola meal",
+        "dried egg product",
+        "pea starch",
+        "pea protein",
+        "sweet potatoes",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "potassium chloride",
+        "flaxseed",
+        "sodium bisulfate",
+        "calcium carbonate",
+        "salt",
+        "choline chloride",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 38,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.3%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.2%",
+          "Omega-6 Fatty Acids* (Min) 1.4%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3759,
+        "kcal_per_unit": 459,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276425",
+      "formula_source": "Merrick current official US product page, current formula deck A276425; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-chicken-dry-cat-food",
+        "https://www.petcarerx.com/merrick-purrfect-bistro-grain-free-real-chicken-recipe-dry-cat-food/30062",
+        "https://www.chewy.com/merrick-purrfect-bistro-grain-free/dp/3853758"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Exact 12 lb size-to-UPC identity 022808383109 is stated by the retailer option table; current Chewy listing confirms the same recipe/12 lb package remains orderable, while Merrick current official PDP supplies the current formula generation.",
+      "conflicts": [
+        "Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276425 formula generation, while the retailer source is used only for exact size-to-UPC identity."
+      ],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808383109; canonical GTIN-14 is 00022808383109.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "022808383123",
+      "canonical_gtin14": "00022808383123",
+      "barcode_scope": "individual_unit",
+      "brand": "Merrick",
+      "manufacturer": "Merrick Pet Care",
+      "species": "cat",
+      "product_line": "Purrfect Bistro",
+      "product_name": "Merrick Purrfect Bistro Grain Free Salmon & Sweet Potato Recipe Dry Cat Food",
+      "variant": "Salmon & Sweet Potato",
+      "recipe": [
+        "salmon",
+        "sweet potato"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "grain free",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Salmon, chicken meal, pea starch, potato protein, cassava root flour, dried yeast, canola meal, beef fat preserved with mixed tocopherols, dried egg product, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, flaxseed, sodium bisulfate, potassium chloride, choline chloride, salt, calcium carbonate, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].",
+      "ingredients_ordered_normalized": [
+        "Salmon",
+        "chicken meal",
+        "pea starch",
+        "potato protein",
+        "cassava root flour",
+        "dried yeast",
+        "canola meal",
+        "beef fat preserved with mixed tocopherols",
+        "dried egg product",
+        "sweet potatoes",
+        "natural flavor",
+        "dried chicory root",
+        "phosphoric acid",
+        "flaxseed",
+        "sodium bisulfate",
+        "potassium chloride",
+        "choline chloride",
+        "salt",
+        "calcium carbonate",
+        "taurine",
+        "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)]",
+        "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          "Linoleic Acid (Min) 1.4%",
+          "Calcium (Ca) (Min) 1.0%",
+          "Phosphorus (P) (Min) 0.8%",
+          "Selenium (Se) (Min) 0.35 mg/kg",
+          "Vitamin A (Min) 12,000 IU/kg",
+          "Zinc (Zn) (Min) 150 mg/kg",
+          "Vitamin E (Min) 150 IU/kg",
+          "Omega-3 Fatty Acids* (Min) 0.5%",
+          "Omega-6 Fatty Acids* (Min) 1.5%"
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3822,
+        "kcal_per_unit": 467,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A276325",
+      "formula_source": "Merrick current official US product page, current formula deck A276325; same formula applies to the currently listed 4 lb and 12 lb sizes.",
+      "source_urls": [
+        "https://www.merrickpetcare.com/shop/purrfect-bistro-grain-free-salmon-dry-cat-food",
+        "https://www.petcarerx.com/merrick-purrfect-bistro-grain-free-real-salmon-recipe-dry-cat-food/30769",
+        "https://www.chewy.com/merrick-purrfect-bistro-grain-free/dp/3853774"
+      ],
+      "source_accessed_at": "2026-08-28",
+      "barcode_notes": "Exact 12 lb size-to-UPC identity 022808383123 is stated by the retailer option table; current Chewy listing confirms the same recipe/12 lb package remains orderable, while Merrick current official PDP supplies the current formula generation.",
+      "conflicts": [
+        "Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276325 formula generation, while the retailer source is used only for exact size-to-UPC identity."
+      ],
+      "verification_notes": [
+        "UPC-A check digit validated for 022808383123; canonical GTIN-14 is 00022808383123.",
+        "Current Merrick official PDP provides complete ingredients, all printed guaranteed-analysis values, calorie content, and adult-maintenance adequacy for the recipe.",
+        "Active-market gate: exact size is currently offered online; barcode proof and current formula proof are kept separate where a retailer retained stale formula text."
+      ],
+      "research_status": "source_verified"
+    }
+  ]
+}
