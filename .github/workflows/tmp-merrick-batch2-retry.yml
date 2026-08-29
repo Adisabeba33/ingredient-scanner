@@ -1,43 +1,76 @@
-name: Retry Merrick batch 2
+name: Validate committed Merrick batch 2
 on:
   push:
     branches: [agent/deep-research-merrick]
     paths: [.github/workflows/tmp-merrick-batch2-retry.yml]
 permissions:
-  contents: write
+  contents: read
 jobs:
-  generate:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/deep-research-merrick
-      - name: Run corrected batch generator
+      - name: Validate committed Merrick ledger
         run: |
           python - <<'PY'
+          import json,re
           from pathlib import Path
-          import textwrap
-          src=Path('.github/workflows/tmp-merrick-batch2-map.yml').read_text(encoding='utf-8')
-          lines=src.splitlines()
-          start=next(i for i,l in enumerate(lines) if "python - <<'PY'" in l)
-          end=next(i for i in range(start+1,len(lines)) if lines[i].strip()=='PY')
-          code=textwrap.dedent('\n'.join(lines[start+1:end]))
-          old="assert 'adult' in (desc+' '+txt[f:f+1200]).lower(),(upc,'adult marker missing')"
-          new="stage_text=(desc+' '+txt[f:f+1800]).lower(); life_stage='adult' if __import__('re').search(r'\\badult dogs?\\b|maintenance of adult dogs',stage_text) else None"
-          assert old in code
-          code=code.replace(old,new)
-          old2="'variant':variant,'recipe':recipe,'life_stage':'adult','food_form':'wet','texture':texture,'presentation':presentation,"
-          new2="'variant':variant,'recipe':recipe,'life_stage':life_stage,'food_form':'wet','texture':texture,'presentation':presentation,"
-          assert old2 in code
-          code=code.replace(old2,new2)
-          old3="'Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, adult feeding/life-stage context, and single-can package size.',"
-          new3="('Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, explicit adult life-stage context, and single-can package size.' if life_stage=='adult' else 'Current official Merrick PDP supplies the complete ingredient order, printed guaranteed analysis, calorie statement, and single-can package size; it does not explicitly print a life stage in the captured product/formula text, so life_stage is null rather than inferred.'),"
-          assert old3 in code
-          code=code.replace(old3,new3)
-          exec(compile(code,'batch2_generator','exec'))
+          from collections import Counter
+          target=Path('research/deep-research-merrick.json')
+          data=json.loads(target.read_text(encoding='utf-8'))
+          recs=data['records']
+          assert len(recs)==40
+          upcs=[r['upc'] for r in recs]
+          assert len(set(upcs))==40
+          batch2={
+            '022808001997','022808283010','022808284000','022808280040','022808390046',
+            '022808370024','022808470144','022808390916','022808280064','022808280002',
+            '022808280026','022808284093','022808390930','022808284031','022808284017',
+            '022808003342','022808282976','022808282938','022808282877','022808002864'
+          }
+          got={r['upc'] for r in recs[20:]}
+          assert got==batch2,(got^batch2)
+          def valid(s):
+            total=sum(int(s[i])*(3 if i%2==0 else 1) for i in range(11))
+            return len(s)==12 and s.isdigit() and (10-total%10)%10==int(s[-1])
+          assert all(valid(x) for x in upcs)
+          assert all(r['canonical_gtin14']==r['upc'].zfill(14) for r in recs)
+          assert all(r['barcode_scope']=='individual_unit' for r in recs)
+          assert all(r['research_status']=='source_verified' for r in recs)
+          textures={'pate','loaf','mousse','minced','ground','chopped_ground','flaked','shredded','morsels','chunks','cuts','choice_cuts','slices','filets','bits','stew','medley','kibble','biscuit','freeze_dried','air_dried','steam_dried','dehydrated','fresh','raw','unknown'}
+          presentations={'in_gravy','extra_gravy','in_sauce','in_broth','in_jelly','in_water','gravy_center','gravy_halo','plain','unknown'}
+          assert all(r['texture'] in textures for r in recs),[(r['upc'],r['texture']) for r in recs if r['texture'] not in textures]
+          assert all(r['presentation'] in presentations for r in recs),[(r['upc'],r['presentation']) for r in recs if r['presentation'] not in presentations]
+          required=['product_name','variant','recipe','food_form','package_type','size','ingredients_verbatim','ingredients_ordered_normalized','guaranteed_analysis','calorie_content','formula_source','source_urls','source_accessed_at','verification_notes']
+          for r in recs:
+            for k in required: assert r.get(k) not in (None,'',[]),(r['upc'],k)
+            ga=r['guaranteed_analysis']; cal=r['calorie_content']
+            for k in ['crude_protein_min_percent','crude_fat_min_percent','crude_fiber_max_percent','moisture_max_percent']: assert ga.get(k) is not None,(r['upc'],k)
+            assert cal.get('kcal_per_kg') is not None and cal.get('kcal_per_unit') is not None
+          b2=[r for r in recs if r['upc'] in batch2]
+          assert len(b2)==20
+          assert all(r['species']=='dog' and r['food_form']=='wet' and r['package_type']=='can' and r['size']=='12.7 oz' for r in b2)
+          assert all(len(r['ingredients_verbatim'])>100 for r in b2)
+          # Global exclusion re-sweep, excluding target ledger itself.
+          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+[p for p in Path('research').glob('deep-research-*.json') if p!=target]
+          collisions=[]
+          for p in paths:
+            if not p.exists(): continue
+            txt=p.read_text(encoding='utf-8',errors='replace')
+            for code in batch2:
+              if re.search(r'(?<!\d)'+re.escape(code)+r'(?!\d)',txt) or re.search(r'(?<!\d)'+re.escape(code.zfill(14))+r'(?!\d)',txt): collisions.append((code,str(p)))
+          assert not collisions,collisions
+          print('REMOTE_BATCH2_OK')
+          print('TOTAL',len(recs))
+          print('STATUS',dict(Counter(r['research_status'] for r in recs)))
+          print('SCOPE',dict(Counter(r['barcode_scope'] for r in recs)))
+          print('SPECIES',dict(Counter(r['species'] for r in recs)))
+          print('FORM',dict(Counter(r['food_form'] for r in recs)))
+          print('BATCH2_LIFE_STAGE',dict(Counter(str(r['life_stage']) for r in b2)))
+          print('BATCH2_TEXTURE',dict(Counter(r['texture'] for r in b2)))
+          print('BATCH2_PRESENTATION',dict(Counter(r['presentation'] for r in b2)))
+          print('COLLISIONS',collisions)
+          print('BATCH2_UPCS',','.join(r['upc'] for r in recs[20:]))
           PY
-          git config user.name "OpenAI Research Agent"
-          git config user.email "noreply@openai.com"
-          git add research/deep-research-merrick.json
-          git commit -m "research: add second 20 active Merrick barcodes"
-          git push origin HEAD:agent/deep-research-merrick
