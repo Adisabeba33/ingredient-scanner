@@ -1,91 +1,47 @@
-name: Second-pass verify Blue Buffalo cat treats
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote verified treat records
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          updates={
-            '859610007943': {
-              'ingredients':'Deboned Chicken, Salmon, Potatoes, Vegetable Glycerin, Gelatin, Natural Flavor, Salt, Preserved with Phosphoric Acid, Sorbic Acid, Citric Acid and Mixed Tocopherols, Oil of Rosemary.',
-              'ga':(20,23,2,28),'kcalkg':3764,'kcalunit':1.5,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.bestwest.ca/product/702123/26914471-Blue_Buffalo_Wilderness_Chicken_Salmon_Grain_Free_Cat_Treats_2_oz','https://magoospet.com/MountPleasant/product/775837/29300289-Blue_Buffalo_Wilderness_Chicken_Salmon_Grain_Free_Cat_Treats_2_oz'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 859610007943 to Wilderness Chicken & Salmon 2 oz cat treats. Two current retailers independently agree on complete ingredients, GA, 3,764 kcal/kg and 1.5 kcal/treat; product is for intermittent or supplemental feeding only.'},
-            '859610008315': {
-              'ingredients':'Deboned Chicken, Deboned Duck, Potatoes, Vegetable Glycerin, Gelatin, Natural Flavor, Salt, Preserved with Phosphoric Acid, Sorbic Acid, Citric Acid and Mixed Tocopherols, Oil of Rosemary.',
-              'ga':(25,18,2,28),'kcalkg':3706,'kcalunit':1.5,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petscience.ca/blue-wilderness-chicken-duck-treats-12-2-oz-279-00831','https://petfriendlysite.com/products/blue-buffalo-wilderness-chicken-duck-cat-treats'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 859610008315 to Wilderness Chicken & Duck 2 oz cat treats. Current Canadian and U.S. retailers agree on the complete formula and GA; PetScience provides 3,706 kcal/kg and 1.5 kcal/treat. Supplemental/intermittent treat.'},
-            '859610007967': {
-              'ingredients':'Deboned Chicken, Deboned Trout, Potatoes, Vegetable Glycerin, Gelatin, Natural Flavor, Salt, Preserved with Phosphoric Acid, Sorbic Acid, Citric Acid and Mixed Tocopherols, Oil of Rosemary.',
-              'ga':(25,18,2,28),'kcalkg':3652,'kcalunit':1.5,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.target.com/p/-/A-75878659','https://www.petscience.ca/omega-fresh/blue-wilderness-chicken-trout-treats-12-2-oz-279-00796'],
-              'note':'Current Blue Buffalo qualifying list and Target both bind UPC 859610007967 to the 2 oz Chicken & Trout treat. Target and PetScience agree on ingredients and GA; PetScience supplies 3,652 kcal/kg and 1.5 kcal/treat. Supplemental/intermittent treat.'},
-            '859610007905': {
-              'ingredients':'Deboned Chicken, Deboned Turkey, Potatoes, Vegetable Glycerin, Gelatin, Natural Flavor, Salt, Preserved with Phosphoric Acid, Sorbic Acid, Citric Acid and Mixed Tocopherols, Oil of Rosemary.',
-              'ga':(25,18,2,28),'kcalkg':3652,'kcalunit':1.5,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petscience.ca/blue-wilderness-chicken-turkey-treats-12-2-oz-279-00790','https://petproworld.com/products/blue-buffalo-wilderness-chicken-turkey-grain-free-cat-treats-2-oz'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 859610007905 to Wilderness Chicken & Turkey 2 oz cat treats. Current retailers agree on complete ingredients and GA; PetScience supplies 3,652 kcal/kg and 1.5 kcal/treat. Supplemental/intermittent treat.'},
-            '840243149247': {
-              'ingredients':'Duck, Chicken, Vegetable Glycerin, Pea Starch, Potatoes, Brewers Dried Yeast, Dried Chicken Liver, Pea Protein, Dried Chicken Broth, Gelatin, Natural Flavor, Oatmeal, Oat Fiber, Vinegar, Paprika (For Color).',
-              'ga':(28,14,2,26),'kcalkg':3245,'kcalunit':1.3,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/blue-buffalo-true-chews-natural-chewy/dp/631718','https://www.chewy.com/ca/blue-buffalo-true-chews-all-natural/dp/1000060217','https://www.petco.com/product/true-chews-chewy-duck-recipe-cat-treat'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 840243149247 to True Chews Duck 3 oz. Current U.S./Canadian Chewy and Petco agree on formula and 28/14/2/26 GA; Chewy provides 3,245 kcal/kg and 1.3 kcal/piece. Petco/Canada resolve crude fiber as 2% max.'},
-            '840243149254': {
-              'ingredients':'Alaska Pollock, Chicken, Vegetable Glycerin, Pea Starch, Potatoes, Brewers Dried Yeast, Dried Chicken Liver, Pea Protein, Dried Chicken Broth, Gelatin, Natural Flavor, Oatmeal, Oat Fiber, Vinegar, Paprika (For Color).',
-              'ga':(30,9,2,26),'kcalkg':2975,'kcalunit':1.2,
-              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/ca/blue-buffalo-true-chews-natural/dp/1000060229','https://www.petco.com/product/blue-buffalo-true-chews-natural-alaska-pollock-chewy-cat-treats-3-oz-3024809','https://www.chewy.com/blue-buffalo-true-chews-natural-chewy/dp/631726'],
-              'note':'Current Blue Buffalo qualifying list maps UPC 840243149254 to True Chews Alaska Pollock 3 oz. Current Chewy Canada and Petco agree on formula and 30/9/2/26 GA; Chewy provides 2,975 kcal/kg and 1.2 kcal/piece. Canada/Petco resolve crude fiber as 2% max.'}
-          }
-          promoted=[]
-          for r in d['records']:
-            u=r.get('upc')
-            if u not in updates: continue
-            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
-            q=updates[u]
-            r['ingredients_verbatim']=q['ingredients']
-            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
-            pr,fa,fi,mo=q['ga']
-            r['guaranteed_analysis']={'crude_protein_min_percent':pr,'crude_fat_min_percent':fa,'crude_fiber_max_percent':fi,'moisture_max_percent':mo,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
-            r['calorie_content']={'kcal_per_kg':q['kcalkg'],'kcal_per_unit':q['kcalunit'],'unit_name':'treat'}
-            r['formula_source']='Second-pass current-source verification using exact UPC identity from Blue Buffalo and current U.S./Canadian retail label data.'
-            r['source_urls']=q['sources']
-            r['source_accessed_at']='2026-08-29'
-            r['conflicts']=[]
-            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case/multipack UPC substitution was used.','Treat is not represented as a complete-and-balanced diet; feeding evidence identifies it as a treat/supplemental item.']
-            r['research_status']='source_verified'
-            promoted.append(u)
-          assert len(promoted)==6, promoted
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          print('PROMOTED',len(promoted),','.join(promoted))
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify six Blue Buffalo cat treats"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
