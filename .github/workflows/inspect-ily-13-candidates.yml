@@ -1,0 +1,15 @@
+name: Inspect ILY 13 candidates
+on:
+  push:
+    branches: [agent/deep-research-i-and-love-and-you]
+    paths: [.github/workflows/inspect-ily-13-candidates.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-i-and-love-and-you
+      - run: python .github/scripts/inspect-ily-13-candidates.py
