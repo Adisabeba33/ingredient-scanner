@@ -1,58 +1,47 @@
-name: Verify Blue Buffalo Blissful Belly 3.5 lb
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  verify:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Promote Blissful Belly 3.5 lb
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import json
-          p='research/deep-research-blue-buffalo.json'
-          d=json.load(open(p,encoding='utf-8'))
-          target='840243135226'
-          found=0
-          ingredients='Deboned Chicken, Chicken Meal, Brown Rice, Pea Protein, Barley, Dried Egg Product, Oatmeal, Chicken Fat (preserved with Mixed Tocopherols), Potato Starch, Dried Plain Beet Pulp, Flaxseed (source of Omega 3 Fatty Acids), Natural Flavor, Dried Tomato Pomace, Peas, Calcium Chloride, Choline Chloride, DL-Methionine, Calcium Sulfate, L-Threonine, Calcium Carbonate, Canola Oil (source of Omega 6 Fatty Acids), Potassium Chloride, Potatoes, Hydrolyzed Yeast, Fructooligosaccharides, Potassium Sulfate, Taurine, Dehydrated Alfalfa Meal, Pea Fiber, Alfalfa Nutrient Concentrate, Salt, Vitamin E Supplement, preserved with Mixed Tocopherols, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), L-Tryptophan, Vegetable Juice for color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Blueberries, Cranberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, Biotin (Vitamin B7), L-Lysine, Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Calcium Iodate, Sodium Selenite, Oil of Rosemary.'
-          for r in d['records']:
-            if r.get('upc')!=target: continue
-            assert r.get('research_status')=='needs_physical_label', r.get('research_status')
-            r['ingredients_verbatim']=ingredients
-            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in ingredients.split(',')]
-            r['guaranteed_analysis']={'crude_protein_min_percent':34,'crude_fat_min_percent':16,'crude_fiber_max_percent':4,'moisture_max_percent':9,'ash_max_percent':None,'taurine_min_percent':0.2,'other_printed_guarantees':['Omega 3 Fatty Acids 0.5% min','Omega 6 Fatty Acids 2.75% min','Ascorbic Acid 100 mg/kg min']}
-            r['calorie_content']={'kcal_per_kg':3749,'kcal_per_unit':419,'unit_name':'cup'}
-            r['formula_source']='Second-pass current-source verification using exact UPC/size identity and current U.S. retail label data.'
-            r['source_urls']=['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.chewy.com/blue-buffalo-true-solutions-blissful/dp/244840','https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_4.9.25-compressed.pdf']
-            r['source_accessed_at']='2026-08-29'
-            r['conflicts']=[]
-            r['verification_notes']=['Current Blue Buffalo/2025 North American catalog maps UPC 840243135226 to True Solutions Blissful Belly Digestive Care Adult Cat 3.5 lb. Current Chewy 3.5-lb page provides the complete ingredient order, 34/16/4/9 GA, taurine 0.2%, omega 3 0.5%, omega 6 2.75%, ascorbic acid 100 mg/kg, and 3,749 kcal/kg / 419 kcal/cup.','UPC-A identity remains individually validated; no neighboring size or multipack barcode substitution was used.']
-            r['research_status']='source_verified'
-            found+=1
-          assert found==1, found
-          d['updated_at']='2026-08-29'
-          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
-          open(p,'a',encoding='utf-8').write('\n')
-          print('PROMOTED',target)
+          from pathlib import Path
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: verify Blue Buffalo Blissful Belly 3.5 lb"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
