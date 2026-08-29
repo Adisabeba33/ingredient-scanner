@@ -1,10 +1,9 @@
-name: Append Blue Buffalo cats 272-291 retry
+name: Append Blue Buffalo cats 272-291 final
 on:
   push:
     branches: [agent/deep-research-blue-buffalo]
     paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
-permissions:
-  contents: write
+permissions: {contents: write}
 jobs:
   append:
     runs-on: ubuntu-latest
@@ -15,11 +14,9 @@ jobs:
         run: |
           python - <<'PY'
           import json,pathlib
-          P=pathlib.Path('research/deep-research-blue-buffalo.json'); data=json.loads(P.read_text())
-          official='https://www.bluebuffalo.com/incentive-requests/qualifying-products/'
-          target12='https://www.target.com/p/-/A-80778977'; target24='https://www.target.com/p/-/A-87560038'
+          P=pathlib.Path('research/deep-research-blue-buffalo.json'); data=json.loads(P.read_text()); official='https://www.bluebuffalo.com/incentive-requests/qualifying-products/'
           items=[
-          ('840243158515','Tastefuls Adult Turkey & Chicken Pate 4pk','Turkey & Chicken','wet','multipack','4 x 3 oz cans',[('Turkey & Chicken Entree Pate','3 oz',4)]),
+          ('840243143689','Tastefuls Spoonless Singles Adult Cat Turkey Entree Pate','Turkey','wet','individual_unit','2.6 oz twin-pack',[]),
           ('840243155835','Tastefuls Adult Cat Chicken, Tuna & Salmon Mini Purees 24ct Variety Pack','Chicken / Tuna / Salmon','treat','multipack','24 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',8),('Tuna Mini Puree','0.5 oz',8),('Salmon Mini Puree','0.5 oz',8)]),
           ('840243155828','Tastefuls Adult Cat Chicken, Tuna & Salmon Mini Purees 12ct Variety Pack','Chicken / Tuna / Salmon','treat','multipack','12 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',4),('Tuna Mini Puree','0.5 oz',4),('Salmon Mini Puree','0.5 oz',4)]),
           ('840243155811','Tastefuls Adult Cat Chicken & Tuna Mini Purees 4ct Variety Pack','Chicken / Tuna','treat','multipack','4 x 0.5 oz tubes',[('Chicken Mini Puree','0.5 oz',2),('Tuna Mini Puree','0.5 oz',2)]),
@@ -34,12 +31,11 @@ jobs:
           ('840243158614','True Solutions Weight Control 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Weight Control Adult Cat','3 oz',4)]),
           ('840243158607','True Solutions Urinary Care 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Urinary Care Adult Cat','3 oz',4)]),
           ('840243158621','True Solutions Digestive Care 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Digestive Care Adult Cat','3 oz',4)]),
-          ('840243158522','Tastefuls Adult Tuna in Gravy Morsels 4pk','Tuna','wet','multipack','4 x 3 oz cans',[('Tuna Entree in Gravy Morsels','3 oz',4)]),
-          ('840243158539','Tastefuls Adult Chicken in Gravy Morsels 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Chicken Entree in Gravy Morsels','3 oz',4)]),
-          ('840243158553','Tastefuls Adult Duck Pate 4pk','Duck','wet','multipack','4 x 3 oz cans',[('Duck Pate','3 oz',4)]),
-          ('840243158546','Tastefuls Adult Chicken Pate 4pk','Chicken','wet','multipack','4 x 3 oz cans',[('Chicken Entree Pate','3 oz',4)]),
-          ('840243158560','Tastefuls Adult Chicken Pate and Duck Pate Variety Pack 4pk','Chicken / Duck','wet','multipack','4 x 3 oz cans',[('Chicken Entree Pate','3 oz',2),('Duck Pate','3 oz',2)]),
-          ]
+          ('840243143702','Tastefuls Spoonless Singles Adult Cat Beef Entree Pate','Beef','wet','individual_unit','2.6 oz twin-pack',[]),
+          ('840243143733','Tastefuls Savory Singles Adult Cat Turkey Entree Cuts in Gravy','Turkey','wet','individual_unit','2.6 oz twin-pack',[]),
+          ('840243143740','Tastefuls Savory Singles Adult Cat Tuna Entree Cuts in Gravy','Tuna','wet','individual_unit','2.6 oz twin-pack',[]),
+          ('840243143726','Tastefuls Savory Singles Adult Cat Salmon Entree Cuts in Gravy','Salmon','wet','individual_unit','2.6 oz twin-pack',[]),
+          ('840243158560','Tastefuls Adult Chicken Pate and Duck Pate Variety Pack 4pk','Chicken / Duck','wet','multipack','4 x 3 oz cans',[('Chicken Entree Pate','3 oz',2),('Duck Pate','3 oz',2)])]
           def valid(u):
             d=list(map(int,u)); return len(d)==12 and (10-(sum(d[0:11:2])*3+sum(d[1:11:2]))%10)%10==d[11]
           assert len(items)==20 and len({x[0] for x in items})==20 and all(valid(x[0]) for x in items)
@@ -49,12 +45,9 @@ jobs:
           def child(n,s,q): return {'upc':None,'canonical_gtin14':None,'product_name':n,'size':s,'quantity':q,'evidence_status':'unresolved','source_urls':[official]}
           recs=[]
           for u,n,v,form,scope,size,ch in items:
-            urls=[official]+([target12] if u=='840243140732' else [])+([target24] if u=='840243145690' else [])
-            recs.append({'catalog_number':None,'upc':u,'canonical_gtin14':u.zfill(14),'barcode_scope':scope,'multipack_contents':[child(*c) for c in ch],'brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':'True Solutions' if n.startswith('True Solutions') else 'Tastefuls','product_name':n,'variant':v,'recipe':[v],'life_stage':'kitten' if 'Kitten' in n else ('senior' if 'Mature' in n else 'adult'),'food_form':form,'texture':None,'presentation':None,'package_type':'box','size':size,'ingredients_verbatim':None,'ingredients_ordered_normalized':[],'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,'formula_source':'Current Blue Buffalo U.S. qualifying-products list establishes current outer UPC/package identity; full exact-package label deck remains unresolved.','source_urls':urls,'source_accessed_at':'2026-08-29','barcode_notes':'UPC-A check digit validated. Outer multipack UPC retained; child UPCs intentionally null until proven on inner units.','conflicts':[],'verification_notes':['Current U.S. Blue Buffalo qualifying-products listing checked 2026-08-29.','UPC-A check digit validated.','Repository-wide live exclusion scan passed before append.','Multipack contents recorded without inferring inner-unit UPCs.'],'research_status':'needs_physical_label'})
-          before=len(data['records']); data['records'].extend(recs); data['updated_at']='2026-08-29'; assert len(data['records'])==before+20 and len({r['upc'] for r in data['records']})==len(data['records'])
-          P.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-          print(f'APPEND_OK before={before} added=20 after={len(data["records"])} verified=0 needs=20 multipacks=20 individual=0')
-          print('UPCS='+','.join(x[0] for x in items))
+            recs.append({'catalog_number':None,'upc':u,'canonical_gtin14':u.zfill(14),'barcode_scope':scope,'multipack_contents':[child(*c) for c in ch],'brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':'True Solutions' if n.startswith('True Solutions') else 'Tastefuls','product_name':n,'variant':v,'recipe':[v],'life_stage':'kitten' if 'Kitten' in n else ('senior' if 'Mature' in n else 'adult'),'food_form':form,'texture':None,'presentation':None,'package_type':'box' if scope=='multipack' else 'other','size':size,'ingredients_verbatim':None,'ingredients_ordered_normalized':[],'guaranteed_analysis':{'crude_protein_min_percent':None,'crude_fat_min_percent':None,'crude_fiber_max_percent':None,'moisture_max_percent':None,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]},'calorie_content':{'kcal_per_kg':None,'kcal_per_unit':None,'unit_name':None},'label_deck_code':None,'formula_source':'Current Blue Buffalo U.S. qualifying-products list establishes current sellable UPC/package identity; full exact-package label deck remains unresolved.','source_urls':[official],'source_accessed_at':'2026-08-29','barcode_notes':'UPC-A check digit validated. Multipack child UPCs remain null until proven on inner units.','conflicts':[],'verification_notes':['Current U.S. Blue Buffalo qualifying-products listing checked 2026-08-29.','UPC-A check digit validated.','Repository-wide live exclusion scan passed before append.','Multipack contents recorded without inferring inner-unit UPCs.'],'research_status':'needs_physical_label'})
+          before=len(data['records']); data['records'].extend(recs); data['updated_at']='2026-08-29'; assert len(data['records'])==before+20 and len({r['upc'] for r in data['records']})==len(data['records']); P.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+          print(f'APPEND_OK before={before} added=20 after={len(data["records"])} verified=0 needs=20 multipacks={sum(r["barcode_scope"]=="multipack" for r in recs)} individual={sum(r["barcode_scope"]=="individual_unit" for r in recs)}'); print('UPCS='+','.join(x[0] for x in items))
           PY
       - name: Restore runner and commit
         run: |
@@ -63,5 +56,5 @@ jobs:
           git fetch origin agent/deep-research-barcode-ledger
           git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
           git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git commit -m "research: add 20 current Blue Buffalo cat multipacks"
+          git commit -m "research: add 20 current Blue Buffalo cat multipacks and singles"
           git push origin HEAD:agent/deep-research-blue-buffalo
