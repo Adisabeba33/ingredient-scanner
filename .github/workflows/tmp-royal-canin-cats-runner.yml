@@ -1,9 +1,9 @@
-name: Append Blue Buffalo next batch 20
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
   workflow_dispatch:
@@ -11,85 +11,37 @@ on:
 permissions:
   contents: write
 
-env:
-  BATCH_ZLIB_B64: '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'
-
 jobs:
-  append:
+  merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-      - name: Append validated Blue Buffalo batch
+      - name: Execute validated merge script
         run: |
           python - <<'PY'
-          import base64,json,os,zlib
           from pathlib import Path
-          data=json.loads(zlib.decompress(base64.b64decode(os.environ['BATCH_ZLIB_B64'])).decode())
-          formulas=data['formulas']; items=data['items']
-          def split_top(s):
-              if not s: return []
-              out=[]; cur=''; depth=0
-              for ch in s:
-                  if ch=='(': depth+=1
-                  elif ch==')': depth=max(0,depth-1)
-                  if ch==',' and depth==0:
-                      out.append(cur.strip().rstrip('.')); cur=''
-                  else: cur+=ch
-              if cur.strip(): out.append(cur.strip().rstrip('.'))
-              return out
-          def upc_sum(u): return sum((3 if i%2==0 else 1)*int(d) for i,d in enumerate(u[:11]))
-          batch=[]
-          for upc,size,key,status in items:
-              F=formulas[key]; g=F['ga']; s=upc_sum(upc)
-              assert len(upc)==12 and upc.isdigit() and (10-s%10)%10==int(upc[-1]), upc
-              others=[{'nutrient':x[0],'basis':x[1],'value':x[2],'unit':x[3]} for x in g[6]]
-              batch.append({
-                'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit',
-                'brand':'Blue Buffalo','manufacturer':'Blue Buffalo Company, Ltd.','species':'cat','product_line':F['line'],
-                'product_name':'BLUE '+F['line']+' '+F['variant']+' Dry Cat Food','variant':F['variant'],'recipe':F['recipe'],
-                'life_stage':F['life'],'food_form':'dry','texture':None,'presentation':None,'package_type':'bag','size':size,
-                'ingredients_verbatim':F['ing'],'ingredients_ordered_normalized':split_top(F['ing']),
-                'guaranteed_analysis':{'crude_protein_min_percent':g[0],'crude_fat_min_percent':g[1],'crude_fiber_max_percent':g[2],
-                'moisture_max_percent':g[3],'ash_max_percent':g[4],'taurine_min_percent':g[5],'other_printed_guarantees':others},
-                'calorie_content':{'kcal_per_kg':F['cal'][0],'kcal_per_unit':F['cal'][1],'unit_name':F['cal'][2]},
-                'label_deck_code':None,
-                'formula_source':'Current exact-size retailer page where available; otherwise exact UPC/size is anchored by Blue Buffalo current qualifying-products list and the best current recipe-family source is retained pending physical-label confirmation.',
-                'source_urls':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/',F['url']],
-                'source_accessed_at':'2026-08-29',
-                'barcode_notes':f'Blue Buffalo current official qualifying-products list maps UPC {upc} to the exact individual {size} cat-food bag; not a case or multipack code.',
-                'conflicts':[] if status=='source_verified' else ['Exact UPC/size is verified, but complete exact-size current label data was not independently resolved; physical label required before catalog promotion.'],
-                'verification_notes':[f'UPC-A check digit validated for {upc}; canonical GTIN-14 is {upc.zfill(14)}.','Repository-wide duplicate scan completed before append.','Formula generations were not silently merged; unresolved exact-size formula identity remains needs_physical_label.','No ash guarantee or label/deck code was inferred.'],
-                'research_status':status})
-          assert len(batch)==20 and len({r['upc'] for r in batch})==20
-          target=Path('research/deep-research-blue-buffalo.json')
-          ledger=json.loads(target.read_text(encoding='utf-8'))
-          upcs=[r['upc'] for r in batch]
-          paths=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]
-          paths += [p for p in Path('research').glob('deep-research-*.json') if p!=target]
-          for p in paths:
-              if p.exists():
-                  txt=p.read_text(encoding='utf-8',errors='ignore')
-                  hits=[u for u in upcs if u in txt]
-                  assert not hits, f'duplicates in {p}: {hits}'
-          existing={r['upc'] for r in ledger['records']}
-          assert not existing.intersection(upcs), sorted(existing.intersection(upcs))
-          before=len(ledger['records'])
-          ledger['records'].extend(batch); ledger['updated_at']='2026-08-29'
-          assert len(ledger['records'])==before+20
-          assert len({r['upc'] for r in ledger['records']})==len(ledger['records'])
-          target.write_text(json.dumps(ledger,separators=(',',':'),ensure_ascii=False)+'\n',encoding='utf-8')
-          print(f'APPEND_OK before={before} added=20 after={len(ledger["records"])} verified={sum(r["research_status"]=="source_verified" for r in batch)} needs={sum(r["research_status"]=="needs_physical_label" for r in batch)}')
-          print('UPCS='+','.join(upcs))
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-      - name: Restore runner and commit ledger
+      - name: Commit Royal Canin cat ledger
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
-          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
-          git diff --cached --quiet && { echo "No target changes"; exit 1; }
-          git commit -m "research: add 20 more Blue Buffalo cat records"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git add research/deep-research-royal-canin.json
+          if git diff --cached --quiet; then
+            echo "No target changes needed."
+            exit 0
+          fi
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
