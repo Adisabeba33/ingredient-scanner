@@ -1131,3 +1131,16 @@ case, and the disagreement is kept here rather than averaged away.
 29. **`9421016594283`** — Ziwi Peak Original Canned Wet — Mackerel & Lamb Recipe for Dogs — 13.75 oz (390 g): A corrupted retailer listing was found using sibling Lamb 390 g code 9421016594405 for this product; exact Mackerel & Lamb listings instead identify 9421016594283.
 30. **`9421016596706`** — Ziwi Peak Original Canned Wet — Tripe & Lamb Recipe for Dogs — 6 oz (170 g): The current ZIWI page has a unit-label typo, printing '170 kcal ME/390g (6 oz)'. Six ounces is the 170 g can; the 170 kcal value is internally confirmed by 1000 kcal/kg × 0.170 kg = 170 kcal.
 31. **`9421016594269`** — Ziwi Peak Original Canned Wet — Tripe & Lamb Recipe for Dogs — 13.75 oz (390 g): The manufacturer page's neighboring 6 oz calorie line incorrectly labels 6 oz as 390 g; the 13.75 oz line itself prints 390 kcal/390 g and is internally exact.
+
+## H. Merrick (batch 022) — the ledger's own flags, carried in
+
+Merrick reformulated several recipes in 2026 and retailer pages still
+carry the older decks under the same barcode. The current Merrick
+formula generation is stored in every case, with the retailer evidence
+used only to prove which package size a UPC belongs to — never mixed
+into the composition.
+
+1. **`022808383109`** — Merrick Purrfect Bistro — Chicken & Sweet Potato — 12 lb: Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276425 formula generation, while the retailer source is used only for exact size-to-UPC identity.
+2. **`022808385103`** — Merrick Purrfect Bistro — Rabbit Recipe Pâté — 3 oz: A currently indexed retailer page for the same UPC still carries a legacy Rabbit formula and 900 kcal/kg / 77 kcal-can panel. Merrick current official B294423 page is newer and is stored here; do not merge the legacy deck into this current record.
+3. **`022808383123`** — Merrick Purrfect Bistro — Salmon & Sweet Potato — 12 lb: Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276325 formula generation, while the retailer source is used only for exact size-to-UPC identity.
+4. **`022808260295`** — Merrick Lil' Plates — Small Surfin' + Turfin' Supper in Gravy — 3.5 oz: Merrick current PDP lists the package as a 3.5 oz tub but prints the calorie unit as kcal/pouch; the printed calorie wording is preserved rather than silently changed.

@@ -45,4 +45,7 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // maker's prefix may be as long as GS1 made it.
   { prefix: "9421016", maker: "Ziwi (New Zealand)" },
   { prefix: "9421038", maker: "Ziwi (New Zealand)" },
+  // Merrick keeps its own prefix under Nestlé Purina, which bought it in
+  // 2015 — the packs still carry 022808 rather than Purina's 050000.
+  { prefix: "022808", maker: "Merrick (Nestlé Purina)" },
 ];

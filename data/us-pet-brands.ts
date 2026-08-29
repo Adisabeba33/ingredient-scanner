@@ -232,11 +232,24 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Merrick",
     owner: "Nestlé Purina",
     species: "both",
+    // Written from the packs the research found, which is finer than the
+    // shelf-memory list this started as: Merrick splits Limited Ingredient
+    // Diet into a grain-free and a healthy-grains family, and sells Chunky,
+    // Slow-Cooked BBQ and Kitchen Comforts as ranges of their own. The
+    // shorter names stay — products under them exist — and the longer ones
+    // join rather than replace, because a coverage page files by exact match
+    // and an unlisted range lands in "Other".
     lines: [
       "Classic",
       "Grain Free",
+      "Chunky Grain Free",
       "Backcountry",
+      "Backcountry Grain Free",
       "Limited Ingredient Diet",
+      "Limited Ingredient Diet Grain Free",
+      "Limited Ingredient Diet Healthy Grains",
+      "Slow-Cooked BBQ",
+      "Kitchen Comforts",
       "Lil' Plates",
       "Healthy Grains",
       "Purrfect Bistro",

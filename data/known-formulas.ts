@@ -104,6 +104,7 @@ const VERIFIED_018 = "2026-08-14";
 const VERIFIED_019 = "2026-08-27";
 const VERIFIED_020 = "2026-08-28";
 const VERIFIED_021 = "2026-08-29";
+const VERIFIED_022 = "2026-08-29";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -4727,5 +4728,311 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Beef, Beef Broth, Venison, Whole Southern Blue Whiting, Lamb Tripe, Beef Kidney, Lamb Lung, New Zealand Green Mussel, Lamb Plasma, Venison Tripe, Hoki, Lecithin, Beef Liver, Venison Lung, Beef Bone, Lamb Liver, Lamb Kidney, Lamb, Venison Kidney, Minerals (Dipotassium Phosphate, Magnesium Sulfate, Zinc Amino Acid Complex, Iron Amino Acid Complex, Copper Amino Acid Complex, Selenium Yeast, Manganese Amino Acid Complex), Venison Bone, Dried Kelp, Lamb Bone, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin B5 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid).`,
     analysis: withKcalPerKg(ga(9, 7, 1.5, 78, 4, null), 1250),
     verifiedAt: VERIFIED_021,
+  },
+
+  // ── Merrick — batch 022 (60 barcodes, cats + dogs) ──────────────────────
+  "022808382638": {
+    ingredients: `Deboned Beef, Chicken Liver, Beef Broth, Chicken, Natural Flavor, Dried Cranberries, Guar Gum, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Menhaden Fish Oil, Choline Chloride, Taurine, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.`,
+    analysis: withCalories(ga(9, 3, 1.4, 78, null, 0.1), 1178, 100, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000891": {
+    ingredients: `Pork broth, pork, wheat gluten, chicken, liver, carrots, barley, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(10, 2, 1.5, 82, 3, 0.05), 864, 73, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808001317": {
+    ingredients: `Chicken, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, dried egg product, pea starch, pea protein, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(38, 16, 3, 12, null, 0.2), 3759, 459, "cup"), { "Linoleic Acid": ["min", 1.3, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 1.4, "%"] }),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808383109": {
+    ingredients: `Chicken, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, dried egg product, pea starch, pea protein, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(38, 16, 3, 12, null, 0.2), 3759, 459, "cup"), { "Linoleic Acid": ["min", 1.3, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 1.4, "%"] }),
+    verifiedAt: VERIFIED_022,
+    conflict: "Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276425 formula generation, while the retailer source is used only for exact size-to-UPC identity.",
+  },
+  "022808382539": {
+    ingredients: `Deboned Chicken, Chicken Liver, Chicken Broth, Dried Egg Product, Natural Flavors, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].`,
+    analysis: withCalories(ga(10, 5, 1, 78, null, 0.1), 1199, 101, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808382614": {
+    ingredients: `Deboned Duck, Chicken Liver, Duck Broth, Chicken, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].`,
+    analysis: withCalories(ga(9, 4, 1.4, 78, null, 0.1), 1086, 92, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808383277": {
+    ingredients: `Deboned beef, beef broth, chicken giblets, chicken, salmon, natural flavor, cranberries, Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, fish oil, taurine, choline chloride, Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(9, 3, 1.2, 78, null, 0.1), 1185, 100, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808001454": {
+    ingredients: `Lamb, chicken meal, cassava root flour, potato protein, dried yeast, beef fat preserved with mixed tocopherols, canola meal, pea starch, carrots, pea protein, dried egg product, natural flavor, dried chicory root, phosphoric acid, sunflower oil, flaxseed, potassium chloride, sodium bisulfate, choline chloride, calcium carbonate, salt, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(36, 16, 3, 12, null, 0.2), 3852, 477, "cup"), { "Linoleic Acid": ["min", 1.4, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 1.4, "%"] }),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808385103": {
+    ingredients: `Deboned rabbit, chicken livers, rabbit broth, chicken giblets, chicken, natural flavor, calcium carbonate, cranberries, guar gum, Minerals [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], fish oil, taurine, Vitamins [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], choline chloride, salt.`,
+    analysis: withCalories(ga(9, 4, 1.4, 78, null, 0.1), 1174, 99, "can"),
+    verifiedAt: VERIFIED_022,
+    conflict: "A currently indexed retailer page for the same UPC still carries a legacy Rabbit formula and 900 kcal/kg / 77 kcal-can panel. Merrick current official B294423 page is newer and is stored here; do not merge the legacy deck into this current record.",
+  },
+  "022808001355": {
+    ingredients: `Salmon, chicken meal, pea starch, potato protein, cassava root flour, dried yeast, canola meal, beef fat preserved with mixed tocopherols, dried egg product, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, flaxseed, sodium bisulfate, potassium chloride, choline chloride, salt, calcium carbonate, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(36, 16, 3, 12, null, 0.2), 3822, 467, "cup"), { "Linoleic Acid": ["min", 1.4, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Omega-6 Fatty Acids": ["min", 1.5, "%"] }),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808383123": {
+    ingredients: `Salmon, chicken meal, pea starch, potato protein, cassava root flour, dried yeast, canola meal, beef fat preserved with mixed tocopherols, dried egg product, sweet potatoes, natural flavor, dried chicory root, phosphoric acid, flaxseed, sodium bisulfate, potassium chloride, choline chloride, salt, calcium carbonate, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(36, 16, 3, 12, null, 0.2), 3822, 467, "cup"), { "Linoleic Acid": ["min", 1.4, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Omega-6 Fatty Acids": ["min", 1.5, "%"] }),
+    verifiedAt: VERIFIED_022,
+    conflict: "Merrick reformulated this recipe in 2026. Some retailer pages tied to the same 12 lb identity retain legacy formula copy; this record intentionally stores Merrick current official A276325 formula generation, while the retailer source is used only for exact size-to-UPC identity.",
+  },
+  "022808382553": {
+    ingredients: `Deboned Salmon, Salmon Broth, Chicken, Chicken Liver, Natural Flavor, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Choline Chloride, Taurine, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.`,
+    analysis: withCalories(ga(8, 3, 1.4, 78, null, 0.1), 1251, 106, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000754": {
+    ingredients: `Salmon broth, salmon, chicken, wheat gluten, liver, sweet potatoes, natural flavor, dried egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(9, 2, 1.2, 82, 3.5, 0.05), 838, 71, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000839": {
+    ingredients: `Beef broth, beef, wheat gluten, liver, chicken, tomatoes, wild rice, natural flavor, egg product, tricalcium phosphate, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(10, 2, 1.5, 82, 3, 0.05), 843, 71, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000778": {
+    ingredients: `Chicken and beef broth, chicken, liver, wheat gluten, beef, carrots, natural flavor, dried egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, taurine, carrageenan, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(9, 2, 1.2, 82, 3.5, 0.05), 1149, 97, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808382577": {
+    ingredients: `Tuna, Tuna Broth, Chicken, Chicken Liver, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Taurine, Choline Chloride, Vitamins [Vitamin E supplement, Thiamine Mononitrate, Niacin, d-Calcium Pantothenate, Vitamin A supplement, Menadione Sodium Bisulfite Complex (source of Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12, Biotin, Folic Acid, Vitamin D-3 Supplement], Salt.`,
+    analysis: withCalories(ga(10, 3, 1, 78, null, 0.1), 1110, 94, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808382591": {
+    ingredients: `Deboned Turkey, Chicken Liver, Turkey Broth, Chicken, Natural Flavor, Tricalcium Phosphate, Dried Cranberries, Minerals [Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Potassium Iodide], Guar Gum, Menhaden Fish Oil, Salt, Taurine, Choline Chloride, Vitamins [Vitamin E Supplement, Thiamine Mononitrate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement].`,
+    analysis: withCalories(ga(9, 5, 1.4, 78, null, 0.1), 1238, 105, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000853": {
+    ingredients: `Cod broth, cod, wheat gluten, fish, liver, chicken, spinach, wild rice, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(10, 2, 1.5, 82, 3, 0.05), 797, 67, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808001393": {
+    ingredients: `Ocean whitefish, chicken meal, potato protein, cassava root flour, pea starch, dried yeast, dried egg product, beef fat preserved with mixed tocopherols, canola meal, dried spinach, pea protein, natural flavor, dried chicory root, phosphoric acid, potassium chloride, flaxseed, sodium bisulfate, calcium carbonate, salt, taurine, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite].`,
+    analysis: withExtras(withCalories(ga(38, 16, 3, 12, null, 0.2), 3785, 469, "cup"), { "Linoleic Acid": ["min", 1.1, "%"], "Calcium (Ca)": ["min", 1.0, "%"], "Phosphorus (P)": ["min", 0.8, "%"], "Zinc (Zn)": ["min", 150.0, "mg/kg"], "Selenium (Se)": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 12000.0, "IU/kg"], "Vitamin E": ["min", 150.0, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.2, "%"], "Omega-6 Fatty Acids": ["min", 1.2, "%"] }),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808000792": {
+    ingredients: `Tuna and cod broth, tuna, chicken, wheat gluten, liver, carrots, cod, natural flavor, egg product, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], xanthan gum, tricalcium phosphate, carrageenan, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), Vitamin A supplement, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(9, 2, 1.2, 82, 3.5, 0.05), 816, 69, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808370017": {
+    ingredients: `Deboned Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Potassium Chloride, Salt, Locust Bean Gum, Tricalcium Phosphate, Guar Gum, Choline Chloride, Sodium Tripolyphosphate, Calcium Carbonate, Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Taurine, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin).`,
+    analysis: withCalories(ga(10.0, 6.0, 1.4, 78.0, null, null), 1219, 438, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808470144": {
+    ingredients: `Deboned Beef, Beef Broth, Turkey Broth, Beef Liver, Lamb, Green Beans, Carrots, Natural Flavor, Dried Egg Product, Potato Starch, Salt, Guar Gum, Fruit Juice Color, Calcium Carbonate, Sodium Phosphate, Fish Oil (Preserved With Mixed Tocopherols), Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Sunflower Oil, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Yucca Schidigera Extract, Cinnamon, Flaxseed Oil, Choline Chloride, Xanthan Gum, Magnesium Sulfate.`,
+    analysis: withCalories(ga(9.0, 4.0, 2.5, 82.0, null, null), 919, 330, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808370024": {
+    ingredients: `Deboned Beef, Beef Broth, Beef Liver, Dried Egg Product, Natural Flavor, Salt, Locust Bean Gum, Potassium Chloride, Guar Gum, Sodium Tripolyphosphate, Calcium Carbonate, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin), Taurine, Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite).`,
+    analysis: withCalories(ga(10.0, 6.0, 1.4, 78.0, null, null), 1099, 395, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808283010": {
+    ingredients: `Deboned Beef, Beef Broth, Vegetable Broth, Beef Liver, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Fruit Juice Color, Sunflower Oil, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Sodium Phosphate, Calcium Carbonate, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Magnesium Sulfate, Cumin, Cinnamon, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 900, 324, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808282976": {
+    ingredients: `Deboned Chicken, Chicken Broth, Turkey Broth, Turkey, Potatoes, Carrots, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Sodium Phosphate, Calcium Carbonate, Potassium chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Flaxseed Oil, Fish Oil (Preserved With Mixed Tocopherols), VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Rosemary, Sage, Thyme, Choline Chloride, Magnesium Sulfate.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 969, 348, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808282938": {
+    ingredients: `Deboned Chicken, Chicken Broth, Turkey Broth, Carrots, Peas, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Sodium Phosphate, Calcium Carbonate, Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Flaxseed Oil, Fish Oil (Preserved With Mixed Tocopherols), VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3),Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Rosemary, Sage, Thyme, Choline Chloride, Magnesium Sulfate.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 972, 349, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808282877": {
+    ingredients: `Deboned Beef, Beef Broth, Vegetable Broth, Beef Liver, Potatoes, Carrots, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Fruit Juice Color, Potassium Chloride, Sodium Phosphate, Calcium Carbonate, Fish Oil (Preserved With Mixed Tocopherols), Sunflower Oil, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3),Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Magnesium Sulfate, Cumin, Cinnamon, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 913, 329, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808001997": {
+    ingredients: `Deboned Beef, Beef Broth, Chicken Broth, Beef Liver, Carrots, Green Beans, Apples, Natural Flavor, Dried Egg Product, Potato Starch, Potato Protein, Salt, Guar Gum, Fruit Juice Color, Calcium Carbonate, Sodium Phosphate, Sunflower Oil, Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Yucca Schidigera Extract, Magnesium Sulfate, Choline Chloride, Xanthan Gum, Flaxseed Oil, Fish Oil (Preserved With Mixed Tocopherols).`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 844, 303, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808001751": {
+    ingredients: `Deboned Chicken, Chicken Broth, Dried Egg Product, Potatoes, Carrots, Apples, Peas, Natural Flavor, Agar Agar, Guar Gum, Potato Protein, Salt, Potato Starch, Sodium Phosphate, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Potassium Chloride, Magnesium Sulfate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Fish Oil (Preserved With Mixed Tocopherols), Calcium Carbonate, Sunflower Oil, Choline Chloride, Rosemary, Sage, Thyme, Yucca Schidigera Extract.`,
+    analysis: withCalories(ga(8.0, 4.0, 1.8, 82.0, null, null), 1109, 399, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808008125": {
+    ingredients: `Deboned Beef, Beef Broth, Dried Egg Product, Carrots, Sweet Potatoes, Apples, Beef Liver, Natural Flavor, Potato Starch, Agar-Agar, Fruit Juice Color, Guar Gum, Dicalcium Phosphate, Potato Protein, Salt, Sunflower Oil, Flaxseed Oil, Sodium Phosphate, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Potassium Chloride, Magnesium Sulfate, Calcium Carbonate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3),Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Cumin, Cinnamon.`,
+    analysis: withCalories(ga(8.0, 3.0, 3.0, 82.0, null, null), 1008, 363, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808002888": {
+    ingredients: `Deboned Chicken, Chicken Broth, Turkey, Turkey Broth, Sweet Potatoes, Carrots, Apples, Peas, Dried Egg Product, Potato Protein, Natural Flavor, Sodium Phosphate, Salt, Guar Gum, Calcium Carbonate, Potato Starch, Potassium Chloride, Flaxseed Oil, Fish Oil (Preserved With Mixed Tocopherols), flaxseed meal, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Magnesium Sulfate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin(Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Rosemary, Sage, Thyme, Choline Chloride, Yucca Schidigera Extract.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.5, 82.0, null, null), 1076, 387, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808003342": {
+    ingredients: `Deboned Beef, Beef Broth, Beef Liver, Deboned Lamb, Deboned Bison, Natural Flavor, Salmon Oil, Salt, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Choline Chloride, Calcium Carbonate, Taurine, Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin).`,
+    analysis: withCalories(ga(9.0, 5.0, 1.4, 78.0, null, null), 1111, 399, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808004844": {
+    ingredients: `Deboned Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Salmon Oil, Locust Bean Gum, Potassium Chloride, Tricalcium Phosphate, Guar Gum, Sodium Tripolyphosphate, Minerals (Magnesium Sulfate, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Choline Chloride, Calcium Carbonate, Taurine, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin).`,
+    analysis: withCalories(ga(9.0, 7.0, 1.4, 78.0, null, null), 1230, 442, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808002123": {
+    ingredients: `Deboned Duck, Duck Liver, Turkey Broth, Dried Egg Product, Natural Flavor, Tricalcium Phosphate, Salmon Oil, Salt, Locust Bean Gum, Guar Gum, Choline Chloride, Potassium Chloride, Calcium Carbonate, Taurine, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin), Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite).`,
+    analysis: withCalories(ga(8.0, 2.0, 1.4, 78.0, null, null), 996, 358, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808004868": {
+    ingredients: `Beef, Beef Liver, Beef Broth, Dried Egg Product, Minerals [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Locust Bean Gum, Salmon Oil, Salt, Guar Gum, Natural Flavor, Taurine, Vitamins [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Vitamin B-12 Supplement, Biotin (Vitamin B-7), Folic Acid (Vitamin B-9), Vitamin A Supplement, Vitamin D-3 Supplement], Choline Chloride.`,
+    analysis: withCalories(ga(9.0, 5.0, 1.4, 78.0, null, null), 1123, 404, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808006688": {
+    ingredients: `Deboned Turkey, Turkey Broth, Chicken, Chicken Broth, Sweet Potatoes, Carrots, Green Beans, Apples, Dried Egg Product, Natural Flavor, Potato Protein, Salt, Guar Gum, Potato Starch, Potassium Chloride, Flaxseed Meal, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Magnesium Sulfate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Rosemary, Sage, Thyme, Sodium Phosphate, Choline Chloride, Yucca Schidigera Extract, Calcium Carbonate.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.8, 82.0, null, null), 1091, 392, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808002666": {
+    ingredients: `Deboned Turkey, Chicken Broth, Duck, Chicken, Turkey Broth, Dried Egg Product, Sweet Potatoes, Carrots, Green Beans, Apples, Natural Flavor, Agar-Agar, Guar Gum, Salt, Potato Protein, Potato Starch, Flaxseed Oil, Potassium Chloride, Flaxseed Meal, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Magnesium Sulfate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid(Vitamin B-9)], Rosemary, Sage, Thyme, Sodium Phosphate, Choline Chloride, Yucca Schidigera Extract, Calcium Carbonate.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.8, 82.0, null, null), 1165, 419, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808002864": {
+    ingredients: `Deboned Duck, Beef Broth, Vegetable Broth, Bison, Venison, Beef Liver, Peas, Potatoes, Carrots, Natural Flavor, Dried Egg Product, Potato Starch, Salt, Guar Gum, Fruit Juice Color, Fish Oil (Preserved With Mixed Tocopherols), Flaxseed Oil, Sodium Phosphate, Calcium Carbonate, Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Yucca Schidigera Extract, Magnesium Sulfate, Choline Chloride, Xanthan Gum.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.5, 82.0, null, null), 1018, 366, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808280026": {
+    ingredients: `Deboned Beef, Beef Broth, Vegetable Broth, Beef Liver, Brown Rice, Spinach, Potatoes, Dried Egg Product, Natural Flavor, Potato Protein, Guar Gum, Flaxseed Oil, Calcium Carbonate, Salt, Sodium Phosphate, Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Magnesium Sulfate, Cumin, Cinnamon, Choline Chloride, Xanthan Gum.`,
+    analysis: withCalories(ga(8.0, 4.0, 1.5, 82.0, null, null), 959, 345, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808280002": {
+    ingredients: `Deboned Chicken, Chicken Broth, Dried Egg Product, Brown Rice, Carrots, Green Beans, Sweet Potatoes, Natural Flavor, Agar-Agar, Guar Gum, Pea Protein, Salt, Ground Flaxseed, Potassium chloride, sodium phosphate, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Magnesium Sulfate, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Fish Oil (Preserved With Mixed Tocopherols), Calcium Carbonate, Choline Chloride, Rosemary, Sage, Thyme, Flaxseed Oil.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.5, 82.0, null, null), 1162, 418, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808280040": {
+    ingredients: `Deboned Lamb, Beef Broth, Vegetable Broth, Beef, Brown Rice, Carrots, Green Peas, Potatoes, Natural Flavor, Dried Egg Product, Potato Starch, Salt, Guar Gum, Fruit Juice Color, Sodium Phosphate, Sunflower Oil, Calcium Carbonate, Potassium Chloride, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Magnesium Sulfate, Flaxseed Oil, Fish Oil (Preserved With Mixed Tocopherols), Rosemary, Sage, Thyme, Choline Chloride, Xanthan Gum.`,
+    analysis: withCalories(ga(8.0, 5.0, 1.5, 82.0, null, null), 1114, 401, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808280064": {
+    ingredients: `Deboned Turkey, Turkey Broth, Vegetable Broth, Chicken, Brown Rice, Carrots, Green Beans, Natural Flavor, Dried Egg Product, Tomato Powder, Potato Starch, Salt, Guar Gum, Fruit Juice Color, Sodium Phosphate, Potassium Chloride, Calcium Carbonate, MINERALS [Zinc Proteinate, Iron Proteinate, Cobalt Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Cumin, Flaxseed Oil, Choline Chloride, Xanthan Gum, Rosemary, Sage, Thyme, Magnesium Sulfate.`,
+    analysis: withCalories(ga(8.0, 4.0, 1.5, 82.0, null, null), 1013, 364, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260240": {
+    ingredients: `DEBONED DUCK, DUCK BROTH, CHICKEN BROTH, CHICKEN LIVER, DEBONED CHICKEN, DRIED EGG WHITES, POTATO STARCH, POTATOES, CARROTS, PEAS, GUAR GUM, TRICALCIUM PHOSPHATE, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, VITAMIN B6 VITAMIN D3 SUPPLEMENT, FOLIC ACID), CHOLINE CHLORIDE,XANTHAN GUM.`,
+    analysis: withCalories(ga(8.0, 3.5, 1.4, 82.0, null, null), 973, 97, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260219": {
+    ingredients: `BEEF, BEEF BROTH, VENISON BROTH, BEEF LIVER, DRIED EGG WHITES, POTATO STARCH, SWEET POTATOES, CARROTS, GREEN BEANS, APPLES, PEAS, GUAR GUM, TRICALCIUM PHOSPHATE, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR,CALCIUM CARBONATE, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), VITAMINS, (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE,(VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID), XANTHAN GUM.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.4, 82.0, null, null), 904, 90, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260233": {
+    ingredients: `DEBONED LAMB, LAMB BROTH, BEEF BROTH, BEEF, BEEF LIVER, DRIED EGG WHITES, SWEET POTATOES, CARROTS, POTATO STARCH, PEAS, GUAR GUM,TRICALCIUM PHOSPHATE, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, NATURAL FLAVOR, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, (VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID), CHOLINE CHLORIDE, XANTHAN GUM.`,
+    analysis: withCalories(ga(8.0, 3.5, 1.4, 82.0, null, null), 1137, 113, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808010388": {
+    ingredients: `Deboned Beef, Beef Broth, Beef Liver, Carrots, Green Beans, Flaxseed Oil, Dried Egg Product, Natural Flavor, Choline Chloride, Potassium Chloride, Salt, Guar Gum, Vitamins (Vitamin E Supplement, Vitamin B12 Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Niacin, Vitamin D3 Supplement, Riboflavin Supplement, Folic Acid, Pyridoxine Hydrochloride, Biotin, Thiamine Mononitrate), Minerals (Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Potassium Iodate, Cobalt Glucoheptonate, Sodium Selenite), Cumin, Xanthan Gum, Cinnamon, Taurine.`,
+    analysis: withCalories(ga(8, 5, 2, 78, null, null), 1201, 102, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808010425": {
+    ingredients: `Deboned Lamb, Beef Broth, Beef Liver, Dried Egg Product, Carrots, Green Beans, Natural Flavor, Flaxseed Oil, Choline Chloride, Potassium Chloride, Magnesium Sulfate, Salt, Guar Gum, Vitamins (Vitamin E Supplement, Vitamin B12 Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Niacin, Vitamin D3 Supplement, Riboflavin Supplement, Folic Acid, Pyridoxine Hydrochloride, Biotin, Thiamine Mononitrate), Minerals (Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Potassium Iodate, Cobalt Glucoheptonate, Sodium Selenite), Cumin, Xanthan Gum, Cinnamon, Taurine.`,
+    analysis: withCalories(ga(8, 5, 2, 78, null, null), 1320, 112, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808010401": {
+    ingredients: `Deboned Chicken, Chicken Broth, Chicken Liver, Carrots, Green Beans, Dried Egg Product, Natural Flavor, Flaxseed Oil, Choline Chloride, Potassium Chloride, Salt, Guar Gum, Vitamins (Vitamin E Supplement, Vitamin B12 Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Niacin, Vitamin D3 Supplement, Riboflavin Supplement, Folic Acid, Pyridoxine Hydrochloride, Biotin, Thiamine Mononitrate), Minerals (Zinc Amino Acid Complex, Iron Amino Acid Complex, Manganese Amino Acid Complex, Copper Amino Acid Complex, Potassium Iodate, Cobalt Glucoheptonate, Sodium Selenite), Xanthan Gum, Taurine, Rosemary, Sage, Thyme.`,
+    analysis: withCalories(ga(8, 5, 2, 78, null, null), 1184, 101, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260226": {
+    ingredients: `DEBONED CHICKEN, CHICKEN BROTH, TURKEY BROTH, CHICKEN LIVER, DRIED EGG WHITES, POTATO STARCH, POTATOES, CARROTS, PEAS, APPLES, GUAR GUM, SUNFLOWER OIL, TRICALCIUM PHOSPHATE, SALT, SODIUM PHOSPHATE, NATURAL FLAVOR, POTASSIUM CHLORIDE, CALCIUM CARBONATE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE (VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID), XANTHAN GUM.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.4, 82.0, null, null), 929, 92, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260271": {
+    ingredients: `DEBONED CHICKEN, CHICKEN BROTH, TURKEY BROTH, CHICKEN LIVER, DEBONED TURKEY, DRIED EGG WHITES, POTATO STARCH, POTATOES, PEAS, APPLES, RED PEPPERS, GUAR GUM, SUNFLOWER OIL, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), TRICALCIUM PHOSPHATE, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), GROUND FLAXSEED, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, VITAMIN D3 SUPPLEMENT, FOLIC ACID), ROSEMARY, SAGE, THYME, XANTHAN GUM, ROSEMARY EXTRACT.`,
+    analysis: withCalories(ga(8.5, 3.5, 1.4, 82.0, null, null), 968, 96, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260295": {
+    ingredients: `BEEF, BEEF BROTH, SALMON BROTH, BEEF LIVER, GREEN BEANS, DRIED EGG WHITES, SALMON, POTATO STARCH, GUAR GUM, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR, CALCIUM CARBONATE, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), CHOLINE CHLORIDE, VITAMINS (THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, VITAMIN D3 SUPPLEMENT, FOLIC ACID), CINNAMON, CUMIN, XANTHAN GUM.`,
+    analysis: withCalories(ga(8.5, 3.5, 1.4, 82.0, null, null), 895, 89, "pouch"),
+    verifiedAt: VERIFIED_022,
+    conflict: "Merrick current PDP lists the package as a 3.5 oz tub but prints the calorie unit as kcal/pouch; the printed calorie wording is preserved rather than silently changed.",
+  },
+  "022808260264": {
+    ingredients: `BEEF, BEEF BROTH, VENISON BROTH, BEEF LIVER, DRIED EGG WHITES, DRIED GROUND PEAS, POTATO STARCH, GUAR GUM, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR, CALCIUM CARBONATE, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, VITAMIN D3 SUPPLEMENT, FOLIC ACID), CINNAMON, GROUND CUMIN, XANTHAN GUM`,
+    analysis: withCalories(ga(8.0, 3.0, 1.4, 82.0, null, null), 930, 92, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808260202": {
+    ingredients: `DEBONED TURKEY, TURKEY BROTH, CHICKEN BROTH, CHICKEN LIVER, DEBONED CHICKEN, DRIED EGG WHITES, POTATO STARCH, SWEET POTATOES, CARROTS, GREEN BEANS, APPLES, PEAS, POTATOES, GUAR GUM, TRICALCIUM PHOSPHATE, SUNFLOWER OIL, SODIUM PHOSPHATE, SALT, NATURAL FLAVOR, POTASSIUM CHLORIDE, MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE), VITAMINS (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE,( VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID), CHOLINE CHLORIDE, XANTHAN GUM.`,
+    analysis: withCalories(ga(8.0, 3.5, 1.4, 82.0, null, null), 969, 96, "bowl"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808390046": {
+    ingredients: `Deboned Lamb, Water Sufficient for Processing, Lamb Liver, Natural Flavor, Salt, Sunflower Oil, Locust Bean Gum, Potassium Chloride, Guar Gum, Minerals (Magnesium Sulfate, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Choline Chloride, Calcium Carbonate, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin), Taurine.`,
+    analysis: withCalories(ga(7.0, 9.0, 1.4, 78.0, null, null), 1353, 487, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808390916": {
+    ingredients: `Deboned Chicken, Chicken Broth, Chicken Liver, Brown Rice, Oatmeal, Natural Flavor, Potassium Chloride, Tricalcium Phosphate, Salt, Locust Bean Gum, Guar Gum, Sodium Tripolyphosphate, Choline Chloride, Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Calcium Carbonate, Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin).`,
+    analysis: withCalories(ga(8.0, 5.0, 1.4, 78.0, null, null), 1140, 410, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808390930": {
+    ingredients: `Deboned Turkey, Turkey Broth, Turkey Liver, Brown Rice, Oatmeal, Natural Flavor, Tricalcium Phosphate, Salt, Locust Bean Gum, Potassium Chloride, Guar Gum, Sodium Tripolyphosphate, Choline Chloride, Calcium Carbonate, Minerals (Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite), Vitamins (Vitamin E Supplement, Niacin, Thiamine Mononitrate, Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Riboflavin Supplement, Vitamin A Supplement, Folic Acid, Vitamin D-3 Supplement, Biotin).`,
+    analysis: withCalories(ga(8.0, 6.0, 1.4, 78.0, null, null), 1119, 402, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808284017": {
+    ingredients: `Deboned Pork, Beef Broth, Vegetable Broth, Pork Liver, Dried Egg Product, Potatoes, Carrots, Natural Porcine Flavor, Potato Starch, Guar Gum, Calcium Carbonate, Dried Tomato, Salt, Sunflower Oil, Fruit Juice Color, Sodium Phosphate, Potassium Chloride, Cane Molasses, Fish Oil (Preserved With Mixed Tocopherols), Flaxseed Oil, Natural Smoke Flavor, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Apple Cider vinegar, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement (Vitamin B-2), Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Choline Chloride, Magnesium Sulfate.`,
+    analysis: withCalories(ga(8.0, 1.5, 1.0, 82.0, null, null), 812, 292, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808284093": {
+    ingredients: `Deboned Lamb, Beef Broth, Chicken Broth, Chicken, Red Peppers, Potatoes, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Dried Tomato, Fruit Juice Color, Sodium Phosphate, Sunflower Oil, Potassium Chloride, Natural Smoke Flavor, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Apple Cider Vinegar, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Rosemary, Sage, Thyme, Magnesium Sulfate, Choline Chloride, Calcium Carbonate.`,
+    analysis: withCalories(ga(8.0, 3.0, 1.0, 82.0, null, null), 1126, 405, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808284031": {
+    ingredients: `Deboned Chicken, Chicken Broth, Turkey Broth, Potatoes, Spinach, Dried Egg Product, Natural Flavor, Potato Starch, Guar Gum, Salt, Dried Tomato, Fruit Juice Color, Sunflower Oil, Fish Oil (Preserved With Mixed Tocopherols), Sodium Phosphate, Calcium Carbonate, Potassium Chloride, Natural Smoke Flavor, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin Supplement (Vitamin B-3),Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Cane Molasses, Cumin, Choline Chloride, Magnesium Sulfate.`,
+    analysis: withCalories(ga(8.0, 2.0, 1.0, 82.0, null, null), 1005, 361, "can"),
+    verifiedAt: VERIFIED_022,
+  },
+  "022808284000": {
+    ingredients: `Deboned Beef, Beef Broth, Vegetable Broth, Beef Liver, Sweet Potatoes, Green Beans, Dried Egg Product, Natural Flavor, Potato Starch, Dried Peas, Guar Gum, Salt, Fruit Juice Color, Dried Tomato, Potassium Chloride, Sodium Phosphate, Calcium Carbonate, Sunflower Oil, Natural Smoke Flavor, MINERALS [Zinc Proteinate, Iron Proteinate, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide], Fish Oil (Preserved With Mixed Tocopherols), Flaxseed Oil, VITAMINS [Vitamin E Supplement, Thiamine Mononitrate (Vitamin B-1), Niacin (Vitamin B-3), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Biotin (Vitamin B-7), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Vitamin D-3 Supplement, Folic Acid (Vitamin B-9)], Cane Molasses, Magnesium Sulfate, Cumin, Cinnamon, Choline Chloride.`,
+    analysis: withCalories(ga(8.0, 2.0, 1.0, 82.0, null, null), 915, 329, "can"),
+    verifiedAt: VERIFIED_022,
   },
 };
