@@ -12109,6 +12109,2089 @@
         "Manufacturer calorie values are preserved as printed without repairing apparent label anomalies."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012072",
+      "canonical_gtin14": "10818336012072",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Nice Jerky!",
+      "product_name": "Chicken + Salmon",
+      "variant": "24 OZ BAG (6 PACK)",
+      "recipe": [
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": null,
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 OZ BAG (6 PACK)",
+      "ingredients_verbatim": "Chicken, salmon, pea flour, vegetable glycerin, cane molasses, salt, natural smoke flavor, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "salmon",
+        "pea flour",
+        "vegetable glycerin",
+        "cane molasses",
+        "salt",
+        "natural smoke flavor",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 27,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3259,
+        "kcal_per_unit": 93,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon",
+        "https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012072 exactly to 24 OZ BAG (6 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 24 OZ BAG (6 PACK) barcode 10818336012072.",
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012075 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012075",
+          "product_name": "Chicken + Salmon",
+          "size": "4 oz bag",
+          "quantity": 6,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon",
+            "https://iandloveandyou.com/products/dog-chew-treats-nice-jerky-chicken-salmon.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336014670",
+      "canonical_gtin14": "10818336014670",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Fillin Good",
+      "product_name": "Fillin Good Chicken Flavor with Digestive Support",
+      "variant": "12 OZ BAG (6 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "12 OZ BAG (6 PACK)",
+      "ingredients_verbatim": "Chicken Meal, Chickpea Flour, Pea Protein, Potato Starch, Cooked Bone Marrow (Preserved with Mixed Tocopherols), Chicken, Chicken Fat (Preserved with Mixed Tocopherols), Tapioca, Natural Flavors, Dried Cultured Skim Milk, Citric Acid (Preservative), Pumpkin, Dried Chicory Root.",
+      "ingredients_ordered_normalized": [
+        "Chicken Meal",
+        "Chickpea Flour",
+        "Pea Protein",
+        "Potato Starch",
+        "Cooked Bone Marrow (Preserved with Mixed Tocopherols)",
+        "Chicken",
+        "Chicken Fat (Preserved with Mixed Tocopherols)",
+        "Tapioca",
+        "Natural Flavors",
+        "Dried Cultured Skim Milk",
+        "Citric Acid (Preservative)",
+        "Pumpkin",
+        "Dried Chicory Root"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26.0,
+        "crude_fat_min_percent": 15.0,
+        "crude_fiber_max_percent": 2.0,
+        "moisture_max_percent": 12.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4000,
+        "kcal_per_unit": 2,
+        "unit_name": "treat"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support",
+        "https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336014670 exactly to 12 OZ BAG (6 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 12 OZ BAG (6 PACK) barcode 10818336014670.",
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014666 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014666",
+          "product_name": "Fillin Good Chicken Flavor with Digestive Support",
+          "size": "2 oz bag",
+          "quantity": 6,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support",
+            "https://iandloveandyou.com/products/fillin-good-chicken-flavor-with-immune-support.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "20818336014677",
+      "canonical_gtin14": "20818336014677",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Fillin Good",
+      "product_name": "Fillin Good Seafood Flavor with Immune Support",
+      "variant": "12 OZ BAG (6 PACK)",
+      "recipe": [
+        "seafood"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "12 OZ BAG (6 PACK)",
+      "ingredients_verbatim": "Chickpeas, Pea Protein, Potato Starch, Cooked Bone Marrow (Preserved with Mixed Tocopherols), Salmon, Salmon Meal, Chicken Meal, Tapioca, Chicken Fat (Preserved with Mixed Tocopherols), Natural Flavors, Dried Cultured Skim Milk, Tuna, White Fish, Citric Acid (Preservative), Algal Oil, Ascorbic Acid, D-Alpha Tocopherols.",
+      "ingredients_ordered_normalized": [
+        "Chickpeas",
+        "Pea Protein",
+        "Potato Starch",
+        "Cooked Bone Marrow (Preserved with Mixed Tocopherols)",
+        "Salmon",
+        "Salmon Meal",
+        "Chicken Meal",
+        "Tapioca",
+        "Chicken Fat (Preserved with Mixed Tocopherols)",
+        "Natural Flavors",
+        "Dried Cultured Skim Milk",
+        "Tuna",
+        "White Fish",
+        "Citric Acid (Preservative)",
+        "Algal Oil",
+        "Ascorbic Acid",
+        "D-Alpha Tocopherols"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30.0,
+        "crude_fat_min_percent": 10.0,
+        "crude_fiber_max_percent": 2.0,
+        "moisture_max_percent": 12.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4000,
+        "kcal_per_unit": 2,
+        "unit_name": "treat"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support",
+        "https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 20818336014677 exactly to 12 OZ BAG (6 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 12 OZ BAG (6 PACK) barcode 20818336014677.",
+        "Pack contains 6 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014673 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014673",
+          "product_name": "Fillin Good Seafood Flavor with Immune Support",
+          "size": "2 oz bag",
+          "quantity": 6,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support",
+            "https://iandloveandyou.com/products/fillin-good-seafood-flavor-with-immune-support.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013819",
+      "canonical_gtin14": "10818336013819",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Treat Meow",
+      "product_name": "Treat Meow - Digestion Support",
+      "variant": "24 POUCHES (96 Treats)",
+      "recipe": [
+        "chicken",
+        "pumpkin"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 POUCHES (96 Treats)",
+      "ingredients_verbatim": "Chicken Broth, Chicken, Tapioca Starch, Pumpkin, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken Broth",
+        "Chicken",
+        "Tapioca Starch",
+        "Pumpkin",
+        "Inulin",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Vitamin E Supplement",
+        "Vitamin A Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 1.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.5,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 651,
+        "kcal_per_unit": 9,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/treat-meow-digestion-support",
+        "https://iandloveandyou.com/products/treat-meow-digestion-support.js",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-digestion-support-chicken-puree-recipe"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013819 exactly to 24 POUCHES (96 Treats). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013819.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012112 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012112",
+          "product_name": "Treat Meow - Digestion Support",
+          "size": "1 pouch (4 treats)",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/treat-meow-digestion-support",
+            "https://iandloveandyou.com/products/treat-meow-digestion-support.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013857",
+      "canonical_gtin14": "10818336013857",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Treat Meow",
+      "product_name": "Treat Meow - Immune Support",
+      "variant": "24 POUCHES (96 Treats)",
+      "recipe": [
+        "seafood"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 POUCHES (96 Treats)",
+      "ingredients_verbatim": "Fish Broth, Sardine, Tuna, Tapioca Starch, Pumpkin,Canola Oil (Preserved with Mixed Tocopherols), Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Sardine",
+        "Tuna",
+        "Tapioca Starch",
+        "Pumpkin",
+        "Canola Oil (Preserved with Mixed Tocopherols)",
+        "Inulin",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Vitamin E Supplement",
+        "Vitamin A Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 1.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.5,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 14.0,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 688,
+        "kcal_per_unit": 9,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/treat-meow-immune-support",
+        "https://iandloveandyou.com/products/treat-meow-immune-support.js",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-immune-support-seafood-puree-recipe"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013857 exactly to 24 POUCHES (96 Treats). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013857.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013843 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013843",
+          "product_name": "Treat Meow - Immune Support",
+          "size": "1 pouch (4 treats)",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/treat-meow-immune-support",
+            "https://iandloveandyou.com/products/treat-meow-immune-support.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013833",
+      "canonical_gtin14": "10818336013833",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Treat Meow",
+      "product_name": "Treat Meow - Skin & Coat Support",
+      "variant": "24 POUCHES (96 Treats)",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "24 POUCHES (96 Treats)",
+      "ingredients_verbatim": "Fish Broth, Tuna, Tapioca Starch, Canola Oil (Preserved with Mixed Tocopherols), Fish Oil, Inulin, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Vitamin E Supplement, Vitamin A Supplement.",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Tuna",
+        "Tapioca Starch",
+        "Canola Oil (Preserved with Mixed Tocopherols)",
+        "Fish Oil",
+        "Inulin",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Vitamin E Supplement",
+        "Vitamin A Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 1.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.5,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega 3 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acid (as printed)",
+            "basis": "min",
+            "value": 1000,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 741,
+        "kcal_per_unit": 10,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
+        "https://iandloveandyou.com/products/treat-meow-skin-coat-support.js",
+        "https://thrivemarket.com/p/i-and-love-and-you-treat-meow-lickable-cat-treat-skin-and-coat-support-tuna-puree-recipe"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013833 exactly to 24 POUCHES (96 Treats). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 24 POUCHES (96 Treats) barcode 10818336013833.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336013829 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013829",
+          "product_name": "Treat Meow - Skin & Coat Support",
+          "size": "1 pouch (4 treats)",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/treat-meow-skin-coat-support",
+            "https://iandloveandyou.com/products/treat-meow-skin-coat-support.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012850",
+      "canonical_gtin14": "10818336012850",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Top That Tummy - Chicken Recipe",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Chicken, Chicken Broth, Turkey Broth, Chicken Liver, Pea Flour, Dried Egg Whites, Pea Fiber, Powdered Cellulose, Guar Gum, Ground Flaxseeds, Fish Oil, Salt, Sodium Phosphate, Montmorillonite Clay, Inulin, Natural Flavor, Sodium Carbonate, Fructooligosaccharide, L-ascorbyl-2 polyphosphate (Source Of Vitamin C), Vitamin E Supplement, L-Carnitine.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Broth",
+        "Turkey Broth",
+        "Chicken Liver",
+        "Pea Flour",
+        "Dried Egg Whites",
+        "Pea Fiber",
+        "Powdered Cellulose",
+        "Guar Gum",
+        "Ground Flaxseeds",
+        "Fish Oil",
+        "Salt",
+        "Sodium Phosphate",
+        "Montmorillonite Clay",
+        "Inulin",
+        "Natural Flavor",
+        "Sodium Carbonate",
+        "Fructooligosaccharide",
+        "L-ascorbyl-2 polyphosphate (Source Of Vitamin C)",
+        "Vitamin E Supplement",
+        "L-Carnitine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 3.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 25,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 20,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 0.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "L-Carnitine",
+            "basis": "min",
+            "value": 10,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 891,
+        "kcal_per_unit": 76,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe",
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012850 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012850.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012723 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012723",
+          "product_name": "Top That Tummy - Chicken Recipe",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe",
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-tummy-chicken-recipe.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012867",
+      "canonical_gtin14": "10818336012867",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Shine - Beef Recipe",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Beef, Beef Broth, Lamb Broth, Beef Liver, Pea Flour, Dried Egg Whites, Chicken Fat, Ground Flaxseeds, Sunflower Oil, Salt, Sodium Phosphate, Guar Gum, Natural Flavor, Sodium Carbonate, Fructooligosaccharide, Fish Oil, Zinc Proteinate, Vitamin E Supplement, L-ascorbyl-2 polyphosphate (Source Of Vitamin C).",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Broth",
+        "Lamb Broth",
+        "Beef Liver",
+        "Pea Flour",
+        "Dried Egg Whites",
+        "Chicken Fat",
+        "Ground Flaxseeds",
+        "Sunflower Oil",
+        "Salt",
+        "Sodium Phosphate",
+        "Guar Gum",
+        "Natural Flavor",
+        "Sodium Carbonate",
+        "Fructooligosaccharide",
+        "Fish Oil",
+        "Zinc Proteinate",
+        "Vitamin E Supplement",
+        "L-ascorbyl-2 polyphosphate (Source Of Vitamin C)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 50,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 25,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.15,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 847,
+        "kcal_per_unit": 72,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe",
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012867 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012867.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012709 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012709",
+          "product_name": "Shine - Beef Recipe",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe",
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-shine-beef-recipe.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012713",
+      "canonical_gtin14": "10818336012713",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Boost - Duck Recipe",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "duck"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Duck, Duck Broth, Chicken Broth, Chicken, Chicken Liver, Dried Egg Whites, Pea Flour, Pumpkin, Cranberries, Guar Gum, Dried Egg Product, Salt, Sodium Phosphate, Natural Flavor, Sodium Carbonate.",
+      "ingredients_ordered_normalized": [
+        "Duck",
+        "Duck Broth",
+        "Chicken Broth",
+        "Chicken",
+        "Chicken Liver",
+        "Dried Egg Whites",
+        "Pea Flour",
+        "Pumpkin",
+        "Cranberries",
+        "Guar Gum",
+        "Dried Egg Product",
+        "Salt",
+        "Sodium Phosphate",
+        "Natural Flavor",
+        "Sodium Carbonate"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 863,
+        "kcal_per_unit": 73,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe",
+        "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012713 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336012713.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012716 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012716",
+          "product_name": "Boost - Duck Recipe",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe",
+            "https://iandloveandyou.com/products/dog-meal-enhancers-top-that-boost-duck-recipe.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336014601",
+      "canonical_gtin14": "10818336014601",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Move - Beef with Bison Recipe in Gravy",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "beef",
+        "bison"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Beef, Beef Broth, Lamb Broth, Beef Liver, Bison, Dried Peas, Natural Flavor, Dried Egg Product, Pea Fiber, Chicken Fat, Guar Gum, Salt, Ground Flaxseed, Sodium Phosphate, Fish Oil (Preserved With Mixed Tocopherols), Sodium Carbonate, Zinc Proteinate, L-Carnitine, L-ascorbyl-2-polyphosphate (Source Of Vitamin C).",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Broth",
+        "Lamb Broth",
+        "Beef Liver",
+        "Bison",
+        "Dried Peas",
+        "Natural Flavor",
+        "Dried Egg Product",
+        "Pea Fiber",
+        "Chicken Fat",
+        "Guar Gum",
+        "Salt",
+        "Ground Flaxseed",
+        "Sodium Phosphate",
+        "Fish Oil (Preserved With Mixed Tocopherols)",
+        "Sodium Carbonate",
+        "Zinc Proteinate",
+        "L-Carnitine",
+        "L-ascorbyl-2-polyphosphate (Source Of Vitamin C)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 50,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 25,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.15,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 847,
+        "kcal_per_unit": 72,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy",
+        "https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336014601 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014601.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014215 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014215",
+          "product_name": "Move - Beef with Bison Recipe in Gravy",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy",
+            "https://iandloveandyou.com/products/top-that-move-beef-with-bison-recipe-in-gravy.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336014618",
+      "canonical_gtin14": "10818336014618",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Thrive - Turkey Recipe in Gravy",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Turkey, Turkey Broth, Chicken Broth, Chicken, Turkey Liver, Dried Peas, Natural Flavor, Dried Egg Product, Pea Fiber, Guar Gum, Salt, Sodium Phosphate, Marine Microalgae Oil, Sodium Carbonate, Taurine, L-Carnitine.",
+      "ingredients_ordered_normalized": [
+        "Turkey",
+        "Turkey Broth",
+        "Chicken Broth",
+        "Chicken",
+        "Turkey Liver",
+        "Dried Peas",
+        "Natural Flavor",
+        "Dried Egg Product",
+        "Pea Fiber",
+        "Guar Gum",
+        "Salt",
+        "Sodium Phosphate",
+        "Marine Microalgae Oil",
+        "Sodium Carbonate",
+        "Taurine",
+        "L-Carnitine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.02,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "L-Carnitine",
+            "basis": "min",
+            "value": 25,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 878,
+        "kcal_per_unit": 75,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025",
+        "https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://www.chewy.com/i-love-you-top-that-thrive-turkey/dp/3626006"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336014618 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [
+        "Current manufacturer page title/marketing identifies Turkey, but its HTML ingredient module currently displays a Beef formula. Exact current Chewy listing for the Turkey SKU supplies the Turkey formula, matching the product identity and current calories/GA; retailer formula used to resolve the manufacturer HTML defect."
+      ],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014618.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014222 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014222",
+          "product_name": "Thrive - Turkey Recipe in Gravy",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025",
+            "https://iandloveandyou.com/products/top-that-thrive-turkey-september-2025.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336014595",
+      "canonical_gtin14": "10818336014595",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Wit - Lamb Recipe in Gravy",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "Lamb, Lamb Broth, Beef Broth, Chicken, Lamb Liver, Dried Peas, Natural Flavor, Dried Egg Product, Pea Fiber, Guar Gum, Salt, Marine Microalgae Oil, Sodium Phosphate, Sodium Carbonate.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Lamb Broth",
+        "Beef Broth",
+        "Chicken",
+        "Lamb Liver",
+        "Dried Peas",
+        "Natural Flavor",
+        "Dried Egg Product",
+        "Pea Fiber",
+        "Guar Gum",
+        "Salt",
+        "Marine Microalgae Oil",
+        "Sodium Phosphate",
+        "Sodium Carbonate"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1037,
+        "kcal_per_unit": 88,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy",
+        "https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf",
+        "https://www.chewy.com/i-love-you-top-that-wit-lamb-recipe/dp/3625982"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336014595 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [
+        "Current manufacturer page title/marketing identifies Lamb, but its HTML ingredient module currently displays a Beef formula. Exact current Chewy listing for the Lamb SKU supplies the Lamb formula, matching current calories/GA; retailer formula used to resolve the manufacturer HTML defect."
+      ],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014595.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014581 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014581",
+          "product_name": "Wit - Lamb Recipe in Gravy",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy",
+            "https://iandloveandyou.com/products/top-that-wit-lamb-recipe-in-gravy.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336014632",
+      "canonical_gtin14": "10818336014632",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Top That",
+      "product_name": "Gaze - Salmon Recipe in Gravy",
+      "variant": "3 OZ POUCH (24 PACK)",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ POUCH (24 PACK)",
+      "ingredients_verbatim": "SALMON, SALMON BROTH, CHICKEN BROTH, CHICKEN LIVER, DRIED PEAS, NATURAL FLAVOR, DRIED EGG PRODUCT, PEA FIBER, CHICKEN, GUAR GUM, SALT, SODIUM PHOSPHATE, SODIUM CARBONATE, TAURINE.",
+      "ingredients_ordered_normalized": [
+        "SALMON",
+        "SALMON BROTH",
+        "CHICKEN BROTH",
+        "CHICKEN LIVER",
+        "DRIED PEAS",
+        "NATURAL FLAVOR",
+        "DRIED EGG PRODUCT",
+        "PEA FIBER",
+        "CHICKEN",
+        "GUAR GUM",
+        "SALT",
+        "SODIUM PHOSPHATE",
+        "SODIUM CARBONATE",
+        "TAURINE"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Eicosapentaenoic Acid (EPA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Docosahexaenoic Acid (DHA)",
+            "basis": "min",
+            "value": 0.025,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 50,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 25,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.15,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 847,
+        "kcal_per_unit": 72,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy",
+        "https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336014632 exactly to 3 OZ POUCH (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ POUCH (24 PACK) barcode 10818336014632.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336014628 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336014628",
+          "product_name": "Gaze - Salmon Recipe in Gravy",
+          "size": "3 oz pouch",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy",
+            "https://iandloveandyou.com/products/top-that-gaze-salmon-recipe-in-gravy.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336011686",
+      "canonical_gtin14": "10818336011686",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Purrky Turkey Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "TURKEY, TURKEY BROTH, TURKEY LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "TURKEY",
+        "TURKEY BROTH",
+        "TURKEY LIVER",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "CHOLINE CHLORIDE",
+        "DL-METHIONINE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "ZINC PROTEINATE",
+        "VITAMIN E SUPPLEMENT",
+        "THIAMINE MONONITRATE",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 5.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1091,
+        "kcal_per_unit": 93,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336011689_-_Purrky_Turkey_Pate_3_oz_-_FRONT.png?v=1772660684",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-purrky-turkey-pate"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336011686 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 101; expected check digit = 9, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 1091 kcal/kg × 0.0850486 kg nominal 3 oz can = 92.8 kcal, consistent with printed 93 kcal/can after label rounding.",
+        "Manufacturer page separately prints 1091 kcal/kg; 93 kcal/can for the 3 oz product and 1238 kcal/kg; 193 kcal/5.5 oz can for the larger size; this record stores only the 3 oz basis.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336011686.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011689 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336011689",
+          "product_name": "Original Recipe - Purrky Turkey Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-purrky-turkey-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336011907",
+      "canonical_gtin14": "10818336011907",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Savory Salmon Paté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "SALMON, CHICKEN, SALMON BROTH, CHICKEN LIVER, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CASSIA GUM, XANTHAN GUM, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "SALMON",
+        "CHICKEN",
+        "SALMON BROTH",
+        "CHICKEN LIVER",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "DL-METHIONINE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "CHOLINE CHLORIDE",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "THIAMINE MONONITRATE",
+        "VITAMIN E SUPPLEMENT",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 5.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1095,
+        "kcal_per_unit": 93,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336011900_-_Savory_Salmon_Pate_3_oz_-_FRONT.png?v=1772660659",
+        "https://www.upcitemdb.com/upc/818336011900"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336011907 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 80; expected check digit = 0, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 1095 kcal/kg × 0.0850486 kg nominal 3 oz can = 93.1 kcal, consistent with printed 93 kcal/can after label rounding.",
+        "Manufacturer page separately prints 1095 kcal/kg; 93 kcal/can for the 3 oz product and 1203 kcal/kg; 188 kcal/5.5 oz can for the larger size; this record stores only the 3 oz basis.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336011907.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336011900 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336011900",
+          "product_name": "Original Recipe - Savory Salmon Paté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-savory-salmon-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010238",
+      "canonical_gtin14": "10818336010238",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Oh My Cod! Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "cod"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "COD, CHICKEN, FISH BROTH, CHICKEN LIVER, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "COD",
+        "CHICKEN",
+        "FISH BROTH",
+        "CHICKEN LIVER",
+        "CANOLA OIL",
+        "GROUND FLAXSEED",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "DL-METHIONINE",
+        "CHOLINE CHLORIDE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "THIAMINE MONONITRATE",
+        "VITAMIN E SUPPLEMENT",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 4.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1017,
+        "kcal_per_unit": 86,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336010231_-_Oh_My_Cod_Pate_3_oz_-_FRONT.png?v=1772660256",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-oh-my-cod-pate"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010238 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 79; expected check digit = 1, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 1017 kcal/kg × 0.0850486 kg nominal 3 oz can = 86.5 kcal, consistent with printed 86 kcal/can after label rounding.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010238.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010231 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010231",
+          "product_name": "Original Recipe - Oh My Cod! Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-oh-my-cod-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010221",
+      "canonical_gtin14": "10818336010221",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Chicken Me Out Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "CHICKEN, CHICKEN BROTH, CHICKEN LIVER, NATURAL FLAVOR, SALT, GUAR GUM, POTASSIUM CHLORIDE, TAURINE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "CHICKEN",
+        "CHICKEN BROTH",
+        "CHICKEN LIVER",
+        "NATURAL FLAVOR",
+        "SALT",
+        "GUAR GUM",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "DL-METHIONINE",
+        "CHOLINE CHLORIDE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "MAGNESIUM SULFATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "VITAMIN E SUPPLEMENT",
+        "THIAMINE MONONITRATE",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 7.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1130,
+        "kcal_per_unit": 96,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336010224_-_Chicken_Me_Out_Pate_3_oz_-_FRONT.png?v=1772660529"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010221 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 76; expected check digit = 4, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 1130 kcal/kg × 0.0850486 kg nominal 3 oz can = 96.1 kcal, consistent with printed 96 kcal/can after label rounding.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010221.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010224 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010224",
+          "product_name": "Original Recipe - Chicken Me Out Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-chicken-me-out-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010214",
+      "canonical_gtin14": "10818336010214",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Beef Right Meow! Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "BEEF, BEEF BROTH, BEEF LIVER, CANOLA OIL, NATURAL FLAVOR, GUAR GUM, TRICALCIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, TAURINE, CALCIUM CARBONATE, DL-METHIONINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, MAGNESIUM SULFATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "BEEF",
+        "BEEF BROTH",
+        "BEEF LIVER",
+        "CANOLA OIL",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "TRICALCIUM PHOSPHATE",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "CALCIUM CARBONATE",
+        "DL-METHIONINE",
+        "CHOLINE CHLORIDE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "MAGNESIUM SULFATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "VITAMIN E SUPPLEMENT",
+        "THIAMINE MONONITRATE",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 5.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1076,
+        "kcal_per_unit": 91,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336010217_-_Beef_Right_Meow_Pate_3_oz_-_FRONT.png?v=1772660714",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-beef-right-meow-pate"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010214 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 73; expected check digit = 7, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 1076 kcal/kg × 0.0850486 kg nominal 3 oz can = 91.5 kcal, consistent with printed 91 kcal/can within normal label rounding.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010214.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010217 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010217",
+          "product_name": "Original Recipe - Beef Right Meow! Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-beef-right-meow-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010207",
+      "canonical_gtin14": "10818336010207",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Whascally Wabbit Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "rabbit"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "RABBIT, BEEF BROTH, BEEF LIVER, TRICALCIUM PHOSPHATE, CANOLA OIL, GROUND FLAXSEED, NATURAL FLAVOR, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), GUAR GUM, SALT, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, CASSIA GUM, XANTHAN GUM, DL-METHIONINE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "RABBIT",
+        "BEEF BROTH",
+        "BEEF LIVER",
+        "TRICALCIUM PHOSPHATE",
+        "CANOLA OIL",
+        "GROUND FLAXSEED",
+        "NATURAL FLAVOR",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "GUAR GUM",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "CHOLINE CHLORIDE",
+        "CASSIA GUM",
+        "XANTHAN GUM",
+        "DL-METHIONINE",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "VITAMIN E SUPPLEMENT",
+        "THIAMINE MONONITRATE",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.5,
+        "crude_fat_min_percent": 4.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 78.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 972,
+        "kcal_per_unit": 83,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO/feeding text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336010200_-_Whascally_Wabbit_Pate_3_oz_-_FRONT.png?v=1772660739",
+        "https://www.upcitemdb.com/upc/818336010200"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010207 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 70; expected check digit = 0, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Calorie cross-check: 972 kcal/kg × 0.0850486 kg nominal 3 oz can = 82.7 kcal, consistent with printed 83 kcal/can after label rounding.",
+        "The retrieved manufacturer HTML does not expose the formal 'formulated to meet...' sentence for Whascally Wabbit, but explicitly states the product is complete & balanced for growing kittens, adult and senior cats according to AAFCO and gives kitten/gestation feeding directions; life_stage is stored as all on that first-party evidence.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336010207.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336010200 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010200",
+          "product_name": "Original Recipe - Whascally Wabbit Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-whascally-wabbit-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012034",
+      "canonical_gtin14": "10818336012034",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Salmon Chanted Evening Stew",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "SALMON, SALMON BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, CALCIUM CARBONATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "SALMON",
+        "SALMON BROTH",
+        "VEGETABLE BROTH",
+        "CHICKEN LIVER",
+        "CHICKEN",
+        "DRIED EGG WHITES",
+        "DRIED PEAS",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "DRIED EGG PRODUCT",
+        "SODIUM PHOSPHATE",
+        "SALT",
+        "CALCIUM CARBONATE",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "CHOLINE CHLORIDE",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "THIAMINE MONONITRATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "VITAMIN E SUPPLEMENT",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.5,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 798,
+        "kcal_per_unit": 68,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012034 exactly to 3 OZ CAN (24 PACK). Outer multipack code is not an inner-unit UPC.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current first-party Shopify variant proves outer 3 OZ CAN (24 PACK) barcode 10818336012034.",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Separately proven standalone UPC 818336012037 is stored only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012037",
+          "product_name": "Original Recipe - Salmon Chanted Evening Stew",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-salmon-chanted-evening-stew.js"
+          ]
+        }
+      ]
     }
   ]
 }
