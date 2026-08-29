@@ -1,0 +1,113 @@
+name: Promote Weruva recheck 20
+
+on:
+  push:
+    branches:
+      - agent/deep-research-weruva
+    paths:
+      - .github/workflows/weruva-promote-recheck20.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-weruva
+          fetch-depth: 0
+      - name: Validate and append rechecked records
+        run: |
+          python - <<'PY'
+          import json,re,copy
+          from pathlib import Path
+          TARGET=Path('research/deep-research-weruva.json'); INDEX=Path('research/WERUVA-POST-30-INDEX.md'); HANDOFF=Path('research/WERUVA-HANDOFF.md'); RUNNER=Path('.github/workflows/weruva-promote-recheck20.yml')
+          ACC='2026-08-29'; ADMC='https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf'
+          def split_top(s):
+              out=[];start=0;depth=0
+              for i,ch in enumerate(s):
+                  if ch=='(':depth+=1
+                  elif ch==')':depth=max(0,depth-1)
+                  elif ch==',' and depth==0:
+                      out.append(s[start:i].strip().rstrip('.'));start=i+1
+              out.append(s[start:].strip().rstrip('.'));return out
+          def upc_ok(c): return len(c)==12 and c.isdigit() and (10-sum(int(c[i])*(3 if i%2==0 else 1) for i in range(11))%10)%10==int(c[-1])
+          def ga(p,f,fi,m,a=None,ca=None,ph=None,mg=None,t=None):
+              other=[]
+              for n,v in [('Calcium',ca),('Phosphorus',ph),('Magnesium',mg)]:
+                  if v is not None:other.append({'nutrient':n,'basis':'max','value':v,'unit':'percent'})
+              return {'crude_protein_min_percent':p,'crude_fat_min_percent':f,'crude_fiber_max_percent':fi,'moisture_max_percent':m,'ash_max_percent':a,'taurine_min_percent':t,'other_printed_guarantees':other}
+          def manual(upc,line,name,variant,recipe,life,texture,pres,ptype,size,ing,g,kcal,kg,url,conflicts=None):
+              return {'catalog_number':None,'upc':upc,'canonical_gtin14':upc.zfill(14),'barcode_scope':'individual_unit','brand':'Weruva','manufacturer':'Weruva','species':'cat','product_line':line,'product_name':name,'variant':variant,'recipe':recipe,'life_stage':life,'food_form':'wet','texture':texture,'presentation':pres,'package_type':ptype,'size':size,'ingredients_verbatim':ing,'ingredients_ordered_normalized':split_top(ing),'guaranteed_analysis':g,'calorie_content':{'kcal_per_kg':kg,'kcal_per_unit':kcal,'unit_name':ptype},'label_deck_code':None,'formula_source':'Current Weruva manufacturer product page for the exact current formula, printed guarantees, calories, size/lifestage where displayed; ADMC/current retailer evidence corroborates exact individual-unit UPC identity.','source_urls':[url,ADMC],'source_accessed_at':ACC,'barcode_notes':f'Exact individual-unit UPC/size mapping rechecked. UPC-A {upc} passes its check digit; canonical GTIN-14 is {upc.zfill(14)}.','conflicts':conflicts or [],'verification_notes':['Fresh exclusion scan covered production seed files, wrong-barcodes, CATALOG-CONFLICTS and every other deep-research ledger; no collision was found.','Current manufacturer formula generation is stored without borrowing fields from a stale retailer panel.'],'research_status':'source_verified'}
+
+          new=[]
+          new.append(manual('810028244269','Cats in the Kitchen Kitten','Weruva Cats in the Kitchen Kitten Gone Wild','Wild Salmon Recipe Au Jus',['salmon','tuna','sardine','mackerel'],'kitten',None,'unknown','can','3 oz','Fish Broth, Salmon, Tuna, Sardine, Mackerel, Sunflower Oil, Dried Egg, Agar-Agar, Guar Gum, Fish Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Copper Sulfate, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(10,1.5,.5,86,2),54,632,'https://www.weruva.com/products/kitten-gone-wild-cat-can'))
+          new.append(manual('878408008238','Cats in the Kitchen','Weruva Cats in the Kitchen Love Me Tender','Chicken & Duck in Gravy',['chicken','tuna','duck'],'adult',None,'in_gravy','pouch','3 oz','Chicken Broth, Chicken (Boneless, Skinless Breast), Tuna, Duck, Tapioca Starch, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Manganese Proteinate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Folic Acid, Copper Sulfate, Vitamin D3 Supplement, Potassium Iodide, Biotin, Sodium Selenite, Vitamin B12 Supplement.',ga(9,1.4,.5,85,2,.25,.25,.03,.05),65,763,'https://www.weruva.com/products/love-me-tender-cat-pouch'))
+          new.append(manual('878408008269','Cats in the Kitchen','Weruva Cats in the Kitchen Mack, Jack & Sam','Salmon, Mackerel & Skipjack Tuna in Gravy',['salmon','mackerel','tuna'],'adult',None,'in_gravy','pouch','3 oz','Fish Broth, Salmon, Mackerel, Tuna, Tapioca Starch, Sunflower Seed Oil, Calcium Lactate, Xanthan Gum, Tricalcium Phosphate, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Thiamine Mononitrate (Vitamin B1), Manganese Proteinate, Ferrous Sulfate, Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Folic Acid, Copper Sulfate, Vitamin D3 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.',ga(9,1.4,.5,85,2,.25,.25,.03,.05),64,757,'https://www.weruva.com/collections/all/products/mack-jack-and-sam-cat-pouch'))
+          new.append(manual('878408008245','Cats in the Kitchen','Weruva Cats in the Kitchen Pumpkin Jack Splash','Tuna in Pumpkin Soup',['tuna','pumpkin'],'adult',None,'unknown','pouch','3 oz','Fish Broth, Tuna, Pumpkin, Tapioca Starch, Sunflower Seed Oil, Calcium Lactate, Tricalcium Phosphate, Xanthan Gum, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Manganese Proteinate, Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Folic Acid, Copper Sulfate, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K), Biotin, Vitamin B12 Supplement.',ga(9,1.4,.5,85,2,.25,.25,.03,.05),60,709,'https://www.weruva.com/products/pumpkin-jack-splash-cat-pouch'))
+          new.append(manual('878408008214','Cats in the Kitchen','Weruva Cats in the Kitchen Pumpkin Lickin’ Chicken','Chicken in Pumpkin Soup',['chicken','pumpkin'],'adult',None,'unknown','pouch','3 oz','Chicken (Boneless, Skinless Breast), Chicken Broth, Pumpkin, Tapioca Starch, Sunflower Seed Oil, Calcium Lactate, Tricalcium Phosphate, Xanthan Gum, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Manganese Proteinate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Copper Sulfate, Potassium Iodide, Biotin, Sodium Selenite, Vitamin B12 Supplement.',ga(9,1.4,.5,85,2,.25,.25,.03,.05),59,696,'https://www.weruva.com/products/pumpkin-lickin-chicken-cat-pouch',['Earlier handoff/current-near-current evidence recorded 60 kcal/3 oz and 701 kcal/kg. The current Weruva manufacturer page now prints 59 kcal/3 oz and 696 kcal/kg; current manufacturer generation is stored.']))
+          pate_specs=[
+          ('813778017275','Meowiss Bueller','Chicken & Lamb in a Hydrating Purée',['chicken','lamb','tuna'],'Chicken Broth, Chicken, Lamb, Tuna, Natural Flavor, Xanthan Gum, Locust Bean Gum, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(8,3.5,1,85,1.5),69,810,'https://www.weruva.com/products/meowiss-bueller-cat-pouch'),
+          ('813778017282','Cat to The Future','Chicken & Salmon in a Hydrating Purée',['chicken','tuna','salmon'],'Chicken Broth, Chicken, Tuna, Salmon, Natural Flavor, Xanthan Gum, Locust Bean Gum, Calcium Lactate, Tricalcium Phosphate, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(9,2,1,85,2),64,750,'https://www.weruva.com/products/cat-to-the-future-cat-pouch'),
+          ('813778017299','The Breakfast Cat','Chicken & Pumpkin in a Hydrating Purée',['chicken','tuna','pumpkin'],'Chicken Broth, Chicken, Tuna, Pumpkin, Natural Flavor, Xanthan Gum, Locust Bean Gum, Calcium Lactate, Tricalcium Phosphate, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(8,2,1,86,2),58,677,'https://www.weruva.com/products/the-breakfast-cat-cat-pouch'),
+          ('813778017251','The Karate Kitty','Beef & Salmon in a Hydrating Purée',['beef','tuna','salmon'],'Beef Broth, Beef, Tuna, Salmon, Natural Flavor, Xanthan Gum, Locust Bean Gum, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(9,1,1,86,2.5),46,543,'https://www.weruva.com/products/the-karate-kitty-cat-pouch'),
+          ('813778017268','Cat Times at Fridgemont','Duck & Tuna in a Hydrating Purée',['duck','tuna'],'Duck Broth, Duck, Tuna, Natural Flavor, Xanthan Gum, Locust Bean Gum, Potato Starch, Sunflower Oil, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Ferrous Sulfate, Copper Sulfate, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source Of Vitamin K).',ga(8,2,1,86,2),55,642,'https://www.weruva.com/products/cat-times-at-fridgemont-cat-pouch')]
+          for upc,n,v,r,ing,g,k,kg,u in pate_specs:new.append(manual(upc,'Cats in the Kitchen Paté','Weruva Cats in the Kitchen Paté '+n,v,r,'adult','pate','plain','pouch','3 oz',ing,g,k,kg,u))
+          new.append(manual('878408009051','Cats in the Kitchen','Weruva Cats in the Kitchen The Double Dip','Chicken and Beef Recipe Au Jus',['chicken','beef'],'adult',None,'unknown','can','6 oz','Chicken Broth, Chicken, Beef, Beef Lung, Sunflower Seed Oil, Locust Bean Gum, Guar Gum, Xanthan Gum, Potassium Chloride, Tricalcium Phosphate, Fish Oil, Choline Chloride, Zinc Sulfate, Taurine, Vitamin E Supplement, Nicotinic Acid (Vitamin B3), Ferrous Sulfate, Manganese Proteinate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Biotin, Sodium Selenite, Vitamin B12 Supplement.',ga(8,2.5,.5,87,1.5,.25,.25,.03,.05),111,652,'https://www.weruva.com/products/the-double-dip-cat-can'))
+
+          target_upcs=['810028244269','878408008238','878408008269','878408008245','878408008214','813778017275','813778017282','813778017299','813778017251','813778017268','878408009051','878408001130','878408001048','878408001024','878408001062','878408001079','878408002373','878408001116','878408002410','878408001086']
+          if len(new)!=11:raise SystemExit('manual record count mismatch')
+          ledger=json.loads(TARGET.read_text(encoding='utf-8')); recs=ledger['records']
+          if len(recs)!=80:raise SystemExit(f'expected 80 canonical records, got {len(recs)}')
+          # Reuse already strict current manufacturer formula records for exact Classic recipes; change only unit identity/size/calories.
+          classics=[
+          ('878408001130','Funky Chunky','3 oz',53),('878408001048','Mack & Jack','3 oz',66),('878408001024','Marbella Paella','3 oz',61),('878408001062','Meow Luau','3 oz',62),('878408001079','Mideast Feast','3 oz',63),('878408002373','Mideast Feast','10 oz',218),('878408001116',"Paw Lickin' Chicken",'3 oz',57),('878408002410',"Paw Lickin' Chicken",'10 oz',192),('878408001086','Polynesian BBQ','3 oz',61)]
+          for upc,needle,size,kcal in classics:
+              matches=[r for r in recs if r.get('product_line')=='Classic Cat' and needle.lower() in (r.get('product_name','')+' '+r.get('variant','')).lower()]
+              # Several current sizes may now exist only for Mideast/Paw during this batch? choose one formula fingerprint, all pre-existing matches must agree.
+              if not matches:raise SystemExit(f'no strict sibling for {needle}')
+              base=copy.deepcopy(matches[0])
+              fp=(base['ingredients_verbatim'],base['guaranteed_analysis'],base['calorie_content']['kcal_per_kg'])
+              if any((m['ingredients_verbatim'],m['guaranteed_analysis'],m['calorie_content']['kcal_per_kg'])!=fp for m in matches):raise SystemExit(f'sibling formula disagreement for {needle}')
+              base['upc']=upc;base['canonical_gtin14']=upc.zfill(14);base['size']=size;base['calorie_content']=copy.deepcopy(base['calorie_content']);base['calorie_content']['kcal_per_unit']=kcal;base['calorie_content']['unit_name']='can';base['source_accessed_at']=ACC
+              base['barcode_notes']=f'Exact {size} individual-unit UPC independently rechecked. UPC-A {upc} passes its check digit; canonical GTIN-14 is {upc.zfill(14)}. Current manufacturer page covers this exact size and recipe; no sibling barcode was inferred.'
+              base['verification_notes']=list(base.get('verification_notes',[]))+['This size variant reuses the already strict current manufacturer formula fingerprint for the same Classic recipe only after asserting all pre-existing strict siblings agree exactly on ingredients, GA and kcal/kg.','Fresh repository exclusion scan found no collision for this UPC.']
+              if upc=='878408001086':base['conflicts']=list(base.get('conflicts',[]))+["A stale Weruva CDN filename associated 878408001086 with Paw Lickin' Chicken; current distributor/retailer evidence maps 878408001086 to Polynesian BBQ 3 oz while Paw Lickin' Chicken 3 oz is 878408001116. The filename is not used as barcode proof."]
+              new.append(base)
+          if [r['upc'] for r in new]!=target_upcs:raise SystemExit('batch UPC/order mismatch')
+          if not all(upc_ok(c) for c in target_upcs):raise SystemExit('UPC check digit failure')
+          excludes=[Path('data/known-products.ts'),Path('data/known-formulas.ts'),Path('data/wrong-barcodes.ts'),Path('docs/CATALOG-CONFLICTS.md')]+[p for p in Path('research').glob('deep-research-*.json') if p!=TARGET]
+          hits=[]
+          for p in excludes:
+              t=p.read_text(encoding='utf-8')
+              for c in target_upcs:
+                  if c in t:hits.append((c,str(p)))
+          if hits:raise SystemExit('fresh exclusion collisions: '+repr(hits))
+          existing={r['upc'] for r in recs}
+          if existing.intersection(target_upcs):raise SystemExit('UPC already canonical')
+          recs.extend(new)
+          if len(recs)!=100 or len({r['upc'] for r in recs})!=100 or len({r['canonical_gtin14'] for r in recs})!=100:raise SystemExit('100-count uniqueness failure')
+          ledger['updated_at']=ACC;ledger['records']=recs;TARGET.write_text(json.dumps(ledger,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          chk=json.loads(TARGET.read_text(encoding='utf-8'))
+          if [r['upc'] for r in chk['records'][-20:]]!=target_upcs:raise SystemExit('post-write validation failed')
+          idx=INDEX.read_text(encoding='utf-8')
+          idx=idx.replace('Canonical strict ledger currently contains **80** complete schema-v2 records: the original 30, 20 promoted TruLuxe, 18 Cat Stew, 8 Senior, and 4 Freeze Dried records.','Canonical strict ledger currently contains **100** complete schema-v2 records: the original 30, 20 TruLuxe, 18 Cat Stew, 8 Senior, 4 Freeze Dried, and 20 promoted early post-30 recheck records.')
+          pat=r'## Early validation batch after first 30\n.*?(?=\n## TruLuxe — consumed)'
+          repl='## Early validation batch after first 30 — consumed\n\nAll 20 formerly `RECHECK_BATCH_STATUS` rows were individually re-researched, passed a fresh exclusion/check-digit/formula-generation gate, and were promoted into the canonical strict ledger. Pumpkin Lickin’ Chicken uses the current Weruva 59 kcal/3 oz and 696 kcal/kg panel; the older 60/701 evidence is retained as a generation conflict.\n'
+          idx2,n=re.subn(pat,repl,idx,flags=re.S)
+          if n!=1:raise SystemExit(f'index replacement count {n}')
+          INDEX.write_text(idx2,encoding='utf-8')
+          h=HANDOFF.read_text(encoding='utf-8').replace('As of 2026-08-29 the strict ledger contains **80 complete schema-v2 records**:','As of 2026-08-29 the strict ledger contains **100 complete schema-v2 records**:')
+          h+='\n\n## 2026-08-29 early post-30 strict promotion\n\nPromoted all **20** individually re-researched early post-30 records after a fresh exclusion pass. Canonical Weruva strict count: **100**. Pumpkin Lickin’ Chicken was refreshed to the current manufacturer calorie generation (59 kcal/3 oz; 696 kcal/kg), with older 60/701 evidence preserved as a conflict.\n'
+          HANDOFF.write_text(h,encoding='utf-8');RUNNER.unlink();print('PROMOTED 20; CANONICAL TOTAL 100')
+          PY
+      - name: Commit canonical promotion
+        run: |
+          git config user.name "ingredients-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/deep-research-weruva.json research/WERUVA-POST-30-INDEX.md research/WERUVA-HANDOFF.md .github/workflows/weruva-promote-recheck20.yml
+          git commit -m "research: promote 20 rechecked Weruva records"
+          git push origin HEAD:agent/deep-research-weruva
