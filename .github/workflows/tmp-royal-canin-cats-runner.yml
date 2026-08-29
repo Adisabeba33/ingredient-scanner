@@ -1,47 +1,76 @@
-name: Run Royal Canin cats 120-140 merge
+name: Second-pass verify Blue Buffalo Bursts 2oz treats
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Promote verified Bursts 2oz records
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          updates={
+            '840243136971': {
+              'ingredients':'Deboned Chicken, Chicken Meal, Chicken Fat, Brown Rice, Barley, Tapioca Starch, Oatmeal, Peas, Natural Flavor, Brewers Dried Yeast, Pork Fat, Dried Whey, Lecithin, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, DL-Methionine, Taurine, Oil of Rosemary.',
+              'ga':(23,21,2,10),'kcalkg':4300,'kcalunit':2.1,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://petfriendlysite.com/products/blue-bursts-paw-lickin-chicken-cat-treats','https://www.countrymax.com/blue-buffalo-bursts-cat-treats-paw-licken-chicken-2-ounce/','https://www.pet-go-round.com/products/blue-buffalo-bursts-filled-chicken-cat-treats'],
+              'note':'Current Blue Buffalo list maps UPC 840243136971 to Bursts Chicken 2 oz. Current exact-UPC CountryMax and Pet-Go-Round listings independently bind the 2 oz retail bag; Pet Friendly and Pet-Go-Round agree on the complete formula and 23/21/2/10 GA, and Pet Friendly supplies 4,300 kcal/kg and 2.1 kcal/treat.'},
+            '840243137008': {
+              'ingredients':'Chicken Liver, Chicken Meal, Chicken Fat, Brown Rice, Barley, Oatmeal, Tapioca Starch, Natural Flavor, Peas, Deboned Beef, Brewers Dried Yeast, Dried Whey, Pork Fat, Lecithin, DL-Methionine, Taurine, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, Oil of Rosemary.',
+              'ga':(23,18,2,10),'kcalkg':4100,'kcalunit':2.0,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.stockdales.com/3133979/Product/','https://petfriendlysite.com/products/blue-bursts-delish-liver-and-beef-cat-treats','https://www.petguys.com/blue-buffalo-bursts-delish-liver-beef-cat-treats-2oz.html'],
+              'note':'Current Blue Buffalo list maps UPC 840243137008 to Bursts Liver & Beef 2 oz. Stockdales and PetGuys independently identify the exact UPC/2 oz bag and agree on the ingredient deck; Stockdales and Pet Friendly agree on 23/18/2/10 GA and 4,100 kcal/kg, with Pet Friendly supplying 2.0 kcal/treat.'},
+            '840243136995': {
+              'ingredients':'Deboned Salmon, Brown Rice, Tuna Meal, Barley, Pork Fat, Tapioca Starch, Oatmeal, Salmon Meal, Natural Flavor, Deboned Cod, Peas, Shrimp, Canola Oil, Brewers Dried Yeast, Dried Whey, Lecithin, preserved with Citric Acid and Mixed Tocopherols, Dried Cultured Whey, Glucono-Delta-Lactone, Potassium Chloride, Yeast Extract, DL-Methionine, Taurine, Oil of Rosemary.',
+              'ga':(21,19,2,10),'kcalkg':4200,'kcalunit':2.1,
+              'sources':['https://www.bluebuffalo.com/incentive-requests/qualifying-products/','https://www.petcarerx.com/blue-buffalo-bursts-filled-seafood-cat-treats/36542','https://www.petguys.com/blue-buffalo-bursts-savory-seafood-cat-treats-2oz.html','https://www.1800petmeds.com/cat/treats/product/blue-buffalo-bursts-savory-seafood-crunchy-creamy/61535.html'],
+              'note':'Current Blue Buffalo list maps UPC 840243136995 to Bursts Seafood 2 oz. PetCareRx and PetGuys independently bind exact UPC 840243136995 to the 2 oz retail bag and agree on the ingredient deck; current 1800PetMeds corroborates complete ingredients, 21/19/2/10 GA and 4,200 kcal/kg / 2.1 kcal/treat.'}
+          }
+          promoted=[]
+          for r in d['records']:
+            u=r.get('upc')
+            if u not in updates: continue
+            assert r.get('research_status')=='needs_physical_label', (u,r.get('research_status'))
+            q=updates[u]
+            r['ingredients_verbatim']=q['ingredients']
+            r['ingredients_ordered_normalized']=[x.strip().rstrip('.') for x in q['ingredients'].split(',')]
+            pr,fa,fi,mo=q['ga']
+            r['guaranteed_analysis']={'crude_protein_min_percent':pr,'crude_fat_min_percent':fa,'crude_fiber_max_percent':fi,'moisture_max_percent':mo,'ash_max_percent':None,'taurine_min_percent':None,'other_printed_guarantees':[]}
+            r['calorie_content']={'kcal_per_kg':q['kcalkg'],'kcal_per_unit':q['kcalunit'],'unit_name':'treat'}
+            r['formula_source']='Second-pass current-source verification using exact UPC identity from Blue Buffalo and current U.S. retail label data.'
+            r['source_urls']=q['sources']
+            r['source_accessed_at']='2026-08-29'
+            r['conflicts']=[]
+            r['verification_notes']=[q['note'],'UPC-A identity remains individually validated; no case/multipack UPC substitution was used.','Product is a treat intended for intermittent or supplemental feeding only, not represented as a complete-and-balanced diet.']
+            r['research_status']='source_verified'
+            promoted.append(u)
+          assert len(promoted)==3, promoted
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          print('PROMOTED',len(promoted),','.join(promoted))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: verify three Blue Buffalo Bursts 2oz cat treats"
+          git push origin HEAD:agent/deep-research-blue-buffalo
