@@ -2,7 +2,9 @@ name: Inspect ILY multipacks
 on:
   push:
     branches: [agent/deep-research-i-and-love-and-you]
-    paths: [.github/workflows/inspect-ily-multipacks.yml]
+    paths:
+      - .github/workflows/inspect-ily-multipacks.yml
+      - .github/scripts/inspect-ily-multipacks.py
 permissions:
   contents: read
 jobs:
