@@ -46,7 +46,7 @@ Data commits:
 - Batch 1: `ce20f60d182cf249fcf1c954c94daefb8290eae9` — `research: add first 20 active Merrick cat barcodes`
 - Batch 2: `0a6479b06b704a38862ffdb3f6efd93c1a943105` — `research: add second 20 active Merrick barcodes`
 - Batch 3: `b32a1327a442d76ee067af11406da2d4092cce07` — `research: add third 20 active Merrick barcodes`
-- Batch-3 normalization-only repair: `f7f593e...` — `research: repair Merrick premix normalization`; only the top-level normalized grouping for UPC `022808260219` changed, not its verbatim label or evidence.
+- Batch-3 normalization-only repair: `f7f593e8914efbf0d48c6809b1f0993c351ab95d` — `research: repair Merrick premix normalization`; only the top-level normalized grouping for UPC `022808260219` changed, not its verbatim label or evidence.
 
 Remote validation after batch 3 reported:
 
