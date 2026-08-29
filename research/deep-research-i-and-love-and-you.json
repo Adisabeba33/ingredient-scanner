@@ -7933,6 +7933,1975 @@
         "Repository exclusion scan passed before append."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013386",
+      "canonical_gtin14": "00818336013386",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Naked Essentials",
+      "product_name": "Naked Essentials® - Chicken + Duck",
+      "variant": "Chicken + Duck",
+      "recipe": [
+        "chicken",
+        "duck"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "11 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, turkey meal, dried garbanzo beans, dried peas, chicken fat (preserved with mixed tocopherols), pea starch, duck, flaxseeds, dried plain beet pulp, natural flavor, sunflower oil, fish oil, salt, dried egg product, dried sweet potatoes, dl-methionine, Minerals (iron amino acid complex, zinc amino acid complex, ferrous sulfate, zinc oxide, copper amino acid complex, copper sulfate, sodium selenite, manganese amino acid complex, manganous oxide, calcium iodate), ground miscanthus grass, dried chicory root, potassium chloride, choline chloride, taurine, Vitamins (vitamin E supplement, niacin supplement, vitamin A supplement, thiamine mononitrate, menadione sodium bisul_x001E_te complex, pyridoxine hydrochloride, d-calcium pantothenate, riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement, folic acid, biotin), citric acid (preservative), mixed tocopherols (preservative), dried bacillus coagulans fermentation product, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "turkey meal",
+        "dried garbanzo beans",
+        "dried peas",
+        "chicken fat (preserved with mixed tocopherols)",
+        "pea starch",
+        "duck",
+        "flaxseeds",
+        "dried plain beet pulp",
+        "natural flavor",
+        "sunflower oil",
+        "fish oil",
+        "salt",
+        "dried egg product",
+        "dried sweet potatoes",
+        "dl-methionine",
+        "Minerals (iron amino acid complex, zinc amino acid complex, ferrous sulfate, zinc oxide, copper amino acid complex, copper sulfate, sodium selenite, manganese amino acid complex, manganous oxide, calcium iodate)",
+        "ground miscanthus grass",
+        "dried chicory root",
+        "potassium chloride",
+        "choline chloride",
+        "taurine",
+        "Vitamins (vitamin E supplement, niacin supplement, vitamin A supplement, thiamine mononitrate, menadione sodium bisul_x001E_te complex, pyridoxine hydrochloride, d-calcium pantothenate, riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement, folic acid, biotin)",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "dried bacillus coagulans fermentation product",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34.0,
+        "crude_fat_min_percent": 14.0,
+        "crude_fiber_max_percent": 4.0,
+        "moisture_max_percent": 10.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3524,
+        "kcal_per_unit": 458,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/cat-kibble-naked-essentials-chicken-duck",
+        "https://iandloveandyou.com/products/cat-kibble-naked-essentials-chicken-duck.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 11 LB BAG, barcode 818336013386.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013331",
+      "canonical_gtin14": "00818336013331",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Naked Essentials",
+      "product_name": "Naked Essentials® - Salmon + Trout",
+      "variant": "Salmon + Trout",
+      "recipe": [
+        "salmon",
+        "trout"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "11 lb",
+      "ingredients_verbatim": "Salmon, chicken meal, turkey meal, dried garbanzo beans, dried peas, chicken fat (preserved with mixed tocopherols), pea starch, trout, dried plain beet pulp, flaxseeds, natural flavor, sunflower oil, fish oil, salt, dried egg product, dried sweet potatoes, dl-methionine, Minerals (iron amino acid complex, zinc amino acid complex, ferrous sulfate, zinc oxide, copper amino acid complex, copper sulfate, sodium selenite, manganese amino acid complex, manganous oxide, calcium iodate), ground miscanthus grass, dried chicory root, potassium chloride, choline chloride, taurine, Vitamins (vitamin E supplement, niacin supplement, vitamin A supplement, thiamine mononitrate, menadione sodium bisulfite complex, pyridoxine hydrochloride, d-calcium pantothenate, riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement, folic acid, biotin), citric acid (preservative), mixed tocopherols (preservative), dried bacillus coagulans fermentation product, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Salmon",
+        "chicken meal",
+        "turkey meal",
+        "dried garbanzo beans",
+        "dried peas",
+        "chicken fat (preserved with mixed tocopherols)",
+        "pea starch",
+        "trout",
+        "dried plain beet pulp",
+        "flaxseeds",
+        "natural flavor",
+        "sunflower oil",
+        "fish oil",
+        "salt",
+        "dried egg product",
+        "dried sweet potatoes",
+        "dl-methionine",
+        "Minerals (iron amino acid complex, zinc amino acid complex, ferrous sulfate, zinc oxide, copper amino acid complex, copper sulfate, sodium selenite, manganese amino acid complex, manganous oxide, calcium iodate)",
+        "ground miscanthus grass",
+        "dried chicory root",
+        "potassium chloride",
+        "choline chloride",
+        "taurine",
+        "Vitamins (vitamin E supplement, niacin supplement, vitamin A supplement, thiamine mononitrate, menadione sodium bisulfite complex, pyridoxine hydrochloride, d-calcium pantothenate, riboflavin supplement, vitamin B12 supplement, vitamin D3 supplement, folic acid, biotin)",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "dried bacillus coagulans fermentation product",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34.0,
+        "crude_fat_min_percent": 14.0,
+        "crude_fiber_max_percent": 4.0,
+        "moisture_max_percent": 10.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.65,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFB/lb as printed)",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3548,
+        "kcal_per_unit": 440,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; formula fields transcribed from the manufacturer's ingredient list, guaranteed analysis, calorie statement, and AAFCO text for the exact recipe.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/cat-kibble-naked-essentials-salmon-trout",
+        "https://iandloveandyou.com/products/cat-kibble-naked-essentials-salmon-trout.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 11 LB BAG, barcode 818336013331.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated: weighted sum of first 11 digits = 106; expected check digit = 4, matching the final digit.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+        "Repository-wide search for prefix 818336 returned no matches on main before this batch.",
+        "Manufacturer page prints Vitamin A (min.) '-' and Vitamin E (min.) '-'; no numeric values were invented.",
+        "Manufacturer page prints 'CFB/lb' for Total Microorganisms; that source wording is preserved instead of silently changing it to CFU/lb.",
+        "No ash guarantee, legal manufacturer name, or label/deck code is printed in the retrieved manufacturer nutrition panel; those fields remain null rather than being inferred.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336012938",
+      "canonical_gtin14": "00818336012938",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Baked & Saucy",
+      "product_name": "Chicken + Sweet Potato",
+      "variant": "Chicken + Sweet Potato",
+      "recipe": [
+        "chicken",
+        "sweet potato"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "21 lb",
+      "ingredients_verbatim": "Chicken, Chicken Meal, Dried Peas, Turkey Meal, Tapioca Starch, Dried Sweet Potatoes, Chicken Fat (preserved with mixed tocopherols), Dried Garbanzo Beans, Flaxseeds, Dried Egg Product, Gelatin, Ground Miscanthus Grass, Natural Flavor, Sodium Carboxymethylcellulose, Dicalcium Phosphate, Potassium Chloride, Salt, Fish Oil, Monosodium Phosphate, L -threonine, Yucca Schidigera Extract, Dried Chicory Root, Taurine, Chicken Broth, Citric Acid (Preservative), Mixed Tocopherols (preservative), Vitamin E Supplement, Ferrous Sulfate, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Oxide, L -Tryptophan, Choline Chloride, Pea Protein, Copper Sulfate, Sodium Selenite, Niacin Supplement, d-Calcium Pantothenate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Riboflavin Supplement, Vitamin A Supplement, Manganous Oxide, dried Bacillus coagulans fermentation product, Thiamine Mononitrate, Vitamin D3 Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Calcium Iodate, Folic Acid, Rosemary Extract",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Meal",
+        "Dried Peas",
+        "Turkey Meal",
+        "Tapioca Starch",
+        "Dried Sweet Potatoes",
+        "Chicken Fat (preserved with mixed tocopherols)",
+        "Dried Garbanzo Beans",
+        "Flaxseeds",
+        "Dried Egg Product",
+        "Gelatin",
+        "Ground Miscanthus Grass",
+        "Natural Flavor",
+        "Sodium Carboxymethylcellulose",
+        "Dicalcium Phosphate",
+        "Potassium Chloride",
+        "Salt",
+        "Fish Oil",
+        "Monosodium Phosphate",
+        "L -threonine",
+        "Yucca Schidigera Extract",
+        "Dried Chicory Root",
+        "Taurine",
+        "Chicken Broth",
+        "Citric Acid (Preservative)",
+        "Mixed Tocopherols (preservative)",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "Iron Amino Acid Chelate",
+        "Zinc Amino Acid Chelate",
+        "Zinc Oxide",
+        "L -Tryptophan",
+        "Choline Chloride",
+        "Pea Protein",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Copper Amino Acid Chelate",
+        "Manganese Amino Acid Chelate",
+        "Riboflavin Supplement",
+        "Vitamin A Supplement",
+        "Manganous Oxide",
+        "dried Bacillus coagulans fermentation product",
+        "Thiamine Mononitrate",
+        "Vitamin D3 Supplement",
+        "Vitamin B12 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Calcium Iodate",
+        "Folic Acid",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 28,
+        "crude_fat_min_percent": 17,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3554,
+        "kcal_per_unit": 565,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-baked-saucy-chicken-sweet-potato",
+        "https://iandloveandyou.com/products/dog-kibble-baked-saucy-chicken-sweet-potato.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 21 LB BAG, barcode 818336012938.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336012570",
+      "canonical_gtin14": "00818336012570",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Lovingly Simple",
+      "product_name": "Lamb + Sweet Potato",
+      "variant": "Lamb + Sweet Potato",
+      "recipe": [
+        "lamb",
+        "sweet potato"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "21 lb",
+      "ingredients_verbatim": "Lamb, Chicken Meal, Dried Peas, Turkey Meal, Dried Garbanzo Beans, Tapioca Starch, Dried Sweet Potatoes, Chicken Fat (Preserved With Mixed Tocopherols), Flaxseeds, Gelatin, Ground Miscanthus Grass, Dried Egg Product, Dicalcium Phosphate, Salt, Natural Flavor, Sodium Carboxymethylcellulose, Fish Oil, L-Threonine, Yucca Schidigera Extract, Dried Chicory Root, Dl-Methionine, Chicken Bone Broth, Taurine, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Vitamin E Supplement, Ferrous Sulfate, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Oxide, Choline Chloride, Copper Sulfate, Sodium Selenite, Niacin Supplement, D-Calcium Pantothenate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Riboflavin Supplement, Vitamin A Supplement, Manganous Oxide, Dried Bacillus Coagulans Fermentation Product, Thiamine Mononitrate, Vitamin D3 Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Calcium Iodate, Folic Acid, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Chicken Meal",
+        "Dried Peas",
+        "Turkey Meal",
+        "Dried Garbanzo Beans",
+        "Tapioca Starch",
+        "Dried Sweet Potatoes",
+        "Chicken Fat (Preserved With Mixed Tocopherols)",
+        "Flaxseeds",
+        "Gelatin",
+        "Ground Miscanthus Grass",
+        "Dried Egg Product",
+        "Dicalcium Phosphate",
+        "Salt",
+        "Natural Flavor",
+        "Sodium Carboxymethylcellulose",
+        "Fish Oil",
+        "L-Threonine",
+        "Yucca Schidigera Extract",
+        "Dried Chicory Root",
+        "Dl-Methionine",
+        "Chicken Bone Broth",
+        "Taurine",
+        "Citric Acid (Preservative)",
+        "Mixed Tocopherols (Preservative)",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "Iron Amino Acid Chelate",
+        "Zinc Amino Acid Chelate",
+        "Zinc Oxide",
+        "Choline Chloride",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "Niacin Supplement",
+        "D-Calcium Pantothenate",
+        "Copper Amino Acid Chelate",
+        "Manganese Amino Acid Chelate",
+        "Riboflavin Supplement",
+        "Vitamin A Supplement",
+        "Manganous Oxide",
+        "Dried Bacillus Coagulans Fermentation Product",
+        "Thiamine Mononitrate",
+        "Vitamin D3 Supplement",
+        "Vitamin B12 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Calcium Iodate",
+        "Folic Acid",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 28,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3506,
+        "kcal_per_unit": 547,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-lovingly-simple-lamb-sweet-potato",
+        "https://iandloveandyou.com/products/dog-kibble-lovingly-simple-lamb-sweet-potato.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 21 LB BAG, barcode 818336012570.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013461",
+      "canonical_gtin14": "00818336013461",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Naked Essentials Ancient Grains",
+      "product_name": "Beef + Lamb",
+      "variant": "Beef + Lamb",
+      "recipe": [
+        "beef",
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "23 lb",
+      "ingredients_verbatim": "Beef, beef meal, menhaden fish meal, ground sorghum, oatmeal, millet, natural pork flavor, chicken fat (preserved with mixed tocopherols), dried egg product, natural flavor, quinoa, lamb, dried tomato pomace, flaxseeds, ground miscanthus grass, dried carrots, salt, potassium chloride, choline chloride, minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate), dried chicory root, taurine, citric acid (preservative), mixed tocopherols (preservative), dried Bacillus coagulans fermentation product, DL-methionine, Vitamins (Vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, Vitamin A supplement, thiamine mononitrate, Vitamin D3 supplement, Vitamin B12 supplement, pyridoxine hydrochloride, folic acid), L-carnitine, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "beef meal",
+        "menhaden fish meal",
+        "ground sorghum",
+        "oatmeal",
+        "millet",
+        "natural pork flavor",
+        "chicken fat (preserved with mixed tocopherols)",
+        "dried egg product",
+        "natural flavor",
+        "quinoa",
+        "lamb",
+        "dried tomato pomace",
+        "flaxseeds",
+        "ground miscanthus grass",
+        "dried carrots",
+        "salt",
+        "potassium chloride",
+        "choline chloride",
+        "minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate)",
+        "dried chicory root",
+        "taurine",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "dried Bacillus coagulans fermentation product",
+        "DL-methionine",
+        "Vitamins (Vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, Vitamin A supplement, thiamine mononitrate, Vitamin D3 supplement, Vitamin B12 supplement, pyridoxine hydrochloride, folic acid)",
+        "L-carnitine",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Methionine",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "L-Carnitine",
+            "basis": "min",
+            "value": 50,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 50000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3480,
+        "kcal_per_unit": 380,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-ancient-grains-beef-lamb",
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-ancient-grains-beef-lamb.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 23 LB BAG, barcode 818336013461.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013478",
+      "canonical_gtin14": "00818336013478",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Naked Essentials Ancient Grains",
+      "product_name": "Chicken + Turkey",
+      "variant": "Chicken + Turkey",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "23 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, turkey meal, ground sorghum, oatmeal, millet, chicken fat (preserved with mixed tocopherols), natural pork flavor, dried egg product, natural flavor, quinoa, turkey, dried tomato pomace, flaxseeds, ground miscanthus grass, fish oil, dried carrots, salt, potassium chloride, monosodium phosphate, minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate), dried chicory root, taurine, citric acid, (preservative), mixed tocopherols (preservative), dried Bacillus coagulans fermentation product, DL-methionine, Vitamins (Vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, Vitamin A supplement, thiamine mononitrate, Vitamin D3 supplement, Vitamin B12 supplement, pyridoxine hydrochloride, folic acid), choline chloride, L-carnitine, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "turkey meal",
+        "ground sorghum",
+        "oatmeal",
+        "millet",
+        "chicken fat (preserved with mixed tocopherols)",
+        "natural pork flavor",
+        "dried egg product",
+        "natural flavor",
+        "quinoa",
+        "turkey",
+        "dried tomato pomace",
+        "flaxseeds",
+        "ground miscanthus grass",
+        "fish oil",
+        "dried carrots",
+        "salt",
+        "potassium chloride",
+        "monosodium phosphate",
+        "minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate)",
+        "dried chicory root",
+        "taurine",
+        "citric acid",
+        "(preservative)",
+        "mixed tocopherols (preservative)",
+        "dried Bacillus coagulans fermentation product",
+        "DL-methionine",
+        "Vitamins (Vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, Vitamin A supplement, thiamine mononitrate, Vitamin D3 supplement, Vitamin B12 supplement, pyridoxine hydrochloride, folic acid)",
+        "choline chloride",
+        "L-carnitine",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Methionine",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "L-Carnitine",
+            "basis": "min",
+            "value": 50,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 50000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3480,
+        "kcal_per_unit": 380,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-ancient-grains-chicken-turkey",
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-ancient-grains-chicken-turkey.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 23 LB BAG, barcode 818336013478.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336012587",
+      "canonical_gtin14": "00818336012587",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Naked Essentials",
+      "product_name": "Chicken + Duck",
+      "variant": "Chicken + Duck",
+      "recipe": [
+        "chicken",
+        "duck"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "23 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, turkey meal, dried chickpeas, dried lentils, dried peas, pea starch, chicken fat (preserved with mixed tocopherols), duck, dried tomato pomace, flaxseeds, natural flavor, dried sweet potatoes, salt, fish oil, sunflower oil, monosodium phosphate, potassium chloride, minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate), ground miscanthus grass, dried chicory root, taurine, dl-methionine, vitamins (vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, vitamin A supplement, thiamine mononitrate, vitamin D3 supplement, vitamin B12 supplement, pyridoxine hydrochloride, folic acid), l-threonine, citric acid (preservative), mixed tocopherols (preservative), choline chloride, dried bacillus coagulans fermentation product, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "turkey meal",
+        "dried chickpeas",
+        "dried lentils",
+        "dried peas",
+        "pea starch",
+        "chicken fat (preserved with mixed tocopherols)",
+        "duck",
+        "dried tomato pomace",
+        "flaxseeds",
+        "natural flavor",
+        "dried sweet potatoes",
+        "salt",
+        "fish oil",
+        "sunflower oil",
+        "monosodium phosphate",
+        "potassium chloride",
+        "minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate)",
+        "ground miscanthus grass",
+        "dried chicory root",
+        "taurine",
+        "dl-methionine",
+        "vitamins (vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, vitamin A supplement, thiamine mononitrate, vitamin D3 supplement, vitamin B12 supplement, pyridoxine hydrochloride, folic acid)",
+        "l-threonine",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "choline chloride",
+        "dried bacillus coagulans fermentation product",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.65,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFB/lb as printed)",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3524,
+        "kcal_per_unit": 412,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-chicken-duck",
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-chicken-duck.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 23 LB BAG, barcode 818336012587.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013485",
+      "canonical_gtin14": "00818336013485",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Naked Essentials",
+      "product_name": "Chicken + Duck",
+      "variant": "Chicken + Duck",
+      "recipe": [
+        "chicken",
+        "duck"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "40 lb",
+      "ingredients_verbatim": "Chicken, chicken meal, turkey meal, dried chickpeas, dried lentils, dried peas, pea starch, chicken fat (preserved with mixed tocopherols), duck, dried tomato pomace, flaxseeds, natural flavor, dried sweet potatoes, salt, fish oil, sunflower oil, monosodium phosphate, potassium chloride, minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate), ground miscanthus grass, dried chicory root, taurine, dl-methionine, vitamins (vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, vitamin A supplement, thiamine mononitrate, vitamin D3 supplement, vitamin B12 supplement, pyridoxine hydrochloride, folic acid), l-threonine, citric acid (preservative), mixed tocopherols (preservative), choline chloride, dried bacillus coagulans fermentation product, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "chicken meal",
+        "turkey meal",
+        "dried chickpeas",
+        "dried lentils",
+        "dried peas",
+        "pea starch",
+        "chicken fat (preserved with mixed tocopherols)",
+        "duck",
+        "dried tomato pomace",
+        "flaxseeds",
+        "natural flavor",
+        "dried sweet potatoes",
+        "salt",
+        "fish oil",
+        "sunflower oil",
+        "monosodium phosphate",
+        "potassium chloride",
+        "minerals (ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, copper amino acid chelate, manganese amino acid chelate, manganous oxide, calcium iodate)",
+        "ground miscanthus grass",
+        "dried chicory root",
+        "taurine",
+        "dl-methionine",
+        "vitamins (vitamin E supplement, niacin supplement, d-calcium pantothenate, riboflavin supplement, vitamin A supplement, thiamine mononitrate, vitamin D3 supplement, vitamin B12 supplement, pyridoxine hydrochloride, folic acid)",
+        "l-threonine",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "choline chloride",
+        "dried bacillus coagulans fermentation product",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 30,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.65,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFB/lb as printed)",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3524,
+        "kcal_per_unit": 412,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-chicken-duck",
+        "https://iandloveandyou.com/products/dog-kibble-naked-essentials-chicken-duck.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Manufacturer Shopify variant: 40 LB BAG, barcode 818336013485.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010071",
+      "canonical_gtin14": "00818336010071",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Nude Super Food",
+      "product_name": "Poultry Palooza",
+      "variant": "Poultry Palooza",
+      "recipe": [
+        "chicken",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "13 lb",
+      "ingredients_verbatim": "Chicken, Chicken Meal, Dried Peas, Dried Lentils, Turkey Meal, Chicken Fat (Preserved With Mixed Tocopherols), Tapioca Starch, Flaxseeds, Turkey, Natural Flavor, Dried Sweet Potatoes, Salt, Fish Oil, Ground Miscanthus Grass, Dried Egg Product, Dried Carrots, Coconut Oil, Dried Chicory Root, Dried Cranberries, Dried Pumpkin, Taurine, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Turmeric, Yucca Schidigera extract, Vitamin E Supplement, Ferrous Sulfate, dried Aspergillus oryzae fermentation extract, dried Aspergillus niger fermentation extract, dried Bacillus licheniformis fermentation extract, dried Trichoderma longibrachiatum fermentation extract, dried Enterococcus faecium fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus casei fermentation product, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Oxide, Copper Sulfate, Sodium Selenite, Niacin Supplement, d-Calcium Pantothenate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Riboflavin Supplement, Vitamin A Supplement, Manganous Oxide, Thiamine Mononitrate, Vitamin D3 Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Calcium Iodate, Folic Acid, Rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Meal",
+        "Dried Peas",
+        "Dried Lentils",
+        "Turkey Meal",
+        "Chicken Fat (Preserved With Mixed Tocopherols)",
+        "Tapioca Starch",
+        "Flaxseeds",
+        "Turkey",
+        "Natural Flavor",
+        "Dried Sweet Potatoes",
+        "Salt",
+        "Fish Oil",
+        "Ground Miscanthus Grass",
+        "Dried Egg Product",
+        "Dried Carrots",
+        "Coconut Oil",
+        "Dried Chicory Root",
+        "Dried Cranberries",
+        "Dried Pumpkin",
+        "Taurine",
+        "Citric Acid (Preservative)",
+        "Mixed Tocopherols (Preservative)",
+        "Turmeric",
+        "Yucca Schidigera extract",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "dried Aspergillus oryzae fermentation extract",
+        "dried Aspergillus niger fermentation extract",
+        "dried Bacillus licheniformis fermentation extract",
+        "dried Trichoderma longibrachiatum fermentation extract",
+        "dried Enterococcus faecium fermentation product",
+        "dried Lactobacillus acidophilus fermentation product",
+        "dried Lactobacillus casei fermentation product",
+        "Iron Amino Acid Chelate",
+        "Zinc Amino Acid Chelate",
+        "Zinc Oxide",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Copper Amino Acid Chelate",
+        "Manganese Amino Acid Chelate",
+        "Riboflavin Supplement",
+        "Vitamin A Supplement",
+        "Manganous Oxide",
+        "Thiamine Mononitrate",
+        "Vitamin D3 Supplement",
+        "Vitamin B12 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Calcium Iodate",
+        "Folic Acid",
+        "Rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 13,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "EPA",
+            "basis": "min",
+            "value": 0.02,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "DHA",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Fungal Amylase",
+            "basis": "min",
+            "value": 400,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Protease",
+            "basis": "min",
+            "value": 40,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Cellulase",
+            "basis": "min",
+            "value": 20,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Lipase",
+            "basis": "min",
+            "value": 10,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3431,
+        "kcal_per_unit": 387,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://fnac.com.br/produto/i-and-love-and-you-naked-essentials-grain-free-dog-food-turkey-garbanzo-beans-red-lentils-veggies-fruit-13-lbs/",
+        "https://iandloveandyou.com/products/dog-kibble-nude-food-poultry-palooza"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact retailer SKU maps 818336010071 to the 13 lb Poultry Palooza retail bag; current manufacturer page supplies the matching named formula.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010101",
+      "canonical_gtin14": "00818336010101",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Nude Super Food",
+      "product_name": "Red Meat Medley",
+      "variant": "Red Meat Medley",
+      "recipe": [
+        "beef",
+        "bison"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "13 lb",
+      "ingredients_verbatim": "Beef, Beef Meal, Dried Peas, Pea Protein, Garbanzo Beans, Natural Pork Flavor, Beef Fat (Preserved With Mixed Tocopherols), Bison, Natural Flavor, Tapioca Starch, Dried Lentils, Sunflower Oil, Flaxseeds, Fish Oil, Dried Sweet Potatoes, Ground Miscanthus Grass, DL-Methionine, Dried Carrots, Choline Chloride, Salt, Coconut Oil, Dried Chicory Root, Dried Pumpkin, Potassium Chloride, Taurine, Turmeric, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Vitamin E Supplement, Ferrous Sulfate, dried Aspergillus oryzae fermentation extract, dried Aspergillus niger fermentation extract, dried Bacillus licheniformis fermentation extract, dried Trichoderma longibrachiatum fermentation extract, dried Enterococcus faecium fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus casei fermentation product, Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Oxide, Copper Sulfate, Sodium Selenite, Niacin Supplement, d-Calcium Pantothenate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Vitamin E Supplement, Riboflavin Supplement, Vitamin A Supplement, Manganous Oxide, Thiamine Mononitrate, Vitamin D3 Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Calcium Iodate, Folic Acid, Rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Meal",
+        "Dried Peas",
+        "Pea Protein",
+        "Garbanzo Beans",
+        "Natural Pork Flavor",
+        "Beef Fat (Preserved With Mixed Tocopherols)",
+        "Bison",
+        "Natural Flavor",
+        "Tapioca Starch",
+        "Dried Lentils",
+        "Sunflower Oil",
+        "Flaxseeds",
+        "Fish Oil",
+        "Dried Sweet Potatoes",
+        "Ground Miscanthus Grass",
+        "DL-Methionine",
+        "Dried Carrots",
+        "Choline Chloride",
+        "Salt",
+        "Coconut Oil",
+        "Dried Chicory Root",
+        "Dried Pumpkin",
+        "Potassium Chloride",
+        "Taurine",
+        "Turmeric",
+        "Citric Acid (Preservative)",
+        "Mixed Tocopherols (Preservative)",
+        "Vitamin E Supplement",
+        "Ferrous Sulfate",
+        "dried Aspergillus oryzae fermentation extract",
+        "dried Aspergillus niger fermentation extract",
+        "dried Bacillus licheniformis fermentation extract",
+        "dried Trichoderma longibrachiatum fermentation extract",
+        "dried Enterococcus faecium fermentation product",
+        "dried Lactobacillus acidophilus fermentation product",
+        "dried Lactobacillus casei fermentation product",
+        "Iron Amino Acid Chelate",
+        "Zinc Amino Acid Chelate",
+        "Zinc Oxide",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Copper Amino Acid Chelate",
+        "Manganese Amino Acid Chelate",
+        "Vitamin E Supplement",
+        "Riboflavin Supplement",
+        "Vitamin A Supplement",
+        "Manganous Oxide",
+        "Thiamine Mononitrate",
+        "Vitamin D3 Supplement",
+        "Vitamin B12 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Calcium Iodate",
+        "Folic Acid",
+        "Rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "EPA",
+            "basis": "min",
+            "value": 0.04,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "DHA",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Fungal Amylase",
+            "basis": "min",
+            "value": 400,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Protease",
+            "basis": "min",
+            "value": 40,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Cellulase",
+            "basis": "min",
+            "value": 20,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Lipase",
+            "basis": "min",
+            "value": 10,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3450,
+        "kcal_per_unit": 419,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://lojamais.com.br/produto/i-and-love-and-you-naked-essentials-grain-free-dog-food-red-meat-medley-recipe-13-lbs/",
+        "https://iandloveandyou.com/products/dog-kibble-nude-food-red-meat-medley"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact retailer SKU maps 818336010101 to the 13 lb Red Meat Medley retail bag; current manufacturer page supplies the matching named formula.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010132",
+      "canonical_gtin14": "00818336010132",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Nude Super Food",
+      "product_name": "Simply Sea",
+      "variant": "Simply Sea",
+      "recipe": [
+        "whitefish",
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "13 lb",
+      "ingredients_verbatim": "Whitefish, menhaden fish meal, salmon meal, dried peas, garbanzo beans, pea protein, tapioca starch, canola oil (preserved with mixed tocopherols), salmon, dried sweet potatoes, dried lentils, natural flavor, sunflower oil, flaxseeds, choline chloride, dried carrots, salt, potassium chloride, taurine, ground miscanthus grass, coconut oil, dried chicory root, dried cranberries, dried pumpkin, turmeric, dried aspergillus oryzae fermentation product, dried aspergillus niger fermentation product, dried enterococcus faecium fermentation product, dried lactobacillus acidophilus fermentation product, dried lactobacillus casei fermentation product, citric acid (preservative), mixed tocopherols (preservative), yucca schidigera extract, l-threonine, Vitamin E supplement, ferrous sulfate, iron amino acid chelate, zinc amino acid chelate, zinc oxide, copper sulfate, sodium selenite, niacin supplement, d-calcium pantothenate, copper amino acid chelate, manganese amino acid chelate, riboflavin supplement, vitamin A supplement, manganous oxide, thiamine mononitrate, vitamin D3 supplement, vitamin B12 supplement, pyridoxine hydrochloride, calcium iodate, folic acid, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Whitefish",
+        "menhaden fish meal",
+        "salmon meal",
+        "dried peas",
+        "garbanzo beans",
+        "pea protein",
+        "tapioca starch",
+        "canola oil (preserved with mixed tocopherols)",
+        "salmon",
+        "dried sweet potatoes",
+        "dried lentils",
+        "natural flavor",
+        "sunflower oil",
+        "flaxseeds",
+        "choline chloride",
+        "dried carrots",
+        "salt",
+        "potassium chloride",
+        "taurine",
+        "ground miscanthus grass",
+        "coconut oil",
+        "dried chicory root",
+        "dried cranberries",
+        "dried pumpkin",
+        "turmeric",
+        "dried aspergillus oryzae fermentation product",
+        "dried aspergillus niger fermentation product",
+        "dried enterococcus faecium fermentation product",
+        "dried lactobacillus acidophilus fermentation product",
+        "dried lactobacillus casei fermentation product",
+        "citric acid (preservative)",
+        "mixed tocopherols (preservative)",
+        "yucca schidigera extract",
+        "l-threonine",
+        "Vitamin E supplement",
+        "ferrous sulfate",
+        "iron amino acid chelate",
+        "zinc amino acid chelate",
+        "zinc oxide",
+        "copper sulfate",
+        "sodium selenite",
+        "niacin supplement",
+        "d-calcium pantothenate",
+        "copper amino acid chelate",
+        "manganese amino acid chelate",
+        "riboflavin supplement",
+        "vitamin A supplement",
+        "manganous oxide",
+        "thiamine mononitrate",
+        "vitamin D3 supplement",
+        "vitamin B12 supplement",
+        "pyridoxine hydrochloride",
+        "calcium iodate",
+        "folic acid",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 13,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "EPA",
+            "basis": "min",
+            "value": 0.04,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "DHA",
+            "basis": "min",
+            "value": 0.03,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms",
+            "basis": "min",
+            "value": 10000000,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Fungal Amylase",
+            "basis": "min",
+            "value": 400,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Protease",
+            "basis": "min",
+            "value": 40,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Cellulase",
+            "basis": "min",
+            "value": 20,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Lipase",
+            "basis": "min",
+            "value": 10,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3399,
+        "kcal_per_unit": 385,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://sosuplementos.com.br/produto/i-and-love-and-you-naked-essentials-grain-free-dog-food-simply-sea-recipe-13-lbs-2/",
+        "https://iandloveandyou.com/products/dog-kibble-nude-food-simply-sea"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact retailer SKU maps 818336010132 to the 13 lb Simply Sea retail bag; current manufacturer page supplies the matching named formula.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010019",
+      "canonical_gtin14": "00818336010019",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Free Ranger Bully Stick",
+      "product_name": "No Stink! Free Ranger Bully Stix 12\"",
+      "variant": "12 inch, 5 count",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "6 inch (5 count)",
+      "ingredients_verbatim": "beef pizzle",
+      "ingredients_ordered_normalized": [
+        "beef pizzle"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 79.0,
+        "crude_fat_min_percent": 1.6,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 13.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 7484,
+        "kcal_per_unit": 28,
+        "unit_name": "inch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://www.maxwarehouse.com/products/i-and-love-and-you-free-ranger-bully-stix-beef-case-of-6-5-count-pack-of-6"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact retailer page prints UPC 818336010019 and 6 in stick (15.2 cm), 5 pk; barcode is the sellable 5-count bag, despite distributor case wording.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: exact package-size barcode identity independently re-verified for this added size; sibling formula retained only because the same manufacturer product page serves all listed size variants."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010026",
+      "canonical_gtin14": "00818336010026",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Ear Candy",
+      "product_name": "Ear Candy Beef Ear Chews",
+      "variant": "1 Bag (5 Count)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "5 count",
+      "ingredients_verbatim": "beef cow ears",
+      "ingredients_ordered_normalized": [
+        "beef cow ears"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 83,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 8,
+        "moisture_max_percent": 5,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3384,
+        "kcal_per_unit": 51,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer page supplies exact formula/GA/calories/supplemental statement; Shopify variant maps 1 BAG (5 COUNT) to UPC 818336010026.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-chew-treats-ear-candy-beef-ear-chews",
+        "https://iandloveandyou.com/products/dog-chew-treats-ear-candy-beef-ear-chews.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336011801",
+      "canonical_gtin14": "00818336011801",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Good Golly Gullet Stix",
+      "product_name": "Good Golly Gullet Stix",
+      "variant": "6 inch (5 count)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "6 inch (5 count)",
+      "ingredients_verbatim": "beef gullet",
+      "ingredients_ordered_normalized": [
+        "beef gullet"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 79,
+        "crude_fat_min_percent": 1.3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 13,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3820,
+        "kcal_per_unit": 42,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer page supplies formula/GA/calories/supplemental statement; Shopify variant JSON maps this UPC to the stated count.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-chew-treats-good-golly-gullet-stix",
+        "https://iandloveandyou.com/products/dog-chew-treats-good-golly-gullet-stix.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336011993",
+      "canonical_gtin14": "00818336011993",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Good Golly Gullet Stix",
+      "product_name": "Good Golly Gullet Stix",
+      "variant": "6 inch (48 count)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "6 inch (48 count)",
+      "ingredients_verbatim": "beef gullet",
+      "ingredients_ordered_normalized": [
+        "beef gullet"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 79,
+        "crude_fat_min_percent": 1.3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 13,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3820,
+        "kcal_per_unit": 42,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer page supplies formula/GA/calories/supplemental statement; Shopify variant JSON maps this UPC to the stated count.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-chew-treats-good-golly-gullet-stix",
+        "https://iandloveandyou.com/products/dog-chew-treats-good-golly-gullet-stix.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013911",
+      "canonical_gtin14": "00818336013911",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Free Ranger Braided Bully Stix",
+      "product_name": "Free Ranger Braided Bully Stix",
+      "variant": "6 inch (3 count)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "6 inch (3 count)",
+      "ingredients_verbatim": "Beef Pizzle",
+      "ingredients_ordered_normalized": [
+        "Beef Pizzle"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 65,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 18,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer product page and Shopify variant JSON supply exact formula, complete printed GA, supplemental statement, and 6 INCH (3 COUNT) UPC identity. Manufacturer page does not print calorie content; null is retained rather than invented.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/braided-bully-sticks",
+        "https://iandloveandyou.com/products/braided-bully-sticks.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Manufacturer Shopify variant maps barcode 818336013911 to 6 INCH (3 COUNT).",
+        "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010323",
+      "canonical_gtin14": "00818336010323",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Raw Raw",
+      "product_name": "Raw-Raw Turk Boom Ba Dinner",
+      "variant": "Turkey",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "1.5 lb",
+      "ingredients_verbatim": "Turkey, Sweet Potatoes, Yellow Split Peas, Carrots, Cabbage, Dried Egg Product, Flaxseeds, Bananas, Tricalcium Phosphate, Dried Kelp, Spinach, Ginger Root, Zinc Sulfate, Vitamin E supplement, Ferrous Fumarate, Copper Sulfate, d Calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Turkey",
+        "Sweet Potatoes",
+        "Yellow Split Peas",
+        "Carrots",
+        "Cabbage",
+        "Dried Egg Product",
+        "Flaxseeds",
+        "Bananas",
+        "Tricalcium Phosphate",
+        "Dried Kelp",
+        "Spinach",
+        "Ginger Root",
+        "Zinc Sulfate",
+        "Vitamin E supplement",
+        "Ferrous Fumarate",
+        "Copper Sulfate",
+        "d Calcium Pantothenate",
+        "Riboflavin",
+        "Vitamin D3 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 32,
+        "crude_fat_min_percent": 9,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 2.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3446,
+        "kcal_per_unit": 327,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact archived retail label transcription supplies UPC/SKU, 1.5 lb size, complete formula, GA, calories and all-age feeding evidence.",
+      "source_urls": [
+        "https://sosuplementos.com.br/produto/i-and-love-and-you-raw-raw-turk-boom-ba-dinner-1-5-lbs/"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336011672",
+      "canonical_gtin14": "00818336011672",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Raw Raw",
+      "product_name": "Raw Raw Lamb Boom Ba Dinner",
+      "variant": "Lamb",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "1.5 lb",
+      "ingredients_verbatim": "Lamb, Yellow Split Peas, Sweet Potatoes, Carrots, Cabbage, Dried Egg Product, Flaxseeds, Bananas, Tricalcium Phosphate, Dried Kelp, Spinach, Ginger Root, Zinc Sulfate, Vitamin E supplement, Ferrous Fumarate, Copper Sulfate, d Calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Yellow Split Peas",
+        "Sweet Potatoes",
+        "Carrots",
+        "Cabbage",
+        "Dried Egg Product",
+        "Flaxseeds",
+        "Bananas",
+        "Tricalcium Phosphate",
+        "Dried Kelp",
+        "Spinach",
+        "Ginger Root",
+        "Zinc Sulfate",
+        "Vitamin E supplement",
+        "Ferrous Fumarate",
+        "Copper Sulfate",
+        "d Calcium Pantothenate",
+        "Riboflavin",
+        "Vitamin D3 Supplement",
+        "Pyridoxine Hydrochloride",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 11,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 1.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.6,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3534,
+        "kcal_per_unit": 335,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact archived retail label transcription supplies UPC/SKU, 1.5 lb size, complete formula, GA, calories and all-age feeding evidence.",
+      "source_urls": [
+        "https://lojamais.com.br/produto/i-and-love-and-you-raw-raw-lamb-boom-ba-dinner-1-5-lbs/"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013348",
+      "canonical_gtin14": "00818336013348",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Meow & Zen Hearties",
+      "product_name": "Meow and Zen Hearties",
+      "variant": "Chicken",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 oz",
+      "ingredients_verbatim": "Chicken, pea flour, vegetable glycerin, chicken liver, sweet potato, ground whole flaxseed, pumpkin powder, natural smoke flavor, salt, passion fruit flower, chamomile, lavender, inulin, rosemary extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "pea flour",
+        "vegetable glycerin",
+        "chicken liver",
+        "sweet potato",
+        "ground whole flaxseed",
+        "pumpkin powder",
+        "natural smoke flavor",
+        "salt",
+        "passion fruit flower",
+        "chamomile",
+        "lavender",
+        "inulin",
+        "rosemary extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 18,
+        "crude_fat_min_percent": 8,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 26,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3166,
+        "kcal_per_unit": 2.75,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer page controls current formula/GA/calories and supplemental statement; Vitacost exact SKU 818336013348 proves the 4 oz individual bag UPC.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/cat-treats-meow-and-zen-hearties",
+        "https://www.vitacost.com/i-and-love-and-you-cat-treats-meow-and-zen-hearties"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [
+        "Older retailer data prints an earlier 19% protein / 9% fat / 5% fiber / 24% moisture deck and 3196 kcal/kg; current manufacturer page now prints 18% / 8% / 2% / 26% and 3166 kcal/kg, so current manufacturer generation is stored."
+      ],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336010385",
+      "canonical_gtin14": "00818336010385",
+      "barcode_scope": "individual_unit",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Nice Jerky!",
+      "product_name": "Nice Jerky Venison + Lamb Bites",
+      "variant": "Venison + Lamb",
+      "recipe": [
+        "venison",
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 oz",
+      "ingredients_verbatim": "Venison, lamb, dried chicory root, vegetable glycerin, salt, mixed tocopherols (preservative).",
+      "ingredients_ordered_normalized": [
+        "Venison",
+        "lamb",
+        "dried chicory root",
+        "vegetable glycerin",
+        "salt",
+        "mixed tocopherols (preservative)"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 2,
+        "moisture_max_percent": 20,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4250,
+        "kcal_per_unit": 120,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Exact UPC retailer identity plus exact archived formula/GA/calorie transcription; supplemental feeding statement is printed by formula source.",
+      "source_urls": [
+        "https://www.maxwarehouse.com/products/i-and-love-and-you-dog-treats-nice-jerky-venison-and-lamb-bites-4-oz-case-of-6-pack-of-6",
+        "https://ciadosuplemento.com/produto/i-and-love-and-you-timo-e-rstico-carne-de-veado-pedaos-de-cordeiro-113-g/"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Exact UPC/retail-unit identity is documented by the cited manufacturer variant data and/or exact-unit retailer listing; UPC-A check digit independently validated.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Canonical GTIN-14 is UPC-A left-padded to 14 digits.",
+        "Complete ingredient order, core printed guaranteed analysis, calories, and adequacy/supplemental status captured from cited evidence."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }
