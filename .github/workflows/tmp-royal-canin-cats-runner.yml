@@ -1,47 +1,62 @@
-name: Run Royal Canin cats 120-140 merge
+name: Re-audit Blue Buffalo Bursts Chicken 12oz
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  merge:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Downgrade conflicting formula and audit ledger
         run: |
           python - <<'PY'
-          from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          import json, collections
+          p='research/deep-research-blue-buffalo.json'
+          d=json.load(open(p,encoding='utf-8'))
+          target=None
+          for r in d['records']:
+            if r.get('upc')=='840243137053': target=r; break
+          assert target is not None
+          assert target.get('research_status')=='source_verified', target.get('research_status')
+          old_ga=target.get('guaranteed_analysis')
+          target['research_status']='needs_physical_label'
+          target['conflicts']=[
+            'Current exact-US Target listing for UPC 840243137053 (12 oz) reports a newer/different label: crude protein 23% min, crude fat 19.5% min, crude fiber 2.5% max, moisture 10% max, with an ingredient deck beginning deboned chicken, chicken meal, chicken fat, brown rice, barley. Previously collected sources for this exact UPC represented a 23/21/2/10 formula with a different ingredient deck/calorie statement. Do not mix these generations; current physical/package-generation evidence is required before source_verified.'
+          ]
+          notes=target.get('verification_notes') or []
+          notes.append('2026-08-29 second-pass integrity audit found current exact-UPC U.S. label drift at Target; record downgraded pending exact package-generation resolution.')
+          target['verification_notes']=notes
+          urls=target.get('source_urls') or []
+          u='https://www.target.com/p/-/A-79479277'
+          if u not in urls: urls.append(u)
+          target['source_urls']=urls
+          target['source_accessed_at']='2026-08-29'
+          d['updated_at']='2026-08-29'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+          open(p,'a',encoding='utf-8').write('\n')
+          c=collections.Counter(r.get('research_status') for r in d['records'])
+          print('TOTAL',len(d['records']))
+          print('STATUS',dict(c))
+          print('DOWNGRADED',target['upc'])
+          print('OLD_GA',old_ga)
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore runner and commit
         run: |
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "research: flag Blue Bursts Chicken 12oz formula drift"
+          git push origin HEAD:agent/deep-research-blue-buffalo
