@@ -14192,6 +14192,1969 @@
           ]
         }
       ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013676",
+      "canonical_gtin14": "00818336013676",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Boost Chicken Feast",
+      "variant": "3 OZ (12 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (12 PACK)",
+      "ingredients_verbatim": "Chicken Broth, Chicken, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Salt, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Ascorbyl 2-phosphate, Magnesium Sulfate, Choline Chloride, Potassium Chloride, Taurine, Vitamin E Supplement, Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)).",
+      "ingredients_ordered_normalized": [
+        "Chicken Broth",
+        "Chicken",
+        "Tapioca Starch",
+        "Sunflower Oil",
+        "Tricalcium Phosphate",
+        "Salt",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Ascorbyl 2-phosphate",
+        "Magnesium Sulfate",
+        "Choline Chloride",
+        "Potassium Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 25,
+            "unit": "mg/kg"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 1070,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 713,
+        "kcal_per_unit": 60,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-boost",
+        "https://iandloveandyou.com/products/feed-meow-boost.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013645_-_Feed_Meow_Boost_Chicken_Feast_3_oz_-_FRONT_1.png?v=1762442409"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013676 exactly to 3 OZ (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 818336013676 = 3 OZ (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013645",
+          "product_name": "Feed Meow Boost Chicken Feast",
+          "size": "3 oz",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-boost",
+            "https://iandloveandyou.com/products/feed-meow-boost.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013673",
+      "canonical_gtin14": "10818336013673",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Boost Chicken Feast",
+      "variant": "3 OZ (24 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (24 PACK)",
+      "ingredients_verbatim": "Chicken Broth, Chicken, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Salt, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Ascorbyl 2-phosphate, Magnesium Sulfate, Choline Chloride, Potassium Chloride, Taurine, Vitamin E Supplement, Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)).",
+      "ingredients_ordered_normalized": [
+        "Chicken Broth",
+        "Chicken",
+        "Tapioca Starch",
+        "Sunflower Oil",
+        "Tricalcium Phosphate",
+        "Salt",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Ascorbyl 2-phosphate",
+        "Magnesium Sulfate",
+        "Choline Chloride",
+        "Potassium Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Zinc",
+            "basis": "min",
+            "value": 25,
+            "unit": "mg/kg"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 1070,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 713,
+        "kcal_per_unit": 60,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-boost",
+        "https://iandloveandyou.com/products/feed-meow-boost.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013645_-_Feed_Meow_Boost_Chicken_Feast_3_oz_-_FRONT_1.png?v=1762442409"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013673 exactly to 3 OZ (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013673 = 3 OZ (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013645 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013645",
+          "product_name": "Feed Meow Boost Chicken Feast",
+          "size": "3 oz",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-boost",
+            "https://iandloveandyou.com/products/feed-meow-boost.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013683",
+      "canonical_gtin14": "00818336013683",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Shine Salmon & Tuna Feast",
+      "variant": "3 OZ (12 PACK)",
+      "recipe": [
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (12 PACK)",
+      "ingredients_verbatim": "Fish Broth, Salmon, Tuna, Tapioca Starch, Salt, Tricalcium Phosphate, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Ascorbyl 2-phosphate, Fish Oil, Choline Chloride, Taurine, Potassium Chloride, Magnesium Sulfate, Vitamin E Supplement, Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)).",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Salmon",
+        "Tuna",
+        "Tapioca Starch",
+        "Salt",
+        "Tricalcium Phosphate",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Ascorbyl 2-phosphate",
+        "Fish Oil",
+        "Choline Chloride",
+        "Taurine",
+        "Potassium Chloride",
+        "Magnesium Sulfate",
+        "Vitamin E Supplement",
+        "Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.0,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 761,
+        "kcal_per_unit": 64,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-shine",
+        "https://iandloveandyou.com/products/feed-meow-shine.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013652_-_Feed_Meow_Shine_Salmon_Tuna_Feast_3_oz_-_FRONT_1.png?v=1762442407"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013683 exactly to 3 OZ (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 818336013683 = 3 OZ (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013652",
+          "product_name": "Feed Meow Shine Salmon & Tuna Feast",
+          "size": "3 oz",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-shine",
+            "https://iandloveandyou.com/products/feed-meow-shine.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013680",
+      "canonical_gtin14": "10818336013680",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Shine Salmon & Tuna Feast",
+      "variant": "3 OZ (24 PACK)",
+      "recipe": [
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (24 PACK)",
+      "ingredients_verbatim": "Fish Broth, Salmon, Tuna, Tapioca Starch, Salt, Tricalcium Phosphate, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Ascorbyl 2-phosphate, Fish Oil, Choline Chloride, Taurine, Potassium Chloride, Magnesium Sulfate, Vitamin E Supplement, Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)).",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Salmon",
+        "Tuna",
+        "Tapioca Starch",
+        "Salt",
+        "Tricalcium Phosphate",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Ascorbyl 2-phosphate",
+        "Fish Oil",
+        "Choline Chloride",
+        "Taurine",
+        "Potassium Chloride",
+        "Magnesium Sulfate",
+        "Vitamin E Supplement",
+        "Vitamins (Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.0,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 50,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 761,
+        "kcal_per_unit": 64,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-shine",
+        "https://iandloveandyou.com/products/feed-meow-shine.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013652_-_Feed_Meow_Shine_Salmon_Tuna_Feast_3_oz_-_FRONT_1.png?v=1762442407"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013680 exactly to 3 OZ (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013680 = 3 OZ (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013652 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013652",
+          "product_name": "Feed Meow Shine Salmon & Tuna Feast",
+          "size": "3 oz",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-shine",
+            "https://iandloveandyou.com/products/feed-meow-shine.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "818336013690",
+      "canonical_gtin14": "00818336013690",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Tummy Tuna with Pumpkin Feast",
+      "variant": "3 OZ (12 PACK)",
+      "recipe": [
+        "tuna",
+        "pumpkin"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (12 PACK)",
+      "ingredients_verbatim": "Fish Broth, Tuna, Lamb, Pumpkin, Sunflower Oil, Tapioca Starch, Salt, Tricalcium Phosphate, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Fructooligosaccharide, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)), Magnesium Sulfate, Potassium Chloride.",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Tuna",
+        "Lamb",
+        "Pumpkin",
+        "Sunflower Oil",
+        "Tapioca Starch",
+        "Salt",
+        "Tricalcium Phosphate",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Fructooligosaccharide",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))",
+        "Magnesium Sulfate",
+        "Potassium Chloride"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 748,
+        "kcal_per_unit": 63,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-tummy",
+        "https://iandloveandyou.com/products/feed-meow-tummy.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013669_-_Feed_Meow_Tummy_Tuna_with_Pumpkin_Feast_3_oz_-_FRONT_1.png?v=1762442407"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 818336013690 exactly to 3 OZ (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 818336013690 = 3 OZ (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013669",
+          "product_name": "Feed Meow Tummy Tuna with Pumpkin Feast",
+          "size": "3 oz",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-tummy",
+            "https://iandloveandyou.com/products/feed-meow-tummy.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013697",
+      "canonical_gtin14": "10818336013697",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Tummy Tuna with Pumpkin Feast",
+      "variant": "3 OZ (24 PACK)",
+      "recipe": [
+        "tuna",
+        "pumpkin"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (24 PACK)",
+      "ingredients_verbatim": "Fish Broth, Tuna, Lamb, Pumpkin, Sunflower Oil, Tapioca Starch, Salt, Tricalcium Phosphate, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide), Fructooligosaccharide, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity)), Magnesium Sulfate, Potassium Chloride.",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Tuna",
+        "Lamb",
+        "Pumpkin",
+        "Sunflower Oil",
+        "Tapioca Starch",
+        "Salt",
+        "Tricalcium Phosphate",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Fructooligosaccharide",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, Vitamin A Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity))",
+        "Magnesium Sulfate",
+        "Potassium Chloride"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 748,
+        "kcal_per_unit": 63,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-tummy",
+        "https://iandloveandyou.com/products/feed-meow-tummy.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013669_-_Feed_Meow_Tummy_Tuna_with_Pumpkin_Feast_3_oz_-_FRONT_1.png?v=1762442407"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013697 exactly to 3 OZ (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO statement supports all life stages.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013697 = 3 OZ (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013669 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013669",
+          "product_name": "Feed Meow Tummy Tuna with Pumpkin Feast",
+          "size": "3 oz",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-tummy",
+            "https://iandloveandyou.com/products/feed-meow-tummy.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013932",
+      "canonical_gtin14": "10818336013932",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Move Chicken Feast",
+      "variant": "3 OZ (24 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (24 PACK)",
+      "ingredients_verbatim": "Chicken (Source Of Glucosamine And Chondroitin Sulfate), Chicken Broth, Tuna, Shrimp, Sunflower Oil, Tapioca Starch, Fish Oil, Tricalcium Phosphate, Inulin, Sodium Tripolyphosphate, Guar Gum, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Turmeric Powder, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity)), Potassium Chloride, Magnesium Sulfate, L-Carnitine.",
+      "ingredients_ordered_normalized": [
+        "Chicken (Source Of Glucosamine And Chondroitin Sulfate)",
+        "Chicken Broth",
+        "Tuna",
+        "Shrimp",
+        "Sunflower Oil",
+        "Tapioca Starch",
+        "Fish Oil",
+        "Tricalcium Phosphate",
+        "Inulin",
+        "Sodium Tripolyphosphate",
+        "Guar Gum",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Turmeric Powder",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity))",
+        "Potassium Chloride",
+        "Magnesium Sulfate",
+        "L-Carnitine"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 0.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (as printed by source)",
+            "basis": "min",
+            "value": 250,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (as printed by source)",
+            "basis": "min",
+            "value": 200,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 961,
+        "kcal_per_unit": 81,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page; unusual printed glucosamine/chondroitin values preserved exactly rather than corrected by inference.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-move",
+        "https://iandloveandyou.com/products/feed-meow-move.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013928-FeedMeowMoveChickenFeast-FRONT.png?v=1762445005"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013932 exactly to 3 OZ (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [
+        "Marketing taxonomy may surface broad age collections, but the formal AAFCO statement is adult maintenance; life_stage is therefore adult."
+      ],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Formal AAFCO Adult Maintenance statement controls life-stage classification.",
+        "Unusual glucosamine/chondroitin values are retained as source-printed data and flagged rather than silently repaired.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013932 = 3 OZ (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013928 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013928",
+          "product_name": "Feed Meow Move Chicken Feast",
+          "size": "3 oz",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-move",
+            "https://iandloveandyou.com/products/feed-meow-move.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013901",
+      "canonical_gtin14": "10818336013901",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Feed Meow",
+      "product_name": "Feed Meow Indoor Mackerel Feast",
+      "variant": "3 OZ (24 Pack)",
+      "recipe": [
+        "mackerel"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ (24 Pack)",
+      "ingredients_verbatim": "Fish Broth, Mackerel, Bream, Flaxseed Oil, Powdered Cellulose, Tapioca Starch, Inulin, Tricalcium Phosphate, Guar Gum, Sodium Tripolyphosphate, Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide), Potassium Chloride, Taurine, Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity)), Choline Chloride, L-Carnitine, Magnesium Sulfate.",
+      "ingredients_ordered_normalized": [
+        "Fish Broth",
+        "Mackerel",
+        "Bream",
+        "Flaxseed Oil",
+        "Powdered Cellulose",
+        "Tapioca Starch",
+        "Inulin",
+        "Tricalcium Phosphate",
+        "Guar Gum",
+        "Sodium Tripolyphosphate",
+        "Minerals (Zinc Oxide, Reduced Iron, Sodium Selenite, Manganese Sulfate Monohydrate, Copper Amino Acid Complex, Potassium Iodide)",
+        "Potassium Chloride",
+        "Taurine",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity))",
+        "Choline Chloride",
+        "L-Carnitine",
+        "Magnesium Sulfate"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 2.5,
+        "moisture_max_percent": 84.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Omega-3 Fatty Acids (calculated)",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids (calculated)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 805,
+        "kcal_per_unit": 68,
+        "unit_name": "pouch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/feed-meow-indoor",
+        "https://iandloveandyou.com/products/feed-meow-indoor.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013898-FeedMeowIndoorMackerelFeast-FRONT.png?v=1762444992"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013901 exactly to 3 OZ (24 Pack). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Manufacturer describes the food as complete and balanced for kitten, adult, and senior cats.",
+        "Product of Thailand as printed by manufacturer.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013901 = 3 OZ (24 Pack).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013898 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013898",
+          "product_name": "Feed Meow Indoor Mackerel Feast",
+          "size": "3 oz",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/feed-meow-indoor",
+            "https://iandloveandyou.com/products/feed-meow-indoor.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013581",
+      "canonical_gtin14": "10818336013581",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "XOXOs",
+      "product_name": "XOXOs Salmon & Tuna Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "FISH BROTH, SALMON, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), POTASSIUM CHLORIDE, MAGNESIUM SULFATE, CHOLINE CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)).",
+      "ingredients_ordered_normalized": [
+        "FISH BROTH",
+        "SALMON",
+        "CHICKEN",
+        "TUNA",
+        "TAPIOCA STARCH",
+        "SALT",
+        "TRICALCIUM PHOSPHATE",
+        "NATURAL FLAVOR",
+        "MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE)",
+        "POTASSIUM CHLORIDE",
+        "MAGNESIUM SULFATE",
+        "CHOLINE CHLORIDE",
+        "CELERY POWDER",
+        "TAURINE",
+        "VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1292,
+        "kcal_per_unit": 109,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate",
+        "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013584_-_XOXOs_Salmon_Tuna_Pate_3_oz_-_FRONT.png?v=1762442214"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013581 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO Growth and Maintenance statement supports all life stages.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013581 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013584 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013584",
+          "product_name": "XOXOs Salmon & Tuna Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate",
+            "https://iandloveandyou.com/products/xoxo-salmon-tuna-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013604",
+      "canonical_gtin14": "10818336013604",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "XOXOs",
+      "product_name": "XOXOs Beef & Chicken Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "beef",
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "BEEF BROTH, BEEF, CHICKEN, TUNA, TAPIOCA STARCH, SALT, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CHOLINE CHLORIDE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE.",
+      "ingredients_ordered_normalized": [
+        "BEEF BROTH",
+        "BEEF",
+        "CHICKEN",
+        "TUNA",
+        "TAPIOCA STARCH",
+        "SALT",
+        "NATURAL FLAVOR",
+        "MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE)",
+        "CHOLINE CHLORIDE",
+        "POTASSIUM CHLORIDE",
+        "CELERY POWDER",
+        "TAURINE",
+        "VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))",
+        "MAGNESIUM SULFATE"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 868,
+        "kcal_per_unit": 72,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
+        "https://iandloveandyou.com/products/xoxo-beef-chicken-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013607_-_XOXOs_Beef_Chicken_Pate_3_oz_-_FRONT.png?v=1762442191"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013604 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO Growth and Maintenance statement supports all life stages.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013604 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013607 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013607",
+          "product_name": "XOXOs Beef & Chicken Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-beef-chicken-pate",
+            "https://iandloveandyou.com/products/xoxo-beef-chicken-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013574",
+      "canonical_gtin14": "10818336013574",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "XOXOs",
+      "product_name": "XOXOs Whitefish & Tuna Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "whitefish",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "FISH BROTH, WHITEFISH, CHICKEN, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), CELERY POWDER, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)), MAGNESIUM SULFATE, CHOLINE CHLORIDE, POTASSIUM CHLORIDE.",
+      "ingredients_ordered_normalized": [
+        "FISH BROTH",
+        "WHITEFISH",
+        "CHICKEN",
+        "TUNA",
+        "TAPIOCA STARCH",
+        "SALT",
+        "TRICALCIUM PHOSPHATE",
+        "NATURAL FLAVOR",
+        "MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE)",
+        "CELERY POWDER",
+        "TAURINE",
+        "VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, d-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))",
+        "MAGNESIUM SULFATE",
+        "CHOLINE CHLORIDE",
+        "POTASSIUM CHLORIDE"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 868,
+        "kcal_per_unit": 72,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate",
+        "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013577_-_XOXOs_Whitefish_Tuna_Pate_3oz_-_FRONT.png?v=1762442189"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013574 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO Growth and Maintenance statement supports all life stages.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013574 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013577 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013577",
+          "product_name": "XOXOs Whitefish & Tuna Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate",
+            "https://iandloveandyou.com/products/xoxo-whitefish-tuna-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013598",
+      "canonical_gtin14": "10818336013598",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "XOXOs",
+      "product_name": "XOXOs Chicken & Tuna Pâté",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "CHICKEN, CHICKEN BROTH, TUNA, TAPIOCA STARCH, SALT, TRICALCIUM PHOSPHATE, NATURAL FLAVOR, MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE), MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CELERY POWDER, TAURINE, CHOLINE CHLORIDE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY)).",
+      "ingredients_ordered_normalized": [
+        "CHICKEN",
+        "CHICKEN BROTH",
+        "TUNA",
+        "TAPIOCA STARCH",
+        "SALT",
+        "TRICALCIUM PHOSPHATE",
+        "NATURAL FLAVOR",
+        "MINERALS (ZINC OXIDE, REDUCED IRON, SODIUM SELENITE, MANGANESE SULFATE, COPPER AMINO ACID COMPLEX, POTASSIUM IODIDE)",
+        "MAGNESIUM SULFATE",
+        "POTASSIUM CHLORIDE",
+        "CELERY POWDER",
+        "TAURINE",
+        "CHOLINE CHLORIDE",
+        "VITAMINS (VITAMIN E SUPPLEMENT, NIACIN SUPPLEMENT, THIAMINE MONONITRATE, VITAMIN A SUPPLEMENT, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE, D-CALCIUM PANTOTHENATE, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN D3 SUPPLEMENT, FOLIC ACID, MENADIONE SODIUM BISULFITE COMPLEX (SOURCE OF VITAMIN K ACTIVITY))"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 868,
+        "kcal_per_unit": 72,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
+        "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate.js",
+        "https://iandloveandyou.com/cdn/shop/files/818336013591_-_XOXOs_Chicken_Tuna_Pate_3_oz_-_FRONT.png?v=1762442189"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013598 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "AAFCO Growth and Maintenance statement supports all life stages.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013598 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336013591 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336013591",
+          "product_name": "XOXOs Chicken & Tuna Pâté",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate",
+            "https://iandloveandyou.com/products/xoxo-chicken-tuna-pate.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010009",
+      "canonical_gtin14": "10818336010009",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Free Ranger Bully Stick",
+      "product_name": "No Stink! Free Ranger Bully Stix 12\"",
+      "variant": "12 INCH (30 COUNT)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "12 INCH (30 COUNT)",
+      "ingredients_verbatim": "beef pizzle",
+      "ingredients_ordered_normalized": [
+        "beef pizzle"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 79.0,
+        "crude_fat_min_percent": 1.6,
+        "crude_fiber_max_percent": 1.0,
+        "moisture_max_percent": 13.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 7484,
+        "kcal_per_unit": 28,
+        "unit_name": "inch"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix",
+        "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix.js",
+        "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix?variant=39741425549487"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010009 exactly to 12 INCH (30 COUNT). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336010009 = 12 INCH (30 COUNT).",
+        "Pack count 30 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": null,
+          "product_name": "No Stink! Free Ranger Bully Stix 12 inch chew",
+          "size": "No Stink! Free Ranger Bully Stix 12 inch chew",
+          "quantity": 30,
+          "evidence_status": "unresolved",
+          "source_urls": [
+            "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix",
+            "https://iandloveandyou.com/products/dog-chew-treats-free-ranger-bully-stix.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336013918",
+      "canonical_gtin14": "10818336013918",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Free Ranger Braided Bully Stix",
+      "product_name": "Free Ranger Braided Bully Stix",
+      "variant": "6 INCH (18 COUNT)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": "plain",
+      "package_type": "box",
+      "size": "6 INCH (18 COUNT)",
+      "ingredients_verbatim": "Beef Pizzle",
+      "ingredients_ordered_normalized": [
+        "Beef Pizzle"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 65,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 18,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Current manufacturer product page and Shopify variant JSON supply exact formula, complete printed GA, supplemental statement, and 6 INCH (3 COUNT) UPC identity. Manufacturer page does not print calorie content; null is retained rather than invented.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/braided-bully-sticks",
+        "https://iandloveandyou.com/products/braided-bully-sticks.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336013918 exactly to 6 INCH (18 COUNT). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated.",
+        "Manufacturer Shopify variant maps barcode 818336013911 to 6 INCH (3 COUNT).",
+        "No calorie declaration is printed on the current manufacturer page; calorie fields are therefore null under the contract rather than inferred.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336013918 = 6 INCH (18 COUNT).",
+        "Pack count 18 is proven by current manufacturer variant. No barcode is asserted for each loose chew inside the outer pack."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": null,
+          "product_name": "Free Ranger Braided Bully Stix 6 inch chew",
+          "size": "Free Ranger Braided Bully Stix 6 inch chew",
+          "quantity": 18,
+          "evidence_status": "unresolved",
+          "source_urls": [
+            "https://iandloveandyou.com/products/braided-bully-sticks",
+            "https://iandloveandyou.com/products/braided-bully-sticks.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336011969",
+      "canonical_gtin14": "10818336011969",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Original Recipe",
+      "product_name": "Moo Moo Venison Stew",
+      "variant": "13 OZ CAN (12 PACK)",
+      "recipe": [
+        "beef",
+        "venison"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "13 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Venison, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosophate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Broth",
+        "Vegetable Broth",
+        "Beef Liver",
+        "Carrots",
+        "Venison",
+        "Dried Egg Whites",
+        "Dried Peas",
+        "Sweet Potatoes",
+        "Dried Egg Product",
+        "Guar Gum",
+        "Sunflower Oil",
+        "Salt",
+        "Green Beans",
+        "Sodium Phosphate",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Pumpkin",
+        "Cranberries",
+        "Choline Chloride",
+        "Zinc Proteinate",
+        "Iron Proteinate",
+        "Tricalcium Phosophate",
+        "Salmon Oil (Preserved With Mixed Tocopherols)",
+        "Vitamin E Supplement",
+        "Copper Proteinate",
+        "Manganese Proteinate",
+        "Sodium Selenite",
+        "Thiamine Mononitrate",
+        "Cobalt Proteinate",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement",
+        "Biotin",
+        "Vitamin B12 Supplement",
+        "Potassium Iodide",
+        "Pyridoxine Hydrochloride",
+        "Vitamin D3 Supplement",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 829,
+        "kcal_per_unit": 306,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336011969 exactly to 13 OZ CAN (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336011969 = 13 OZ CAN (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336011962 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336011962",
+          "product_name": "Moo Moo Venison Stew",
+          "size": "13 oz can",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew",
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-moo-moo-venison-stew.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010184",
+      "canonical_gtin14": "10818336010184",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Original Recipe",
+      "product_name": "Gobble It Up Stew",
+      "variant": "13 OZ CAN (12 PACK)",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "13 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "Turkey, Turkey Broth, Vegetable Broth, Turkey Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Turkey",
+        "Turkey Broth",
+        "Vegetable Broth",
+        "Turkey Liver",
+        "Carrots",
+        "Dried Egg Whites",
+        "Dried Peas",
+        "Sweet Potatoes",
+        "Dried Egg Product",
+        "Guar Gum",
+        "Salt",
+        "Green Beans",
+        "Sodium Phosphate",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Pumpkin",
+        "Choline Chloride",
+        "Cranberries",
+        "Salmon Oil (Preserved With Mixed Tocopherols)",
+        "Zinc Proteinate",
+        "Iron Proteinate",
+        "Calcium Carbonate",
+        "Vitamin E Supplement",
+        "Copper Proteinate",
+        "Manganese Proteinate",
+        "Sodium Selenite",
+        "Thiamine Mononitrate",
+        "Cobalt Proteinate",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement",
+        "Biotin",
+        "Vitamin B12 Supplement",
+        "Potassium Iodide",
+        "Pyridoxine Hydrochloride",
+        "Vitamin D3 Supplement",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 837,
+        "kcal_per_unit": 309,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010184 exactly to 13 OZ CAN (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336010184 = 13 OZ CAN (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010187 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010187",
+          "product_name": "Gobble It Up Stew",
+          "size": "13 oz can",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew",
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-gobble-it-up-stew.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010191",
+      "canonical_gtin14": "10818336010191",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Original Recipe",
+      "product_name": "Cluckin' Good Stew",
+      "variant": "13 OZ CAN (12 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "13 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "Chicken, Chicken Broth, Vegetable Broth, Chicken Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Green Beans, Salt, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Choline Chloride, Cranberries, Zinc Proteinate, Iron Proteinate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Broth",
+        "Vegetable Broth",
+        "Chicken Liver",
+        "Carrots",
+        "Dried Egg Whites",
+        "Dried Peas",
+        "Sweet Potatoes",
+        "Dried Egg Product",
+        "Guar Gum",
+        "Green Beans",
+        "Salt",
+        "Sodium Phosphate",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Pumpkin",
+        "Choline Chloride",
+        "Cranberries",
+        "Zinc Proteinate",
+        "Iron Proteinate",
+        "Salmon Oil (Preserved With Mixed Tocopherols)",
+        "Vitamin E Supplement",
+        "Copper Proteinate",
+        "Manganese Proteinate",
+        "Sodium Selenite",
+        "Thiamine Mononitrate",
+        "Cobalt Proteinate",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement",
+        "Biotin",
+        "Vitamin B12 Supplement",
+        "Potassium Iodide",
+        "Pyridoxine Hydrochloride",
+        "Vitamin D3 Supplement",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 852,
+        "kcal_per_unit": 314,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010191 exactly to 13 OZ CAN (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336010191 = 13 OZ CAN (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010194 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010194",
+          "product_name": "Cluckin' Good Stew",
+          "size": "13 oz can",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew",
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-cluckin-good-stew.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336010177",
+      "canonical_gtin14": "10818336010177",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Original Recipe",
+      "product_name": "Beef Booyah Stew",
+      "variant": "13 OZ CAN (12 PACK)",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "13 OZ CAN (12 PACK)",
+      "ingredients_verbatim": "Beef, Beef Broth, Vegetable Broth, Beef Liver, Carrots, Dried Egg Whites, Dried Peas, Sweet Potatoes, Dried Egg Product, Guar Gum, Sunflower Oil, Salt, Green Beans, Sodium Phosphate, Natural Flavor, Potassium Chloride, Pumpkin, Cranberries, Choline Chloride, Zinc Proteinate, Iron Proteinate, Tricalcium Phosphate, Salmon Oil (Preserved With Mixed Tocopherols), Vitamin E Supplement, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Cobalt Proteinate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Beef Broth",
+        "Vegetable Broth",
+        "Beef Liver",
+        "Carrots",
+        "Dried Egg Whites",
+        "Dried Peas",
+        "Sweet Potatoes",
+        "Dried Egg Product",
+        "Guar Gum",
+        "Sunflower Oil",
+        "Salt",
+        "Green Beans",
+        "Sodium Phosphate",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Pumpkin",
+        "Cranberries",
+        "Choline Chloride",
+        "Zinc Proteinate",
+        "Iron Proteinate",
+        "Tricalcium Phosphate",
+        "Salmon Oil (Preserved With Mixed Tocopherols)",
+        "Vitamin E Supplement",
+        "Copper Proteinate",
+        "Manganese Proteinate",
+        "Sodium Selenite",
+        "Thiamine Mononitrate",
+        "Cobalt Proteinate",
+        "Niacin Supplement",
+        "d-Calcium Pantothenate",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement",
+        "Biotin",
+        "Vitamin B12 Supplement",
+        "Potassium Iodide",
+        "Pyridoxine Hydrochloride",
+        "Vitamin D3 Supplement",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7.5,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 824,
+        "kcal_per_unit": 304,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you exact product page supplies the current formula, complete guaranteed analysis, calories, and adequacy/feeding statement. Exact retailer/distributor evidence supplies or corroborates the individual UPC-to-size identity. For UPCs 818336014222 and 818336014581, a current exact Chewy SKU formula resolves a documented defect in the manufacturer HTML ingredient module.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
+        "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew.js",
+        "https://img1.wsimg.com/blobby/go/aa7b10cd-c46b-4154-9e6a-5baa0913363d/UNFI%20jan_jun%202025.pdf",
+        "https://briarpatch.coop/wp-content/uploads/2023/04/UNFI-Catalog-Sep-MarC.pdf"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336010177 exactly to 13 OZ CAN (12 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently validated.",
+        "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
+        "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336010177 = 13 OZ CAN (12 PACK).",
+        "Pack contains 12 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336010170 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336010170",
+          "product_name": "Beef Booyah Stew",
+          "size": "13 oz can",
+          "quantity": 12,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew",
+            "https://iandloveandyou.com/products/wet-canned-stew-dog-food-booyah-stew.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012041",
+      "canonical_gtin14": "10818336012041",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Tuna Fintastic Stew",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "TUNA, FISH BROTH, VEGETABLE BROTH, CHICKEN LIVER, CHICKEN, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, SUNFLOWER OIL, GUAR GUM, DRIED EGG PRODUCT, CALCIUM CARBONATE, SODIUM PHOSPHATE, SALT, TRICALCIUM PHOSPHATE, POTASSIUM CHLORIDE, TAURINE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, THIAMINE MONONITRATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "TUNA",
+        "FISH BROTH",
+        "VEGETABLE BROTH",
+        "CHICKEN LIVER",
+        "CHICKEN",
+        "DRIED EGG WHITES",
+        "DRIED PEAS",
+        "NATURAL FLAVOR",
+        "SUNFLOWER OIL",
+        "GUAR GUM",
+        "DRIED EGG PRODUCT",
+        "CALCIUM CARBONATE",
+        "SODIUM PHOSPHATE",
+        "SALT",
+        "TRICALCIUM PHOSPHATE",
+        "POTASSIUM CHLORIDE",
+        "TAURINE",
+        "CHOLINE CHLORIDE",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "THIAMINE MONONITRATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "VITAMIN E SUPPLEMENT",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9.0,
+        "crude_fat_min_percent": 2.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 766,
+        "kcal_per_unit": 64,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew.js"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012041 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336012041 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336012044 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012044",
+          "product_name": "Original Recipe - Tuna Fintastic Stew",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-tuna-fintastic-stew.js"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog_number": null,
+      "upc": "10818336012027",
+      "canonical_gtin14": "10818336012027",
+      "barcode_scope": "multipack",
+      "brand": "I and love and you",
+      "manufacturer": null,
+      "species": "cat",
+      "product_line": "Original Recipe",
+      "product_name": "Original Recipe - Chicky Da Lish Stew",
+      "variant": "3 OZ CAN (24 PACK)",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "stew",
+      "presentation": "in_gravy",
+      "package_type": "box",
+      "size": "3 OZ CAN (24 PACK)",
+      "ingredients_verbatim": "CHICKEN, CHICKEN BROTH, VEGETABLE BROTH, CHICKEN LIVER, DRIED EGG WHITES, DRIED PEAS, NATURAL FLAVOR, GUAR GUM, DRIED EGG PRODUCT, SODIUM PHOSPHATE, SALT, POTASSIUM CHLORIDE, CALCIUM CARBONATE, TAURINE, TRICALCIUM PHOSPHATE, CHOLINE CHLORIDE, MAGNESIUM SULFATE, IRON PROTEINATE, ZINC PROTEINATE, SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS), VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, COPPER PROTEINATE, MANGANESE PROTEINATE, SODIUM SELENITE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN SUPPLEMENT, VITAMIN A SUPPLEMENT, BIOTIN, POTASSIUM IODIDE, VITAMIN D3 SUPPLEMENT, VITAMIN B12 SUPPLEMENT, FOLIC ACID.",
+      "ingredients_ordered_normalized": [
+        "CHICKEN",
+        "CHICKEN BROTH",
+        "VEGETABLE BROTH",
+        "CHICKEN LIVER",
+        "DRIED EGG WHITES",
+        "DRIED PEAS",
+        "NATURAL FLAVOR",
+        "GUAR GUM",
+        "DRIED EGG PRODUCT",
+        "SODIUM PHOSPHATE",
+        "SALT",
+        "POTASSIUM CHLORIDE",
+        "CALCIUM CARBONATE",
+        "TAURINE",
+        "TRICALCIUM PHOSPHATE",
+        "CHOLINE CHLORIDE",
+        "MAGNESIUM SULFATE",
+        "IRON PROTEINATE",
+        "ZINC PROTEINATE",
+        "SALMON OIL (PRESERVED WITH MIXED TOCOPHEROLS)",
+        "VITAMIN E SUPPLEMENT",
+        "THIAMINE MONONITRATE",
+        "COPPER PROTEINATE",
+        "MANGANESE PROTEINATE",
+        "SODIUM SELENITE",
+        "NIACIN SUPPLEMENT",
+        "d-CALCIUM PANTOTHENATE",
+        "PYRIDOXINE HYDROCHLORIDE",
+        "RIBOFLAVIN SUPPLEMENT",
+        "VITAMIN A SUPPLEMENT",
+        "BIOTIN",
+        "POTASSIUM IODIDE",
+        "VITAMIN D3 SUPPLEMENT",
+        "VITAMIN B12 SUPPLEMENT",
+        "FOLIC ACID"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.0,
+        "crude_fat_min_percent": 3.0,
+        "crude_fiber_max_percent": 0.75,
+        "moisture_max_percent": 82.0,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 824,
+        "kcal_per_unit": 70,
+        "unit_name": "can"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current first-party I and love and you product page for formula/GA/calories; exact UPC/size proven by manufacturer asset/HTML and/or exact-unit retailer page.",
+      "source_urls": [
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicky-da-lish-stew",
+        "https://iandloveandyou.com/products/wet-canned-cat-food-chicky-da-lish-stew.js",
+        "https://thrivemarket.com/p/i-and-love-and-you-canned-cat-food-chicky-da-lish-stew"
+      ],
+      "source_accessed_at": "2026-08-29",
+      "barcode_notes": "Current manufacturer Shopify .js maps outer barcode 10818336012027 exactly to 3 OZ CAN (24 PACK). Outer multipack barcode is not asserted as an inner-unit barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit validated and canonical GTIN-14 left-padded to 14 digits.",
+        "Current full ingredient order, complete core guaranteed analysis, calorie content, and adequacy/supplemental status captured from current evidence.",
+        "Repository exclusion scan passed before append.",
+        "2026-08-29: current manufacturer Shopify variant proves 10818336012027 = 3 OZ CAN (24 PACK).",
+        "Pack contains 24 matching child units; child physical barcode is not asserted. Matching standalone SKU 818336012020 is retained only as standalone_upc."
+      ],
+      "research_status": "source_verified",
+      "multipack_contents": [
+        {
+          "upc": null,
+          "canonical_gtin14": null,
+          "standalone_upc": "818336012020",
+          "product_name": "Original Recipe - Chicky Da Lish Stew",
+          "size": "3 oz can",
+          "quantity": 24,
+          "evidence_status": "matched_standalone_sku",
+          "source_urls": [
+            "https://iandloveandyou.com/products/wet-canned-cat-food-chicky-da-lish-stew",
+            "https://iandloveandyou.com/products/wet-canned-cat-food-chicky-da-lish-stew.js"
+          ]
+        }
+      ]
     }
   ]
 }
