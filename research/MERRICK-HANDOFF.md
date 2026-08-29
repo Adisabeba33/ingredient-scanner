@@ -1,6 +1,6 @@
 # Merrick Deep Research Handoff
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Read this first
 
@@ -17,7 +17,7 @@ Do not merge the research PR unless the user explicitly asks.
 
 ## User priority
 
-Research products that are genuinely current and realistically purchasable now. Do not mine discontinued, historical, archive-only, old-packaging, or inactive regional SKUs just to increase the count.
+Research only products that are genuinely current and realistically purchasable now. Do not mine discontinued, historical, archive-only, old-packaging, or inactive regional SKUs just to increase the count.
 
 Market priority:
 1. United States
@@ -25,150 +25,161 @@ Market priority:
 3. Australia / New Zealand if relevant and current
 4. Europe / UK if relevant and current
 
-Prefer **individual retail units**. Cases, trays, and variety packs are separate package identities and must never be substituted for the contained unit UPC.
+Prefer **individual retail units**. Cases, trays, and variety packs are separate package identities and must never be substituted for contained unit UPCs.
 
 ## Current Merrick state
 
-The canonical ledger now contains **40 records**:
+The canonical ledger now contains **60 records**:
 
-- 40 `source_verified`
-- 40 `individual_unit`
-- 20 cat + 20 dog
-- 34 wet + 6 dry
+- 60 `source_verified`
+- 60 `individual_unit`
+- 20 cat + 40 dog
+- 54 wet + 6 dry
+- size distribution: 17 × 3 oz, 8 × 3.5 oz, 29 × 12.7 oz, 4 × 4 lb, 2 × 12 lb
 - all UPC-A check digits valid
-- all canonical GTIN-14 values valid
-- all 40 now use the controlled `Texture` and `Presentation` vocabularies from `lib/presentation.ts`
-- remote post-commit exclusion sweep found 0 collisions
+- all canonical GTIN-14 values valid and unique
+- all records use the controlled `Texture` and `Presentation` vocabularies from `lib/presentation.ts`
+- remote post-commit exclusion sweep for batch 3 found 0 collisions
 
 Data commits:
 
 - Batch 1: `ce20f60d182cf249fcf1c954c94daefb8290eae9` — `research: add first 20 active Merrick cat barcodes`
 - Batch 2: `0a6479b06b704a38862ffdb3f6efd93c1a943105` — `research: add second 20 active Merrick barcodes`
+- Batch 3: `b32a1327a442d76ee067af11406da2d4092cce07` — `research: add third 20 active Merrick barcodes`
+- Batch-3 normalization-only repair: `f7f593e...` — `research: repair Merrick premix normalization`; only the top-level normalized grouping for UPC `022808260219` changed, not its verbatim label or evidence.
 
-Remote validation after batch 2 reported:
+Remote validation after batch 3 reported:
 
-- `TOTAL 40`
-- `STATUS {'source_verified': 40}`
-- `SCOPE {'individual_unit': 40}`
-- `SPECIES {'cat': 20, 'dog': 20}`
-- `FORM {'wet': 34, 'dry': 6}`
+- `TOTAL 60`
+- `STATUS {'source_verified': 60}`
+- `SCOPE {'individual_unit': 60}`
+- `SPECIES {'cat': 20, 'dog': 40}`
+- `FORM {'wet': 54, 'dry': 6}`
+- `SIZE {'3 oz': 17, '4 lb': 4, '12 lb': 2, '12.7 oz': 29, '3.5 oz': 8}`
 - `COLLISIONS []`
 
-## Why Merrick is comparatively clean to research
+## Merrick source behavior
 
-Merrick's current US PDPs expose a retail UPC in the PriceSpider `ps-sku` field. For products with a single listed size, the exact current PDP gives a strong manufacturer-level chain:
+Merrick's current US PDPs expose retail UPCs through PriceSpider `ps-sku` fields. For a single-size PDP, the accepted chain is:
 
-`current product URL -> first PDP ps-sku -> exact package size -> current ingredient deck -> GA -> calories`
+`current exact PDP -> first/main-product ps-sku -> exact current package size -> current ingredient/GA/calorie evidence`
 
-Do not assume that every `ps-sku` on a page belongs to the main product. Related-product widgets appear later in the HTML. For batch 2, only the **first PriceSpider SKU on the exact product PDP** was accepted, and every selected page listed one unambiguous `12.7 oz. Can` size.
+Do not accept later `ps-sku` values blindly; Merrick pages contain related-product widgets with unrelated UPCs later in the HTML.
 
-For multi-size PDPs, verify size-to-UPC separately. Never infer neighboring codes.
+For a multi-size PDP, the first `ps-sku` alone does **not** prove which package size it belongs to. Obtain a separate exact size-to-UPC mapping before adding that size.
 
-## Batch 1 — 20 current cat individual units
+Formula and barcode evidence may come from different current sources when the mapping is unambiguous. Keep formula generations separate; do not copy stale retailer formula text over a current Merrick deck.
 
-### Wet, 3 oz cans
+## Batch 1 — current cat individual units
 
-- `022808000839` — Purrfect Bistro Simmered Beef, Tomato & Wild Rice Recipe Grilled in Sauce
-- `022808000754` — Purrfect Bistro Savory Salmon & Sweet Potato Recipe in Rich Gravy
-- `022808000891` — Purrfect Bistro Braised Pork, Carrot & Barley Recipe Grilled in Sauce
-- `022808000778` — Purrfect Bistro Stewed Chicken, Beef & Carrot Recipe in Rich Gravy
-- `022808000853` — Purrfect Bistro Wild-Caught Cod, Spinach & Wild Rice Recipe Grilled in Sauce
-- `022808000792` — Purrfect Bistro Wild-Caught Tuna, Cod & Carrot Recipe in Rich Gravy
-- `022808382539` — Purrfect Bistro Grain Free Chicken Recipe Pâté
-- `022808382614` — Purrfect Bistro Grain Free Duck Recipe Pâté
-- `022808382577` — Purrfect Bistro Grain Free Tuna Recipe Pâté
-- `022808382638` — Purrfect Bistro Grain Free Beef Recipe Pâté
-- `022808382591` — Purrfect Bistro Grain Free Turkey Recipe Pâté
-- `022808383277` — Purrfect Bistro Grain Free Land & Sea Recipe Pâté
-- `022808382553` — Purrfect Bistro Grain Free Salmon Recipe Pâté
-- `022808385103` — Purrfect Bistro Grain Free Rabbit Recipe Pâté
+### Wet 3 oz cans
 
-### Dry individual bags
+`022808000839`, `022808000754`, `022808000891`, `022808000778`, `022808000853`, `022808000792`, `022808382539`, `022808382614`, `022808382577`, `022808382638`, `022808382591`, `022808383277`, `022808382553`, `022808385103`
+
+### Dry bags
 
 - `022808001317` — Chicken & Sweet Potato, 4 lb
 - `022808001355` — Salmon & Sweet Potato, 4 lb
-- `022808001393` — Wild-Caught Ocean Whitefish & Spinach, 4 lb
-- `022808001454` — Pasture-Raised Lamb & Carrots, 4 lb
+- `022808001393` — Whitefish & Spinach, 4 lb
+- `022808001454` — Lamb & Carrots, 4 lb
 - `022808383109` — Chicken & Sweet Potato, 12 lb
 - `022808383123` — Salmon & Sweet Potato, 12 lb
 
-### Batch-1 controlled-vocabulary repair
+Cat formula-generation cautions already documented in the ledger:
 
-During batch 2 the ledger was checked against `lib/presentation.ts`. Several batch-1 records had incorrectly used free-text/category wording in `texture` or `presentation` (for example `grain free` or a combined phrase such as `grilled in sauce`). These fields were normalized to the repository's controlled vocabulary.
+- Rabbit pâté `022808385103`: current Merrick generation differs from stale retailer copy; keep the current Merrick formula.
+- Chicken and Salmon 12 lb dry: retailer evidence proves size↔UPC, while the current Merrick PDP/deck supplies the current formula.
 
-Every affected batch-1 record now carries an explicit verification note. **No barcode identity, ingredients, GA, calories, size, or formula evidence changed.**
+## Batch 2 — current dog wet 12.7 oz individual cans
 
-## Batch 2 — 20 current dog wet individual cans, 12.7 oz
+- `022808001997` — Cowboy Cookout In Gravy
+- `022808283010` — Big Texas Steak Tips Dinner in Gravy
+- `022808284000` — Texas Style with Braised Beef
+- `022808280040` — Lamb Shepherd's Pie
+- `022808390046` — Limited Ingredient Diet Real Lamb
+- `022808370024` — Backcountry Real Beef Dinner
+- `022808470144` — Backcountry Hero's Banquet Stew
+- `022808390916` — LID Healthy Grains Chicken & Brown Rice
+- `022808280064` — Turkey Meatloaf
+- `022808280002` — Chicken Casserole
+- `022808280026` — Beef Tips & Rice Stew
+- `022808284093` — Kentucky Style Chopped Lamb
+- `022808390930` — LID Healthy Grains Turkey & Brown Rice
+- `022808284031` — Memphis Style Glazed Chicken
+- `022808284017` — Kansas City Style Chopped Pork
+- `022808003342` — Real Beef, Lamb + Bison Dinner
+- `022808282976` — Carver's Delight
+- `022808282938` — Colossal Chicken
+- `022808282877` — Pappy's Pot Roast
+- `022808002864` — Wilderness Blend in Gravy
 
-- `022808001997` — Grain Free Cowboy Cookout In Gravy
-- `022808283010` — Chunky Grain Free Big Texas Steak Tips Dinner in Gravy
-- `022808284000` — Slow-Cooked BBQ Texas Style with Braised Beef
-- `022808280040` — Kitchen Comforts Lamb Shepherd's Pie
-- `022808390046` — Grain Free Limited Ingredient Diet Real Lamb Recipe
-- `022808370024` — Backcountry Grain Free Real Beef Dinner
-- `022808470144` — Backcountry Grain Free Hero's Banquet Stew
-- `022808390916` — Limited Ingredient Diet With Healthy Grains Real Chicken & Brown Rice Recipe
-- `022808280064` — Kitchen Comforts Turkey Meatloaf
-- `022808280002` — Kitchen Comforts Chicken Casserole
-- `022808280026` — Kitchen Comforts Beef Tips & Rice Stew
-- `022808284093` — Slow-Cooked BBQ Kentucky Style with Chopped Lamb
-- `022808390930` — Limited Ingredient Diet With Healthy Grains Real Turkey & Brown Rice Recipe
-- `022808284031` — Slow-Cooked BBQ Memphis Style with Glazed Chicken
-- `022808284017` — Slow-Cooked BBQ Kansas City Style with Chopped Pork
-- `022808003342` — Grain Free Real Beef, Lamb + Bison Dinner
-- `022808282976` — Chunky Grain Free Carver's Delight Dinner in Gravy
-- `022808282938` — Chunky Grain Free Colossal Chicken Dinner in Gravy
-- `022808282877` — Chunky Grain Free Pappy's Pot Roast Dinner in Gravy
-- `022808002864` — Wilderness Blend in Gravy Grain Free Wet Dog Food
+Do not infer `adult` just because a product appears adult-market. Preserve `life_stage: null` where the captured current evidence does not explicitly print a stage.
 
-All 20 batch-2 products were read from their exact current Merrick PDPs. Each page's first PriceSpider `ps-sku` matched the stored UPC, each page listed exactly `12.7 oz. Can`, and the current official page supplied the complete ingredient order, printed GA, and calorie statement.
+## Batch 3 — current dog wet individual units
 
-### Life-stage rule discovered in batch 2
+### 12.7 oz cans — 9
 
-Do **not** infer `adult` merely because a product is ordinary adult-market food. The current PDP text explicitly prints adult context for only some of these products.
+- `022808006688` — Grain Free Thanksgiving Day Dinner In Gravy
+- `022808008125` — Grain Free Puppy Plate Beef Recipe In Gravy
+- `022808002888` — Grain Free Puppy Plate Chicken Recipe In Gravy
+- `022808002123` — Grain Free Real Duck Dinner
+- `022808004868` — Grain Free Real Texas Beef Dinner
+- `022808002666` — Grain Free Turducken In Gravy
+- `022808004844` — Grain Free Real Chicken Dinner
+- `022808001751` — Grain Free Grammy's Pot Pie In Gravy
+- `022808370017` — Backcountry Real Chicken Dinner
 
-Batch 2 therefore stores:
+### Lil' Plates 3.5 oz tubs — 8
 
-- 10 records with `life_stage: "adult"` because the current page explicitly says adult
-- 10 records with `life_stage: null` because the captured current product/formula text does not explicitly state a stage
+- `022808260219` — Itsy Bitsy Beef Stew
+- `022808260264` — Teeny Texas Steak Tips Dinner in Gravy
+- `022808260295` — Small Surfin' + Turfin' Supper in Gravy
+- `022808260271` — Pint Sized Puppy Plate Recipe in Gravy
+- `022808260240` — Dainty Duck Medley in Gravy
+- `022808260202` — Tiny Thanksgiving Day Dinner
+- `022808260233` — Little Lamb Chop Stew
+- `022808260226` — Petite Pot Pie
 
-This is intentional and follows the repository rule that absence is not a claim.
+### Lil' Plates Petite Pâté 3 oz individual cans — 3
 
-### Texture / presentation rule
+- `022808010388` — Beef Dinner
+- `022808010401` — Chicken Dinner
+- `022808010425` — Lamb Dinner
 
-Use the controlled vocabularies from `lib/presentation.ts`:
+For Beef and Lamb, the current Merrick PDP lists a single 3 oz can size and exposes the UPC as the primary PriceSpider `ps-sku`. For Chicken, the current Merrick PDP also mentions a `3-3 oz Cans` offer, so the individual-unit mapping was independently corroborated by current Canadian distributor Can-Pet: UPC `0 22808 01040 1` maps to the 85 g Chicken Dinner unit packed 24 per case. Do not reinterpret `022808010401` as the 3-pack code.
 
-- texture describes the physical cut/form (`chunks`, `stew`, `loaf`, `pate`, etc.)
-- presentation describes what it is suspended in (`in_gravy`, `in_sauce`, `plain`, etc.)
-- when the current page does not explicitly support a texture, use `unknown`; do not invent one
+Current first-party Petite Pâté formula decks stored in the ledger:
 
-Batch 2 intentionally contains 12 `unknown` textures where Merrick does not clearly name a controlled texture. That is preferable to guessing.
+- Beef: `B287023` — 1201 kcal/kg, 102 kcal/can
+- Chicken: `B287123` — 1184 kcal/kg, 101 kcal/can
+- Lamb: `B287223` — 1320 kcal/kg, 112 kcal/can
 
-## Existing formula-generation cautions
+All three print GA 8% protein / 5% fat / 2% fiber / 78% moisture and adult-maintenance adequacy.
 
-### Cat Rabbit pâté
+### Batch-3 source quirks
 
-UPC `022808385103` has a current Merrick formula deck (`B294423`) that differs from stale retailer copy indexed under the same UPC. The ledger stores the current official Merrick generation. Do not merge the legacy 900 kcal/kg / 77 kcal-per-can panel into it.
+- `022808260295` is a current 3.5 oz **tub**, but Merrick's current PDP prints calories as `89 kcal/pouch`. The ledger preserves the printed calorie unit and records the package/calorie-wording disagreement in `conflicts`; do not silently rewrite the label statement.
+- `022808260219` prints `VITAMINS, (...)`. The verbatim label is preserved exactly; a post-batch audit repaired only `ingredients_ordered_normalized` so the vitamin premix remains one top-level ingredient, as required by `research/AGENTS.md`.
 
-### Cat Chicken and Salmon 12 lb dry
+## Deliberately not added yet
 
-Some retailer pages used for exact 12 lb UPC identity retain older formula text. The ledger deliberately uses:
+### Lil' Plates Petite Pâté Turkey
 
-- retailer evidence only for **12 lb size ↔ UPC identity**
-- current Merrick PDP/deck for **ingredients, GA, and calories**
+Current Merrick page exposes UPC `022808010456` but also lists both `3 oz. Can` and `3-3 oz. Cans`. The exact unit-vs-multipack mapping has not been independently resolved. **Do not add or infer this code's barcode scope until the exact package identity is proven.**
 
-Keep those generations separate.
+### Cat Whitefish and Lamb 12 lb bags
 
-## Still unresolved / next research order
+The 12 lb sizes are current, but their exact size-to-UPC identities are still unresolved. Do not infer them from neighboring Merrick codes.
 
-1. Re-fetch this 40-record ledger and rebuild all global exclusions.
-2. Keep trying to prove exact current 12 lb UPCs for cat Whitefish & Spinach and Lamb & Carrots. Both 12 lb sizes are current, but do not add them until the exact size-to-UPC mapping is proven.
-3. Continue the current Merrick dog wet catalog. The exact-PDP sweep found substantially more current, exclusion-clean candidates than were needed for batch 2, so another high-quality 20 should be possible without touching history.
-4. Good next dog-wet areas include the remaining Grain Free cans, Backcountry cans, current Lil' Plates 3.5 oz tubs, and current puppy cans/tubs. For every product, keep package-size identity exact.
-5. Avoid Lil' Plates Petite Pâté pages that expose both `3 oz. Can` and `3-3 oz. Cans` until the individual-can UPC and the multi-can package UPC are separately mapped.
-6. After current wet coverage, move through current dog dry size variants. Multi-size pages require separate size-to-UPC proof.
-7. Supplemental cat products (Finishing Sauces, Petite Parfaits, Bone Broths) can be researched later as active individual retail products if useful to scanner coverage, but they should not displace complete-and-balanced food while plentiful food SKU remain.
-8. Never fill a batch with discontinued/history/case noise. Fewer than 20 is acceptable if the active/provable pool eventually runs out.
+## Best next research order
+
+1. Re-fetch the 60-record ledger and rebuild all live exclusions.
+2. Recheck the remaining current dog-wet catalog against these 60 records. Batch 3 consumed most of the clean single-size wet candidates; do not force a fourth wet batch from variety packs or ambiguous package identities.
+3. Resolve Petite Pâté Turkey `022808010456` only if an independent source proves whether it is the single 3 oz can UPC or an outer 3-pack UPC.
+4. Move into **current Merrick dog dry food**, mapping every active bag size to its exact UPC. Multi-size Merrick PDPs require separate size↔UPC proof.
+5. Keep trying to resolve the current cat Whitefish & Spinach and Lamb & Carrots 12 lb bag UPCs.
+6. After complete-and-balanced active food is substantially covered, current supplemental cat products (Finishing Sauces, Petite Parfaits, Bone Broths) may be researched if useful to scanner coverage.
+7. Never pad a batch with discontinued/history/case/multipack records. If fewer than 20 clean active individual units remain, add fewer than 20.
 
 ## Validation workflow for every next batch
 
@@ -181,22 +192,23 @@ Before write:
 - scan every `research/deep-research-*.json`
 - include codes collected earlier in the same batch
 - validate UPC/EAN check digit and canonical GTIN-14
-- verify values against current controlled vocabularies
+- validate `texture` and `presentation` against `lib/presentation.ts`
+- ensure vitamin/mineral premix blocks stay one top-level element in `ingredients_ordered_normalized`
 
-For `source_verified`, require the full gate from `research/AGENTS.md`: exact unit barcode, exact size mapping, matching current formula generation, complete ingredient order, printed guaranteed analysis, calories, life-stage/adequacy where printed, sources, and no repository collision.
+For `source_verified`, require the complete gate from `research/AGENTS.md`: exact individual barcode, exact package size, current matching formula generation, complete ingredient order, full printed GA, calories, life-stage/adequacy where printed, current sources, and no repository collision.
 
 After write:
 
 - commit
 - re-fetch/checkout the remote branch
 - parse the committed JSON
-- confirm total and unique UPCs
-- re-run checksums and GTIN-14
-- confirm scope/status/species/form counts
-- validate controlled texture/presentation values
-- re-run exclusions excluding the target ledger itself
+- confirm total and unique UPC/GTIN-14 values
+- re-run check digits
+- confirm status/scope/species/form/size counts
+- re-run global exclusions excluding the target ledger itself
+- perform a normalized-ingredient structural audit
 - only then report the batch complete
 
 ## Bottom line
 
-Merrick is now at **40 active, source-verified individual retail barcodes: 20 cat + 20 dog**. Continue from this exact baseline and stay on the active market.
+Merrick is now at **60 active, source-verified individual retail barcodes: 20 cat + 40 dog**. Continue from exactly this baseline and stay on the active market.
