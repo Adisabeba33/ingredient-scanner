@@ -13,8 +13,7 @@ jobs:
       - name: Inspect Merrick site
         run: |
           python - <<'PY'
-          import requests,re,json
-          from bs4 import BeautifulSoup
+          import urllib.request,re,json,html
           urls=[
             'https://www.merrickpetcare.com/cat-food',
             'https://www.merrickpetcare.com/cat-food/wet',
@@ -26,19 +25,18 @@ jobs:
           for u in urls:
             print('\nURL',u)
             try:
-              r=requests.get(u,headers=h,timeout=30); print('STATUS',r.status_code,'LEN',len(r.text))
-              t=r.text
+              req=urllib.request.Request(u,headers=h)
+              with urllib.request.urlopen(req,timeout=30) as r: t=r.read().decode('utf-8','replace'); print('STATUS',r.status,'LEN',len(t))
               for pat in ['gtin','upc','barcode','sku','productID','Available Sizes']:
                 hits=list(re.finditer(pat,t,re.I)); print(pat,len(hits))
-                for m in hits[:4]: print(t[max(0,m.start()-180):m.start()+300].replace('\n',' ')[:500])
-              soup=BeautifulSoup(t,'html.parser')
+                for m in hits[:6]: print(html.unescape(re.sub(r'\s+',' ',t[max(0,m.start()-220):m.start()+380]))[:650])
+              hrefs=re.findall(r'href=["\']([^"\']+)["\']',t,re.I)
               links=[]
-              for a in soup.find_all('a',href=True):
-                href=a['href']
+              for href in hrefs:
                 if '/shop/' in href:
                   if href.startswith('/'): href='https://www.merrickpetcare.com'+href
-                  links.append(href.split('?')[0])
+                  links.append(href.split('?')[0].split('#')[0])
               print('SHOP_LINKS',len(set(links)))
-              for x in sorted(set(links))[:100]: print(x)
+              for x in sorted(set(links))[:120]: print(x)
             except Exception as e: print('ERR',repr(e))
           PY
