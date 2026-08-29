@@ -3125,8 +3125,7 @@
         "CALCIUM CARBONATE",
         "POTASSIUM CHLORIDE",
         "MINERALS (ZINC AMINO ACID CHELATE, IRON AMINO ACID CHELATE, COPPER AMINO ACID CHELATE, MANGANESE AMINO ACID CHELATE, SODIUM SELENITE, COBALT AMINO ACID CHELATE, POTASSIUM IODIDE)",
-        "VITAMINS",
-        "(VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE,(VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID)",
+        "VITAMINS, (VITAMIN E SUPPLEMENT, THIAMINE MONONITRATE, NIACIN SUPPLEMENT, d-CALCIUM PANTOTHENATE, VITAMIN A SUPPLEMENT, RIBOFLAVIN SUPPLEMENT, BIOTIN, VITAMIN B12 SUPPLEMENT, PYRIDOXINE HYDROCHLORIDE,(VITAMIN B6), VITAMIN D3 SUPPLEMENT, FOLIC ACID)",
         "XANTHAN GUM"
       ],
       "guaranteed_analysis": {
@@ -3157,7 +3156,8 @@
         "Current official Merrick PDP identifies the current retail product and package size; complete current ingredients, guaranteed analysis and calories are stored from Merrick first-party formula evidence.",
         "Calorie cross-check: 904 kcal/kg × 0.0992 kg nominal 3.5 oz package = 89.7 kcal versus 90 kcal/bowl printed (difference 0.3 kcal, consistent with nominal-weight/label rounding where applicable).",
         "Controlled texture/presentation use repository vocabulary: texture=stew, presentation=in_gravy.",
-        "Active-market gate: the product is present in Merrick's current US wet-dog catalog and the manufacturer PDP exposes its Where-to-Buy PriceSpider identity."
+        "Active-market gate: the product is present in Merrick's current US wet-dog catalog and the manufacturer PDP exposes its Where-to-Buy PriceSpider identity.",
+        "Normalization repair on 2026-08-29: the printed VITAMINS, (...) premix is kept as one top-level normalized ingredient per research/AGENTS.md; verbatim ingredients, barcode identity, GA, calories, size, and sources are unchanged."
       ],
       "research_status": "source_verified"
     },
