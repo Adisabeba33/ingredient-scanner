@@ -60,4 +60,13 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // out — a maker having one prefix was an assumption, not a rule.
   { prefix: "840243", maker: "Blue Buffalo (General Mills)" },
   { prefix: "859610", maker: "Blue Buffalo (General Mills)" },
+  // Both arrived from the "looked for, not found" list rather than from a
+  // research campaign — real scans in a real shop, which is how a prefix ought
+  // to reach this file.
+  //
+  // Purina's SECOND prefix, and the pattern is now established rather than
+  // surprising: Purina ONE and Alpo carry 017800 while Fancy Feast and
+  // Friskies carry 050000, exactly as Blue Buffalo runs 840243 beside 859610.
+  { prefix: "017800", maker: "Nestlé Purina" },
+  { prefix: "071190", maker: "9Lives (Post)" },
 ];

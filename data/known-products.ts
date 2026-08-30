@@ -10352,4 +10352,36 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "9.5 lb", container: BAG, upc: "840243130603", scope: UNIT },
     ],
   },
+
+  // ── 9Lives · Indoor Essentials (cat) ──────────────────────────────────
+  //
+  // Batch 025, and the first product in this catalog that a SHOPPER asked for.
+  // It came off the "looked for, not found" list — somebody scanned this bag in
+  // a shop and the app had nothing — rather than out of a brand campaign.
+  {
+    brand: "9Lives",
+    line: "Indoor Essentials",
+    variant: "Chicken & Salmon Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "salmon"],
+    lifeStage: "adult",
+    packages: [{ size: "3.15 lb", container: BAG, upc: "071190478450", scope: UNIT }],
+  },
+
+  // ── Purina ONE · +Plus (cat) ──────────────────────────────────────────
+  {
+    brand: "Purina ONE",
+    line: "+Plus",
+    variant: "Hairball Formula",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "3.5 lb", container: BAG, upc: "017800012638", scope: UNIT }],
+  },
 ];

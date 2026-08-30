@@ -542,7 +542,16 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Post",
     species: "cat",
     aliases: ["nine lives"],
-    lines: ["Daily Essentials", "Meaty Pate", "Tender Morsels", "Protein Plus"],
+    // "Indoor Essentials" came off a real shopper's scan, and it is the CURRENT
+    // name of the bag Walmart and Amazon still index as "Indoor Complete" —
+    // same 3.15 lb bag, same UPC. Listed under the name the pack carries now.
+    lines: [
+      "Daily Essentials",
+      "Indoor Essentials",
+      "Meaty Pate",
+      "Tender Morsels",
+      "Protein Plus",
+    ],
   },
   {
     name: "Kibbles 'n Bits",

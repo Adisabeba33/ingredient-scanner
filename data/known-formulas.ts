@@ -107,6 +107,7 @@ const VERIFIED_021 = "2026-08-29";
 const VERIFIED_022 = "2026-08-29";
 const VERIFIED_023 = "2026-08-29";
 const VERIFIED_024 = "2026-08-30";
+const VERIFIED_025 = "2026-08-30";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -6219,5 +6220,15 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Deboned Salmon, Chicken Meal, Pea Protein, Peas, Tapioca Starch, Menhaden Fish Meal (source of Omega 3 Fatty Acids), Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Flaxseed (source of Omega 6 Fatty Acids), Natural Flavor, Pea Fiber, Calcium Chloride, DL-Methionine, Choline Chloride, Direct Dehydrated Alfalfa Pellets, Potatoes, Dried Chicory Root, Taurine, Potassium Sulfate, Alfalfa Nutrient Concentrate, Calcium Carbonate, Potassium Chloride, Calcium Sulfate, Salt, Sweet Potatoes, Carrots, preserved with Mixed Tocopherols, Vegetable Juice for color, Ferrous Sulfate, Niacin (Vitamin B3), Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Zinc Sulfate, Vitamin E Supplement, Blueberries, Cranberries, Barley Grass, Parsley, Turmeric, Dried Kelp, Yucca Schidigera Extract, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Copper Amino Acid Chelate, L-Carnitine, L-Ascorbyl-2-Polyphosphate (source of Vitamin C), L-Lysine, Biotin (Vitamin B7), Vitamin A Supplement, Manganese Sulfate, Manganese Amino Acid Chelate, Pyridoxine Hydrochloride (Vitamin B6), Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid (Vitamin B9), Dried Yeast, Dried Enterococcus faecium fermentation product, Dried Lactobacillus acidophilus fermentation product, Dried Aspergillus niger fermentation extract, Dried Trichoderma longibrachiatum fermentation extract, Dried Bacillus subtilis fermentation extract, Calcium Iodate, Sodium Selenite, Oil of Rosemary.`,
     analysis: withExtras(withCalories(ga(40, 18, 4, 9, null, 0.15), 3850, 438, "cup"), { "Omega 3 Fatty Acids": ["min", 0.75, "%"], "Omega 6 Fatty Acids": ["min", 3.0, "%"] }),
     verifiedAt: VERIFIED_024,
+  },
+  "071190478450": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Meat And Bone Meal, Whole Wheat, Corn Protein Meal, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavor (Preserved With Mixed Tocopherols), Soybean Hulls, Salmon Meal, Phosphoric Acid, Dehydrated Alfalfa Meal, Salt, Titanium Dioxide (Color), Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex [Source Of Vitamin K Activity], Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Potassium Chloride, Red 40, Lactic Acid, BHA (Used As A Preservative), Yellow 5, Yellow 6, Blue 1, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28.0, 9.0, 4.0, 12.0, null, 0.1), 3360, 305, "cup"), { "Calcium": ["min", 1.2, "%"], "Phosphorus": ["min", 1.0, "%"], "Iron": ["min", 180, "mg/kg"], "Selenium": ["min", 0.4, "mg/kg"], "Vitamin E": ["min", 100, "IU/kg"] }),
+    verifiedAt: VERIFIED_025,
+  },
+  "017800012638": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal (source of glucosamine), rice flour, soybean meal, beef fat preserved with mixed-tocopherols, whole grain corn, powdered cellulose, soybean hulls, liver flavor, chicken meal (source of glucosamine), phosphoric acid, calcium carbonate, salt, caramel color, dried carrots, dried peas, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Vitamin E supplement.`,
+    analysis: withExtras(withCalories(ga(34.0, 14.0, 4.5, 12.0, null, 0.15), 3977, 445, "cup"), { "Linoleic Acid": ["min", 1.4, "%"], "Calcium": ["min", 1.0, "%"], "Phosphorus": ["min", 0.9, "%"], "Zinc": ["min", 150, "mg/kg"], "Selenium": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega-6 Fatty Acids": ["min", 1.5, "%"] }),
+    verifiedAt: VERIFIED_025,
   },
 };
