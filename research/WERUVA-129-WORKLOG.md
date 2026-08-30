@@ -49,7 +49,9 @@ Family Food 5.5 oz remains a deliberate conflict hold: sources expose both `8137
 
 ## Machine current-catalog rebase
 
-A manufacturer-catalog crawl of all 129 unique indexed UPCs found **13 UPCs that are still printed in the current Weruva Shopify variant catalog with the same barcode**. These are the strongest first strict-promotion tranche, but still require the normal exclusion/formula/check-digit gate before append:
+A manufacturer-catalog crawl of all 129 unique indexed UPCs found **13 UPCs that are still printed in the current Weruva Shopify variant catalog with the same barcode**. These were passed through the strict validator and were appended to the canonical ledger on 2026-08-30 in commit `b626bf8ee127ae6a54bd3e9b163f767c20d301ba`.
+
+Promoted current-exact UPCs:
 
 - `810028246072` — Wx Chicken & Tilapia Formula in Gravy, 5.5 oz
 - `813778015660` — B.F.F. PLAY Beef & Tuna Tic Toc, 2.8 oz
@@ -65,22 +67,38 @@ A manufacturer-catalog crawl of all 129 unique indexed UPCs found **13 UPCs that
 - `810028246133` — Wx Chicken Formula in a Hydrating Purée, 5.5 oz
 - `813778015523` — B.F.F. PLAY Duck & Tuna Trickster, 5.5 oz
 
-The crawl artifact is `research/WERUVA-CURRENT-EVIDENCE.json`; the exact-current subset is `research/WERUVA-EXACT-CURRENT-UPCS.json`.
+Promotion receipt: `research/WERUVA-CURRENT13-PROMOTION.json`; exact-current evidence: `research/WERUVA-EXACT-CURRENT-UPCS.json`.
+
+### Current formula re-open — promoted 13
+
+The current manufacturer pages were re-opened after promotion to reconfirm the stored formula generation:
+
+- Beef & Tuna Tic Toc: full ingredient panel; GA 10/2/1/83; 65 kcal/2.8 oz; 820 kcal/kg; current 2.8/5.5 variants.
+- Chicken & Turkey Topsy Turvy: full ingredient panel; GA 7/3/1/84; 86 kcal/2.8 oz; 1083 kcal/kg; current 2.8/5.5 variants.
+- Chicken Checkmate: full ingredient panel; GA 7/3/1/84; 87 kcal/2.8 oz; 1089 kcal/kg; current 2.8/5.5 variants.
+- Chicken & Pumpkin Love Munchkin!: full ingredient panel; GA 8/2.5/1/86.5; 55 kcal/2.8 oz; 688 kcal/kg; current 2.8/5.5 variants.
+- Beef & Salmon Best Day Eva!: full ingredient panel; GA 8/2/1/87.5; 46 kcal/2.8 oz; 574 kcal/kg; current 2.8/5.5 variants.
+- Duck & Tuna Trickster: full ingredient panel; GA 10/2/1/83; 68 kcal/2.8 oz; 852 kcal/kg; current 2.8/5.5 variants.
+- Wx Chicken Formula in Gravy: ingredients and full GA 10/5/1/83.5, ash 1.5; 81 kcal/3 oz, 149 kcal/5.5 oz, 953 kcal/kg; Adult/Senior; Supplemental Feeding.
+- Wx Chicken Formula in a Hydrating Purée: ingredients and full GA 10/5/1/83.5, ash 1.5; 78 kcal/3 oz, 144 kcal/5.5 oz, 922 kcal/kg; Adult/Senior; Supplemental Feeding.
+- Wx Chicken & Tilapia Formula in Gravy: current manufacturer page reconfirms exact recipe, 5.5 oz variant, low-phosphorus supplemental-feeding positioning, and Adult/Senior context.
+
+This post-promotion re-open is a consistency check only; it does not create a second record for any UPC.
 
 ### Barcode-generation warning
 
 Do not bulk-promote the old index UPC strings. A current first-party Shopify variant probe has shown generation replacements in this queue. Example: current Tic Tac Whoa! variants expose `813778018418` (3 oz) and `813778018272` (5.5 oz), while the old index candidate for 5.5 oz is `813778018203`. Old identities must remain historical/conflict evidence unless the old individual unit itself is deliberately represented as a historical formula generation.
 
-Every candidate still requires exact current individual-unit UPC proof, check digit, global repository exclusion, complete formula fields, and conflict disposition before `source_verified`.
+Every remaining candidate still requires exact current individual-unit UPC proof, check digit, global repository exclusion, complete formula fields, and conflict disposition before `source_verified`.
 
 ## Status
 
 - candidates in campaign: 129 unique UPC strings
 - canonical strict records before this campaign: 120
-- exact-current UPC survivors identified: 13
+- current-exact UPCs promoted in this campaign: 13
+- canonical strict records now: **133 source_verified**
 - additional Slide N' Serve old-index UPCs independently reconfirmed in this pass: 11
 - explicit Family Food 5.5 generation conflict held: 1
-- newly promoted in this worklog so far: 0
 - current-formula first-party pages re-opened in pass 1: 10
-- current13 strict validator prepared; append still requires successful repository commit after validation
-- campaign remains in progress
+- promoted-current formula pages re-opened in consistency pass: 9 product identities covering all 13 promoted size UPCs
+- campaign remains in progress; remaining historical/replacement candidates are being dispositioned individually
