@@ -1,0 +1,26 @@
+name: Isolate current Weruva exact UPC survivors
+on: push
+permissions:
+  contents: write
+jobs:
+  isolate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: agent/deep-research-weruva }
+      - run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const j=JSON.parse(fs.readFileSync('research/WERUVA-CURRENT-EVIDENCE.json','utf8'));
+          const exact=j.records.filter(r=>r.current_match?.exact_current_barcode).map(r=>({upc:r.upc,index_product:r.product,index_size:r.size,current_title:r.current_match.title,current_url:r.current_match.url,exact_variant:r.current_match.exact_variant,all_variants:r.current_match.variants,match_score:r.current_match.score}));
+          fs.writeFileSync('research/WERUVA-EXACT-CURRENT-UPCS.json',JSON.stringify({generated_at:new Date().toISOString(),count:exact.length,records:exact},null,2));
+          console.log(exact);
+          NODE
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git pull --rebase origin agent/deep-research-weruva
+          git add research/WERUVA-EXACT-CURRENT-UPCS.json
+          git commit -m 'research: isolate current Weruva exact UPC survivors' || exit 0
+          git push
