@@ -1,0 +1,66 @@
+name: Collect Weruva current manufacturer evidence
+on: push
+permissions:
+  contents: write
+jobs:
+  collect:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-weruva
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Collect
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const clean=s=>s.toLowerCase().replace(/&/g,' and ').replace(/[’']/g,'').replace(/\b(omg|play|originals|classic|cat pate|cat paté)\b/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+          const words=s=>new Set(clean(s).split(/\s+/).filter(Boolean));
+          const score=(a,b)=>{const A=words(a),B=words(b);let x=0;for(const w of A)if(B.has(w))x++;return x/Math.max(1,Math.max(A.size,B.size));};
+          async function text(u){const r=await fetch(u,{headers:{'user-agent':'Mozilla/5.0'},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error(`${r.status} ${u}`);return r.text()}
+          async function json(u){const r=await fetch(u,{headers:{'user-agent':'Mozilla/5.0'},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error(`${r.status} ${u}`);return r.json()}
+          function stripTags(s){return s.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ').trim()}
+          function extract(html,label,nextLabels){const plain=stripTags(html);const low=plain.toLowerCase();const i=low.indexOf(label.toLowerCase());if(i<0)return null;let end=Math.min(plain.length,i+2500);for(const n of nextLabels){const j=low.indexOf(n.toLowerCase(),i+label.length);if(j>=0&&j<end)end=j;}return plain.slice(i,end).trim();}
+          (async()=>{
+            const md=fs.readFileSync('research/WERUVA-POST-30-INDEX.md','utf8');let active=false,rows=[];
+            for(const line of md.split(/\r?\n/)){
+              if(/^## .*awaiting strict promotion/i.test(line))active=true; else if(/^## /i.test(line)&&!/awaiting strict promotion/i.test(line))active=false;
+              if(!active)continue; const m=line.match(/^\| `([0-9]{12,14})` \| ([^|]+) \| ([^|]+) \|?/); if(m)rows.push({upc:m[1],product:m[2].trim(),size:m[3].trim()});
+            }
+            const unique=[...new Map(rows.map(r=>[r.upc,r])).values()];
+            let sm=await text('https://www.weruva.com/sitemap_products_1.xml?from=');
+            const urls=[...sm.matchAll(/<loc>(https:\/\/www\.weruva\.com\/products\/[^<]+)<\/loc>/g)].map(m=>m[1].replace(/\?.*$/,''));
+            const handles=[...new Set(urls.map(u=>u.split('/products/')[1]).filter(Boolean))];
+            const catalog=[];
+            for(let i=0;i<handles.length;i+=25){
+              const batch=handles.slice(i,i+25); const got=await Promise.all(batch.map(async h=>{try{const p=await json(`https://www.weruva.com/products/${h}.js`);return {h,title:p.title,variants:(p.variants||[]).map(v=>({title:v.title,sku:v.sku||null,barcode:v.barcode||null}))}}catch{return null}})); catalog.push(...got.filter(Boolean));
+            }
+            const out=[];
+            for(const row of unique){
+              const ranked=catalog.map(p=>({p,s:score(row.product,p.title)})).sort((a,b)=>b.s-a.s).slice(0,5);
+              let best=null;
+              for(const r of ranked){
+                if(r.s<0.28)continue;
+                const exact=r.p.variants.find(v=>v.barcode===row.upc)||null;
+                if(!best||exact||r.s>best.score){best={score:r.s,title:r.p.title,handle:r.p.h,url:`https://www.weruva.com/products/${r.p.h}`,variants:r.p.variants,exact_current_barcode:!!exact,exact_variant:exact};if(exact)break;}
+              }
+              if(best){
+                try{const html=await text(best.url);best.ingredients_section=extract(html,'Ingredients',['Guaranteed Analysis','Calorie Content','Feeding Guidelines','About This Recipe']);best.ga_section=extract(html,'Guaranteed Analysis',['Calorie Content','Feeding Guidelines','Ingredients']);best.calorie_section=extract(html,'Calorie Content',['Feeding Guidelines','Ingredients','Guaranteed Analysis']);}catch(e){best.fetch_error=String(e)}
+              }
+              out.push({...row,current_match:best});
+            }
+            const summary={index_rows:rows.length,unique_upcs:unique.length,manufacturer_title_match:out.filter(x=>x.current_match).length,exact_same_upc_current:out.filter(x=>x.current_match?.exact_current_barcode).length,changed_or_historical:out.filter(x=>x.current_match&&!x.current_match.exact_current_barcode).length,unresolved:out.filter(x=>!x.current_match).length};
+            fs.writeFileSync('research/WERUVA-CURRENT-EVIDENCE.json',JSON.stringify({generated_at:new Date().toISOString(),summary,records:out},null,2));console.log(summary);
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Commit evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git pull --rebase origin agent/deep-research-weruva
+          git add research/WERUVA-CURRENT-EVIDENCE.json
+          git commit -m 'research: collect current Weruva manufacturer evidence' || exit 0
+          git push
