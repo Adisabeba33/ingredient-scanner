@@ -241,7 +241,26 @@ If the same UPC points to different identities, sizes, or formula generations, d
 
 ## 12. Validation before every commit
 
-Run or perform all of these checks:
+**Run the checker first — it does most of this list for you:**
+
+```bash
+node scripts/check-ledger.mjs research/deep-research-<brand-slug>.json
+```
+
+It runs under bare node, needs no install and no network, and reads the live
+catalog, the live `texture`/`presentation` vocabularies, the wrong-barcode list
+and every other ledger. ERROR blocks seeding and exits 1; WARN is a question to
+answer in `conflicts` or `verification_notes`. A batch is not finished until it
+exits 0.
+
+It exists because this section was prose for six brand campaigns, and every one
+of them arrived correct against the prose and still needed a day of hand repair
+for the same format defects: a printed guarantee written as a sentence, a
+`presentation` holding a package type, a `variant` restating the size, a life
+stage the catalog cannot store, a calorie figure the panel beside it cannot
+produce, and two records claiming one printed identity.
+
+Then confirm the rest by hand:
 
 - JSON parses successfully.
 - UPCs, canonical GTIN-14 values, and non-null catalog numbers are unique globally.
