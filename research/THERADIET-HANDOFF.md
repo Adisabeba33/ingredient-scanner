@@ -38,11 +38,12 @@ Known current Rabbit-MAINT products/sizes beyond this batch remain incomplete wh
 
 ### Low Fat Kangaroo-MAINT — partial
 
-Researched in batch 1:
+Researched through batch 2:
 
 - Canine Chunky Stew, 12.5 oz / 354 g — current formula plus multiple current UPC-bearing listings with 2027 expiration; `source_verified`.
+- Canine dry with Chickpea Formula, 24 lb — current RC302-5 formula plus a current exact-size retail mapping to UPC-A `856361001541`, independently corroborated as GTIN `0856361001541`; `source_verified`. The current package panel has a self-conflicting cup-energy statement (105 g/cup × 3304 kcal/kg ≠ 313 kcal/cup), preserved in `conflicts`.
 
-Other current Low Fat Kangaroo-MAINT sizes/forms remain unresolved where only Rayne/internal MPN-style identifiers are publicly exposed.
+The current 6.6 lb bag and other Low Fat Kangaroo-MAINT sizes/forms remain unresolved where only Rayne/internal MPN-style identifiers or a product listing without a proven package barcode are publicly exposed.
 
 ### Other current TheraDiet ranges
 
@@ -75,15 +76,15 @@ The current Rabbit-MAINT canine dry package states AAFCO levels for **adult main
 ## 5. Anything the repository must learn
 
 - **Potential new barcode family:** `013189…` appears repeatedly on current/late-generation TheraDiet leads. Verify GS1 ownership during seeding before adding to `data/gs1-prefixes.ts`.
-- **Historical barcode family:** `856361…` appears on older Rayne product records. Do not assume it is obsolete globally or replace it with `013189`; treat generations independently.
+- **Second active/legacy barcode family:** `856361…` is not merely historical: batch 2 found current retail availability for the exact 24 lb Low Fat Kangaroo-MAINT bag under UPC-A `856361001541`, independently matching eBay GTIN `0856361001541`. Other older `856361…` records still need generation-by-generation proof; never replace them with `013189…` by assumption.
 - **No texture/presentation vocabulary extension is required yet.** Current records fit `kibble`, `stew`, and `plain`.
 - **TetraPak:** current stew units are 354 g cartons/boxes. Existing `package_type: "box"` is adequate for this research pass; no production vocabulary edit is authorized here.
 
 ## 6. Where this pass stopped and why
 
-Batch 1 stops at **4 records** rather than being padded to 20.
+After batch 2 the ledger holds **5 records**. The campaign is intentionally continuing in short evidence-driven batches rather than being padded to 20.
 
-Reason: after targeted searches, additional current TheraDiet products were easy to identify, but their public evidence repeatedly stopped at manufacturer/internal product codes rather than proven GS1 barcodes. `research/BRIEF-THERADIET.md` explicitly says twenty is a limit, not a quota, and forbids weak filler. The next pass should work the missing-barcode gap rather than restart broad product discovery.
+Reason: targeted searches continue to find active TheraDiet products, but most public evidence still stops at manufacturer/internal product codes rather than proven GS1 barcodes. Batch 2 added the one newly proven exact-size UPC (`856361001541`) and left weaker leads out. `research/BRIEF-THERADIET.md` explicitly says twenty is a limit, not a quota, and forbids weak filler. The next pass should keep working the missing-barcode gap rather than restart broad discovery.
 
 ## Batch reports
 
@@ -104,5 +105,21 @@ Reason: after targeted searches, additional current TheraDiet products were easy
   - observed older `856361…` Rayne code family
   - multi-stage `adult maintenance and growth` adequacy gap documented
 - checker: connector-runtime structural preflight clean; exact `node scripts/check-ledger.mjs` invocation unavailable because the shell has no repository checkout/network. Live repository code-search duplicate checks were run separately for all four UPCs.
+- commit: see draft PR batch comment for exact SHA
+- remote verified: see draft PR batch comment
+
+
+### TheraDiet batch 2
+
+- added: 1 (running total: 5)
+- source_verified added: 1
+- needs_physical_label added: 0
+- UPC added: `856361001541`
+- product: Low Fat Kangaroo-MAINT with Chickpea Formula Dry Dog Food, 24 lb
+- barcode proof: current Blylee's exact 24 lb retail page maps the item to SKU/UPC-A `856361001541`; eBay independently identifies the exact 24 lb product as GTIN/UPC `0856361001541`; both canonicalize to `00856361001541`
+- exclusion check: exact UPC-A and canonical GTIN-14 returned no repository code-search match before append
+- formula proof: current Rayne RC302-5 package panel
+- material conflict: package panel prints `1 cup/105 g = 313 kcal/cup` and `3304 kcal/kg`; 105 g at 3304 kcal/kg is 346.9 kcal, so the label is internally inconsistent. Both printed claims are preserved and the discrepancy is documented rather than repaired.
+- checker: connector-runtime structural preflight clean after append; exact local `node scripts/check-ledger.mjs` invocation remains unavailable in this connector runtime
 - commit: see draft PR batch comment for exact SHA
 - remote verified: see draft PR batch comment
