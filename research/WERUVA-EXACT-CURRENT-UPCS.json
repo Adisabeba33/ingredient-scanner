@@ -1,0 +1,341 @@
+{
+  "generated_at": "2026-08-30T00:23:16.541Z",
+  "count": 13,
+  "records": [
+    {
+      "upc": "810028246072",
+      "index_product": "Wx Chicken & Tilapia Formula in Gravy",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken & Tilapia Formula in Gravy",
+      "current_url": "https://www.weruva.com/products/chicken-and-tilapia-formula-in-gravy-cat-can",
+      "exact_variant": {
+        "title": "5.5oz - 8pk",
+        "sku": "6164",
+        "barcode": "810028246072"
+      },
+      "all_variants": [
+        {
+          "title": "3oz - 12pk",
+          "sku": "2159",
+          "barcode": "810028242296"
+        },
+        {
+          "title": "5.5oz - 8pk",
+          "sku": "6164",
+          "barcode": "810028246072"
+        }
+      ],
+      "match_score": 0.8571428571428571
+    },
+    {
+      "upc": "813778015660",
+      "index_product": "PLAY Tic Toc — Beef & Tuna",
+      "index_size": "2.8 oz",
+      "current_title": "Beef & Tuna Tic Toc",
+      "current_url": "https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can",
+      "exact_variant": {
+        "title": "2.8 oz - 12pk",
+        "sku": "9446",
+        "barcode": "813778015660"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9446",
+          "barcode": "813778015660"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9507",
+          "barcode": "813778015530"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778015530",
+      "index_product": "PLAY Tic Toc — Beef & Tuna",
+      "index_size": "5.5 oz",
+      "current_title": "Beef & Tuna Tic Toc",
+      "current_url": "https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9507",
+        "barcode": "813778015530"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9446",
+          "barcode": "813778015660"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9507",
+          "barcode": "813778015530"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778014656",
+      "index_product": "PLAY Topsy Turvy — Chicken & Turkey",
+      "index_size": "2.8 oz",
+      "current_title": "Chicken & Turkey Topsy Turvy",
+      "current_url": "https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can",
+      "exact_variant": {
+        "title": "2.8 oz - 12pk",
+        "sku": "9569",
+        "barcode": "813778014656"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9569",
+          "barcode": "813778014656"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9620",
+          "barcode": "813778015073"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778015073",
+      "index_product": "PLAY Topsy Turvy — Chicken & Turkey",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken & Turkey Topsy Turvy",
+      "current_url": "https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9620",
+        "barcode": "813778015073"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9569",
+          "barcode": "813778014656"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9620",
+          "barcode": "813778015073"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778014670",
+      "index_product": "PLAY Checkmate — Chicken",
+      "index_size": "2.8 oz",
+      "current_title": "Chicken Checkmate",
+      "current_url": "https://www.weruva.com/products/chicken-checkmate-cat-can",
+      "exact_variant": {
+        "title": "2.8 oz - 12pk",
+        "sku": "9545",
+        "barcode": "813778014670"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9545",
+          "barcode": "813778014670"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9606",
+          "barcode": "813778015097"
+        },
+        {
+          "title": "2.8 oz - 4pk",
+          "sku": "7871",
+          "barcode": "810028247864"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778015097",
+      "index_product": "PLAY Checkmate — Chicken",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken Checkmate",
+      "current_url": "https://www.weruva.com/products/chicken-checkmate-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9606",
+        "barcode": "813778015097"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9545",
+          "barcode": "813778014670"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9606",
+          "barcode": "813778015097"
+        },
+        {
+          "title": "2.8 oz - 4pk",
+          "sku": "7871",
+          "barcode": "810028247864"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778014120",
+      "index_product": "OMG Love Munchkin — Chicken & Pumpkin",
+      "index_size": "2.8 oz",
+      "current_title": "Chicken & Pumpkin Love Munchkin!",
+      "current_url": "https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can",
+      "exact_variant": {
+        "title": "2.8 oz - 12pk",
+        "sku": "9002",
+        "barcode": "813778014120"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9002",
+          "barcode": "813778014120"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9064",
+          "barcode": "813778019125"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778019125",
+      "index_product": "OMG Love Munchkin — Chicken & Pumpkin",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken & Pumpkin Love Munchkin!",
+      "current_url": "https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9064",
+        "barcode": "813778019125"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9002",
+          "barcode": "813778014120"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9064",
+          "barcode": "813778019125"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "813778019170",
+      "index_product": "OMG Best Day Eva! — Beef & Salmon",
+      "index_size": "5.5 oz current",
+      "current_title": "Beef & Salmon Best Day Eva!",
+      "current_url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9118",
+        "barcode": "813778019170"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9057",
+          "barcode": "813778014076"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9118",
+          "barcode": "813778019170"
+        }
+      ],
+      "match_score": 1
+    },
+    {
+      "upc": "810028246065",
+      "index_product": "Wx Chicken Formula in Gravy",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken Formula in Gravy",
+      "current_url": "https://www.weruva.com/products/chicken-formula-in-gravy-cat-can",
+      "exact_variant": {
+        "title": "5.5oz - 8pk",
+        "sku": "6157",
+        "barcode": "810028246065"
+      },
+      "all_variants": [
+        {
+          "title": "3oz - 12pk",
+          "sku": "2517",
+          "barcode": "810028242593"
+        },
+        {
+          "title": "5.5oz - 8pk",
+          "sku": "6157",
+          "barcode": "810028246065"
+        }
+      ],
+      "match_score": 0.8
+    },
+    {
+      "upc": "810028246133",
+      "index_product": "Wx Chicken Formula in Hydrating Purée",
+      "index_size": "5.5 oz",
+      "current_title": "Chicken Formula in a Hydrating Purée",
+      "current_url": "https://www.weruva.com/products/chicken-formula-in-a-hydrating-puree-cat-can",
+      "exact_variant": {
+        "title": "5.5oz - 8pk",
+        "sku": "6140",
+        "barcode": "810028246133"
+      },
+      "all_variants": [
+        {
+          "title": "3oz - 12pk",
+          "sku": "2487",
+          "barcode": "810028242562"
+        },
+        {
+          "title": "5.5oz - 8pk",
+          "sku": "6140",
+          "barcode": "810028246133"
+        }
+      ],
+      "match_score": 0.8571428571428571
+    },
+    {
+      "upc": "813778015523",
+      "index_product": "PLAY Duck & Tuna Trickster",
+      "index_size": "5.5 oz",
+      "current_title": "Duck & Tuna Trickster",
+      "current_url": "https://www.weruva.com/products/duck-and-tuna-trickster-cat-can",
+      "exact_variant": {
+        "title": "5.5 oz - 8pk",
+        "sku": "9514",
+        "barcode": "813778015523"
+      },
+      "all_variants": [
+        {
+          "title": "2.8 oz - 12pk",
+          "sku": "9453",
+          "barcode": "813778015653"
+        },
+        {
+          "title": "5.5 oz - 8pk",
+          "sku": "9514",
+          "barcode": "813778015523"
+        }
+      ],
+      "match_score": 1
+    }
+  ]
+}
