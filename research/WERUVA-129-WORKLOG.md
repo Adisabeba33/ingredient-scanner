@@ -6,52 +6,17 @@ Baseline: canonical strict ledger = 120 `source_verified` records. Machine recou
 
 ## Pass 1 — Slide N' Serve / Classic / Pantry Pours
 
-First-party current-formula pages re-opened and formula panels captured for:
+Current first-party formula pages were re-opened for Family Food, Jeopurrdy Licious, Let's Make a Meal, Love Connection, Meal of Fortune, Name 'Dat Tuna, The Newly Feds, The Slice is Right, Asian Fusion, and Grandma's Chicken Soup.
 
-- Family Food — current manufacturer page: https://www.weruva.com/collections/weruva-cat-pate/products/family-food-cat-pouch
-- Jeopurrdy Licious — https://www.weruva.com/products/jeopurrdy-licious-cat-pouch
-- Let's Make a Meal — https://www.weruva.com/products/let-s-make-a-meal-cat-pouch
-- Love Connection — https://www.weruva.com/collections/find-your-food/products/love-connection-cat-pouch
-- Meal of Fortune — https://www.weruva.com/products/meal-of-fortune-cat-pouch
-- Name 'Dat Tuna — https://www.weruva.com/products/name-dat-tuna-cat-pouch
-- The Newly Feds — https://www.weruva.com/products/the-newly-feds-cat-pouch
-- The Slice is Right — https://www.weruva.com/products/the-slice-is-right-cat-pouch
-- Asian Fusion — https://www.weruva.com/products/asian-fusion-cat-can
-- Grandma's Chicken Soup — https://www.weruva.com/products/grandmas-chicken-soup-cat-can
+Independent exact-unit evidence reconfirmed these old indexed Slide N' Serve UPC identities as historical sellable-unit evidence: `813778018999`, `813778018753`, `813778018975`, `813778018982`, `813778018951`, `813778018944`, `813778018708`, `813778018968`, `813778018722`, `813778018937`, `813778018692`.
 
-Current first-party formula observations already established in this pass:
-
-- Family Food: current page exposes 2.8 oz and 5.5 oz variants; ingredients begin `Chicken Broth, Chicken, Tuna...`; GA 9.0/3.5/1.0/85.5; 2.8 oz 67 kcal; 839 kcal/kg.
-- Jeopurrdy Licious: current 2.8/5.5 formula begins `Chicken, Chicken Broth...`; GA 9/4/1/83; 2.8 oz 88 kcal; 1100 kcal/kg.
-- Let's Make a Meal: current 2.8/5.5 formula begins `Lamb Broth, Lamb, Mackerel, Lamb Liver, Lamb Lung...`; GA 9/4/1/83; 2.8 oz 79 kcal; 982 kcal/kg.
-- Love Connection: current formula begins `Chicken Broth, Chicken, Salmon, Mackerel...`; GA 9/3.5/1/83; 2.8 oz 76 kcal; 952 kcal/kg.
-- Name 'Dat Tuna: current page exposes 2.8 oz and 5.5 oz variants; ingredients begin `Fish Broth, Tuna...`; GA 8.0/1.5/1.0/87.5; 2.8 oz 44 kcal; 549 kcal/kg.
-- The Newly Feds: current formula begins `Beef Broth, Beef, Salmon, Mackerel...`; GA 9/1.5/1/85.5; 2.8 oz 53 kcal; 658 kcal/kg.
-- The Slice is Right: current formula begins `Fish Broth, Salmon, Sardine, Mackerel...`; GA 8/1.5/1/87.5; 2.8 oz 47 kcal; 592 kcal/kg.
-- Asian Fusion: current page exposes 3 oz and 5.5 oz cans; full ingredient panel captured; GA protein 12%, fat 1.6%, fiber 0.5%, moisture 83%, ash 2%, calcium max 0.28%, phosphorus max 0.25%, magnesium max 0.024%, taurine min 0.05%; 65 kcal/3 oz, 120 kcal/5.5 oz, 770 kcal/kg; Adult.
-- Grandma's Chicken Soup: current page exposes 3 oz and 5.5 oz cans; full ingredient panel captured; GA protein 8%, fat 1.2%, fiber 0.5%, moisture 87.5%, ash 1%, calcium max 0.2%, phosphorus max 0.17%, magnesium max 0.018%, taurine min 0.05%; 58 kcal/3 oz, 106 kcal/5.5 oz, 683 kcal/kg; Adult.
-
-Independent exact-unit evidence now reconfirms several old indexed Slide N' Serve UPCs rather than treating all non-Shopify matches as obsolete:
-
-- `813778018999` Jeopurrdy Licious 2.8 oz — ADMC 2025 + National Pet Warehouse.
-- `813778018753` Jeopurrdy Licious 5.5 oz — ADMC 2025 + retailer Shopify barcode.
-- `813778018975` Let's Make a Meal 2.8 oz — ADMC 2025.
-- `813778018982` Love Connection 2.8 oz — ADMC 2025 + Pet Food Express.
-- `813778018951` Meal of Fortune 2.8 oz — ADMC 2025 + Pet Food Express/National Pet Warehouse.
-- `813778018944` Name 'Dat Tuna 2.8 oz — ADMC 2025 + Pet Food Express.
-- `813778018708` Name 'Dat Tuna 5.5 oz — exact retailer GTIN/UPC.
-- `813778018968` The Newly Feds 2.8 oz — ADMC 2025 + Pet Food Express.
-- `813778018722` The Newly Feds 5.5 oz — exact retailer UPC plus formula.
-- `813778018937` The Slice is Right 2.8 oz — ADMC 2025 + two independent retailers.
-- `813778018692` The Slice is Right 5.5 oz — exact retailer Shopify barcode.
+These are NOT automatically current-generation promotions. Current Weruva variant data shows replacements for several of the same product/size identities, so historical identity proof is retained separately from current barcode proof.
 
 Family Food 5.5 oz remains a deliberate conflict hold: sources expose both `813778018609` and `813778018685` for the 5.5 oz / model 8524 generation. Do not silently promote either until the generation relationship is resolved.
 
-## Machine current-catalog rebase
+## Current-exact promotion tranche
 
-A manufacturer-catalog crawl of all 129 unique indexed UPCs found **13 UPCs that are still printed in the current Weruva Shopify variant catalog with the same barcode**. These were passed through the strict validator and were appended to the canonical ledger on 2026-08-30 in commit `b626bf8ee127ae6a54bd3e9b163f767c20d301ba`.
-
-Promoted current-exact UPCs:
+13 UPCs survived exact current-manufacturer barcode matching and passed the strict validator. They were appended to the canonical ledger on 2026-08-30 in commit `b626bf8ee127ae6a54bd3e9b163f767c20d301ba`:
 
 - `810028246072` — Wx Chicken & Tilapia Formula in Gravy, 5.5 oz
 - `813778015660` — B.F.F. PLAY Beef & Tuna Tic Toc, 2.8 oz
@@ -69,36 +34,37 @@ Promoted current-exact UPCs:
 
 Promotion receipt: `research/WERUVA-CURRENT13-PROMOTION.json`; exact-current evidence: `research/WERUVA-EXACT-CURRENT-UPCS.json`.
 
-### Current formula re-open — promoted 13
+## Pass 2 — generation replacement disposition
 
-The current manufacturer pages were re-opened after promotion to reconfirm the stored formula generation:
+The manufacturer-catalog evidence proves that a substantial part of the original 129 queue is a historical UPC generation rather than the current barcode. These rows must not be promoted as if they were current.
 
-- Beef & Tuna Tic Toc: full ingredient panel; GA 10/2/1/83; 65 kcal/2.8 oz; 820 kcal/kg; current 2.8/5.5 variants.
-- Chicken & Turkey Topsy Turvy: full ingredient panel; GA 7/3/1/84; 86 kcal/2.8 oz; 1083 kcal/kg; current 2.8/5.5 variants.
-- Chicken Checkmate: full ingredient panel; GA 7/3/1/84; 87 kcal/2.8 oz; 1089 kcal/kg; current 2.8/5.5 variants.
-- Chicken & Pumpkin Love Munchkin!: full ingredient panel; GA 8/2.5/1/86.5; 55 kcal/2.8 oz; 688 kcal/kg; current 2.8/5.5 variants.
-- Beef & Salmon Best Day Eva!: full ingredient panel; GA 8/2/1/87.5; 46 kcal/2.8 oz; 574 kcal/kg; current 2.8/5.5 variants.
-- Duck & Tuna Trickster: full ingredient panel; GA 10/2/1/83; 68 kcal/2.8 oz; 852 kcal/kg; current 2.8/5.5 variants.
-- Wx Chicken Formula in Gravy: ingredients and full GA 10/5/1/83.5, ash 1.5; 81 kcal/3 oz, 149 kcal/5.5 oz, 953 kcal/kg; Adult/Senior; Supplemental Feeding.
-- Wx Chicken Formula in a Hydrating Purée: ingredients and full GA 10/5/1/83.5, ash 1.5; 78 kcal/3 oz, 144 kcal/5.5 oz, 922 kcal/kg; Adult/Senior; Supplemental Feeding.
-- Wx Chicken & Tilapia Formula in Gravy: current manufacturer page reconfirms exact recipe, 5.5 oz variant, low-phosphorus supplemental-feeding positioning, and Adult/Senior context.
+Confirmed replacement examples from current Weruva variant data:
 
-This post-promotion re-open is a consistency check only; it does not create a second record for any UPC.
+- Tic Tac Whoa! 5.5 oz: indexed `813778018203` -> current manufacturer variant `813778018272`.
+- Meal of Fortune 2.8 oz: indexed `813778018951` -> current manufacturer variant `813778018876`; current 5.5 oz variant `813778018630`.
+- Name 'Dat Tuna 2.8 oz: indexed `813778018944` -> current manufacturer variant `813778018869`.
+- Name 'Dat Tuna 5.5 oz: indexed `813778018708` -> current manufacturer variant `813778018623`.
+- The Slice is Right 2.8 oz: indexed `813778018937` -> current manufacturer variant `813778018852`.
+- The Slice is Right 5.5 oz: indexed `813778018692` -> current manufacturer variant `813778018616`.
+- Asian Fusion 3 oz: indexed `878408001031` -> current manufacturer catalog variant `878408000133`.
+- Asian Fusion 5.5 oz: indexed `878408002038` -> current manufacturer catalog variant `878408000034`.
 
-### Barcode-generation warning
+Important scope warning: Weruva's Shopify variant titles frequently include pack counts (for example `12pk`, `8pk`, `24pk`). A current manufacturer variant barcode therefore proves a current catalog/variant relationship, but does NOT by itself prove that the barcode is printed on one individual can/pouch. Replacement UPCs remain candidates until an independent individual-unit source or physical label proves `barcode_scope: individual_unit`.
 
-Do not bulk-promote the old index UPC strings. A current first-party Shopify variant probe has shown generation replacements in this queue. Example: current Tic Tac Whoa! variants expose `813778018418` (3 oz) and `813778018272` (5.5 oz), while the old index candidate for 5.5 oz is `813778018203`. Old identities must remain historical/conflict evidence unless the old individual unit itself is deliberately represented as a historical formula generation.
+This distinction prevents two errors at once: (1) promoting obsolete indexed UPCs as current and (2) accidentally substituting a case/multipack GTIN for an individual-unit UPC.
 
-Every remaining candidate still requires exact current individual-unit UPC proof, check digit, global repository exclusion, complete formula fields, and conflict disposition before `source_verified`.
+## Current manufacturer B.F.F. Originals confirmation
+
+Current Weruva catalog pages still list B.F.F. Originals/Minced products including Tuna & Chicken 4Eva, Tuna & Pumpkin Valentine, and Tuna & Bonito Be Mine. The current manufacturer catalog confirms the product identities and current formula family, but the indexed Originals UPCs still require independent exact individual-unit barcode proof before strict promotion because the manufacturer storefront can sell pack variants.
 
 ## Status
 
-- candidates in campaign: 129 unique UPC strings
-- canonical strict records before this campaign: 120
-- current-exact UPCs promoted in this campaign: 13
+- candidates in original campaign: 129 unique UPC strings
+- canonical strict records before campaign: 120
+- current-exact UPCs promoted after full strict gate: 13
 - canonical strict records now: **133 source_verified**
-- additional Slide N' Serve old-index UPCs independently reconfirmed in this pass: 11
+- historical Slide N' Serve UPC identities independently reconfirmed: 11 (identity evidence only; not automatically current)
 - explicit Family Food 5.5 generation conflict held: 1
-- current-formula first-party pages re-opened in pass 1: 10
-- promoted-current formula pages re-opened in consistency pass: 9 product identities covering all 13 promoted size UPCs
-- campaign remains in progress; remaining historical/replacement candidates are being dispositioned individually
+- additional explicit current replacement mappings documented in Pass 2: 8 indexed size rows
+- no case/multipack replacement barcode is promoted solely from Shopify variant data
+- campaign remains in progress; remaining candidates are being dispositioned individually
