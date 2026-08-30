@@ -1,9 +1,9 @@
-name: Run Royal Canin cats 120-140 merge
+name: Blue Buffalo Remaining Export
 
 on:
   push:
     branches:
-      - agent/deep-research-barcode-ledger
+      - agent/deep-research-blue-buffalo
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
   workflow_dispatch:
@@ -12,36 +12,40 @@ permissions:
   contents: write
 
 jobs:
-  merge:
+  export:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Export remaining records
         run: |
           python - <<'PY'
+          import json
           from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          data=json.loads(Path('research/deep-research-blue-buffalo.json').read_text(encoding='utf-8'))
+          out={
+            'source_head':'${{ github.sha }}',
+            'records':[r for r in data['records'] if r.get('research_status')=='needs_physical_label']
+          }
+          Path('/tmp/blue-buffalo-remaining.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
+          print('remaining',len(out['records']))
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Upload remaining artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blue-buffalo-remaining
+          path: /tmp/blue-buffalo-remaining.json
+          retention-days: 1
+      - name: Restore shared runner
         run: |
+          set -euo pipefail
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git add .github/workflows/tmp-royal-canin-cats-runner.yml
+          git commit -m "chore: restore shared research runner"
+          git push origin HEAD:agent/deep-research-blue-buffalo
