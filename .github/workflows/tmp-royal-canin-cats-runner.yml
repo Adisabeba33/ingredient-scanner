@@ -1,9 +1,9 @@
-name: Blue Buffalo Remaining Audit
+name: Run Royal Canin cats 120-140 merge
 
 on:
   push:
     branches:
-      - agent/deep-research-blue-buffalo
+      - agent/deep-research-barcode-ledger
     paths:
       - .github/workflows/tmp-royal-canin-cats-runner.yml
   workflow_dispatch:
@@ -11,69 +11,37 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: blue-buffalo-remaining-audit
-  cancel-in-progress: false
-
 jobs:
-  audit:
+  merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Blue Buffalo branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-blue-buffalo
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: agent/deep-research-barcode-ledger
           fetch-depth: 0
-
-      - name: Print deterministic remaining ledger
-        shell: bash
+      - name: Execute validated merge script
         run: |
-          set -euo pipefail
           python - <<'PY'
-          import json
-          from collections import Counter
           from pathlib import Path
-          p=Path('research/deep-research-blue-buffalo.json')
-          data=json.loads(p.read_text(encoding='utf-8'))
-          recs=data['records']
-          c=Counter(r.get('research_status') for r in recs)
-          print(f"AUDIT\tTOTAL={len(recs)}\tsource_verified={c.get('source_verified',0)}\tneeds_physical_label={c.get('needs_physical_label',0)}")
-          for i,r in enumerate(recs):
-              if r.get('research_status')!='needs_physical_label':
-                  continue
-              fields=[]
-              for k in ('upc','brand','product_line','product_name','variant','species','life_stage','food_form','texture','presentation','package_type','size'):
-                  v=r.get(k)
-                  if v not in (None,'',[],{}):
-                      fields.append(f"{k}={v}")
-              missing=[]
-              if not r.get('canonical_gtin14'): missing.append('canonical_gtin14')
-              if not r.get('ingredients_verbatim'): missing.append('ingredients')
-              ga=r.get('guaranteed_analysis') or {}
-              if not ga or all(v in (None,'',[],{}) for v in ga.values()): missing.append('GA')
-              cal=r.get('calorie_content') or {}
-              if not cal or not cal.get('kcal_per_kg'): missing.append('calories')
-              if not r.get('life_stage'): missing.append('life_stage')
-              if not r.get('food_form'): missing.append('food_form')
-              if not r.get('source_urls'): missing.append('sources')
-              conflicts=r.get('conflicts') or []
-              notes=r.get('verification_notes') or []
-              print(f"ROW\t{i}\t"+'\t'.join(fields)+f"\tmissing={missing}\tconflicts={conflicts}\tnotes={notes}")
+          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
+          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
+          end=src.index("\n          PY\n", start)
+          block=src[start:end]
+          lines=[]
+          for line in block.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          code='\n'.join(lines)+'\n'
+          compile(code,'royal-canin-cats-merge','exec')
+          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
           PY
-
-      - name: Restore shared runner from base branch
-        shell: bash
+      - name: Commit Royal Canin cat ledger
         run: |
-          set -euo pipefail
-          git fetch origin agent/deep-research-barcode-ledger
-          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/workflows/tmp-royal-canin-cats-runner.yml
+          git add research/deep-research-royal-canin.json
           if git diff --cached --quiet; then
-            echo "Runner already restored."
+            echo "No target changes needed."
             exit 0
           fi
-          git commit -m "chore: restore shared research runner"
-          git push origin HEAD:agent/deep-research-blue-buffalo
+          git commit -m "research: add Royal Canin feline renal and GI records"
+          git push origin HEAD:agent/deep-research-barcode-ledger
