@@ -36,9 +36,7 @@ Promotion receipt: `research/WERUVA-CURRENT13-PROMOTION.json`; exact-current evi
 
 ## Pass 2 — generation replacement disposition
 
-The manufacturer-catalog evidence proves that a substantial part of the original 129 queue is a historical UPC generation rather than the current barcode. These rows must not be promoted as if they were current.
-
-Confirmed replacement examples from current Weruva variant data:
+Confirmed current manufacturer replacement examples:
 
 - Tic Tac Whoa! 5.5 oz: indexed `813778018203` -> current manufacturer variant `813778018272`.
 - Meal of Fortune 2.8 oz: indexed `813778018951` -> current manufacturer variant `813778018876`; current 5.5 oz variant `813778018630`.
@@ -49,13 +47,26 @@ Confirmed replacement examples from current Weruva variant data:
 - Asian Fusion 3 oz: indexed `878408001031` -> current manufacturer catalog variant `878408000133`.
 - Asian Fusion 5.5 oz: indexed `878408002038` -> current manufacturer catalog variant `878408000034`.
 
-Important scope warning: Weruva's Shopify variant titles frequently include pack counts (for example `12pk`, `8pk`, `24pk`). A current manufacturer variant barcode therefore proves a current catalog/variant relationship, but does NOT by itself prove that the barcode is printed on one individual can/pouch. Replacement UPCs remain candidates until an independent individual-unit source or physical label proves `barcode_scope: individual_unit`.
+Weruva storefront variant titles frequently include pack counts. Manufacturer Shopify barcode alone is therefore not accepted as individual-unit proof.
 
-This distinction prevents two errors at once: (1) promoting obsolete indexed UPCs as current and (2) accidentally substituting a case/multipack GTIN for an individual-unit UPC.
+## Pass 3 — B.F.F. PLAY indexed-unit verification
+
+A fresh retailer/manufacturer pass established strong exact-size evidence for the next indexed B.F.F. PLAY rows:
+
+- `813778015615` — Chicken & Tuna Til' Then, 2.8 oz can. Pet Food Express lists the exact 2.8 oz sellable unit with UPC `813778015615`; National Pet Warehouse and additional retailers independently map the same code to the same 2.8 oz identity. Current Weruva page supplies the current formula: ingredients begin `Chicken Broth, Chicken, Tuna, Sardine...`; GA 10/2/1/83; 74 kcal/2.8 oz; 928 kcal/kg.
+- `813778014588` — Chicken & Beef Best Buds, 2.8 oz can. The Pet Beastro exposes `813778014588` on a single-item page and provides the formula; National Pet Warehouse independently maps the same UPC to the 2.8 oz identity. Current Weruva catalog still lists Best Buds.
+- `813778015103` — Chicken, Duck & Turkey Take a Chance, 2.8 oz can. Pet Food Express and CountryMax both identify the exact 2.8 oz unit with UPC `813778015103`. Current Weruva page provides the full formula, GA 7/3/1/84, 86 kcal/2.8 oz, 1075 kcal/kg.
+- `813778015004` — Chicken & Lamb Laugh Out Loud, 5.5 oz can. Toronto Pets exposes the 5.5 oz variant with barcode `813778015004`; current Weruva page provides the full formula, GA 7/3/1/84, 88 kcal/2.8 oz and 1102 kcal/kg. The 5.5 oz unit calorie basis still needs direct printed/current evidence before strict append if not present elsewhere.
+- `813778014816` — Chicken & Turkey Tiptoe, 3 oz pouch. Big Dog Little Dog and Cascade Pet Supply both identify the 3 oz pouch with this code; Toronto Pets independently exposes the same barcode on its 3 oz variant.
+- `813778014540` — Chicken Cherish, 3 oz pouch. Toronto Pets exposes the exact 3 oz variant with barcode `813778014540`; current manufacturer formula page remains the preferred formula source.
+
+`813778015127` (Laugh Out Loud 2.8 oz) and `813778014755` (Tubular 3 oz pouch) remain in this tranche but were not promoted merely from search absence/partial evidence; they continue to the next exact-unit pass.
+
+None of the Pass 3 rows are appended merely because a retailer uses the same numeric string as SKU. Strict append still requires repository-wide exclusion, UPC check digit, complete current formula/GA/calories for the exact size, and no unresolved generation conflict.
 
 ## Current manufacturer B.F.F. Originals confirmation
 
-Current Weruva catalog pages still list B.F.F. Originals/Minced products including Tuna & Chicken 4Eva, Tuna & Pumpkin Valentine, and Tuna & Bonito Be Mine. The current manufacturer catalog confirms the product identities and current formula family, but the indexed Originals UPCs still require independent exact individual-unit barcode proof before strict promotion because the manufacturer storefront can sell pack variants.
+Current Weruva catalog pages still list B.F.F. Originals/Minced products including Tuna & Chicken 4Eva, Tuna & Pumpkin Valentine, and Tuna & Bonito Be Mine. Indexed Originals UPCs still require independent exact individual-unit barcode proof before strict promotion.
 
 ## Status
 
@@ -63,8 +74,9 @@ Current Weruva catalog pages still list B.F.F. Originals/Minced products includi
 - canonical strict records before campaign: 120
 - current-exact UPCs promoted after full strict gate: 13
 - canonical strict records now: **133 source_verified**
-- historical Slide N' Serve UPC identities independently reconfirmed: 11 (identity evidence only; not automatically current)
+- historical Slide N' Serve UPC identities independently reconfirmed: 11
 - explicit Family Food 5.5 generation conflict held: 1
-- additional explicit current replacement mappings documented in Pass 2: 8 indexed size rows
-- no case/multipack replacement barcode is promoted solely from Shopify variant data
-- campaign remains in progress; remaining candidates are being dispositioned individually
+- explicit current replacement mappings documented: 8 indexed size rows
+- next B.F.F. PLAY rows with new exact-size barcode corroboration in Pass 3: 6
+- no Pass 3 record promoted until the remaining strict fields/exclusions are complete
+- campaign remains in progress
