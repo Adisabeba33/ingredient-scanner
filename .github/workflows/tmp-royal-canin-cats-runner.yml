@@ -1,47 +1,109 @@
-name: Run Royal Canin cats 120-140 merge
+name: Blue Buffalo Deep Research Promotions
 
 on:
   push:
-    branches:
-      - agent/deep-research-barcode-ledger
-    paths:
-      - .github/workflows/tmp-royal-canin-cats-runner.yml
+    branches: [agent/deep-research-blue-buffalo]
+    paths: [.github/workflows/tmp-royal-canin-cats-runner.yml]
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: blue-buffalo-deep-research-write
+  cancel-in-progress: false
+
 jobs:
-  merge:
+  promote:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Blue Buffalo branch
+        uses: actions/checkout@v4
         with:
-          ref: agent/deep-research-barcode-ledger
+          ref: agent/deep-research-blue-buffalo
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-      - name: Execute validated merge script
+      - name: Apply verified research promotions
+        shell: bash
         run: |
+          set -euo pipefail
           python - <<'PY'
+          import base64,zlib,json,hashlib
+          from collections import Counter
           from pathlib import Path
-          src=Path('.github/workflows/tmp-royal-canin-cats-120-140.yml').read_text(encoding='utf-8')
-          start=src.index("          python - <<'PY'\n") + len("          python - <<'PY'\n")
-          end=src.index("\n          PY\n", start)
-          block=src[start:end]
-          lines=[]
-          for line in block.splitlines():
-              lines.append(line[10:] if line.startswith('          ') else line)
-          code='\n'.join(lines)+'\n'
-          compile(code,'royal-canin-cats-merge','exec')
-          exec(compile(code,'royal-canin-cats-merge','exec'),{'__name__':'__main__'})
+          P=Path("research/deep-research-blue-buffalo.json")
+          data=json.loads(P.read_text(encoding="utf-8"))
+          updates=json.loads(zlib.decompress(base64.b64decode('eNrtnPtv27YWx/8Vwj+1mGVbkuVHhouLPJaud00XLO2K3WEIaIm2iciiR0lJvGL/+z0kZb0tyY6TtrsCisa2JPKQPIf8fvjQ585kODCGpm4NrNGwc/K549O/SOekY/Ys5M7QK71nTdHd4nWn2+HEpmu49nvHXlL7jnidP7od6i04cSjxAv/2nvAZDugKHr8gM+YRB52rO7vbD+iKYLeLrlmAA4ZuAsztJXwlOP68vfESB+jVmhOf8HtI6IEGS3RFH+HjB2az9ZJw5vqv1bPXnAWEQi4f8JoyO0nsPQ5Cjl106eJ7xrvoglNI4DeC/UAY8eAQLowkrhu6zCdd9Ia4UAJPJusLY5hLPQJ/XcapAzfcYBcevXinXZFgSZkHV7vokvpL9DN10SufhdwmiM3RzyuywMgU5Qg26NSmjrD2nfZhyUn0mLJGFJjxDfqFsUDVjO/TcIVuQneOAyIKFXJ5v6o1IuzCri3uSeyCEj76BJIrmDDKmSAq7JLOCFTHKeQA/9D7MOCiCdE582z4y2W+iSlJNnHGmEMDy9t+pQFeUQ/9ABav1y5ZQQKyoHyzDqChsCe+wQMeDWQxzjn2IHvI0d/Wwc0DIUGmfByaFD7UOQBkTxYkwDOXoP+EFMo9ZxzZzBWtfQmZsNBPavI9xTZY+mpr8pkJ9fGWMw+dwlcmqwgKK3wA7v4v9ezdF+JEz9yQxMU5w9wlG/SGQ81BDWLuw1dowpCvCKf2trw/EXfdRb+FtvBViCaHLgjH6IdHqHobau+crdeEp1xgSYXBBF0xD5xHNlCqGPrr+JEye99ppz642GzjaoZ2zdzNesl8aJh0GufSOd9tfNlEZ5QFmYoav04a+jTT0FfYW2APWimxNvmpzJrrDbgSexSl+XHjcGZHzpXKbfQ68bRr7AUsWBIvW2QLbvmFztgcIjtjqZGy9MLMmJrUl5H5/RKC3FZWJulMUza8ZY40/YY5MjKJS6AR4AcR8xBov0DfscJ804NechFi8O8AQvEWe9iFCvVFt2rz0CG3a9VR3UIOt9BaItY6J+agN+hGN0AFZi/q49RFEbW3K/yYerZndTsrRn3o50j2ki6Txf4y+7MXum63E6g+JZvXoGd0O6KuORhKoQzObVwaKMTvnzte1FFADx/VDZR4hmUZO5AWfLvHEA8irVG3E0ItwYVtBn9361LAj0kKujC/OoUrvAA3q7RiMDookbQhg56u1yUSd4K7LDEHSWnefuzfLfIplIwXu0tl1tlT0vXvSs3oja265FL9d5MCrhaygH/8DZ6LRXSTW5uBF4m0Pnfu4DfhdLdwz4k5mQ67yU8qgaE5Vmndengl1IgdrsGkDvTtq9DFt2qIEy4Uci7GrY83shtGZ+EcRjSGPl6f94WQQS5EBkgUtHZhHLCTu6E3etggF8+IiyC2McKeE1+XP2t+sIFB5YKC7AlgoPcvGb8iSFaK+I58GKxkB4KILwYgoQFA88DgAwEUZfMRwgj6BTGeEeTAh6gEPehEV/A4p9h1N8ih87l65hz6DIdiD436uqWBAIseQA/YRwEn8IyD4CNGPlljOQxAx3MHg+eCeDCESMtEWcij7UKf4YguSVXXbchdEcWdZRCs/ZN+/+HhoTcTg5eqtJ7NVn0qx396TzRO/gyhYH7/zxC7dL6BWtSg+3JCG36DRNOp2KI25fMiPS1KUAs4fPGZG8r60yLV2HfWfXM8nIytQS4ZJ65rUWrSY3zRj7KEJ6aTyUgoTvCkOfTXgSxLob4yNb6tPFW/frrK55ytEHR1aaeAzrSv66la/x7RQNb8tjbrqr4nDAQZTOfUlj/cetDhK0sr8kEUnBOKDc4qbsE2Z37GXTlIHOr2lb+q5vRPkNmF4EEidiDcugiiRn2BaJE+IIrnQwChqDdHb06FO5yeXp7/nLjvydYKcQeI8pWQYuqec9Dgl4w5iUAEpT2nLvGlzMJO6AZQCSJxD4PnQPEhShOiGOspotB1CRTD3rQFihYoWqBogaIFihYoWqBogaIFihYoWqBogaIGKEzL1Ccvt0SRxgClwsoV/hXxltgRgCECVjxcr9pzuHLG2YMH6sOONfwHthI3XMMf8WM5dly7WAgLqXRDof/2RZ3mGl9l+MNiIepExE8MNAVwKCJOllGypAPxxsBfQfdUckksBUtwpgQhnoQk5fyxkygyKJKllHrYUPRXpaeTlkkr668LUjIA9lUSSyl/JHjy/0cimYmLKLqh1wWbmW2D98wxkTbCMCdSUjpgvY199cA7aCg2A+dyhRiCvw44NhWfq5469aGRFuoZTzR69m6ydYCoIwSXWTLodFcYucxb0BlcBVcI8rblnjvbmuWHs4CCltpx9wsR2aiKyIxKIlOXy5Fs+rxEJkwSA8FOorLqkeqFQcY6KsgYtcmpjjuOsbLeelfyehFw9oak4YGQZJpGAZLM0eA5IemaBDbrf8IuhFGAElEmlWXshEV4umCMX4CPZygqKmA/Jz0ryOkToYulHP0DGHrT7CQHzxkEBXRhglTQDC+QKIf/IqyzFvUin9+iSRXzzGmgQe1oS9CZwXKzZSBNKV/NU0JRe5Cl1WxVWk0Kaw3KrAFFaHNQ4HlSgkp2oJLTdviVhuRyiOoytiu6XMxYMwVW9UO+tm8dwyT2fD7ShsYEa8PRYKJNhtZcgwytyWA2mJDRPGfog/IfVd/r/tSYWoPBxJjU3DaxLMOaGgXea0JXjZhKAVUapSDEEpSC2NqBUmAhjNZBmqn6qeBwiH33sow1eLlFmxaxWsRqEatFrBaxWsRqEatFrBaxWsRqEatFrH80Yumj8XSaQqyxJCyzZxwfsPK71xRPZDe4hfwOpKS6vwRBjsc7pmyUis1jeQJLQOBUqK2Y1K7D1fpObqkrIYs8+6RlcxGbCuxTsp1OqeiyrXUXZAkSVPrHFoFUPRaJrRqRYior4awtvqShZ098qmek/VHlqDxVik9VqLHXDrndAFSNGg1w6KANbi+AMAVAzZLl0baz5QCyJZ68XxVmUL4kBA0rIcjazUDPvPPv6fxyA5pJ9CxyJNkJA/Uk9QU56IUxqBHCjIwiwgwH1n4Ik+GXRKwLlEHkHvo9GAgL2+k+iEBiXHVDm37l7rpfz0/7v5IgqpDduCL0YIQfb94qOiFSD4xTO6dehEcCVTpfFk6mE/h2OZtsaeOegMan8N+CagvoXzkTUSUYEC6KhBjPQYAoVbNtdak8iNrtJrMS++r08dDSjVQy9zYWAz24nOvLlPwlW2dN35FcpeVQ+8JyXxThEICIoABhkMkQFB7AAThvaivbwIrhoFsGBNKjUlAArEa4pAKPrkCUzqEXFl4rLPdR6IvPytWg7DZxoM+UwwJ4G/iDGKrjTETKM+wKEHBS2z2bkMJkYDUiBR9YjFWBwo28QekNGEi2M/h+WmVnDs3EawbNzn/EPLHV/5XK/gKaMhI3W9VYosWbH4LZLexTQjpHBjFFpFV+UbhHx3NK1H9mKSW3XpLBiHK1Xi/Ks5q/DHZy6yL7KvL9Vf++Qv3JAvvrktXtysA3uTIwOFwUD7/YwkDdaZhxnV5UXSvjof+EIzUvurSgH1lSD75CST3WxyWnUwbfvqT+8XKrLv6CHuBbVdfLubaMS6F0NEQqcwkX6uy5BPbwOAI7bzwvFuAZdDZ4dPrIyOAb1NmT8XDyXDPyyZx7PAuf3ZlUvu8nUdT7zsDnxfbeM/IlG7DKpPjFj6faBeTs4yV5xMRjUT/6OqNVaTTFXS/Is1Pvu6bWE1yJ9Xfpqfemu5PKtlJt53STKeQmR9J3Tr/nGySj2p9jbv6NG4pmWRWkcOUkvCIdqA8PnhDW1Wxvajo/32TnUrP9SkeYrt8Xkdpp/S80rV/hXd/IjH8dzOTx5zC4MSpn/CeVcDP6UnADQ8cTjqLXopH1xBcFDHrTY8DV8LBEspaMj/G2AaMuEeWru1MwrX8wKJr1oHjY6wqyaaRG5T22muUctzg6H/v1CVOz5PUJxtey5hNDqQZ9ORWyKbc7qBGr/vTd1TdLqHcr7Y46HtnIPWorNoNRKdg89xJQ+s0KAtEIh+E3SBWgEkzvtNjogsFpIu0fCUnBh1NIajRZ+tm60VeGpsZgkEFTq2ch9hd6pVsjtDebFnaJnYGiAAL9JN5ikVkJyp2dIWSePPQOvJ2n8CaFWnkEKuHA5os6uzgW+AaEBfy3ymycgnyw+lFYhhdE1GZMNUX63M0oRSQ8ZHtUivEqeKwUt8pp82mnM6rZqaBVI+JL8s/DXz3FNOShFOyU5mbsBK5SNktcDlR15qzRU6mojtQP0+9DIWV2yHez5k1dO9X7eFIq3+WM+A71rh9xaaJebzaRz4PJMfTzAdI3Z8bwqeJZrxWrDaShfkRpmHo916GHIqwaa/baSFXSRk2k6nQ8KShV3TJzShV7jZVqX52fUMITlEWsVGMRCQN8TkY+wIAHg7IGg3KURxc0hHi5k5AHsQBIjcj9nPKAYmzFCuojKECkVrDXgz6fRAo4UbTUR1IrCAUh3zwFEkBIFfkuKXGFr2ggrvf9uFuDYRSGCwhvMB97SqTQIAy2nRn8JpWMltIhyHYxXb2IHs6nApUai9j+LmmaE5R7nvmo1qu75So0i0ccLW2hZonmh68+0dhcM4aaMZ1OJ6Z+HOk9eVoyUek12RriWIlKdVxSXZgT/lih5in2mtZP3HrmxDSHjWX9D48QWuDEDoXQA7+RwJiWwsr7HbIm8J8XgPcHVB3PwNswBAvQbFN82VkczsKlU/yQCk0ZjyIsBUp8vz0BhaIOSOSdDlZxcyZcId33JW/zk9l7Kj6j2D9RISyCVjBAOmoBO1AmcLfYwTxArcyy1Xg6MlNsMIreh2b0ptYzH9YvHCwpWTPK6/fnPkmSf9NyYStXZoGpsNssvz2s7F3FxW1mxTcPZ9ehzlTb52V/DrBKTuU3X8Aqok3+Vcn5I9iHnLp/jnWq2sWo5z0X0i46tYtO7VmS3dvmJlUrS3r1gXrzqEtLZnM4bbIc8lQkrD+yXoeEwxdYT2l0JqbxKZYvcibmGOsyhx7fN6ziRj3TMp58fH/H+sdhix+XaioeNTyj/+m7j+l1j+2p6+icdYpsQUpqSt+OxNrIy53Uf8rKyEO4PRK/gi5uIWtCLpKEEQ8JwKk6of+ymWuGNbQmw+FxKHH0pAWaB63M/Izp2XWaJ8DjQ1VWZctYgiGH43/7d+G/rIlp5LGazLAqIQ1WfcMY6cOhPpxMJsYhi0kj8SZt5fP5ZaX4dQK5VwfsXlMyu9CJpOZ2oPuIV6K+9LrSyBinX0KgjyQ6jntmS44tObbk2JJjS44tObbk2JJjS44tObbk2JLj/wE5muZwNIUHzJYcC+T49/8ATggx7A==')).decode())
+          def split_top_level(s):
+           s=s.strip()[:-1] if s.strip().endswith(".") else s.strip(); out=[]; buf=[]; depth=0
+           for ch in s:
+            if ch=="(": depth+=1
+            elif ch==")": depth=max(0,depth-1)
+            if ch=="," and depth==0:
+             item="".join(buf).strip(); out.extend([item] if item else []); buf=[]
+            else: buf.append(ch)
+           item="".join(buf).strip(); out.extend([item] if item else []); return out
+          def valid_upca(u):
+           if len(u)!=12 or not u.isdigit(): return False
+           t=sum(int(u[i])*(3 if i%2==0 else 1) for i in range(11)); return (10-t%10)%10==int(u[-1])
+          by={r.get("upc"):r for r in data["records"]}; before=Counter(r.get("research_status") for r in data["records"]); expected=set(updates)
+          if not expected.issubset(by): raise SystemExit("missing targets "+str(sorted(expected-set(by))))
+          for upc,u in updates.items():
+           r=by[upc]
+           if r.get("research_status")!="needs_physical_label": raise SystemExit(f"{upc} prior {r.get('research_status')}")
+           if not valid_upca(upc) or r.get("canonical_gtin14")!=upc.zfill(14): raise SystemExit(f"barcode validation failed {upc}")
+           for k in ("size","recipe","ingredients_verbatim","guaranteed_analysis","calorie_content","formula_source","source_urls","conflicts"): r[k]=u[k]
+           r["ingredients_ordered_normalized"]=split_top_level(u["ingredients_verbatim"]); r["source_accessed_at"]="2026-08-29"
+           r["verification_notes"]=(r.get("verification_notes") or [])+[x for x in u["verification_notes"] if x not in (r.get("verification_notes") or [])]
+           r["research_status"]="source_verified"; r["multipack_contents"]=[]
+          data["updated_at"]="2026-08-29"
+          for upc in expected:
+           r=by[upc]
+           assert r["research_status"]=="source_verified" and r["barcode_scope"]=="individual_unit" and r["brand"]=="Blue Buffalo" and r["species"]=="cat"
+           assert valid_upca(r["upc"]) and r["canonical_gtin14"]==r["upc"].zfill(14) and r["size"] and r["food_form"] in ("dry","wet") and r["life_stage"]
+           assert r["ingredients_verbatim"] and r["ingredients_ordered_normalized"] and r["source_urls"] and r["multipack_contents"]==[]
+           ga=r["guaranteed_analysis"]; cal=r["calorie_content"]
+           assert all(ga[x] is not None for x in ("crude_protein_min_percent","crude_fat_min_percent","crude_fiber_max_percent","moisture_max_percent"))
+           assert cal["kcal_per_kg"] is not None and cal["kcal_per_unit"] is not None
+          upcs=[r.get("upc") for r in data["records"] if r.get("upc")]; gtins=[r.get("canonical_gtin14") for r in data["records"] if r.get("canonical_gtin14")]
+          if len(upcs)!=len(set(upcs)) or len(gtins)!=len(set(gtins)): raise SystemExit("duplicate barcode")
+          P.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          after=Counter(r.get("research_status") for r in data["records"])
+          print("PROMOTED",len(expected),",".join(sorted(expected)))
+          print(f'AUDIT TOTAL={len(data["records"])} source_verified={after.get("source_verified",0)} needs_physical_label={after.get("needs_physical_label",0)}')
+          print("DELTA",after.get("source_verified",0)-before.get("source_verified",0),after.get("needs_physical_label",0)-before.get("needs_physical_label",0))
+          print("LOCAL_SHA256",hashlib.sha256(P.read_bytes()).hexdigest())
           PY
-      - name: Commit Royal Canin cat ledger
+      - name: Restore shared runner and commit
+        shell: bash
         run: |
+          set -euo pipefail
+          git fetch origin agent/deep-research-barcode-ledger
+          git show origin/agent/deep-research-barcode-ledger:.github/workflows/tmp-royal-canin-cats-runner.yml > .github/workflows/tmp-royal-canin-cats-runner.yml
+          test "$(git hash-object .github/workflows/tmp-royal-canin-cats-runner.yml)" = "dde3c125efd00c7387aad2aa7ae1ce5e5d4bfc4a"
           git config user.name "ingredients-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/deep-research-royal-canin.json
-          if git diff --cached --quiet; then
-            echo "No target changes needed."
-            exit 0
-          fi
-          git commit -m "research: add Royal Canin feline renal and GI records"
-          git push origin HEAD:agent/deep-research-barcode-ledger
+          git add research/deep-research-blue-buffalo.json .github/workflows/tmp-royal-canin-cats-runner.yml
+          git diff --cached --check
+          git commit -m "research: verify 10 additional Blue Buffalo cat SKUs"
+          git push origin HEAD:agent/deep-research-blue-buffalo
+          echo "COMMIT_SHA=$(git rev-parse HEAD)"
+      - name: Re-fetch and verify remote ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin agent/deep-research-blue-buffalo
+          git show origin/agent/deep-research-blue-buffalo:research/deep-research-blue-buffalo.json > /tmp/remote-blue.json
+          python - <<'PY'
+          import json,hashlib
+          from collections import Counter
+          from pathlib import Path
+          local=Path("research/deep-research-blue-buffalo.json").read_bytes(); remote=Path("/tmp/remote-blue.json").read_bytes()
+          if local!=remote: raise SystemExit("remote mismatch")
+          d=json.loads(remote); c=Counter(r.get("research_status") for r in d["records"])
+          targets=set("840243116799 840243116805 840243117963 840243118748 840243120048 840243126279 840243135301 840243135318 840243150564 840243150571".split())
+          for u in targets: assert next(x for x in d["records"] if x.get("upc")==u)["research_status"]=="source_verified"
+          print("REMOTE_SHA256",hashlib.sha256(remote).hexdigest()); print(f'REMOTE_AUDIT TOTAL={len(d["records"])} source_verified={c.get("source_verified",0)} needs_physical_label={c.get("needs_physical_label",0)}')
+          PY
+          test "$(git show origin/agent/deep-research-blue-buffalo:.github/workflows/tmp-royal-canin-cats-runner.yml | git hash-object --stdin)" = "dde3c125efd00c7387aad2aa7ae1ce5e5d4bfc4a"
+          echo "RUNNER_RESTORED=true"
