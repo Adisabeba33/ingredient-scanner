@@ -57,4 +57,5 @@ Every candidate still requires exact current individual-unit UPC proof, check di
 - exact-current UPC survivors identified: 13
 - newly promoted in this worklog so far: 0
 - current-formula first-party pages re-opened in pass 1: 8
+- current13 strict validator prepared; safe commit retry triggered after initial runner rebase issue
 - campaign remains in progress
