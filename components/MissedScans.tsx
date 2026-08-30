@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Loader2, RefreshCw, Search } from "lucide-react";
+import { Check, ClipboardCopy, Loader2, RefreshCw, Search } from "lucide-react";
 import { missLabel, MISS_ORDER, type MissVerdict } from "@/lib/miss-verdict";
 
 /**
@@ -25,6 +25,8 @@ import { missLabel, MISS_ORDER, type MissVerdict } from "@/lib/miss-verdict";
 
 interface Miss {
   code: string;
+  /** As printed under the bars, not as the catalog keys it. */
+  printed?: string;
   searches: number;
   name: string | null;
   brands: string | null;
@@ -46,7 +48,14 @@ interface Report {
   message?: string;
 }
 
-/** Enough to see the shape of each bucket without scrolling for a minute. */
+/**
+ * How many rows a bucket shows before it offers to open.
+ *
+ * A cap, not a limit: every row is already here, and the count in the toggle
+ * says exactly how many are folded away. The first version had no toggle at
+ * all and ended in a dead "… and 5 more", which is the worst of both — it
+ * proves there is more and gives you no way to reach it.
+ */
 const SHOWN_PER_VERDICT = 12;
 
 const TONE: Record<MissVerdict, string> = {
@@ -59,10 +68,17 @@ const TONE: Record<MissVerdict, string> = {
   "not-a-barcode": "text-faint",
 };
 
+/** The code to put in front of a person: what is on the pack. */
+function printedCode(m: Miss): string {
+  return m.printed ?? m.code;
+}
+
 export function MissedScans({ adminToken }: { adminToken: string }) {
   const [report, setReport] = useState<Report | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [opened, setOpened] = useState<Record<string, boolean>>({});
+  const [copied, setCopied] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -89,6 +105,37 @@ export function MissedScans({ adminToken }: { adminToken: string }) {
     void load();
   }, [load]);
 
+  /**
+   * The whole list, out of the browser and into whatever comes next.
+   *
+   * This IS the research brief. A miss list you can only look at is a list
+   * somebody retypes by hand, and a retyped barcode is a wrong barcode — the
+   * failure `data/wrong-barcodes.ts` exists about. Tab-separated so it drops
+   * into a sheet, and written with the printed code rather than the stored
+   * key, because a padded GTIN-14 pasted into a retailer search finds nothing.
+   */
+  const copyAll = useCallback(async () => {
+    if (!report) return;
+    const text = report.misses
+      .map((m) =>
+        [
+          printedCode(m),
+          m.searches,
+          m.verdict,
+          m.seededAs ?? [m.brands, m.name].filter(Boolean).join(" ") ?? "",
+          m.maker ?? "",
+        ].join("\t")
+      )
+      .join("\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setError("Couldn't reach the clipboard.");
+    }
+  }, [report]);
+
   return (
     <section className="card flex flex-col gap-3 p-4">
       <div className="flex items-start justify-between gap-3">
@@ -103,18 +150,24 @@ export function MissedScans({ adminToken }: { adminToken: string }) {
             we hold checked against each code.
           </p>
         </div>
-        <button
-          onClick={load}
-          disabled={loading}
-          className="btn-ghost shrink-0"
-          aria-label="Reload"
-        >
-          {loading ? (
-            <Loader2 className="animate-spin" size={15} aria-hidden="true" />
-          ) : (
-            <RefreshCw size={15} strokeWidth={1.8} aria-hidden="true" />
+        <div className="flex shrink-0 items-center gap-1">
+          {report && report.total > 0 && (
+            <button onClick={copyAll} className="btn-ghost" aria-label="Copy every row">
+              {copied ? (
+                <Check size={15} strokeWidth={2.2} aria-hidden="true" />
+              ) : (
+                <ClipboardCopy size={15} strokeWidth={1.8} aria-hidden="true" />
+              )}
+            </button>
           )}
-        </button>
+          <button onClick={load} disabled={loading} className="btn-ghost" aria-label="Reload">
+            {loading ? (
+              <Loader2 className="animate-spin" size={15} aria-hidden="true" />
+            ) : (
+              <RefreshCw size={15} strokeWidth={1.8} aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </div>
 
       {error && <p className="text-[12.5px] text-risk-high">{error}</p>}
@@ -136,9 +189,12 @@ export function MissedScans({ adminToken }: { adminToken: string }) {
               {report.total} codes
               {report.truncated ? " (capped — the most-searched are kept)" : ""}
               {report.ordering ? ` · ${report.ordering}` : ""}
+              {copied ? " · copied" : ""}
             </p>
             {MISS_ORDER.filter((v) => (report.verdicts[v] ?? 0) > 0).map((verdict) => {
               const rows = report.misses.filter((m) => m.verdict === verdict);
+              const isOpen = opened[verdict] ?? false;
+              const shown = isOpen ? rows : rows.slice(0, SHOWN_PER_VERDICT);
               return (
                 <div key={verdict} className="flex flex-col gap-1">
                   <p className={`text-[12px] font-semibold ${TONE[verdict]}`}>
@@ -158,9 +214,9 @@ export function MissedScans({ adminToken }: { adminToken: string }) {
                     </p>
                   )}
                   <ul className="flex flex-col gap-0.5">
-                    {rows.slice(0, SHOWN_PER_VERDICT).map((m) => (
+                    {shown.map((m) => (
                       <li key={m.code} className="text-[11px] leading-snug text-muted">
-                        <span className="font-mono">{m.code}</span>
+                        <span className="font-mono">{printedCode(m)}</span>
                         {m.searches > 1 && (
                           <span className="ml-1 tabular-nums text-faint">
                             ×{m.searches}
@@ -190,8 +246,17 @@ export function MissedScans({ adminToken }: { adminToken: string }) {
                       </li>
                     ))}
                     {rows.length > SHOWN_PER_VERDICT && (
-                      <li className="text-[11px] text-faint">
-                        … and {rows.length - SHOWN_PER_VERDICT} more
+                      <li>
+                        <button
+                          onClick={() =>
+                            setOpened((o) => ({ ...o, [verdict]: !isOpen }))
+                          }
+                          className="text-[11px] font-semibold text-ink underline underline-offset-2"
+                        >
+                          {isOpen
+                            ? `show fewer`
+                            : `show all ${rows.length} — ${rows.length - SHOWN_PER_VERDICT} more`}
+                        </button>
                       </li>
                     )}
                   </ul>

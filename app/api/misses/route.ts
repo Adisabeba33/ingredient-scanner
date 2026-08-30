@@ -1,6 +1,6 @@
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
-import { classifyMiss, MISS_ORDER, type MissVerdict } from "@/lib/miss-verdict";
+import { classifyMiss, MISS_ORDER, printedForm, type MissVerdict } from "@/lib/miss-verdict";
 
 /**
  * What shoppers looked for and did not get.
@@ -99,6 +99,9 @@ export async function GET(req: Request) {
 
   const classified = misses.map((r) => ({
     code: r.code,
+    // What is actually under the bars. The row is keyed as a GTIN-14, and a
+    // person copying "00050000577989" into a retailer search finds nothing.
+    printed: printedForm(r.code),
     searches: r.hits ?? 1,
     // Some miss rows carry a name — Open Food Facts had the product but no
     // ingredient list, which is a miss to a reader and a lead to us.

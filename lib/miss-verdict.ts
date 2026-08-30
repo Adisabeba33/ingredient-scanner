@@ -153,6 +153,27 @@ export function classifyMiss(printed: string): MissClassification {
   };
 }
 
+/**
+ * The code as it is printed under the bars, undone from its storage form.
+ *
+ * The catalog keys everything as a GTIN-14 — `canonicalBarcode` pads — so a
+ * Fancy Feast tin is stored "00050000577989" and reads that way on any screen
+ * that prints the key. That is right for a database and wrong for a person:
+ * "050000577989" is what is on the tin, what a retailer search box wants, and
+ * what a research brief has to say. Two leading zeros are enough to make a
+ * pasted code find nothing.
+ *
+ * Only a 14-digit key is unpadded, and never below twelve digits, because
+ * UPC-A is twelve and EAN-13 is thirteen — an EAN-8 stored as eight is already
+ * printed form and must be left alone.
+ */
+export function printedForm(code: string): string {
+  const digits = code.replace(/\D+/g, "");
+  if (digits.length !== 14) return digits;
+  const bare = digits.replace(/^0+/, "");
+  return bare.length < 12 ? bare.padStart(12, "0") : bare;
+}
+
 /** Human wording, for the desk. */
 export function missLabel(verdict: MissVerdict): string {
   if (verdict === "seeded-not-imported") return "we hold it — not written to the catalog";

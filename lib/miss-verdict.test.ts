@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { classifyMiss, missLabel, MISS_ORDER, type MissVerdict } from "./miss-verdict";
+import { classifyMiss, missLabel, MISS_ORDER, printedForm, type MissVerdict } from "./miss-verdict";
+import { canonicalBarcode } from "./barcode";
 import { KNOWN_PRODUCTS } from "../data/known-products";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_MULTIPACKS } from "../data/known-multipacks";
@@ -109,5 +110,49 @@ describe("classifyMiss", () => {
       (b) => classifyMiss(b.upc).verdict !== "known-multipack"
     ).map((b) => b.upc);
     expect(misfiled).toEqual([]);
+  });
+});
+
+describe("printedForm", () => {
+  // The reason this exists: the catalog keys a UPC-A as a GTIN-14, and the
+  // desk was printing the key. "00050000577989" pasted into a retailer search
+  // finds nothing; "050000577989" finds the tin.
+  it("undoes the storage padding on a UPC-A", () => {
+    expect(printedForm("00050000577989")).toBe("050000577989");
+    expect(printedForm("00050000429943")).toBe("050000429943");
+  });
+
+  // An EAN-13's own leading digit is data, not padding. Stripping to twelve
+  // would destroy a New Zealand country code.
+  it("keeps an EAN-13 at thirteen digits", () => {
+    expect(printedForm("09421016592050")).toBe("9421016592050");
+  });
+
+  // A packaging indicator is not padding either — it is what makes a case a
+  // different code from the tin inside it.
+  it("keeps a case's indicator digit", () => {
+    expect(printedForm("10818336013673")).toBe("10818336013673");
+  });
+
+  // Anything not stored as fourteen digits is already printed form.
+  it("leaves a short code alone", () => {
+    expect(printedForm("63003444")).toBe("63003444");
+    expect(printedForm("050000577989")).toBe("050000577989");
+  });
+
+  // Every seeded barcode must round-trip: pad it the way the catalog does,
+  // unpad it the way the desk does, and get back what is on the pack.
+  it("round-trips every barcode in the seed", () => {
+    const wrong = KNOWN_PRODUCTS.flatMap((p) => p.packages)
+      .filter((pkg) => printedForm(canonicalBarcode(pkg.upc)) !== pkg.upc)
+      .map((pkg) => pkg.upc);
+    expect(wrong).toEqual([]);
+  });
+
+  it("round-trips every box", () => {
+    const wrong = KNOWN_MULTIPACKS.filter(
+      (b) => printedForm(canonicalBarcode(b.upc)) !== b.upc
+    ).map((b) => b.upc);
+    expect(wrong).toEqual([]);
   });
 });
