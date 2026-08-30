@@ -31,9 +31,13 @@ jobs:
               if(!active)continue; const m=line.match(/^\| `([0-9]{12,14})` \| ([^|]+) \| ([^|]+) \|?/); if(m)rows.push({upc:m[1],product:m[2].trim(),size:m[3].trim()});
             }
             const unique=[...new Map(rows.map(r=>[r.upc,r])).values()];
-            let sm=await text('https://www.weruva.com/sitemap_products_1.xml?from=');
-            const urls=[...sm.matchAll(/<loc>(https:\/\/www\.weruva\.com\/products\/[^<]+)<\/loc>/g)].map(m=>m[1].replace(/\?.*$/,''));
+            const root=await text('https://www.weruva.com/sitemap.xml');
+            const productMaps=[...root.matchAll(/<loc>(https:\/\/www\.weruva\.com\/sitemap_products_[^<]+)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&'));
+            if(!productMaps.length) throw Error('no product sitemap discovered');
+            let urls=[];
+            for(const map of productMaps){const sm=await text(map);urls.push(...[...sm.matchAll(/<loc>(https:\/\/www\.weruva\.com\/products\/[^<]+)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&').replace(/\?.*$/,'')));}
             const handles=[...new Set(urls.map(u=>u.split('/products/')[1]).filter(Boolean))];
+            console.log('product handles',handles.length);
             const catalog=[];
             for(let i=0;i<handles.length;i+=25){
               const batch=handles.slice(i,i+25); const got=await Promise.all(batch.map(async h=>{try{const p=await json(`https://www.weruva.com/products/${h}.js`);return {h,title:p.title,variants:(p.variants||[]).map(v=>({title:v.title,sku:v.sku||null,barcode:v.barcode||null}))}}catch{return null}})); catalog.push(...got.filter(Boolean));
@@ -42,14 +46,8 @@ jobs:
             for(const row of unique){
               const ranked=catalog.map(p=>({p,s:score(row.product,p.title)})).sort((a,b)=>b.s-a.s).slice(0,5);
               let best=null;
-              for(const r of ranked){
-                if(r.s<0.28)continue;
-                const exact=r.p.variants.find(v=>v.barcode===row.upc)||null;
-                if(!best||exact||r.s>best.score){best={score:r.s,title:r.p.title,handle:r.p.h,url:`https://www.weruva.com/products/${r.p.h}`,variants:r.p.variants,exact_current_barcode:!!exact,exact_variant:exact};if(exact)break;}
-              }
-              if(best){
-                try{const html=await text(best.url);best.ingredients_section=extract(html,'Ingredients',['Guaranteed Analysis','Calorie Content','Feeding Guidelines','About This Recipe']);best.ga_section=extract(html,'Guaranteed Analysis',['Calorie Content','Feeding Guidelines','Ingredients']);best.calorie_section=extract(html,'Calorie Content',['Feeding Guidelines','Ingredients','Guaranteed Analysis']);}catch(e){best.fetch_error=String(e)}
-              }
+              for(const r of ranked){if(r.s<0.28)continue;const exact=r.p.variants.find(v=>v.barcode===row.upc)||null;if(!best||exact||r.s>best.score){best={score:r.s,title:r.p.title,handle:r.p.h,url:`https://www.weruva.com/products/${r.p.h}`,variants:r.p.variants,exact_current_barcode:!!exact,exact_variant:exact};if(exact)break;}}
+              if(best){try{const html=await text(best.url);best.ingredients_section=extract(html,'Ingredients',['Guaranteed Analysis','Calorie Content','Feeding Guidelines','About This Recipe']);best.ga_section=extract(html,'Guaranteed Analysis',['Calorie Content','Feeding Guidelines','Ingredients']);best.calorie_section=extract(html,'Calorie Content',['Feeding Guidelines','Ingredients','Guaranteed Analysis']);}catch(e){best.fetch_error=String(e)}}
               out.push({...row,current_match:best});
             }
             const summary={index_rows:rows.length,unique_upcs:unique.length,manufacturer_title_match:out.filter(x=>x.current_match).length,exact_same_upc_current:out.filter(x=>x.current_match?.exact_current_barcode).length,changed_or_historical:out.filter(x=>x.current_match&&!x.current_match.exact_current_barcode).length,unresolved:out.filter(x=>!x.current_match).length};
