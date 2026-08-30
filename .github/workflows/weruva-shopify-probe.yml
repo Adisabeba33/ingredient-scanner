@@ -1,0 +1,35 @@
+name: Probe Weruva product JSON
+on: push
+permissions:
+  contents: write
+jobs:
+  probe:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-weruva
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Probe
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          (async()=>{
+            const u='https://www.weruva.com/products/tic-tac-whoa-cat-can.js';
+            const r=await fetch(u,{headers:{'user-agent':'Mozilla/5.0'}});
+            if(!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+            const p=await r.json();
+            const out={title:p.title,handle:p.handle,variants:(p.variants||[]).map(v=>({title:v.title,sku:v.sku,barcode:v.barcode,grams:v.grams,weight:v.weight,weight_unit:v.weight_unit})),description:p.description};
+            fs.writeFileSync('research/tmp-weruva-shopify-test.json',JSON.stringify(out,null,2));
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Commit probe
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/tmp-weruva-shopify-test.json
+          git commit -m 'research: probe Weruva first-party product JSON' || exit 0
+          git push
