@@ -184,6 +184,16 @@ const KNOWN_TREAT_LINES = [
   "hearties",
   // Freeze-dried cat snacks. "Fillin" is the maker's spelling.
   "fillin good",
+  // Blue Buffalo's kitten snack, and the one record in that ledger whose deck
+  // word did not survive into the name: its sibling is "Kitten Crunchy TREAT
+  // Chicken" and this one is "Kitten Crunchy Grain-Free Salmon Recipe", so
+  // every other signal says snack and the name says nothing.
+  //
+  // Narrow on purpose — two words, adjacent, both required. Blue Buffalo's
+  // kitten DIET is "Tastefuls Kitten", and no maker has ever called a
+  // complete food "Kitten Crunchy". Without this the pack is judged as a
+  // kitten's whole diet, which is the §2.4 error about a bag of snacks.
+  "kitten crunchy",
 ];
 
 const KNOWN_TOPPER_LINES = [
@@ -201,6 +211,10 @@ const KNOWN_TOPPER_LINES = [
   // name is the instruction. Safe as a compound in the way a bare "topper" is
   // not: two words, and the maker's own range name.
   "top that",
+  // Blue Buffalo's Wild Cuts range. "Tasty Toppers" is the range name on the
+  // pouch, and it is the compound the bare word could not be — the Cesar
+  // "Loaf & Topper in Sauce" trap needs "topper" standing alone to spring.
+  "tasty toppers",
 ];
 
 function hasPhrase(haystack: string, phrase: string): boolean {

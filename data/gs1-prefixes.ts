@@ -54,4 +54,10 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // different company, so ONE entry covers all three — see `gs1Body` in
   // lib/known-products.ts for the normalisation both askers now do first.
   { prefix: "818336", maker: "I and love and you" },
+  // Blue Buffalo runs two company prefixes side by side, and both are on the
+  // shelf right now: the Weight Control 3 lb bag is 859610 and the 5 lb bag of
+  // the same recipe is 840243. Neither is historical, so neither can be left
+  // out — a maker having one prefix was an assumption, not a rule.
+  { prefix: "840243", maker: "Blue Buffalo (General Mills)" },
+  { prefix: "859610", maker: "Blue Buffalo (General Mills)" },
 ];

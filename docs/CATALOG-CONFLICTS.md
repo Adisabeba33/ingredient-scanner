@@ -1189,3 +1189,19 @@ print 868 kcal/kg and 72 kcal/can, where the arithmetic gives 73.8. All
 three are off by the same 1.8, which is a maker rounding rather than a
 typo — a mistyped digit does not repeat itself identically across three
 cans. Stored as printed.
+
+## J. Blue Buffalo (batch 024) — a market split, a calorie line that argues with itself, and one identity that belongs to two barcodes
+
+1. **`840243150564`**, **`840243150571`** — True Solutions Urinary Care, 3.5 lb and 11 lb: Blue Buffalo's Canadian 6 lb / 15 lb bags of this recipe carry a materially different formula and calorie profile from the current US bags. The Canadian generation was **excluded** rather than merged — a page from another market is not evidence about a US barcode, and filling a missing US field from it would have written a food that is not in the bag.
+2. **`859610007424`**, **`859610008940`** — Freedom Grain-Free Indoor Chicken, 3 oz and 5.5 oz: the deck prints **1179 kcal/kg** and, on the same packs, **97 kcal per 3 oz (85 g)** and **178 kcal per 5.5 oz (156 g)**. The two per-can figures agree with each other exactly — both are 1141 kcal/kg — and neither agrees with the printed 1179. Two independent statements landing on one number is not what a typo does; one statement disagreeing with both is. Both are stored as printed, because picking the number that checks out would be writing a label.
+
+### One record held back
+
+- **`859610008742`** — Freedom Grain-Free Indoor Chicken Recipe, 11 lb. Its printed identity already belongs to another barcode: `859610007073` is the same range, the same variant wording and the same 11 lb bag, and it is an **adult** food with a different ingredient deck, while this record's life stage is **senior**. Blue Buffalo's senior version of this recipe is named "Indoor **Mature** Chicken" on its wet sibling `840243103645`, so a word is missing from one of these two names — and there is no way from here to know which. Seeding both would put two different foods under one shelf label. A photograph of either bag settles it.
+
+### Four seeded as identity only
+
+No ingredient list was ever established for these, so they carry a barcode and a name and no composition. They show on the coverage page as products to go and find, and the import steps over them — an empty catalog row would read to the consumer app as a recent miss.
+
+- `840243134403` — Baby BLUE Kitten Grain-Free High Protein Salmon, 3 oz
+- `840243110056`, `840243110063`, `840243110070` — Wild Cuts Tasty Toppers, chicken, duck and salmon morsels in gravy, 3 oz

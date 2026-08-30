@@ -607,21 +607,55 @@ describe("data/known-formulas.ts", () => {
   // figure is not evidence of anything, because the adult figure IS the kitten
   // figure. A test that cannot fail on a class of input should say so rather
   // than pass and be counted.
-  it("keeps the kitten taurine guarantee at what the deck says", () => {
-    const kittens = KNOWN_PRODUCTS.filter(
-      (p) => p.lifeStage === "kitten" && p.foodForm === "wet"
-    );
-    expect(kittens.length).toBeGreaterThan(0);
-    const stated = kittens
-      .flatMap((p) => p.packages.map((k) => k.upc))
-      .filter((upc) => KNOWN_FORMULAS[upc]?.analysis.taurineMin !== null);
-    expect(stated.length).toBeGreaterThan(0);
-    for (const upc of stated) {
-      expect({ upc, taurine: KNOWN_FORMULAS[upc]?.analysis.taurineMin }).toEqual({
-        upc,
-        taurine: 0.07,
-      });
+  //
+  // ── And the figure is a MAKER's, not the industry's ────────────────────
+  //
+  // This asserted 0.07 flat, which was true of every wet kitten food in the
+  // seed while the seed was Purina and Hill's. Blue Buffalo guarantees 0.10 on
+  // its kitten wet food — and 0.10 on its adult wet food too, so the absolute
+  // number carries no signal across makers at all: adults in this seed now run
+  // 0.05 AND 0.10, kittens 0.07 and 0.10.
+  //
+  // What remains true, and is the thing worth checking, is a comparison WITHIN
+  // one brand: a maker's kitten formula is never taurine-poorer than its own
+  // adult formula. That is the shape of the mistake this was written for — a
+  // kitten deck tidied into the adult figure sitting next to it — and it does
+  // not care what number a maker chose.
+  it("never guarantees a kitten less taurine than the same maker's adults", () => {
+    const taurine = (upc: string) => KNOWN_FORMULAS[upc]?.analysis.taurineMin ?? null;
+    const stated = (stage: string) => {
+      const byBrand = new Map<string, number[]>();
+      for (const p of KNOWN_PRODUCTS) {
+        if (p.foodForm !== "wet" || p.species !== "cat" || p.lifeStage !== stage) continue;
+        for (const pkg of p.packages) {
+          // A product seeded as identity only has NO formula, and `?.` on a
+          // missing one returns `undefined` — which is not `null`. That is how
+          // the old version of this test passed a product with no composition
+          // into a comparison against a number: the bug sat here unseen for
+          // six batches, because every seeded kitten product had a composition
+          // until Blue Buffalo brought one that does not.
+          const t = taurine(pkg.upc);
+          if (t === null) continue;
+          byBrand.set(p.brand, [...(byBrand.get(p.brand) ?? []), t]);
+        }
+      }
+      return byBrand;
+    };
+
+    const kittens = stated("kitten");
+    const adults = stated("adult");
+    expect(kittens.size).toBeGreaterThan(0);
+
+    const wrong: string[] = [];
+    for (const [brand, kittenFigures] of kittens) {
+      const adultFigures = adults.get(brand);
+      if (!adultFigures?.length) continue;
+      const adultMax = Math.max(...adultFigures);
+      for (const t of kittenFigures) {
+        if (t < adultMax) wrong.push(`${brand}: kitten ${t}% against adult ${adultMax}%`);
+      }
     }
+    expect(wrong).toEqual([]);
   });
 
   // The field says what a deck said, never what a name suggests. A range name
@@ -759,11 +793,20 @@ describe("data/known-formulas.ts", () => {
     // evidence: Hill's puts it in the BRAND ("Prescription Diet"), Royal
     // Canin in the LINE ("Veterinary Diet" for cats, "Veterinary Health
     // Nutrition" for dogs) under one retail brand name.
+    //
+    // ── Written as the RULE, not as a roster of who has one ─────────────
+    //
+    // This listed Royal Canin's two exact line names, which held while they
+    // were the only maker naming the channel in a range. Blue Buffalo calls
+    // its range "Natural Veterinary Diet" — a third shape, under a retail
+    // brand, and one an exact-name list could only ever meet by being edited
+    // again. The evidence is a PHRASE the maker prints, so the expectation
+    // says which phrases, and any maker printing one is covered the day they
+    // arrive.
+    const VET_MARKERS = /prescription diet|veterinary diet|veterinary health nutrition/i;
     const RC_VET_LINES = new Set(["Veterinary Diet", "Veterinary Health Nutrition"]);
     expect(vet.map((p) => `${p.brand} ${p.line}`).sort()).toEqual(
-      KNOWN_PRODUCTS.filter(
-        (p) => p.brand.includes("Prescription Diet") || RC_VET_LINES.has(p.line)
-      )
+      KNOWN_PRODUCTS.filter((p) => VET_MARKERS.test(`${p.brand} ${p.line}`))
         .map((p) => `${p.brand} ${p.line}`)
         .sort()
     );
@@ -919,19 +962,6 @@ describe("data/known-multipacks.ts", () => {
     expect(repeats).toEqual([]);
   });
 
-  // A range name that is not in the brand's list files every product under
-  // "Other" on the coverage page — the same check the products get.
-  it("files every box under a range the brand entry knows", () => {
-    const brand = US_PET_BRANDS.find((b) => brandKey(b.name) === brandKey("I and love and you"));
-    const lines = new Set(brand?.lines ?? []);
-    const orphans = [
-      ...new Set(
-        KNOWN_MULTIPACKS.filter((b) => !lines.has(b.line)).map((b) => `${b.brand} — ${b.line}`)
-      ),
-    ];
-    expect(orphans).toEqual([]);
-  });
-
   // Empty is an honest answer — it means the box was read and no inner code
   // could be proven — so this is a floor, not a demand. It exists to catch a
   // generator that silently dropped the members it was given.
@@ -984,5 +1014,69 @@ describe("multipackVerdict", () => {
   // A box read with no member proven must not undo one read with members.
   it("does not erase members by offering none", () => {
     expect(multipackVerdict(box({ contains: ["00818336010200"] }), [])).toBe("identical");
+  });
+});
+
+/**
+ * Nothing may file under "Other".
+ *
+ * ── What "Other" is, and why it is worse than it looks ────────────────────
+ *
+ * The coverage page arranges a brand by its ranges, taken from
+ * `data/us-pet-brands.ts`, and matched EXACTLY. A product whose `line` is not
+ * in that list still shows — it is never hidden — but it shows in a bucket
+ * called "Other", detached from the shelf it actually belongs to.
+ *
+ * That is quiet in the worst way. Nothing errors, no count is wrong, and the
+ * page looks complete; a range simply reads as empty forever while its
+ * products sit in a pile at the bottom. The Blue Buffalo batch found the
+ * purest example: the entry said "Baby Blue" and every pack says "Baby BLUE".
+ * One lower-case letter, a range that looked present, and every kitten product
+ * filed away from it.
+ *
+ * So this is a test rather than a habit. Adding a range to the brand entry is
+ * one line and takes a second; noticing months later that a range has been
+ * empty the whole time takes somebody wondering why.
+ *
+ * It asks the same question of boxes as of products, because a variety pack
+ * files on that page too.
+ */
+describe("the coverage page's ranges", () => {
+  const linesByBrand = new Map<string, Set<string>>();
+  for (const brand of US_PET_BRANDS) {
+    linesByBrand.set(brandKey(brand.name), new Set(brand.lines ?? []));
+  }
+
+  it("knows every brand the seed holds", () => {
+    const unknown = [
+      ...new Set(
+        [...KNOWN_PRODUCTS, ...KNOWN_MULTIPACKS]
+          .filter((p) => !linesByBrand.has(brandKey(p.brand)))
+          .map((p) => p.brand)
+      ),
+    ];
+    expect(unknown).toEqual([]);
+  });
+
+  it("files every product under a range its brand entry names", () => {
+    const orphans = [
+      ...new Set(
+        KNOWN_PRODUCTS.filter(
+          (p) => !linesByBrand.get(brandKey(p.brand))?.has(p.line)
+        ).map((p) => `${p.brand} — ${p.line}`)
+      ),
+    ];
+    expect(orphans).toEqual([]);
+  });
+
+  it("files every box under a range its brand entry names", () => {
+    const orphans = [
+      ...new Set(
+        KNOWN_MULTIPACKS.filter(
+          (b) => !linesByBrand.get(brandKey(b.brand))?.has(b.line)
+        ).map((b) => `${b.brand} — ${b.line}`)
+      ),
+    ];
+    expect(orphans).toEqual([]);
   });
 });

@@ -478,6 +478,12 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "General Mills",
     species: "both",
     aliases: ["blue", "blue buffalo co", "bluebuffalo"],
+    // The first eight and the last five were shelf memory; the ones marked
+    // below came off packs in the research ledger, and one correction matters
+    // more than any addition: this said "Baby Blue", and the pack says "Baby
+    // BLUE". A coverage page files by exact match, so one lower-case letter
+    // was enough to send every kitten product to "Other" — the failure mode
+    // this list exists to prevent, hiding inside a range that looked present.
     lines: [
       "Life Protection Formula",
       "Wilderness",
@@ -487,13 +493,22 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Carnivora",
       "Tastefuls",
       "Tastefuls Savory Singles",
-      "Baby Blue",
+      "Baby BLUE",
       "Homestyle Recipe",
       "Divine Delights",
       "Natural Veterinary Diet",
       "Health Bars",
       "Blue Bits",
       "Sizzlers",
+      // From the ledger. Blue Buffalo capitalises BLUE inside a range name
+      // and does not do it consistently, so these are spelled as the packs
+      // spell them rather than tidied.
+      "BLUE Bursts",
+      "True Chews",
+      "Wild Cuts Tasty Toppers",
+      // A range named after the brand, which is what some variety packs
+      // carry: no sub-range on the box at all. Odd to read and true.
+      "Blue Buffalo",
     ],
   },
   { name: "Nudges", owner: "General Mills", species: "dog" },
