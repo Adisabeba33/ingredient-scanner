@@ -231,6 +231,8 @@ Cases, trays and twins. Every one of these is a code somebody could reasonably
 mistake for a single tin, which is why the list exists. If your evidence says one of
 them has earned its way off, say so out loud rather than quietly.
 
+Narrowed to this maker's own GS1 company prefix. The full list is in `data/wrong-barcodes.ts`.
+
 | barcode | what it really is | scan instead |
 |---|---|---|
 | `050000504299` | case of Fancy Feast Petites Tender Beef tubs | `050000002603` |

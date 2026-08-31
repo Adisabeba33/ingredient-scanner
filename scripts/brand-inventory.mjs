@@ -111,14 +111,36 @@ const declaredLines = brandBlock
   : [];
 const owner = brandBlock ? field(brandBlock, "owner") : null;
 
+const seededCodesEarly = products.flatMap((p) => p.packages.map((k) => k.upc));
+
 // ── Codes that belong to this brand and are NOT single tins ───────────────
 
-const wrong = [];
+const allWrong = [];
 for (const m of read("data/wrong-barcodes.ts").matchAll(
   /code:\s*"(\d+)",\s*\n\s*is:\s*"([^"]+)"(?:,\s*\n\s*insteadUse:\s*"(\d+)")?/g
 )) {
-  wrong.push({ code: m[1], is: m[2], insteadUse: m[3] ?? null });
+  allWrong.push({ code: m[1], is: m[2], insteadUse: m[3] ?? null });
 }
+
+/**
+ * Narrowed to this maker's own GS1 company prefixes.
+ *
+ * `data/wrong-barcodes.ts` carries no brand field — a case code's `is:` line is
+ * prose — so the only honest filter is the company prefix, taken from the
+ * barcodes this brand already holds. Without it a 9Lives inventory printed ten
+ * Purina case codes, which is the noise this whole file exists to remove.
+ *
+ * A brand with nothing seeded yet has no prefix to derive, so it gets the whole
+ * list with that said plainly. Better a page of codes that are probably
+ * somebody else's than a silently empty section.
+ */
+const brandPrefixes = new Set(
+  [...new Set(seededCodesEarly)].map((c) => c.padStart(14, "0").slice(1, 8))
+);
+const wrongFiltered = brandPrefixes.size > 0;
+const wrong = wrongFiltered
+  ? allWrong.filter((w) => brandPrefixes.has(w.code.padStart(14, "0").slice(1, 8)))
+  : allWrong;
 
 // ── Anything a research ledger already claims for this brand ──────────────
 
@@ -223,6 +245,13 @@ if (wrong.length) {
   say(`mistake for a single tin, which is why the list exists. If your evidence says one of`);
   say(`them has earned its way off, say so out loud rather than quietly.`);
   say();
+  say(
+    wrongFiltered
+      ? `Narrowed to this maker's own GS1 company prefix. The full list is in \`data/wrong-barcodes.ts\`.`
+      : `**Not narrowed** — this brand has no seeded barcode to take a company prefix from, so ` +
+        `the whole list is shown and most of it is probably somebody else's.`
+  );
+  say();
   say(`| barcode | what it really is | scan instead |`);
   say(`|---|---|---|`);
   for (const w of wrong) {
@@ -251,8 +280,9 @@ const exclusion = [
 say(`## The exclusion list`);
 say();
 say(
-  `Every barcode above, flat, for a mechanical check. ${exclusion.length} codes. A code in ` +
-    `this list is not a new record whatever a retailer page says about it.`
+  `Every barcode above, flat, for a mechanical check. ${exclusion.length} ` +
+    `code${exclusion.length === 1 ? "" : "s"}. A code in this list is not a new record ` +
+    `whatever a retailer page says about it.`
 );
 say();
 say("```");
