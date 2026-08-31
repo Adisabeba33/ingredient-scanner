@@ -2,36 +2,19 @@
 /**
  * Check a research ledger against everything the seeding pass actually needs.
  *
- * ── Why this exists ───────────────────────────────────────────────────────
+ * `research/AGENTS.md` is the prose contract; this script turns the repeatable
+ * parts of that contract into a commit gate. It deliberately runs under bare
+ * node and reads the repository's TypeScript/data files as text.
  *
- * `research/AGENTS.md` says what a good record is. It is a contract written in
- * prose, and prose is not checkable — so six brands have now arrived correct
- * against the contract and still needing a day of repair before they could be
- * seeded. The same handful of defects, every time:
- *
- *   - a printed guarantee written as free text ("DHA 0.07% min") instead of a
- *     structured object, in a different spelling per ledger;
- *   - a `presentation` that is a package type or a texture ("can", "bite");
- *   - a `variant` that restates the size, so two pack sizes of one product
- *     read as two products — or worse, two DIFFERENT products read as one;
- *   - a life stage the seed's vocabulary does not have;
- *   - a calorie figure the panel beside it cannot physically produce;
- *   - a panel whose own numbers sum past the whole pack;
- *   - two records claiming the same printed identity at the same size.
- *
- * None of those are research failures. They are format failures, and a machine
- * should be the one finding them — before the commit, not a month later.
- *
- * ── Usage ─────────────────────────────────────────────────────────────────
- *
- *   node scripts/check-ledger.mjs research/deep-research-theradiet.json
- *
- * Exit code is 1 if anything ERRORS, so it can gate a batch. WARNs are printed
- * and do not fail: they are questions, and some have good answers.
- *
- * Reads the repository's own seed, vocabularies and exclusion lists with plain
- * regexes, exactly as `scripts/check-batch.mjs` does, so it runs under bare
- * node before anything is installed or built.
+ * Legacy exception: research/deep-research-barcodes.json predates the one-brand
+ * ledger contract and is explicitly reserved by AGENTS.md for Fancy Feast and
+ * Friskies together. Its historical records also include entries that were
+ * later seeded without being rewritten as promoted_to_seed. Those historical
+ * records are grandfathered through the record that was last in the shared
+ * ledger when this compatibility path was added. Records appended after that
+ * marker are checked by the same current rules as every other ledger, including
+ * live catalog collision checks. This keeps the old file usable without
+ * weakening checks on new research.
  */
 
 import { readFileSync, readdirSync } from "node:fs";
@@ -41,8 +24,6 @@ import { dirname, join, basename } from "node:path";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
 const read = (p) => readFileSync(join(ROOT, p), "utf8");
-
-// ── The repository's own answers, read rather than restated ───────────────
 
 const seededUpcs = new Set(
   [...read("data/known-products.ts").matchAll(/upc:\s*"(\d+)"/g)].map((m) => m[1])
@@ -57,9 +38,6 @@ for (const m of read("data/wrong-barcodes.ts").matchAll(
   wrongUpcs.set(m[1], m[2]);
 }
 const gs1 = [...read("data/gs1-prefixes.ts").matchAll(/prefix:\s*"(\d+)",\s*maker:\s*"([^"]+)"/g)].map(
-  // Mapped to pairs rather than kept as match arrays: element 0 of a match is
-  // the WHOLE match, so destructuring the raw array reads the entire source
-  // line as the prefix and nothing ever matches.
   (m) => [m[1], m[2]]
 );
 
@@ -71,7 +49,6 @@ function vocabulary(name) {
 const TEXTURES = vocabulary("TEXTURES");
 const PRESENTATIONS = vocabulary("PRESENTATIONS");
 
-/** Every barcode any other ledger already claims. */
 function otherLedgers(selfPath) {
   const claimed = new Map();
   const dir = join(ROOT, "research");
@@ -90,15 +67,10 @@ function otherLedgers(selfPath) {
   return claimed;
 }
 
-// ── Controlled values ─────────────────────────────────────────────────────
-
 const SCOPES = ["individual_unit", "multipack", "case", "tray", "unknown"];
 const SPECIES = ["cat", "dog"];
 const FORMS = ["wet", "dry", "treat", "supplement", "unknown"];
 const PACKAGES = ["can", "pouch", "tub", "tray", "bag", "box", "canister", "other"];
-// The five the SEED can store. `mature` is not one of them — Blue Buffalo
-// prints it and it means senior; say so in `conflicts` rather than inventing a
-// sixth value the catalog has nowhere to put.
 const LIFE_STAGES = ["adult", "senior", "kitten", "puppy", "all"];
 const STATUSES = [
   "candidate",
@@ -110,6 +82,9 @@ const STATUSES = [
 const GTIN_LENGTHS = [8, 12, 13, 14];
 const GRAMS_PER_OZ = 28.3495;
 const KCAL_SLACK = 1.3;
+const LEGACY_SHARED_FILE = "deep-research-barcodes.json";
+const LEGACY_SHARED_BRANDS = new Set(["Fancy Feast", "Friskies"]);
+const LEGACY_BASELINE_LAST_UPC = "050000215201";
 
 function checkDigit(body) {
   let sum = 0;
@@ -124,7 +99,6 @@ function validGtin(code) {
   return checkDigit(code.slice(0, -1)) === Number(code[code.length - 1]);
 }
 
-/** See lib/known-products.ts — the packaging indicator is not a company. */
 function gs1Body(code) {
   return code.replace(/\D+/g, "").padStart(14, "0").slice(1);
 }
@@ -136,7 +110,16 @@ function makerOf(code) {
 const normalise = (t) =>
   (t ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
-// ── Run ───────────────────────────────────────────────────────────────────
+function identityOf(r) {
+  const isBox = r.barcode_scope !== "individual_unit";
+  return (
+    isBox
+      ? [r.species, r.product_name, r.size]
+      : [r.species, r.product_line, r.variant, r.size]
+  )
+    .map(normalise)
+    .join(" | ");
+}
 
 const path = process.argv[2];
 if (!path) {
@@ -156,15 +139,31 @@ const errors = [];
 const warnings = [];
 const err = (upc, msg) => errors.push(`${upc ?? "-"}  ${msg}`);
 const warn = (upc, msg) => warnings.push(`${upc ?? "-"}  ${msg}`);
+const isLegacySharedLedger = basename(path) === LEGACY_SHARED_FILE;
 
-for (const key of ["schema_version", "brand_scope", "records"]) {
+for (const key of isLegacySharedLedger
+  ? ["schema_version", "records"]
+  : ["schema_version", "brand_scope", "records"]) {
   if (!(key in ledger)) err(null, `ledger is missing the top-level key "${key}"`);
 }
-if (!Array.isArray(ledger.brand_scope) || ledger.brand_scope.length !== 1) {
-  err(null, "brand_scope must be an array holding exactly one brand");
+if (!isLegacySharedLedger) {
+  if (!Array.isArray(ledger.brand_scope) || ledger.brand_scope.length !== 1) {
+    err(null, "brand_scope must be an array holding exactly one brand");
+  }
 }
+
 const records = Array.isArray(ledger.records) ? ledger.records : [];
 const claimedElsewhere = otherLedgers(path);
+const legacyBaselineEnd = isLegacySharedLedger
+  ? records.findIndex((r) => String(r?.upc ?? "") === LEGACY_BASELINE_LAST_UPC)
+  : -1;
+if (isLegacySharedLedger && legacyBaselineEnd < 0) {
+  err(
+    null,
+    `legacy shared-ledger baseline marker ${LEGACY_BASELINE_LAST_UPC} is missing; ` +
+      `do not guess which historical records may bypass current checks`
+  );
+}
 
 const unknownPrefixes = new Set();
 const alreadySeeded = [];
@@ -172,11 +171,23 @@ const seenUpc = new Map();
 const seenIdentity = new Map();
 const byComposition = new Map();
 
-for (const r of records) {
+for (let recordIndex = 0; recordIndex < records.length; recordIndex += 1) {
+  const r = records[recordIndex];
   const upc = r.upc == null ? null : String(r.upc);
   const isBox = r.barcode_scope !== "individual_unit";
+  const legacyBaselineRecord =
+    isLegacySharedLedger && legacyBaselineEnd >= 0 && recordIndex <= legacyBaselineEnd;
 
-  // ── Identity and barcode ────────────────────────────────────────────
+  // Historical shared-ledger records are immutable evidence. Grandfather their
+  // old format/seed overlap, but load their UPCs and identities so a new append
+  // still collides with them exactly as it should.
+  if (legacyBaselineRecord) {
+    if (upc && !seenUpc.has(upc)) seenUpc.set(upc, r);
+    const identity = identityOf(r);
+    if (identity && !seenIdentity.has(identity)) seenIdentity.set(identity, upc);
+    continue;
+  }
+
   if (typeof r.upc !== "string") err(upc, "upc must be a quoted STRING, never a number");
   if (!upc || !validGtin(upc)) {
     err(upc, `not a valid barcode — ${upc ? "check digit or length" : "missing"}`);
@@ -184,18 +195,9 @@ for (const r of records) {
     if (r.canonical_gtin14 !== upc.padStart(14, "0")) {
       err(upc, `canonical_gtin14 should be "${upc.padStart(14, "0")}"`);
     }
-    // Collected, not warned per record. A new brand's prefix is unknown by
-    // definition, and two hundred identical lines is how somebody learns to
-    // scroll past this whole report — see data/gs1-prefixes.ts on exactly
-    // that failure.
     if (!makerOf(upc)) unknownPrefixes.add(gs1Body(upc).slice(0, 7).replace(/^0/, ""));
     if (seenUpc.has(upc)) err(upc, `appears twice in this ledger`);
     seenUpc.set(upc, r);
-    // Aggregated rather than one line per record, for the same reason the
-    // unknown prefixes are: a ledger that has ALREADY been seeded overlaps
-    // completely, and two hundred identical lines bury the four findings that
-    // actually matter. Still an error — "do not research this again" is the
-    // whole point — just counted once.
     if (seededUpcs.has(upc) || boxUpcs.has(upc)) alreadySeeded.push(upc);
     if (wrongUpcs.has(upc)) err(upc, `data/wrong-barcodes.ts says this is ${wrongUpcs.get(upc)}`);
     if (claimedElsewhere.has(upc)) {
@@ -203,11 +205,14 @@ for (const r of records) {
     }
   }
 
-  if (ledger.brand_scope?.length === 1 && r.brand !== ledger.brand_scope[0]) {
+  if (isLegacySharedLedger) {
+    if (!LEGACY_SHARED_BRANDS.has(r.brand)) {
+      err(upc, `brand "${r.brand}" is outside legacy shared scope Fancy Feast + Friskies`);
+    }
+  } else if (ledger.brand_scope?.length === 1 && r.brand !== ledger.brand_scope[0]) {
     err(upc, `brand "${r.brand}" is outside brand_scope`);
   }
 
-  // ── Controlled values ───────────────────────────────────────────────
   const controlled = [
     ["barcode_scope", SCOPES, r.barcode_scope],
     ["species", SPECIES, r.species],
@@ -240,7 +245,6 @@ for (const r of records) {
     );
   }
 
-  // ── Guaranteed analysis ─────────────────────────────────────────────
   const ga = r.guaranteed_analysis;
   if (!ga || typeof ga !== "object") {
     err(upc, "guaranteed_analysis must be an object");
@@ -250,9 +254,7 @@ for (const r of records) {
         err(
           upc,
           `other_printed_guarantees holds free text (${JSON.stringify(g)}). ` +
-            `Every entry must be {nutrient, basis: "min"|"max", value: number, unit}. ` +
-            `Three ledgers have each invented their own sentence format and each ` +
-            `needed its own parser written by hand.`
+            `Every entry must be {nutrient, basis: "min"|"max", value: number, unit}.`
         );
         continue;
       }
@@ -274,8 +276,6 @@ for (const r of records) {
         err(upc, `${name} = ${v} is not a percentage`);
       }
     }
-    // A panel that sums past the whole pack cannot be right, whatever else is
-    // true — and a mistranscribed moisture is the usual cause.
     const sum = (p ?? 0) + (f ?? 0) + (m ?? 0) + a + fib;
     if (sum > 100) {
       err(
@@ -285,9 +285,6 @@ for (const r of records) {
       );
     }
 
-    // Bounds by form. Moisture is what actually catches a dry-matter panel
-    // pasted into an as-fed one; the protein ceiling rises for a snack,
-    // because dried meat really does reach it.
     if (m != null && p != null) {
       const isSnack = r.food_form === "treat" || r.food_form === "supplement";
       const wet = m >= 60;
@@ -300,10 +297,6 @@ for (const r of records) {
       if (p > cap) warn(upc, `protein ${p}% is above ${cap}% for a ${wet ? "wet" : "dry"} ${r.food_form}`);
     }
 
-    // A calorie figure the panel cannot physically produce. Modified Atwater
-    // on the guarantees themselves; doubled, because protein and fat are
-    // MINIMA and moisture a MAXIMUM, so a real food beats its own ceiling —
-    // the worst honest ratio across 1010 seeded panels is 1.69.
     const kk = r.calorie_content?.kcal_per_kg;
     if (kk != null && p != null && f != null && m != null) {
       const rest = Math.max(0, 100 - m - p - f - a);
@@ -318,10 +311,8 @@ for (const r of records) {
     }
   }
 
-  // ── Calorie arithmetic, where both halves are printed ────────────────
   const cal = r.calorie_content ?? {};
   if ((cal.kcal_per_kg == null) !== (cal.kcal_per_unit == null)) {
-    // Not an error: plenty of bags print kcal/kg alone.
     if (cal.kcal_per_unit != null) warn(upc, "kcal_per_unit without kcal_per_kg");
   }
   if (cal.kcal_per_unit != null && !cal.unit_name) {
@@ -340,7 +331,6 @@ for (const r of records) {
     }
   }
 
-  // ── The status gate, checked rather than promised ────────────────────
   if (r.research_status === "source_verified") {
     if (!isBox) {
       if (!(r.ingredients_verbatim ?? "").trim()) {
@@ -356,7 +346,6 @@ for (const r of records) {
     }
   }
 
-  // ── Boxes ───────────────────────────────────────────────────────────
   if (isBox) {
     if ((r.ingredients_verbatim ?? "").trim()) {
       warn(
@@ -385,19 +374,7 @@ for (const r of records) {
     err(upc, "contains is only meaningful on a multipack");
   }
 
-  // ── Identity ────────────────────────────────────────────────────────
-  //
-  // A box is named differently from a tin. Its `variant` is usually the pack
-  // itself ("13 OZ CAN (12 PACK)") and the flavour lives in `product_name`, so
-  // keying a carton on line+variant reads every 12-pack of a range as the same
-  // thing. Units are keyed on what a shelf label says; boxes on their name.
-  const identity = (
-    isBox
-      ? [r.species, r.product_name, r.size]
-      : [r.species, r.product_line, r.variant, r.size]
-  )
-    .map(normalise)
-    .join(" | ");
+  const identity = identityOf(r);
   if (seenIdentity.has(identity)) {
     err(
       upc,
@@ -431,9 +408,6 @@ for (const r of records) {
   }
 }
 
-// Two DIFFERENT products with one deck, to the letter. Sometimes real — a
-// rename in flight sells one recipe under two names at once — and sometimes a
-// list pasted onto the wrong barcode. Either way somebody has to say which.
 for (const [, group] of byComposition) {
   const identities = new Set(
     group.map((r) => [r.species, r.product_line, r.variant].map(normalise).join("|"))
@@ -459,16 +433,21 @@ if (alreadySeeded.length) {
   );
 }
 
-// ── Report ────────────────────────────────────────────────────────────────
-
 const byStatus = {};
 for (const r of records) byStatus[r.research_status] = (byStatus[r.research_status] ?? 0) + 1;
 const byScope = {};
 for (const r of records) byScope[r.barcode_scope] = (byScope[r.barcode_scope] ?? 0) + 1;
 
 console.log(`\n${path}`);
-console.log(`brand_scope: ${JSON.stringify(ledger.brand_scope)}`);
+console.log(
+  `brand_scope: ${
+    isLegacySharedLedger ? '["Fancy Feast","Friskies"] (legacy shared)' : JSON.stringify(ledger.brand_scope)
+  }`
+);
 console.log(`records: ${records.length}`);
+if (isLegacySharedLedger && legacyBaselineEnd >= 0) {
+  console.log(`  legacy baseline: records 1-${legacyBaselineEnd + 1} grandfathered; appended records fully checked`);
+}
 console.log(`  by status: ${Object.entries(byStatus).map(([k, v]) => `${k} ${v}`).join(", ") || "—"}`);
 console.log(`  by scope:  ${Object.entries(byScope).map(([k, v]) => `${k} ${v}`).join(", ") || "—"}`);
 if (unknownPrefixes.size) {
