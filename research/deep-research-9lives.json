@@ -1,0 +1,475 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": ["9Lives"],
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+  {
+    "catalog_number": null,
+    "upc": "071190480958",
+    "canonical_gtin14": "00071190480958",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Paté",
+    "product_name": "9Lives Paté With Real Chicken Wet Cat Food 4-Pack",
+    "variant": "With Real Chicken 4-Pack",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "4 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-pate-with-real-chicken-wet-cat-food/",
+      "https://shop.freshtown.com/store/freshtown/products/88051987-9lives-pate-with-real-chicken-cat-food-4-ct"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190480958.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 4,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190480873",
+    "canonical_gtin14": "00071190480873",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Paté",
+    "product_name": "9Lives Paté With Real Chicken & Tuna Wet Cat Food 4-Pack",
+    "variant": "With Real Chicken & Tuna 4-Pack",
+    "recipe": [
+      "chicken",
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "4 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-pate-with-real-chicken-tuna-wet-cat-food/",
+      "https://shop.pathmark.com/store/pathmark/products/88051955-9lives-pate-with-real-chicken-tuna-cat-food-4-ct"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190480873.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 4,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190480897",
+    "canonical_gtin14": "00071190480897",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Paté",
+    "product_name": "9Lives Paté Seafood Platter Wet Cat Food 4-Pack",
+    "variant": "Seafood Platter 4-Pack",
+    "recipe": [
+      "fish",
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "4 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-pate-seafood-platter-wet-cat-food/",
+      "https://shopwoodmans.com/store/woodmans-food-markets/products/88051984-9lives-pate-seafood-platter-cat-food-4-ct"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190480897.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 4,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190481290",
+    "canonical_gtin14": "00071190481290",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Kitten Paté",
+    "product_name": "9Lives Kitten Paté With Real Ocean Fish & Tuna Wet Cat Food 4-Pack",
+    "variant": "Kitten With Real Ocean Fish & Tuna 4-Pack",
+    "recipe": [
+      "ocean fish",
+      "tuna"
+    ],
+    "life_stage": "all",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "4 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-kitten-pate-with-real-ocean-fish-tuna-wet-cat-food/",
+      "https://www.shoprite.com/product/9lives-kitten-pate-with-real-ocean-fish-%26-tuna-cat-food-55-oz-4-count-id-00071190481290"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190481290.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 4,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190483713",
+    "canonical_gtin14": "00071190483713",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Seafood & Poultry Favorites",
+    "product_name": "9Lives Seafood & Poultry Favorites Wet Cat Food Variety Pack",
+    "variant": "Seafood & Poultry Favorites",
+    "recipe": [
+      "fish",
+      "chicken",
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "24 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-seafood-poultry-favorites-wet-cat-food-variety-pack/",
+      "https://shop.pathmark.com/store/pathmark/products/85872631-9lives-seafood-poultry-favorites-cat-food"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190483713.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 24,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190480804",
+    "canonical_gtin14": "00071190480804",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Poultry & Beef Favorites",
+    "product_name": "9Lives Poultry & Beef Favorites Wet Cat Food Variety Pack",
+    "variant": "Poultry & Beef Favorites",
+    "recipe": [
+      "chicken",
+      "fish",
+      "beef",
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "12 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+        "https://www.9lives.com/product/9lives-poultry-beef-favorites-variety-pack-wet-cat-food-2/",
+      "https://shop.pathmark.com/store/pathmark/products/88051961-9lives-poultry-beef-favorites-cat-food-12-ct"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190480804.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 12,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "071190480866",
+    "canonical_gtin14": "00071190480866",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Poultry & Beef Favorites",
+    "product_name": "9Lives Poultry & Beef Favorites Wet Cat Food Variety Pack",
+    "variant": "Poultry & Beef Favorites",
+    "recipe": [
+      "chicken",
+      "fish",
+      "beef",
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "24 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+        "https://www.9lives.com/product/9lives-poultry-beef-favorites-variety-pack-wet-cat-food/",
+      "https://shop.pathmark.com/store/pathmark/products/89608507-9lives-poultry-beef-favorites-cat-food"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00071190480866.",
+    "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit independently computed and matches.",
+        "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 24,
+    "unit_size": "5.5 oz"
+  },
+  {
+    "catalog_number": null,
+    "upc": "079100831029",
+    "canonical_gtin14": "00079100831029",
+    "barcode_scope": "multipack",
+    "brand": "9Lives",
+    "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+    "species": "cat",
+    "product_line": "Paté Favorites",
+    "product_name": "9Lives Paté Favorites Wet Cat Food Variety Pack",
+    "variant": "Paté Favorites",
+    "recipe": [
+      "fish",
+      "chicken",
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": null,
+    "presentation": null,
+    "package_type": "box",
+    "size": "12 × 5.5 oz cans",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Current U.S. manufacturer page establishes the package identity, count, unit size, and included recipe identity; retailer page binds the valid outer UPC to the exact sellable multipack. Formula fields are deliberately omitted for the outer package.",
+    "source_urls": [
+      "https://www.9lives.com/product/9lives-pate-favorites-wet-cat-food-variety-pack/",
+      "https://shop.pecksmarkets.com/store/pecks-market/products/16761437-9lives-cat-food-4-125-lb"
+    ],
+    "source_accessed_at": "2026-09-02",
+    "barcode_notes": "Outer multipack UPC-A check digit validated; canonical GTIN-14 is 00079100831029.",
+    "conflicts": [
+      "This current retail listing retains legacy prefix 079100 while the refreshed manufacturer page shows the current package identity; GS1 prefix ownership requires seeding-pass registration."
+    ],
+    "verification_notes": [
+      "UPC-A check digit independently computed and matches.",
+      "Legacy GS1 prefix 079100 is associated with the pre-Post 9Lives owner era; Post Consumer Brands acquired the brand from J.M. Smucker in 2023, and exact GS1 ownership remains flagged for seeding-pass registration.",
+      "Outer code belongs to the sellable multipack, not an individual can.",
+      "No composition was assembled for the outer package; inner printed barcodes were not inferred.",
+      "Under BRIEF-REVEAL §8, proven outer identity is sufficient for source_verified with an empty inner-code list."
+    ],
+    "research_status": "source_verified",
+    "contains": [],
+    "pack_count": 12,
+    "unit_size": "5.5 oz"
+  }
+]
+}
