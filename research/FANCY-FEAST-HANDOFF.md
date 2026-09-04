@@ -5,7 +5,7 @@ Branch: `agent/deep-research-fancy-feast`
 Ledger: `research/deep-research-barcodes.json`
 Draft PR: #10
 
-This handoff covers the Fancy Feast completion campaign in `research/BRIEF-FANCY-FEAST.md`. The production seed remains untouched. Batch 1 added 20 `source_verified` records. Batch 2 added 20 records: 17 `source_verified` and 3 `needs_physical_label`. Batch 3 added 16 records: 14 `source_verified` outer packs and 2 Roasted individual cans marked `needs_physical_label`. Batch 4 adds 14 `source_verified` records: 8 individual units and 6 outer packs. Across the four campaign batches, 70 Fancy Feast records have been appended to the legacy shared Fancy Feast + Friskies ledger.
+This handoff covers the Fancy Feast completion campaign in `research/BRIEF-FANCY-FEAST.md`. The production seed remains untouched. Batch 1 added 20 `source_verified` records. Batch 2 added 20 records: 17 `source_verified` and 3 `needs_physical_label`. Batch 3 added 16 records: 14 `source_verified` outer packs and 2 Roasted individual cans marked `needs_physical_label`. Batch 4 adds 14 `source_verified` records: 8 individual units and 6 outer packs. Across the four campaign batches, 70 Fancy Feast records have been appended to the legacy shared Fancy Feast + Friskies ledger. A post-Batch 4 completion review found three single-flavor case redirects for the seeding pass and no safe fifth ledger batch.
 
 ## Coverage by range
 
@@ -176,7 +176,15 @@ None identified in Batches 1–4. Every staged record maps to an existing Fancy 
 
 ## Wrong-barcode recommendations
 
-None produced. No researched outer code was substituted for an individual-unit UPC, and the three shopper-missed codes resolved to legitimate individual cans.
+The post-Batch 4 review found three current outer case codes that contain only one already-held can identity. Per §3 of the Fancy Feast brief, these should be added to `data/wrong-barcodes.ts` by the seeding pass rather than appended as new product/formula records:
+
+| Outer case UPC | Proven package | `insteadUse` | Evidence |
+|---|---|---|---|
+| `050000869961` | Grilled Chicken Feast in Gravy, 12 × 3 oz cans | `050000040803` | [Target exact 12-count page](https://www.target.com/p/purina-fancy-feast-grilled-chicken-flavor-feast-in-gravy-wet-cat-food-cans-3oz-12ct-pack/-/A-14779805) |
+| `050000551217` | Classic Paté Chicken Feast, 12 × 3 oz cans | `050000429943` | [Target exact 12-count page](https://www.target.com/p/purina-fancy-feast-chicken-feast-classic-pat-233-chicken-flavor-wet-cat-food-3oz-12ct-pack/-/A-14765556) |
+| `050000504862` | Classic Paté Chicken Feast, 24 × 3 oz cans | `050000429943` | [Target exact 24-count page](https://www.target.com/p/purina-fancy-feast-chicken-feast-classic-pat-233-chicken-flavor-wet-cat-food-cans-3oz-24ct-pack/-/A-78176236) |
+
+All three UPC-A check digits were recomputed and are valid, and none appeared in the regenerated 195-code exclusion set. They are recommendations only; the research branch does not edit production `data/` files.
 
 Existing do-not-file recommendations in the generated inventory remain unchanged and must not be edited by this research branch.
 
@@ -214,14 +222,16 @@ All staged boxes intentionally retain `contains: []` until printed member codes 
 - Batch 1 research commit: `24325dd4ce6e30d93406d8cd2929e3c263275c64`
 - Batch 2 research commit: `728656ef0a30918bc178cb8f30c841656bb9349d`
 - Batch 3 research commit: `b21dcd194551ab6bf4063654e136ded9b7a827b8`
-- Batch 4 research commit: the commit containing this handoff; its SHA is reported in draft PR #10 after remote verification.
+- Batch 4 research commit: `c228a891d47d90ad83dd4ff37d29e521f4f4cfab`
+- Completion-review handoff commit: the commit containing this handoff; its SHA is reported in draft PR #10 after remote verification.
 - Before Batch 4, the live inventory was regenerated and the exclusion set was rebuilt.
+- After Batch 4, the live inventory was regenerated again; its mechanical flat exclusion set contained 195 codes.
 - The exact required command `node scripts/check-ledger.mjs research/deep-research-barcodes.json` returned `Clean.`: 143 records total, 73 grandfathered legacy records, 138 `source_verified`, 5 `needs_physical_label`, 101 individual-unit records and 42 multipacks.
 - Batch 2 itself is 20 records: 17 `source_verified`, 3 `needs_physical_label`; 15 individual units and 5 multipacks.
 - Batch 3 itself is 16 records: 14 `source_verified`, 2 `needs_physical_label`; 2 individual units and 14 multipacks.
 - Batch 4 itself is 14 records: all 14 `source_verified`; 8 individual units and 6 multipacks.
 - Draft PR #10 remains open, draft and unmerged.
 
-## Where Batch 4 stopped
+## Where the campaign stopped
 
-Batch 4 stopped at 14 records because the remaining discovered candidates were not equally safe, not because every historical or outer-pack SKU is complete. The high-priority current individual-can tail in Classic Pâté, Gravy Lovers, Grilled and Senior 7+ now reconciles to Purina's current US product pages. The next pass should rebuild the live exclusion set and work exact outer-pack sizes or retail-only discoveries. Royale still requires trustworthy international sellable-unit barcode evidence; individual Broths formulas require corrected checker bound semantics; Roasted and the Savory Cravings Chicken formula require physical-label evidence. Do not fill the batch limit with cross-line cartons, obsolete name lists or related UPC guesses.
+Batch 4 stopped at 14 records because the remaining discovered candidates were not equally safe, not because every historical or outer-pack SKU is complete. The high-priority current individual-can tail in Classic Pâté, Gravy Lovers, Grilled and Senior 7+ now reconciles to Purina's current US product pages. The completion review then tested exact outer-pack and retail-only discoveries: the three strong current hits were single-flavor cases of already-held cans, so they are recorded above as `insteadUse` recommendations rather than padded into a fifth ledger batch. The remaining Royale, individual Broths, Roasted and Savory Cravings Chicken leads meet the documented evidence stop rule: trustworthy sellable-unit binding, correct checker bound semantics, or a physical current label is still required. Reopen only when genuinely new high-quality evidence appears; do not fill a batch with cross-line cartons, obsolete name lists or related UPC guesses.
