@@ -69,4 +69,11 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // Friskies carry 050000, exactly as Blue Buffalo runs 840243 beside 859610.
   { prefix: "017800", maker: "Nestlé Purina" },
   { prefix: "071190", maker: "9Lives (Post)" },
+  // 9Lives' OTHER prefix, and the one that shows what a brand changing hands
+  // does to its barcodes. 079100 is the Del Monte-era block, and it is not
+  // historical: eight products under it are on shelves right now, including
+  // every large Daily Essentials bag. Both prefixes are live at once, on the
+  // same shelf, because a refreshed pack gets a new code and the old pack
+  // keeps selling until it runs out.
+  { prefix: "079100", maker: "9Lives (Post, Del Monte-era block)" },
 ];

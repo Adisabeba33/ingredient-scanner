@@ -10384,4 +10384,283 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     lifeStage: "adult",
     packages: [{ size: "3.5 lb", container: BAG, upc: "017800012638", scope: UNIT }],
   },
+
+  // ── 9Lives · Bites (cat) ─────────────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Bites",
+    variant: "With Real Chicken & Beef in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190478962", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Bites",
+    variant: "With Real Chicken & Fish in Gravy",
+    species: "cat",
+    texture: "bits",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken", "fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480316", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Daily Essentials (cat) ──────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Daily Essentials",
+    variant: "Chicken, Beef & Salmon Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "beef", "salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "071190478436", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "079100521951", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "079100520381", scope: UNIT },
+      { size: "28 lb", container: BAG, upc: "079100520398", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Kitten Essentials (cat) ─────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Kitten Essentials",
+    variant: "Chicken & Ocean Fish",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "ocean fish"],
+    lifeStage: "all",
+    packages: [
+      { size: "2.5 lb", container: BAG, upc: "071190722393", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Kitten Paté (cat) ───────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Kitten Paté",
+    variant: "With Real Ocean Fish & Tuna",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish", "tuna"],
+    lifeStage: "all",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "079100074983", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Morris’ Catch (cat) ─────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Morris’ Catch",
+    variant: "Pate with Real Tuna",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190475183", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Morris’ Catch",
+    variant: "Tuna & Ocean Fish Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["tuna", "ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "079100606313", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "079100453085", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Morris’ Catch",
+    variant: "With Real Ocean Fish & Salmon in Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["ocean fish", "salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190475190", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · PLUS High Protein (cat) ─────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "PLUS High Protein",
+    variant: "Chicken & Ocean Fish Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "071190484369", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "071190484345", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · PLUS Urinary Tract Health (cat) ─────────────────────────
+  {
+    brand: "9Lives",
+    line: "PLUS Urinary Tract Health",
+    variant: "Tuna & Egg Flavors",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["tuna", "egg"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "071190480309", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "071190480286", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Paté (cat) ──────────────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "Seafood Platter",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["fish", "chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480439", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "Super Supper",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480392", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "Super Supper (13 oz)",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "071190480842", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "With Real Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480576", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "With Real Chicken & Tuna",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480347", scope: UNIT },
+      { size: "13 oz", container: CAN, upc: "071190481238", scope: UNIT },
+    ],
+  },
+  {
+    brand: "9Lives",
+    line: "Paté",
+    variant: "With Real Ocean Fish",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480545", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Senior Shreds (cat) ─────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Senior Shreds",
+    variant: "With Real Ocean Fish & Tuna in Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["ocean fish", "tuna"],
+    lifeStage: "senior",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "079100666843", scope: UNIT },
+    ],
+  },
+
+  // ── 9Lives · Shreds (cat) ────────────────────────────────────────────
+  {
+    brand: "9Lives",
+    line: "Shreds",
+    variant: "With Real Turkey in Sauce",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "071190480637", scope: UNIT },
+    ],
+  },
 ];

@@ -542,12 +542,35 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Post",
     species: "cat",
     aliases: ["nine lives"],
-    // "Indoor Essentials" came off a real shopper's scan, and it is the CURRENT
-    // name of the bag Walmart and Amazon still index as "Indoor Complete" —
-    // same 3.15 lb bag, same UPC. Listed under the name the pack carries now.
+    // Named as 9Lives names them NOW, which on this brand is a moving target:
+    // the maker prints "Paté" where retailers still index "Meaty Paté", and
+    // "Bites" and "Shreds" have replaced "Hearty Cuts" and "Tender Morsels" on
+    // the shelf. "Indoor Essentials" came off a shopper's scan and is the
+    // current name of the bag Walmart still lists as "Indoor Complete" — same
+    // bag, same UPC.
+    //
+    // The three shelf-memory names at the end were written before any 9Lives
+    // product was seeded and are believed superseded. They stay anyway: a
+    // superseded range shows zero products forever, which costs nothing, while
+    // removing one that is still on a shelf somewhere files its products under
+    // "Other".
     lines: [
       "Daily Essentials",
       "Indoor Essentials",
+      "Kitten Essentials",
+      "Morris’ Catch",
+      "PLUS High Protein",
+      "PLUS Urinary Tract Health",
+      "Paté",
+      "Kitten Paté",
+      "Bites",
+      "Shreds",
+      "Senior Shreds",
+      // The variety packs, which are ranges of their own on this brand.
+      "Paté Favorites",
+      "Poultry & Beef Favorites",
+      "Seafood & Poultry Favorites",
+      "Surf & Turf Favorites",
       "Meaty Pate",
       "Tender Morsels",
       "Protein Plus",

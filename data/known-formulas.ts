@@ -108,6 +108,7 @@ const VERIFIED_022 = "2026-08-29";
 const VERIFIED_023 = "2026-08-29";
 const VERIFIED_024 = "2026-08-30";
 const VERIFIED_025 = "2026-08-30";
+const VERIFIED_026 = "2026-09-04";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -6230,5 +6231,144 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, corn gluten meal, chicken by-product meal (source of glucosamine), rice flour, soybean meal, beef fat preserved with mixed-tocopherols, whole grain corn, powdered cellulose, soybean hulls, liver flavor, chicken meal (source of glucosamine), phosphoric acid, calcium carbonate, salt, caramel color, dried carrots, dried peas, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Vitamin E supplement.`,
     analysis: withExtras(withCalories(ga(34.0, 14.0, 4.5, 12.0, null, 0.15), 3977, 445, "cup"), { "Linoleic Acid": ["min", 1.4, "%"], "Calcium": ["min", 1.0, "%"], "Phosphorus": ["min", 0.9, "%"], "Zinc": ["min", 150, "mg/kg"], "Selenium": ["min", 0.35, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega-6 Fatty Acids": ["min", 1.5, "%"] }),
     verifiedAt: VERIFIED_025,
+  },
+  "071190478962": {
+    ingredients: `Water Sufficient For Processing, Meat-By-Products, Chicken, Beef, Soy Protein Concentrate, Wheat Flour, Modified Food Starch, Natural Flavor, Salt, Vegetable Oil (Bha/Bht Used As A Preservative), Caramel Color, Bone Phosphate, Calcium Carbonate, Sodium Tripolyphosphate, Potassium Chloride, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Iron Oxide (Color), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite).`,
+    analysis: withExtras(withCalories(ga(8, 2.5, 1, 82, 3.5, 0.05), 760, 120, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "Older wholesaler listings call this same UPC Tender Slices or Hearty Cuts; the record uses the current manufacturer Bites name.",
+  },
+  "071190480316": {
+    ingredients: `Water Sufficient For Processing, Meat-By-Products, Chicken, Fish, Wheat Flour, Soy Protein Concentrate, Modified Food Starch, Natural Flavor, Calcium Carbonate, Sodium Tripolyphosphate, Soy Flour, Titanium Dioxide (Color), Glycine, Potassium Chloride, Salt, Choline Chloride, Bone Phosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Iron Oxide (Color).`,
+    analysis: withExtras(withCalories(ga(8, 2.5, 1, 82, 3.5, 0.05), 770, 120, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190478436": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3400, 310, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.9, "%"], "Iron": ["min", 180, "mg/kg"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.12, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The retailer page also exposes legacy UPC 079100581221 for a 3.15 lb Daily Essentials package. It is treated as a separate shelf-generation alias and is not duplicated without physical-label evidence.",
+  },
+  "079100521951": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3400, 310, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.9, "%"], "Iron": ["min", 180, "mg/kg"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.12, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "A refreshed code 071190477897 appears in aggregators for the same size and identity, but was not added without an independently proven physical package generation.",
+  },
+  "079100520381": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3400, 310, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.9, "%"], "Iron": ["min", 180, "mg/kg"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.12, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "This active Dollar General listing retains legacy 079100 prefix packaging; exact GS1 ownership remains for the seeding pass.",
+  },
+  "079100520398": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3400, 310, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.9, "%"], "Iron": ["min", 180, "mg/kg"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.12, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "This current exact-size listing retains a legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.",
+  },
+  "071190722393": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal , Corn Protein Meal, Soybean Meal, Animal Fat (preserved with mixed tocopherols), Whole Wheat, Ocean Fish Meal , Natural Flavor (preserved with mixed tocopherols), Dicalcium Phosphate, Salt, Caramel Color, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Choline Chloride, Taurine ,Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Citric Acid, Mixed Tocopherols (used as a preservative), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(38, 12.5, 2.5, 10, null, 0.15), 3605, 330, "cup"), { "Eicosapentaenoic + Docosahexaenoic acid": ["min", 0.025, "%"], "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 1, "%"], "Selenium": ["max", 0.5, "mg/kg"], "Vitamin A": ["min", 10000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega-3 Fatty Acids": ["min", 0.13, "%"], "Omega-6 Fatty Acids": ["min", 1.5, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "079100074983": {
+    ingredients: `Chicken, Meat-By-Products, Water Sufficient For Processing, Animal Liver, Ocean Whitefish, Tuna, Titanium Dioxide (Color), Sodium Tripolyphosphate, Potassium Chloride, Salt, Guar Gum, Fish Oil (Preserved With Mixed Tocopherols), Dried Whey Solubles, Calcium Carbonate, Magnesium Sulfate, Carrageenan, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(10, 6, 1, 78, 4, 0.05), 1000, 155, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "This active retailer listing retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.",
+  },
+  "071190475183": {
+    ingredients: `Chicken, Meat-By-Products, Water Sufficient For Processing, Fish, Tuna, Brewers Rice, Potassium Chloride, Salt, Guar Gum, Sodium Tripolyphosphate, Carrageenan, Taurine, Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(10, 6.5, 1, 78, 3.5, 0.05), 1277, 200, "can"), { "Linoleic Acid": ["min", 1, "%"], "Vitamin A": ["min", 5000, "IU/kg"], "Omega-6 Fatty Acids": ["min", 1.2, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "079100606313": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Meat Bone Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavor (Preserved With Mixed Tocopherols), Tuna Meal, Ocean Fish Meal (Preserved With Ethoxyquin), Phosphoric Acid, Calcium Carbonate, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Red 40, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate) Titanium Dioxide, Lactic Acid, BHA (Used As A Preservative), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3337, 305, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.8, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The exact active retailer code retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.",
+  },
+  "079100453085": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Meat Bone Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavor (Preserved With Mixed Tocopherols), Tuna Meal, Ocean Fish Meal (Preserved With Ethoxyquin), Phosphoric Acid, Calcium Carbonate, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Red 40, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate) Titanium Dioxide, Lactic Acid, BHA (Used As A Preservative), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 9, 3, 12, null, 0.1), 3337, 305, "cup"), { "Calcium": ["min", 1.1, "%"], "Phosphorus": ["min", 0.8, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The exact active retailer code retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.",
+  },
+  "071190475190": {
+    ingredients: `Water Sufficient For Processing, Liver, Chicken, Meat-By-Products, Ocean Fish, Wheat Gluten, Soy Flour, Modified Food Starch, Salmon, Natural Flavor, Vegetable Oil (Bha/Bht Used As A Preservative), Potassium Chloride, Calcium Carbonate, Sodium Tripolyphosphate, Bone Phosphate, Salt, Taurine, Choline Chloride, Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 2.5, 1, 82, 3, 0.05), 848, 132, "can"), { "Linoleic Acid": ["min", 0.6, "%"], "Vitamin A": ["min", 5000, "IU/kg"], "Omega-6 Fatty Acids": ["min", 0.7, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The manufacturer headline shortens the flavor to “with Real Ocean Fish,” while Dollar General’s exact-UPC title and the ingredient deck also identify salmon and sauce; the package-facing expanded variant is retained.",
+  },
+  "071190484369": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Animal Fat (Preserved With Mixed Tocopherols), Whole Ground Wheat, Natural Flavor, Ocean Fish Meal, Taurine, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex [Source Of Vitamin K Activity], Folic Acid, Biotin, Vitamin D3 Supplement), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, Lactic Acid, Bha (Used As Preservative), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(35, 10, 4, 10, null, 0.2), 3467, 315, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.85, "%"], "Potassium": ["min", 0.6, "%"], "Magnesium": ["min", 0.04, "%"], "Selenium": ["min", 0.4, "mg/kg"], "Vitamin A": ["min", 4500, "IU/kg"], "Vitamin E": ["min", 95, "IU/kg"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190484345": {
+    ingredients: `Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Animal Fat (Preserved With Mixed Tocopherols), Whole Ground Wheat, Natural Flavor, Ocean Fish Meal, Taurine, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex [Source Of Vitamin K Activity], Folic Acid, Biotin, Vitamin D3 Supplement), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, Lactic Acid, Bha (Used As Preservative), Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(35, 10, 4, 10, null, 0.2), 3467, 315, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.85, "%"], "Potassium": ["min", 0.6, "%"], "Magnesium": ["min", 0.04, "%"], "Selenium": ["min", 0.4, "mg/kg"], "Vitamin A": ["min", 4500, "IU/kg"], "Vitamin E": ["min", 95, "IU/kg"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190480309": {
+    ingredients: `Whole Ground Corn, Corn Protein Meal, Poultry By-Product Meal, Whole Wheat, Beef Tallow (Preserved With Mixed Tocopherols), Animal Digest (Preserved With Mixed Tocopherols), Meat and Bone Meal, Phosphoric Acid, Calcium Carbonate, Salt, Potassium Chloride, Grain Distillers Dried Yeast, Tuna Meal, Choline Chloride, Titanium Dioxide (Color), Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex [Source of Vitamin K Activity], Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Dried Egg Product, DL-Methionine, Iron Oxide (Color), Yellow 5, Lactic Acid, Yellow 6, Red 40, BHA (Used As A Preservative), Blue 1, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(30, 10, 3, 10, null, 0.1), 3800, 355, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.8, "%"], "Magnesium": ["min", 0.12, "%"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin A": ["min", 5000, "IU/kg"], "Vitamin E": ["min", 50, "IU/kg"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "Current wholesale listings also associate legacy UPC 079100514175 with the 3.15 lb Plus Care package; that alias was not inferred or duplicated here.",
+  },
+  "071190480286": {
+    ingredients: `Whole Ground Corn, Corn Protein Meal, Poultry By-Product Meal, Whole Wheat, Beef Tallow (Preserved With Mixed Tocopherols), Animal Digest (Preserved With Mixed Tocopherols), Meat and Bone Meal, Phosphoric Acid, Calcium Carbonate, Salt, Potassium Chloride, Grain Distillers Dried Yeast, Tuna Meal, Choline Chloride, Titanium Dioxide (Color), Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex [Source of Vitamin K Activity], Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Dried Egg Product, DL-Methionine, Iron Oxide (Color), Yellow 5, Lactic Acid, Yellow 6, Red 40, BHA (Used As A Preservative), Blue 1, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(30, 10, 3, 10, null, 0.1), 3800, 355, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.8, "%"], "Magnesium": ["min", 0.12, "%"], "Selenium": ["min", 0.475, "mg/kg"], "Vitamin A": ["min", 5000, "IU/kg"], "Vitamin E": ["min", 50, "IU/kg"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190480439": {
+    ingredients: `Meat-By-Products, Water Sufficient For Processing, Fish, Chicken, Poultry-By-Products, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Dried Whey Solubles, Titanium Dioxide (Color), Calcium Carbonate, Carrageenan, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Choline Chloride, Magnesium Sulfate, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Vitamin E Supplement, Thiamine Mononitrate, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 5, 1, 78, 3.5, 0.05), 960, 150, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190480392": {
+    ingredients: `Meat-By-Products, Water Sufficient for Processing, Poultry-By-Products, Fish, Chicken, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Dried Whey Solubles, Calcium Carbonate, Titanium Dioxide (Color), Choline Chloride, Carrageenan, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Magnesium Sulfate, Taurine, Vitamin E Supplement, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 6, 1, 78, 4, 0.05), 1080, 170, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190480842": {
+    ingredients: `Meat By-Products, Water Sufficient For Processing, Poultry By-Products, Chicken, Fish, Brewers Rice, Calcium Carbonate, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Dried Whey Solubles, Titanium Dioxide (Color), Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Magnesium Sulfate, Vitamin E Supplement, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 6, 1, 78, 4, 0.05), 1060, 390, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The current manufacturer HTML repeats the 5.5 oz 1080 kcal/kg and 170 kcal/can statement while listing a 13 oz size; the exact LS001 13 oz physical panel prints 1060 kcal/kg and 390 kcal/can and governs this record.",
+  },
+  "071190480576": {
+    ingredients: `Meat-By-Products, Water Sufficient For Processing, Chicken, Poultry-By-Products, Fish, Brewers Rice, Titanium Dioxide (Color), Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Calcium Carbonate, Magnesium Sulfate, Choline Chloride, Carrageenan, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Beta-Carotene (Color), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 6, 1, 78, 4, 0.05), 1040, 160, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "071190480347": {
+    ingredients: `Meat-By-Products, Water Sufficient for Processing, Chicken, Poultry-By Products, Fish, Tuna, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Titanium Dioxide (Color), Calcium Carbonate, Magnesium Sulfate, Choline Chloride, Vitamins (Vitamin E Supplement Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 6, 1, 78, 3.5, 0.05), 1050, 165, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The current manufacturer HTML ends with the malformed duplicate fragment “Sodium Nit, Sodium Nitrite”; the LS001 package transcription ends once with “Sodium Nitrite (to Promote Color Retention)” and governs this record.",
+  },
+  "071190481238": {
+    ingredients: `Meat By-Products, Water Sufficient for Processing, Chicken, Poultry By-Products, Fish, Tuna, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Titanium Dioxide (Color), Calcium Carbonate, Magnesium Sulfate, Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 6, 1, 78, 3.5, 0.05), 1045, 385, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "The current manufacturer HTML repeats the 5.5 oz energy statement, 1050 kcal/kg and 165 kcal/can, across listed sizes; the exact 13 oz LS001 package transcription prints 1045 kcal/kg and 385 kcal/can and governs this record. The manufacturer HTML also contains the malformed “Sodium Nit, Sodium Nitrite” ending; the LS001 package transcription prints one complete sodium-nitrite ingredient.",
+  },
+  "071190480545": {
+    ingredients: `Meat-By-Products, Water Sufficient For Processing, Ocean fish, Poultry-By-Products, Chicken, Brewers Rice, Animal Digest, Titanium Dioxide (Color), Dried Whey Solubles, Guar Gum, Salt, Potassium Chloride, Choline Chloride, Carrageenan, Magnesium Sulfate, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Sodium Tripolyphosphate, Calcium Carbonate, Vitamin E Supplement, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(11, 4.5, 1, 78, 4, 0.05), 995, 155, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+  },
+  "079100666843": {
+    ingredients: `Water Sufficient For Processing, Chicken, Animal Liver, Meat-By-Products, Ocean Whitefish, Soy Flour, Wheat Gluten, Modified Food Starch, Tuna, Natural Flavor, Titanium Dioxide (Color), Vegetable Oil (Bha/Bht Used As A Preservative), Bone Phosphate, Calcium Carbonate, Potassium Chloride, Sodium Tripolyphosphate, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Thiamine Mononitrate, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withExtras(withCalories(ga(9, 2, 1, 82, 3, 0.05), 770, 120, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
+    conflict: "This active retailer listing retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.",
+  },
+  "071190480637": {
+    ingredients: `Water Sufficient For Processing, Meat-By-Products, Turkey, Chicken, Soy Protein Concentrate, Modified Food Starch, Wheat Flour, Fish, Soy Flour, Natural Flavor, Vegetable Oil (Bha/Bht Used As A Preservative), Salt, Sodium Tripolyphosphate, Titanium Dioxide (Color), Potassium Chloride, Choline Chloride, Calcium Carbonate, Iron Oxide (Color), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Caramel Color, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)`,
+    analysis: withExtras(withCalories(ga(8, 2.5, 1, 82, 3, 0.05), 775, 120, "can"), { "Omega-6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_026,
   },
 };

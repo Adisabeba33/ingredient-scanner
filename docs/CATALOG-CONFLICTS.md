@@ -1205,3 +1205,44 @@ No ingredient list was ever established for these, so they carry a barcode and a
 
 - `840243134403` — Baby BLUE Kitten Grain-Free High Protein Salmon, 3 oz
 - `840243110056`, `840243110063`, `840243110070` — Wild Cuts Tasty Toppers, chicken, duck and salmon morsels in gravy, 3 oz
+
+## K. 9Lives (batch 026) — a brand mid-rename, on two prefixes at once
+
+Almost every flag here is one fact wearing different clothes: 9Lives changed
+hands, refreshed its packaging and renamed its ranges, and the old and new
+generations are on the shelf together. Six records carry the legacy Del Monte-era prefix `079100` while their siblings carry the current `071190`; both
+blocks are registered, because both are being scanned right now.
+
+1. **`079100831029`** — Paté Favorites — Paté Favorites — 12 × 5.5 oz cans: This current retail listing retains legacy prefix 079100 while the refreshed manufacturer page shows the current package identity; GS1 prefix ownership requires seeding-pass registration.
+2. **`079100520381`** — Daily Essentials — Chicken, Beef & Salmon Flavors — 20 lb: This active Dollar General listing retains legacy 079100 prefix packaging; exact GS1 ownership remains for the seeding pass.
+3. **`079100520398`** — Daily Essentials — Chicken, Beef & Salmon Flavors — 28 lb: This current exact-size listing retains a legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.
+4. **`079100521951`** — Daily Essentials — Chicken, Beef & Salmon Flavors — 12 lb: A refreshed code 071190477897 appears in aggregators for the same size and identity, but was not added without an independently proven physical package generation.
+5. **`079100606313`** — Morris’ Catch — Tuna & Ocean Fish Flavors — 3.15 lb: The exact active retailer code retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.
+6. **`079100453085`** — Morris’ Catch — Tuna & Ocean Fish Flavors — 12 lb: The exact active retailer code retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.
+7. **`079100666843`** — Senior Shreds — With Real Ocean Fish & Tuna in Sauce — 5.5 oz: This active retailer listing retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.
+8. **`079100074983`** — Kitten Paté — With Real Ocean Fish & Tuna — 5.5 oz: This active retailer listing retains the legacy 079100 prefix; exact GS1 ownership remains for the seeding pass.
+9. **`071190480309`** — PLUS Urinary Tract Health — Tuna & Egg Flavors — 3.15 lb: Current wholesale listings also associate legacy UPC 079100514175 with the 3.15 lb Plus Care package; that alias was not inferred or duplicated here.
+10. **`071190478436`** — Daily Essentials — Chicken, Beef & Salmon Flavors — 3.15 lb: The retailer page also exposes legacy UPC 079100581221 for a 3.15 lb Daily Essentials package. It is treated as a separate shelf-generation alias and is not duplicated without physical-label evidence.
+11. **`071190475190`** — Morris’ Catch — With Real Ocean Fish & Salmon in Sauce — 5.5 oz: The manufacturer headline shortens the flavor to “with Real Ocean Fish,” while Dollar General’s exact-UPC title and the ingredient deck also identify salmon and sauce; the package-facing expanded variant is retained.
+12. **`071190478962`** — Bites — With Real Chicken & Beef in Gravy — 5.5 oz: Older wholesaler listings call this same UPC Tender Slices or Hearty Cuts; the record uses the current manufacturer Bites name.
+13. **`071190480347`** — Paté — With Real Chicken & Tuna — 5.5 oz: The current manufacturer HTML ends with the malformed duplicate fragment “Sodium Nit, Sodium Nitrite”; the LS001 package transcription ends once with “Sodium Nitrite (to Promote Color Retention)” and governs this record.
+14. **`071190481238`** — Paté — With Real Chicken & Tuna — 13 oz: The current manufacturer HTML repeats the 5.5 oz energy statement, 1050 kcal/kg and 165 kcal/can, across listed sizes; the exact 13 oz LS001 package transcription prints 1045 kcal/kg and 385 kcal/can and governs this record. The manufacturer HTML also contains the malformed “Sodium Nit, Sodium Nitrite” ending; the LS001 package transcription prints one complete sodium-nitrite ingredient.
+15. **`071190480842`** — Paté — Super Supper — 13 oz: The current manufacturer HTML repeats the 5.5 oz 1080 kcal/kg and 170 kcal/can statement while listing a 13 oz size; the exact LS001 13 oz physical panel prints 1060 kcal/kg and 390 kcal/can and governs this record.
+
+### Four calorie statements that round rather than disagree
+
+`071190480576`, `071190478962`, `071190480392` and `071190481108` each print a
+kcal/kg and a per-can figure that miss each other by under 2.5 kcal — 1.4% at
+the worst. Every pair comes off one coherent panel, and all four sit inside
+ordinary nominal-fill rounding. Stored as printed; the arithmetic is recorded
+in each record rather than resolved by picking a number.
+
+### Two 13 oz cans held back
+
+`071190480835` (Bites With Real Chicken) and `071190481108` (Paté With Real
+Beef) each have **two incompatible physical decks under one barcode** — one
+retailer's package transcription prints modified food starch and 770 kcal/kg,
+another visibly prints potato starch and 803. The research correctly refused to
+choose and left both at `needs_physical_label`. Neither is seeded. A dated
+shelf can with a readable lot code is what settles them.
+
