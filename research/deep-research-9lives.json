@@ -4,7 +4,7 @@
   "repository": "Adisabeba33/ingredient-scanner",
   "brand_scope": ["9Lives"],
   "created_at": "2026-09-02",
-  "updated_at": "2026-09-02",
+  "updated_at": "2026-09-04",
   "rules_source": "research/AGENTS.md",
   "records": [
   {
@@ -2390,6 +2390,1032 @@
       "Legacy GS1 prefix 079100 is associated with the pre-Post 9Lives owner era; Post Consumer Brands acquired the brand from J.M. Smucker in 2023, and exact GS1 ownership remains flagged for seeding-pass registration."
       ],
       "research_status": "source_verified"
-    }
-]
+    },
+    {
+        "barcode_notes": "Star Importers and Kroger independently bind UPC-A 071190478962 / GTIN-14 00071190478962 to the individual 5.5 oz can; the UPC-A check digit validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 760,
+          "kcal_per_unit": 120,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190478962",
+        "catalog_number": null,
+        "conflicts": [
+          "Older wholesaler listings call this same UPC Tender Slices or Hearty Cuts; the record uses the current manufacturer Bites name."
+        ],
+        "food_form": "wet",
+        "formula_source": "Current U.S. 9Lives manufacturer page supplies the complete formula and maintenance statement; independent current retailer and wholesale listings bind UPC 071190478962 to the individual 5.5 oz can.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 3.5,
+          "crude_fat_min_percent": 2.5,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 8,
+          "moisture_max_percent": 82,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Water Sufficient For Processing",
+          "Meat-By-Products",
+          "Chicken",
+          "Beef",
+          "Soy Protein Concentrate",
+          "Wheat Flour",
+          "Modified Food Starch",
+          "Natural Flavor",
+          "Salt",
+          "Vegetable Oil (Bha/Bht Used As A Preservative)",
+          "Caramel Color",
+          "Bone Phosphate",
+          "Calcium Carbonate",
+          "Sodium Tripolyphosphate",
+          "Potassium Chloride",
+          "Choline Chloride",
+          "Taurine",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Iron Oxide (Color)",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)"
+        ],
+        "ingredients_verbatim": "Water Sufficient For Processing, Meat-By-Products, Chicken, Beef, Soy Protein Concentrate, Wheat Flour, Modified Food Starch, Natural Flavor, Salt, Vegetable Oil (Bha/Bht Used As A Preservative), Caramel Color, Bone Phosphate, Calcium Carbonate, Sodium Tripolyphosphate, Potassium Chloride, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Iron Oxide (Color), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite).",
+        "label_deck_code": null,
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "in_gravy",
+        "product_line": "Bites",
+        "product_name": "9Lives Bites Wet Cat Food With Real Chicken & Beef in Gravy",
+        "recipe": [
+          "chicken",
+          "beef"
+        ],
+        "research_status": "source_verified",
+        "size": "5.5 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.9lives.com/product/9lives-bites-wet-cat-food-with-real-chicken-beef-in-gravy/",
+          "https://www.starimporters.com/product-details/cat-food-9-lives-5-5-oz-1-ct?id=7647",
+          "https://www.kroger.com/p/9lives-bites-wet-cat-food-with-real-chicken-beef-in-gravy-5-5-oz-can/0007119047896"
+        ],
+        "species": "cat",
+        "texture": "bits",
+        "upc": "071190478962",
+        "variant": "With Real Chicken & Beef in Gravy",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190478962; canonical GTIN-14 is 00071190478962.",
+          "The source evidence binds the barcode to one individual 5.5 oz can, not a tray or case.",
+          "The manufacturer ingredient statement was copied as one verbatim string and split only at top-level commas.",
+          "Energy cross-check: 760 kcal/kg × 5.5 oz is approximately 118.5 kcal, consistent with the printed 120 kcal/can after rounding.",
+          "Manufacturer adequacy statement is for maintenance."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me and Pathmark expose GTIN-14 00071190480347 for the exact 5.5 oz can; UPC-A 071190480347 validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 1050,
+          "kcal_per_unit": 165,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190480347",
+        "catalog_number": null,
+        "conflicts": [
+          "The current manufacturer HTML ends with the malformed duplicate fragment “Sodium Nit, Sodium Nitrite”; the LS001 package transcription ends once with “Sodium Nitrite (to Promote Color Retention)” and governs this record."
+        ],
+        "food_form": "wet",
+        "formula_source": "Directions for Me transcribes the exact For All Tails LS001 5.5 oz label, including ingredients, calories, maintenance statement, and GTIN; the current manufacturer page supplies the complete guaranteed analysis and confirms the current identity.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 3.5,
+          "crude_fat_min_percent": 6,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 9,
+          "moisture_max_percent": 78,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Meat-By-Products",
+          "Water Sufficient for Processing",
+          "Chicken",
+          "Poultry-By Products",
+          "Fish",
+          "Tuna",
+          "Brewers Rice",
+          "Potassium Chloride",
+          "Salt",
+          "Sodium Tripolyphosphate",
+          "Guar Gum",
+          "Titanium Dioxide (Color)",
+          "Calcium Carbonate",
+          "Magnesium Sulfate",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Carrageenan",
+          "Taurine",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)",
+          "Sodium Nitrite (to Promote Color Retention)"
+        ],
+        "ingredients_verbatim": "Meat-By-Products, Water Sufficient for Processing, Chicken, Poultry-By Products, Fish, Tuna, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Titanium Dioxide (Color), Calcium Carbonate, Magnesium Sulfate, Choline Chloride, Vitamins (Vitamin E Supplement Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "plain",
+        "product_line": "Paté",
+        "product_name": "9Lives Paté With Real Chicken & Tuna Wet Cat Food",
+        "recipe": [
+          "chicken",
+          "tuna"
+        ],
+        "research_status": "source_verified",
+        "size": "5.5 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.directionsforme.org/product/328372",
+          "https://www.9lives.com/product/9lives-pate-with-real-chicken-tuna-wet-cat-food/",
+          "https://shop.pathmark.com/store/pathmark/products/84682587-9lives-pate-with-real-chicken-tuna-cat-food-5-5-oz"
+        ],
+        "species": "cat",
+        "texture": "pate",
+        "upc": "071190480347",
+        "variant": "With Real Chicken & Tuna",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190480347; canonical GTIN-14 is 00071190480347.",
+          "The barcode is bound to one 5.5 oz can, not the four-pack.",
+          "Directions for Me omits a comma between “Vitamin E Supplement” and “Thiamine Mononitrate” in its LS001 transcription; that source text is preserved rather than silently repaired.",
+          "Energy cross-check: 1050 kcal/kg × 5.5 oz is approximately 163.7 kcal, consistent with the printed 165 kcal/can after rounding.",
+          "The LS001 adequacy statement is for maintenance."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me exposes GTIN-14 00071190481238 on the exact LS001 13 oz can; UPC-A 071190481238 validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 1045,
+          "kcal_per_unit": 385,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190481238",
+        "catalog_number": null,
+        "conflicts": [
+          "The current manufacturer HTML repeats the 5.5 oz energy statement, 1050 kcal/kg and 165 kcal/can, across listed sizes; the exact 13 oz LS001 package transcription prints 1045 kcal/kg and 385 kcal/can and governs this record.",
+          "The manufacturer HTML also contains the malformed “Sodium Nit, Sodium Nitrite” ending; the LS001 package transcription prints one complete sodium-nitrite ingredient."
+        ],
+        "food_form": "wet",
+        "formula_source": "Directions for Me transcribes the exact For All Tails LS001 13 oz label, including the complete ingredients, size-specific calories, maintenance statement, and GTIN; the current manufacturer page supplies the printed guaranteed analysis shared by the current product.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 3.5,
+          "crude_fat_min_percent": 6,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 9,
+          "moisture_max_percent": 78,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Meat By-Products",
+          "Water Sufficient for Processing",
+          "Chicken",
+          "Poultry By-Products",
+          "Fish",
+          "Tuna",
+          "Brewers Rice",
+          "Potassium Chloride",
+          "Salt",
+          "Sodium Tripolyphosphate",
+          "Guar Gum",
+          "Titanium Dioxide (Color)",
+          "Calcium Carbonate",
+          "Magnesium Sulfate",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Carrageenan",
+          "Taurine",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)",
+          "Sodium Nitrite (to Promote Color Retention)"
+        ],
+        "ingredients_verbatim": "Meat By-Products, Water Sufficient for Processing, Chicken, Poultry By-Products, Fish, Tuna, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Titanium Dioxide (Color), Calcium Carbonate, Magnesium Sulfate, Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "plain",
+        "product_line": "Paté",
+        "product_name": "9Lives Paté With Real Chicken & Tuna Wet Cat Food",
+        "recipe": [
+          "chicken",
+          "tuna"
+        ],
+        "research_status": "source_verified",
+        "size": "13 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.directionsforme.org/product/330514",
+          "https://www.9lives.com/product/9lives-pate-with-real-chicken-tuna-wet-cat-food/"
+        ],
+        "species": "cat",
+        "texture": "pate",
+        "upc": "071190481238",
+        "variant": "With Real Chicken & Tuna",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190481238; canonical GTIN-14 is 00071190481238.",
+          "The GTIN is printed for the individual 13 oz can.",
+          "The ingredient statement was kept as the exact 13 oz LS001 transcription and split only at top-level commas.",
+          "Energy cross-check: 1045 kcal/kg × 13 oz is approximately 385.5 kcal, consistent with the printed 385 kcal/can after rounding.",
+          "The LS001 adequacy statement is for maintenance."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me prints GTIN-14 00071190480392 for the LS001 individual 5.5 oz can; UPC-A 071190480392 validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 1080,
+          "kcal_per_unit": 170,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190480392",
+        "catalog_number": null,
+        "conflicts": [],
+        "food_form": "wet",
+        "formula_source": "Directions for Me transcribes the exact current For All Tails LS001 5.5 oz label, including complete ingredients, calories, maintenance statement, and GTIN; the current manufacturer page confirms the guaranteed analysis and identity.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 4,
+          "crude_fat_min_percent": 6,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 9,
+          "moisture_max_percent": 78,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Meat-By-Products",
+          "Water Sufficient for Processing",
+          "Poultry-By-Products",
+          "Fish",
+          "Chicken",
+          "Brewers Rice",
+          "Potassium Chloride",
+          "Salt",
+          "Sodium Tripolyphosphate",
+          "Guar Gum",
+          "Dried Whey Solubles",
+          "Calcium Carbonate",
+          "Titanium Dioxide (Color)",
+          "Choline Chloride",
+          "Carrageenan",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Magnesium Sulfate",
+          "Taurine",
+          "Vitamin E Supplement",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)",
+          "Sodium Nitrite (to Promote Color Retention)"
+        ],
+        "ingredients_verbatim": "Meat-By-Products, Water Sufficient for Processing, Poultry-By-Products, Fish, Chicken, Brewers Rice, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Dried Whey Solubles, Calcium Carbonate, Titanium Dioxide (Color), Choline Chloride, Carrageenan, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Magnesium Sulfate, Taurine, Vitamin E Supplement, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (to Promote Color Retention).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "plain",
+        "product_line": "Paté",
+        "product_name": "9Lives Paté Super Supper Wet Cat Food",
+        "recipe": [
+          "chicken",
+          "fish"
+        ],
+        "research_status": "source_verified",
+        "size": "5.5 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://directionsforme.org/product/330499",
+          "https://www.9lives.com/product/9lives-pate-super-supper-wet-cat-food/"
+        ],
+        "species": "cat",
+        "texture": "pate",
+        "upc": "071190480392",
+        "variant": "Super Supper",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190480392; canonical GTIN-14 is 00071190480392.",
+          "The barcode is printed for the individual 5.5 oz can, not the four-pack.",
+          "The LS001 ingredient statement was split only at top-level commas.",
+          "Energy cross-check: 1080 kcal/kg × 5.5 oz is approximately 168.4 kcal, consistent with the printed 170 kcal/can after rounding.",
+          "The LS001 adequacy statement is for maintenance."
+        ]
+      },
+      {
+        "barcode_notes": "Chewy’s current individual-can image prints UPC-A 071190480842; the current manufacturer image filename embeds GTIN-14 00071190480842, and Total Pet Care independently binds the UPC to 13 oz.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 1060,
+          "kcal_per_unit": 390,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190480842",
+        "catalog_number": null,
+        "conflicts": [
+          "The current manufacturer HTML repeats the 5.5 oz 1080 kcal/kg and 170 kcal/can statement while listing a 13 oz size; the exact LS001 13 oz physical panel prints 1060 kcal/kg and 390 kcal/can and governs this record."
+        ],
+        "food_form": "wet",
+        "formula_source": "Chewy’s current exact-product image set shows the individual 13 oz can barcode and the complete LS001 ingredient, guarantee, and calorie panels; the manufacturer package image and an independent live retailer corroborate the exact size and UPC.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 4,
+          "crude_fat_min_percent": 6,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 9,
+          "moisture_max_percent": 78,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Meat By-Products",
+          "Water Sufficient For Processing",
+          "Poultry By-Products",
+          "Chicken",
+          "Fish",
+          "Brewers Rice",
+          "Calcium Carbonate",
+          "Potassium Chloride",
+          "Salt",
+          "Sodium Tripolyphosphate",
+          "Guar Gum",
+          "Dried Whey Solubles",
+          "Titanium Dioxide (Color)",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Carrageenan",
+          "Taurine",
+          "Magnesium Sulfate",
+          "Vitamin E Supplement",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)",
+          "Sodium Nitrite (To Promote Color Retention)"
+        ],
+        "ingredients_verbatim": "Meat By-Products, Water Sufficient For Processing, Poultry By-Products, Chicken, Fish, Brewers Rice, Calcium Carbonate, Potassium Chloride, Salt, Sodium Tripolyphosphate, Guar Gum, Dried Whey Solubles, Titanium Dioxide (Color), Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Carrageenan, Taurine, Magnesium Sulfate, Vitamin E Supplement, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Sodium Nitrite (To Promote Color Retention).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "plain",
+        "product_line": "Paté",
+        "product_name": "9Lives Paté Super Supper Wet Cat Food",
+        "recipe": [
+          "chicken",
+          "fish"
+        ],
+        "research_status": "source_verified",
+        "size": "13 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.chewy.com/9-lives-super-supper-pate-wet-cat/dp/3773438",
+          "https://www.9lives.com/product/9lives-pate-super-supper-wet-cat-food/",
+          "https://www.9lives.com/wp-content/uploads/2024/04/00071190480842_C1C1_PIM-1024x1024.avif",
+          "https://shop.totalpetcareny.com/products/total-pet-care/9-lives-meaty-pate-super-supper-wet-cat-food-can-2/"
+        ],
+        "species": "cat",
+        "texture": "pate",
+        "upc": "071190480842",
+        "variant": "Super Supper",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190480842; canonical GTIN-14 is 00071190480842.",
+          "The barcode is visibly printed on the individual 13 oz can even though Chewy sells a case of twelve.",
+          "Ingredients, complete guaranteed analysis, calories, and LS001 code were transcribed from one coherent Chewy physical-label image set.",
+          "Energy cross-check: 1060 kcal/kg × 13 oz is approximately 391.0 kcal, consistent with the printed 390 kcal/can after rounding.",
+          "Package copy identifies complete and balanced nutrition for adult cats."
+        ]
+      },
+      {
+        "barcode_notes": "Dollar General’s current individual-can image visibly prints UPC-A 071190480835; the page URL retains legacy code 079100778652, which is not used as the current package barcode.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 770,
+          "kcal_per_unit": 285,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190480835",
+        "catalog_number": null,
+        "conflicts": [
+          "Two current physical image sets carry UPC 071190480835 but materially differ: Chewy LS001 uses Modified Food Starch and prints 770 kcal/kg / 285 kcal/can; Dollar General visibly uses Potato Starch plus Modified Corn Starch and prints 803 kcal/kg / 296 kcal/can.",
+          "The current manufacturer HTML matches the LS001 ingredients and 770 kcal/kg but prints 120 kcal/can; 120 kcal is consistent with 5.5 oz, not this 13 oz package.",
+          "The Dollar General cylinder edge does not reveal a reliable deck code or complete uncropped ingredient line, so its generation is not labelled LS002 or synthesized."
+        ],
+        "food_form": "wet",
+        "formula_source": "Chewy’s current exact-product image set supplies one complete coherent LS001 formula snapshot. Dollar General’s current image set independently proves the individual 13 oz UPC but shows a materially different calorie panel and starch system under that same code, so this record is not promoted as current.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 3,
+          "crude_fat_min_percent": 2.5,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 8,
+          "moisture_max_percent": 82,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Water Sufficient For Processing",
+          "Meat By-Products",
+          "Chicken",
+          "Fish",
+          "Wheat Flour",
+          "Soy Protein Concentrate",
+          "Modified Food Starch",
+          "Natural Flavor",
+          "Titanium Dioxide (Color)",
+          "Vegetable Oil (BHA/BHT Used As A Preservative)",
+          "Sodium Tripolyphosphate",
+          "Calcium Carbonate",
+          "Caramel Color",
+          "Potassium Chloride",
+          "Choline Chloride",
+          "Bone Phosphate",
+          "Salt",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Taurine",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)",
+          "Iron Oxide (Color)"
+        ],
+        "ingredients_verbatim": "Water Sufficient For Processing, Meat By-Products, Chicken, Fish, Wheat Flour, Soy Protein Concentrate, Modified Food Starch, Natural Flavor, Titanium Dioxide (Color), Vegetable Oil (BHA/BHT Used As A Preservative), Sodium Tripolyphosphate, Calcium Carbonate, Caramel Color, Potassium Chloride, Choline Chloride, Bone Phosphate, Salt, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite), Iron Oxide (Color).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "in_gravy",
+        "product_line": "Bites",
+        "product_name": "9Lives Bites Wet Cat Food With Real Chicken in Gravy",
+        "recipe": [
+          "chicken",
+          "fish"
+        ],
+        "research_status": "needs_physical_label",
+        "size": "13 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.chewy.com/9lives-bites-real-chicken-in-gravy/dp/3773422",
+          "https://image.chewy.com/catalog/general/images/moe/069652de-abcc-77fe-8000-cc6e7e28f238._SL1200_QL100_V1_.jpg",
+          "https://image.chewy.com/catalog/general/images/moe/069652da-783a-7e29-8000-98d593c1cd28._SL1200_QL100_V1_.jpg",
+          "https://www.dollargeneral.com/p/9lives-bites-wet-cat-food-with-real-chicken-in-gravy-13-oz-can/79100778652",
+          "https://s7d1.scene7.com/is/image/dolgen/dg-24423401-4",
+          "https://s7d1.scene7.com/is/image/dolgen/dg-24423401-6",
+          "https://s7d1.scene7.com/is/image/dolgen/dg-24423401-7",
+          "https://www.9lives.com/product/9lives-bites-wet-cat-food-with-real-chicken-in-gravy/"
+        ],
+        "species": "cat",
+        "texture": "bits",
+        "upc": "071190480835",
+        "variant": "With Real Chicken in Gravy",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190480835; canonical GTIN-14 is 00071190480835.",
+          "The barcode and 13 oz size are visible together on the Dollar General can image.",
+          "The recorded ingredients, guarantees, calories, and deck code come only from the coherent Chewy LS001 panel and were not mixed with the conflicting Dollar General generation.",
+          "Energy cross-check for LS001: 770 kcal/kg × 13 oz is approximately 284.1 kcal, consistent with 285 kcal/can.",
+          "A current physical shelf can with a readable lot/deck is required to choose the current generation."
+        ]
+      },
+      {
+        "barcode_notes": "Both Chewy LS001 and Dollar General LS002 individual-can images visibly print UPC-A 071190481108; the check digit validates and canonical GTIN-14 is 00071190481108.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 1080,
+          "kcal_per_unit": 400,
+          "unit_name": "can"
+        },
+        "canonical_gtin14": "00071190481108",
+        "catalog_number": null,
+        "conflicts": [
+          "The same UPC 071190481108 is physically printed on two incompatible labels: Chewy LS001 uses Ground Brewers Rice and prints 1080 kcal/kg / 400 kcal/can; Dollar General LS002 visibly includes Wheat Flour and prints 1125 kcal/kg / 415 kcal/can.",
+          "The current manufacturer HTML is a third incompatible source: it displays a Chicken & Tuna-style formula and 1050 kcal/kg / 165 kcal/can for the 13 oz Beef identity.",
+          "Because two current physical deck generations remain under one UPC, the exact LS001 snapshot is retained as needs_physical_label pending a dated shelf can."
+        ],
+        "food_form": "wet",
+        "formula_source": "Chewy’s current exact-product image set binds UPC 071190481108 to the individual 13 oz can and supplies one complete coherent LS001 label. Dollar General shows a materially different LS002 physical label under the same UPC, so no shelf-current generation is inferred.",
+        "guaranteed_analysis": {
+          "ash_max_percent": 3.5,
+          "crude_fat_min_percent": 6,
+          "crude_fiber_max_percent": 1,
+          "crude_protein_min_percent": 9,
+          "moisture_max_percent": 78,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Omega-6 Fatty Acids",
+              "unit": "percent",
+              "value": 0.3
+            }
+          ],
+          "taurine_min_percent": 0.05
+        },
+        "ingredients_ordered_normalized": [
+          "Meat By-Products",
+          "Water Sufficient For Processing",
+          "Beef",
+          "Poultry By-Products",
+          "Chicken",
+          "Ground Brewers Rice",
+          "Guar Gum",
+          "Potassium Chloride",
+          "Salt",
+          "Caramel Color",
+          "Sodium Tripolyphosphate",
+          "Carrageenan",
+          "Magnesium Sulfate",
+          "Natural Flavor",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin)",
+          "Taurine",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite)"
+        ],
+        "ingredients_verbatim": "Meat By-Products, Water Sufficient For Processing, Beef, Poultry By-Products, Chicken, Ground Brewers Rice, Guar Gum, Potassium Chloride, Salt, Caramel Color, Sodium Tripolyphosphate, Carrageenan, Magnesium Sulfate, Natural Flavor, Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex, Vitamin D3 Supplement, Folic Acid, Biotin), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Calcium Iodate, Sodium Selenite).",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "can",
+        "presentation": "plain",
+        "product_line": "Paté",
+        "product_name": "9Lives Paté With Real Beef Wet Cat Food",
+        "recipe": [
+          "beef",
+          "chicken"
+        ],
+        "research_status": "needs_physical_label",
+        "size": "13 oz",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.chewy.com/9lives-real-beef-pate-wet-cat-food-13/dp/3773406",
+          "https://image.chewy.com/catalog/general/images/moe/069652db-70f1-7cc6-8000-aede7145f052._SL1200_QL100_V1_.jpg",
+          "https://image.chewy.com/catalog/general/images/moe/069652db-8fb2-7d51-8000-0920da332c3a._SL1200_QL100_V1_.jpg",
+          "https://image.chewy.com/catalog/general/images/moe/069652db-8619-7244-8000-85950855ac98._SL1200_QL100_V1_.jpg",
+          "https://www.dollargeneral.com/p/9lives-pat-wet-cat-food-with-real-beef-13-oz-can/79100522248",
+          "https://www.9lives.com/product/9lives-pate-with-real-beef-wet-cat-food/"
+        ],
+        "species": "cat",
+        "texture": "pate",
+        "upc": "071190481108",
+        "variant": "With Real Beef",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 071190481108; canonical GTIN-14 is 00071190481108.",
+          "Both source image sets bind the code to one individual 13 oz can, not the case of twelve.",
+          "The recorded ingredients, guarantees, calories, and LS001 code are transcribed only from the coherent Chewy physical-label set; no LS002 fields were merged.",
+          "Energy cross-check for LS001: 1080 kcal/kg × 13 oz is approximately 398.5 kcal, consistent with 400 kcal/can.",
+          "A current physical shelf can with its printed deck/lot is required to select LS001 or LS002 for seeding."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me prints outer GTIN-14 00071190480965 for 4 × 5.5 oz cans; UPC-A 071190480965 validates.",
+        "barcode_scope": "multipack",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": null,
+          "kcal_per_unit": null,
+          "unit_name": null
+        },
+        "canonical_gtin14": "00071190480965",
+        "catalog_number": null,
+        "conflicts": [],
+        "contains": [],
+        "food_form": "wet",
+        "formula_source": "Directions for Me proves the For All Tails four-can outer package, count, unit size, LS001 mark, and GTIN; the current manufacturer page corroborates the current Super Supper identity. Formula fields are deliberately omitted for the outer package.",
+        "guaranteed_analysis": {
+          "ash_max_percent": null,
+          "crude_fat_min_percent": null,
+          "crude_fiber_max_percent": null,
+          "crude_protein_min_percent": null,
+          "moisture_max_percent": null,
+          "other_printed_guarantees": [],
+          "taurine_min_percent": null
+        },
+        "ingredients_ordered_normalized": [],
+        "ingredients_verbatim": "",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "pack_count": 4,
+        "package_type": "box",
+        "presentation": null,
+        "product_line": "Paté",
+        "product_name": "9Lives Paté Super Supper Wet Cat Food 4-Pack",
+        "recipe": [
+          "chicken",
+          "fish"
+        ],
+        "research_status": "source_verified",
+        "size": "4 × 5.5 oz cans",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.directionsforme.org/product/328375",
+          "https://www.9lives.com/product/9lives-pate-super-supper-wet-cat-food/"
+        ],
+        "species": "cat",
+        "texture": null,
+        "unit_size": "5.5 oz",
+        "upc": "071190480965",
+        "variant": "Super Supper 4-Pack",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches.",
+          "This is the sellable four-can wrapper code, not an individual-can barcode.",
+          "No composition or calories were assigned to the outer package; inner printed barcodes were not inferred.",
+          "Under BRIEF-REVEAL §8, proven outer identity is source_verified with contains left empty."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me and ShopRite expose outer GTIN-14 00071190480996 for 4 × 5.5 oz cans; UPC-A 071190480996 validates.",
+        "barcode_scope": "multipack",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": null,
+          "kcal_per_unit": null,
+          "unit_name": null
+        },
+        "canonical_gtin14": "00071190480996",
+        "catalog_number": null,
+        "conflicts": [],
+        "contains": [],
+        "food_form": "wet",
+        "formula_source": "Directions for Me proves the exact For All Tails four-can outer package, count, unit size, LS001 mark, and GTIN; the current manufacturer and retailer pages corroborate the recipe identity. Formula fields are deliberately omitted for the outer package.",
+        "guaranteed_analysis": {
+          "ash_max_percent": null,
+          "crude_fat_min_percent": null,
+          "crude_fiber_max_percent": null,
+          "crude_protein_min_percent": null,
+          "moisture_max_percent": null,
+          "other_printed_guarantees": [],
+          "taurine_min_percent": null
+        },
+        "ingredients_ordered_normalized": [],
+        "ingredients_verbatim": "",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "pack_count": 4,
+        "package_type": "box",
+        "presentation": null,
+        "product_line": "Bites",
+        "product_name": "9Lives Bites With Real Beef in Gravy Wet Cat Food 4-Pack",
+        "recipe": [
+          "beef"
+        ],
+        "research_status": "source_verified",
+        "size": "4 × 5.5 oz cans",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://directionsforme.org/product/330511",
+          "https://www.9lives.com/product/9lives-bites-wet-cat-food-with-real-beef-in-gravy/",
+          "https://www.shoprite.com/product/9lives-bites-with-real-beef-in-gravy-cat-food-55-oz-4-count-id-00071190480996"
+        ],
+        "species": "cat",
+        "texture": null,
+        "unit_size": "5.5 oz",
+        "upc": "071190480996",
+        "variant": "With Real Beef in Gravy 4-Pack",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches.",
+          "This is the sellable four-can package code, not an individual can.",
+          "No composition or calories were assigned to the outer package; inner printed barcodes were not inferred.",
+          "Under BRIEF-REVEAL §8, proven outer identity is source_verified with contains left empty."
+        ]
+      },
+      {
+        "barcode_notes": "Directions for Me prints GTIN-14 00071190480811 for the 36 × 5.5 oz outer pack (198 oz total); UPC-A 071190480811 validates.",
+        "barcode_scope": "multipack",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": null,
+          "kcal_per_unit": null,
+          "unit_name": null
+        },
+        "canonical_gtin14": "00071190480811",
+        "catalog_number": null,
+        "conflicts": [],
+        "contains": [],
+        "food_form": "wet",
+        "formula_source": "Directions for Me proves the exact 36-can For All Tails outer package, total size, LS001 mark, and GTIN; the current manufacturer page confirms the current variety identity and assortment. Formula fields are deliberately omitted for the outer package.",
+        "guaranteed_analysis": {
+          "ash_max_percent": null,
+          "crude_fat_min_percent": null,
+          "crude_fiber_max_percent": null,
+          "crude_protein_min_percent": null,
+          "moisture_max_percent": null,
+          "other_printed_guarantees": [],
+          "taurine_min_percent": null
+        },
+        "ingredients_ordered_normalized": [],
+        "ingredients_verbatim": "",
+        "label_deck_code": "LS001",
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "pack_count": 36,
+        "package_type": "box",
+        "presentation": null,
+        "product_line": "Surf & Turf Favorites",
+        "product_name": "9Lives Surf & Turf Favorites Wet Cat Food Variety Pack",
+        "recipe": [
+          "fish",
+          "chicken",
+          "tuna",
+          "beef"
+        ],
+        "research_status": "source_verified",
+        "size": "36 × 5.5 oz cans",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://directionsforme.org/product/332990",
+          "https://www.9lives.com/product/9lives-surf-turf-favorites-wet-cat-food-variety-pack/"
+        ],
+        "species": "cat",
+        "texture": null,
+        "unit_size": "5.5 oz",
+        "upc": "071190480811",
+        "variant": "Surf & Turf Favorites",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches.",
+          "The code belongs to the sellable 36-can variety pack, not a can or shipping case.",
+          "The current assortment is nine cans each of Super Supper, Chicken & Tuna, Bites Chicken & Fish, and Bites Chicken & Beef.",
+          "No composition or calories were assigned to the outer package; inner printed barcodes were not inferred.",
+          "Under BRIEF-REVEAL §8, proven outer identity is source_verified with contains left empty."
+        ]
+      },
+      {
+        "barcode_notes": "The exact-size retailer listing binds UPC-A 079100521951 / GTIN-14 00079100521951 to the individual 12 lb bag; the check digit validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 3400,
+          "kcal_per_unit": 310,
+          "unit_name": "cup"
+        },
+        "canonical_gtin14": "00079100521951",
+        "catalog_number": null,
+        "conflicts": [
+          "A refreshed code 071190477897 appears in aggregators for the same size and identity, but was not added without an independently proven physical package generation."
+        ],
+        "food_form": "dry",
+        "formula_source": "Current U.S. 9Lives manufacturer product page supplies the complete Daily Essentials formula and lists the exact bag size; the retailer listing binds the UPC to that sellable bag.",
+        "guaranteed_analysis": {
+          "ash_max_percent": null,
+          "crude_fat_min_percent": 9,
+          "crude_fiber_max_percent": 3,
+          "crude_protein_min_percent": 28,
+          "moisture_max_percent": 12,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Calcium",
+              "unit": "percent",
+              "value": 1.1
+            },
+            {
+              "basis": "min",
+              "nutrient": "Phosphorus",
+              "unit": "percent",
+              "value": 0.9
+            },
+            {
+              "basis": "min",
+              "nutrient": "Iron",
+              "unit": "mg/kg",
+              "value": 180
+            },
+            {
+              "basis": "min",
+              "nutrient": "Selenium",
+              "unit": "mg/kg",
+              "value": 0.475
+            },
+            {
+              "basis": "min",
+              "nutrient": "Vitamin E",
+              "unit": "IU/kg",
+              "value": 100
+            },
+            {
+              "basis": "min",
+              "nutrient": "Omega 3 Fatty Acids",
+              "unit": "percent",
+              "value": 0.12
+            }
+          ],
+          "taurine_min_percent": 0.1
+        },
+        "ingredients_ordered_normalized": [
+          "Whole Ground Corn",
+          "Chicken By-Product Meal",
+          "Soybean Meal",
+          "Corn Protein Meal",
+          "Whole Wheat",
+          "Animal Fat (Preserved With Mixed Tocopherols)",
+          "Meat And Bone Meal",
+          "Natural Flavor (Preserved With Mixed Tocopherols)",
+          "Salmon Meal",
+          "Phosphoric Acid",
+          "Salt",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement)",
+          "Titanium Dioxide",
+          "Taurine",
+          "Yellow 5",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate)",
+          "Red 40",
+          "BHA (Used As A Preservative)",
+          "Lactic Acid",
+          "Yellow 6",
+          "Blue 2",
+          "Rosemary Extract"
+        ],
+        "ingredients_verbatim": "Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.",
+        "label_deck_code": null,
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "bag",
+        "presentation": "plain",
+        "product_line": "Daily Essentials",
+        "product_name": "9Lives Daily Essentials Dry Cat Food",
+        "recipe": [
+          "chicken",
+          "beef",
+          "salmon"
+        ],
+        "research_status": "source_verified",
+        "size": "12 lb",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.9lives.com/product/9lives-daily-essentials-dry-cat-food/",
+          "https://www.dollargeneral.com/p/9lives-daily-essentials-dry-cat-food-chicken-beef-salmon-12-lb/079100521951"
+        ],
+        "species": "cat",
+        "texture": "kibble",
+        "upc": "079100521951",
+        "variant": "Chicken, Beef & Salmon Flavors",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 079100521951; canonical GTIN-14 is 00079100521951.",
+          "Retailer evidence binds the exact UPC to the 12 lb sellable bag; the current U.S. manufacturer page lists that size and supplies the complete formula.",
+          "The ingredient statement was transcribed as a single verbatim string and split only at top-level commas.",
+          "Manufacturer-printed kcal/kg and kcal/cup bases are recorded without inferring a mass per cup.",
+          "This active Dollar General listing retains legacy 079100 prefix packaging; exact GS1 ownership remains for the seeding pass."
+        ]
+      },
+      {
+        "barcode_notes": "The exact-size retailer listing binds UPC-A 079100520398 / GTIN-14 00079100520398 to the individual 28 lb bag; the check digit validates.",
+        "barcode_scope": "individual_unit",
+        "brand": "9Lives",
+        "calorie_content": {
+          "kcal_per_kg": 3400,
+          "kcal_per_unit": 310,
+          "unit_name": "cup"
+        },
+        "canonical_gtin14": "00079100520398",
+        "catalog_number": null,
+        "conflicts": [
+          "This current exact-size listing retains a legacy 079100 prefix; exact GS1 ownership remains for the seeding pass."
+        ],
+        "food_form": "dry",
+        "formula_source": "Current U.S. 9Lives manufacturer product page supplies the complete Daily Essentials formula and lists the exact bag size; the retailer listing binds the UPC to that sellable bag.",
+        "guaranteed_analysis": {
+          "ash_max_percent": null,
+          "crude_fat_min_percent": 9,
+          "crude_fiber_max_percent": 3,
+          "crude_protein_min_percent": 28,
+          "moisture_max_percent": 12,
+          "other_printed_guarantees": [
+            {
+              "basis": "min",
+              "nutrient": "Calcium",
+              "unit": "percent",
+              "value": 1.1
+            },
+            {
+              "basis": "min",
+              "nutrient": "Phosphorus",
+              "unit": "percent",
+              "value": 0.9
+            },
+            {
+              "basis": "min",
+              "nutrient": "Iron",
+              "unit": "mg/kg",
+              "value": 180
+            },
+            {
+              "basis": "min",
+              "nutrient": "Selenium",
+              "unit": "mg/kg",
+              "value": 0.475
+            },
+            {
+              "basis": "min",
+              "nutrient": "Vitamin E",
+              "unit": "IU/kg",
+              "value": 100
+            },
+            {
+              "basis": "min",
+              "nutrient": "Omega 3 Fatty Acids",
+              "unit": "percent",
+              "value": 0.12
+            }
+          ],
+          "taurine_min_percent": 0.1
+        },
+        "ingredients_ordered_normalized": [
+          "Whole Ground Corn",
+          "Chicken By-Product Meal",
+          "Soybean Meal",
+          "Corn Protein Meal",
+          "Whole Wheat",
+          "Animal Fat (Preserved With Mixed Tocopherols)",
+          "Meat And Bone Meal",
+          "Natural Flavor (Preserved With Mixed Tocopherols)",
+          "Salmon Meal",
+          "Phosphoric Acid",
+          "Salt",
+          "Choline Chloride",
+          "Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement)",
+          "Titanium Dioxide",
+          "Taurine",
+          "Yellow 5",
+          "Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate)",
+          "Red 40",
+          "BHA (Used As A Preservative)",
+          "Lactic Acid",
+          "Yellow 6",
+          "Blue 2",
+          "Rosemary Extract"
+        ],
+        "ingredients_verbatim": "Whole Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Whole Wheat, Animal Fat (Preserved With Mixed Tocopherols), Meat And Bone Meal, Natural Flavor (Preserved With Mixed Tocopherols), Salmon Meal, Phosphoric Acid, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Riboflavin Supplement, D-Calcium Pantothenate, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide, Taurine, Yellow 5, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, BHA (Used As A Preservative), Lactic Acid, Yellow 6, Blue 2, Rosemary Extract.",
+        "label_deck_code": null,
+        "life_stage": "adult",
+        "manufacturer": "Post Consumer Brands / For All Tails Pet Care",
+        "package_type": "bag",
+        "presentation": "plain",
+        "product_line": "Daily Essentials",
+        "product_name": "9Lives Daily Essentials Dry Cat Food",
+        "recipe": [
+          "chicken",
+          "beef",
+          "salmon"
+        ],
+        "research_status": "source_verified",
+        "size": "28 lb",
+        "source_accessed_at": "2026-09-03",
+        "source_urls": [
+          "https://www.9lives.com/product/9lives-daily-essentials-dry-cat-food/",
+          "https://www.ruralking.com/9lives-daily-essentials-dry-cat-food-28-lb-bag"
+        ],
+        "species": "cat",
+        "texture": "kibble",
+        "upc": "079100520398",
+        "variant": "Chicken, Beef & Salmon Flavors",
+        "verification_notes": [
+          "UPC-A check digit independently computed and matches for 079100520398; canonical GTIN-14 is 00079100520398.",
+          "Retailer evidence binds the exact UPC to the 28 lb sellable bag; the current U.S. manufacturer page lists that size and supplies the complete formula.",
+          "The ingredient statement was transcribed as a single verbatim string and split only at top-level commas.",
+          "Manufacturer-printed kcal/kg and kcal/cup bases are recorded without inferring a mass per cup.",
+          "Rural King exposes 079100520398 as the vendor product number for the exact 28 lb retail bag.",
+          "Legacy GS1 prefix 079100 is associated with the pre-Post owner era and remains flagged for seeding-pass registration."
+        ]
+      }
+  ]
 }
