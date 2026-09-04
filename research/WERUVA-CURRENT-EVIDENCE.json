@@ -1,0 +1,3084 @@
+{
+  "generated_at": "2026-08-30T00:22:45.217Z",
+  "summary": {
+    "index_rows": 131,
+    "unique_upcs": 129,
+    "manufacturer_title_match": 123,
+    "exact_same_upc_current": 13,
+    "changed_or_historical": 110,
+    "unresolved": 6
+  },
+  "records": [
+    {
+      "upc": "813778018203",
+      "product": "Tic Tac Whoa! — Tuna & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Beef & Tuna Tic Toc",
+        "handle": "beef-and-tuna-tic-toc-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9446",
+            "barcode": "813778015660"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9507",
+            "barcode": "813778015530"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can"
+      }
+    },
+    {
+      "upc": "813778018920",
+      "product": "Family Food — Chicken Breast & Tuna",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Formula in Gravy",
+        "handle": "chicken-and-tuna-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2708",
+            "barcode": "810028242753"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "813778018609",
+      "product": "Family Food — Chicken Breast & Tuna",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Formula in Gravy",
+        "handle": "chicken-and-tuna-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2708",
+            "barcode": "810028242753"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "813778018999",
+      "product": "Jeopurrdy Licious — Chicken Breast",
+      "size": "2.8 oz",
+      "current_match": null
+    },
+    {
+      "upc": "813778018753",
+      "product": "Jeopurrdy Licious — Chicken Breast",
+      "size": "5.5 oz",
+      "current_match": null
+    },
+    {
+      "upc": "813778018975",
+      "product": "Let's Make a Meal — Lamb & Mackerel",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.2857142857142857,
+        "title": "Chicken & Lamb Laugh Out Loud",
+        "handle": "chicken-and-lamb-laugh-out-loud-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9576",
+            "barcode": "813778014649"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9637",
+            "barcode": "813778014564"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can"
+      }
+    },
+    {
+      "upc": "813778018982",
+      "product": "Love Connection — Chicken & Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Pumpkin Love Munchkin!",
+        "handle": "chicken-and-pumpkin-love-munchkin-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9002",
+            "barcode": "813778014120"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9064",
+            "barcode": "813778019125"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can"
+      }
+    },
+    {
+      "upc": "813778018951",
+      "product": "Meal of Fortune — Chicken & Chicken Liver",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Meal of Fortune",
+        "handle": "meal-of-fortune-cat-pouch",
+        "url": "https://www.weruva.com/products/meal-of-fortune-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8791",
+            "barcode": "813778018876"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8555",
+            "barcode": "813778018630"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/meal-of-fortune-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778018944",
+      "product": "Name 'Dat Tuna — Tuna Dinner",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Name 'Dat Tuna",
+        "handle": "name-dat-tuna-cat-pouch",
+        "url": "https://www.weruva.com/products/name-dat-tuna-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8784",
+            "barcode": "813778018869"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8548",
+            "barcode": "813778018623"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/name-dat-tuna-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778018708",
+      "product": "Name 'Dat Tuna — Tuna Dinner",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Name 'Dat Tuna",
+        "handle": "name-dat-tuna-cat-pouch",
+        "url": "https://www.weruva.com/products/name-dat-tuna-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8784",
+            "barcode": "813778018869"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8548",
+            "barcode": "813778018623"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/name-dat-tuna-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778018968",
+      "product": "The Newly Feds — Beef & Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Beef & Salmon Best Day Eva!",
+        "handle": "beef-and-salmon-best-day-eva-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9057",
+            "barcode": "813778014076"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9118",
+            "barcode": "813778019170"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can"
+      }
+    },
+    {
+      "upc": "813778018722",
+      "product": "The Newly Feds — Beef & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Beef & Salmon Best Day Eva!",
+        "handle": "beef-and-salmon-best-day-eva-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9057",
+            "barcode": "813778014076"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9118",
+            "barcode": "813778019170"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can"
+      }
+    },
+    {
+      "upc": "813778018937",
+      "product": "The Slice Is Right — Wild Caught Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.5714285714285714,
+        "title": "The Slice is Right",
+        "handle": "the-slice-is-right-cat-pouch",
+        "url": "https://www.weruva.com/products/the-slice-is-right-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8777",
+            "barcode": "813778018852"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8531",
+            "barcode": "813778018616"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/the-slice-is-right-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778018692",
+      "product": "The Slice Is Right — Wild Caught Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5714285714285714,
+        "title": "The Slice is Right",
+        "handle": "the-slice-is-right-cat-pouch",
+        "url": "https://www.weruva.com/products/the-slice-is-right-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8777",
+            "barcode": "813778018852"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8531",
+            "barcode": "813778018616"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/the-slice-is-right-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408001031",
+      "product": "Classic Asian Fusion — Tuna & Shirasu",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Asian Fusion",
+        "handle": "asian-fusion-cat-can",
+        "url": "https://www.weruva.com/products/asian-fusion-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 24pk",
+            "sku": "0133 (24X3OZ)",
+            "barcode": "878408000133"
+          },
+          {
+            "title": "5.5oz Can / 24pk",
+            "sku": "0034",
+            "barcode": "878408000034"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/asian-fusion-cat-can"
+      }
+    },
+    {
+      "upc": "878408002038",
+      "product": "Classic Asian Fusion — Tuna & Shirasu",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Asian Fusion",
+        "handle": "asian-fusion-cat-can",
+        "url": "https://www.weruva.com/products/asian-fusion-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 24pk",
+            "sku": "0133 (24X3OZ)",
+            "barcode": "878408000133"
+          },
+          {
+            "title": "5.5oz Can / 24pk",
+            "sku": "0034",
+            "barcode": "878408000034"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/asian-fusion-cat-can"
+      }
+    },
+    {
+      "upc": "878408001123",
+      "product": "Classic Grandma's Chicken Soup",
+      "size": "3 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Grandma's Chicken Soup",
+        "handle": "grandmas-chicken-soup-cat-can",
+        "url": "https://www.weruva.com/products/grandmas-chicken-soup-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 24pk",
+            "sku": "0324",
+            "barcode": "878408000324"
+          },
+          {
+            "title": "3oz Can / 4pk",
+            "sku": "8755",
+            "barcode": "810028248632"
+          },
+          {
+            "title": "5.5oz Can / 24pk",
+            "sku": "0225",
+            "barcode": "878408000225"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/grandmas-chicken-soup-cat-can"
+      }
+    },
+    {
+      "upc": "810192811335",
+      "product": "Pantry Pours Chicken & Pumpkin Bisque with Senior Support",
+      "size": "1.4 oz",
+      "current_match": {
+        "score": 0.3333333333333333,
+        "title": "Chicken & Pumpkin Formula in Gravy",
+        "handle": "chicken-and-pumpkin-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-pumpkin-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2692",
+            "barcode": "810028242746"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-pumpkin-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "878408001147",
+      "product": "Classic Amazon Livin' / Nine Liver",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Amazon Livin' Recipe Plus",
+        "handle": "amazon-livin-recipe-plus-dog-cup",
+        "url": "https://www.weruva.com/products/amazon-livin-recipe-plus-dog-cup",
+        "variants": [
+          {
+            "title": "3.5oz Cup / 12pk",
+            "sku": "3446",
+            "barcode": "810028243453"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/amazon-livin-recipe-plus-dog-cup"
+      }
+    },
+    {
+      "upc": "810028246072",
+      "product": "Wx Chicken & Tilapia Formula in Gravy",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.8571428571428571,
+        "title": "Chicken & Tilapia Formula in Gravy",
+        "handle": "chicken-and-tilapia-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tilapia-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2159",
+            "barcode": "810028242296"
+          },
+          {
+            "title": "5.5oz - 8pk",
+            "sku": "6164",
+            "barcode": "810028246072"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5oz - 8pk",
+          "sku": "6164",
+          "barcode": "810028246072"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tilapia-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "813778015615",
+      "product": "PLAY Chicken & Tuna Til' Then",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Tuna Til' Then",
+        "handle": "chicken-and-tuna-til-then-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-til-then-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9422",
+            "barcode": "813778015684"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9484",
+            "barcode": "813778015554"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "7895",
+            "barcode": "810028247888"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-til-then-cat-can"
+      }
+    },
+    {
+      "upc": "813778014588",
+      "product": "PLAY Chicken & Beef Best Buds",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Beef Best Buds",
+        "handle": "chicken-and-beef-best-buds-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-beef-best-buds-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9552",
+            "barcode": "813778014663"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-beef-best-buds-cat-can"
+      }
+    },
+    {
+      "upc": "813778015103",
+      "product": "PLAY Chicken, Duck & Turkey Take a Chance",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken, Duck & Turkey Take a Chance",
+        "handle": "chicken-duck-and-turkey-take-a-chance-cat-can",
+        "url": "https://www.weruva.com/products/chicken-duck-and-turkey-take-a-chance-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9590",
+            "barcode": "813778014625"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9651",
+            "barcode": "813778015042"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-duck-and-turkey-take-a-chance-cat-can"
+      }
+    },
+    {
+      "upc": "813778015127",
+      "product": "PLAY Chicken & Lamb Laugh Out Loud",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Lamb Laugh Out Loud",
+        "handle": "chicken-and-lamb-laugh-out-loud-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9576",
+            "barcode": "813778014649"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9637",
+            "barcode": "813778014564"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can"
+      }
+    },
+    {
+      "upc": "813778015004",
+      "product": "PLAY Chicken & Lamb Laugh Out Loud",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Lamb Laugh Out Loud",
+        "handle": "chicken-and-lamb-laugh-out-loud-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9576",
+            "barcode": "813778014649"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9637",
+            "barcode": "813778014564"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can"
+      }
+    },
+    {
+      "upc": "813778014755",
+      "product": "PLAY Chicken & Tuna Tubular",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778014816",
+      "product": "PLAY Chicken & Turkey Tiptoe",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey Tiptoe",
+        "handle": "chicken-and-turkey-tiptoe-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-tiptoe-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "4953",
+            "barcode": "813778014885"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-tiptoe-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778014540",
+      "product": "PLAY Chicken Cherish",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Cherish",
+        "handle": "chicken-cherish-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-cherish-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "4977",
+            "barcode": "813778014557"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-cherish-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778014731",
+      "product": "PLAY Beef & Tuna Ta Da!",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778015608",
+      "product": "PLAY Salmon & Tuna Tuck Me In",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778015486",
+      "product": "PLAY Salmon & Tuna Tuck Me In",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778016056",
+      "product": "PLAY Tuna & Beef Bodacious",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016063",
+      "product": "PLAY Tuna & Salmon Oh Snap!",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778015943",
+      "product": "PLAY Tuna & Salmon Oh Snap!",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778015745",
+      "product": "PLAY Tuna & Salmon SHHH...",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007040",
+      "product": "Originals Tuna & Bonito Be Mine",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007545",
+      "product": "Originals Tuna & Bonito Be Mine",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007071",
+      "product": "Originals Tuna & Chicken 4Eva",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007576",
+      "product": "Originals Tuna & Chicken 4Eva",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007675",
+      "product": "Originals Tuna & Chicken 4Eva",
+      "size": "10 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408003943",
+      "product": "Best Day Eva! Beef & Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Salmon Best Day Eva!",
+        "handle": "beef-and-salmon-best-day-eva-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9057",
+            "barcode": "813778014076"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9118",
+            "barcode": "813778019170"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can"
+      }
+    },
+    {
+      "upc": "878408004063",
+      "product": "Best Day Eva! Beef & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Salmon Best Day Eva!",
+        "handle": "beef-and-salmon-best-day-eva-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9057",
+            "barcode": "813778014076"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9118",
+            "barcode": "813778019170"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can"
+      }
+    },
+    {
+      "upc": "878408000447",
+      "product": "Booya! Beef & Chicken",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Chicken Booya!",
+        "handle": "beef-and-chicken-booya-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-chicken-booya-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0508",
+            "barcode": "878408001437"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-chicken-booya-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016506",
+      "product": "Dream Team Chicken & Duck",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Duck Dream Team",
+        "handle": "chicken-and-duck-dream-team-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-duck-dream-team-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9217",
+            "barcode": "813778016575"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9279",
+            "barcode": "813778016445"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-duck-dream-team-cat-can"
+      }
+    },
+    {
+      "upc": "813778016384",
+      "product": "Dream Team Chicken & Duck",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Duck Dream Team",
+        "handle": "chicken-and-duck-dream-team-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-duck-dream-team-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9217",
+            "barcode": "813778016575"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9279",
+            "barcode": "813778016445"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-duck-dream-team-cat-can"
+      }
+    },
+    {
+      "upc": "813778016209",
+      "product": "Shine Bright Chicken & Salmon",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Salmon Shine Bright",
+        "handle": "chicken-and-salmon-shine-bright-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-shine-bright-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "6346",
+            "barcode": "813778016278"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-shine-bright-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016520",
+      "product": "Stir It Up Chicken & Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Salmon Stir It Up",
+        "handle": "chicken-and-salmon-stir-it-up-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-stir-it-up-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9194",
+            "barcode": "813778016599"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9255",
+            "barcode": "813778016469"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-stir-it-up-cat-can"
+      }
+    },
+    {
+      "upc": "813778016193",
+      "product": "Text Me Chicken & Turkey",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey Text Me",
+        "handle": "chicken-and-turkey-text-me-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "6339",
+            "barcode": "813778016261"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016216",
+      "product": "Charge Me Up Chicken",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Charge Me Up",
+        "handle": "chicken-charge-me-up-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-charge-me-up-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "6353",
+            "barcode": "813778016285"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-charge-me-up-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016537",
+      "product": "Cloud 9 Chicken",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Cloud 9",
+        "handle": "chicken-cloud-9-cat-can",
+        "url": "https://www.weruva.com/products/chicken-cloud-9-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9187",
+            "barcode": "813778016605"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9248",
+            "barcode": "813778016476"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "7932",
+            "barcode": "810028247925"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-cloud-9-cat-can"
+      }
+    },
+    {
+      "upc": "878408000409",
+      "product": "Ciao Baby! Chicken & Shrimp",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Shrimp Ciao Baby!",
+        "handle": "chicken-and-shrimp-ciao-baby-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-shrimp-ciao-baby-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0461",
+            "barcode": "878408004070"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-shrimp-ciao-baby-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408003905",
+      "product": "Crazy 4 U! Chicken & Salmon",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Salmon Crazy 4 U!",
+        "handle": "chicken-and-salmon-crazy-4-u-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9019",
+            "barcode": "813778014113"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9071",
+            "barcode": "813778019132"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can"
+      }
+    },
+    {
+      "upc": "878408004025",
+      "product": "Crazy 4 U! Chicken & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Salmon Crazy 4 U!",
+        "handle": "chicken-and-salmon-crazy-4-u-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9019",
+            "barcode": "813778014113"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9071",
+            "barcode": "813778019132"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can"
+      }
+    },
+    {
+      "upc": "878408000430",
+      "product": "Date Nite! Duck & Salmon",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Duck & Salmon Date Nite!",
+        "handle": "duck-and-salmon-date-nite-cat-pouch",
+        "url": "https://www.weruva.com/products/duck-and-salmon-date-nite-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0492",
+            "barcode": "878408004100"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-salmon-date-nite-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408003936",
+      "product": "Lots-O-Luck! Duck & Tuna",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Duck & Tuna Lots-O-Luck!",
+        "handle": "duck-and-tuna-lots-o-luck-cat-can",
+        "url": "https://www.weruva.com/products/duck-and-tuna-lots-o-luck-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9040",
+            "barcode": "813778014083"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9101",
+            "barcode": "813778019163"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-lots-o-luck-cat-can"
+      }
+    },
+    {
+      "upc": "878408004056",
+      "product": "Lots-O-Luck! Duck & Tuna",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Duck & Tuna Lots-O-Luck!",
+        "handle": "duck-and-tuna-lots-o-luck-cat-can",
+        "url": "https://www.weruva.com/products/duck-and-tuna-lots-o-luck-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9040",
+            "barcode": "813778014083"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9101",
+            "barcode": "813778019163"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-lots-o-luck-cat-can"
+      }
+    },
+    {
+      "upc": "878408000423",
+      "product": "Purr-Fect Plannin'! Chicken, Turkey & Salmon",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken, Turkey, & Salmon Purr-Fect Plannin'!",
+        "handle": "chicken-turkey-and-salmon-purrfect-plannin-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-turkey-and-salmon-purrfect-plannin-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0485",
+            "barcode": "878408004094"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-turkey-and-salmon-purrfect-plannin-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408003912",
+      "product": "QT Patootie! Chicken & Turkey",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey QT Patootie!",
+        "handle": "chicken-and-turkey-qt-patootie-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-qt-patootie-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9026",
+            "barcode": "813778014106"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9088",
+            "barcode": "813778019149"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "8076",
+            "barcode": "810028248069"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-qt-patootie-cat-can"
+      }
+    },
+    {
+      "upc": "878408004032",
+      "product": "QT Patootie! Chicken & Turkey",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey QT Patootie!",
+        "handle": "chicken-and-turkey-qt-patootie-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-qt-patootie-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9026",
+            "barcode": "813778014106"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9088",
+            "barcode": "813778019149"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "8076",
+            "barcode": "810028248069"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-qt-patootie-cat-can"
+      }
+    },
+    {
+      "upc": "878408003929",
+      "product": "Selfie Cam! Chicken & Lamb",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Lamb Selfie Cam!",
+        "handle": "chicken-and-lamb-selfie-cam-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-selfie-cam-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9033",
+            "barcode": "813778014090"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9095",
+            "barcode": "813778019156"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-selfie-cam-cat-can"
+      }
+    },
+    {
+      "upc": "878408004049",
+      "product": "OMG Selfie Cam! Chicken & Lamb",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Lamb Selfie Cam!",
+        "handle": "chicken-and-lamb-selfie-cam-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-selfie-cam-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9033",
+            "barcode": "813778014090"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9095",
+            "barcode": "813778019156"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-selfie-cam-cat-can"
+      }
+    },
+    {
+      "upc": "878408000454",
+      "product": "OMG Shazaam! Lamb & Tuna",
+      "size": "2.8 oz pouch",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408008986",
+      "product": "OMG Baby Cakes Tuna & Beef",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.6,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408008979",
+      "product": "OMG Charm Me Tuna & Chicken",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Tuna Seeya Sooner!",
+        "handle": "chicken-and-tuna-seeya-sooner-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0478",
+            "barcode": "878408004087"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408008948",
+      "product": "OMG Devour Me Tuna & Duck",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.6,
+        "title": "Duck & Tuna Tap Dance",
+        "handle": "duck-and-tuna-tap-dance-cat-pouch",
+        "url": "https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5400",
+            "barcode": "813778015332"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408008009",
+      "product": "OMG Luv Ya Tuna & Lamb",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.4,
+        "title": "Beef & Tuna Ta Da!",
+        "handle": "beef-and-tuna-ta-da-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5417",
+            "barcode": "813778015349"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-ta-da-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408008993",
+      "product": "OMG Sweet Cheeks Tuna & Salmon",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.5,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "878408008917",
+      "product": "OMG Tickles Tuna & Turkey",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016360",
+      "product": "OMG Be Happy Chicken & Beef",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Beef Be Happy",
+        "handle": "chicken-and-beef-be-happy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-beef-be-happy-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9231",
+            "barcode": "813778016551"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9293",
+            "barcode": "813778016421"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-beef-be-happy-cat-can"
+      }
+    },
+    {
+      "upc": "813778016407",
+      "product": "OMG Stir It Up Chicken & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Salmon Stir It Up",
+        "handle": "chicken-and-salmon-stir-it-up-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-stir-it-up-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9194",
+            "barcode": "813778016599"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9255",
+            "barcode": "813778016469"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-stir-it-up-cat-can"
+      }
+    },
+    {
+      "upc": "813778016414",
+      "product": "OMG Chicken Cloud 9",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Cloud 9",
+        "handle": "chicken-cloud-9-cat-can",
+        "url": "https://www.weruva.com/products/chicken-cloud-9-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9187",
+            "barcode": "813778016605"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9248",
+            "barcode": "813778016476"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "7932",
+            "barcode": "810028247925"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-cloud-9-cat-can"
+      }
+    },
+    {
+      "upc": "878408007026",
+      "product": "Originals Sweethearts Tuna & Shrimp",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007521",
+      "product": "Originals Sweethearts Tuna & Shrimp",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007057",
+      "product": "Originals Twosome Tuna & Tilapia",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007552",
+      "product": "Originals Twosome Tuna & Tilapia",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007019",
+      "product": "Originals Too Cool Tuna",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.3333333333333333,
+        "title": "Name 'Dat Tuna",
+        "handle": "name-dat-tuna-cat-pouch",
+        "url": "https://www.weruva.com/products/name-dat-tuna-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8784",
+            "barcode": "813778018869"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8548",
+            "barcode": "813778018623"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/name-dat-tuna-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007514",
+      "product": "Originals Too Cool Tuna",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.3333333333333333,
+        "title": "Name 'Dat Tuna",
+        "handle": "name-dat-tuna-cat-pouch",
+        "url": "https://www.weruva.com/products/name-dat-tuna-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "8784",
+            "barcode": "813778018869"
+          },
+          {
+            "title": "5.5 oz - 12pk",
+            "sku": "8548",
+            "barcode": "813778018623"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/name-dat-tuna-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007088",
+      "product": "Originals Chuckles Tuna & Chicken",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007583",
+      "product": "Originals Chuckles Tuna & Chicken",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.75,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778015660",
+      "product": "PLAY Tic Toc — Beef & Tuna",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Tuna Tic Toc",
+        "handle": "beef-and-tuna-tic-toc-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9446",
+            "barcode": "813778015660"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9507",
+            "barcode": "813778015530"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "2.8 oz - 12pk",
+          "sku": "9446",
+          "barcode": "813778015660"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can"
+      }
+    },
+    {
+      "upc": "813778015530",
+      "product": "PLAY Tic Toc — Beef & Tuna",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Tuna Tic Toc",
+        "handle": "beef-and-tuna-tic-toc-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9446",
+            "barcode": "813778015660"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9507",
+            "barcode": "813778015530"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9507",
+          "barcode": "813778015530"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-tuna-tic-toc-cat-can"
+      }
+    },
+    {
+      "upc": "813778014656",
+      "product": "PLAY Topsy Turvy — Chicken & Turkey",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey Topsy Turvy",
+        "handle": "chicken-and-turkey-topsy-turvy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9569",
+            "barcode": "813778014656"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9620",
+            "barcode": "813778015073"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "2.8 oz - 12pk",
+          "sku": "9569",
+          "barcode": "813778014656"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can"
+      }
+    },
+    {
+      "upc": "813778015073",
+      "product": "PLAY Topsy Turvy — Chicken & Turkey",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Turkey Topsy Turvy",
+        "handle": "chicken-and-turkey-topsy-turvy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9569",
+            "barcode": "813778014656"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9620",
+            "barcode": "813778015073"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9620",
+          "barcode": "813778015073"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-topsy-turvy-cat-can"
+      }
+    },
+    {
+      "upc": "813778014670",
+      "product": "PLAY Checkmate — Chicken",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Checkmate",
+        "handle": "chicken-checkmate-cat-can",
+        "url": "https://www.weruva.com/products/chicken-checkmate-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9545",
+            "barcode": "813778014670"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9606",
+            "barcode": "813778015097"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "7871",
+            "barcode": "810028247864"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "2.8 oz - 12pk",
+          "sku": "9545",
+          "barcode": "813778014670"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-checkmate-cat-can"
+      }
+    },
+    {
+      "upc": "813778015097",
+      "product": "PLAY Checkmate — Chicken",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken Checkmate",
+        "handle": "chicken-checkmate-cat-can",
+        "url": "https://www.weruva.com/products/chicken-checkmate-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9545",
+            "barcode": "813778014670"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9606",
+            "barcode": "813778015097"
+          },
+          {
+            "title": "2.8 oz - 4pk",
+            "sku": "7871",
+            "barcode": "810028247864"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9606",
+          "barcode": "813778015097"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-checkmate-cat-can"
+      }
+    },
+    {
+      "upc": "813778014984",
+      "product": "PLAY Take a Chance — Chicken, Duck & Turkey",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken, Duck & Turkey Take a Chance",
+        "handle": "chicken-duck-and-turkey-take-a-chance-cat-can",
+        "url": "https://www.weruva.com/products/chicken-duck-and-turkey-take-a-chance-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9590",
+            "barcode": "813778014625"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9651",
+            "barcode": "813778015042"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-duck-and-turkey-take-a-chance-cat-can"
+      }
+    },
+    {
+      "upc": "813778014724",
+      "product": "PLAY Tap Dance — Duck & Tuna",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Duck & Tuna Tap Dance",
+        "handle": "duck-and-tuna-tap-dance-cat-pouch",
+        "url": "https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5400",
+            "barcode": "813778015332"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778014120",
+      "product": "OMG Love Munchkin — Chicken & Pumpkin",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Pumpkin Love Munchkin!",
+        "handle": "chicken-and-pumpkin-love-munchkin-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9002",
+            "barcode": "813778014120"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9064",
+            "barcode": "813778019125"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "2.8 oz - 12pk",
+          "sku": "9002",
+          "barcode": "813778014120"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can"
+      }
+    },
+    {
+      "upc": "813778019125",
+      "product": "OMG Love Munchkin — Chicken & Pumpkin",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Pumpkin Love Munchkin!",
+        "handle": "chicken-and-pumpkin-love-munchkin-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9002",
+            "barcode": "813778014120"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9064",
+            "barcode": "813778019125"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9064",
+          "barcode": "813778019125"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-pumpkin-love-munchkin-cat-can"
+      }
+    },
+    {
+      "upc": "813778019170",
+      "product": "OMG Best Day Eva! — Beef & Salmon",
+      "size": "5.5 oz current",
+      "current_match": {
+        "score": 1,
+        "title": "Beef & Salmon Best Day Eva!",
+        "handle": "beef-and-salmon-best-day-eva-cat-can",
+        "url": "https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9057",
+            "barcode": "813778014076"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9118",
+            "barcode": "813778019170"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9118",
+          "barcode": "813778019170"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-salmon-best-day-eva-cat-can"
+      }
+    },
+    {
+      "upc": "878408007033",
+      "product": "Originals Soulmates — Tuna & Salmon",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007538",
+      "product": "Originals Soulmates — Tuna & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007637",
+      "product": "Originals Soulmates — Tuna & Salmon",
+      "size": "10 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007064",
+      "product": "Originals Valentine — Tuna & Pumpkin",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007569",
+      "product": "Originals Valentine — Tuna & Pumpkin",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408007767",
+      "product": "Originals Valentine — Tuna & Pumpkin",
+      "size": "10 oz current",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408001154",
+      "product": "Classic Green Eggs & Chicken",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Beef & Chicken Booya!",
+        "handle": "beef-and-chicken-booya-cat-pouch",
+        "url": "https://www.weruva.com/products/beef-and-chicken-booya-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0508",
+            "barcode": "878408001437"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/beef-and-chicken-booya-cat-pouch"
+      }
+    },
+    {
+      "upc": "878408002144",
+      "product": "Classic Amazon Livin' / Nine Liver",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Amazon Livin' Recipe Plus",
+        "handle": "amazon-livin-recipe-plus-dog-cup",
+        "url": "https://www.weruva.com/products/amazon-livin-recipe-plus-dog-cup",
+        "variants": [
+          {
+            "title": "3.5oz Cup / 12pk",
+            "sku": "3446",
+            "barcode": "810028243453"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/amazon-livin-recipe-plus-dog-cup"
+      }
+    },
+    {
+      "upc": "878408001017",
+      "product": "Classic Outback Grill",
+      "size": "3 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Outback Grill",
+        "handle": "outback-grill-cat-can",
+        "url": "https://www.weruva.com/products/outback-grill-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 24pk",
+            "sku": "0119 (24X3OZ)",
+            "barcode": "878408000119"
+          },
+          {
+            "title": "5.5oz Can / 24pk",
+            "sku": "0010",
+            "barcode": "878408000010"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/outback-grill-cat-can"
+      }
+    },
+    {
+      "upc": "810028242807",
+      "product": "Kitten Chicken & Tuna Formula in Gravy",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.8571428571428571,
+        "title": "Chicken & Tuna Formula in Gravy",
+        "handle": "chicken-and-tuna-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2708",
+            "barcode": "810028242753"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "813778018371",
+      "product": "Cat Paté Jolly Good Fares — Chicken & Salmon",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.375,
+        "title": "Chicken & Salmon Crazy 4 U!",
+        "handle": "chicken-and-salmon-crazy-4-u-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9019",
+            "barcode": "813778014113"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9071",
+            "barcode": "813778019132"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can"
+      }
+    },
+    {
+      "upc": "813778018234",
+      "product": "Cat Paté Jolly Good Fares — Chicken & Salmon",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.375,
+        "title": "Chicken & Salmon Crazy 4 U!",
+        "handle": "chicken-and-salmon-crazy-4-u-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9019",
+            "barcode": "813778014113"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9071",
+            "barcode": "813778019132"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can"
+      }
+    },
+    {
+      "upc": "813778018364",
+      "product": "Cat Paté Meal or No Deal! — Chicken & Beef",
+      "size": "3 oz",
+      "current_match": {
+        "score": 0.4444444444444444,
+        "title": "Meal or No Deal!",
+        "handle": "meal-or-no-deal-cat-can",
+        "url": "https://www.weruva.com/products/meal-or-no-deal-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 12pk",
+            "sku": "4472",
+            "barcode": "813778018432"
+          },
+          {
+            "title": "3oz Can / 4pk",
+            "sku": "8014",
+            "barcode": "810028248007"
+          },
+          {
+            "title": "5.5oz Can / 8pk",
+            "sku": "4410",
+            "barcode": "813778018296"
+          },
+          {
+            "title": "10oz Can / 12pk",
+            "sku": "4719",
+            "barcode": "810028244719"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/meal-or-no-deal-cat-can"
+      }
+    },
+    {
+      "upc": "813778018227",
+      "product": "Cat Paté Meal or No Deal! — Chicken & Beef",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.4444444444444444,
+        "title": "Meal or No Deal!",
+        "handle": "meal-or-no-deal-cat-can",
+        "url": "https://www.weruva.com/products/meal-or-no-deal-cat-can",
+        "variants": [
+          {
+            "title": "3oz Can / 12pk",
+            "sku": "4472",
+            "barcode": "813778018432"
+          },
+          {
+            "title": "3oz Can / 4pk",
+            "sku": "8014",
+            "barcode": "810028248007"
+          },
+          {
+            "title": "5.5oz Can / 8pk",
+            "sku": "4410",
+            "barcode": "813778018296"
+          },
+          {
+            "title": "10oz Can / 12pk",
+            "sku": "4719",
+            "barcode": "810028244719"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/meal-or-no-deal-cat-can"
+      }
+    },
+    {
+      "upc": "810028246065",
+      "product": "Wx Chicken Formula in Gravy",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.8,
+        "title": "Chicken Formula in Gravy",
+        "handle": "chicken-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2517",
+            "barcode": "810028242593"
+          },
+          {
+            "title": "5.5oz - 8pk",
+            "sku": "6157",
+            "barcode": "810028246065"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5oz - 8pk",
+          "sku": "6157",
+          "barcode": "810028246065"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "810028246133",
+      "product": "Wx Chicken Formula in Hydrating Purée",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.8571428571428571,
+        "title": "Chicken Formula in a Hydrating Purée",
+        "handle": "chicken-formula-in-a-hydrating-puree-cat-can",
+        "url": "https://www.weruva.com/products/chicken-formula-in-a-hydrating-puree-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2487",
+            "barcode": "810028242562"
+          },
+          {
+            "title": "5.5oz - 8pk",
+            "sku": "6140",
+            "barcode": "810028246133"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5oz - 8pk",
+          "sku": "6140",
+          "barcode": "810028246133"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-formula-in-a-hydrating-puree-cat-can"
+      }
+    },
+    {
+      "upc": "810192811281",
+      "product": "Pantry Pours Chicken Bisque",
+      "size": "1.4 oz",
+      "current_match": null
+    },
+    {
+      "upc": "810192811250",
+      "product": "Pantry Pours Chicken & Tuna Bisque",
+      "size": "1.4 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Formula in Gravy",
+        "handle": "chicken-and-tuna-formula-in-gravy-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can",
+        "variants": [
+          {
+            "title": "3oz - 12pk",
+            "sku": "2708",
+            "barcode": "810028242753"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-formula-in-gravy-cat-can"
+      }
+    },
+    {
+      "upc": "810192811311",
+      "product": "Pantry Pours Tuna Bisque",
+      "size": "1.4 oz",
+      "current_match": null
+    },
+    {
+      "upc": "810192811366",
+      "product": "Pantry Pours Salmon Bisque with Senior Support",
+      "size": "1.4 oz",
+      "current_match": null
+    },
+    {
+      "upc": "810192811397",
+      "product": "Pantry Pours Chicken & Salmon Bisque with Senior Support",
+      "size": "1.4 oz",
+      "current_match": {
+        "score": 0.3333333333333333,
+        "title": "Chicken & Salmon Crazy 4 U!",
+        "handle": "chicken-and-salmon-crazy-4-u-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9019",
+            "barcode": "813778014113"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9071",
+            "barcode": "813778019132"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-salmon-crazy-4-u-cat-can"
+      }
+    },
+    {
+      "upc": "878408000607",
+      "product": "Pumpkin Patch Up! Pumpkin Purée",
+      "size": "1.05 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Puréed Pumpkin",
+        "handle": "pureed-pumpkin-dog-pouch",
+        "url": "https://www.weruva.com/products/pureed-pumpkin-dog-pouch",
+        "variants": [
+          {
+            "title": "1.05oz - 12pk",
+            "sku": "0805",
+            "barcode": "878408000706"
+          },
+          {
+            "title": "2.8oz - 12pk",
+            "sku": "0812",
+            "barcode": "878408000713"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/pureed-pumpkin-dog-pouch"
+      }
+    },
+    {
+      "upc": "878408000720",
+      "product": "Pumpkin Patch Up! Pumpkin Purée",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.4,
+        "title": "Puréed Pumpkin",
+        "handle": "pureed-pumpkin-dog-pouch",
+        "url": "https://www.weruva.com/products/pureed-pumpkin-dog-pouch",
+        "variants": [
+          {
+            "title": "1.05oz - 12pk",
+            "sku": "0805",
+            "barcode": "878408000706"
+          },
+          {
+            "title": "2.8oz - 12pk",
+            "sku": "0812",
+            "barcode": "878408000713"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/pureed-pumpkin-dog-pouch"
+      }
+    },
+    {
+      "upc": "810028241176",
+      "product": "Pumpkin Patch Up! Pumpkin + Coconut Oil & Flaxseeds",
+      "size": "1.05 oz",
+      "current_match": {
+        "score": 0.7142857142857143,
+        "title": "Pumpkin with Coconut Oil & Flaxseeds",
+        "handle": "pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch",
+        "url": "https://www.weruva.com/products/pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch",
+        "variants": [
+          {
+            "title": "1.05oz - 12pk",
+            "sku": "1152",
+            "barcode": "810028241169"
+          },
+          {
+            "title": "2.8oz - 12pk",
+            "sku": "1183",
+            "barcode": "810028241190"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch"
+      }
+    },
+    {
+      "upc": "810028241206",
+      "product": "Pumpkin Patch Up! Pumpkin + Coconut Oil & Flaxseeds",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.7142857142857143,
+        "title": "Pumpkin with Coconut Oil & Flaxseeds",
+        "handle": "pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch",
+        "url": "https://www.weruva.com/products/pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch",
+        "variants": [
+          {
+            "title": "1.05oz - 12pk",
+            "sku": "1152",
+            "barcode": "810028241169"
+          },
+          {
+            "title": "2.8oz - 12pk",
+            "sku": "1183",
+            "barcode": "810028241190"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/pumpkin-with-coconut-oil-and-flaxseeds-dog-pouch"
+      }
+    },
+    {
+      "upc": "810028247123",
+      "product": "Pamper Like Paris Chicken Breast Dinner Paté",
+      "size": "2.47 oz",
+      "current_match": null
+    },
+    {
+      "upc": "813778017145",
+      "product": "OMG Tuna & Salmon Start Me Up",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6666666666666666,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778017022",
+      "product": "OMG Tuna & Salmon Start Me Up",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.6666666666666666,
+        "title": "Salmon & Tuna Tuck Me In",
+        "handle": "salmon-and-tuna-tuck-me-in-cat-can",
+        "url": "https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9439",
+            "barcode": "813778015677"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9491",
+            "barcode": "813778015547"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/salmon-and-tuna-tuck-me-in-cat-can"
+      }
+    },
+    {
+      "upc": "813778017121",
+      "product": "OMG Tuna & Turkey Tell Me",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Turkey Text Me",
+        "handle": "chicken-and-turkey-text-me-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "6339",
+            "barcode": "813778016261"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778017138",
+      "product": "OMG Tuna & Chicken Chase Me",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Tuna Seeya Sooner!",
+        "handle": "chicken-and-tuna-seeya-sooner-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0478",
+            "barcode": "878408004087"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778017046",
+      "product": "OMG Tuna & Lamb Lights Out",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Lamb Laugh Out Loud",
+        "handle": "chicken-and-lamb-laugh-out-loud-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9576",
+            "barcode": "813778014649"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9637",
+            "barcode": "813778014564"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-laugh-out-loud-cat-can"
+      }
+    },
+    {
+      "upc": "813778016490",
+      "product": "OMG Chicken & Lamb Live N' Love",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Lamb Live N' Love",
+        "handle": "chicken-and-lamb-live-n-love-cat-can",
+        "url": "https://www.weruva.com/products/chicken-and-lamb-live-n-love-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9224",
+            "barcode": "813778016568"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-lamb-live-n-love-cat-can"
+      }
+    },
+    {
+      "upc": "813778015646",
+      "product": "PLAY Turkey & Tuna Tweet Me!",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Turkey Text Me",
+        "handle": "chicken-and-turkey-text-me-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "6339",
+            "barcode": "813778016261"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-turkey-text-me-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016070",
+      "product": "PLAY Tuna & Chicken Check Please!",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Tuna Seeya Sooner!",
+        "handle": "chicken-and-tuna-seeya-sooner-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0478",
+            "barcode": "878408004087"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016018",
+      "product": "PLAY Tuna & Chicken Check Please!",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Chicken & Tuna Seeya Sooner!",
+        "handle": "chicken-and-tuna-seeya-sooner-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch",
+        "variants": [
+          {
+            "title": "2.8oz Pouch / 12pk",
+            "sku": "0478",
+            "barcode": "878408004087"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-seeya-sooner-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778016049",
+      "product": "PLAY Tuna & Duck Double Dare",
+      "size": "2.8 oz",
+      "current_match": {
+        "score": 0.6,
+        "title": "Duck & Tuna Tap Dance",
+        "handle": "duck-and-tuna-tap-dance-cat-pouch",
+        "url": "https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5400",
+            "barcode": "813778015332"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-tap-dance-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778015523",
+      "product": "PLAY Duck & Tuna Trickster",
+      "size": "5.5 oz",
+      "current_match": {
+        "score": 1,
+        "title": "Duck & Tuna Trickster",
+        "handle": "duck-and-tuna-trickster-cat-can",
+        "url": "https://www.weruva.com/products/duck-and-tuna-trickster-cat-can",
+        "variants": [
+          {
+            "title": "2.8 oz - 12pk",
+            "sku": "9453",
+            "barcode": "813778015653"
+          },
+          {
+            "title": "5.5 oz - 8pk",
+            "sku": "9514",
+            "barcode": "813778015523"
+          }
+        ],
+        "exact_current_barcode": true,
+        "exact_variant": {
+          "title": "5.5 oz - 8pk",
+          "sku": "9514",
+          "barcode": "813778015523"
+        },
+        "fetch_error": "Error: 429 https://www.weruva.com/products/duck-and-tuna-trickster-cat-can"
+      }
+    },
+    {
+      "upc": "813778015325",
+      "product": "PLAY Turkey & Tuna Twinkles",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 0.5,
+        "title": "Chicken & Tuna Tubular",
+        "handle": "chicken-and-tuna-tubular-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "5431",
+            "barcode": "813778015363"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-tuna-tubular-cat-pouch"
+      }
+    },
+    {
+      "upc": "813778014793",
+      "product": "PLAY Chicken & Duck Destiny",
+      "size": "3 oz pouch",
+      "current_match": {
+        "score": 1,
+        "title": "Chicken & Duck Destiny",
+        "handle": "chicken-and-duck-destiny-cat-pouch",
+        "url": "https://www.weruva.com/products/chicken-and-duck-destiny-cat-pouch",
+        "variants": [
+          {
+            "title": "3.0 oz - 12pk",
+            "sku": "4939",
+            "barcode": "813778014861"
+          }
+        ],
+        "exact_current_barcode": false,
+        "exact_variant": null,
+        "fetch_error": "Error: 429 https://www.weruva.com/products/chicken-and-duck-destiny-cat-pouch"
+      }
+    }
+  ]
+}

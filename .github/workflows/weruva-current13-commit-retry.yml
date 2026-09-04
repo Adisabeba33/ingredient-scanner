@@ -1,0 +1,32 @@
+name: Retry Weruva current13 commit
+on: push
+permissions:
+  contents: write
+jobs:
+  retry:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deep-research-weruva
+          fetch-depth: 0
+      - name: Regenerate validated files from promotion workflow
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('.github/workflows/weruva-promote-current13.yml').read_text()
+          body=s.split("node <<'NODE'",1)[1].split('\n          NODE',1)[0]
+          lines=body.splitlines()
+          body='\n'.join((x[10:] if x.startswith('          ') else x) for x in lines)
+          Path('/tmp/promote.js').write_text(body)
+          PY
+          node /tmp/promote.js
+      - name: Commit then rebase and push
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/deep-research-weruva.json research/WERUVA-CURRENT13-PROMOTION.json
+          git commit -m 'research: promote 13 current Weruva UPCs'
+          git pull --rebase origin agent/deep-research-weruva
+          git push
