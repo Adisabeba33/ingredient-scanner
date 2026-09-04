@@ -5,36 +5,38 @@ Branch: `agent/deep-research-fancy-feast`
 Ledger: `research/deep-research-barcodes.json`
 Draft PR: #10
 
-This handoff covers the Fancy Feast completion campaign in `research/BRIEF-FANCY-FEAST.md`. The production seed remains untouched. Batch 1 added 20 `source_verified` records. Batch 2 added 20 records: 17 `source_verified` and 3 `needs_physical_label`. Batch 3 adds 16 records: 14 `source_verified` outer packs and 2 Roasted individual cans marked `needs_physical_label`. Across the three campaign batches, 56 Fancy Feast records have been appended to the legacy shared Fancy Feast + Friskies ledger.
+This handoff covers the Fancy Feast completion campaign in `research/BRIEF-FANCY-FEAST.md`. The production seed remains untouched. Batch 1 added 20 `source_verified` records. Batch 2 added 20 records: 17 `source_verified` and 3 `needs_physical_label`. Batch 3 added 16 records: 14 `source_verified` outer packs and 2 Roasted individual cans marked `needs_physical_label`. Batch 4 adds 14 `source_verified` records: 8 individual units and 6 outer packs. Across the four campaign batches, 70 Fancy Feast records have been appended to the legacy shared Fancy Feast + Friskies ledger.
 
 ## Coverage by range
 
-The live inventory was regenerated again immediately before Batch 3 with `node scripts/brand-inventory.mjs "Fancy Feast"`. It still reported 106 seeded products under 115 seeded barcodes and six named-but-empty ranges because the generator reports production seed coverage separately from staged research. Its mechanical flat exclusion set had grown to 165 codes after Batch 2.
+The live inventory was regenerated again immediately before Batch 4 with `node scripts/brand-inventory.mjs "Fancy Feast"`. It still reported 106 seeded products under 115 seeded barcodes and six named-but-empty ranges because the generator reports production seed coverage separately from staged research. Its mechanical flat exclusion set had grown to 181 codes after Batch 3.
 
 The table distinguishes seeded/catalog coverage from staged research. Staged multipacks are barcodes, not inferred compositions.
 
-| Range | Before campaign | After Batch 1 | After Batch 2 | After Batch 3 | Batch 3 addition |
-|---|---:|---:|---:|---:|---|
-| Appetizers | 0 | 0 | 7 | 7 | — |
-| Purely | 0 | 0 | 10 | 10 | — |
-| Savory Cravings | 0 | 0 | 3 | 3 | — |
-| Roasted | 0 | 0 | 0 | 2 | 2 individual cans (`needs_physical_label`) |
-| Broths | 0 | 0 | 0 | 3 | 3 outer multipacks |
-| Classic Pâté | 10 | 16 | 16 | 17 | 1 outer multipack |
-| Gravy Lovers | 8 | 11 | 11 | 12 | 1 outer multipack |
-| Grilled | 8 | 12 | 12 | 12 | — |
-| Sliced | 4 | 5 | 5 | 6 | 1 outer multipack |
-| Marinated Morsels | 5 | 5 | 5 | 6 | 1 outer multipack |
-| Creamy Delights | 2 | 2 | 2 | 3 | 1 outer multipack |
-| Gourmet Naturals | 10 | 10 | 10 | 11 | 1 outer multipack |
-| Petites | 7 | 7 | 7 | 9 | 2 outer multipacks |
-| Delights With Cheddar | 4 | 5 | 5 | 5 | — |
-| Kitten | 4 | 5 | 5 | 6 | 1 outer multipack |
-| Medleys | 24 | 27 | 27 | 29 | 2 outer multipacks |
-| Savory Centers | 4 | 5 | 5 | 5 | — |
-| Fancy Feast outer boxes overall | 0 | 17 staged | 22 staged | 36 staged | 14 multipacks |
+| Range | Before campaign | After Batch 1 | After Batch 2 | After Batch 3 | After Batch 4 | Batch 4 addition |
+|---|---:|---:|---:|---:|---:|---|
+| Appetizers | 0 | 0 | 7 | 7 | 7 | — |
+| Purely | 0 | 0 | 10 | 10 | 10 | — |
+| Savory Cravings | 0 | 0 | 3 | 3 | 5 | 2 individual treat boxes |
+| Roasted | 0 | 0 | 0 | 2 | 2 | — |
+| Broths | 0 | 0 | 0 | 3 | 3 | — |
+| Classic Pâté | 10 | 16 | 16 | 17 | 17 | — |
+| Gravy Lovers | 8 | 11 | 11 | 12 | 15 | 2 individual cans + 1 outer multipack |
+| Grilled | 8 | 12 | 12 | 12 | 12 | — |
+| Sliced | 4 | 5 | 5 | 6 | 6 | — |
+| Marinated Morsels | 5 | 5 | 5 | 6 | 6 | — |
+| Creamy Delights | 2 | 2 | 2 | 3 | 5 | 2 individual cans |
+| Gourmet Naturals | 10 | 10 | 10 | 11 | 11 | — |
+| Gems | 6 | 6 | 6 | 6 | 10 | 4 outer multipacks |
+| Petites | 7 | 7 | 7 | 9 | 9 | — |
+| Delights With Cheddar | 4 | 5 | 5 | 5 | 5 | — |
+| Kitten | 4 | 5 | 5 | 6 | 6 | — |
+| Medleys | 24 | 27 | 27 | 29 | 29 | — |
+| Savory Centers | 4 | 5 | 5 | 5 | 5 | — |
+| Senior 7+ | 2 | 2 | 2 | 2 | 5 | 2 individual cans + 1 outer multipack |
+| Fancy Feast outer boxes overall | 0 | 17 staged | 22 staged | 36 staged | 42 staged | 6 multipacks |
 
-Batch 2 removed Appetizers, Purely and Savory Cravings from the zero-coverage list. Batch 3 stages the first Roasted and Broths records. Royale is now the only named range with no staged or seeded barcode, although Roasted still has no promotable `source_verified` individual unit and Broths still has no individual-pouch formula record.
+Batch 2 removed Appetizers, Purely and Savory Cravings from the zero-coverage list. Batch 3 staged the first Roasted and Broths records. Batch 4 reconciles the current official individual-product listings for Gravy Lovers and Senior 7+, accounts for all five current one-ounce Savory Cravings flavors while preserving Chicken as `needs_physical_label`, and adds every current official Gems variety-pack page found. Royale is still the only named range with no staged or seeded barcode, although Roasted still has no promotable `source_verified` individual unit and Broths still has no individual-pouch formula record.
 
 ## Batch 1 summary
 
@@ -125,6 +127,41 @@ For the two Petites boxes, `pack_count` counts physical 2.8 oz twin tubs; retail
 
 One otherwise valid candidate, `050000370344`, was deliberately left out. Its Chicken Gourmet Wet Cat Food Variety Pack mixes Classic Paté and Chunky cans, so assigning the box to either existing product line would be false. The batch was not padded to 20 with a cross-line mapping.
 
+## Batch 4 records
+
+### Current individual cans — six 3 oz units
+
+- `050000144396` — Gravy Lovers Beef Feast Paté in Gravy — `source_verified` (Purina deck A649823)
+- `050000161560` — Gravy Lovers Ocean Whitefish & Tuna Feast Paté in Gravy — `source_verified` (A512423)
+- `050000503889` — Senior 7+ Minced Chicken Feast in Gravy — `source_verified` (B662922)
+- `050000503865` — Senior 7+ Minced Tuna Feast in Gravy — `source_verified` (B662822)
+- `050000168200` — Creamy Delights Chicken Feast With a Touch of Real Milk Paté — `source_verified` (last-applicable A-7036)
+- `050000168224` — Creamy Delights Salmon Feast With a Touch of Real Milk Paté — `source_verified` (last-applicable A-7038)
+
+The first four use current Purina product pages and downloadable official decks. The full Beef and Ocean Whitefish & Tuna UPCs required care: several Kroger-family catalog URLs expose a 13-digit stem without the valid UPC-A check digit. Independent exact-unit sources bind the valid codes recorded above.
+
+Creamy Delights is discontinued and the two pâté singles no longer appear in Purina's current US catalog. Chewy's retained discontinued pack page supplies complete, internally consistent A-7036 and A-7038 panels, including ingredients, guarantees, calories and feeding directions; exact-unit retailers independently bind each 3 oz UPC. They are `source_verified` as last-applicable formulas, with the discontinued status stated in each record rather than implied to be current.
+
+Reconciliation against Purina's current wet-food catalog found that the repository's seed plus staged ledger now account for every current individual product page in Classic Pâté, Grilled, Gravy Lovers and Senior 7+. This is a current-catalog conclusion, not a claim that historical or regional SKUs no longer exist.
+
+### Savory Cravings — two additional individual 1 oz treat boxes
+
+- `050000002559` — Beef Flavor — `source_verified` (Purina deck A642220)
+- `050000002573` — Beef & Crab Flavor — `source_verified` (A642120)
+
+Both downloadable Purina decks print the complete formula, unusually high treat-range guaranteed analysis, adult-cat feeding statement and calories per square. The Beef & Crab web ingredient cards shorten “brewers dried yeast” and “crab flavor”; the ledger preserves the more authoritative full-deck wording. With these additions, all five current one-ounce Savory Cravings flavors have exact UPC records; Chicken remains the sole formula-generation conflict.
+
+### Six outer multipacks
+
+- `050000226436` — Gravy Lovers Paté in Gravy Variety Pack, 24 × 3 oz — `source_verified`
+- `050000504046` — Senior 7+ Classic Paté & Minced Collection, 12 × 3 oz — `source_verified`
+- `050000595280` — Gems Turkey & Chicken Collection, 8 × 4 oz dual packs / 16 portions — `source_verified`
+- `050000387083` — Gems Chicken & Beef Collection, 8 × 4 oz dual packs / 16 portions — `source_verified`
+- `050000387458` — Gems Salmon & Tuna Collection, 8 × 4 oz dual packs / 16 portions — `source_verified`
+- `050000659937` — Gems Exquisite Mousse Collection, 12 × 4 oz dual packs / 24 portions — `source_verified`
+
+For Gems, an “8 ct” retailer or Purina selector counts physical dual packs while a “16 ct” description counts the two 2 oz Gems inside each dual pack. The 12-dual-pack collection likewise contains 24 portions. The ledger records physical dual packs as `pack_count`, keeps the portion basis in `size`, and leaves `contains: []` because no printed inner-package barcodes were proven.
+
 ## The three shopper-missed codes from §3
 
 - `050000153558` is the individual 3 oz Gravy Lovers Chicken Feast Paté in Gravy can, not a Classic Seafood case.
@@ -135,7 +172,7 @@ All three were completed as `source_verified` in Batch 1.
 
 ## Range names the brand entry lacks
 
-None identified in Batches 1–3. Every staged record maps to an existing Fancy Feast range. The cross-line Chicken Gourmet pack `050000370344` was excluded instead of inventing a range or misassigning it, so no brand-range recommendation is warranted from the committed evidence.
+None identified in Batches 1–4. Every staged record maps to an existing Fancy Feast range. The cross-line Chicken Gourmet pack `050000370344` was excluded instead of inventing a range or misassigning it, so no brand-range recommendation is warranted from the committed evidence.
 
 ## Wrong-barcode recommendations
 
@@ -165,7 +202,7 @@ The current checker adds guaranteed minimum protein/fat to maximum moisture/fibr
 
 ### Remaining ordinary shelf gaps
 
-Classic Pâté remains the largest ordinary wet-food shortfall. Gravy Lovers and Grilled also remain incomplete. Search from exact UPC/GTIN evidence rather than filling a flavor list from names.
+The seed plus staged ledger now reconcile to every individual current-product page found in Purina's US listings for Classic Pâté, Grilled, Gravy Lovers and Senior 7+. Remaining ordinary gaps are primarily other outer-pack sizes, discontinued/historical products, and any retail-only SKU absent from Purina's current catalog. Search from exact UPC/GTIN evidence rather than filling a flavor list from names.
 
 ### Variety-pack inner barcodes
 
@@ -176,13 +213,15 @@ All staged boxes intentionally retain `contains: []` until printed member codes 
 - User-authorized compatibility fix: `facf3de6d8a0e60c45628cd8943a1f64449d538f`
 - Batch 1 research commit: `24325dd4ce6e30d93406d8cd2929e3c263275c64`
 - Batch 2 research commit: `728656ef0a30918bc178cb8f30c841656bb9349d`
-- Batch 3 research commit: the commit containing this handoff; its SHA is reported in draft PR #10 after remote verification.
-- Before Batch 3, the live inventory was regenerated and the exclusion set was rebuilt.
-- The exact required command `node scripts/check-ledger.mjs research/deep-research-barcodes.json` returned `Clean.`: 129 records total, 73 grandfathered legacy records, 124 `source_verified`, 5 `needs_physical_label`, 93 individual-unit records and 36 multipacks.
+- Batch 3 research commit: `b21dcd194551ab6bf4063654e136ded9b7a827b8`
+- Batch 4 research commit: the commit containing this handoff; its SHA is reported in draft PR #10 after remote verification.
+- Before Batch 4, the live inventory was regenerated and the exclusion set was rebuilt.
+- The exact required command `node scripts/check-ledger.mjs research/deep-research-barcodes.json` returned `Clean.`: 143 records total, 73 grandfathered legacy records, 138 `source_verified`, 5 `needs_physical_label`, 101 individual-unit records and 42 multipacks.
 - Batch 2 itself is 20 records: 17 `source_verified`, 3 `needs_physical_label`; 15 individual units and 5 multipacks.
 - Batch 3 itself is 16 records: 14 `source_verified`, 2 `needs_physical_label`; 2 individual units and 14 multipacks.
+- Batch 4 itself is 14 records: all 14 `source_verified`; 8 individual units and 6 multipacks.
 - Draft PR #10 remains open, draft and unmerged.
 
-## Where Batch 3 stopped
+## Where Batch 4 stopped
 
-Batch 3 stopped at 16 records because the remaining discovered candidates were not equally safe, not because the brand is complete. The next pass should rebuild the live exclusion set, then prioritize the ordinary individual-can tail in Classic Paté, Gravy Lovers and Grilled. Royale requires exact international barcode evidence; individual Broths formulas require corrected checker bound semantics; and Roasted requires physical-label evidence. Do not fill the batch limit with cross-line cartons or related UPC guesses.
+Batch 4 stopped at 14 records because the remaining discovered candidates were not equally safe, not because every historical or outer-pack SKU is complete. The high-priority current individual-can tail in Classic Pâté, Gravy Lovers, Grilled and Senior 7+ now reconciles to Purina's current US product pages. The next pass should rebuild the live exclusion set and work exact outer-pack sizes or retail-only discoveries. Royale still requires trustworthy international sellable-unit barcode evidence; individual Broths formulas require corrected checker bound semantics; Roasted and the Savory Cravings Chicken formula require physical-label evidence. Do not fill the batch limit with cross-line cartons, obsolete name lists or related UPC guesses.
