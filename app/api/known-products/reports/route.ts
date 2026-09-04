@@ -1,4 +1,5 @@
 import { canonicalBarcode, sanitizeBarcode } from "@/lib/barcode";
+import { deleteIn } from "@/lib/chunked-in";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
@@ -80,22 +81,19 @@ export async function POST(req: Request) {
   // stale report that keeps being served.
   const keys = codes.flatMap((c) => allReportCacheKeys(c));
 
-  const { data, error } = await admin
-    .from("report_cache")
-    .delete()
-    .in("cache_key", keys)
-    .select("cache_key");
+  // Chunked. Asked in one request this is the longest list in the desk — every
+  // seeded code times every mode — and PostgREST would have capped it silently,
+  // reporting a smaller number cleared than it actually deleted. See
+  // lib/chunked-in.ts.
+  const { deleted, error } = await deleteIn(admin, "report_cache", "cache_key", keys);
   if (error) {
-    return Response.json(
-      { error: "clear_failed", message: error.message },
-      { status: 500 }
-    );
+    return Response.json({ error: "clear_failed", message: error }, { status: 500 });
   }
 
   return Response.json({
     ok: true,
     products: codes.length,
     // Usually far fewer than `products`: only the ones somebody had opened.
-    cleared: data?.length ?? 0,
+    cleared: deleted,
   });
 }

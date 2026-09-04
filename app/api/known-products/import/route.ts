@@ -5,6 +5,7 @@ import { compositionKey } from "@/lib/composition-key";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
 import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
+import { deleteIn, selectIn } from "@/lib/chunked-in";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
 import { detectNutritionRole } from "@/lib/nutrition-role";
 import {
@@ -139,18 +140,25 @@ async function decide(
   // capture wins, the seeded panel is not written — so a product photographed
   // before the scanner read that panel keeps a row without one, and its report
   // is poorer than the 25 beside it. That is invisible unless somebody says it.
-  const { data, error } = await admin
-    .from("barcode_cache")
-    .select("code, source, composition_key, ingredients_text, guaranteed_analysis")
-    .in("code", codes);
+  // Chunked, and this is the whole reason lib/chunked-in.ts exists: asking
+  // about every seeded barcode in one `.in()` silently returned the first
+  // thousand once the catalog passed a thousand products, and every row the
+  // server dropped read as "not there" — verdict `write`, forever, over rows
+  // that already held the formula and sometimes over our own photographs.
+  const { rows: data, error } = await selectIn<
+    ExistingRow & { code: string; guaranteed_analysis?: unknown }
+  >(
+    admin,
+    "barcode_cache",
+    "code, source, composition_key, ingredients_text, guaranteed_analysis",
+    "code",
+    codes
+  );
   if (error) {
-    return { error: error.message, decided: [] as Decided[] };
+    return { error, decided: [] as Decided[] };
   }
   const existing = new Map<string, ExistingRow & { guaranteed_analysis?: unknown }>();
-  for (const row of (data ?? []) as unknown as (ExistingRow & {
-    code: string;
-    guaranteed_analysis?: unknown;
-  })[]) {
+  for (const row of data) {
     existing.set(row.code, row);
   }
 
@@ -211,21 +219,21 @@ async function decideBoxes(
   const list = boxes();
   if (list.length === 0) return { error: null, decided: [] as DecidedBox[] };
 
-  const { data, error } = await admin
-    .from("barcode_cache")
-    .select("code, found, reason, ingredients_text, contains")
-    .in(
-      "code",
-      list.map((b) => b.code)
-    );
+  const { rows: data, error } = await selectIn<ExistingBoxRow & { code: string }>(
+    admin,
+    "barcode_cache",
+    "code, found, reason, ingredients_text, contains",
+    "code",
+    list.map((b) => b.code)
+  );
   // A catalog that predates migration 0022 has no `contains` column, and the
   // whole point of these rows is that column — so this is reported rather than
   // worked around. `withoutColumns` would write boxes with no members, which
   // is a row saying "not a product" and nothing else.
-  if (error) return { error: error.message, decided: [] as DecidedBox[] };
+  if (error) return { error, decided: [] as DecidedBox[] };
 
   const existing = new Map<string, ExistingBoxRow>();
-  for (const row of (data ?? []) as unknown as (ExistingBoxRow & { code: string })[]) {
+  for (const row of data) {
     existing.set(row.code, row);
   }
   return {
@@ -476,12 +484,15 @@ export async function POST(req: Request) {
   // composition — in every mode, since the mode may have been wrong too.
   let reportsCleared = 0;
   try {
-    const { data: cleared } = await admin
-      .from("report_cache")
-      .delete()
-      .in("cache_key", toWrite.flatMap((c) => allReportCacheKeys(c.code)))
-      .select("cache_key");
-    reportsCleared = cleared?.length ?? 0;
+    // Chunked for the same reason as the reads above, and here the list is the
+    // longest in the route: every written code times every mode's key.
+    const { deleted } = await deleteIn(
+      admin,
+      "report_cache",
+      "cache_key",
+      toWrite.flatMap((c) => allReportCacheKeys(c.code))
+    );
+    reportsCleared = deleted;
   } catch {
     /* best-effort — the products are written either way */
   }
