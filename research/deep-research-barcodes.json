@@ -4,7 +4,7 @@
   "repository": "Adisabeba33/ingredient-scanner",
   "branch": "agent/deep-research-barcode-ledger",
   "created_at": "2026-08-13",
-  "updated_at": "2026-08-31",
+  "updated_at": "2026-09-04",
   "baseline": {
     "known_product_upcs": 140,
     "canonical_sources": [
@@ -8389,6 +8389,1099 @@
         "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
       ],
       "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001286",
+      "canonical_gtin14": "00050000001286",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Oceanfish With a Shrimp Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Oceanfish With a Shrimp Topper in a Delicate Broth",
+      "recipe": [
+        "ocean fish",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, ocean fish, shrimp, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 537,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639721",
+      "formula_source": "Purina official product label deck B639721",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6397-b639721-fancy-feast-appetizers-ocean-fish-w-a-shrimp-topper-in-a-delicate-broth-cat-complement-gy2.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-oceanfish-shrimp-broth-cat-food-complements-toppers",
+        "https://shop.foodland.com/product/fancy-feast-wet-cat-food-appetizers-oceanfish-050000001286"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Foodland binds UPC 050000001286 to the single 1.1 oz Oceanfish With Shrimp Appetizers tray.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 537 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 537 kcal/kg × 1.1 oz is approximately 16.7 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001293",
+      "canonical_gtin14": "00050000001293",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Skipjack Tuna With a Sole Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Skipjack Tuna With a Sole Topper in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna",
+        "sole"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, skipjack tuna, sole, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 533,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639821",
+      "formula_source": "Purina official product label deck B639821",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6398-b639821-fancy-feast-appetizers-skipjack-tuna-w-a-sole-topper-in-a-delicate-broth-cat-complement-gy3.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-skipjack-tuna-broth-cat-food-complements-toppers",
+        "https://norfie.com/products/fancy-feast-appetizers-skipjack-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retail listing prints UPC 050000001293 for the 1.1 oz Skipjack Tuna With Sole Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 533 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 533 kcal/kg × 1.1 oz is approximately 16.6 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001309",
+      "canonical_gtin14": "00050000001309",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Light Meat Tuna With a Scallop Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Light Meat Tuna With a Scallop Topper in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna",
+        "scallop"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, skipjack tuna, scallop, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 558,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639521",
+      "formula_source": "Purina official product label deck B639521",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6395-b639521-fancy-feast-appetizers-light-meat-tuna-w-a-scallop-topper-in-a-delicate-broth-cat-complement-gy4.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-tuna-scallop-broth-wet-cat-food",
+        "https://www.target.com/p/fancy-feast-light-meat-tuna-flavor-appetizers-wet-cat-food-1-1oz/-/A-94649671"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target identifies one 1.1 oz Light Meat Tuna With Scallop Appetizers tray and prints UPC 050000001309.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 558 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 558 kcal/kg × 1.1 oz is approximately 17.4 kcal, consistent with the rounded 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001316",
+      "canonical_gtin14": "00050000001316",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Wild Alaskan Salmon in a Delicate Broth Cat Food Complement",
+      "variant": "Wild Alaskan Salmon in a Delicate Broth",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, salmon, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 0.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 86,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 557,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639621",
+      "formula_source": "Purina official product label deck B639621",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6396-b639621-fancy-feast-appetizers-wild-alaskan-salmon-in-a-delicate-broth-cat-complement-gy1.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-salmon-broth-cat-food-complements-toppers",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/18858640-purely-fancy-feast-wet-cat-food-complement-appetizers-steamed-wild-alaskan-salmon-in-delicate-broth-1-1-oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's binds the full sellable-unit GTIN to the single 1.1 oz Wild Alaskan Salmon tray.",
+      "conflicts": [
+        "Purina's current selector abbreviates the package as 1 oz, while the exact-GTIN retailer prints 1.1 oz. The official 17 kcal/tray at 557 kcal/kg implies about 30.5 g (1.08 oz), supporting the printed 1.1 oz retail size."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 557 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic supports the 1.1 oz package binding.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002689",
+      "canonical_gtin14": "00050000002689",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Flaked Tongol Tuna in a Savory Broth Cat Food Complement",
+      "variant": "Flaked Tongol Tuna in a Savory Broth",
+      "recipe": [
+        "tongol tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Tuna broth, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 548,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639121",
+      "formula_source": "Purina official product label deck B639121",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6391-b639121-fancy-feast-appetizers-flaked-tongol-tuna-in-a-savory-broth-cat-complement-r40.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-flaked-tongol-tuna-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-flaked-tongol-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002689 for the 1.1 oz Tongol Tuna Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 548 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 548 kcal/kg × 1.1 oz is approximately 17.1 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002696",
+      "canonical_gtin14": "00050000002696",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers White Meat Chicken and Flaked Tuna in a Savory Broth Cat Food Complement",
+      "variant": "White Meat Chicken and Flaked Tuna in a Savory Broth",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Chicken and tuna broth, chicken, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 525,
+        "kcal_per_unit": 16,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639221",
+      "formula_source": "Purina official product label deck B639221",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6392-b639221-fancy-feast-appetizers-white-meat-chicken-flaked-tuna-in-a-savory-broth-cat-complement-r41-1.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-white-meat-chicken-tuna-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002696 for the 1.1 oz Chicken and Tuna Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 525 kcal/kg / 16 kcal per tray.",
+        "Calorie arithmetic cross-check: 525 kcal/kg × 1.1 oz is approximately 16.4 kcal, consistent with 16 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002702",
+      "canonical_gtin14": "00050000002702",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers White Meat Chicken and Shredded Beef in a Savory Broth Cat Food Complement",
+      "variant": "White Meat Chicken and Shredded Beef in a Savory Broth",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Chicken broth, chicken, beef, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 86,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 588,
+        "kcal_per_unit": 18,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639321",
+      "formula_source": "Purina official product label deck B639321",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6393-b639321-fancy-feast-appetizers-white-meat-chicken-shredded-beef-in-a-savory-broth-cat-complement-r42.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-flaked-chicken-shredded-beef-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-beef-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002702 for the 1.1 oz Chicken and Beef Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 588 kcal/kg / 18 kcal per tray.",
+        "Calorie arithmetic cross-check: 588 kcal/kg × 1.1 oz is approximately 18.3 kcal, consistent with 18 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004522",
+      "canonical_gtin14": "00050000004522",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Tender Tongol Tuna Entrée in a Delicate Broth",
+      "variant": "Natural Tender Tongol Tuna Entrée in a Delicate Broth",
+      "recipe": [
+        "tongol tuna",
+        "skipjack tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Tongol tuna, fish broth, skipjack tuna, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, manganese sulfate, copper sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 843,
+        "kcal_per_unit": 48,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "F640418",
+      "formula_source": "Purina official product label deck F640418, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/F640418_Purely_Fancy_Feast_Natural_Tender_Tongol_Tuna_Entree_in_a_Delicate_Broth.pdf",
+        "https://www.amazon.eg/-/en/PURINA-Fancy-Feast-Appetizers-Tongol/dp/B006J187QS"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz Tender Tongol Tuna tray by the cited sellable-unit listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck F640418 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 843 kcal/kg × 2 oz is approximately 47.8 kcal, consistent with 48 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004584",
+      "canonical_gtin14": "00050000004584",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Flaked Skipjack Tuna Entrée in a Delicate Broth",
+      "variant": "Natural Flaked Skipjack Tuna Entrée in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Skipjack tuna, fish broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, copper sulfate, manganese sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 873,
+        "kcal_per_unit": 49,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "E-6400",
+      "formula_source": "Purina official product label deck E-6400, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6400-E_FF_C_W_PrlyFF_NtlFlkdSkpjckTnEntr_DlctBrth.pdf",
+        "https://www.upcitemdb.com/upc/50000004584"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz Flaked Skipjack Tuna tray by the cited barcode listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck E-6400 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 873 kcal/kg × 2 oz is approximately 49.5 kcal, consistent with the printed 49 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004591",
+      "canonical_gtin14": "00050000004591",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken Entrée in a Delicate Broth",
+      "variant": "Natural White Meat Chicken Entrée in a Delicate Broth",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Chicken, chicken broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, choline chloride, salt, taurine, MINERALS [zinc sulfate, magnesium sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide, sodium selenite], potassium chloride, xanthan gum, VITAMINS [niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 849,
+        "kcal_per_unit": 48,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "F640518",
+      "formula_source": "Purina official product label deck F640518, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/F640518_Purely_Fancy_Feast_Natural_White_Meat_Chicken_in_a_Delicate_Broth.pdf",
+        "https://www.upcitemdb.com/upc/50000004591"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz White Meat Chicken tray by the cited barcode listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck F640518 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 849 kcal/kg × 2 oz is approximately 48.1 kcal, consistent with 48 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004560",
+      "canonical_gtin14": "00050000004560",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Seabass and Shrimp Entrée in a Delicate Broth",
+      "variant": "Natural Seabass and Shrimp Entrée in a Delicate Broth",
+      "recipe": [
+        "seabass",
+        "tuna",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Fish broth, seabass, tuna, shrimp, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, copper sulfate, manganese sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 859,
+        "kcal_per_unit": 49,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "E-6401",
+      "formula_source": "Historical full-label transcript attributed to Purely deck E-6401; an official Purina deck was not retrievable",
+      "source_urls": [
+        "https://healthycatguide.com/cat_food/fancy-feast-purely-natural-seabass-shrimp-wet-food-review/",
+        "https://www.upcitemdb.com/upc/50000004560",
+        "https://www.kroger.com/p/fancy-feast-purely-natural-sea-bass-shrimp-adult-wet-cat-food/0005000058012"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The barcode index binds UPC 050000004560 to the 2 oz Seabass and Shrimp tray; the Kroger source independently supports the corresponding Purely product family.",
+      "conflicts": [
+        "The Purely line is discontinued and the full formula/panel transcript could not be checked against a retrievable official Purina label deck."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Secondary sources support identity, size, formula transcript, panel, and calories.",
+        "A clear physical back-label image is still required to verify the historical ingredient order and deck attribution before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004577",
+      "canonical_gtin14": "00050000004577",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken and Shredded Beef Entrée in a Delicate Broth",
+      "variant": "Natural White Meat Chicken and Shredded Beef Entrée in a Delicate Broth",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14.5,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 885,
+        "kcal_per_unit": 50,
+        "unit_name": "tray"
+      },
+      "label_deck_code": null,
+      "formula_source": "Historical retailer panel only; complete ingredient order and official label deck not verified",
+      "source_urls": [
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/13909-purely-fancy-feast-natural-broth-wet-cat-food-purely-natural-white-meat-chicken-shredded-beef-entr-e-2-oz",
+        "https://www.heb.com/product-detail/purina-fancy-feast-appetizers-white-meat-chicken-and-shredded-beef-cat-food/1297043",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-beef-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's binds the exact sellable-unit GTIN to a 2 oz Purely Chicken and Beef tray; the current Appetizers replacement is a distinct 1.1 oz SKU with UPC 050000002702.",
+      "conflicts": [
+        "Historical retailer data mixes the Purely identity with an Appetizers page title, while the current Appetizers replacement has a different size and UPC.",
+        "No authoritative full ingredient list or retrievable official deck for this exact discontinued Purely UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The exact UPC and 2 oz Purely identity are supported, but formula generation and ingredient order remain unresolved.",
+        "A physical back-label image is required before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580125",
+      "canonical_gtin14": "00050000580125",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Seabass and Shrimp Entrée Multipack",
+      "variant": "Natural Seabass and Shrimp Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.kroger.com/p/fancy-feast-purely-natural-sea-bass-shrimp-adult-wet-cat-food/0005000058012",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Kroger exposes the 13-digit catalog stem 0005000058012 for the 10 x 2 oz outer pack; the full UPC-A 050000580125 is the same stem plus its verified check digit 5, corroborated by the barcode catalog. This reconstruction applies only to the outer sellable unit.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580125.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580125.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580132",
+      "canonical_gtin14": "00050000580132",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Flaked Skipjack Tuna Entrée Multipack",
+      "variant": "Natural Flaked Skipjack Tuna Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://petkraze.com/catalog/product/69210/fancy-feast-appetizers-skipjack-tuna-treat-10-2-oz-pack",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Retail/catalog evidence binds UPC 050000580132 to the 10 x 2 oz outer Skipjack Tuna pack. The code is the outer sale-unit barcode, not an inferred inner-tray barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580132.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580132.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580156",
+      "canonical_gtin14": "00050000580156",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Tender Tongol Tuna Entrée Multipack",
+      "variant": "Natural Tender Tongol Tuna Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.smithsfoodanddrug.com/p/fancy-feast-purely-natural-tender-tongol-tuna-wet-cat-food/0005000058015",
+        "https://brunei.desertcart.com/products/19582180-purina-fancy-feast-natural-tender-tongol-tuna-entree-in-a-delicate-broth-cat-food-10-2-oz-tray"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Smith's exposes the 13-digit catalog stem 0005000058015 for the 10 x 2 oz outer pack; the full UPC-A 050000580156 is that stem plus its verified check digit 6. The independent retail listing supports the 10-tray configuration.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580156.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580156.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580163",
+      "canonical_gtin14": "00050000580163",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken Entrée Multipack",
+      "variant": "Natural White Meat Chicken Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.kroger.com/p/fancy-feast-purely-natural-white-meat-chicken-wet-cat-food/0005000058016"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Kroger exposes the 13-digit catalog stem 0005000058016 for the 10 x 2 oz outer pack; the full UPC-A 050000580163 is that stem plus its verified check digit 3. This reconstruction applies only to the outer sellable unit.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580163.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580163.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580170",
+      "canonical_gtin14": "00050000580170",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken and Shredded Beef Entrée Multipack",
+      "variant": "Natural White Meat Chicken and Shredded Beef Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.amazon.com/-/es/Alimentos-naturales-Fancy-Feast-unidades/dp/B013WFRZJI",
+        "https://www.doordash.com/products/purina-fancy-feast-purely-natural-white-meat-chicken-shredded-beef-entre-2-oz-x-10-ct/urpc_af2e1254-a9e3-4154-a4a6-cba518fb1830"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Retail evidence binds UPC 050000580170 to the 10 x 2 oz outer Chicken and Beef pack. The code is the outer sale-unit barcode, not an inferred inner-tray barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580170.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580170.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002627",
+      "canonical_gtin14": "00050000002627",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Salmon Flavor Cat Treats",
+      "variant": "Salmon Flavor",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver Flavor, Beef Fat Preserved With Mixed-Tocopherols, Partially Hydrogenated Vegetable Oil, Brewers Dried Yeast, Natural Salmon Flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6443,
+        "kcal_per_unit": 3.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642319",
+      "formula_source": "Current Purina product page and complete Chewy label transcription for Savory Cravings Salmon Flavor",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-salmon-cat-treats",
+        "https://www.chewy.com/fancy-feast-savory-cravings-salmon/dp/658470",
+        "https://www.target.com/p/fancy-feast-salmon-savory-with-liver-cravings-dry-cat-treats/-/A-81620977"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target binds UPC 050000002627 to the one-ounce Salmon Flavor Savory Cravings box.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Current brand and retailer sources jointly support the exact one-ounce sale unit, complete formula, guarantees, and 3.3 kcal per square.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002986",
+      "canonical_gtin14": "00050000002986",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Tuna Flavor Cat Treats",
+      "variant": "Tuna Flavor",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, tuna flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6439,
+        "kcal_per_unit": 3.6,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642421",
+      "formula_source": "Purina official product label deck A642421",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6424_-_A642421_Fancy_Feast_Savory_Cravings_Tuna_Flavor_Cat_Treats_G13.pdf",
+        "https://directionsforme.org/product/84981",
+        "https://www.harristeeter.com/p/purina-fancy-feast-savory-cravings-cat-treats-tuna-flavor/0005000000298"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact consumer UPC source and retailer catalog bind UPC 050000002986 to the one-ounce Tuna Flavor box.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A642421 supplies the complete formula, guarantees, calories, and adult-cat feeding statement.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002979",
+      "canonical_gtin14": "00050000002979",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Chicken Flavor Cat Treats",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, natural chicken flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6340,
+        "kcal_per_unit": 3.5,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642521",
+      "formula_source": "Purina official label deck A642521; current Purina product page disagrees on calories and flavor wording",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6425_-_A642521_Fancy_Feast_Savory_Cravings_Chicken_Flavor_Cat_Treats_ET9.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-chicken-cat-treats",
+        "https://www.harristeeter.com/p/fancy-feast-savory-cravings-chicken-cat-treats/0005000000297"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The retailer catalog binds UPC 050000002979 to the one-ounce Chicken Flavor Savory Cravings box.",
+      "conflicts": [
+        "Official deck A642521 prints 6340 kcal/kg and 3.5 kcal/square, while the current Purina page reports 6439 kcal/kg and 3.6 kcal/piece.",
+        "The official PDF says 'natural chicken flavor'; the current page shortens this to 'chicken flavor'. A current physical package is needed to resolve the applicable generation."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The sale-unit identity and UPC are supported, but two official Purina sources disagree on current calories and ingredient wording.",
+        "A physical back-label image is required before promotion."
+      ],
+      "research_status": "needs_physical_label"
     }
   ]
 }
