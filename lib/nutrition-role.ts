@@ -196,6 +196,31 @@ const KNOWN_TREAT_LINES = [
   "kitten crunchy",
 ];
 
+/**
+ * Ranges the maker itself declares are NOT a diet.
+ *
+ * `complementary` already existed as a value and could only ever be reached
+ * from a `claims` string — the AAFCO sentence "for intermittent or
+ * supplemental feeding only" read off the front of a pack. The seed does not
+ * carry claims; it carries a brand, a range and a variant, so a range that
+ * declares itself supplemental was unreachable and came out `unknown`, which
+ * means "judge it as dinner".
+ *
+ * Weruva Wx is what made that a real problem rather than a gap. It is a
+ * phosphorus-restricted food sold for cats with kidney disease, its own pages
+ * state intermittent or supplemental feeding only AND that its phosphorus is
+ * inadequate for the AAFCO profiles at any life stage — and it is sold off a
+ * shelf, so `isVeterinaryDiet` does not fire and should not. Judged as an
+ * everyday complete diet it would be marked down for exactly the restriction
+ * it is bought for, to somebody who is very likely feeding it on a vet's
+ * advice.
+ *
+ * Two letters is a short phrase to match on, and safe here: `hasPhrase`
+ * requires word boundaries, no other range in this catalog is called Wx, and
+ * the alternative is telling a renal patient's owner their food is bad.
+ */
+const KNOWN_COMPLEMENTARY_LINES = ["wx"];
+
 const KNOWN_TOPPER_LINES = [
   "meal mixers",
   "bowl boosters",
@@ -250,6 +275,11 @@ export function detectNutritionRole(input: {
 
   // The pack saying outright that it is not a diet. Nothing overrides this.
   if (anyPhrase(all, COMPLEMENTARY_PHRASES)) return "complementary";
+  // The same declaration reached from the range name, for the seed, which has
+  // no claims to read. Ranked with the phrase above rather than below the
+  // complete check, because it IS that phrase — just printed somewhere this
+  // catalog stores and the claims list does not reach.
+  if (anyPhrase(names, KNOWN_COMPLEMENTARY_LINES)) return "complementary";
 
   // The other half of the same declaration, and it outranks anything read out
   // of a NAME for the same reason: it is what the maker is legally saying the

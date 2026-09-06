@@ -1246,3 +1246,71 @@ another visibly prints potato starch and 803. The research correctly refused to
 choose and left both at `needs_physical_label`. Neither is seeded. A dated
 shelf can with a readable lot code is what settles them.
 
+
+## L. Weruva (batch 027) — a maker renaming two ranges at once, on three prefixes
+
+Weruva is mid-rename in two places and both halves of each pair are in shops
+right now under different barcodes: **Cats in the Kitchen Paté** is becoming
+**Weruva Cat Paté**, and **Wx** is becoming **Wx Phos Focused**. Four recipes
+appear under both names with the same deck to the letter and the same panel,
+which is what a rename looks like — a paste error would be two different
+flavours wearing one list. All are seeded under both names, and the pairs are
+registered in `lib/known-import.test.ts` as allowed to share a composition.
+
+Three GS1 prefixes are registered for this one maker, the most any has here:
+878408 (Classic Cat, TruLuxe), 813778 (Cat Stew, the Paté ranges) and 810028
+(Wx, Senior, Freeze Dried). None is retired.
+
+### The whole Wx line is not a complete diet
+
+Weruva's own pages state **intermittent or supplemental feeding only** for Wx,
+and that its phosphorus is **inadequate for the AAFCO profiles at any life
+stage**. It is a phosphorus-restricted food for cats with kidney disease, sold
+off a shelf rather than through a vet — so `isVeterinaryDiet` does not fire,
+and should not.
+
+Judged as an everyday complete diet it would be marked down for exactly the
+restriction it is bought for, told to somebody very likely feeding it on a
+vet's advice. `lib/nutrition-role.ts` gains `KNOWN_COMPLEMENTARY_LINES` for
+this: the value `complementary` existed and could previously only be reached
+from a claims string the seed does not carry.
+
+### Records the research flagged
+
+1. **`810028246331`** — Senior — Tuna & Salmon Formula in Gravy: An older 2025 Weruva/Sunburst Senior sheet carries the prior Tuna & Salmon formula generation and older calories (881 kcal/kg, 76 kcal/3 oz, 137 kcal/5.5 oz). Current Weruva manufacturer evidence carries 836 kcal/kg, 71 kcal/3 oz and 130 kcal/5.5 oz; the current generation is stored without mixing panels.
+2. **`810028246454`** — Senior — Tuna & Salmon Formula in Gravy: An older 2025 Weruva/Sunburst Senior sheet carries the prior Tuna & Salmon formula generation and older calories (881 kcal/kg, 76 kcal/3 oz, 137 kcal/5.5 oz). Current Weruva manufacturer evidence carries 836 kcal/kg, 71 kcal/3 oz and 130 kcal/5.5 oz; the current generation is stored without mixing panels.
+3. **`813778019170`** — B.F.F. OMG — Beef & Salmon Dinner in Gravy: Older 2024/2025 distributor lists map model 9118 / 5.5 oz Best Day Eva! to UPC 878408004063; current Weruva Shopify variant maps the same current 5.5 oz product to 813778019170. Current first-party generation retained; old UPC remains historical/conflict evidence.
+4. **`878408001024`** — Classic Cat — Mackerel, Shrimp & Mussels in Gravy: Older retailer/market copies describe Marbella Paella 'in aspic' and show carrageenan. Weruva's current package/page says 'in Gravy' and is carrageenan-free; current manufacturer evidence is stored.
+5. **`878408001048`** — Classic Cat — Mackerel & Grilled Skipjack in Gravy: CountryMax's descriptive ingredient copy is an older carrageenan-era formula. Weruva's current page states carrageenan-free and provides the current ingredient panel; retailer is used only for unit UPC identity.
+6. **`878408001086`** — Classic Cat — Grilled Red Bigeye in Gravy: Some older retailer copies describe this recipe as 'in aspic' and expose legacy case-level codes. Weruva's current package/page says 'in Gravy'; the single-unit UPC 878408002083 is kept distinct from case/multipack identifiers. A stale Weruva CDN filename associated 878408001086 with Paw Lickin' Chicken; current distributor/retailer evidence maps 878408001086 to Polynesian BBQ 3 oz while Paw Lickin' Chicken 3 oz is 878408001116. The filename is not used as barcode proof.
+7. **`878408001116`** — Classic Cat — Chicken Breast in Gravy: CountryMax's ingredient copy is an older formula using 'Water Sufficient For Processing' and other legacy wording. Weruva's current page uses Chicken Broth and the current panel is stored; retailer is used only for the unit UPC.
+8. **`878408002014`** — Classic Cat — Sardine and Seabass in Gravy: Older retailer copies carry a pre-reformulation Outback Grill formula with carrageenan and different GA/calories. Weruva's current page is carrageenan-free and is stored as the current formula.
+9. **`878408002021`** — Classic Cat — Mackerel, Shrimp & Mussels in Gravy: Older retailer/market copies describe Marbella Paella 'in aspic' and show carrageenan. Weruva's current package/page says 'in Gravy' and is carrageenan-free; current manufacturer evidence is stored.
+10. **`878408002045`** — Classic Cat — Mackerel & Grilled Skipjack in Gravy: CountryMax's descriptive ingredient copy is an older carrageenan-era formula. Weruva's current page states carrageenan-free and provides the current ingredient panel; retailer is used only for unit UPC identity.
+11. **`878408002083`** — Classic Cat — Grilled Red Bigeye in Gravy: Some older retailer copies describe this recipe as 'in aspic' and expose legacy case-level codes. Weruva's current package/page says 'in Gravy'; the single-unit UPC 878408002083 is kept distinct from case/multipack identifiers.
+12. **`878408002113`** — Classic Cat — Chicken Breast in Gravy: CountryMax's ingredient copy is an older formula using 'Water Sufficient For Processing' and other legacy wording. Weruva's current page uses Chicken Broth and the current panel is stored; retailer is used only for the unit UPC.
+13. **`878408002410`** — Classic Cat — Chicken Breast in Gravy: CountryMax's ingredient copy is an older formula using 'Water Sufficient For Processing' and other legacy wording. Weruva's current page uses Chicken Broth and the current panel is stored; retailer is used only for the unit UPC.
+14. **`878408003271`** — TruLuxe — Kawakawa Tuna in Gravy: ADMC's distributor row labels UPC 878408003271 as 'Kawa Bunga'; current Weruva manufacturer page and exact-size retailer identify the current product as Kawa Booty. Manufacturer naming is stored while retaining the distributor UPC/size mapping.
+15. **`878408008214`** — Cats in the Kitchen — Chicken in Pumpkin Soup: Earlier handoff/current-near-current evidence recorded 60 kcal/3 oz and 701 kcal/kg. The current Weruva manufacturer page now prints 59 kcal/3 oz and 696 kcal/kg; current manufacturer generation is stored.
+
+### Five calorie statements that round rather than disagree
+
+`878408002076`, `878408002083`, `813778018111`, `878408002373` and
+`810028241473` each print a kcal/kg and a per-can figure that miss each other
+by 1.5–6.5 kcal. Every pair comes off one coherent panel and the largest gap is
+3%. Stored as printed.
+
+### Two records whose declared form disagreed with their own panel
+
+`810028242944` and `810028242951` — Freeze Dried, 1 oz bags — are filed
+`food_form: "wet"` in the ledger beside an 8% moisture guarantee. The seed
+reads the form off the moisture rather than off the field, so both are stored
+as **dry**, which is what a freeze-dried raw is.
+
+They also broke the panel check honestly: 60–66% protein as fed. The dry
+protein ceiling was a flat 50%, which is what kibble does and not what "dry"
+means. It is now a share of DRY MATTER — 75% for food, 95% for a treat —
+because the water is exactly what differed. A freeze-dried raw lands in the
+sixties, kibble in the thirties, and a dry-matter panel pasted into an as-fed
+row still reads near 100%.
+

@@ -274,14 +274,36 @@ for (const r of records) {
         err(upc, `${name} = ${v} is not a percentage`);
       }
     }
-    // A panel that sums past the whole pack cannot be right, whatever else is
-    // true — and a mistranscribed moisture is the usual cause.
-    const sum = (p ?? 0) + (f ?? 0) + (m ?? 0) + a + fib;
-    if (sum > 100) {
+    // ── What a panel can and cannot prove ────────────────────────────
+    //
+    // This summed protein + fat + moisture + ash + fibre and called anything
+    // over 100% impossible. That was wrong, and Weruva is what proved it: a
+    // perfectly ordinary can guarantees 12% protein MIN, 6% fat MIN, 83%
+    // moisture MAX, 1.5% ash MAX and 1% fibre MAX — 103.5% — while the food
+    // inside might be 13/7/79/1.2/0.6 and sum to 101 minus its carbohydrate.
+    //
+    // Minima and maxima are BOUNDS. Only the minima bound the actual from
+    // below, so the one thing guarantees alone can prove impossible is a
+    // protein floor and a fat floor that already exceed the whole pack.
+    // Twenty real Weruva panels failed the old rule, which is a check being
+    // loudest exactly where it is wrong — see data/gs1-prefixes.ts on how
+    // that teaches somebody to read past the word ERROR.
+    if ((p ?? 0) + (f ?? 0) > 100) {
       err(
         upc,
-        `panel sums to ${sum.toFixed(1)}% of the pack (protein+fat+moisture+ash+fibre). ` +
-          `At least one figure was mistranscribed.`
+        `protein min ${p}% and fat min ${f}% already exceed the whole pack. ` +
+          `Minima bound the food from below, so this one is arithmetically impossible.`
+      );
+    }
+    // The softer signal the old rule was reaching for, kept as a question.
+    // A protein floor and a moisture ceiling that cannot both be tight is
+    // usually a loose guarantee and occasionally a mistranscribed moisture —
+    // I and love and you had a jerky at 27% protein against 82% moisture.
+    if ((p ?? 0) + (m ?? 0) > 100) {
+      warn(
+        upc,
+        `protein min ${p}% against moisture max ${m}% — they cannot both be tight. ` +
+          `Usually a loose guarantee; check the moisture is not a transcription slip.`
       );
     }
 
@@ -293,11 +315,29 @@ for (const r of records) {
       const wet = m >= 60;
       const lo = wet ? 60 : 5;
       const hi = wet ? 92 : isSnack ? 35 : 20;
-      const cap = wet ? 20 : isSnack ? 90 : 50;
       if (m < lo || m > hi) {
-        warn(upc, `moisture ${m}% is outside ${lo}–${hi}% for a ${wet ? "wet" : "dry"} ${r.food_form}`);
+        warn(upc, `moisture ${m}% is outside ${lo}–${hi}% for something this ${wet ? "wet" : "dry"}`);
       }
-      if (p > cap) warn(upc, `protein ${p}% is above ${cap}% for a ${wet ? "wet" : "dry"} ${r.food_form}`);
+      // No flat protein ceiling. It used to be 50% for anything not a snack,
+      // and freeze-dried raw broke it honestly: Weruva's 1 oz Freeze Dried is
+      // 66% protein at 8% moisture, which is what a food with the water taken
+      // out looks like. The protein-against-moisture warning above carries the
+      // real signal without needing a category to decide it.
+      //
+      // What IS worth saying: the ledger's own `food_form` disagreeing with
+      // its own panel. One Weruva freeze-dried record is filed `wet` beside 8%
+      // moisture, and the seed reads the form off the moisture — so the two
+      // would silently part company.
+      const declaredWet = r.food_form === "wet";
+      if (r.food_form === "wet" || r.food_form === "dry") {
+        if (declaredWet !== wet) {
+          warn(
+            upc,
+            `food_form says "${r.food_form}" and the panel says ${m}% moisture. ` +
+              `The seed reads the form off the moisture, so one of the two is wrong.`
+          );
+        }
+      }
     }
 
     // A calorie figure the panel cannot physically produce. Modified Atwater

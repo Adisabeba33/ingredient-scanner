@@ -76,4 +76,12 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // same shelf, because a refreshed pack gets a new code and the old pack
   // keeps selling until it runs out.
   { prefix: "079100", maker: "9Lives (Post, Del Monte-era block)" },
+  // Weruva runs THREE at once — the most any maker here has. 878408 carries
+  // Classic Cat and TruLuxe, 813778 the Cat Stew and Paté ranges, and 810028
+  // the newer Wx, Senior and Freeze Dried lines. Nothing is retired; all three
+  // are on the shelf, which is what a small maker's barcode history looks like
+  // after fifteen years of adding ranges.
+  { prefix: "878408", maker: "Weruva" },
+  { prefix: "813778", maker: "Weruva" },
+  { prefix: "810028", maker: "Weruva" },
 ];

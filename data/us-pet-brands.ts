@@ -790,11 +790,25 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Weruva",
     owner: "Independent",
     species: "both",
+    // Named as the packs name them. "Classic" was shelf memory; the cans say
+    // "Classic Cat". And Weruva is renaming as we watch — "Cats in the
+    // Kitchen" is becoming "Weruva Cat", and "Wx" is becoming "Wx Phos
+    // Focused" — so both halves of each pair are listed, because both are in
+    // shops right now under different barcodes.
     lines: [
       "Classic",
+      "Classic Cat",
       "Cats in the Kitchen",
+      "Cats in the Kitchen Kitten",
+      "Cats in the Kitchen Paté",
+      "Weruva Cat Paté",
+      "Weruva Kitten",
+      "Cat Stew",
       "TruLuxe",
+      "Senior",
+      "Freeze Dried",
       "Wx",
+      "Wx Phos Focused",
       "Dogs in the Kitchen",
       "Paw Lickin'",
     ],

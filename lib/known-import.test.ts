@@ -202,6 +202,16 @@ describe("data/known-formulas.ts", () => {
       // and a shopper holding the old bag should not be told we have never
       // heard of it. See section I of docs/CATALOG-CONFLICTS.md.
       "I and love and you Baked & Saucy Lamb + Sweet Potato / I and love and you Lovingly Simple Lamb + Sweet Potato",
+      // Weruva renaming two ranges at once, and both halves of each pair are
+      // in shops now under different barcodes. "Cats in the Kitchen Paté" is
+      // becoming "Weruva Cat Paté"; "Wx" is becoming "Wx Phos Focused". Every
+      // pair is the same recipe to the letter with the same panel — which is
+      // what a rename looks like, where a paste error would be two DIFFERENT
+      // flavours wearing one list. See section L of docs/CATALOG-CONFLICTS.md.
+      "Weruva Cats in the Kitchen Paté Chicken & Pumpkin in a Hydrating Purée / Weruva Weruva Cat Paté Chicken & Pumpkin in a Hydrating Purée",
+      "Weruva Wx Chicken & Tilapia Formula in Gravy / Weruva Wx Phos Focused Chicken & Tilapia Formula in Gravy",
+      "Weruva Wx Chicken Formula in Gravy / Weruva Wx Phos Focused Chicken Formula in Gravy",
+      "Weruva Wx Chicken Formula in a Hydrating Purée / Weruva Wx Phos Focused Chicken Formula in a Hydrating Purée",
     ]);
     // Keyed by the product's POSITION, not its printed name. Two entries can
     // carry an identical `brand line variant` and still be two products — that
@@ -370,9 +380,33 @@ describe("data/known-formulas.ts", () => {
   // reason: semi-moist is a real shelf between kibble and canned — a
   // soft-baked biscuit runs 18–26% — and the moisture check's actual work is
   // done by the FLOOR, which is what catches a dry-matter panel.
+  //
+  // ── And a dry ceiling in DRY MATTER, not in as-fed percent ─────────────
+  //
+  // The dry protein cap was 50% as fed, which is what kibble does and not what
+  // "dry" means. Weruva sells a freeze-dried raw at 60% protein against 8%
+  // moisture, and that is simply what a food with the water taken out looks
+  // like — 65% of its dry matter, against 34% for a bag of kibble.
+  //
+  // Expressed as a share of dry matter the two shelves stop needing separate
+  // rules, because the water is exactly what differed. The ceiling is 75%: the
+  // highest a non-treat in this seed reaches is 51% (Ziwi's air-dried), a
+  // freeze-dried raw lands in the sixties, and a dry-matter panel pasted into
+  // an as-fed row — the error this whole check hunts — reads near 100%.
   const MOISTURE = { wet: [60, 92], dry: [5, 20], dryTreat: [5, 35] } as const;
   const PROTEIN = { wet: [0, 20], dry: [0, 50], treat: [0, 90] } as const;
-  const shelfOf = new Map<string, { moisture: readonly number[]; protein: readonly number[] }>();
+  /**
+   * Share of dry matter a dry food's protein may reach.
+   *
+   * A treat keeps its own, higher allowance, because a single dried organ IS
+   * meat: Ziwi's lamb green tripe is 79% protein at 13% moisture, which is 91%
+   * of its dry matter and entirely honest. The lower ceiling is for food.
+   */
+  const DRY_MATTER_PROTEIN = { food: 75, treat: 95 } as const;
+  const shelfOf = new Map<
+    string,
+    { moisture: readonly number[]; protein: readonly number[]; dryCeiling: number }
+  >();
   for (const p of KNOWN_PRODUCTS) {
     const isTreat =
       detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat";
@@ -381,23 +415,30 @@ describe("data/known-formulas.ts", () => {
     // A wet treat is still wet: a puree pouch cannot carry a chew's protein,
     // and letting it try would reopen the hole this check exists to close.
     const protein = isTreat && p.foodForm !== "wet" ? PROTEIN.treat : PROTEIN[p.foodForm];
-    for (const pkg of p.packages) shelfOf.set(pkg.upc, { moisture, protein });
+    const dryCeiling = isTreat ? DRY_MATTER_PROTEIN.treat : DRY_MATTER_PROTEIN.food;
+    for (const pkg of p.packages) shelfOf.set(pkg.upc, { moisture, protein, dryCeiling });
   }
 
   it("reads as an as-fed panel, not a dry-matter one", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
       const a = f.analysis;
-      const b = shelfOf.get(upc) ?? { moisture: MOISTURE.wet, protein: PROTEIN.wet };
+      const b =
+        shelfOf.get(upc) ??
+        { moisture: MOISTURE.wet, protein: PROTEIN.wet, dryCeiling: DRY_MATTER_PROTEIN.food };
       const m = a.moistureMax ?? 0;
       const pr = a.crudeProteinMin ?? 0;
       expect({ upc, ok: m >= b.moisture[0] && m <= b.moisture[1] }).toEqual({
         upc,
         ok: true,
       });
-      expect({ upc, ok: pr > b.protein[0] && pr <= b.protein[1] }).toEqual({
-        upc,
-        ok: true,
-      });
+      // Wet keeps its as-fed ceiling — a can is mostly water and 20% protein
+      // in one is the real limit. Dry is judged on its dry matter instead.
+      const dryMatter = 100 - m;
+      const ok =
+        m >= 60
+          ? pr > b.protein[0] && pr <= b.protein[1]
+          : dryMatter > 0 && pr > 0 && (pr / dryMatter) * 100 <= b.dryCeiling;
+      expect({ upc, ok }).toEqual({ upc, ok: true });
       // Taurine is a fraction of a percent on every cat food that STATES it —
       // and plenty of decks state nothing. Fancy Feast Delights With Cheddar
       // carries taurine in its ingredient list and guarantees no figure for it,
