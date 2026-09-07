@@ -54,6 +54,27 @@ const VET_PHRASES = [
 ];
 
 /**
+ * Brands where EVERY product is vet-channel, so there is no phrase to find.
+ *
+ * The phrase list above works because most makers sell a retail line and a vet
+ * line and have to print the difference on the pack. A brand that sells only
+ * therapeutic diets prints nothing, because there is nothing to distinguish it
+ * from — the vet is the distribution.
+ *
+ * TheraDiet is the case that made this exist. Rayne Nutrition sells it through
+ * veterinarians only; the Low Fat Kangaroo bag is 1% fat by minimum, formulated
+ * against a clinical target the way a renal diet is. Nothing in "TheraDiet Low
+ * Fat Kangaroo-MAINT Chunky Stew" matches a phrase above — "TheraDiet" folds to
+ * one word, so not even "therapeutic diet" reaches it — and the everyday
+ * standard would mark it down for exactly the thing a vet prescribed it for.
+ *
+ * The bar for adding a brand here is that the WHOLE brand is vet-channel. A
+ * maker with one vet range and a supermarket line goes in the phrase list, on
+ * the range, or nothing retail gets judged as retail again.
+ */
+const VET_BRANDS = ["theradiet"];
+
+/**
  * Hill's letter codes — c/d, k/d, z/d and the rest of the family.
  *
  * Brand-scoped on purpose. Folded to words, "n/d" is "n d", and so is Farmina's
@@ -83,6 +104,8 @@ export function isVeterinaryDiet(
   const text = foldWords(parts.filter(Boolean).join(" "));
   if (!text) return false;
   if (VET_PHRASES.some((phrase) => hasPhrase(text, phrase))) return true;
+  // The brands that are vet-channel end to end and print no phrase saying so.
+  if (VET_BRANDS.some((brand) => hasPhrase(text, brand))) return true;
   // The codes, only under the brand that uses them.
   if (hasPhrase(text, "hills") || hasPhrase(text, "hill s")) {
     return HILLS_CODES.some((code) => hasPhrase(text, code));

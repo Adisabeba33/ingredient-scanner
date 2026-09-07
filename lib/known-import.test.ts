@@ -846,8 +846,24 @@ describe("data/known-formulas.ts", () => {
     // arrive.
     const VET_MARKERS = /prescription diet|veterinary diet|veterinary health nutrition/i;
     const RC_VET_LINES = new Set(["Veterinary Diet", "Veterinary Health Nutrition"]);
+    // ── And the second shape of evidence: no phrase at all ──────────────
+    //
+    // Every marker above is a phrase a maker prints BECAUSE it also sells a
+    // retail line and has to say which is which. A brand with no retail line
+    // prints nothing, because there is nothing to distinguish itself from —
+    // TheraDiet is sold only through veterinarians and the packs say so
+    // nowhere. So the rule has two halves, and this is the second: a brand
+    // that is vet-channel end to end is vet-channel on every product.
+    //
+    // Deliberately a roster here even though the phrases are a rule, because
+    // "the whole brand is prescription-only" is a fact about a company that
+    // cannot be read off a name. A brand joins this list the same day it
+    // joins VET_BRANDS in lib/vet-diet.ts, and this test fails until it does.
+    const WHOLE_BRAND_VET = new Set(["TheraDiet"]);
     expect(vet.map((p) => `${p.brand} ${p.line}`).sort()).toEqual(
-      KNOWN_PRODUCTS.filter((p) => VET_MARKERS.test(`${p.brand} ${p.line}`))
+      KNOWN_PRODUCTS.filter(
+        (p) => VET_MARKERS.test(`${p.brand} ${p.line}`) || WHOLE_BRAND_VET.has(p.brand)
+      )
         .map((p) => `${p.brand} ${p.line}`)
         .sort()
     );

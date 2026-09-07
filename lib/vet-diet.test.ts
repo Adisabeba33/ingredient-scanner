@@ -10,6 +10,14 @@ describe("isVeterinaryDiet", () => {
     expect(isVeterinaryDiet("Blue Buffalo", "Natural Veterinary Diet", "KM")).toBe(true);
   });
 
+  // A brand with no retail line prints no phrase distinguishing itself from
+  // one. Nothing in these names is a vet word; the brand is the whole evidence.
+  it("recognises the brands that are vet-channel end to end", () => {
+    expect(isVeterinaryDiet("TheraDiet", "Low Fat Kangaroo-MAINT")).toBe(true);
+    expect(isVeterinaryDiet("TheraDiet", "Rabbit-MAINT", "Chunky Stew Dog Food")).toBe(true);
+    expect(isVeterinaryDiet(null, null, "Rayne Nutrition TheraDiet Rabbit-MAINT")).toBe(true);
+  });
+
   it("reads it out of whichever field it landed in", () => {
     expect(isVeterinaryDiet(null, null, "Prescription Diet i/d Digestive Care")).toBe(true);
     expect(isVeterinaryDiet("hills prescription diet")).toBe(true);

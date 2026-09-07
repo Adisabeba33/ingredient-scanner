@@ -11897,4 +11897,73 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "5.5 oz", container: CAN, upc: "810028246133", scope: UNIT },
     ],
   },
+
+  // ── TheraDiet · Rayne Nutrition (dog) ────────────────────────────────
+  //
+  // Batch 028, and the first brand here that is vet-channel from end to end.
+  // Every Rayne product is sold through a veterinarian; there is no retail
+  // line beside it. That is not a label on the shelf, it is a correctness
+  // problem — `lib/vet-diet.ts` explains why at length, and read the Low Fat
+  // Kangaroo panel below for the short version: 1% fat by minimum, which is
+  // the whole point of the food and looks like a defect to any standard built
+  // for an everyday dinner. The brand is in that file's `VET_BRANDS` list
+  // because nothing in "TheraDiet Low Fat Kangaroo-MAINT" is a vet word.
+  //
+  // "MAINT" is maintenance and it is part of the range name as Rayne prints
+  // it, joined with a hyphen. Not a suffix to strip.
+  //
+  // Three of five researched records. The 24.2 lb Rabbit bag and the 24 x 6.4
+  // oz feline case are held at needs_physical_label — see
+  // docs/CATALOG-CONFLICTS.md.
+  {
+    brand: "TheraDiet",
+    line: "Rabbit-MAINT",
+    variant: "Chunky Stew",
+    species: "dog",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    lifeStage: "adult",
+    packages: [
+      { size: "12.5 oz (354 g)", container: BOX, upc: "013189409076", scope: UNIT },
+    ],
+  },
+  {
+    brand: "TheraDiet",
+    line: "Low Fat Kangaroo-MAINT",
+    variant: "Chunky Stew",
+    species: "dog",
+    texture: "stew",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["kangaroo"],
+    lifeStage: "adult",
+    // The one barcode in this batch that retailers disagree about. Several
+    // current listings for this exact item put 013189409052 in the UPC field;
+    // others put it in MPN and fill UPC with 8885004071957 or "Does Not
+    // Apply". The check digit is right, the prefix is Rayne's, and more than
+    // one independent listing carries it as the UPC — so it is seeded, and the
+    // disagreement is written down rather than tidied away. A photograph of
+    // the carton settles it.
+    packages: [
+      { size: "12.5 oz (354 g)", container: BOX, upc: "013189409052", scope: UNIT },
+    ],
+  },
+  {
+    brand: "TheraDiet",
+    line: "Low Fat Kangaroo-MAINT",
+    variant: "with Chickpea Formula",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["kangaroo"],
+    lifeStage: "adult",
+    // Rayne's second prefix, on the shelf beside the first. The stews above
+    // are 013189…, this bag is 856361… — see data/gs1-prefixes.ts.
+    packages: [
+      { size: "24 lb", container: BAG, upc: "856361001541", scope: UNIT },
+    ],
+  },
 ];

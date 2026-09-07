@@ -110,6 +110,7 @@ const VERIFIED_024 = "2026-08-30";
 const VERIFIED_025 = "2026-08-30";
 const VERIFIED_026 = "2026-09-04";
 const VERIFIED_027 = "2026-09-06";
+const VERIFIED_028 = "2026-09-07";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -7051,5 +7052,47 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken Broth, Chicken, Egg White, Chicken Fat (Preserved With Mixed Tocopherols), Sunflower Oil, Natural Flavor, Fish Oil, Egg Shell Meal, Agar-Agar, Choline Chloride, Taurine, Zinc Sulfate, Vitamin E Supplement, Ferrous Sulfate, Thiamine Mononitrate (Vitamin B1), Niacin Supplement (Vitamin B3), Calcium Pantothenate, Vitamin A Supplement, Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement, Potassium Iodide.`,
     analysis: withCalories(ga(10, 5, 1, 83.5, 1.5, null), 922, 144, "can"),
     verifiedAt: VERIFIED_027,
+  },
+
+  // ── TheraDiet (Rayne Nutrition) — batch 028 ─────────────────────────────
+  //
+  // Read off Rayne's own package-panel artwork, not off the site's HTML
+  // ingredient renderer: on both kangaroo decks the two disagree, and the
+  // renderer is the one that is wrong. It drops kangaroo liver from the dry
+  // bag entirely and moves "(preserved with mixed tocopherols)" onto the wrong
+  // oil. Printed artwork outranks a page template, and the difference is a
+  // whole named animal ingredient.
+  //
+  // British spellings — "flavour" — are Rayne's own and stay as printed.
+  //
+  // The serving figure on the two stews is the WHOLE 354 g carton, which is
+  // why `servingName` is "box" rather than a portion nobody printed. It checks
+  // out both times: 1040 kcal/kg × 0.354 kg = 368, and 849 × 0.354 = 300.
+  "013189409076": {
+    ingredients: `Rabbit, water, sweet potatoes, red peppers, tapioca starch, celery powder, marine microalgae, monosodium phosphate, fructooligosaccharides, vitamins (vitamin E supplement, thiamine mononitrate, vitamin B12 supplement, niacin supplement, L-ascorbyl-2-polyphosphate, folic acid, d-calcium pantothenate, vitamin A supplement, pyridoxine hydrochloride, biotin, riboflavin supplement, vitamin D3 supplement), salt, minerals (zinc proteinate, ferrous sulfate, zinc sulfate, iron proteinate, copper proteinate, copper sulfate, manganese proteinate, manganese sulfate, sodium selenite, calcium iodate, potassium iodide), sunflower oil, choline chloride, taurine.`,
+    analysis: withCalories(ga(6, 5, 3, 78, null, null), 1040, 368, "box"),
+    verifiedAt: VERIFIED_028,
+  },
+  // 1% minimum fat. Not a cheap food — a low-fat clinical diet, which is the
+  // entire reason a vet dispenses it, and exactly the panel that the everyday
+  // "more meat, more fat, better food" reading destroys. See lib/vet-diet.ts.
+  "013189409052": {
+    ingredients: `Kangaroo, water, sweet potatoes, red peppers, tapioca starch, pumpkin, sunflower oil, calcium carbonate, vitamins (vitamin E supplement, thiamine mononitrate, vitamin B12 supplement, niacin supplement, L-ascorbyl-2-polyphosphate, folic acid, d-calcium pantothenate, vitamin A supplement, pyridoxine hydrochloride, biotin, riboflavin supplement, vitamin D3 supplement), marine microalgae, fructooligosaccharides, salt, minerals (zinc proteinate, ferrous sulfate, zinc sulfate, iron proteinate, copper proteinate, copper sulfate, manganese proteinate, manganese sulfate, sodium selenite, calcium iodate, potassium iodide), choline chloride, taurine.`,
+    analysis: withCalories(ga(7.5, 1, 4, 78, 3, null), 849, 300, "box"),
+    verifiedAt: VERIFIED_028,
+  },
+  "856361001541": {
+    ingredients: `Kangaroo, dried chickpeas, dried potatoes, pea protein, potato protein, dried peas, kangaroo liver, dried sweet potatoes, natural flavour, sunflower oil (preserved with mixed tocopherols), coconut oil, calcium carbonate, dicalcium phosphate, salt, fructooligosaccharide, vitamins (vitamin E supplement, vitamin B12 supplement, niacin, d-calcium pantothenate, vitamin A acetate, biotin, riboflavin, thiamin mononitrate, vitamin D3 supplement, pyridoxine hydrochloride, folic acid), choline chloride, minerals (ferrous sulfate, zinc oxide, manganous oxide, copper sulfate, iron amino acid chelate, zinc amino acid chelate, manganese amino acid chelate, copper amino acid chelate, sodium selenite, cobalt carbonate, ethylenediamine dihydriodide), mixed tocopherols, rosemary extract, taurine.`,
+    analysis: withCalories(ga(30, 7, 4, 12, null, null), 3304, 313, "cup"),
+    verifiedAt: VERIFIED_028,
+    // The two halves of this pack's own calorie statement do not agree, and
+    // both are stored as printed rather than one being quietly corrected.
+    // The bag says "1 cup / 105 g = 313 kcal/cup" and also 3304 kcal/kg;
+    // 105 g at 3304 kcal/kg is 347 kcal, and 313 kcal is about 94.7 g. The
+    // note beside `conflict` says it is for a reformulation under a stable
+    // barcode, which this is not — but it is the same kind of fact, a
+    // disagreement in the record that must not be resolved by picking one.
+    conflict:
+      "The printed panel is internally inconsistent on cup energy: 1 cup/105 g = 313 kcal/cup beside 3304 kcal/kg, which implies 347 kcal for that cup. Both printed values are kept; neither was adjusted to make them agree.",
   },
 };

@@ -84,4 +84,22 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   { prefix: "878408", maker: "Weruva" },
   { prefix: "813778", maker: "Weruva" },
   { prefix: "810028", maker: "Weruva" },
+  // TheraDiet (Rayne Nutrition), and the first two entries here whose ownership
+  // was NOT independently established. Every other line above was written from
+  // a maker we could confirm; these two were read off the products themselves —
+  // every code we have found under either belongs to a Rayne pack, and no code
+  // under either belongs to anyone else — which is evidence, but of a weaker
+  // kind. GEPIR was not reachable from where this was written.
+  //
+  // Registered anyway, because the alternative is worse: two of the three
+  // seeded TheraDiet barcodes sit under 013189, and leaving it out makes the
+  // checker warn on every one of them forever, which is how a person learns to
+  // read past a warning. The cost is stated plainly instead: a digit mistyped
+  // into either block passes a check it would otherwise have failed. If either
+  // turns out to belong to somebody else, delete the line — the products stay.
+  { prefix: "013189", maker: "TheraDiet / Rayne Nutrition (observed, not GEPIR-confirmed)" },
+  // Not the older of the two. Rayne runs both at once: the 24 lb Low Fat
+  // Kangaroo bag on sale today is 856361001541 while the stews beside it are
+  // 013189…, the same shape as Blue Buffalo's pair and 9Lives' pair above.
+  { prefix: "856361", maker: "TheraDiet / Rayne Nutrition (observed, not GEPIR-confirmed)" },
 ];

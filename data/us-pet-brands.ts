@@ -945,6 +945,19 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Good Golly Gullet Stix",
     ],
   },
+  {
+    name: "TheraDiet",
+    // Baystride owns the mark; every pack and every product page is published
+    // as Rayne Nutrition, so both spellings have to fold to this row.
+    owner: "Baystride (Rayne Nutrition)",
+    species: "both",
+    aliases: ["rayne", "rayne nutrition", "rayne clinical nutrition", "thera diet"],
+    // Rayne names a range by protein and by clinical target, joined with a
+    // hyphen — "MAINT" is maintenance, and it is part of the range name, not a
+    // suffix to strip. Only the two below are seeded; the brand sells more, and
+    // batch 028 held the rest for want of a proven barcode rather than a deck.
+    lines: ["Rabbit-MAINT", "Low Fat Kangaroo-MAINT"],
+  },
   { name: "Only Natural Pet", owner: "PetSmart", species: "both" },
   { name: "Wild Earth", owner: "Independent", species: "dog" },
   { name: "Tender & True", owner: "Independent", species: "both", aliases: ["tender and true"] },

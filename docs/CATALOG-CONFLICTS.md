@@ -1314,3 +1314,71 @@ because the water is exactly what differed. A freeze-dried raw lands in the
 sixties, kibble in the thirties, and a dry-matter panel pasted into an as-fed
 row still reads near 100%.
 
+
+## Batch 028 — TheraDiet (Rayne Nutrition)
+
+### The whole brand is vet-channel, and nothing on it says so
+
+Rayne sells TheraDiet through veterinarians only. There is no retail line
+beside it, so there is no phrase on the pack distinguishing one from the other
+— and `isVeterinaryDiet()` returned **false** on every name in this batch,
+checked before anything was seeded. "TheraDiet" folds to one word, so not even
+`therapeutic diet` reached it.
+
+`Low Fat Kangaroo-MAINT Chunky Stew` guarantees **1% minimum fat**. Judged by
+the everyday standard the report applies — named meat near the top, fat and
+protein worth having — that reads as a poor food, about a diet a vet dispensed
+for exactly that restriction. It is the same category error `lib/vet-diet.ts`
+was written about, arriving by a route that file could not see.
+
+The fix is a second list in that module, `VET_BRANDS`: brands that are
+vet-channel end to end. TheraDiet is its first entry. The bar for adding one is
+that the WHOLE brand is vet-channel — a maker with a vet range beside a
+supermarket line still goes on the phrase list, or nothing retail is judged as
+retail again.
+
+### Two GS1 prefixes registered on observation, not on proof
+
+`013189` and `856361` are the first entries in `data/gs1-prefixes.ts` whose
+ownership was **not** independently established. Every code found under either
+belongs to a Rayne pack and none belongs to anyone else, which is evidence of a
+weaker kind than the rest of that file carries; GEPIR was not reachable.
+
+Registered anyway, with the cost written into the file: leaving `013189` out
+warns on two of the three seeded barcodes forever, which is how a person learns
+to read past warnings. If either prefix turns out to be somebody else's, the
+line goes and the products stay.
+
+### One barcode retailers disagree about
+
+**`013189409052`** — Low Fat Kangaroo-MAINT Chunky Stew. Several current
+listings for this exact item expose `013189409052` as the UPC; others put it in
+MPN and fill the UPC field with `8885004071957` or "Does Not Apply". Check
+digit valid, prefix Rayne's, more than one independent listing carrying it as a
+UPC — seeded, with the disagreement recorded. A photograph of the carton
+settles it.
+
+### One panel that disagrees with itself
+
+**`856361001541`** — Low Fat Kangaroo-MAINT with Chickpea Formula, 24 lb. The
+bag prints `1 cup / 105 g = 313 kcal/cup` **and** `3304 kcal/kg`. At 105 g the
+kcal/kg figure implies 347 kcal; 313 kcal corresponds to about 94.7 g. Both are
+stored as printed. Neither was adjusted to make the other work.
+
+### Two records held rather than seeded
+
+Both have a complete current formula and no current barcode proof, which is the
+dominant blocker on this brand: Rayne publishes excellent label data and mostly
+exposes internal deck codes (`VC…`, `RC…`) where a GTIN would be. Those are not
+barcodes.
+
+1. **`013189409243`** — Rabbit-MAINT with Chickpea Formula, 24.2 lb bag. The
+   barcode is tied to this exact product and size in an older record, and the
+   product is still current, but the live package assets do not show a barcode.
+   Its adequacy statement is also unrepresentable: the bag claims AAFCO levels
+   for **adult maintenance and growth**, and `all` would broaden that. Held.
+2. **`013189409632`** — Rabbit-MAINT Chunky Stew feline case, 24 x 6.4 oz. The
+   barcode comes off an outer-case record with a 04/2024 expiration. Rayne
+   still sells the same configuration; continuity across a repack is not
+   something to assume, and it is the failure `data/wrong-barcodes.ts` exists
+   about. Held.
