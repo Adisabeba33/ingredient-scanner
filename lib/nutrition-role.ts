@@ -194,6 +194,19 @@ const KNOWN_TREAT_LINES = [
   // complete food "Kitten Crunchy". Without this the pack is judged as a
   // kitten's whole diet, which is the §2.4 error about a bag of snacks.
   "kitten crunchy",
+  // Reveal's two snack ranges, and the same failure as Ziwi's chews in both
+  // directions. "Bone Broth" is a 3 oz pouch of 95%-water broth with a
+  // collagen boost, sold as a topper or a drink — judged as dinner it is the
+  // worst food ever measured. "Whole Loin" is one salmon loin and nothing
+  // else; the pack calls it a treat, but the range name alone does not, and
+  // the range name is what survives into `line` once `variant` is the fish.
+  //
+  // Both are compounds a complete food would not carry: no maker calls a
+  // dinner "Bone Broth", and "in bone broth" — the phrase that could have
+  // been a problem — is a presentation, not a range, and is stored in
+  // `presentation` rather than in a name.
+  "bone broth",
+  "whole loin",
 ];
 
 /**
@@ -220,6 +233,34 @@ const KNOWN_TREAT_LINES = [
  * the alternative is telling a renal patient's owner their food is bad.
  */
 const KNOWN_COMPLEMENTARY_LINES = ["wx"];
+
+/**
+ * The same declaration, where the range name is too ordinary to match on.
+ *
+ * Reveal is what made this necessary. Its 2.47 oz tins — the tuna and chicken
+ * in broth that are most of what the brand sells — are the **Limited
+ * Ingredient** range, PetSmart files them under food TOPPERS, and Reveal's own
+ * packs print "complementary pet food … INTENDED FOR INTERMITTENT OR
+ * SUPPLEMENTAL FEEDING ONLY". Reveal's Entrées, kitten patés and dry bags are
+ * complete and balanced; the Limited Ingredient tins beside them are not, and
+ * nothing in the range name says so.
+ *
+ * It cannot go in the list above. "Limited ingredient" is one of the most
+ * common phrases in this industry and it usually describes a COMPLETE food.
+ * Merrick has three seeded dog products under "Limited Ingredient Diet Grain
+ * Free" and "Limited Ingredient Diet Healthy Grains" — complete diets, in this
+ * catalog today — and Natural Balance's flagship range is "L.I.D. Limited
+ * Ingredient Diets". An unscoped match would declare all of them supplemental:
+ * the same error this table exists to prevent, aimed at the wrong brands, and
+ * it would ship silently because nothing in the seed records adequacy.
+ *
+ * So it is scoped to the maker, for the reason `HILLS_CODES` is scoped in
+ * `lib/vet-diet.ts`: a token too small to carry a claim on its own can still
+ * carry one under a brand that prints it.
+ */
+const BRAND_COMPLEMENTARY_LINES: Record<string, string[]> = {
+  reveal: ["limited ingredient"],
+};
 
 const KNOWN_TOPPER_LINES = [
   "meal mixers",
@@ -280,6 +321,10 @@ export function detectNutritionRole(input: {
   // complete check, because it IS that phrase — just printed somewhere this
   // catalog stores and the claims list does not reach.
   if (anyPhrase(names, KNOWN_COMPLEMENTARY_LINES)) return "complementary";
+  // And the ranges whose names only mean "supplemental" under their own maker.
+  for (const [brand, lines] of Object.entries(BRAND_COMPLEMENTARY_LINES)) {
+    if (hasPhrase(names, brand) && anyPhrase(names, lines)) return "complementary";
+  }
 
   // The other half of the same declaration, and it outranks anything read out
   // of a NAME for the same reason: it is what the maker is legally saying the

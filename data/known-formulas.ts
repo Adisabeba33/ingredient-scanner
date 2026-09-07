@@ -111,6 +111,7 @@ const VERIFIED_025 = "2026-08-30";
 const VERIFIED_026 = "2026-09-04";
 const VERIFIED_027 = "2026-09-06";
 const VERIFIED_028 = "2026-09-07";
+const VERIFIED_029 = "2026-09-07";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -7094,5 +7095,47 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     // disagreement in the record that must not be resolved by picking one.
     conflict:
       "The printed panel is internally inconsistent on cup energy: 1 cup/105 g = 313 kcal/cup beside 3304 kcal/kg, which implies 347 kcal for that cup. Both printed values are kept; neither was adjusted to make them agree.",
+  },
+
+  // ── Reveal (MPM Products) — batch 029 ───────────────────────────────────
+  //
+  // Five of fourteen verified records. The rest are boxes, which carry no
+  // composition, and two boxes whose range could not be established.
+  //
+  // Three of these five are one-ingredient or three-ingredient statements, and
+  // that is the product rather than a truncated source. `compositionKey`
+  // returns null below five ingredients and the import falls back to text
+  // equality, which is exactly the case it was built for — Ziwi's single dried
+  // organs were the first.
+  "886817011657": {
+    ingredients: `Chicken Breast, Chicken Broth, Sunflower Oil, Potato Starch, Natural Chicken Flavor, Egg Whites, Marine Microalgae Oil, Vitamins (Vitamin A Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Thiamine Mononitrate, Riboflavin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Niacin, Pantothenic Acid, Folic Acid, Biotin, Vitamin C (Ascorbic Acid)), Minerals (Iron Amino Acid Chelate, Zinc Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Calcium Iodate), Tricalcium Phosphate, Calcium Chloride, Taurine, Potassium Chloride, Choline Chloride, Salt, Guar Gum, Magnesium Amino Acid Chelate.`,
+    analysis: withCalories(ga(13, 1, 1, 85, null, null), 847, 59.3, "can"),
+    verifiedAt: VERIFIED_029,
+  },
+  // 4% protein and 0.1% fat against 95% water. Read as a dinner this is the
+  // worst food in the catalog by a distance; read as what it is — a broth —
+  // the numbers are unremarkable. The range name is the only thing that
+  // carries that difference, which is why it is in nutrition-role.ts.
+  "886817013545": {
+    ingredients: `Chicken Bone Broth, Chicken Breast, Guar Gum.`,
+    analysis: withCalories(ga(4, 0.1, 0.5, 95, null, null), 268, 22.8, "pouch"),
+    verifiedAt: VERIFIED_029,
+  },
+  "886817013552": {
+    ingredients: `Fish Bone Broth, Tuna Fillet, Guar Gum, Hydrolyzed Tilapia Skin (Source of Collagen).`,
+    analysis: withCalories(ga(4, 0.1, 0.5, 95, null, null), 274, 23.3, "pouch"),
+    verifiedAt: VERIFIED_029,
+  },
+  // 82% protein at 5% moisture — 86% of dry matter, and honest: the ingredient
+  // list is one fish and the water has been taken out of it.
+  "886817008848": {
+    ingredients: `Tuna Fillet.`,
+    analysis: withKcalPerKg(ga(82, 2, 5, 5, null, null), 3532),
+    verifiedAt: VERIFIED_029,
+  },
+  "886817006905": {
+    ingredients: `Salmon.`,
+    analysis: withKcalPerKg(ga(28, 2, 2, 67, null, null), 1457),
+    verifiedAt: VERIFIED_029,
   },
 };

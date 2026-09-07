@@ -1842,4 +1842,102 @@ export const KNOWN_MULTIPACKS: KnownMultipack[] = [
     unitSize: "5.5 oz",
     contains: [],
   },
+
+  // ── Reveal · Limited Ingredient (cat) ────────────────────────────────
+  //
+  // Batch 029. Every box below is the COMPLEMENTARY range — the 2.47 oz tins
+  // Reveal prints "for intermittent or supplemental feeding only" on. Filed
+  // under the range that says so, because a box carries no composition and the
+  // range name is the only thing a shopper's report can read.
+  {
+    brand: "Reveal",
+    line: "Limited Ingredient",
+    variant: "Chicken in Broth Tins Variety Pack",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817005755",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+  {
+    brand: "Reveal",
+    line: "Limited Ingredient",
+    variant: "Fish in Broth Tins Variety Pack",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817005823",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+  {
+    brand: "Reveal",
+    line: "Limited Ingredient",
+    variant: "Broth Tins Variety Pack",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817006950",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+
+  // ── Reveal · Entrées (cat) ───────────────────────────────────────────
+  //
+  // The complete-and-balanced half of the same tin. Two ranges, one pack
+  // format, opposite answers to "can my cat live on this".
+  {
+    brand: "Reveal",
+    line: "Entrées",
+    variant: "Fish Paté Selection",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817011671",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+  {
+    brand: "Reveal",
+    line: "Entrées",
+    variant: "Chicken Selection in Broth",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817014658",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+
+  // ── Reveal · Lickable Treat (cat) ────────────────────────────────────
+  {
+    brand: "Reveal",
+    line: "Lickable Treat",
+    variant: "Chicken Purée Recipe",
+    species: "cat",
+    size: "4 × 0.5 oz pouches",
+    container: BOX,
+    upc: "886817010124",
+    packCount: 4,
+    unitSize: "0.5 oz",
+    contains: [],
+  },
+  {
+    brand: "Reveal",
+    line: "Lickable Treat",
+    variant: "Tuna Purée Recipe",
+    species: "cat",
+    size: "4 × 0.5 oz pouches",
+    container: BOX,
+    upc: "886817011695",
+    packCount: 4,
+    unitSize: "0.5 oz",
+    contains: [],
+  },
 ];

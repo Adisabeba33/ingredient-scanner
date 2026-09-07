@@ -102,4 +102,11 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // Kangaroo bag on sale today is 856361001541 while the stews beside it are
   // 013189…, the same shape as Blue Buffalo's pair and 9Lives' pair above.
   { prefix: "856361", maker: "TheraDiet / Rayne Nutrition (observed, not GEPIR-confirmed)" },
+  // Registered to the MAKER rather than to the brand, which is a distinction
+  // every entry above happens not to need. MPM Products makes Reveal, Applaws
+  // and Encore, and this block carries the family rather than any one of them
+  // — so a code under it that turns out to be Applaws is not a wrong barcode,
+  // it is a different brand from the same company. The Reveal research
+  // established this explicitly and said not to file the prefix under Reveal.
+  { prefix: "886817", maker: "MPM Products (Reveal, Applaws, Encore)" },
 ];

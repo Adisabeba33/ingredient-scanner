@@ -1382,3 +1382,111 @@ barcodes.
    still sells the same configuration; continuity across a repack is not
    something to assume, and it is the failure `data/wrong-barcodes.ts` exists
    about. Held.
+
+## Batch 029 — Reveal (MPM Products)
+
+### One tin, two ranges, opposite answers
+
+Reveal sells two kinds of wet food in the same 2.47 oz tin, and only the range
+name separates them:
+
+- **`Entrées`** — complete and balanced. So are the kitten patés and the three
+  dry bags.
+- **`Limited Ingredient`** — **complementary**. Reveal's packs print *"Reveal is
+  a complementary pet food for adult cats. THIS PRODUCT IS INTENDED FOR
+  INTERMITTENT OR SUPPLEMENTAL FEEDING ONLY"*, and PetSmart files the range
+  under food **toppers**. It is most of what the brand sells.
+
+The research ledger records the adequacy statement on **none of its 40
+records** — the word does not appear in any `verification_notes`, `conflicts`
+or `formula_source` field. Every wet record came out `unknown` from the role
+detector, which means "judge it as dinner", and the seedable half of the ledger
+is entirely complementary.
+
+`lib/nutrition-role.ts` gains `BRAND_COMPLEMENTARY_LINES`, scoped to the maker.
+It could not be an unscoped phrase: **Merrick** has three seeded dog products
+under "Limited Ingredient Diet Grain Free" and "Limited Ingredient Diet Healthy
+Grains" — complete diets, in this catalog today — and Natural Balance's
+flagship is "L.I.D. Limited Ingredient Diets". One unscoped match would have
+declared all of them supplemental, which is this same error aimed at the wrong
+brands.
+
+### Two snack ranges whose names carry no snack word
+
+`Bone Broth` and `Whole Loin`, both added to `KNOWN_TREAT_LINES`. The bone
+broths are the sharper case: 4% protein, 0.1% fat, 95% water. Read as a dinner
+they are the worst food in the catalog by a wide margin; read as what they are
+— three ounces of broth poured over dinner — the numbers are unremarkable.
+
+`Whole Loin` loses its evidence in the seed's own shape: Reveal prints "Whole
+Salmon Loin **Treat**", which becomes range `Whole Loin` plus variant `Salmon`,
+and the word that carried the meaning is gone.
+
+### A drinkable broth needed its own panel shelf
+
+95% moisture is outside the wet window of 60–92%, and it is not a
+transcription error. A can of food is 78–82% water because there is food in it;
+a bone broth is 95% because there is broth in it. Both `known-import.test.ts`
+and `scripts/check-ledger.mjs` gained a broth shelf of 88–97%, recognised off
+the **range name** and never off the number — a bound that widens to fit
+whatever it meets is not a bound, and a real can reading 95% is still the error
+the check hunts.
+
+### And a wet treat is now judged on its dry matter
+
+Reveal's Whole Loin is one salmon loin: 28% protein against 67% moisture. That
+fails a can's 20% as-fed ceiling and should — a can cannot do that. A piece of
+fish with its water still in it can: 28 against 33% dry matter is 85%, which is
+meat.
+
+So the same dry-matter question is now asked of a wet treat as of a dry one,
+against the same 95% treat ceiling; only a wet FOOD keeps the as-fed limit.
+This also closed a dead branch — `PROTEIN.treat` at [0, 90] could never be
+reached, because the as-fed ceiling is only consulted above 60% moisture and a
+treat above 60% moisture took `PROTEIN.wet`. It was dead the day the axis was
+split and is now gone rather than left looking like a rule.
+
+### The box-members floor was measuring the wrong thing
+
+`proved members for most of the boxes` asserted that over half of
+`KNOWN_MULTIPACKS` carry proven `contains`. Reveal's seven boxes tipped it under
+half, and nothing had gone wrong: they are outer packs whose inner tins this
+catalog has never held, and empty `contains` is the answer the test's own
+comment calls honest.
+
+A ratio over a growing, heterogeneous file cannot express "no members were
+dropped". It is now an absolute floor of 72 — raise it deliberately when a
+campaign proves more, never lower it to pass.
+
+### Two verified records held for want of a range
+
+Both are boxes with proven identity, and both were rejected for the reason a
+guess would have been worse than a gap:
+
+1. **`886817014276`** — Fish Selection in Broth, 18 × 2.47 oz. Its sibling
+   `886817014658` is documented as **Entrées** Chicken Selection in Broth, but
+   this one's own evidence does not say which of the two ranges it belongs to
+   — and the two ranges are the complete/complementary split above. Getting it
+   wrong is exactly the error this batch is about.
+2. **`886817006875`** — Variety Selection in Broth, 12 × 2.47 oz. Sourced from
+   Reveal's bare products index rather than a product page, and it may be the
+   same box as `886817006950` under a second name.
+
+### The prefix belongs to the maker, not the brand
+
+`886817` is registered as **MPM Products (Reveal, Applaws, Encore)** rather than
+as Reveal — the first entry in `data/gs1-prefixes.ts` that names a company
+whose brands this catalog holds separately. A code under it that turns out to be
+Applaws is not a wrong barcode; it is a different brand from the same maker. The
+research established this explicitly and said not to file the prefix under
+Reveal.
+
+### The rest of the ledger
+
+26 of 40 records are held at `needs_physical_label`, and the reason is worth
+recording: **Reveal's own current pages contradict each other.** The research
+found fat and fibre values swapped between two current pages for one product, a
+kitten page printing 9% moisture against another printing 89%, and manufacturer
+panels whose printed minima and maxima sum above 100%. Identity is established
+for all forty; the compositions are not trustworthy enough to promote without a
+physical US label.

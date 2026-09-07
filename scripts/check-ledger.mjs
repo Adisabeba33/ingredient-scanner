@@ -313,8 +313,16 @@ for (const r of records) {
     if (m != null && p != null) {
       const isSnack = r.food_form === "treat" || r.food_form === "supplement";
       const wet = m >= 60;
-      const lo = wet ? 60 : 5;
-      const hi = wet ? 92 : isSnack ? 35 : 20;
+      // A drinkable broth is a third thing here, not a very wet food. Reveal's
+      // Bone Broth pouches are 95% moisture because they are broth; a can of
+      // food is 78–82% because there is food in it. Read off the NAME, never
+      // off the number — a bound that widens to fit what it meets is not a
+      // bound, and a real can at 95% is still the error this hunts.
+      const broth = /\bbone broth\b/i.test(
+        `${r.product_line ?? ""} ${r.product_name ?? ""} ${r.variant ?? ""}`
+      );
+      const lo = broth ? 88 : wet ? 60 : 5;
+      const hi = broth ? 97 : wet ? 92 : isSnack ? 35 : 20;
       if (m < lo || m > hi) {
         warn(upc, `moisture ${m}% is outside ${lo}–${hi}% for something this ${wet ? "wet" : "dry"}`);
       }

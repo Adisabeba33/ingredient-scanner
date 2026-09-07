@@ -967,7 +967,28 @@ export const US_PET_BRANDS: SeedBrand[] = [
   { name: "Applaws", owner: "Independent", species: "both" },
   { name: "Almo Nature", owner: "Independent", species: "both" },
   { name: "Catit", owner: "Hagen", species: "cat" },
-  { name: "Reveal", owner: "Independent", species: "both" },
+  {
+    name: "Reveal",
+    // MPM Products Limited makes it — the same maker as Applaws, two rows
+    // above — and MPM was sold by 3i to Partners Group in September 2025.
+    owner: "MPM Products (Partners Group)",
+    species: "cat",
+    aliases: ["reveal pet food", "mpm products"],
+    // Batch 029. The split down this list is the whole point of it: Entrées
+    // is a complete and balanced diet, and Limited Ingredient — the 2.47 oz
+    // tins that are most of what the brand sells — is COMPLEMENTARY, printed
+    // "for intermittent or supplemental feeding only" and filed by PetSmart
+    // under toppers. lib/nutrition-role.ts is scoped to this brand for that
+    // reason; Merrick sells complete dog food under almost the same words.
+    lines: [
+      "Entrées",
+      "Limited Ingredient",
+      "Bone Broth",
+      "Lickable Treat",
+      "Freeze Dried Treats",
+      "Whole Loin",
+    ],
+  },
   { name: "Made by Nacho", owner: "Independent", species: "cat", aliases: ["nacho"] },
   { name: "Portland Pet Food", owner: "Independent", species: "dog" },
   { name: "Life's Abundance", owner: "Independent", species: "both", aliases: ["lifes abundance"] },

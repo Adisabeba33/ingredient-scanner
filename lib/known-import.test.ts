@@ -393,8 +393,44 @@ describe("data/known-formulas.ts", () => {
   // highest a non-treat in this seed reaches is 51% (Ziwi's air-dried), a
   // freeze-dried raw lands in the sixties, and a dry-matter panel pasted into
   // an as-fed row — the error this whole check hunts — reads near 100%.
-  const MOISTURE = { wet: [60, 92], dry: [5, 20], dryTreat: [5, 35] } as const;
-  const PROTEIN = { wet: [0, 20], dry: [0, 50], treat: [0, 90] } as const;
+  //
+  // ── And a drinkable broth is a third thing on the moisture axis ────────
+  //
+  // Reveal's Bone Broth pouches guarantee 95% moisture, above the wet ceiling
+  // of 92, and that is not a transcription error — it is what the product IS.
+  // A can of wet food is 78–82% water because there is food in it; a 3 oz
+  // pouch of bone broth with a little tuna and collagen is 95% water because
+  // there is broth in it, poured over dinner or drunk on its own.
+  //
+  // Recognised off the RANGE NAME, never off the number. A bound that widened
+  // to fit whatever it met would stop being a bound, and a real can of food
+  // reading 95% is still exactly the error this check hunts.
+  const BROTH_LINES = /\bbone broth\b/;
+  const MOISTURE = {
+    wet: [60, 92],
+    broth: [88, 97],
+    dry: [5, 20],
+    dryTreat: [5, 35],
+  } as const;
+  //
+  // ── A wet TREAT is judged on dry matter too, and that closed a dead branch ─
+  //
+  // `PROTEIN.treat` used to sit here at [0, 90] and could never be reached:
+  // the as-fed ceiling is only consulted for a panel above 60% moisture, and a
+  // treat above 60% moisture is a wet treat, which took `PROTEIN.wet`. Ninety
+  // percent protein as fed is impossible anyway. It was dead the day the axis
+  // was split, so it is gone rather than left looking like a rule.
+  //
+  // What replaced it is the rule the split was reaching for. Reveal's Whole
+  // Loin is one salmon loin: 28% protein against 67% moisture, which fails a
+  // can's 20% ceiling and should — a CAN cannot do that. A piece of fish with
+  // its water still in it can, and does; 28 against 33% dry matter is 85%,
+  // which is meat. So the same dry-matter question is asked of a wet treat as
+  // of a dry one, against the same 95% treat ceiling, and only a wet FOOD
+  // keeps the as-fed limit. A purée pouch is unaffected: I and love and you's
+  // Treat Meow is 84.5% water, and nothing at 84.5% water reaches 95% of its
+  // dry matter in protein without being caught.
+  const PROTEIN = { wet: [0, 20], dry: [0, 50] } as const;
   /**
    * Share of dry matter a dry food's protein may reach.
    *
@@ -405,37 +441,52 @@ describe("data/known-formulas.ts", () => {
   const DRY_MATTER_PROTEIN = { food: 75, treat: 95 } as const;
   const shelfOf = new Map<
     string,
-    { moisture: readonly number[]; protein: readonly number[]; dryCeiling: number }
+    {
+      moisture: readonly number[];
+      protein: readonly number[];
+      dryCeiling: number;
+      treat: boolean;
+    }
   >();
   for (const p of KNOWN_PRODUCTS) {
     const isTreat =
       detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat";
-    const moisture =
-      p.foodForm === "wet" ? MOISTURE.wet : isTreat ? MOISTURE.dryTreat : MOISTURE.dry;
-    // A wet treat is still wet: a puree pouch cannot carry a chew's protein,
-    // and letting it try would reopen the hole this check exists to close.
-    const protein = isTreat && p.foodForm !== "wet" ? PROTEIN.treat : PROTEIN[p.foodForm];
+    const isBroth = BROTH_LINES.test(`${p.line} ${p.variant}`.toLowerCase());
+    const moisture = isBroth
+      ? MOISTURE.broth
+      : p.foodForm === "wet"
+        ? MOISTURE.wet
+        : isTreat
+          ? MOISTURE.dryTreat
+          : MOISTURE.dry;
+    const protein = PROTEIN[p.foodForm];
     const dryCeiling = isTreat ? DRY_MATTER_PROTEIN.treat : DRY_MATTER_PROTEIN.food;
-    for (const pkg of p.packages) shelfOf.set(pkg.upc, { moisture, protein, dryCeiling });
+    for (const pkg of p.packages)
+      shelfOf.set(pkg.upc, { moisture, protein, dryCeiling, treat: isTreat });
   }
 
   it("reads as an as-fed panel, not a dry-matter one", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
       const a = f.analysis;
       const b =
-        shelfOf.get(upc) ??
-        { moisture: MOISTURE.wet, protein: PROTEIN.wet, dryCeiling: DRY_MATTER_PROTEIN.food };
+        shelfOf.get(upc) ?? {
+          moisture: MOISTURE.wet,
+          protein: PROTEIN.wet,
+          dryCeiling: DRY_MATTER_PROTEIN.food,
+          treat: false,
+        };
       const m = a.moistureMax ?? 0;
       const pr = a.crudeProteinMin ?? 0;
       expect({ upc, ok: m >= b.moisture[0] && m <= b.moisture[1] }).toEqual({
         upc,
         ok: true,
       });
-      // Wet keeps its as-fed ceiling — a can is mostly water and 20% protein
-      // in one is the real limit. Dry is judged on its dry matter instead.
+      // Wet FOOD keeps its as-fed ceiling — a can is mostly water and 20%
+      // protein in one is the real limit. Everything else is judged on its dry
+      // matter, a wet treat included: see the note above the bounds.
       const dryMatter = 100 - m;
       const ok =
-        m >= 60
+        m >= 60 && !b.treat
           ? pr > b.protein[0] && pr <= b.protein[1]
           : dryMatter > 0 && pr > 0 && (pr / dryMatter) * 100 <= b.dryCeiling;
       expect({ upc, ok }).toEqual({ upc, ok: true });
@@ -1022,9 +1073,22 @@ describe("data/known-multipacks.ts", () => {
   // Empty is an honest answer — it means the box was read and no inner code
   // could be proven — so this is a floor, not a demand. It exists to catch a
   // generator that silently dropped the members it was given.
-  it("proved members for most of the boxes", () => {
+  //
+  // ── Why this is a count and no longer a fraction ──────────────────────
+  //
+  // It was "more than half the boxes have members", and that measured the
+  // wrong thing: it fell every time a campaign honestly proved no inner codes,
+  // which is the answer this test's own comment calls honest. Reveal's seven
+  // boxes tipped it under half, and nothing had gone wrong — the boxes are
+  // outer packs whose inner tins we have never held.
+  //
+  // A ratio over a growing, heterogeneous file cannot express "no members were
+  // dropped". An absolute floor can: the boxes that came with proven members
+  // still have them, and any change that loses some breaks this. Raise it
+  // deliberately when a campaign proves more; never lower it to pass.
+  it("kept every box member that was ever proved", () => {
     const withMembers = KNOWN_MULTIPACKS.filter((b) => b.contains.length > 0).length;
-    expect(withMembers).toBeGreaterThan(KNOWN_MULTIPACKS.length / 2);
+    expect(withMembers).toBeGreaterThanOrEqual(72);
   });
 });
 

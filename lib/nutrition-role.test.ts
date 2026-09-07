@@ -24,6 +24,43 @@ describe("detectNutritionRole", () => {
     ).toBe("complete");
   });
 
+  // A range name that only means "supplemental" under one maker, and the two
+  // makers it must not mean it for. Reveal's Limited Ingredient tins print the
+  // AAFCO supplemental sentence and PetSmart files them under toppers; Merrick
+  // sells complete dog food as "Limited Ingredient Diet" and is in this catalog
+  // today. Unscoped, one match would have declared both of them supplemental.
+  it("reads Limited Ingredient as supplemental only under Reveal", () => {
+    expect(
+      detectNutritionRole({ parts: ["Reveal", "Limited Ingredient", "Fish in Broth Tins"] })
+    ).toBe("complementary");
+    expect(
+      detectNutritionRole({
+        parts: ["Merrick", "Limited Ingredient Diet Grain Free", "Real Chicken"],
+      })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Natural Balance", "L.I.D. Limited Ingredient Diets", "Duck"] })
+    ).toBe("unknown");
+    // And the other half of the same brand is a real dinner. Reveal sells
+    // Entrées and Limited Ingredient in the SAME 2.47 oz tin; only one of them
+    // is a diet, and nothing but the range name separates them.
+    expect(
+      detectNutritionRole({ parts: ["Reveal", "Entrées", "Chicken Breast Paté Recipe"] })
+    ).toBe("unknown");
+  });
+
+  // Two snack ranges whose names carry no snack word. A bone broth is 95%
+  // water: judged as dinner it is the worst food ever measured, about a pouch
+  // nobody was ever going to feed as dinner. "Whole Loin" loses the word
+  // "Treat" that Reveal's full product name carries, because the fish becomes
+  // the variant.
+  it("reads Reveal's snack ranges as snacks", () => {
+    expect(
+      detectNutritionRole({ parts: ["Reveal", "Bone Broth", "Chicken Bone Broth with Chicken Breast"] })
+    ).toBe("treat");
+    expect(detectNutritionRole({ parts: ["Reveal", "Whole Loin", "Salmon"] })).toBe("treat");
+  });
+
   // The bug I nearly shipped. Cesar's "Loaf & Topper in Sauce" is complete and
   // balanced dog food — the topper is the garnish ON the loaf. Filing it as a
   // garnish would excuse a real dinner from the standard it should be held to,

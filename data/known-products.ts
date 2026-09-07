@@ -11966,4 +11966,95 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "24 lb", container: BAG, upc: "856361001541", scope: UNIT },
     ],
   },
+
+  // ── Reveal · MPM Products (cat) ──────────────────────────────────────
+  //
+  // Batch 029, and the range names carry the whole meaning here. Reveal sells
+  // two kinds of wet food side by side in the same 2.47 oz tin: Entrées is a
+  // complete and balanced diet, and Limited Ingredient is COMPLEMENTARY —
+  // printed "for intermittent or supplemental feeding only", filed by PetSmart
+  // under toppers. Nothing about the tin says which is which.
+  //
+  // So `line` is not decoration on this brand; it is what stops a supplemental
+  // tin being judged as somebody's cat's whole dinner. lib/nutrition-role.ts
+  // reads it, scoped to this maker because Merrick sells complete dog food
+  // under nearly the same words.
+  //
+  // Only the records whose range is established are here. Two verified boxes
+  // are held for want of a range — see docs/CATALOG-CONFLICTS.md.
+  {
+    brand: "Reveal",
+    line: "Entrées",
+    variant: "Chicken Breast Paté Recipe",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2.47 oz", container: CAN, upc: "886817011657", scope: UNIT },
+    ],
+  },
+  // The two bone broths. 95% moisture is the product, not a slip: three ounces
+  // of broth with a little meat and collagen in it, poured over dinner or
+  // drunk. They are why the panel check gained a broth shelf.
+  {
+    brand: "Reveal",
+    line: "Bone Broth",
+    variant: "Chicken Bone Broth with Chicken Breast",
+    species: "cat",
+    texture: "unknown",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "886817013545", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Reveal",
+    line: "Bone Broth",
+    variant: "Fish Bone Broth with Tuna Fillet",
+    species: "cat",
+    texture: "unknown",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "886817013552", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Reveal",
+    line: "Freeze Dried Treats",
+    variant: "Tuna Bites",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["tuna"],
+    packages: [
+      { size: "0.88 oz", container: BAG, upc: "886817008848", scope: UNIT },
+    ],
+  },
+  // One salmon loin and nothing else, and the range name is where the word
+  // "treat" lives — Reveal's own product name is "Whole Salmon Loin Treat",
+  // which becomes line "Whole Loin" plus variant "Salmon" here and loses the
+  // word. lib/nutrition-role.ts knows the range for exactly that reason.
+  {
+    brand: "Reveal",
+    line: "Whole Loin",
+    variant: "Salmon",
+    species: "cat",
+    texture: "filets",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "1.06 oz", container: POUCH, upc: "886817006905", scope: UNIT },
+    ],
+  },
 ];
