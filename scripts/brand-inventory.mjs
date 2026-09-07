@@ -57,9 +57,24 @@ function decomment(src) {
     .join("\n");
 }
 
-/** One `{ … },` entry at the top level of an exported array. */
+/**
+ * One `{ … },` entry at the top level of an exported array.
+ *
+ * BOTH shapes, and the second one was missing for four campaigns. A brand
+ * short enough to fit on one line is written on one line —
+ * `{ name: "Reveal", owner: "Independent", species: "both" },` — and the
+ * multi-line pattern cannot see it. The inventory then printed "Owner: not in
+ * data/us-pet-brands.ts" about a brand whose row is right there, which is a
+ * tool telling a researcher to go and create something that already exists.
+ * Reveal is the brand it happened to; roughly a third of the file is
+ * one-liners.
+ */
 function blocks(src) {
-  return [...decomment(src).matchAll(/\n {2}\{\n([\s\S]*?)\n {2}\},/g)].map((m) => m[1]);
+  const clean = decomment(src);
+  return [
+    ...[...clean.matchAll(/\n {2}\{\n([\s\S]*?)\n {2}\},/g)].map((m) => m[1]),
+    ...[...clean.matchAll(/\n {2}\{ ([^\n]*?) \},/g)].map((m) => m[1]),
+  ];
 }
 const field = (block, name) =>
   new RegExp(`${name}:\\s*"((?:[^"\\\\]|\\\\.)*)"`).exec(block)?.[1] ?? null;
