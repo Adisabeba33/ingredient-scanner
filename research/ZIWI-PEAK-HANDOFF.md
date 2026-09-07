@@ -2,70 +2,205 @@
 
 Last updated: 2026-08-28
 
-## Scope and workflow
+## Read this first
 
-Continue ZIWI Peak only. Read `research/AGENTS.md` first and treat it as binding. Active campaign branch: `agent/deep-research-barcode-ledger`. Review surface: draft PR #1.
+This is the current handoff for ZIWI Peak research.
 
-Do not infer neighboring EANs, strip digits, substitute case codes, or combine formula generations. Barcode proof and formula proof may come from different sources, but every `source_verified` record must have an exact individual-unit barcode, valid check digit, complete current ingredient order, complete printed GA/calories, and resolved formula generation.
+Before doing any new ZIWI work, read `research/AGENTS.md` and treat it as binding. Rebuild the live exclusion set from the repository; do not rely on the counts or UPC lists in this handoff alone.
 
-## Physical ledger layout
+Current research branch: `agent/deep-research-ziwi-peak`
+Current review surface: draft PR #2
+Primary ledger: `research/deep-research-ziwi-peak.json`
 
-The ZIWI work is NOT yet merged into one canonical JSON. Do not assume `research/deep-research-ziwi-peak.json` contains everything.
+Do not merge the PR unless the user explicitly asks.
 
-Current files:
+## Current canonical state
 
-- `research/deep-research-ziwi-peak.json` — original 10 cat records.
-- `research/.ziwi-peak-cats-append-2026-08-27-b1.json` — 20 cat records, all source-verified.
-- `research/.ziwi-peak-cats-append-2026-08-27-b2.json` — 20 cat records: 17 source-verified, 3 needs physical label.
-- `research/.ziwi-peak-append-2026-08-27-b3.json` — 20 dog Original Air-Dried records, all source-verified.
-- `research/.ziwi-peak-append-2026-08-27-b4.json` — 20 dog wet / Steam & Dried records, all source-verified.
-- `research/.ziwi-peak-append-2026-08-27-b5.json` — 20 dog treats / chews / Provenance records: 13 source-verified, 7 needs physical label.
-- `research/.ziwi-peak-append-2026-08-28-b6.json` — 6 dog Raw Superboost / booster records, all `needs_physical_label` because exact barcode identity is proven but formula generation is unresolved.
+The old multi-file append layout has already been consolidated. Do **not** use the old B1-B6 append-file instructions from earlier handoffs.
 
-Conceptual total across these files: **116 records**. Stored-status arithmetic at handoff: **100 `source_verified` + 16 `needs_physical_label`**.
+Current canonical ZIWI ledger contains **156 records**.
 
-Before adding anything else, build the exclusion set from the canonical file PLUS every append file above PLUS `data/known-products.ts`, `data/known-formulas.ts`, `data/wrong-barcodes.ts`, `docs/CATALOG-CONFLICTS.md`, and every other `research/deep-research-*.json` ledger.
+Current status arithmetic after the latest two 20-record batches:
 
-## Batch 6 just added
+- **109 `source_verified`**
+- **23 `needs_physical_label`**
+- **24 `candidate`**
 
-All six EAN-13 check digits passed and all six were absent from the repository before the B6 write:
+The 156-record ledger is the authoritative ZIWI research staging file on this branch. Always re-fetch it before writing and rerun global duplicate checks against:
 
-- `9421016590179` — Dog Gut & Immune Support, 114 g
-- `9421016590162` — Dog Gut & Immune Support, 320 g
-- `9421016590032` — Dog Raw Superboost Lamb, 114 g
-- `9421016590049` — Dog Raw Superboost Lamb, 320 g
-- `9421016590186` — Dog Skin & Coat Health, 320 g
-- `9421016590100` — Dog Raw Superboost Venison, 320 g
+- `data/known-products.ts`
+- `data/known-formulas.ts`
+- `data/wrong-barcodes.ts`
+- `docs/CATALOG-CONFLICTS.md`
+- every `research/deep-research-*.json`
+- all new codes collected in the current batch
 
-Why all six are `needs_physical_label`: exact older SKU pages preserve an ingredient tail with both `Dried Bacillus subtilis Fermentation Product` and `Dried Enterococcus faecium Fermentation Product`, while newer formula copies for the same ranges usually list only `Dried Bacillus subtilis Fermentation Product`. Do not merge those generations. The Venison 320 g record also lacks a recoverable complete current GA/calorie panel; missing values were deliberately left null rather than borrowing the Air-Dried Venison panel.
+## User priority changed: ACTIVE MARKET ONLY
 
-## Important known traps
+The user does **not** currently want discontinued, historical, inactive, archive-only, or old regional products researched further.
 
-1. **Mackerel & Lamb vs Lamb wet:** some retailers assign Lamb sibling EANs to Mackerel & Lamb. Keep the independently proven mappings from B4; do not trust flavor-adjacent retailer copies.
-2. **Tripe & Lamb wet:** a ZIWI renderer contains a gram/ounce typo. Preserve the conflict and use the internally consistent size/calorie evidence already documented in B4.
-3. **Provenance:** historical/discontinued products have multiple formula generations. Never present Provenance as current without explicit evidence, and do not merge differing taurine/protein/calorie panels.
-4. **Superboost:** older two-probiotic ingredient tails conflict with newer Bacillus-only copies. A physical pack or authoritative generation-specific label is needed before upgrading those records.
-5. **Case/multipack codes:** individual-unit EAN only. Never use a carton/tray/case identifier for a single can or bag.
+From this point forward, ZIWI research should target only products that are **currently sold and realistically orderable online**.
 
-## Strong next leads
+Market priority:
 
-These were discovered but were not added to B6; re-check the live exclusion set before using them:
+1. **United States** — highest priority
+2. **Canada** — highest priority
+3. **Australia / New Zealand** — secondary but useful if actively sold
+4. **Europe / UK** — secondary but useful if actively sold
 
-- `9421016590193` — Dog Skin & Coat Health, 114 g.
-- `9421016590056` — Dog Raw Superboost Beef, 114 g.
-- `9421016590087` — Dog Raw Superboost Beef, 320 g.
-- `9421016590124` — Cat Raw Superboost Beef, 85 g; verify exact current label before filing.
-- `9421016590117` — Cat Raw Superboost Venison, 85 g; exact barcode/ingredient identity has a strong retailer lead.
+A product should count as an active-market target only when there is current evidence that the exact SKU/size is actually offered for sale. A surviving old retailer page, archived product JSON, discontinued inventory record, barcode database entry, cached search result, or historical distributor list is not enough.
 
-ZIWI also publicly announced several 2026 cat/kitten UPCs. Treat them as leads until a complete current formula/label deck is available: `9421038211243`, `9421038211212`, `9421038211267`, `9421038211564`, `9421038211571`, `9421038211595`, `9421038211588`. Do not mark them source-verified from UPC announcement alone.
+Do not spend research time mining old Hoki, old regional Venison, discontinued Provenance generations, obsolete package sizes, or other historical ZIWI SKU families unless the user later asks for archival coverage.
 
-## Merge note
+## Current active-market conclusion
 
-The safest future cleanup is to programmatically merge canonical + B1–B6 into `research/deep-research-ziwi-peak.json`, parse and deduplicate the combined document, re-run global UPC/GTIN checks, commit it, re-fetch and parse it again, and only then delete staged append files. Until that happens, **do not delete or ignore any append file**.
+As of the 2026-08-28 scan, the current active ZIWI catalog appears **effectively saturated** in the research ledger.
 
-## Recent commits
+Two direct first-party catalog sweeps were already performed:
 
-- B5 recovery commit: `c8c0d0c98a15c5fec8808077e793d281954f96ca`.
-- B6 commit: `f056e42e41bba3e03dfa61775de31956039fd653`.
+- current official ZIWI US Shopify catalog: **50 products inspected**
+- current official ZIWI Global Shopify catalog: **42 products inspected**
 
-If continuing with another batch, use `catalog_number: null` unless a global range has explicitly been reserved.
+After subtracting the live repository exclusion set, both produced **zero additional new first-party variant barcodes**.
+
+A follow-up active-market sweep also checked current retailer inventory in Canada / Australia / New Zealand. Available/current ZIWI variants that exposed barcodes mapped back to codes already present in the ledger. No convincing new active individual-unit barcode set was found.
+
+Therefore: **do not start another arbitrary “next 20” ZIWI batch right now.** There is no evidence that 20 useful active individual-unit ZIWI barcodes remain undiscovered. Forcing another batch would mostly create historical/discontinued or outer-case noise.
+
+The correct future workflow is a **delta scan**, not another historical excavation.
+
+## What the next agent should do
+
+When ZIWI research is resumed:
+
+1. Re-fetch `research/deep-research-ziwi-peak.json` and all global exclusion files.
+2. Check whether any of the 2026 announced products below have become genuinely orderable from ZIWI or major retailers.
+3. Sweep the current official US and Global product JSON/catalog again and compare all active variant barcodes against the repository.
+4. Check major current-market retailers, especially US and Canada, for active SKU variants not represented in the official store.
+5. Only investigate Australia/NZ/Europe when the product is visibly current and orderable.
+6. Add only genuinely new active barcode identities.
+7. If fewer than 20 valid active products exist, add fewer than 20. **Never manufacture a batch size by using discontinued SKUs, neighboring EAN inference, case codes, or archive products.**
+8. For `source_verified`, still require the full gate from `research/AGENTS.md`: exact unit barcode, current matching formula generation, complete ingredients, complete printed GA, calories, life-stage/adequacy where printed, source URLs, valid check digit, and no repo collision.
+
+## 2026 launch products to re-check for activation
+
+ZIWI announced these new 2026 UPCs. They are already present in the ledger as research leads/candidates, so they are **not new barcodes**, but their status should be revisited once they become genuinely orderable and a complete current label deck is available:
+
+- `9421038211250` — Air-Dried Puppy Chicken & Lamb, 14 oz
+- `9421038211243` — Steam & Dried Kitten Chicken with Southern Blue Whiting, 1.5 lb
+- `9421038211212` — Kitten Pâté Beef with Mackerel, 3 oz
+- `9421038211267` — Kitten Pâté Chicken with Lamb, 3 oz
+- `9421038211564` — Cat Pâté Salmon & Chicken, 3 oz
+- `9421038211571` — Cat Pâté Salmon & Chicken, 6.5 oz
+- `9421038211595` — Cat Pâté Salmon & South Pacific Fish, 3 oz
+- `9421038211588` — Cat Pâté Salmon & South Pacific Fish, 6.5 oz
+
+Do not duplicate them. If they become active, upgrade the existing records only when current exact formula/label evidence resolves the missing fields.
+
+## Superboost / formula-generation warning
+
+Several Raw Superboost / functional booster records remain `needs_physical_label` because older exact SKU evidence and newer formula copies disagree on the probiotic tail, especially:
+
+- older generation: `Dried Bacillus subtilis Fermentation Product` + `Dried Enterococcus faecium Fermentation Product`
+- newer copies: often Bacillus-only
+
+Do not combine these generations or upgrade them by borrowing a sibling formula. A current authoritative generation-specific label or physical pack is required.
+
+## IMPORTANT: records from the second extra batch that are not current promotion priority
+
+The last 20-record research batch deliberately captured some historical and outer-package evidence while trying to exhaust the brand. After the user's active-market clarification, these should **not be treated as current individual-product promotion targets**.
+
+### Historical / regional individual SKUs — HOLD for later archival use
+
+- `9421016592678` — historical/regional Venison Cat 85 g
+- `9421016595877` — historical Hoki Cat 85 g
+- `9421016595839` — historical Hoki Cat larger can (surviving metadata conflict: 170 g vs 185 g)
+
+Keep them in research history; do not use them as evidence that those old products are part of the current active assortment.
+
+### Outer retail multipacks / cases — do not substitute for one can
+
+These are real outer-package barcodes, but they are not individual-can UPCs. They are low priority for the current scanner catalog unless the product model explicitly supports scanning outer retail packs/cases.
+
+Multipacks:
+
+- `9421038210833`
+- `9421038210826`
+- `9421038210819`
+- `9421038210802`
+- `9421038210840`
+- `9421038210857`
+- `9421038210864`
+
+Cases:
+
+- `9421016594511`
+- `9421016594917`
+- `9421016594450`
+- `9421016594337`
+- `9421016595969`
+- `9421016594634`
+- `9421016594573`
+- `9421016594474`
+- `9421016594870`
+
+Their `barcode_scope` must remain `multipack` / `case`. Never promote one of these as the barcode for a contained individual can.
+
+### Useful active individual from that batch
+
+- `9421016597024` — Provenance Otago Valley Wet Dog 170 g — `source_verified`; exact individual-unit barcode and matching formula/GA/calorie evidence were captured.
+
+## Earlier verified additions worth noting
+
+The prior 20-record batch added several genuinely useful current/near-current identities, including:
+
+- `9421016590612` — Original Air-Dried Venison Dog 1 kg
+- `9421016592975` — Original Air-Dried Venison Dog 2.5 kg
+- `9421016598014` — Original Air-Dried Beef Dog 3.5 oz trial size
+- `9421016598076` — Original Air-Dried Chicken Dog 3.5 oz trial size
+- `9421016598038` — Original Air-Dried Lamb Dog 3.5 oz trial size
+- `9421016594672` — Good Dog Rewards Lamb 85 g
+- `9421016594641` — Good Dog Rewards Venison 85 g
+
+Those three trial-size barcodes came directly from official ZIWI Shopify variant data and were matched to current official formula/GA/calorie pages.
+
+## Known traps
+
+1. **Do not infer sequential EANs.** ZIWI has many neighboring-looking codes; proximity is not proof.
+2. **Do not use retailer SKU/item numbers as UPC/EAN.**
+3. **Do not substitute case/tray/multipack codes for individual units.**
+4. **Do not merge old and current formula generations.**
+5. **Mackerel & Lamb vs Lamb wet:** some retailer copies historically cross-assigned sibling EANs.
+6. **Tripe & Lamb wet:** historical source material includes size/unit inconsistencies; preserve documented conflicts.
+7. **Provenance:** formula generations differ materially across time/markets.
+8. **Superboost:** probiotic-generation conflict remains unresolved for several SKUs.
+9. **Availability matters now.** A valid old barcode is not a current target merely because a page still exists.
+
+## Promotion guidance
+
+Research and production are separate.
+
+For the user's current production import, prioritize **active, current, individual-unit `source_verified` records**. Do not blindly promote all 156 records simply because they exist in research.
+
+Before production promotion, filter out or separately review:
+
+- historical/discontinued records
+- `candidate`
+- unresolved `needs_physical_label`
+- `case` / `multipack` barcode scopes unless the application explicitly supports them
+
+If production files are changed after this handoff, the next research agent must rebuild exclusions from the live repository because promoted UPCs may now appear in `data/known-products.ts` / `data/known-formulas.ts`.
+
+## Recent research commits / PR
+
+- first additional 20-record data commit: `4c4348babf89a8ddccb654e3d66f056b13548c16`
+- second additional 20-record data commit: `542dd8dcaa348df6ebfa1e914e846e1678bdf3c6`
+- draft PR: #2 — `Research 20 more ZIWI Peak barcodes`
+
+PR #2 remains research-only and unmerged unless the user explicitly requests otherwise.
+
+## Bottom line
+
+For the current product goal, **ZIWI Peak active-market barcode research is paused because coverage appears saturated**.
+
+Do not continue mining old/inactive SKUs just to increase the count. Resume only when a delta scan shows genuinely new, currently sold, orderable ZIWI products or when the user explicitly asks for historical/archive coverage.
