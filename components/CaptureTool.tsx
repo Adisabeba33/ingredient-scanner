@@ -26,6 +26,7 @@ import { CorrectionsReview } from "@/components/CorrectionsReview";
 import { ExpressDesk } from "@/components/ExpressDesk";
 import { SeedImport } from "@/components/SeedImport";
 import { MissedScans } from "@/components/MissedScans";
+import { TestScanner } from "@/components/TestScanner";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
@@ -86,6 +87,42 @@ const MODE_LABELS: Record<CaptureMode, string> = {
   human: "Human food",
   cosmetics: "Cosmetics",
 };
+
+/**
+ * What the desk is for, this afternoon.
+ *
+ * Not the same axis as `CaptureMode` above, which says which SHELF a pack came
+ * off. This says what you are doing with the packs, and the three answers need
+ * different screens:
+ *
+ *   full     — barcode, ingredients, panel. One product properly.
+ *   express  — barcode and the front. The list is typed in later, at a desk.
+ *   test     — neither. Scan a shelf and find out what we answer.
+ *
+ * Test Mode captures nothing at all, which is why it replaces the capture card
+ * rather than changing it. A screen that both measured the hit rate and offered
+ * to photograph the interesting ones would end every aisle walk with eleven
+ * scans and no number.
+ */
+type DeskMode = "full" | "express" | "test";
+
+const DESK_KEY = "catalog-scanner.desk";
+
+const DESK_LABELS: Record<DeskMode, string> = {
+  full: "Full",
+  express: "Express",
+  test: "Test",
+};
+
+const DESK_BLURB: Record<DeskMode, string> = {
+  full: "Barcode, ingredients, panel. One product, properly.",
+  express: "Barcode + front of pack. Ingredients typed in later, at a desk.",
+  test: "Barcode only, nothing captured. Scan a shelf, measure what we answer.",
+};
+
+function isDeskMode(x: unknown): x is DeskMode {
+  return x === "full" || x === "express" || x === "test";
+}
 
 type QueueFilter = "ingredients" | "brand" | null;
 
@@ -248,20 +285,31 @@ const REASON_LABEL: Record<string, string> = {
 
 export function CaptureTool({ adminToken }: { adminToken: string }) {
   const [mode, setMode] = useState<CaptureMode>("pet");
-  // Express Mode: a barcode and the front of the pack, nothing else. The
-  // ingredient list is typed in later at a desk (see /api/express). Sticky
-  // across reloads on purpose — somebody working a whole aisle this way should
-  // not have to switch it back on after every accidental refresh.
-  const [express, setExpress] = useState(false);
+  // What this desk is doing right now — see DESK_MODES. Sticky across reloads
+  // on purpose: somebody working a whole aisle one way should not have to set
+  // it again after every accidental refresh.
+  //
+  // This was a boolean called `express`, and the third mode is what ended that.
+  // `express` survives below as a derived value so nothing downstream of the
+  // capture flow had to learn about a mode it does not take part in.
+  const [desk, setDesk] = useState<DeskMode>("full");
   useEffect(() => {
-    setExpress(localStorage.getItem("catalog-scanner.express") === "1");
+    const stored = localStorage.getItem(DESK_KEY);
+    if (isDeskMode(stored)) {
+      setDesk(stored);
+      return;
+    }
+    // The old boolean, honoured once. Somebody who left Express on last week
+    // should find it on, not find themselves quietly back in full capture.
+    if (localStorage.getItem("catalog-scanner.express") === "1") setDesk("express");
   }, []);
-  const toggleExpress = useCallback(() => {
-    setExpress((v) => {
-      localStorage.setItem("catalog-scanner.express", v ? "0" : "1");
-      return !v;
-    });
+  const chooseDesk = useCallback((next: DeskMode) => {
+    setDesk(next);
+    localStorage.setItem(DESK_KEY, next);
+    // Kept in step so a rollback to the previous build does not lose the pick.
+    localStorage.setItem("catalog-scanner.express", next === "express" ? "1" : "0");
   }, []);
+  const express = desk === "express";
   const [draft, setDraft] = useState<Draft>(EMPTY_DRAFT);
   const [overlay, setOverlay] = useState<Overlay>(null);
   // The pending queue itself (not just its size), so it can be reviewed,
@@ -706,42 +754,46 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
         ))}
       </div>
 
-      {/* Express Mode. Under the picker rather than beside it: it changes what a
-          capture IS, not which shelf it came from. */}
-      <button
-        onClick={toggleExpress}
-        aria-pressed={express}
-        className={`flex items-center justify-between gap-3 rounded-input border px-4 py-2.5 text-left transition ${
-          express
-            ? "border-sage-500 bg-sage-100"
-            : "border-line bg-surface"
-        }`}
-      >
-        <span className="min-w-0">
-          <span className="flex items-center gap-1.5 text-[13px] font-semibold text-ink">
-            <Zap size={14} strokeWidth={2} aria-hidden="true" />
-            Express Mode
-          </span>
-          <span className="mt-0.5 block text-[11.5px] leading-snug text-muted">
-            {express
-              ? "Barcode + front of pack. Ingredients typed in later, at a desk."
-              : "Two seconds a product: barcode, front photo, walk on."}
-          </span>
-        </span>
-        <span
-          aria-hidden="true"
-          className={`relative h-6 w-11 shrink-0 rounded-full transition ${
-            express ? "bg-sage-500" : "bg-lineStrong"
-          }`}
+      {/* What the desk is doing. Under the shelf picker rather than beside it:
+          it changes what a scan IS, not which shelf it came from. This was a
+          two-state toggle until Test Mode, which is a third answer rather than
+          a second setting. */}
+      <div className="flex flex-col gap-1.5">
+        <div
+          role="radiogroup"
+          aria-label="Desk mode"
+          className="flex gap-2"
         >
-          <span
-            className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow-soft transition-all ${
-              express ? "left-[22px]" : "left-0.5"
-            }`}
-          />
-        </span>
-      </button>
+          {(Object.keys(DESK_LABELS) as DeskMode[]).map((d) => (
+            <button
+              key={d}
+              role="radio"
+              aria-checked={desk === d}
+              onClick={() => chooseDesk(d)}
+              className={`flex h-9 flex-1 items-center justify-center gap-1.5 rounded-input text-[13px] font-medium transition ${
+                desk === d
+                  ? "bg-sage-500 text-white"
+                  : "border border-line bg-surface text-muted"
+              }`}
+            >
+              {d === "express" && <Zap size={13} strokeWidth={2} aria-hidden="true" />}
+              {d === "test" && (
+                <ScanLine size={13} strokeWidth={2} aria-hidden="true" />
+              )}
+              {DESK_LABELS[d]}
+            </button>
+          ))}
+        </div>
+        <p className="text-[11.5px] leading-snug text-muted">{DESK_BLURB[desk]}</p>
+      </div>
 
+      {/* Test Mode replaces the whole capture flow rather than adjusting it.
+          Everything below this — the desk panels, the queue on the server, the
+          catalog browser — is unchanged and still there. */}
+      {desk === "test" && <TestScanner adminToken={adminToken} />}
+
+      {desk !== "test" && (
+        <>
       {/* Duplicate warning — this code is already ours / already queued here. */}
       {dupWarning && (
         <div className="flex items-start gap-2 rounded-input border border-amber bg-amber-soft px-3 py-3">
@@ -1205,6 +1257,8 @@ export function CaptureTool({ adminToken }: { adminToken: string }) {
           </div>
         )}
       </section>
+        </>
+      )}
 
       {/* Overlays */}
       {overlay?.kind === "barcode" && (
