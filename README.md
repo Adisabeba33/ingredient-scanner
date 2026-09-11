@@ -9,6 +9,10 @@ bags gets our real, off-the-label composition instantly.
 
 Built to the spec in `ingredients.help/docs/catalog-scanner-spec.md`.
 
+> **Доска задач:** [`docs/tasks/README.md`](docs/tasks/README.md) — сторона
+> сканера. Основная доска и обоснование живут в репозитории приложения
+> (`Ingredients.help/docs/tasks/`, `docs/strategy-review-2026-09.md`).
+
 ## Why this exists
 
 The consumer app can already look a barcode up in Open Food / Beauty / Pet Food
