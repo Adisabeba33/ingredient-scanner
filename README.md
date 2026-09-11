@@ -9,6 +9,10 @@ bags gets our real, off-the-label composition instantly.
 
 Built to the spec in `ingredients.help/docs/catalog-scanner-spec.md`.
 
+> **Доска задач:** [`docs/tasks/README.md`](docs/tasks/README.md) — сторона
+> сканера. Основная доска и обоснование живут в репозитории приложения
+> (`Ingredients.help/docs/tasks/`, `docs/strategy-review-2026-09.md`).
+
 ## Why this exists
 
 The consumer app can already look a barcode up in Open Food / Beauty / Pet Food
@@ -119,11 +123,15 @@ deleting it would just make the app re-fetch it.
 | Duplicate guard | `app/api/check-barcode`, `components/DuplicateProductDialog.tsx` |
 | Admin gate | `components/AdminGate.tsx`, `app/api/admin/verify/route.ts` |
 
-**Four things must agree across the two repos**, or the app and the scanner
+**Five things must agree across the two repos**, or the app and the scanner
 disagree about what a row even *is*:
 
-- `lib/pet-species.ts` and `lib/food-form.ts` — byte-identical copies. Diff
-  them; they should produce no output.
+- `lib/pet-species.ts`, `lib/food-form.ts` and `lib/life-stage.ts` —
+  byte-identical copies, now checked rather than asserted: the app's
+  `tests/shared-modules.test.ts` diffs them whenever both repos are checked out
+  side by side. It was written because two of the three had already drifted —
+  a fix here (fold the accents before stripping them, without which "Pâté"
+  matched nothing) had sat unported in the app for as long as nobody looked.
 - `lib/barcode.ts` — not a full copy. The scanner carries only the three
   helpers that decide identity and trust (`sanitizeBarcode`,
   `canonicalBarcode`, `SOURCE_RANK`); the app's file additionally does the
@@ -136,6 +144,25 @@ disagree about what a row even *is*:
   ingredients does **not** invalidate the report built from the old ones. The
   scanner clears that key itself; if the formula drifts, it clears nothing and
   the stale analysis is served forever.
+
+### What the feeding statement answers
+
+`lib/extract.ts` copies the AAFCO statement off the pack verbatim, and it
+answers two questions rather than one:
+
+- **Is this dinner?** `lib/nutrition-role.ts` — meal, topper, treat or
+  supplement. A treat marked down for not being a balanced diet is a bad
+  answer to a question nobody asked.
+- **Whose dinner?** `lib/life-stage.ts` — growth, maintenance, all life stages,
+  and separately whether the statement includes or excludes growth of
+  large-size dogs (70 lbs or more as an adult). Those two wordings differ by
+  one word and mean opposite things for a Labrador puppy.
+
+Both are stored, and so is the sentence itself (`feeding_statement`), because
+the printed words are the data: a better parser can then be re-run over the
+catalog instead of over the shelf. The stage is never inferred from the
+ingredients or from the product name — the name is marketing and the app reads
+it separately, and the interesting case is precisely the two disagreeing.
 
 ## Seeding products from label data
 
