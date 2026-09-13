@@ -121,6 +121,11 @@ export interface KnownProduct {
 
 const CAN = "can" as const;
 const TUB = "tub" as const;
+// Fancy Feast Appetizers and Purely — a shallow sealed plastic tray of 1.1 to
+// 2 oz, which is neither the Petites twin-serve pot (`tub`) nor a can. The
+// value was in `KnownPackage` from the start and had no seeded product until
+// batch 030.
+const TRAY = "tray" as const;
 const BOX = "box" as const;
 const BAG = "bag" as const;
 const POUCH = "pouch" as const;
@@ -2750,6 +2755,9 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["ocean fish", "salmon", "spinach", "parsley"],
     lifeStage: "all",
     packages: [
+      // The smallest bag, found in batch 030. Same deck to the letter as
+      // its three larger siblings, which is what a fourth size looks like.
+      { size: "16 oz", container: BAG, upc: "050000463671", scope: UNIT },
       { size: "3 lb", container: BAG, upc: "050000467150", scope: UNIT },
       { size: "7 lb", container: BAG, upc: "050000463916", scope: UNIT },
       { size: "12 lb", container: BAG, upc: "050000580743", scope: UNIT },
@@ -10371,7 +10379,29 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     packages: [{ size: "3.15 lb", container: BAG, upc: "071190478450", scope: UNIT }],
   },
 
-  // ── Purina ONE · +Plus (cat) ──────────────────────────────────────────
+  // ── Purina ONE · +Plus and Tender Selects Blend (cat) ─────────────────
+  //
+  // Batch 031, and the shape of this brand is the size LADDER. One recipe is
+  // sold in four bags — 3.5, 7, 16 and 22 lb — each with its own retail
+  // barcode and all four the same food. They belong in one `packages` list,
+  // not as four products: the coverage page would otherwise show four foods
+  // where the shelf has one.
+  //
+  // Twenty new barcodes, six recipes. The 3.5 lb Hairball below arrived
+  // separately in batch 025, off the "looked for, not found" list, and its two
+  // larger bags join it here rather than starting a second Hairball.
+  //
+  // Two things about these decks are unusual and both are deliberate:
+  //
+  //   · Purina's newer Pet Nutrition Facts panel prints DIETARY fibre, not
+  //     crude. They are different measurements — dietary counts soluble
+  //     fractions the crude method burns off — so `crudeFiberMax` is null and
+  //     the printed figure is an extra. Copying 10% dietary into the crude
+  //     field would read four times worse than the food is. Friskies Party
+  //     Pack'd set this precedent; see the note on `ga`.
+  //   · Those same decks print kcal/CUP and no kcal/kg. `withCalories` takes a
+  //     null per-kilogram figure for exactly this, and dividing a bag into
+  //     servings nobody printed is the invention it refuses.
   {
     brand: "Purina ONE",
     line: "+Plus",
@@ -10382,7 +10412,108 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     foodForm: "dry",
     proteins: ["chicken"],
     lifeStage: "adult",
-    packages: [{ size: "3.5 lb", container: BAG, upc: "017800012638", scope: UNIT }],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800012638", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800012607", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800012621", scope: UNIT },
+    ],
+  },
+  // Urinary Tract Health, and the one thing not to do with it: it is an
+  // ordinary supermarket bag, not a prescription diet. Retailer metadata
+  // filing it under "Veterinary Diet" is exactly the miscategorisation
+  // lib/vet-diet.ts refuses to follow, and this pack is the case its comment
+  // names.
+  {
+    brand: "Purina ONE",
+    line: "+Plus",
+    variant: "Urinary Tract Health Formula",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800549172", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800549202", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800012782", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "017800144117", scope: UNIT },
+    ],
+  },
+  // Filed under +Plus, which is what the current pack prints. The brand entry
+  // also names a "Healthy Kitten" range from shelf memory; the campaign found
+  // no current pack using it on its own, and an empty range costs nothing
+  // while a wrong one files a kitten food under the wrong shelf.
+  {
+    brand: "Purina ONE",
+    line: "+Plus",
+    variant: "Healthy Kitten Formula",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800350884", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800029650", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800104777", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina ONE",
+    line: "+Plus",
+    variant: "Indoor Advantage With Real Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800033886", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800033862", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800033855", scope: UNIT },
+    ],
+  },
+  // ── Purina ONE · Tender Selects Blend (cat) ───────────────────────────
+  //
+  // The range the current decks print. Retailer titles still say SmartBlend
+  // everywhere and the 2026 packs do not, so nothing here is filed under it —
+  // see docs/CATALOG-CONFLICTS.md.
+  {
+    brand: "Purina ONE",
+    line: "Tender Selects Blend",
+    variant: "With Real Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800474740", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800474900", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800431194", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "017800147347", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina ONE",
+    line: "Tender Selects Blend",
+    variant: "With Real Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "017800571180", scope: UNIT },
+      { size: "7 lb", container: BAG, upc: "017800571210", scope: UNIT },
+      { size: "16 lb", container: BAG, upc: "017800571920", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "017800144100", scope: UNIT },
+    ],
   },
 
   // ── 9Lives · Bites (cat) ─────────────────────────────────────────────
@@ -12055,6 +12186,567 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["salmon"],
     packages: [
       { size: "1.06 oz", container: POUCH, upc: "886817006905", scope: UNIT },
+    ],
+  },
+
+  // ── Fancy Feast and Friskies — batch 030 ──────────────────────────────
+  //
+  // The largest batch since Royal Canin, and the one the operator asked for
+  // after standing in a shop and finding Fancy Feast half-empty. Forty
+  // products under forty-one barcodes, plus forty-two variety packs next door
+  // in data/known-multipacks.ts — this brand's boxes were entirely absent
+  // until now, and they sit on the shelf beside the tins.
+  //
+  // Five records carry identity and no composition on purpose: two Purely
+  // broths, two Roasted tins and one Savory Cravings box were left at
+  // needs_physical_label by the research. They are seeded anyway, because a
+  // barcode with a name is worth more to a shopper than nothing, and because
+  // that is exactly what this file is for — a list of things to go and find.
+  {
+    brand: "Fancy Feast",
+    line: "Classic Pâté",
+    variant: "Chopped Grill Feast",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000429240", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Tender Beef & Liver Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef","liver"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000572250", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Ocean Whitefish & Tuna Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["ocean whitefish","tuna"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000100842", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Grilled",
+    variant: "Tuna Feast in Gravy",
+    species: "cat",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000836123", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Minced",
+    variant: "Turkey Feast in Sauce",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_sauce",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000434947", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Kitten",
+    variant: "Tender Chicken Feast Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000172351", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Kitten",
+    variant: "Tender Salmon Feast Pâté",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000172375", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Medleys",
+    variant: "Primavera Style With White Meat Chicken and Accents of Tomato, Carrot and Spinach",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["white meat chicken","tomato","carrot","spinach"],
+    lifeStage: "all",
+    packages: [
+      { size: "2.7 lb", container: BAG, upc: "050000391875", scope: UNIT },
+      { size: "6.5 lb", container: BAG, upc: "050000397679", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Paté With Chicken in Savory Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["chicken","poultry","fish"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "050000168767", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Friskies",
+    line: "Extra Gravy",
+    variant: "Paté With Salmon in Savory Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "extra_gravy",
+    foodForm: "wet",
+    proteins: ["salmon","poultry"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "050000168743", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Friskies",
+    line: "Prime Filets",
+    variant: "With Beef in Gravy",
+    species: "cat",
+    texture: "filets",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef","chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "050000215201", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Chicken Feast Paté in Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000153558", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Salmon Feast Paté in Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon","chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000180721", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Classic Pâté",
+    variant: "Seafood Feast",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["ocean fish"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000429349", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "Oceanfish With a Shrimp Topper in a Delicate Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["ocean fish","shrimp"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000001286", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "Skipjack Tuna With a Sole Topper in a Delicate Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["skipjack tuna","sole"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000001293", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "Light Meat Tuna With a Scallop Topper in a Delicate Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["skipjack tuna","scallop"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000001309", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "Wild Alaskan Salmon in a Delicate Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000001316", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "Flaked Tongol Tuna in a Savory Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tongol tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000002689", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "White Meat Chicken and Flaked Tuna in a Savory Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken","tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000002696", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Appetizers",
+    variant: "White Meat Chicken and Shredded Beef in a Savory Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken","beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1.1 oz", container: TRAY, upc: "050000002702", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Purely",
+    variant: "Natural Tender Tongol Tuna Entrée in a Delicate Broth",
+    species: "cat",
+    texture: "unknown",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tongol tuna","skipjack tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2 oz", container: TRAY, upc: "050000004522", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Purely",
+    variant: "Natural Flaked Skipjack Tuna Entrée in a Delicate Broth",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["skipjack tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2 oz", container: TRAY, upc: "050000004584", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Purely",
+    variant: "Natural White Meat Chicken Entrée in a Delicate Broth",
+    species: "cat",
+    texture: "unknown",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2 oz", container: TRAY, upc: "050000004591", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Purely",
+    variant: "Natural Seabass and Shrimp Entrée in a Delicate Broth",
+    species: "cat",
+    texture: "unknown",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["seabass","tuna","shrimp"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2 oz", container: TRAY, upc: "050000004560", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Purely",
+    variant: "Natural White Meat Chicken and Shredded Beef Entrée in a Delicate Broth",
+    species: "cat",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken","beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "2 oz", container: TRAY, upc: "050000004577", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Cravings",
+    variant: "Salmon Flavor",
+    species: "cat",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1 oz", container: BOX, upc: "050000002627", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Cravings",
+    variant: "Tuna Flavor",
+    species: "cat",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1 oz", container: BOX, upc: "050000002986", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Cravings",
+    variant: "Chicken Flavor",
+    species: "cat",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1 oz", container: BOX, upc: "050000002979", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Roasted",
+    variant: "Roasted Chicken Feast",
+    species: "cat",
+    texture: "chopped_ground",
+    presentation: "unknown",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000123773", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Roasted",
+    variant: "Roasted Turkey Feast",
+    species: "cat",
+    texture: "chopped_ground",
+    presentation: "unknown",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000123780", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Beef Feast Paté in Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000144396", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Gravy Lovers",
+    variant: "Ocean Whitefish & Tuna Feast Paté in Gravy",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["ocean whitefish","tuna"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000161560", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Senior 7+",
+    variant: "Minced Chicken Feast in Gravy",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000503889", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Senior 7+",
+    variant: "Minced Tuna Feast in Gravy",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "senior",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000503865", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Creamy Delights",
+    variant: "Chicken Feast With a Touch of Real Milk",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken","milk"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000168200", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Creamy Delights",
+    variant: "Salmon Feast With a Touch of Real Milk",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon","milk"],
+    lifeStage: "all",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "050000168224", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Cravings",
+    variant: "Beef Flavor",
+    species: "cat",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1 oz", container: BOX, upc: "050000002559", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Fancy Feast",
+    line: "Savory Cravings",
+    variant: "Beef & Crab Flavor",
+    species: "cat",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef","crab"],
+    lifeStage: "adult",
+    packages: [
+      { size: "1 oz", container: BOX, upc: "050000002573", scope: UNIT },
     ],
   },
 ];

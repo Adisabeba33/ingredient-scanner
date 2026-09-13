@@ -1490,3 +1490,247 @@ kitten page printing 9% moisture against another printing 89%, and manufacturer
 panels whose printed minima and maxima sum above 100%. Identity is established
 for all forty; the compositions are not trustworthy enough to promote without a
 physical US label.
+
+## Batch 031 — Purina ONE
+
+### SmartBlend is a name the current packs no longer print
+
+`SmartBlend` was Purina ONE's flagship descriptor for years and it is still
+everywhere in retailer titles and legacy listings. The 2026 decks examined in
+this campaign do not use it: the same products resolve as **`Tender Selects
+Blend`** or **`+Plus`**.
+
+So nothing is filed under SmartBlend. It stays in the brand entry as an empty
+range — costing nothing, per that file's own doctrine — until a current pack
+proves a current SmartBlend SKU. A 2026 bag filed under it on the strength of
+an old retailer title is how a range list rots.
+
+### Urinary Tract Health is a supermarket bag, not a prescription diet
+
+Retailer metadata categorises `+Plus Urinary Tract Health Formula` under
+"Veterinary Diet". It is not one, and `lib/vet-diet.ts` names this exact case in
+its comment as the thing it refuses to flag: Pro Plan sells Urinary Tract Health
+in a supermarket, and pushing an ordinary retail food out of the ordinary
+standard is the same error as missing a real vet diet, in the other direction.
+
+### Dietary Fibre is not Crude Fibre
+
+Purina's newer Pet Nutrition Facts panel prints **Dietary Fiber**. Four of the
+six recipes here carry it — Tender Selects Salmon and Chicken, Healthy Kitten,
+Indoor Advantage — and all four store `crudeFiberMax: null` with the printed
+figure as an extra under its own name.
+
+They are different measurements: dietary fibre counts soluble fractions that the
+crude method burns off, and 10% dietary against the 2–4.5% crude figures on the
+other two recipes is not the same food being worse. Copying it into the crude
+field would read four times worse than the food is. Friskies Party Pack'd set
+this precedent; the note lives on `ga` in `data/known-formulas.ts`.
+
+The visible cost is honest and worth knowing: carbohydrate is derived by
+difference and needs all five figures, so these four show no carbohydrate row.
+
+### kcal per cup, and no kcal per kilogram
+
+The same decks print a per-cup calorie statement and no per-kilogram one.
+Stored exactly that way. Backing out a kcal/kg would divide by a cup weight the
+label states loosely and amplify its rounding into a four-digit figure nobody
+printed — the invention `withCalories` refuses in the other direction, and the
+reason its first argument is nullable.
+
+### One recipe, four bags, one product
+
+Twenty barcodes are six recipes. Purina ONE sells the same food in 3.5, 7, 16
+and 22 lb bags, each with its own retail UPC, and all of them belong in one
+`packages` list. Seeding them as separate products would show four foods where
+the shelf has one; the opposite error — one code standing for several sizes —
+is what `data/wrong-barcodes.ts` exists about.
+
+The 3.5 lb Hairball bag was already here from batch 025, off the "looked for,
+not found" list. Its two larger bags joined it rather than starting a second
+Hairball product, and the deck all three share is now written once instead of
+three times.
+
+### Twelve products whose own bags disagree
+
+A new test — "every bag of one product carries the same composition" — was
+added alongside this batch, because a dry food's deck is written out under
+three or four barcodes and a correction can land on one and miss its siblings.
+It found twelve products already here that do not agree with themselves.
+
+Every one is two **transcriptions** of one food, not two foods:
+
+| kind | example |
+|---|---|
+| spelling and case | Ziwi `Magnesium Sulfate` / `Sulphate`; Royal Canin `brewers rice` / `Brewers rice`; `L-carnitine` / `L-Carnitine` |
+| how much of a vitamin block a source spelled out | two Party Mix bags carry `niacin (Vitamin B-3)`, two carry bare `niacin` |
+| a hyphen | 9Lives `Meat-By-Products` against `Meat By-Products` |
+| an extras list one source printed shorter | two Blue Buffalo bags where one page omitted Vitamin E and taurine entirely |
+| two genuinely different numbers | Royal Canin Dental Care 3533 against 3536 kcal/kg; 9Lives paté 1050 against 1045 |
+
+**None was fixed**, deliberately. Making them agree means choosing which source
+was right, and nothing in this repository knows — only the pack does. Copying
+one onto the other would turn a visible disagreement into an invisible
+assertion, which is what this document exists to prevent.
+
+They are named in an allowlist instead, with a second test that fails if an
+entry is still listed after its product has been reconciled. The list may
+shrink when somebody photographs a bag; it must not grow, because a new batch
+has one source per recipe and a disagreement inside one is a typo rather than a
+disagreement between sources.
+
+One case dissolved on inspection rather than being listed: Royal Canin Maine
+Coon's two sizes carried the same two guarantees in opposite order. Extras are
+now sorted before comparing, because a panel's ordering carries no meaning —
+unlike an ingredient list, which is printed by descending weight, where the
+order IS the data and sorting it would rewrite the food.
+
+## Batch 032 — Sheba (Mars Petcare US)
+
+### A whole brand of boxes, and not one tray
+
+The campaign returned **twenty outer cartons and cases and zero individual
+units**. That is not an oversight; it is the researcher declining to guess.
+Perfect Portions is a snap-apart twin tray whose calorie statement is printed
+**per serving** — per half a pack — and promoting a tray without reading that
+basis off a current label is how a figure ends up wrong by a factor of two.
+
+It leaves a real gap and it should be said plainly: Perfect Portions is the
+most-scanned thing this brand sells, and a shopper holding one tray still gets
+nothing. The next pass on Sheba is individual units, not more boxes.
+
+### Three of four shelf-memory range names were wrong
+
+The brand entry named `Perfect Portions`, `Filets`, `Bistro`, `Meaty Tender
+Sticks`, written from memory before any Sheba product existed here. What the
+current US packs print:
+
+| was | is |
+|---|---|
+| `Filets` | **`Selections Filets in Broth`** — and it is a meal complement, not a dinner |
+| — | **`Gravy Indulgence`** — current, and missing entirely |
+| — | **`Kitten`** — current, and missing entirely |
+| `Bistro` | kept, unseeded: the current all-products page still offers it as a filter |
+| `Perfect Portions`, `Meaty Tender Sticks` | both real |
+
+Also live and untouched: Sheba Grilled, PREMIUM Purée, Selections Bisques.
+
+### Selections Filets in Broth is a meal complement
+
+Sheba's own product pages call it "Cat Meal Complement" and state *"intended for
+intermittent or supplemental feeding only. This product may be fed daily along
+with a complete and balanced cat food diet."* Verified independently of the
+research, against sheba.com and two retailers.
+
+Two changes, because there are two routes to the fact. `meal complement` joins
+the printed-phrase list, since Mars puts it on the FRONT where the AAFCO
+sentence is in the small print and a photographed front may show only this one.
+And the range name joins `KNOWN_COMPLEMENTARY_LINES`, because the seed carries
+no claims string at all.
+
+The phrase is the bigram, not the word: a complete food describing itself as
+"the perfect complement to your cat's meal" says those words in the other order
+and is not matched. That is the Cesar "Loaf & Topper" trap, which this module
+has already sprung on itself once, and there is a test holding it.
+
+### Meaty Tender Sticks, exactly as the brief predicted
+
+The Sheba assignment named this range in advance as the one thing that would go
+wrong: a treat range containing none of the words the role detector looks for —
+no treat, snack, chew, biscuit or jerky. Confirmed on arrival, and added.
+
+### And that same bag was filed as a multipack
+
+`023100142951` — 5.68 oz, 40 sticks, "Variety Pack" — came through as a
+`multipack`, which would have been a dead end. A multipack row makes the app
+answer "this is a case, scan an individual item", and there is no individual
+item: forty loose dried sticks in one bag is a single product with one barcode,
+and the variety is in the flavours rather than in separable retail packs.
+
+Seeded into `known-products.ts` as identity only — a barcode to go and find —
+so a shopper scanning it is at least told what they are holding.
+
+### The prefix belongs to Mars, not to Sheba
+
+`023100` is registered as **Mars Petcare US**, the second entry in
+`data/gs1-prefixes.ts` named for a company rather than a brand. Worth noting
+that Royal Canin sits under `030111` instead: a maker this size runs its
+prefixes by business unit, not by parent, so neither prefix can be inferred
+from the other.
+
+## Batch 030 — Fancy Feast (and three Friskies)
+
+Eighty-three records from a four-batch campaign: thirty-nine new products under
+forty-one barcodes, one bag joining a product already here, and **forty-two
+variety packs**.
+
+### The boxes were the hole
+
+This catalog held **zero** Fancy Feast variety packs — for the most-scanned cat
+brand in an American supermarket, whose boxes sit on the shelf beside the tins
+in every shop. Every one of those forty-two codes was a scan that returned
+nothing. `contains` is empty on all of them: outer identity is proven, the
+inner tins' own barcodes are not, and a member invented to fill the field would
+send a shopper to a product that does not exist.
+
+### Three cases that are not variety packs
+
+`050000869961`, `050000551217` and `050000504862` each hold **one** flavour in
+bulk — twelve or twenty-four identical tins. They went to
+`data/wrong-barcodes.ts` rather than to the boxes, because the distinction is
+what the shopper needs: a variety pack is a real thing with several products
+inside and deserves a box row, while a case of twelve identical tins is the
+same product and the honest answer is "scan the tin". Each is bound to an
+exact count-specific retailer page rather than to a name.
+
+### The shop-floor misses from August are answered
+
+Three of the six codes from the operator's own "INGREDIENT SCANNER — MISSING
+PET FOOD PRODUCTS" list are now seeded and settled, including the one this desk
+flagged as doubtful at the time:
+
+- **`050000153558`** — the individual 3 oz **Gravy Lovers Chicken Feast Paté in
+  Gravy** can. It was held back in that session precisely because the evidence
+  pointed at a Classic Seafood variety pack; the campaign's exact-page evidence
+  settles it as the single can.
+- `050000180721` — the individual 3 oz Gravy Lovers Salmon Feast can.
+- `050000429349` — the individual 3 oz Classic Seafood Feast can, with a
+  package-quantity-of-one page settling can against case.
+
+### A range that is also a texture
+
+`Minced` joins the Fancy Feast entry. It is the name on the tin, beside Sliced
+and Flaked — and `minced` is separately a `texture` value in
+`lib/presentation.ts`. They are not the same thing: a Medleys tin can be minced
+without being a Minced.
+
+### Five records seeded without a composition
+
+Two Purely broths, two Roasted tins and one Savory Cravings box were left at
+`needs_physical_label` by the research — calorie evidence conflicting across
+generations, or a formula generation the sources disagree about. They are
+seeded as identity anyway, which is what `data/known-products.ts` is for: a
+barcode with a name is worth more to a shopper than nothing, and the entry is a
+note to go and find the rest.
+
+Two more were excluded outright rather than staged: `050000001323` (Appetizers
+White Meat Chicken, conflicting calorie generations) and `050000004683` (Purely
+White Meat Chicken and Flaked Tuna, where copying the current Appetizers
+formula onto a discontinued Purely code was the available wrong answer).
+
+### A checker complaint that had already been fixed
+
+The campaign reported that the ledger checker adds guaranteed minima to maxima
+as though they were a mass balance, and that a legitimate Broths panel can
+therefore exceed 100% and be blocked. That was true and it is the same defect
+twenty Weruva panels exposed in batch 027 — guarantees are BOUNDS, and a can
+guaranteeing 12/6/83/1.5/1 sums to 103.5% while holding a food that is
+13/7/79. The rule became `protein_min + fat_min > 100` as the only error.
+Individual Broths pouches were held for a reason that no longer exists, and are
+ordinary work for the next pass.
+
+### Fourth size of a bag already here
+
+`050000463671` — Gourmet Dry With Ocean Fish & Salmon, 16 oz — is the smallest
+bag of a product seeded with 3, 7 and 12 lb. Its deck matches its three
+siblings to the letter, so it joined their `packages` list rather than becoming
+a second product.

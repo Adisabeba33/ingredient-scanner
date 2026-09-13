@@ -111,6 +111,30 @@ export const WRONG_BARCODES: WrongBarcode[] = [
     insteadUse: "050000292592",
     confirmed: false,
   },
+  // Batch 030. Three current outer cases that hold ONE flavour each, which is
+  // what makes them belong here rather than in data/known-multipacks.ts: a
+  // variety pack is a real thing with several products inside and gets a box
+  // row, while a case of twelve identical tins is the same product in bulk and
+  // the honest answer is "scan the tin". Every one is bound to an exact
+  // count-specific retailer page rather than to a name.
+  {
+    code: "050000869961",
+    is: "a 12 × 3 oz case of Grilled Chicken Feast in Gravy",
+    insteadUse: "050000040803",
+    confirmed: true,
+  },
+  {
+    code: "050000551217",
+    is: "a 12 × 3 oz case of Classic Pâté Chicken Feast",
+    insteadUse: "050000429943",
+    confirmed: true,
+  },
+  {
+    code: "050000504862",
+    is: "a 24 × 3 oz case of Classic Pâté Chicken Feast",
+    insteadUse: "050000429943",
+    confirmed: true,
+  },
 ];
 
 /**

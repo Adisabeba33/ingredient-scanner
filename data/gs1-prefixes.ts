@@ -109,4 +109,11 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // it is a different brand from the same company. The Reveal research
   // established this explicitly and said not to file the prefix under Reveal.
   { prefix: "886817", maker: "MPM Products (Reveal, Applaws, Encore)" },
+  // Mars Petcare US, and the second entry here named for a company rather than
+  // a brand. Sheba's codes are all under it, and so are other Mars products —
+  // note that Royal Canin sits under 030111 instead, so a maker this size runs
+  // its prefixes by business unit rather than by parent. Registered as Mars
+  // rather than as Sheba for the same reason as MPM above: a code under it that
+  // turns out to be a sibling brand is not a wrong barcode.
+  { prefix: "023100", maker: "Mars Petcare US (Sheba and siblings)" },
 ];

@@ -4,7 +4,7 @@
   "repository": "Adisabeba33/ingredient-scanner",
   "branch": "agent/deep-research-barcode-ledger",
   "created_at": "2026-08-13",
-  "updated_at": "2026-08-14",
+  "updated_at": "2026-09-04",
   "baseline": {
     "known_product_upcs": 140,
     "canonical_sources": [
@@ -7277,6 +7277,3846 @@
         "Calorie arithmetic is consistent within nominal package-weight and label-rounding tolerance: 825 kcal/kg × 0.1559 kg = 128.6 kcal; the deck prints 128 kcal/can.",
         "Deck I611223 states adult maintenance.",
         "The repository texture value is filets, matching the existing Prime Filets range vocabulary."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000153558",
+      "canonical_gtin14": "00050000153558",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Chicken Feast Paté in Gravy Gourmet Cat Food",
+      "variant": "Chicken Feast Paté in Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken broth, chicken, meat by-products, liver, fish, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, carrageenan, tricalcium phosphate, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Chicken broth",
+        "chicken",
+        "meat by-products",
+        "liver",
+        "fish",
+        "artificial and natural flavors",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "guar gum",
+        "carrageenan",
+        "tricalcium phosphate",
+        "taurine",
+        "choline chloride",
+        "salt",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 976,
+        "kcal_per_unit": 83,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A512323",
+      "formula_source": "Purina official product label deck A512323",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/5123-a512323-fancy-feast-gravy-lovers-chicken-feast-pate-in-gravy-gourmet-cat-food-lj4.pdf",
+        "https://www.shoprite.com/product/purina-fancy-feast-gravy-lovers-chicken-feast-in-gravy-pate-gourmet-cat-food-3-oz-id-00050000153558"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "The current retail source identifies one 3 oz can and prints UPC/GTIN 00050000153558, establishing 050000153558 as the individual-unit UPC-A.",
+      "conflicts": [
+        "The assignment brief carried a prior suspicion that 050000153558 might be a Classic Seafood variety-pack/case code. Current single-unit retail GTIN evidence plus Purina's current Chicken Feast Paté page/deck resolve it as the individual 3 oz Chicken Feast Paté in Gravy can."
+      ],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000015355 requires check digit 8.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000153558.",
+        "Calorie arithmetic cross-check: 976 kcal/kg × 0.0850 kg = 83.0 kcal; label prints 83 kcal/can.",
+        "Official label deck supplies the complete ingredient order, guaranteed analysis, calories, manufacturer, and nutritional-adequacy statement.",
+        "Deck A512323 states the recipe is formulated for growth of kittens and maintenance of adult cats; life_stage=all."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000180721",
+      "canonical_gtin14": "00050000180721",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Salmon Feast Paté in Gravy Gourmet Cat Food",
+      "variant": "Salmon Feast Paté in Gravy",
+      "recipe": [
+        "salmon",
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Fish broth, salmon, chicken, meat by-products, liver, glycine, natural and artificial flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, tricalcium phosphate, carrageenan, choline chloride, taurine, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [
+        "Fish broth",
+        "salmon",
+        "chicken",
+        "meat by-products",
+        "liver",
+        "glycine",
+        "natural and artificial flavors",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "guar gum",
+        "tricalcium phosphate",
+        "carrageenan",
+        "choline chloride",
+        "taurine",
+        "salt",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 965,
+        "kcal_per_unit": 82,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A649923",
+      "formula_source": "Purina official product label deck A649923",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/6499-a649923-fancy-feast-gravy-lovers-salmon-feast-pate-in-gravy-gourmet-cat-food-lj6.pdf",
+        "https://shop.winndixie.com/shop/product/fancy-feast-gravy-lovers-salmon-pate-3-ounce/3600282"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "The current retail source identifies one 3 oz can and prints UPC/GTIN 00050000180721, establishing 050000180721 as the individual-unit UPC-A.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000018072 requires check digit 1.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000180721.",
+        "Calorie arithmetic cross-check: 965 kcal/kg × 0.0850 kg = 82.0 kcal; label prints 82 kcal/can.",
+        "Official label deck supplies the complete ingredient order, guaranteed analysis, calories, manufacturer, and nutritional-adequacy statement.",
+        "Winn-Dixie identifies Fancy Feast Gravy Lovers Salmon Paté as one 3 oz item and prints product code 00050000180721.",
+        "Deck A649923 states the recipe is formulated for growth of kittens and maintenance of adult cats; life_stage=all."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000429349",
+      "canonical_gtin14": "00050000429349",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Seafood Feast Gourmet Cat Food",
+      "variant": "Seafood Feast",
+      "recipe": [
+        "ocean fish"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Ocean fish, meat by-products, liver, fish broth, artificial and natural flavors, tricalcium phosphate, guar gum, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.",
+      "ingredients_ordered_normalized": [
+        "Ocean fish",
+        "meat by-products",
+        "liver",
+        "fish broth",
+        "artificial and natural flavors",
+        "tricalcium phosphate",
+        "guar gum",
+        "MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide]",
+        "VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement]",
+        "salt"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1036,
+        "kcal_per_unit": 88,
+        "unit_name": "can"
+      },
+      "label_deck_code": "D667422",
+      "formula_source": "Purina official product label deck D667422",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-05/6674-d667422-fancy-feast-classic-seafood-feast-gourmet-cat-food-wet.pdf",
+        "https://www.target.com/p/purina-fancy-feast-classic-pat-233-gourmet-with-fish-wet-cat-food-seafood-feast-3oz/-/A-14777635"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "The current retail source identifies one 3 oz can and prints UPC/GTIN 00050000429349, establishing 050000429349 as the individual-unit UPC-A.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042934 requires check digit 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000429349.",
+        "Calorie arithmetic cross-check: 1036 kcal/kg × 0.0850 kg = 88.1 kcal; label prints 88 kcal/can.",
+        "Official label deck supplies the complete ingredient order, guaranteed analysis, calories, manufacturer, and nutritional-adequacy statement.",
+        "Target explicitly identifies package quantity 1, 3 oz, and UPC 050000429349; this settles individual can versus case/multipack scope.",
+        "Deck D667422 states the recipe meets AAFCO nutrient profiles for all life stages; life_stage=all."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580064",
+      "canonical_gtin14": "00050000580064",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Poultry & Beef Collection Variety Pack",
+      "variant": "Chicken, Turkey & Beef Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14766221"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Gravy Lovers Chicken, Turkey & Beef variety pack, 3 oz cans, and explicitly prints UPC 050000580064.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058006 requires check digit 4.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580064.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000818174",
+      "canonical_gtin14": "00050000818174",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "Fancy Feast Grilled Poultry & Beef Collection Variety Pack",
+      "variant": "Poultry & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14778914"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Grilled Chicken, Turkey & Beef variety pack, 3 oz cans, and explicitly prints UPC 050000818174.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000081817 requires check digit 4.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000818174.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000575466",
+      "canonical_gtin14": "00050000575466",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "Fancy Feast Grilled Seafood Collection Variety Pack",
+      "variant": "Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14775802"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Grilled seafood variety pack, 3 oz cans, and explicitly prints UPC 050000575466.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057546 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000575466.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000544417",
+      "canonical_gtin14": "00050000544417",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Sliced",
+      "product_name": "Fancy Feast Sliced Poultry Favorites Variety Pack",
+      "variant": "Poultry Favorites Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14778968"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Poultry Favorites variety pack, 3 oz cans, and explicitly prints UPC 050000544417.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000054441 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000544417.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000504879",
+      "canonical_gtin14": "00050000504879",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Chicken & Beef Collection Variety Pack",
+      "variant": "Chicken & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-78176240"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Classic Paté Chicken & Beef variety pack, 3 oz cans, and explicitly prints UPC 050000504879.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000050487 requires check digit 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000504879.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000428243",
+      "canonical_gtin14": "00050000428243",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Seafood Collection Variety Pack",
+      "variant": "Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14778967"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Classic Paté seafood variety pack, 3 oz cans, and explicitly prints UPC 050000428243.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000042824 requires check digit 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000428243.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000292202",
+      "canonical_gtin14": "00050000292202",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Delights With Cheddar",
+      "product_name": "Fancy Feast Delights With Cheddar Variety Pack",
+      "variant": "Chicken, Turkey & Whitefish With Cheddar Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-15145139"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Delights With Cheddar variety pack, 3 oz cans, and explicitly prints UPC 050000292202.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000029220 requires check digit 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000292202.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000500895",
+      "canonical_gtin14": "00050000500895",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "Fancy Feast Kitten Tender Feast Variety Pack",
+      "variant": "Ocean Whitefish, Turkey, Chicken & Salmon Variety Pack",
+      "recipe": [],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-tender-seafood-turkey-chicken-and-salmon-flavor-variety-pack-wet-cat-food-4-5lbs-24pk/-/A-91626016"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-pack Fancy Feast kitten tender seafood/turkey/chicken/salmon variety pack totaling 4.5 lb; 72 oz across 24 units equals 3 oz each, and Target explicitly prints UPC 050000500895.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000050089 requires check digit 5.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000500895.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000172986",
+      "canonical_gtin14": "00050000172986",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Centers",
+      "product_name": "Fancy Feast Savory Centers Paté Collection Variety Pack",
+      "variant": "Chicken, Beef, Tuna & Salmon Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-77339491"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 12-count Fancy Feast Savory Centers Paté Collection variety pack, 3 oz cans, and explicitly prints UPC 050000172986.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000017298 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000172986.",
+        "Outer sale-unit identity, 12-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000585663",
+      "canonical_gtin14": "00050000585663",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "Fancy Feast Grilled Poultry & Beef Collection Variety Pack",
+      "variant": "Poultry & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "30 x 3 oz",
+      "pack_count": 30,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.petsuppliesplus.com/categories/cat/food/wet-food/purina-fancy-feast-gravy-wet-cat-food-variety-pack-poultry-beef-grilled-collection-30-cans/17175?sku=050000585663"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Pet Supplies Plus identifies the Grilled Poultry & Beef Collection as 30 cans of 3 oz and binds the product SKU to 050000585663.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058566 requires check digit 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000585663.",
+        "Outer sale-unit identity, 30-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000292226",
+      "canonical_gtin14": "00050000292226",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Poultry & Beef Collection Variety Pack",
+      "variant": "Chicken, Turkey & Beef Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "30 x 3 oz",
+      "pack_count": 30,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-17078646"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 30-count Fancy Feast Classic Paté Chicken, Turkey & Beef variety pack, 3 oz cans, and explicitly prints UPC 050000292226.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000029222 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000292226.",
+        "Outer sale-unit identity, 30-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580682",
+      "canonical_gtin14": "00050000580682",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Medleys",
+      "product_name": "Fancy Feast Medleys White Meat Chicken Collection Variety Pack",
+      "variant": "White Meat Chicken Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14766266"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 12-count Fancy Feast Medleys White Meat Chicken collection, 3 oz cans, and explicitly prints UPC 050000580682.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058068 requires check digit 2.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580682.",
+        "Outer sale-unit identity, 12-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000574889",
+      "canonical_gtin14": "00050000574889",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Medleys",
+      "product_name": "Fancy Feast Medleys Primavera Collection Variety Pack",
+      "variant": "Primavera Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-medleys-with-tuna-chicken-and-turkey-gourmet-wet-cat-food-in-a-classic-sauce-primavera-collection-3oz-12ct-variety-pack/-/A-14775822"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 12-count Fancy Feast Medleys Primavera Collection variety pack, 3 oz cans, and explicitly prints UPC 050000574889.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057488 requires check digit 9.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000574889.",
+        "Outer sale-unit identity, 12-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000572816",
+      "canonical_gtin14": "00050000572816",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Medleys",
+      "product_name": "Fancy Feast Medleys Florentine Collection Variety Pack",
+      "variant": "Florentine Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14778330"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 12-count Fancy Feast Medleys Florentine Collection variety pack, 3 oz cans, and explicitly prints UPC 050000572816.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057281 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000572816.",
+        "Outer sale-unit identity, 12-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000586646",
+      "canonical_gtin14": "00050000586646",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "Fancy Feast Grilled Seafood Collection Variety Pack",
+      "variant": "Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "30 x 3 oz",
+      "pack_count": 30,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-variety-pack-seafood-fish-tuna-38-salmon-wet-cat-food-cans-3oz-30ct/-/A-78176239"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 30-count Fancy Feast Grilled Seafood Collection variety pack, 3 oz cans, and explicitly prints UPC 050000586646.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058664 requires check digit 6.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000586646.",
+        "Outer sale-unit identity, 30-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000585687",
+      "canonical_gtin14": "00050000585687",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Seafood Collection Variety Pack",
+      "variant": "Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "30 x 3 oz",
+      "pack_count": 30,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-seafood-classic-pat-233-variety-pack-with-tuna-160-salmon-fish-38-shrimp-flavor-wet-cat-food-cans-3oz-30ct/-/A-78176241"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 30-count Fancy Feast Classic Paté Seafood Collection variety pack, 3 oz cans, and explicitly prints UPC 050000585687.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000058568 requires check digit 7.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000585687.",
+        "Outer sale-unit identity, 30-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000575473",
+      "canonical_gtin14": "00050000575473",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Poultry & Beef Collection Variety Pack",
+      "variant": "Poultry & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-14775804"
+      ],
+      "source_accessed_at": "2026-08-31",
+      "barcode_notes": "Target identifies a 24-count Fancy Feast Classic Paté Chicken, Turkey & Beef variety pack, 3 oz cans, and explicitly prints UPC 050000575473.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified: 05000057547 requires check digit 3.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000575473.",
+        "Outer sale-unit identity, 24-count pack size, 3 oz member size, and UPC are supported by the cited retail listing.",
+        "contains is intentionally empty because no printed inner-can barcodes were proven; member flavor names are not substituted for barcodes."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001286",
+      "canonical_gtin14": "00050000001286",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Oceanfish With a Shrimp Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Oceanfish With a Shrimp Topper in a Delicate Broth",
+      "recipe": [
+        "ocean fish",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, ocean fish, shrimp, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 537,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639721",
+      "formula_source": "Purina official product label deck B639721",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6397-b639721-fancy-feast-appetizers-ocean-fish-w-a-shrimp-topper-in-a-delicate-broth-cat-complement-gy2.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-oceanfish-shrimp-broth-cat-food-complements-toppers",
+        "https://shop.foodland.com/product/fancy-feast-wet-cat-food-appetizers-oceanfish-050000001286"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Foodland binds UPC 050000001286 to the single 1.1 oz Oceanfish With Shrimp Appetizers tray.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 537 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 537 kcal/kg × 1.1 oz is approximately 16.7 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001293",
+      "canonical_gtin14": "00050000001293",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Skipjack Tuna With a Sole Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Skipjack Tuna With a Sole Topper in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna",
+        "sole"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, skipjack tuna, sole, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 533,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639821",
+      "formula_source": "Purina official product label deck B639821",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6398-b639821-fancy-feast-appetizers-skipjack-tuna-w-a-sole-topper-in-a-delicate-broth-cat-complement-gy3.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-skipjack-tuna-broth-cat-food-complements-toppers",
+        "https://norfie.com/products/fancy-feast-appetizers-skipjack-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retail listing prints UPC 050000001293 for the 1.1 oz Skipjack Tuna With Sole Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 533 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 533 kcal/kg × 1.1 oz is approximately 16.6 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001309",
+      "canonical_gtin14": "00050000001309",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Light Meat Tuna With a Scallop Topper in a Delicate Broth Cat Food Complement",
+      "variant": "Light Meat Tuna With a Scallop Topper in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna",
+        "scallop"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, skipjack tuna, scallop, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 558,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639521",
+      "formula_source": "Purina official product label deck B639521",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6395-b639521-fancy-feast-appetizers-light-meat-tuna-w-a-scallop-topper-in-a-delicate-broth-cat-complement-gy4.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-tuna-scallop-broth-wet-cat-food",
+        "https://www.target.com/p/fancy-feast-light-meat-tuna-flavor-appetizers-wet-cat-food-1-1oz/-/A-94649671"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target identifies one 1.1 oz Light Meat Tuna With Scallop Appetizers tray and prints UPC 050000001309.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 558 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 558 kcal/kg × 1.1 oz is approximately 17.4 kcal, consistent with the rounded 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000001316",
+      "canonical_gtin14": "00050000001316",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Wild Alaskan Salmon in a Delicate Broth Cat Food Complement",
+      "variant": "Wild Alaskan Salmon in a Delicate Broth",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Fish broth, salmon, guar gum, xanthan gum, celery powder, thiamine mononitrate.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 0.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 86,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 557,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639621",
+      "formula_source": "Purina official product label deck B639621",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6396-b639621-fancy-feast-appetizers-wild-alaskan-salmon-in-a-delicate-broth-cat-complement-gy1.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-appetizers-toppers-salmon-broth-cat-food-complements-toppers",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/18858640-purely-fancy-feast-wet-cat-food-complement-appetizers-steamed-wild-alaskan-salmon-in-delicate-broth-1-1-oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's binds the full sellable-unit GTIN to the single 1.1 oz Wild Alaskan Salmon tray.",
+      "conflicts": [
+        "Purina's current selector abbreviates the package as 1 oz, while the exact-GTIN retailer prints 1.1 oz. The official 17 kcal/tray at 557 kcal/kg implies about 30.5 g (1.08 oz), supporting the printed 1.1 oz retail size."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 557 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic supports the 1.1 oz package binding.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002689",
+      "canonical_gtin14": "00050000002689",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers Flaked Tongol Tuna in a Savory Broth Cat Food Complement",
+      "variant": "Flaked Tongol Tuna in a Savory Broth",
+      "recipe": [
+        "tongol tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Tuna broth, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 548,
+        "kcal_per_unit": 17,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639121",
+      "formula_source": "Purina official product label deck B639121",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6391-b639121-fancy-feast-appetizers-flaked-tongol-tuna-in-a-savory-broth-cat-complement-r40.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-flaked-tongol-tuna-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-flaked-tongol-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002689 for the 1.1 oz Tongol Tuna Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 548 kcal/kg / 17 kcal per tray.",
+        "Calorie arithmetic cross-check: 548 kcal/kg × 1.1 oz is approximately 17.1 kcal, consistent with 17 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002696",
+      "canonical_gtin14": "00050000002696",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers White Meat Chicken and Flaked Tuna in a Savory Broth Cat Food Complement",
+      "variant": "White Meat Chicken and Flaked Tuna in a Savory Broth",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Chicken and tuna broth, chicken, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 85,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 525,
+        "kcal_per_unit": 16,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639221",
+      "formula_source": "Purina official product label deck B639221",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6392-b639221-fancy-feast-appetizers-white-meat-chicken-flaked-tuna-in-a-savory-broth-cat-complement-r41-1.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-white-meat-chicken-tuna-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-tuna-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002696 for the 1.1 oz Chicken and Tuna Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 525 kcal/kg / 16 kcal per tray.",
+        "Calorie arithmetic cross-check: 525 kcal/kg × 1.1 oz is approximately 16.4 kcal, consistent with 16 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002702",
+      "canonical_gtin14": "00050000002702",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Appetizers",
+      "product_name": "Fancy Feast Appetizers White Meat Chicken and Shredded Beef in a Savory Broth Cat Food Complement",
+      "variant": "White Meat Chicken and Shredded Beef in a Savory Broth",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.1 oz",
+      "ingredients_verbatim": "Chicken broth, chicken, beef, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 0.05,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 86,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 588,
+        "kcal_per_unit": 18,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "B639321",
+      "formula_source": "Purina official product label deck B639321",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-10/6393-b639321-fancy-feast-appetizers-white-meat-chicken-shredded-beef-in-a-savory-broth-cat-complement-r42.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-flaked-chicken-shredded-beef-appetizer-wet-cat-food",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-beef-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The cited single-tray retailer prints UPC 050000002702 for the 1.1 oz Chicken and Beef Appetizers product.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck supplies the complete ingredient order, guaranteed analysis, and 588 kcal/kg / 18 kcal per tray.",
+        "Calorie arithmetic cross-check: 588 kcal/kg × 1.1 oz is approximately 18.3 kcal, consistent with 18 kcal/tray.",
+        "This is labeled a cat food complement; it is not represented as complete-and-balanced food."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004522",
+      "canonical_gtin14": "00050000004522",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Tender Tongol Tuna Entrée in a Delicate Broth",
+      "variant": "Natural Tender Tongol Tuna Entrée in a Delicate Broth",
+      "recipe": [
+        "tongol tuna",
+        "skipjack tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Tongol tuna, fish broth, skipjack tuna, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, manganese sulfate, copper sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 843,
+        "kcal_per_unit": 48,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "F640418",
+      "formula_source": "Purina official product label deck F640418, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/F640418_Purely_Fancy_Feast_Natural_Tender_Tongol_Tuna_Entree_in_a_Delicate_Broth.pdf",
+        "https://www.amazon.eg/-/en/PURINA-Fancy-Feast-Appetizers-Tongol/dp/B006J187QS"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz Tender Tongol Tuna tray by the cited sellable-unit listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck F640418 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 843 kcal/kg × 2 oz is approximately 47.8 kcal, consistent with 48 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004584",
+      "canonical_gtin14": "00050000004584",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Flaked Skipjack Tuna Entrée in a Delicate Broth",
+      "variant": "Natural Flaked Skipjack Tuna Entrée in a Delicate Broth",
+      "recipe": [
+        "skipjack tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "flaked",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Skipjack tuna, fish broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, copper sulfate, manganese sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 873,
+        "kcal_per_unit": 49,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "E-6400",
+      "formula_source": "Purina official product label deck E-6400, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6400-E_FF_C_W_PrlyFF_NtlFlkdSkpjckTnEntr_DlctBrth.pdf",
+        "https://www.upcitemdb.com/upc/50000004584"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz Flaked Skipjack Tuna tray by the cited barcode listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck E-6400 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 873 kcal/kg × 2 oz is approximately 49.5 kcal, consistent with the printed 49 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004591",
+      "canonical_gtin14": "00050000004591",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken Entrée in a Delicate Broth",
+      "variant": "Natural White Meat Chicken Entrée in a Delicate Broth",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Chicken, chicken broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, choline chloride, salt, taurine, MINERALS [zinc sulfate, magnesium sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide, sodium selenite], potassium chloride, xanthan gum, VITAMINS [niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 849,
+        "kcal_per_unit": 48,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "F640518",
+      "formula_source": "Purina official product label deck F640518, retained as the last known label for the discontinued Purely line",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/F640518_Purely_Fancy_Feast_Natural_White_Meat_Chicken_in_a_Delicate_Broth.pdf",
+        "https://www.upcitemdb.com/upc/50000004591"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact UPC is bound to the 2 oz White Meat Chicken tray by the cited barcode listing.",
+      "conflicts": [
+        "The Purely line is discontinued; no evidence of a later formula generation for this exact UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official Purina deck F640518 supplies the full label formula, panel, calories, and adult-maintenance adequacy statement.",
+        "Calorie arithmetic cross-check: 849 kcal/kg × 2 oz is approximately 48.1 kcal, consistent with 48 kcal/tray."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004560",
+      "canonical_gtin14": "00050000004560",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Seabass and Shrimp Entrée in a Delicate Broth",
+      "variant": "Natural Seabass and Shrimp Entrée in a Delicate Broth",
+      "recipe": [
+        "seabass",
+        "tuna",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "Fish broth, seabass, tuna, shrimp, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, copper sulfate, manganese sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15.5,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 859,
+        "kcal_per_unit": 49,
+        "unit_name": "tray"
+      },
+      "label_deck_code": "E-6401",
+      "formula_source": "Historical full-label transcript attributed to Purely deck E-6401; an official Purina deck was not retrievable",
+      "source_urls": [
+        "https://healthycatguide.com/cat_food/fancy-feast-purely-natural-seabass-shrimp-wet-food-review/",
+        "https://www.upcitemdb.com/upc/50000004560",
+        "https://www.kroger.com/p/fancy-feast-purely-natural-sea-bass-shrimp-adult-wet-cat-food/0005000058012"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The barcode index binds UPC 050000004560 to the 2 oz Seabass and Shrimp tray; the Kroger source independently supports the corresponding Purely product family.",
+      "conflicts": [
+        "The Purely line is discontinued and the full formula/panel transcript could not be checked against a retrievable official Purina label deck."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Secondary sources support identity, size, formula transcript, panel, and calories.",
+        "A clear physical back-label image is still required to verify the historical ingredient order and deck attribution before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000004577",
+      "canonical_gtin14": "00050000004577",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken and Shredded Beef Entrée in a Delicate Broth",
+      "variant": "Natural White Meat Chicken and Shredded Beef Entrée in a Delicate Broth",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "shredded",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "2 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 14.5,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 0.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 885,
+        "kcal_per_unit": 50,
+        "unit_name": "tray"
+      },
+      "label_deck_code": null,
+      "formula_source": "Historical retailer panel only; complete ingredient order and official label deck not verified",
+      "source_urls": [
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/13909-purely-fancy-feast-natural-broth-wet-cat-food-purely-natural-white-meat-chicken-shredded-beef-entr-e-2-oz",
+        "https://www.heb.com/product-detail/purina-fancy-feast-appetizers-white-meat-chicken-and-shredded-beef-cat-food/1297043",
+        "https://norfie.com/products/fancy-feast-appetizers-chicken-beef-wet-cat-food-1-1oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's binds the exact sellable-unit GTIN to a 2 oz Purely Chicken and Beef tray; the current Appetizers replacement is a distinct 1.1 oz SKU with UPC 050000002702.",
+      "conflicts": [
+        "Historical retailer data mixes the Purely identity with an Appetizers page title, while the current Appetizers replacement has a different size and UPC.",
+        "No authoritative full ingredient list or retrievable official deck for this exact discontinued Purely UPC was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The exact UPC and 2 oz Purely identity are supported, but formula generation and ingredient order remain unresolved.",
+        "A physical back-label image is required before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580125",
+      "canonical_gtin14": "00050000580125",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Seabass and Shrimp Entrée Multipack",
+      "variant": "Natural Seabass and Shrimp Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.kroger.com/p/fancy-feast-purely-natural-sea-bass-shrimp-adult-wet-cat-food/0005000058012",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Kroger exposes the 13-digit catalog stem 0005000058012 for the 10 x 2 oz outer pack; the full UPC-A 050000580125 is the same stem plus its verified check digit 5, corroborated by the barcode catalog. This reconstruction applies only to the outer sellable unit.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580125.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580125.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580132",
+      "canonical_gtin14": "00050000580132",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Flaked Skipjack Tuna Entrée Multipack",
+      "variant": "Natural Flaked Skipjack Tuna Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://petkraze.com/catalog/product/69210/fancy-feast-appetizers-skipjack-tuna-treat-10-2-oz-pack",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Retail/catalog evidence binds UPC 050000580132 to the 10 x 2 oz outer Skipjack Tuna pack. The code is the outer sale-unit barcode, not an inferred inner-tray barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580132.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580132.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580156",
+      "canonical_gtin14": "00050000580156",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural Tender Tongol Tuna Entrée Multipack",
+      "variant": "Natural Tender Tongol Tuna Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.smithsfoodanddrug.com/p/fancy-feast-purely-natural-tender-tongol-tuna-wet-cat-food/0005000058015",
+        "https://brunei.desertcart.com/products/19582180-purina-fancy-feast-natural-tender-tongol-tuna-entree-in-a-delicate-broth-cat-food-10-2-oz-tray"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Smith's exposes the 13-digit catalog stem 0005000058015 for the 10 x 2 oz outer pack; the full UPC-A 050000580156 is that stem plus its verified check digit 6. The independent retail listing supports the 10-tray configuration.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580156.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580156.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580163",
+      "canonical_gtin14": "00050000580163",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken Entrée Multipack",
+      "variant": "Natural White Meat Chicken Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.kroger.com/p/fancy-feast-purely-natural-white-meat-chicken-wet-cat-food/0005000058016"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Kroger exposes the 13-digit catalog stem 0005000058016 for the 10 x 2 oz outer pack; the full UPC-A 050000580163 is that stem plus its verified check digit 3. This reconstruction applies only to the outer sellable unit.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580163.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580163.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000580170",
+      "canonical_gtin14": "00050000580170",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Purely",
+      "product_name": "Purely Fancy Feast Natural White Meat Chicken and Shredded Beef Entrée Multipack",
+      "variant": "Natural White Meat Chicken and Shredded Beef Entrée Multipack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10 x 2 oz",
+      "pack_count": 10,
+      "unit_size": "2 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.amazon.com/-/es/Alimentos-naturales-Fancy-Feast-unidades/dp/B013WFRZJI",
+        "https://www.doordash.com/products/purina-fancy-feast-purely-natural-white-meat-chicken-shredded-beef-entre-2-oz-x-10-ct/urpc_af2e1254-a9e3-4154-a4a6-cba518fb1830"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Retail evidence binds UPC 050000580170 to the 10 x 2 oz outer Chicken and Beef pack. The code is the outer sale-unit barcode, not an inferred inner-tray barcode.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit verified for 050000580170.",
+        "Canonical GTIN-14 is the UPC-A left-padded with two zeros: 00050000580170.",
+        "Outer sale-unit identity, 10-count pack size, 2 oz member size, and UPC are supported by the cited retail/catalog evidence.",
+        "contains is intentionally empty because no printed inner-tray barcodes were proven; the outer UPC is not reused as a member code."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002627",
+      "canonical_gtin14": "00050000002627",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Salmon Flavor Cat Treats",
+      "variant": "Salmon Flavor",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver Flavor, Beef Fat Preserved With Mixed-Tocopherols, Partially Hydrogenated Vegetable Oil, Brewers Dried Yeast, Natural Salmon Flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6443,
+        "kcal_per_unit": 3.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642319",
+      "formula_source": "Current Purina product page and complete Chewy label transcription for Savory Cravings Salmon Flavor",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-salmon-cat-treats",
+        "https://www.chewy.com/fancy-feast-savory-cravings-salmon/dp/658470",
+        "https://www.target.com/p/fancy-feast-salmon-savory-with-liver-cravings-dry-cat-treats/-/A-81620977"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target binds UPC 050000002627 to the one-ounce Salmon Flavor Savory Cravings box.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Current brand and retailer sources jointly support the exact one-ounce sale unit, complete formula, guarantees, and 3.3 kcal per square.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002986",
+      "canonical_gtin14": "00050000002986",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Tuna Flavor Cat Treats",
+      "variant": "Tuna Flavor",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, tuna flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6439,
+        "kcal_per_unit": 3.6,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642421",
+      "formula_source": "Purina official product label deck A642421",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6424_-_A642421_Fancy_Feast_Savory_Cravings_Tuna_Flavor_Cat_Treats_G13.pdf",
+        "https://directionsforme.org/product/84981",
+        "https://www.harristeeter.com/p/purina-fancy-feast-savory-cravings-cat-treats-tuna-flavor/0005000000298"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The exact consumer UPC source and retailer catalog bind UPC 050000002986 to the one-ounce Tuna Flavor box.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A642421 supplies the complete formula, guarantees, calories, and adult-cat feeding statement.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002979",
+      "canonical_gtin14": "00050000002979",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Chicken Flavor Cat Treats",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, natural chicken flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6340,
+        "kcal_per_unit": 3.5,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642521",
+      "formula_source": "Purina official label deck A642521; current Purina product page disagrees on calories and flavor wording",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/6425_-_A642521_Fancy_Feast_Savory_Cravings_Chicken_Flavor_Cat_Treats_ET9.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-chicken-cat-treats",
+        "https://www.harristeeter.com/p/fancy-feast-savory-cravings-chicken-cat-treats/0005000000297"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The retailer catalog binds UPC 050000002979 to the one-ounce Chicken Flavor Savory Cravings box.",
+      "conflicts": [
+        "Official deck A642521 prints 6340 kcal/kg and 3.5 kcal/square, while the current Purina page reports 6439 kcal/kg and 3.6 kcal/piece.",
+        "The official PDF says 'natural chicken flavor'; the current page shortens this to 'chicken flavor'. A current physical package is needed to resolve the applicable generation."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The sale-unit identity and UPC are supported, but two official Purina sources disagree on current calories and ingredient wording.",
+        "A physical back-label image is required before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000123773",
+      "canonical_gtin14": "00050000123773",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Roasted",
+      "product_name": "Fancy Feast Roasted Chicken Feast Gourmet Wet Cat Food",
+      "variant": "Roasted Chicken Feast",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "chopped_ground",
+      "presentation": null,
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Poultry Broth, Chicken, Liver, Meat By-Products, Wheat Gluten, Soy Flour, Soy Protein Concentrate, Artificial and Natural Flavors, Tricalcium Phosphate, Added Color, Potassium Chloride, Guar Gum, Carrageenan, Locust Bean Gum, Xanthan Gum, Taurine, Salt, Choline Chloride, Mono and Dicalcium Phosphate, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Niacin, Calcium Pantothenate, Vitamin A Supplement, Copper Sulfate, Menadione Sodium Bisulfite Complex (Source of Vitamin K Activity), Manganese Sulfate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 2.7,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 935,
+        "kcal_per_unit": 79,
+        "unit_name": "can"
+      },
+      "label_deck_code": "C-6981",
+      "formula_source": "Historical retailer transcription attributed to deck C-6981; no retrievable official Purina deck or current physical label was found",
+      "source_urls": [
+        "https://shop.foodtown.com/store/big-deal-food-market/products/74079-purely-fancy-feast-wet-cat-food-roasted-chicken-feast-3-oz",
+        "https://www.bonetohome.com/products/pawsitively-purrfect/fancy-feast-roasted-chicken-feast-canned-cat-food-3-oz-case-of-24-1/"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Foodtown and Pawsitively Purrfect independently bind UPC 050000123773 to the individual 3 oz Roasted Chicken Feast can.",
+      "conflicts": [
+        "The 3 oz Roasted product is absent from the current Purina US catalog, and the only complete formula located is a retailer transcription rather than an official current label deck."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Exact product identity, individual-can scope, and 3 oz size are independently supported.",
+        "A clear physical back-label image is required to confirm that deck C-6981 is the final formula generation for this UPC before promotion."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000123780",
+      "canonical_gtin14": "00050000123780",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Roasted",
+      "product_name": "Fancy Feast Roasted Turkey Feast Gourmet Wet Cat Food",
+      "variant": "Roasted Turkey Feast",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "chopped_ground",
+      "presentation": null,
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 2.7,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Historical retailer panel and adequacy transcription; complete ingredients, calories, and an applicable official label deck were not retrievable",
+      "source_urls": [
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/127835-purely-fancy-feast-wet-cat-food-roasted-turkey-feast-3-oz",
+        "https://www.kroger.com/p/fancy-feast-roasted-turkey-feast-wet-cat-food/0005000012378",
+        "https://www.seasidemarketstx.com/shop/pantry/pet/cat/cat_food/fancy_feast_turkey_feast_roasted_gourmet_cat_food/p/2368415",
+        "https://www.target.com/p/purina-fancy-feast-entree-roasted-turkey-flavor-wet-cat-food-2-8oz/-/A-91626034"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's binds UPC 050000123780 to the individual 3 oz Roasted Turkey Feast can; Kroger independently identifies the matching 3 oz product from its catalog stem.",
+      "conflicts": [
+        "Current retail evidence shows a 2.8 oz Fancy Feast Roasted Turkey entrée, while UPC 050000123780 is bound to the older 3 oz can. The current 2.8 oz unit's barcode and formula were not established as the same generation.",
+        "No complete authoritative ingredient list or calorie statement was retrievable for the 3 oz UPC."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Exact identity and 3 oz individual-can scope are supported, and a retailer label transcription supplies the printed guaranteed analysis and all-life-stages adequacy statement.",
+        "A physical 3 oz back label is required to recover the ingredients and calories and to resolve the 3 oz versus current 2.8 oz generation."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000960422",
+      "canonical_gtin14": "00050000960422",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Broths",
+      "product_name": "Fancy Feast Broths Classic Seafood Collection Variety Pack",
+      "variant": "Classic Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.4 oz",
+      "pack_count": 12,
+      "unit_size": "1.4 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-classic-seafood-broths-variety-pack-12-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-broths-lickable-classic-collection-gourmet-wet-cat-food-complement-seafood-tuna-salmon-shrimp-fish-1-4oz-12ct-variety-pack/-/A-44363665"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000960422 for the 12 x 1.4 oz outer Classic Seafood Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The official brand page supports the pack identity and count; Target binds that exact outer sale unit to the UPC and member size.",
+        "contains is intentionally empty because no printed inner-pouch barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000960491",
+      "canonical_gtin14": "00050000960491",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Broths",
+      "product_name": "Fancy Feast Broths Creamy Collection Variety Pack",
+      "variant": "Creamy Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.4 oz",
+      "pack_count": 12,
+      "unit_size": "1.4 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-creamy-seafood-broths-variety-pack-12-wet-cat-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/1399119-purely-fancy-feast-wet-cat-food-complement-variety-pack-broths-creamy-collection-1-4-oz",
+        "https://www.amazon.com/-/zh_TW/Purina-Fancy-Feast-%E6%BF%95%E8%B2%93%E7%B3%A7%E8%A3%9C%E5%85%85%E5%A4%9A%E7%A8%AE%E5%8C%85%E8%A3%9D-%E8%82%89%E6%B9%AF%E5%A5%B6%E6%B2%B9%E7%B3%BB%E5%88%97/dp/B0169I8M0Q"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Woodman's and Amazon bind UPC 050000960491 to the 12 x 1.4 oz outer Creamy Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The official brand page supports the current pack identity and count; independent retail evidence supplies the exact outer UPC and member size.",
+        "contains is intentionally empty because no printed inner-pouch barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000543359",
+      "canonical_gtin14": "00050000543359",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Broths",
+      "product_name": "Fancy Feast Broths Seafood Bisque Collection Variety Pack",
+      "variant": "Seafood Bisque Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.4 oz",
+      "pack_count": 12,
+      "unit_size": "1.4 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-broths-seafood-bisque-38-shrimp-gourmet-lickable-grain-free-wet-cat-food-variety-pack-1-4oz-12ct/-/A-80847594"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000543359, package quantity 12, and 1.4 oz member size for the outer Seafood Bisque Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "A current retailer page jointly supports the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed inner-pouch barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000544295",
+      "canonical_gtin14": "00050000544295",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Petites",
+      "product_name": "Fancy Feast Petites Gravy Collection Variety Pack",
+      "variant": "Gravy Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 2.8 oz",
+      "pack_count": 12,
+      "unit_size": "2.8 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.petsuppliesplus.com/categories/cat/food/wet-food/purina-fancy-feast-gourmet-wet-cat-food-variety-pack-petites-gravy-collection-break-apart-tubs-24-servings-12-2-8-ounce-tubs/21528?sku=050000544295",
+        "https://petmac.etailpet.com/products/washington-dc/fancy-feast-petites-gravy-variety-pack-wet-cat-food-tubs-2/",
+        "https://www.target.com/p/purina-fancy-feast-gourmet-rice-chicken-seafood-and-salmon-flavor-gravy-collection-variety-pack-wet-cat-food-12pk/-/A-91626019"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Retail sources bind UPC 050000544295 to the 12-tub Petites Gravy Collection outer pack; each 2.8 oz twin tub provides two 1.4 oz servings.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Exact outer identity, 12-tub count, 2.8 oz tub size, and UPC are jointly supported.",
+        "contains is intentionally empty because the retail sources do not prove the printed barcodes of the individual twin tubs."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000544301",
+      "canonical_gtin14": "00050000544301",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Petites",
+      "product_name": "Fancy Feast Petites Gravy Collection Variety Pack",
+      "variant": "Gravy Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 2.8 oz",
+      "pack_count": 24,
+      "unit_size": "2.8 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-petites-gourmet-collection-variety-pack-chicken-salmon-seafood-and-fish-flavor-gravy-wet-cat-food-2-8oz-48ct/-/A-81962100",
+        "https://www.petsuppliesplus.com/categories/cat/food/wet/purina-fancy-feast-gourmet-wet-cat-food-variety-pack-petites-gravy-collection-breakapart-tubs-24-ser/21578?sku=050000544301"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000544301 for the Petites Gravy Collection outer pack. Its 48-count wording counts snap-apart servings; the box holds 24 physical 2.8 oz twin tubs.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Exact outer identity, 24-tub count, 2.8 oz tub size, and UPC are jointly supported by current retail evidence.",
+        "contains is intentionally empty because no printed member barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000500321",
+      "canonical_gtin14": "00050000500321",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gourmet Naturals",
+      "product_name": "Fancy Feast Gourmet Naturals Pâté Variety Pack",
+      "variant": "Beef, Chicken, Salmon, Trout & Tuna Pâté Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.target.com/p/purina-fancy-feast-gourmet-naturals-variety-pack-chicken-salmon-tuna-38-beef-flavor-wet-cat-food-cans-3oz-12ct/-/A-76780058"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000500321 and identifies the 12 x 3 oz Gourmet Naturals outer variety pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "A current retailer page jointly supports the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000258192",
+      "canonical_gtin14": "00050000258192",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Marinated Morsels",
+      "product_name": "Fancy Feast Marinated Morsels Poultry & Beef Variety Pack",
+      "variant": "Poultry & Beef Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-marinated-morsels-poultry-and-beef-variety-pack-24-cans",
+        "https://www.kroger.com/p/fancy-feast-marinated-morsels-poultry-beef-wet-cat-food-variety-pack-24-3-oz-cans/0005000025819",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The Purina and Kroger pages establish the 24 x 3 oz pack; the barcode index supplies the full UPC 050000258192 for that exact outer identity.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official brand and independent catalog evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000500000",
+      "canonical_gtin14": "00050000500000",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Sliced",
+      "product_name": "Fancy Feast Sliced Poultry & Beef Collection Variety Pack",
+      "variant": "Poultry & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.cub.com/store/cub/products/119348-purely-fancy-feast-gravy-wet-cat-food-variety-pack-poultry-beef-sliced-collection-72-oz",
+        "https://www.upcitemdb.com/info-purina-fancy-feast"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Cub prints UPC 050000500000 and 24 x 3 oz for the outer Poultry & Beef Sliced Collection pack; the independent barcode index agrees.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Independent retail and barcode evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000572823",
+      "canonical_gtin14": "00050000572823",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Medleys",
+      "product_name": "Fancy Feast Medleys Florentine Collection Variety Pack",
+      "variant": "Florentine Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "18 x 3 oz",
+      "pack_count": 18,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.amazon.com/-/es/Fancy-Feast-Purina-Medleys-Florentine/dp/B00KRH8HVA",
+        "https://www.upcitemdb.com/upc/50000572823",
+        "https://www.ubuy.com.pa/es/product/1PS5KT2MC-fancy-feast-purina-medleys-cat-food-variety-pack-florentine-collection-3-oz-18-case"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Multiple independent catalog sources bind UPC 050000572823 to the 18 x 3 oz outer Medleys Florentine Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Independent retail and barcode evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000574896",
+      "canonical_gtin14": "00050000574896",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Medleys",
+      "product_name": "Fancy Feast Medleys Tuscany Collection Variety Pack",
+      "variant": "Tuscany Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-medleys-tuscany-variety-pack-12-cans-cats",
+        "https://www.target.com/p/purina-fancy-feast-medleys-tuscany-chicken-turkey-and-tuna-flavor-variety-pack-wet-cat-food-2-25lbs-12pk/-/A-91626020",
+        "https://www.upcitemdb.com/upc/50000574896"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000574896 for the 12 x 3 oz outer Medleys Tuscany Collection pack; the official Purina page confirms the pack identity and count.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official brand, retailer, and barcode evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000292110",
+      "canonical_gtin14": "00050000292110",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Poultry & Beef Collection Variety Pack",
+      "variant": "Poultry & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "30 x 3 oz",
+      "pack_count": 30,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gravy-lovers-poultry-beef-variety-pack-30-cans-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-gravy-lovers-variety-pack-chicken-turkey-38-beef-flavor-wet-cat-food-cans-3oz-30ct/-/A-50045303"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000292110, package quantity 30, and a 3 oz member size for the outer Gravy Lovers Poultry & Beef Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The official brand page and current retailer listing jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000215621",
+      "canonical_gtin14": "00050000215621",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Classic Pâté",
+      "product_name": "Fancy Feast Classic Paté Seafood Collection Variety Pack",
+      "variant": "Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-classic-pate-seafood-variety-pack-12-cans-wet-cat-food",
+        "https://www.target.com/p/purina-fancy-feast-classic-pat-233-gourmet-wet-cat-food-seafood-collection-3oz-12ct-variety-pack/-/A-14765554"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000215621 and package quantity 12 for the 3 oz Classic Paté Seafood Collection outer pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official brand and current retailer evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000168828",
+      "canonical_gtin14": "00050000168828",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "Fancy Feast Kitten Classic Paté Ocean Whitefish & Turkey Collection Variety Pack",
+      "variant": "Ocean Whitefish & Turkey Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/fancy-feast/products/kitten-food",
+        "https://www.target.com/p/purina-fancy-feast-kitten-classic-pat-233-variety-pack-turkey-38-fish-flavor-wet-cat-food-cans-for-kittens-3oz-12ct/-/A-78176238"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000168828, package quantity 12, and 3 oz cans for the outer kitten Ocean Whitefish & Turkey Collection pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The official kitten-product listing and current retailer page jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000172306",
+      "canonical_gtin14": "00050000172306",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Creamy Delights",
+      "product_name": "Fancy Feast Creamy Delights Poultry & Seafood Collection Variety Pack",
+      "variant": "Poultry & Seafood Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://feederspetsupply.com/fancy-feast-creamy-delight-variety-pack-canned-cat-food-24-ct/",
+        "https://www.amazon.com.mx/Purina-Fancy-Feast-Delights-Variety/dp/B07CWTP5YD",
+        "https://www.desertcart.com.au/products/72168452-purina-fancy-feast-wet-cat-food-variety-pack-creamy-delights-poultry-seafood-collection-pack-of-24-3-oz-cans"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Feeders prints UPC 050000172306 for the 24-count Creamy Delights outer pack; independent catalog listings identify 24 x 3 oz cans and the Poultry & Seafood Collection.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Independent retail and catalog evidence jointly support the exact outer identity, count, member size, and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000144396",
+      "canonical_gtin14": "00050000144396",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Beef Feast Paté in Gravy Gourmet Cat Food",
+      "variant": "Beef Feast Paté in Gravy",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Beef broth, beef, meat by-products, liver, fish, glycine, natural and artificial flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, tricalcium phosphate, carrageenan, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 909,
+        "kcal_per_unit": 77,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A649823",
+      "formula_source": "Purina official product label deck A649823",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/6498-a649823-fancy-feast-gravy-lovers-beef-feast-pate-in-gravy-gourmet-cat-food-lj3.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-gravy-lovers-beef-pate-gravy-wet-cat-food",
+        "https://petmac.etailpet.com/products/washington-dc/fancy-feast-gravy-lovers-beef-feast-pate-in-gravy-wet-cat-food-can-2/"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Petmac binds UPC 050000144396 to the individual 3 oz Beef Feast Paté in Gravy can.",
+      "conflicts": [
+        "Some Kroger-family catalog URLs omit the final UPC-A check digit and display 0005000014439. The independently printed full code is 050000144396, whose check digit is valid."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A649823 supplies the complete ingredient order, guaranteed analysis, calories and all-life-stages adequacy.",
+        "The exact unit UPC and 3 oz can identity are independently bound by a current retailer."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000161560",
+      "canonical_gtin14": "00050000161560",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Ocean Whitefish & Tuna Feast Paté in Gravy Gourmet Cat Food",
+      "variant": "Ocean Whitefish & Tuna Feast Paté in Gravy",
+      "recipe": [
+        "ocean whitefish",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Fish broth, ocean whitefish, chicken, meat by-products, liver, tuna, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], tricalcium phosphate, guar gum, carrageenan, choline chloride, taurine, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 8.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 82,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 884,
+        "kcal_per_unit": 75,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A512423",
+      "formula_source": "Purina official product label deck A512423",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/5124-a512423-fancy-feast-gravy-lovers-ocean-whitefish-tuna-feast-pate-in-gravy-gourmet-cat-food-lj5.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-gravy-lovers-ocean-whitefish-tuna-pate-gravy-wet-cat-food",
+        "https://shop.bensonspet.com/products/050000161560",
+        "https://www.amazon.ae/Fancy-Feast-Purina-Lovers-Whitefish/dp/B0D35PBB3N"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "The retailer product URL and independent retail GTIN listing bind UPC 050000161560 to the individual 3 oz can.",
+      "conflicts": [
+        "Some Kroger-family catalog URLs omit the final UPC-A check digit and display 0005000016156. Independent sources print the full valid UPC 050000161560."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A512423 supplies the complete ingredient order, guaranteed analysis, calories and all-life-stages adequacy.",
+        "Exact-unit sources bind the full UPC to the 3 oz Ocean Whitefish & Tuna Paté in Gravy can."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000503889",
+      "canonical_gtin14": "00050000503889",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Senior 7+",
+      "product_name": "Fancy Feast Senior 7+ Minced Chicken Feast in Gravy Gourmet Cat Food",
+      "variant": "Minced Chicken Feast in Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "senior",
+      "food_form": "wet",
+      "texture": "minced",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken broth, chicken, wheat gluten, meat by-products, liver, turkey, corn starch-modified, soy flour, salt, glycine, natural flavor, taurine, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], choline chloride, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 79,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 40,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 909,
+        "kcal_per_unit": 77,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B662922",
+      "formula_source": "Purina official product label deck B662922",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-07/6629-b662922-fancy-feast-chicken-feast-in-gravy-minced-senior-7-wet-cat-food-tm6.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-minced-chicken-gravy-senior-food-wet-cat-food",
+        "https://petmac.etailpet.com/products/washington-dc/fancy-feast-minced-chicken-feast-in-gravy-senior-7-wet-cat-food-can-2/"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Petmac prints UPC 050000503889 and a 3 oz individual can for Senior 7+ Minced Chicken Feast in Gravy.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck B662922 supplies the complete formula, adult-maintenance adequacy, guarantees including Vitamin E, and both calorie bases.",
+        "Current Purina and exact-unit retailer pages agree on the Senior 7+ minced chicken identity and 3 oz size."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000503865",
+      "canonical_gtin14": "00050000503865",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Senior 7+",
+      "product_name": "Fancy Feast Senior 7+ Minced Tuna Feast in Gravy Gourmet Cat Food",
+      "variant": "Minced Tuna Feast in Gravy",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "senior",
+      "food_form": "wet",
+      "texture": "minced",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Fish broth, tuna, wheat gluten, chicken, meat by-products, liver, corn starch-modified, soy flour, salt, glycine, natural flavor, tricalcium phosphate, taurine, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], choline chloride, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 12,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 79,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.07,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 40,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 877,
+        "kcal_per_unit": 74,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B662822",
+      "formula_source": "Purina official product label deck B662822",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2023-07/6628-b662822-fancy-feast-tuna-feast-in-gravy-minced-senior-7-wet-cat-food-tm3.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-timeless-favorites-minced-tuna-gravy-senior-food-wet-cat-food",
+        "https://www.fairwaymarket.com/product/purina-fancy-feast-cat-food-fancy-feast-tuna-fest-minced-3-oz-id-00050000503865"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Fairway prints GTIN 00050000503865 for the individual 3 oz Senior 7+ Minced Tuna Feast in Gravy can.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck B662822 supplies the complete formula, adult-maintenance adequacy, guarantees including Vitamin E, and both calorie bases.",
+        "Current Purina and exact-unit retailer pages agree on the Senior 7+ minced tuna identity and 3 oz size."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000168200",
+      "canonical_gtin14": "00050000168200",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Creamy Delights",
+      "product_name": "Fancy Feast Creamy Delights Chicken Feast With a Touch of Real Milk Paté Gourmet Cat Food",
+      "variant": "Chicken Feast With a Touch of Real Milk",
+      "recipe": [
+        "chicken",
+        "milk"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Chicken, Liver, Meat By-Products, Poultry Broth, Fish, Milk, Artificial And Natural Flavors, Added Color, Guar Gum, Tricalcium Phosphate, Potassium Chloride, Salt, Magnesium Sulfate, Mono And Dicalcium Phosphate, Taurine, Zinc Sulfate, Thiamine Mononitrate, Vitamin E Supplement, Ferrous Sulfate, Niacin, Copper Sulfate, Manganese Sulfate, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 6,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.25,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1340,
+        "kcal_per_unit": 114,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A-7036",
+      "formula_source": "Complete last-applicable label transcription retained on Chewy's discontinued Creamy Delights variety-pack page",
+      "source_urls": [
+        "https://www.chewy.com/fancy-feast-creamy-delights-variety/dp/174999",
+        "https://shop.pathmark.com/store/pathmark/products/17340927-purely-fancy-feast-pate-wet-cat-food-creamy-delights-chicken-feast-with-a-touch-of-real-milk-3-oz",
+        "https://shop.agwaycapecod.com/p/fancy-feast-creamy-delights-chicken-pate-cat-050000168200"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Pathmark prints GTIN 00050000168200, product identity and 3 oz size for the individual can.",
+      "conflicts": [
+        "Creamy Delights has been discontinued and these pâté singles are absent from Purina's current US catalog. The retained A-7036 panel is treated as the last applicable formula; no competing later generation was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The retained complete label transcript supplies ingredient order, guarantees, both calorie bases and feeding directions covering adults, kittens, and gestation/lactation.",
+        "Exact-unit retailer evidence independently binds the UPC to this 3 oz pâté can."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000168224",
+      "canonical_gtin14": "00050000168224",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Creamy Delights",
+      "product_name": "Fancy Feast Creamy Delights Salmon Feast With a Touch of Real Milk Paté Gourmet Cat Food",
+      "variant": "Salmon Feast With a Touch of Real Milk",
+      "recipe": [
+        "salmon",
+        "milk"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "3 oz",
+      "ingredients_verbatim": "Salmon, Liver, Meat By-Products, Fish Broth, Fish, Turkey, Milk, Artificial And Natural Flavors, Tricalcium Phosphate, Added Color, Guar Gum, Potassium Chloride, Salt, Taurine, Magnesium Sulfate, Mono And Dicalcium Phosphate, Red 3, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Niacin, Calcium Pantothenate, Copper Sulfate, Vitamin A Supplement, Manganese Sulfate, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.05,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1237,
+        "kcal_per_unit": 105,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A-7038",
+      "formula_source": "Complete last-applicable label transcription retained on Chewy's discontinued Creamy Delights variety-pack page",
+      "source_urls": [
+        "https://www.chewy.com/fancy-feast-creamy-delights-variety/dp/174999",
+        "https://metropetsupplynj.com/cat/cat-food/fancy-feast-salmoncrm-3oz",
+        "https://www.weismarkets.com/shop/product/fancy-feast-creamy-delights-pate-wet-cat-food-creamy-delights-salmon-feast-with-a-touch-of-real-milk/218544"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Metro Pet Supply prints UPC 050000168224 for the individual 3 oz Salmon Feast With a Touch of Real Milk can.",
+      "conflicts": [
+        "Creamy Delights has been discontinued and these pâté singles are absent from Purina's current US catalog. The retained A-7038 panel is treated as the last applicable formula; no competing later generation was found."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "The retained complete label transcript supplies ingredient order, guarantees, both calorie bases and feeding directions covering adults, kittens, and gestation/lactation.",
+        "Exact-unit retailer evidence independently binds the UPC to this 3 oz pâté can."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002559",
+      "canonical_gtin14": "00050000002559",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Beef Flavor Cat Treats",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6456,
+        "kcal_per_unit": 3.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642220",
+      "formula_source": "Purina official product label deck A642220",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A642220_Fancy_Feast_Savory_Cravings_Beef_Flavor_Cat_Treat.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-beef-cat-treats",
+        "https://www.cub.com/store/cub/products/21729649-purely-fancy-feast-limited-ingredient-cat-treats-savory-cravings-beef-flavor-1-oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Cub prints UPC 050000002559 and 1 oz for the Beef Flavor Savory Cravings box.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A642220 supplies the complete four-ingredient label order, guaranteed analysis, calories and adult-cat treat statement.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000002573",
+      "canonical_gtin14": "00050000002573",
+      "barcode_scope": "individual_unit",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Savory Cravings",
+      "product_name": "Fancy Feast Savory Cravings Beef & Crab Flavor Cat Treats",
+      "variant": "Beef & Crab Flavor",
+      "recipe": [
+        "beef",
+        "crab"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "bits",
+      "presentation": null,
+      "package_type": "box",
+      "size": "1 oz",
+      "ingredients_verbatim": "Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, crab flavor.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 23,
+        "crude_fat_min_percent": 53,
+        "crude_fiber_max_percent": 11,
+        "moisture_max_percent": 6,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 6443,
+        "kcal_per_unit": 3.3,
+        "unit_name": "piece"
+      },
+      "label_deck_code": "A642120",
+      "formula_source": "Purina official product label deck A642120",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A642120_Fancy_Feast_Savory_Cravings_Beef_Crab_Flavor_Cat_Treat.pdf",
+        "https://www.purina.com/cats/shop/fancy-feast-savory-cravings-beef-crab-cat-treats",
+        "https://www.cub.com/store/cub/products/21729653-purely-fancy-feast-limited-ingredient-cat-treats-savory-cravings-beef-crab-flavor-1-oz"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Cub prints UPC 050000002573 and 1 oz for the Beef & Crab Flavor Savory Cravings box.",
+      "conflicts": [
+        "Purina's ingredient-card UI shortens 'brewers dried yeast' to 'Dried Yeast' and 'crab flavor' to 'Crab'; the downloadable full label deck supplies the printed wording used here."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official deck A642120 supplies the complete five-ingredient label order, guaranteed analysis, calories and adult-cat treat statement.",
+        "unit_name=piece represents the printed serving unit 'square'."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000226436",
+      "canonical_gtin14": "00050000226436",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gravy Lovers",
+      "product_name": "Fancy Feast Gravy Lovers Paté in Gravy Wet Cat Food Variety Pack",
+      "variant": "Paté in Gravy Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 3 oz",
+      "pack_count": 24,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gravy-lovers-pate-gravy-variety-pack-24-cans-wet-cat-food",
+        "https://www.shoprite.com/product/purina-fancy-feast-gravy-lovers-pat-collection-gourmet-cat-food-3-oz-24-count-id-00050000226436",
+        "https://www.petsuppliesplus.com/categories/cat/food/wet-food/purina-fancy-feast-gravy-lovers-variety-pack-feast-pate-in-wet-cat-food-gravy/30057?sku=050000226436"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Purina's product image asset embeds GTIN 00050000226436; ShopRite prints the same GTIN with 24 x 3 oz outer-pack identity.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official and current retailer sources jointly support the exact outer identity, count, member size and UPC.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000504046",
+      "canonical_gtin14": "00050000504046",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Senior 7+",
+      "product_name": "Fancy Feast Senior 7+ Classic Paté & Minced Collection Variety Pack",
+      "variant": "Classic Paté & Minced Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 3 oz",
+      "pack_count": 12,
+      "unit_size": "3 oz",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-senior-classic-pate-chicken-variety-pack-12-cans-wet-cat-food",
+        "https://www.target.com/p/fancy-feast-high-protein-beef-chicken-and-tuna-flavor-variety-pack-wet-cat-food-12-3oz/-/A-94649621"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Target prints UPC 050000504046, package quantity 12 and 3 oz cans for the outer Senior 7+ variety pack.",
+      "conflicts": [],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Purina lists the four Senior 7+ members and Target binds the exact outer UPC, count and can size.",
+        "contains is intentionally empty because no printed member-can barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000595280",
+      "canonical_gtin14": "00050000595280",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gems",
+      "product_name": "Fancy Feast Gems Mousse Paté Turkey and Chicken Collection Wet Cat Food Variety Pack",
+      "variant": "Mousse Paté Turkey & Chicken Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "8 x 4 oz dual packs (16 x 2 oz portions)",
+      "pack_count": 8,
+      "unit_size": "4 oz dual pack",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gems-mousse-turkey-chicken-variety-pack-8-wet-cat-food",
+        "https://kortingoutlet.com/store-product/050000595280-74/"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Purina's January 2026 outer-package image asset embeds GTIN 00050000595280 for the Turkey and Chicken Collection.",
+      "conflicts": [
+        "Purina's selector calls this an 8 ct variety pack while the package asset calls it 16 ct; the product's two-Gems-per-dual-pack format reconciles these as 8 dual packs containing 16 individual 2 oz portions."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official current product identity, package asset and independent exact-code listing support the outer SKU.",
+        "contains is intentionally empty because no printed inner dual-pack barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000387083",
+      "canonical_gtin14": "00050000387083",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gems",
+      "product_name": "Fancy Feast Gems Mousse Paté Chicken & Beef Collection Topped With Savory Gravy Wet Cat Food Variety Pack",
+      "variant": "Mousse Paté Chicken & Beef Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "8 x 4 oz dual packs (16 x 2 oz portions)",
+      "pack_count": 8,
+      "unit_size": "4 oz dual pack",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gems-mousse-chicken-beef-variety-pack-8-wet-cat-food",
+        "https://www.target.com/p/fancy-feast-chicken-and-beef-flavor-wet-cat-food-2lbs/-/A-93281958"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Purina's outer-package asset and Target both print GTIN/UPC 00050000387083 / 050000387083 for the Chicken & Beef collection.",
+      "conflicts": [
+        "Purina calls the sale unit an 8 ct variety pack while Target describes 2 oz/16 ct; both describe 8 dual packs containing 16 individual 2 oz portions."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official and retailer sources jointly support the exact outer identity, total 2 lb weight and dual-pack/portion count basis.",
+        "contains is intentionally empty because no printed inner dual-pack barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000387458",
+      "canonical_gtin14": "00050000387458",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gems",
+      "product_name": "Fancy Feast Gems Mousse Paté Salmon & Tuna Collection Topped With Savory Gravy Wet Cat Food Variety Pack",
+      "variant": "Mousse Paté Salmon & Tuna Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "8 x 4 oz dual packs (16 x 2 oz portions)",
+      "pack_count": 8,
+      "unit_size": "4 oz dual pack",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gems-mousse-salmon-tuna-variety-pack-8-wet-cat-food",
+        "https://www.target.com/p/fancy-feast-tuna-and-salmon-flavor-wet-cat-food-2lbs/-/A-93281948"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Purina's outer-package asset and Target both print GTIN/UPC 00050000387458 / 050000387458 for the Salmon & Tuna collection.",
+      "conflicts": [
+        "Purina calls the sale unit an 8 ct variety pack while Target describes 2 oz/16 ct; both describe 8 dual packs containing 16 individual 2 oz portions."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official and retailer sources jointly support the exact outer identity, total 2 lb weight and dual-pack/portion count basis.",
+        "contains is intentionally empty because no printed inner dual-pack barcodes were proven."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "050000659937",
+      "canonical_gtin14": "00050000659937",
+      "barcode_scope": "multipack",
+      "brand": "Fancy Feast",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "cat",
+      "product_line": "Gems",
+      "product_name": "Fancy Feast Gems Exquisite Mousse Collection Variety Pack",
+      "variant": "Exquisite Mousse Collection Variety Pack",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 4 oz dual packs (24 x 2 oz portions)",
+      "pack_count": 12,
+      "unit_size": "4 oz dual pack",
+      "contains": [],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer multipack identity only; no single formula applies.",
+      "source_urls": [
+        "https://www.purina.com/cats/shop/fancy-feast-gems-mousse-variety-pack-wet-cat-food",
+        "https://www.petsuppliesplus.com/categories/cat/food/wet-food/fancy-feast-gems-pate-cat-food-exquisite-mousse-wet-cat-food-variety-pack/30682?sku=050000659937"
+      ],
+      "source_accessed_at": "2026-09-04",
+      "barcode_notes": "Purina's outer-package image asset embeds GTIN 00050000659937; Pet Supplies Plus binds SKU 050000659937 to the Exquisite Mousse variety pack.",
+      "conflicts": [
+        "Purina's title calls this 12 Dual Packs while its package asset calls it 24 ct; these are 12 dual packs containing 24 individual 2 oz portions."
+      ],
+      "verification_notes": [
+        "UPC-A check digit and canonical GTIN-14 verified.",
+        "Official and current retailer sources jointly support the exact outer identity, dual-pack count and UPC.",
+        "contains is intentionally empty because no printed inner dual-pack barcodes were proven."
       ],
       "research_status": "source_verified"
     }

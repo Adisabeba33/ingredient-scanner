@@ -67,6 +67,18 @@ const COMPLEMENTARY_PHRASES = [
   "not a complete and balanced",
   "complementary pet food",
   "complementary food",
+  // What Mars prints on the front where the AAFCO sentence is in the small
+  // print. Sheba's Selections range is sold as "Cat Meal Complement" and its
+  // own page says "intended for intermittent or supplemental feeding only" —
+  // the phrase above, which a photographed front may never show while this one
+  // is the headline.
+  //
+  // Tight on purpose: the bigram, not the word. A complete food describing
+  // itself as "the perfect complement to your cat's meal" says those words in
+  // the other order and is not matched — the Cesar "Loaf & Topper" trap, which
+  // this module has already sprung on itself once.
+  "meal complement",
+  "meal complements",
 ];
 
 const COMPLETE_PHRASES = [
@@ -207,6 +219,12 @@ const KNOWN_TREAT_LINES = [
   // `presentation` rather than in a name.
   "bone broth",
   "whole loin",
+  // Sheba's snack range. Not one of the words this detector looks for — no
+  // treat, snack, chew, biscuit or jerky — and a bag of forty dried sticks
+  // judged as a complete diet is the same error as Ziwi's chews. The Sheba
+  // brief named it in advance as the thing that would go wrong on this brand,
+  // and it was right.
+  "meaty tender sticks",
 ];
 
 /**
@@ -232,7 +250,19 @@ const KNOWN_TREAT_LINES = [
  * requires word boundaries, no other range in this catalog is called Wx, and
  * the alternative is telling a renal patient's owner their food is bad.
  */
-const KNOWN_COMPLEMENTARY_LINES = ["wx"];
+const KNOWN_COMPLEMENTARY_LINES = [
+  "wx",
+  // Sheba's meal-complement range, and the seed's route to the same fact the
+  // phrase list reaches from a photographed pack. A box of these carries no
+  // claims string at all, so without this it would be judged as dinner — and a
+  // 1.3 oz tray of filets in broth judged as a cat's whole diet is marked down
+  // for everything a complement was never meant to supply.
+  //
+  // Four words, so it needs no brand scope: nothing else on any shelf is
+  // called this, and the bare word "filets" — which IS in this catalog's
+  // texture vocabulary — never matches on its own.
+  "selections filets in broth",
+];
 
 /**
  * The same declaration, where the range name is too ordinary to match on.

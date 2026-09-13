@@ -181,6 +181,136 @@ describe("data/known-formulas.ts", () => {
   // Keyed on brand + line + variant, because that is what "one product" means
   // on a shelf. Two DIFFERENT products with one fingerprint is still the paste
   // error, and still caught.
+  // The other half of the same question, and the one that makes the seed's
+  // duplication safe.
+  //
+  // A dry food is sold in three or four bags, each with its own barcode and all
+  // of them the same food, so the deck is written out under every one of them.
+  // It is not shared through a constant, because `scripts/brand-inventory.mjs`
+  // and the consumer app's calibration sweep both read this file as TEXT and
+  // need the literal shape — a constant would make those products silently
+  // vanish from the sweep rather than fail, and that file's own comments say
+  // twice that a silent drop is the worse outcome.
+  //
+  // The cost of writing a list out four times is that a correction lands on one
+  // bag and not its siblings, and a shopper holding the 22 lb bag is then read
+  // the 3.5 lb one. Nothing about that is visible in a diff. So it is a test.
+  //
+  // ── What may differ between two bags, and what may not ────────────────
+  //
+  // The PER-UNIT calorie figure may, and must. A 3 oz can of Ziwi beef and a
+  // 6.5 oz can of the same recipe print 96 and 208 kcal per can; Royal Canin's
+  // two kitten loaf sizes print 68 and 117. That is not drift, it is the same
+  // food weighed twice, and the first version of this test read all 88 of them
+  // as errors.
+  //
+  // Everything else may not. The ingredient list is the product; the
+  // guarantees are a property of the food and not of the tin; and kcal per
+  // KILOGRAM is the density, which is the same food in any size of bag. Two
+  // sizes disagreeing on any of those is a transcription that landed on one
+  // barcode and missed its siblings.
+  //
+  // ── And twelve products already here that do not agree ────────────────
+  //
+  // Written the day this check was added, and every one of them is two
+  // TRANSCRIPTIONS of one food rather than two foods. They divide into:
+  //
+  //   · spelling and case — "L-carnitine" / "L-Carnitine", "brewers rice" /
+  //     "Brewers rice", Ziwi's "Magnesium Sulfate" / "Sulphate";
+  //   · how much of a vitamin block one source spelled out — two Party Mix
+  //     bags carry "niacin (Vitamin B-3)" and two carry bare "niacin";
+  //   · a hyphen — 9Lives "Meat-By-Products" against "Meat By-Products";
+  //   · an extras list one source printed shorter than the other — two Blue
+  //     Buffalo bags where one page omitted Vitamin E and taurine entirely;
+  //   · and two genuinely different numbers: Royal Canin Dental Care at 3533
+  //     against 3536 kcal/kg, 9Lives paté at 1050 against 1045.
+  //
+  // None is fixed here, and that is deliberate. Making them agree means
+  // choosing which source was right, and nothing in this repository knows —
+  // only the pack does. Copying one onto the other would turn a visible
+  // disagreement into an invisible assertion, which is the thing
+  // docs/CATALOG-CONFLICTS.md exists to prevent.
+  //
+  // So they are named. The list may shrink when somebody photographs a bag; it
+  // must not grow, because a NEW batch has one source per recipe and any
+  // disagreement in one is a typo rather than a disagreement between sources.
+  const KNOWN_TRANSCRIPTION_DRIFT = new Set([
+    "Friskies Party Mix Original Crunch With Chicken & Flavors of Liver & Turkey",
+    "Friskies Party Mix Beachside Crunch With Ocean Whitefish & Flavors of Shrimp, Crab & Tuna",
+    "Royal Canin Feline Care Nutrition Appetite Control Care",
+    "Royal Canin Feline Care Nutrition Dental Care",
+    "Royal Canin Feline Care Nutrition Weight Care Thin Slices in Gravy",
+    "Royal Canin Veterinary Diet Hydrolyzed Protein HP",
+    "Royal Canin Veterinary Health Nutrition Hydrolyzed Protein HP",
+    "Ziwi Peak Original Air-Dried Venison Recipe for Dogs",
+    "Blue Buffalo Tastefuls Adult Multi-Protein Chicken & Turkey Recipe",
+    "Blue Buffalo True Solutions Digestive Care Chicken & Barley Recipe",
+    "9Lives Paté With Real Chicken & Tuna",
+  ]);
+
+  it("every bag of one product carries the same composition", () => {
+    const drifted: string[] = [];
+    for (const p of KNOWN_PRODUCTS) {
+      const fingerprints = new Map<string, string[]>();
+      for (const pkg of p.packages) {
+        const f = KNOWN_FORMULAS[pkg.upc];
+        // A product part-seeded with formulas is ordinary — identity arrives
+        // first and the list follows. Only the ones we HOLD are compared.
+        if (!f) continue;
+        const { kcalPerServing: _s, servingName: _n, ...panel } = f.analysis;
+        // Extras are sorted before comparing, and ingredients are not. A panel
+        // lists its guarantees in whatever order it laid them out and nothing
+        // reads meaning into that; an ingredient list is printed by descending
+        // weight, so its order IS the data and reordering it rewrites the food.
+        const extras = [...(panel.extras ?? [])].sort((a, b) =>
+          `${a.nutrient}${a.basis}${a.value}`.localeCompare(
+            `${b.nutrient}${b.basis}${b.value}`
+          )
+        );
+        const key = JSON.stringify([f.ingredients, { ...panel, extras }]);
+        if (!fingerprints.has(key)) fingerprints.set(key, []);
+        fingerprints.get(key)!.push(pkg.upc);
+      }
+      const name = `${p.brand} ${p.line} ${p.variant}`;
+      if (fingerprints.size > 1 && !KNOWN_TRANSCRIPTION_DRIFT.has(name)) {
+        drifted.push(
+          `${name}: ${[...fingerprints.values()]
+            .map((codes) => codes.join("+"))
+            .join(" vs ")}`
+        );
+      }
+    }
+    expect(drifted).toEqual([]);
+  });
+
+  // The allowlist above is a record of what is wrong, so it must not become a
+  // record of what used to be wrong. An entry whose product now agrees with
+  // itself is a line to delete.
+  it("names no product that has since been reconciled", () => {
+    const stale = [...KNOWN_TRANSCRIPTION_DRIFT].filter((name) => {
+      const p = KNOWN_PRODUCTS.find(
+        (x) => `${x.brand} ${x.line} ${x.variant}` === name
+      );
+      if (!p) return true;
+      const keys = new Set(
+        p.packages
+          .map((pkg) => KNOWN_FORMULAS[pkg.upc])
+          .filter(Boolean)
+          .map((f) => {
+            const { kcalPerServing: _s, servingName: _n, ...panel } = f.analysis;
+            const extras = [...(panel.extras ?? [])].sort((a, b) =>
+              `${a.nutrient}${a.basis}${a.value}`.localeCompare(
+                `${b.nutrient}${b.basis}${b.value}`
+              )
+            );
+            return JSON.stringify([f.ingredients, { ...panel, extras }]);
+          })
+      );
+      return keys.size < 2;
+    });
+    expect(stale).toEqual([]);
+  });
+
   it("no two products share a composition", () => {
     // The one pair allowed to share, because the shelf really does: Royal
     // Canin prints ONE recipe for Medium and Large Dental Care. They are

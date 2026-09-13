@@ -112,6 +112,8 @@ const VERIFIED_026 = "2026-09-04";
 const VERIFIED_027 = "2026-09-06";
 const VERIFIED_028 = "2026-09-07";
 const VERIFIED_029 = "2026-09-07";
+const VERIFIED_030 = "2026-09-13";
+const VERIFIED_031 = "2026-09-13";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -7137,5 +7139,584 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Salmon.`,
     analysis: withKcalPerKg(ga(28, 2, 2, 67, null, null), 1457),
     verifiedAt: VERIFIED_029,
+  },
+
+  // ── Purina ONE — batch 031 ─────────────────────────────────────────────
+  //
+  // Six recipes under twenty barcodes. Purina ONE sells one food in up to four
+  // bags — 3.5, 7, 16 and 22 lb — so the deck below repeats across a recipe's
+  // sizes on purpose. It is written out under each barcode rather than shared
+  // through a constant because two tools read this file as TEXT and both need
+  // the literal shape: scripts/brand-inventory.mjs, and the consumer app's
+  // calibration sweep, which would have silently DROPPED every product behind
+  // a constant rather than failing. Its own comments say twice that a silent
+  // drop is the worse outcome, and they are right.
+  //
+  // The duplication that buys is guarded by a test instead — "every bag of one
+  // product carries the same composition" in lib/known-import.test.ts — so a
+  // correction applied to one bag and not its siblings breaks the build.
+  //
+  // Two shapes here come off Purina's newer Pet Nutrition Facts panel and are
+  // both deliberate: `crudeFiberMax` is null where the deck prints DIETARY
+  // fibre (a different measurement, stored as an extra under its own name),
+  // and the calorie statement is kcal per CUP with no kcal/kg.
+  // Tender Selects Blend · With Real Salmon · 3.5 lb
+  "017800474740": {
+    ingredients: `Salmon, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, chicken, phosphoric acid, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, salt, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-Cysteine, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 402, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Salmon · 7 lb
+  "017800474900": {
+    ingredients: `Salmon, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, chicken, phosphoric acid, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, salt, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-Cysteine, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 402, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Salmon · 16 lb
+  "017800431194": {
+    ingredients: `Salmon, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, chicken, phosphoric acid, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, salt, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-Cysteine, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 402, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Salmon · 22 lb
+  "017800147347": {
+    ingredients: `Salmon, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, chicken, phosphoric acid, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, salt, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-Cysteine, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 402, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Chicken · 3.5 lb
+  "017800571180": {
+    ingredients: `Chicken, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Cysteine, L-Lysine monohydrochloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 403, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Chicken · 7 lb
+  "017800571210": {
+    ingredients: `Chicken, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Cysteine, L-Lysine monohydrochloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 403, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Chicken · 16 lb
+  "017800571920": {
+    ingredients: `Chicken, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Cysteine, L-Lysine monohydrochloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 403, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // Tender Selects Blend · With Real Chicken · 22 lb
+  "017800144100": {
+    ingredients: `Chicken, rice, chicken by-product meal, corn protein meal, beef fat preserved with mixed tocopherols, soybean meal, whole grain corn, wheat flour, soy protein isolate, soy protein concentrate, natural flavor, dried chicory root, glycerin, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, dried carrots, dried peas, sodium bisulfate, malted barley extract, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Cysteine, L-Lysine monohydrochloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(34, 15, null, 12, null, 0.15), null, 403, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 38, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Urinary Tract Health Formula · 3.5 lb
+  "017800549172": {
+    ingredients: `Corn gluten meal, ground yellow corn, chicken, brewers rice, wheat flour, animal fat preserved with mixed-tocopherols, dried egg product, phosphoric acid, calcium carbonate, potassium chloride, animal digest, sodium caseinate, L-Lysine monohydrochloride, dried whey, choline chloride, defluorinated phosphate, salt, taurine, zinc sulfate, ferrous sulfate, Vitamin E supplement, niacin, manganese sulfate, citric acid, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (source of Vitamin K activity), sodium selenite.`,
+    analysis: withExtras(withCalories(ga(31, 12.5, 2, 10, 6.2, 0.15), 4313, 452, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 0.8, "%"],
+      ["Phosphorus", "min", 0.7, "%"],
+      ["Magnesium", "max", 0.08, "%"],
+      ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Urinary Tract Health Formula · 7 lb
+  "017800549202": {
+    ingredients: `Corn gluten meal, ground yellow corn, chicken, brewers rice, wheat flour, animal fat preserved with mixed-tocopherols, dried egg product, phosphoric acid, calcium carbonate, potassium chloride, animal digest, sodium caseinate, L-Lysine monohydrochloride, dried whey, choline chloride, defluorinated phosphate, salt, taurine, zinc sulfate, ferrous sulfate, Vitamin E supplement, niacin, manganese sulfate, citric acid, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (source of Vitamin K activity), sodium selenite.`,
+    analysis: withExtras(withCalories(ga(31, 12.5, 2, 10, 6.2, 0.15), 4313, 452, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 0.8, "%"],
+      ["Phosphorus", "min", 0.7, "%"],
+      ["Magnesium", "max", 0.08, "%"],
+      ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Urinary Tract Health Formula · 16 lb
+  "017800012782": {
+    ingredients: `Corn gluten meal, ground yellow corn, chicken, brewers rice, wheat flour, animal fat preserved with mixed-tocopherols, dried egg product, phosphoric acid, calcium carbonate, potassium chloride, animal digest, sodium caseinate, L-Lysine monohydrochloride, dried whey, choline chloride, defluorinated phosphate, salt, taurine, zinc sulfate, ferrous sulfate, Vitamin E supplement, niacin, manganese sulfate, citric acid, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (source of Vitamin K activity), sodium selenite.`,
+    analysis: withExtras(withCalories(ga(31, 12.5, 2, 10, 6.2, 0.15), 4313, 452, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 0.8, "%"],
+      ["Phosphorus", "min", 0.7, "%"],
+      ["Magnesium", "max", 0.08, "%"],
+      ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Urinary Tract Health Formula · 22 lb
+  "017800144117": {
+    ingredients: `Corn gluten meal, ground yellow corn, chicken, brewers rice, wheat flour, animal fat preserved with mixed-tocopherols, dried egg product, phosphoric acid, calcium carbonate, potassium chloride, animal digest, sodium caseinate, L-Lysine monohydrochloride, dried whey, choline chloride, defluorinated phosphate, salt, taurine, zinc sulfate, ferrous sulfate, Vitamin E supplement, niacin, manganese sulfate, citric acid, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (source of Vitamin K activity), sodium selenite.`,
+    analysis: withExtras(withCalories(ga(31, 12.5, 2, 10, 6.2, 0.15), 4313, 452, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 0.8, "%"],
+      ["Phosphorus", "min", 0.7, "%"],
+      ["Magnesium", "max", 0.08, "%"],
+      ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Healthy Kitten Formula · 3.5 lb
+  "017800350884": {
+    ingredients: `Chicken, chicken by-product meal, corn protein meal, rice, soybean meal, beef fat preserved with mixed tocopherols, chicken meal, whole grain corn, soy protein concentrate, natural flavor, soy protein isolate, phosphoric acid, fish oil, calcium carbonate, glycerin, choline chloride, salt, dried carrots, dried peas, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid, biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(40, 18, null, 12, null, 0.18), null, 518, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 29, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.8, "%"],
+      ["Docosahexaenoic Acid (DHA)", "min", 0.01, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.8, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 1500, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.9, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Healthy Kitten Formula · 7 lb
+  "017800029650": {
+    ingredients: `Chicken, chicken by-product meal, corn protein meal, rice, soybean meal, beef fat preserved with mixed tocopherols, chicken meal, whole grain corn, soy protein concentrate, natural flavor, soy protein isolate, phosphoric acid, fish oil, calcium carbonate, glycerin, choline chloride, salt, dried carrots, dried peas, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid, biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(40, 18, null, 12, null, 0.18), null, 518, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 29, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.8, "%"],
+      ["Docosahexaenoic Acid (DHA)", "min", 0.01, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.8, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 1500, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.9, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Healthy Kitten Formula · 16 lb
+  "017800104777": {
+    ingredients: `Chicken, chicken by-product meal, corn protein meal, rice, soybean meal, beef fat preserved with mixed tocopherols, chicken meal, whole grain corn, soy protein concentrate, natural flavor, soy protein isolate, phosphoric acid, fish oil, calcium carbonate, glycerin, choline chloride, salt, dried carrots, dried peas, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], malted barley extract, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid, biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride, DL-Methionine.`,
+    analysis: withExtras(withCalories(ga(40, 18, null, 12, null, 0.18), null, 518, "cup"), [
+      ["Total Carbohydrate (calculated)", "max", 29, "%"],
+      ["Dietary Fiber", "max", 10, "%"],
+      ["Linoleic Acid", "min", 1.8, "%"],
+      ["Docosahexaenoic Acid (DHA)", "min", 0.01, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.8, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 1500, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.9, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Indoor Advantage With Real Turkey · 3.5 lb
+  "017800033886": {
+    ingredients: `Turkey, chicken by-product meal, rice, corn protein meal, soybean meal, whole grain corn, soy protein isolate, powdered cellulose, dried yeast, soybean hulls, beef fat preserved with mixed tocopherols, canola meal, natural flavor, phosphoric acid, calcium carbonate, glycerin, choline chloride, salt, dried spinach, dried carrots, malted barley extract, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride.`,
+    analysis: withExtras(withCalories(ga(37, 9, null, 12, null, 0.15), null, 373, "cup"), [
+      ["Fat", "max", 13, "%"],
+      ["Total Carbohydrate (calculated)", "max", 37.5, "%"],
+      ["Dietary Fiber", "max", 15.5, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 800, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Indoor Advantage With Real Turkey · 7 lb
+  "017800033862": {
+    ingredients: `Turkey, chicken by-product meal, rice, corn protein meal, soybean meal, whole grain corn, soy protein isolate, powdered cellulose, dried yeast, soybean hulls, beef fat preserved with mixed tocopherols, canola meal, natural flavor, phosphoric acid, calcium carbonate, glycerin, choline chloride, salt, dried spinach, dried carrots, malted barley extract, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride.`,
+    analysis: withExtras(withCalories(ga(37, 9, null, 12, null, 0.15), null, 373, "cup"), [
+      ["Fat", "max", 13, "%"],
+      ["Total Carbohydrate (calculated)", "max", 37.5, "%"],
+      ["Dietary Fiber", "max", 15.5, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 800, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Indoor Advantage With Real Turkey · 16 lb
+  "017800033855": {
+    ingredients: `Turkey, chicken by-product meal, rice, corn protein meal, soybean meal, whole grain corn, soy protein isolate, powdered cellulose, dried yeast, soybean hulls, beef fat preserved with mixed tocopherols, canola meal, natural flavor, phosphoric acid, calcium carbonate, glycerin, choline chloride, salt, dried spinach, dried carrots, malted barley extract, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride, potassium chloride.`,
+    analysis: withExtras(withCalories(ga(37, 9, null, 12, null, 0.15), null, 373, "cup"), [
+      ["Fat", "max", 13, "%"],
+      ["Total Carbohydrate (calculated)", "max", 37.5, "%"],
+      ["Dietary Fiber", "max", 15.5, "%"],
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin D", "min", 800, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Hairball Formula · 7 lb
+  "017800012607": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal (source of glucosamine), rice flour, soybean meal, beef fat preserved with mixed-tocopherols, whole grain corn, powdered cellulose, soybean hulls, liver flavor, chicken meal (source of glucosamine), phosphoric acid, calcium carbonate, salt, caramel color, dried carrots, dried peas, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Vitamin E supplement.`,
+    analysis: withExtras(withCalories(ga(34, 14, 4.5, 12, null, 0.15), 3977, 445, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+  // +Plus · Hairball Formula · 16 lb
+  "017800012621": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal (source of glucosamine), rice flour, soybean meal, beef fat preserved with mixed-tocopherols, whole grain corn, powdered cellulose, soybean hulls, liver flavor, chicken meal (source of glucosamine), phosphoric acid, calcium carbonate, salt, caramel color, dried carrots, dried peas, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Vitamin E supplement.`,
+    analysis: withExtras(withCalories(ga(34, 14, 4.5, 12, null, 0.15), 3977, 445, "cup"), [
+      ["Linoleic Acid", "min", 1.4, "%"],
+      ["Calcium", "min", 1, "%"],
+      ["Phosphorus", "min", 0.9, "%"],
+      ["Zinc", "min", 150, "mg/kg"],
+      ["Selenium", "min", 0.35, "mg/kg"],
+      ["Vitamin A", "min", 10000, "IU/kg"],
+      ["Vitamin E", "min", 100, "IU/kg"],
+      ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+    ]),
+    verifiedAt: VERIFIED_031,
+  },
+
+  // ── Fancy Feast and Friskies — batch 030 ──────────────────────────────
+  //
+  // Thirty-six compositions. Five more products were seeded as identity only:
+  // two Purely broths, two Roasted tins and one Savory Cravings box, all held
+  // at needs_physical_label by the research rather than filled in from a
+  // retailer's copy of somebody else's transcription.
+  // Classic Pâté · Chopped Grill Feast · 3 oz
+  "050000429240": {
+    ingredients: `Chicken, chicken broth, meat by-products, liver, artificial and natural flavors, tricalcium phosphate, guar gum, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], salt, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(10, 5, 1.5, 78, 3.25, 0.05), 1159, 98, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Grilled · Tender Beef & Liver Feast in Gravy · 3 oz
+  "050000572250": {
+    ingredients: `Beef and liver broth, beef, wheat gluten, liver, meat by-products, corn starch-modified, soy flour, glycine, salt, tricalcium phosphate, natural flavor, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, VITAMINS [thiamine mononitrate, Vitamin E supplement, niacin, calcium pantothenate, Vitamin A supplement, menadione sodium bisulfite complex, pyridoxine hydrochloride, riboflavin supplement, Vitamin B-12 supplement, biotin, folic acid, Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(11, 2, 1.5, 80, 2.5, 0.05), 842, 71, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Grilled · Ocean Whitefish & Tuna Feast in Gravy · 3 oz
+  "050000100842": {
+    ingredients: `Fish broth, meat by-products, wheat gluten, ocean whitefish, tuna, chicken, corn starch-modified, soy flour, corn oil, glycine, salt, tricalcium phosphate, natural flavor, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, VITAMINS [thiamine mononitrate, Vitamin E supplement, niacin, calcium pantothenate, Vitamin A supplement, menadione sodium bisulfite complex, pyridoxine hydrochloride, riboflavin supplement, Vitamin B-12 supplement, biotin, folic acid, Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(11, 2, 1.5, 80, 2.7, 0.05), 845, 71, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Grilled · Tuna Feast in Gravy · 3 oz
+  "050000836123": {
+    ingredients: `Fish broth, tuna, wheat gluten, chicken, meat by-products, liver, corn starch-modified, soy flour, corn oil, glycine, salt, tricalcium phosphate, natural flavor, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(11, 2, 1.5, 80, 2.7, 0.05), 841, 71, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Minced · Turkey Feast in Sauce · 3 oz
+  "050000434947": {
+    ingredients: `Poultry broth, turkey, liver, meat by-products, wheat gluten, chicken, corn starch-modified, soy flour, soy protein concentrate, artificial and natural flavors, salt, tricalcium phosphate, added color, taurine, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide].`,
+    analysis: withCalories(ga(11, 2, 1.5, 78, 2.7, 0.05), 922, 78, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Kitten · Tender Chicken Feast Pâté · 3 oz
+  "050000172351": {
+    ingredients: `Chicken, meat by-products, liver, chicken broth, fish, milk, egg product, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, tricalcium phosphate, taurine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.`,
+    analysis: withExtras(withCalories(ga(11, 5, 1.5, 78, 3.5, 0.07), 1106, 94, "can"), [
+      ["Calcium (Ca)", "min", 0.3, "%"],
+    ]),
+    verifiedAt: VERIFIED_030,
+  },
+  // Kitten · Tender Salmon Feast Pâté · 3 oz
+  "050000172375": {
+    ingredients: `Salmon, meat by-products, liver, fish broth, fish, turkey, milk, egg product, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], tricalcium phosphate, guar gum, taurine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.`,
+    analysis: withExtras(withCalories(ga(11, 4, 1.5, 78, 3.5, 0.07), 1059, 90, "can"), [
+      ["Calcium (Ca)", "min", 0.3, "%"],
+    ]),
+    verifiedAt: VERIFIED_030,
+  },
+  // Gourmet Dry · With Ocean Fish & Salmon and Accents of Garden Greens · 16 oz
+  "050000463671": {
+    ingredients: `Rice, poultry by-product meal, corn protein meal, beef fat preserved with mixed-tocopherols, whole grain corn, soybean meal, natural flavor, ocean fish, salmon, dried yeast, phosphoric acid, calcium carbonate, salt, potassium chloride, choline chloride, dried spinach, parsley flakes, glycine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, null), 3961, 519, "cup"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Medleys · Primavera Style With White Meat Chicken and Accents of Tomato, Carrot and Spinach · 2.7 lb
+  "050000391875": {
+    ingredients: `Poultry by-product meal, whole grain corn, rice, corn protein meal, beef fat preserved with mixed-tocopherols, soybean meal, liver flavor, chicken, phosphoric acid, dried yeast, artificial and natural flavors, calcium carbonate, salt, fish oil, potassium chloride, choline chloride, dried tomatoes, dried carrots, dried spinach, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, null), 3908, 457, "cup"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Medleys · Primavera Style With White Meat Chicken and Accents of Tomato, Carrot and Spinach · 6.5 lb
+  "050000397679": {
+    ingredients: `Poultry by-product meal, whole grain corn, rice, corn protein meal, beef fat preserved with mixed-tocopherols, soybean meal, liver flavor, chicken, phosphoric acid, dried yeast, artificial and natural flavors, calcium carbonate, salt, fish oil, potassium chloride, choline chloride, dried tomatoes, dried carrots, dried spinach, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K)], taurine.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, null), 3908, 457, "cup"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Extra Gravy · Paté With Chicken in Savory Gravy · 5.5 oz
+  "050000168767": {
+    ingredients: `Meat by-products, water, poultry by-products, chicken, fish, artificial and natural flavors, carrageenan, calcium sulfate, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(8, 5, 1, 82, 3.5, 0.05), 1008, 157, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Extra Gravy · Paté With Salmon in Savory Gravy · 5.5 oz
+  "050000168743": {
+    ingredients: `Meat by-products, water, poultry by-products, chicken, salmon, artificial and natural flavors, carrageenan, calcium sulfate, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, taurine, salt, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], choline chloride.`,
+    analysis: withCalories(ga(8, 5, 1, 82, 3.5, 0.05), 993, 154, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Prime Filets · With Beef in Gravy · 5.5 oz
+  "050000215201": {
+    ingredients: `Water, beef, wheat gluten, chicken, meat by-products, liver, soy flour, corn starch-modified, artificial and natural flavors, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], taurine, salt, choline chloride, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(10, 2, 1, 82, 2.8, 0.05), 825, 128, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Gravy Lovers · Chicken Feast Paté in Gravy · 3 oz
+  "050000153558": {
+    ingredients: `Chicken broth, chicken, meat by-products, liver, fish, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, carrageenan, tricalcium phosphate, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(8.5, 4, 1.5, 82, 3.25, 0.05), 976, 83, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Gravy Lovers · Salmon Feast Paté in Gravy · 3 oz
+  "050000180721": {
+    ingredients: `Fish broth, salmon, chicken, meat by-products, liver, glycine, natural and artificial flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, tricalcium phosphate, carrageenan, choline chloride, taurine, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(8.5, 4, 1.5, 82, 3.25, 0.05), 965, 82, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Classic Pâté · Seafood Feast · 3 oz
+  "050000429349": {
+    ingredients: `Ocean fish, meat by-products, liver, fish broth, artificial and natural flavors, tricalcium phosphate, guar gum, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement], salt.`,
+    analysis: withCalories(ga(12, 3.5, 1.5, 78, 3.25, 0.05), 1036, 88, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · Oceanfish With a Shrimp Topper in a Delicate Broth · 1.1 oz
+  "050000001286": {
+    ingredients: `Fish broth, ocean fish, shrimp, guar gum, xanthan gum, celery powder, thiamine mononitrate.`,
+    analysis: withCalories(ga(11, 0.05, 1, 85, null, null), 537, 17, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · Skipjack Tuna With a Sole Topper in a Delicate Broth · 1.1 oz
+  "050000001293": {
+    ingredients: `Fish broth, skipjack tuna, sole, guar gum, xanthan gum, celery powder, thiamine mononitrate.`,
+    analysis: withCalories(ga(12, 0.05, 1, 85, null, null), 533, 17, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · Light Meat Tuna With a Scallop Topper in a Delicate Broth · 1.1 oz
+  "050000001309": {
+    ingredients: `Fish broth, skipjack tuna, scallop, guar gum, xanthan gum, celery powder, thiamine mononitrate.`,
+    analysis: withCalories(ga(12, 0.05, 1, 85, null, null), 558, 17, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · Wild Alaskan Salmon in a Delicate Broth · 1.1 oz
+  "050000001316": {
+    ingredients: `Fish broth, salmon, guar gum, xanthan gum, celery powder, thiamine mononitrate.`,
+    analysis: withCalories(ga(11, 0.5, 1, 86, null, null), 557, 17, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · Flaked Tongol Tuna in a Savory Broth · 1.1 oz
+  "050000002689": {
+    ingredients: `Tuna broth, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).`,
+    analysis: withCalories(ga(12, 0.05, 1, 85, null, null), 548, 17, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · White Meat Chicken and Flaked Tuna in a Savory Broth · 1.1 oz
+  "050000002696": {
+    ingredients: `Chicken and tuna broth, chicken, tuna, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).`,
+    analysis: withCalories(ga(12, 0.05, 1, 85, null, null), 525, 16, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Appetizers · White Meat Chicken and Shredded Beef in a Savory Broth · 1.1 oz
+  "050000002702": {
+    ingredients: `Chicken broth, chicken, beef, guar gum, xanthan gum, celery powder, thiamine mononitrate (Vitamin B-1).`,
+    analysis: withCalories(ga(12, 0.05, 1, 86, null, null), 588, 18, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Purely · Natural Tender Tongol Tuna Entrée in a Delicate Broth · 2 oz
+  "050000004522": {
+    ingredients: `Tongol tuna, fish broth, skipjack tuna, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, manganese sulfate, copper sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].`,
+    analysis: withCalories(ga(15.5, 2, 0.5, 82, null, null), 843, 48, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Purely · Natural Flaked Skipjack Tuna Entrée in a Delicate Broth · 2 oz
+  "050000004584": {
+    ingredients: `Skipjack tuna, fish broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, celery powder, choline chloride, salt, xanthan gum, taurine, MINERALS [zinc sulfate, ferrous sulfate, magnesium sulfate, copper sulfate, manganese sulfate, potassium iodide], VITAMINS [thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin B-12 supplement].`,
+    analysis: withCalories(ga(15.5, 2, 0.5, 82, null, null), 873, 49, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Purely · Natural White Meat Chicken Entrée in a Delicate Broth · 2 oz
+  "050000004591": {
+    ingredients: `Chicken, chicken broth, sunflower seed oil, calcium lactate, tricalcium phosphate, guar gum, choline chloride, salt, taurine, MINERALS [zinc sulfate, magnesium sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide, sodium selenite], potassium chloride, xanthan gum, VITAMINS [niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), Vitamin E supplement, calcium pantothenate (Vitamin B-5), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin B-12 supplement].`,
+    analysis: withCalories(ga(14.5, 2, 0.5, 82, null, null), 849, 48, "tray"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Savory Cravings · Salmon Flavor · 1 oz
+  "050000002627": {
+    ingredients: `Liver Flavor, Beef Fat Preserved With Mixed-Tocopherols, Partially Hydrogenated Vegetable Oil, Brewers Dried Yeast, Natural Salmon Flavor.`,
+    analysis: withCalories(ga(23, 53, 11, 6, null, null), 6443, 3.3, "piece"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Savory Cravings · Tuna Flavor · 1 oz
+  "050000002986": {
+    ingredients: `Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, tuna flavor.`,
+    analysis: withCalories(ga(23, 53, 11, 6, null, null), 6439, 3.6, "piece"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Gravy Lovers · Beef Feast Paté in Gravy · 3 oz
+  "050000144396": {
+    ingredients: `Beef broth, beef, meat by-products, liver, fish, glycine, natural and artificial flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], guar gum, tricalcium phosphate, carrageenan, taurine, choline chloride, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(8.5, 4, 1.5, 82, 3.25, 0.05), 909, 77, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Gravy Lovers · Ocean Whitefish & Tuna Feast Paté in Gravy · 3 oz
+  "050000161560": {
+    ingredients: `Fish broth, ocean whitefish, chicken, meat by-products, liver, tuna, artificial and natural flavors, MINERALS [potassium chloride, magnesium proteinate, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], tricalcium phosphate, guar gum, carrageenan, choline chloride, taurine, salt, VITAMINS [thiamine mononitrate (Vitamin B-1), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withCalories(ga(8.5, 4, 1.5, 82, 3.25, 0.05), 884, 75, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Senior 7+ · Minced Chicken Feast in Gravy · 3 oz
+  "050000503889": {
+    ingredients: `Chicken broth, chicken, wheat gluten, meat by-products, liver, turkey, corn starch-modified, soy flour, salt, glycine, natural flavor, taurine, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], choline chloride, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withExtras(withCalories(ga(12, 2, 1.5, 79, 3, 0.07), 909, 77, "can"), [
+      ["Vitamin E", "min", 40, "IU/kg"],
+    ]),
+    verifiedAt: VERIFIED_030,
+  },
+  // Senior 7+ · Minced Tuna Feast in Gravy · 3 oz
+  "050000503865": {
+    ingredients: `Fish broth, tuna, wheat gluten, chicken, meat by-products, liver, corn starch-modified, soy flour, salt, glycine, natural flavor, tricalcium phosphate, taurine, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, potassium iodide], choline chloride, VITAMINS [Vitamin E supplement, thiamine mononitrate (Vitamin B-1), niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), Vitamin A supplement, menadione sodium bisulfite complex (Vitamin K), pyridoxine hydrochloride (Vitamin B-6), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, biotin (Vitamin B-7), folic acid (Vitamin B-9), Vitamin D-3 supplement].`,
+    analysis: withExtras(withCalories(ga(12, 2, 1.5, 79, 3, 0.07), 877, 74, "can"), [
+      ["Vitamin E", "min", 40, "IU/kg"],
+    ]),
+    verifiedAt: VERIFIED_030,
+  },
+  // Creamy Delights · Chicken Feast With a Touch of Real Milk · 3 oz
+  "050000168200": {
+    ingredients: `Chicken, Liver, Meat By-Products, Poultry Broth, Fish, Milk, Artificial And Natural Flavors, Added Color, Guar Gum, Tricalcium Phosphate, Potassium Chloride, Salt, Magnesium Sulfate, Mono And Dicalcium Phosphate, Taurine, Zinc Sulfate, Thiamine Mononitrate, Vitamin E Supplement, Ferrous Sulfate, Niacin, Copper Sulfate, Manganese Sulfate, Calcium Pantothenate, Vitamin A Supplement, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement, Potassium Iodide.`,
+    analysis: withCalories(ga(9, 6, 1.5, 78, 3.25, 0.05), 1340, 114, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Creamy Delights · Salmon Feast With a Touch of Real Milk · 3 oz
+  "050000168224": {
+    ingredients: `Salmon, Liver, Meat By-Products, Fish Broth, Fish, Turkey, Milk, Artificial And Natural Flavors, Tricalcium Phosphate, Added Color, Guar Gum, Potassium Chloride, Salt, Taurine, Magnesium Sulfate, Mono And Dicalcium Phosphate, Red 3, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Niacin, Calcium Pantothenate, Copper Sulfate, Vitamin A Supplement, Manganese Sulfate, Menadione Sodium Bisulfite Complex (Vitamin K), Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin B-12 Supplement, Biotin, Folic Acid, Vitamin D-3 Supplement, Potassium Iodide.`,
+    analysis: withCalories(ga(11, 4, 1.5, 78, 3.5, 0.05), 1237, 105, "can"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Savory Cravings · Beef Flavor · 1 oz
+  "050000002559": {
+    ingredients: `Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast.`,
+    analysis: withCalories(ga(23, 53, 11, 6, null, null), 6456, 3.3, "piece"),
+    verifiedAt: VERIFIED_030,
+  },
+  // Savory Cravings · Beef & Crab Flavor · 1 oz
+  "050000002573": {
+    ingredients: `Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, crab flavor.`,
+    analysis: withCalories(ga(23, 53, 11, 6, null, null), 6443, 3.3, "piece"),
+    verifiedAt: VERIFIED_030,
   },
 };

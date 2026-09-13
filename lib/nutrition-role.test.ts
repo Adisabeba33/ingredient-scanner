@@ -54,11 +54,38 @@ describe("detectNutritionRole", () => {
   // nobody was ever going to feed as dinner. "Whole Loin" loses the word
   // "Treat" that Reveal's full product name carries, because the fish becomes
   // the variant.
+  // Mars prints "Cat Meal Complement" on the front where the AAFCO sentence is
+  // in the small print, so a photographed front may carry only this one. Tight
+  // enough not to catch a complete food that calls itself the perfect
+  // complement to a meal — the Cesar trap, in the next test down.
+  it("reads a meal complement as complementary", () => {
+    expect(
+      detectNutritionRole({
+        claims: ["Cat Meal Complement"],
+        parts: ["Sheba", "Selections", "Chicken Recipe"],
+      })
+    ).toBe("complementary");
+    // And from the seed, which carries no claims at all.
+    expect(
+      detectNutritionRole({ parts: ["Sheba", "Selections Filets in Broth", "Chicken Recipe"] })
+    ).toBe("complementary");
+    // The rest of the brand is dinner and must stay dinner.
+    expect(detectNutritionRole({ parts: ["Sheba", "Perfect Portions", "Roasted Chicken"] })).toBe(
+      "unknown"
+    );
+  });
+
   it("reads Reveal's snack ranges as snacks", () => {
     expect(
       detectNutritionRole({ parts: ["Reveal", "Bone Broth", "Chicken Bone Broth with Chicken Breast"] })
     ).toBe("treat");
     expect(detectNutritionRole({ parts: ["Reveal", "Whole Loin", "Salmon"] })).toBe("treat");
+    // Sheba's, named in its brief in advance as the thing that would go wrong
+    // on that brand. Forty dried sticks, and not one of the words this
+    // detector looks for.
+    expect(
+      detectNutritionRole({ parts: ["Sheba", "Meaty Tender Sticks", "Salmon, Tuna & Chicken"] })
+    ).toBe("treat");
   });
 
   // The bug I nearly shipped. Cesar's "Loaf & Topper in Sauce" is complete and

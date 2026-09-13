@@ -92,6 +92,10 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Roasted",
       "Marinated Morsels",
       "Sliced",
+      // Batch 030. "Minced" is its own range on the tin, beside Sliced and
+      // Flaked — the same word is also a `texture` value, and they are not the
+      // same thing: a Medleys tin can be minced without being a Minced.
+      "Minced",
       "Gems",
       "Purely",
       "Petites",
@@ -298,7 +302,24 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Sheba",
     owner: "Mars",
     species: "cat",
-    lines: ["Perfect Portions", "Filets", "Bistro", "Meaty Tender Sticks"],
+    aliases: ["sheba us", "mars petcare us"],
+    // Batch 032 replaced three of the four shelf-memory names with what the
+    // current US packs print, which is what this list is for.
+    //
+    // "Filets" on its own turned out to be too broad: the printed family is
+    // "Selections Filets in Broth", and it is a MEAL COMPLEMENT rather than a
+    // dinner — see lib/nutrition-role.ts, which is why the full string matters
+    // here rather than a tidy short name. "Bistro" survives unseeded because
+    // the current all-products page still offers it as a filter; an empty
+    // range costs nothing and a wrong one files real products under "Other".
+    lines: [
+      "Perfect Portions",
+      "Selections Filets in Broth",
+      "Gravy Indulgence",
+      "Kitten",
+      "Meaty Tender Sticks",
+      "Bistro",
+    ],
   },
   {
     name: "Iams",

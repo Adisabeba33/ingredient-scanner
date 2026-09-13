@@ -345,7 +345,17 @@ describe("buildCoverage with the seeded products", () => {
     expect(labels).toContain("Tender Liver & Chicken Feast");
     expect(classic.filled).toBe(1);
     // Every seeded Classic Pâté except the one that was scanned.
-    expect(classic.known).toBe(9);
+    //
+    // Counted from the seed rather than written as a number. It was `9`, which
+    // was true for eight batches and stopped being true the moment batch 030
+    // added two Classic Pâté tins — and the failure says "expected 11 to be 9",
+    // which reads like a bug in the merge this test is about rather than like
+    // a catalog that grew. The subject here is that a scanned flavour absorbs
+    // exactly one seeded product, and that is what the arithmetic says.
+    const seededClassic = KNOWN_PRODUCTS.filter(
+      (p) => p.brand === "Fancy Feast" && p.line === "Classic Pâté"
+    ).length;
+    expect(classic.known).toBe(seededClassic - 1);
   });
 
   // The three that sit side by side on a real Fancy Feast shelf.
