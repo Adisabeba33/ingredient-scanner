@@ -20,6 +20,7 @@ import { isUsableIngredients } from "@/lib/ingredients-text";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { detectNutritionRole } from "@/lib/nutrition-role";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
+import { readLifeStage } from "@/lib/life-stage";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import {
   detectFormFromName,
@@ -67,6 +68,16 @@ interface VerifiedRow {
   nutrition_role: string | null;
   /** A vet-channel therapeutic diet, which the everyday standard misjudges. */
   requires_vet: boolean | null;
+  /**
+   * The AAFCO statement VERBATIM. Stored rather than merely consumed: it is the
+   * source of both `nutrition_role` and `life_stage`, so keeping it means a
+   * better parser can be re-run over the catalog instead of over the shelf.
+   */
+  feeding_statement: string | null;
+  /** Growth, maintenance, all life stages — read from the sentence above. */
+  life_stage: string | null;
+  /** Whether that sentence includes or excludes growth of large-size dogs. */
+  life_stage_large_breed: string | null;
   /** Moisture % off the guaranteed analysis, when it was legible. */
   moisture_percent: number | null;
   /** The whole Guaranteed Analysis panel as printed — null when none was read. */
@@ -382,6 +393,10 @@ async function handle(req: Request) {
     parts: [extraction.brands, extraction.product_name],
   });
   const requiresVet = isVeterinaryDiet(extraction.brands, extraction.product_name);
+  // The other half of the same sentence. `detectNutritionRole` above asks it
+  // whether this is dinner; this asks it whose dinner. Both answers were always
+  // in the photograph — only the first was being kept.
+  const lifeStage = readLifeStage(extraction.feeding_statement);
   const now = new Date().toISOString();
   const rows: VerifiedRow[] = writable.map((code) => ({
     code,
@@ -401,6 +416,10 @@ async function handle(req: Request) {
     // being a balanced diet, which no treat has ever claimed to be.
     nutrition_role: mode === "pet" ? nutritionRole : null,
     requires_vet: mode === "pet" ? requiresVet : null,
+    feeding_statement: mode === "pet" ? extraction.feeding_statement : null,
+    life_stage: mode === "pet" && lifeStage ? lifeStage.stage : null,
+    life_stage_large_breed:
+      mode === "pet" && lifeStage ? lifeStage.largeBreedGrowth : null,
     moisture_percent: mode === "pet" ? extraction.moisture_percent : null,
     // Pet food only: the Guaranteed Analysis is an AAFCO panel and human packs
     // carry a different one, read elsewhere. Null rather than an object of
@@ -423,21 +442,35 @@ async function handle(req: Request) {
     .from("barcode_cache")
     .upsert(rows, { onConflict: "code" })
     .select("code");
-  // The columns from ingredients.help migration 0024, on a database that hasn't
-  // had it run yet. Store the product without them rather than losing a capture
+  // Columns from ingredients.help migrations that may not have been run on this
+  // database yet. Store the product without them rather than losing a capture
   // that has already been photographed, uploaded and paid for — see
   // lib/optional-columns.ts.
-  if (error && isUndefinedColumn(error)) {
+  //
+  // Dropped NEWEST FIRST, one migration at a time, because a database is behind
+  // by a migration far more often than by three. Dropping everything optional
+  // on the first failure would throw away `nutrition_role` on a database that
+  // has had 0024 for months and is merely missing 0026.
+  const OPTIONAL_COLUMN_SETS = [
+    // 0026 — the feeding statement and the life stage read out of it.
+    ["feeding_statement", "life_stage", "life_stage_large_breed"],
+    // 0024 — is it dinner, and is it a veterinary diet.
+    ["nutrition_role", "requires_vet"],
+  ];
+  let dropped: string[] = [];
+  for (const set of OPTIONAL_COLUMN_SETS) {
+    if (!error || !isUndefinedColumn(error)) break;
+    dropped = [...dropped, ...set];
     const retry = await admin
       .from("barcode_cache")
-      .upsert(withoutColumns(rows, ["nutrition_role", "requires_vet"]), {
-        onConflict: "code",
-      })
+      .upsert(withoutColumns(rows, dropped), { onConflict: "code" })
       .select("code");
     if (!retry.error) {
       written = retry.data;
       error = null;
+      break;
     }
+    error = retry.error;
   }
   if (error) {
     return Response.json(
