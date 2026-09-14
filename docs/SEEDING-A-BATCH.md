@@ -8,6 +8,10 @@ Eighteen batches, 247 products under 282 barcodes, all with formulas, have gone
 through this. Everything below is what was actually done, including the parts
 that were got wrong first.
 
+**Which brand next** is a separate question with its own answer:
+[SHELF-PRIORITY.md](SHELF-PRIORITY.md) ranks the unseeded brands by how likely a
+shopper in a PetSmart, Petco or Tractor Supply aisle is to be holding the pack.
+
 ---
 
 ## 0. The shape of it
