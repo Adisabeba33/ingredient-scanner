@@ -47,7 +47,7 @@ row in the catalog.
 
 | # | Brand | Species | Where | Why it is here |
 |---|-------|---------|-------|----------------|
-| 1 | **Pro Plan** | both | PetSmart, Petco, TSC | The premium bag at all three chains at once. The single biggest hole in the catalog. |
+| 1 | **Pro Plan** | both | PetSmart, Petco, TSC | The premium bag at all three chains at once. The single biggest hole in the catalog. **Brief written:** `research/BRIEF-PRO-PLAN.md`. |
 | 2 | **Pedigree** | dog | TSC, Walmart, grocery | Highest-volume dog food in the US by units. Not at Petco (artificial). |
 | 3 | **Sheba** | cat | PetSmart, TSC, grocery | **Already half-done** — 19 boxes seeded, zero formulas. Cheapest tier-1 win. |
 | 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. |
