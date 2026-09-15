@@ -12,6 +12,11 @@ that were got wrong first.
 [SHELF-PRIORITY.md](SHELF-PRIORITY.md) ranks the unseeded brands by how likely a
 shopper in a PetSmart, Petco or Tractor Supply aisle is to be holding the pack.
 
+**Before starting any campaign**, check the session can actually reach the
+sources: [RESEARCH-EGRESS.md](RESEARCH-EGRESS.md). A campaign run against a
+blocked egress policy produces `candidate` records and a clean checker run,
+which looks like success and is not.
+
 ---
 
 ## 0. The shape of it
