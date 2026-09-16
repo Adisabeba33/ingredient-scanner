@@ -1,7 +1,13 @@
 import { sanitizeBarcode, canonicalBarcode } from "@/lib/barcode";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { classifyMiss } from "@/lib/miss-verdict";
-import { isHit, outcomeOf, type ScanOutcome } from "@/lib/scan-test";
+import {
+  isHit,
+  outcomeOf,
+  reachProblem,
+  resolveConsumerUrl,
+  type ScanOutcome,
+} from "@/lib/scan-test";
 
 /**
  * One barcode, asked the way a shopper's phone asks it.
@@ -49,10 +55,14 @@ export const runtime = "nodejs";
  * Configurable because a staging deploy has to be testable against its own
  * catalog, and defaulted because the overwhelmingly common case is production
  * and an unset variable should not silently report a 0% hit rate.
+ *
+ * Resolved through `resolveConsumerUrl` rather than a bare `??`, and the note
+ * on that function explains why at length: a variable that exists and is
+ * EMPTY slips through `??`, and the relative URL it leaves behind fails inside
+ * `fetch` as a bare `TypeError` — which reads, from an aisle, exactly like the
+ * site being down.
  */
-const CONSUMER_URL = (
-  process.env.CONSUMER_APP_URL ?? "https://ingredients.help"
-).replace(/\/+$/, "");
+const CONSUMER = resolveConsumerUrl(process.env.CONSUMER_APP_URL);
 
 /**
  * Somebody is standing in an aisle holding a can.
@@ -77,6 +87,20 @@ export async function POST(req: Request) {
   const auth = checkAdmin(req);
   if (!auth.ok) return adminRefusal(auth);
 
+  // Misconfiguration is its own answer, not a failed lookup. Saying so before
+  // anything is scanned saves somebody re-scanning a shelf to prove it.
+  if (!CONSUMER.url) {
+    return Response.json(
+      {
+        error: "consumer_not_configured",
+        message: CONSUMER.problem,
+        askedAt: null,
+      },
+      { status: 500 }
+    );
+  }
+  const consumerUrl = CONSUMER.url;
+
   let body: { code?: unknown };
   try {
     body = await req.json();
@@ -97,7 +121,7 @@ export async function POST(req: Request) {
       name: null,
       source: null,
       miss: classifyMiss(typeof body.code === "string" ? body.code : ""),
-      askedAt: CONSUMER_URL,
+      askedAt: consumerUrl,
       unreadable: true,
     });
   }
@@ -108,7 +132,7 @@ export async function POST(req: Request) {
   let reachError: string | null = null;
   try {
     const res = await fetch(
-      `${CONSUMER_URL}/api/barcode?code=${encodeURIComponent(clean)}`,
+      `${consumerUrl}/api/barcode?code=${encodeURIComponent(clean)}`,
       {
         headers: { Accept: "application/json" },
         // The catalog is editable and a miss becomes a hit the moment somebody
@@ -131,8 +155,16 @@ export async function POST(req: Request) {
   if (reachError) {
     // Refused rather than counted. A run that silently scores an unreachable
     // app at 0% would be the most misleading output this tool could produce.
+    //
+    // The message names the address and what kind of failure it was, because
+    // the person reading it is holding a tin in a shop and "TypeError" tells
+    // them nothing they can act on.
     return Response.json(
-      { error: "consumer_unreachable", message: reachError, askedAt: CONSUMER_URL },
+      {
+        error: "consumer_unreachable",
+        message: reachProblem(reachError, consumerUrl),
+        askedAt: consumerUrl,
+      },
       { status: 502 }
     );
   }
@@ -150,6 +182,6 @@ export async function POST(req: Request) {
     // The seed's opinion, and only where it decides something: for a code the
     // app already serves there is nothing to do and a verdict would be noise.
     miss: isHit(outcome) ? null : classifyMiss(clean),
-    askedAt: CONSUMER_URL,
+    askedAt: consumerUrl,
   });
 }

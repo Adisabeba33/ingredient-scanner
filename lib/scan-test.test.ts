@@ -3,8 +3,11 @@ import {
   addScan,
   isHit,
   outcomeOf,
+  reachProblem,
+  resolveConsumerUrl,
   summarise,
   toTsv,
+  DEFAULT_CONSUMER_URL,
   type ScanOutcome,
   type TestScan,
 } from "./scan-test";
@@ -172,5 +175,53 @@ describe("toTsv", () => {
       "",
       "1",
     ]);
+  });
+});
+
+describe("resolveConsumerUrl", () => {
+  // The bug this function exists for. `??` falls through on null and undefined
+  // only, so a dashboard entry left blank passes an empty string straight
+  // through, fetch is handed a relative path, and the TypeError it throws
+  // reads from an aisle exactly like the site being down.
+  it("treats a variable that exists and is empty as unset", () => {
+    expect(resolveConsumerUrl("").url).toBe(DEFAULT_CONSUMER_URL);
+    expect(resolveConsumerUrl("   ").url).toBe(DEFAULT_CONSUMER_URL);
+    expect(resolveConsumerUrl(undefined).url).toBe(DEFAULT_CONSUMER_URL);
+    expect(resolveConsumerUrl(null).url).toBe(DEFAULT_CONSUMER_URL);
+  });
+
+  it("keeps a staging address, without its trailing slashes", () => {
+    expect(resolveConsumerUrl("https://staging.example.com/").url).toBe(
+      "https://staging.example.com"
+    );
+    expect(resolveConsumerUrl("  https://staging.example.com///  ").url).toBe(
+      "https://staging.example.com"
+    );
+  });
+
+  it("refuses an address with no scheme, and says what is missing", () => {
+    const target = resolveConsumerUrl("ingredients.help");
+    expect(target.url).toBeNull();
+    // The message has to name the fix: this is read by somebody in a shop.
+    expect(target.problem).toContain("https://");
+  });
+
+  it("refuses a scheme nothing can be fetched over", () => {
+    expect(resolveConsumerUrl("ftp://ingredients.help").url).toBeNull();
+    expect(resolveConsumerUrl("file:///etc/passwd").url).toBeNull();
+  });
+});
+
+describe("reachProblem", () => {
+  it("tells a dead address apart from a slow one", () => {
+    // Opposite meanings, opposite fixes. The error name told neither.
+    expect(reachProblem("TypeError", "https://x.test")).toContain("Could not connect");
+    expect(reachProblem("TimeoutError", "https://x.test")).toContain("did not answer in time");
+  });
+
+  it("always names the address that was tried", () => {
+    for (const name of ["TypeError", "TimeoutError", "AbortError", "SomethingElse"]) {
+      expect(reachProblem(name, "https://x.test")).toContain("https://x.test");
+    }
   });
 });

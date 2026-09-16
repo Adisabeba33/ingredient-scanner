@@ -258,3 +258,79 @@ export function toTsv(run: TestScan[]): string {
   }
   return rows.join("\n");
 }
+
+/**
+ * Where the shopper's app lives, decided from the environment.
+ *
+ * ── Why this is a function with rules rather than one `??` ────────────────
+ *
+ * It used to be
+ *
+ *     (process.env.CONSUMER_APP_URL ?? "https://ingredients.help")
+ *
+ * and that has a hole big enough to lose an afternoon in. `??` falls through
+ * on null and undefined ONLY — an environment variable that EXISTS and is
+ * EMPTY passes straight through it. A hosting dashboard where somebody added
+ * the key and left the value blank, or pasted a file with a trailing
+ * `CONSUMER_APP_URL=`, produces exactly that.
+ *
+ * The empty string then survives `.replace(/\/+$/, "")`, and the fetch is
+ * handed `/api/barcode?code=…` — a relative path, which `fetch` in Node
+ * cannot parse. It throws `TypeError`, the route catches it as "could not
+ * reach the consumer app", and somebody standing in an aisle with a tin in
+ * their hand reads `consumer_unreachable — TypeError` and has no way to tell
+ * that the app was never asked anything at all.
+ *
+ * So: blank is unset, the result must be an absolute http(s) URL, and a value
+ * that is neither is reported as its own kind of failure rather than left to
+ * surface as a parse error from inside `fetch`.
+ */
+export interface ConsumerTarget {
+  /** The base URL to ask, with any trailing slashes removed. Null when unusable. */
+  url: string | null;
+  /** Why it is unusable, in words that name the fix. */
+  problem: string | null;
+}
+
+export const DEFAULT_CONSUMER_URL = "https://ingredients.help";
+
+export function resolveConsumerUrl(raw: string | undefined | null): ConsumerTarget {
+  const trimmed = (raw ?? "").trim();
+  // Set-but-blank is the case `??` cannot see. Treated as unset, which is
+  // what whoever left it blank meant.
+  const candidate = trimmed === "" ? DEFAULT_CONSUMER_URL : trimmed;
+
+  let parsed: URL;
+  try {
+    parsed = new URL(candidate);
+  } catch {
+    return {
+      url: null,
+      problem: `CONSUMER_APP_URL is not a URL: "${candidate}". It needs the scheme too — https://example.com, not example.com.`,
+    };
+  }
+  if (parsed.protocol !== "https:" && parsed.protocol !== "http:") {
+    return {
+      url: null,
+      problem: `CONSUMER_APP_URL must be http or https, not ${parsed.protocol}`,
+    };
+  }
+  return { url: candidate.replace(/\/+$/, ""), problem: null };
+}
+
+/**
+ * What went wrong reaching the app, in words rather than a JS error name.
+ *
+ * `TypeError` and `TimeoutError` mean opposite things — nothing answered at
+ * this address, versus something is there and is too slow — and they lead to
+ * different fixes. Printing the constructor name told the reader neither.
+ */
+export function reachProblem(errorName: string, url: string): string {
+  if (errorName === "TimeoutError" || errorName === "AbortError") {
+    return `${url} did not answer in time. It is reachable but slow, or the lookup is hanging.`;
+  }
+  if (errorName === "TypeError") {
+    return `Could not connect to ${url} at all — check the address is right and the site is up.`;
+  }
+  return `${url} — ${errorName}`;
+}

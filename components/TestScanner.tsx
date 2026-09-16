@@ -112,6 +112,8 @@ interface ProbeResponse {
   miss?: MissClassification | null;
   error?: string;
   message?: string;
+  /** Which app was asked. Shown on failure — see the error box below. */
+  askedAt?: string | null;
 }
 
 /** Loud, and readable at arm's length. Colour carries the same answer as the word. */
@@ -144,6 +146,15 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
   const [busy, setBusy] = useState(false);
   const [last, setLast] = useState<TestScan | null>(null);
   const [error, setError] = useState<string | null>(null);
+  /**
+   * The address the desk tried, kept beside the error.
+   *
+   * A lookup failure has two completely different causes that read the same
+   * from a shop aisle — the shopper's app is down, or this scanner was never
+   * told where it lives — and the address separates them at a glance. Without
+   * it the only honest next step is to walk out and open a laptop.
+   */
+  const [errorAt, setErrorAt] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
   /** Set once the stored runs have been read, so an empty first render cannot save over them. */
@@ -249,6 +260,7 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
     async (code: string) => {
       setBusy(true);
       setError(null);
+      setErrorAt(null);
       try {
         const res = await fetch("/api/scan-test", {
           method: "POST",
@@ -262,11 +274,8 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
         if (!res.ok) {
           // Nothing is recorded on a failure. A run that counted an
           // unreachable app as a miss would be worse than no run at all.
-          setError(
-            data.message
-              ? `${data.error ?? "Lookup failed"} — ${data.message}`
-              : (data.error ?? "Lookup failed.")
-          );
+          setError(data.message ?? data.error ?? "Lookup failed.");
+          setErrorAt(data.askedAt ?? null);
           return;
         }
         record({
@@ -363,6 +372,7 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
               setMode(value);
               setLast(null);
               setError(null);
+              setErrorAt(null);
               setScanning(false);
               if (value === "brand" && !brand) setPicking(true);
             }}
@@ -566,6 +576,7 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
           onClick={() => {
             setScanning(true);
             setError(null);
+            setErrorAt(null);
           }}
           className="flex h-12 items-center justify-center gap-2 rounded-input bg-ink text-[14px] font-medium text-white"
         >
@@ -584,6 +595,11 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
       {error && (
         <div className="rounded-input border border-amber bg-amber-soft px-3 py-2.5 text-[12.5px] leading-snug text-ink">
           {error}
+          {errorAt && (
+            <span className="mt-1 block break-all font-mono text-[11px] text-muted">
+              asked: {errorAt}
+            </span>
+          )}
           <span className="mt-0.5 block text-[11.5px] text-muted">
             Nothing was added to the run.
           </span>
