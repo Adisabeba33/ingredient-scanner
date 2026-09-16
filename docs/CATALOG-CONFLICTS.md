@@ -18,8 +18,13 @@ their own website, and a retailer's listing describe the same barcode
 differently — which happens constantly, because a formula changes while a
 barcode does not.
 
-Last updated: 2026-08-14, after batch 018. 282 barcodes across 247 products,
-99 with a conflict note, 10 of those needing a physical pack.
+Last updated: 2026-09-13, after batch 032. 1234 barcodes in
+`data/known-formulas.ts`, 237 of them carrying a conflict note — both counted
+from the data rather than kept by hand, which is why the earlier line drifted
+fourteen batches behind the sections below it. Two figures from batch 018 are
+not recounted here: how many conflicts still need a physical pack (10 then),
+and the product count, which the file cannot answer because it is keyed by
+barcode and one product wears several.
 
 Two makers: Nestlé Purina (200 barcodes) and Hill's (82). Two food forms since
 batch 017, which brought the first dry food and the first treats — and with them
