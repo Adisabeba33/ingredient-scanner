@@ -1,7 +1,7 @@
 # Catalog Scanner
 
 An admin-only, mobile-first capture tool for building the **verified pet-food
-catalog** behind [ingredients.help](https://ingredients.help). Walk a pet store,
+catalog** behind [ingredient.help](https://ingredient.help). Walk a pet store,
 scan barcodes and snap label photos fast, then process the batch on wifi — each
 product's exact ingredient list is read by Claude vision and written into the
 **same Supabase** the consumer app reads, so a shopper who scans any of those

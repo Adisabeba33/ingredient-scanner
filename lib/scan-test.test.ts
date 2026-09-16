@@ -1,4 +1,6 @@
 import { describe, expect, it } from "vitest";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import {
   addScan,
   isHit,
@@ -223,5 +225,34 @@ describe("reachProblem", () => {
     for (const name of ["TypeError", "TimeoutError", "AbortError", "SomethingElse"]) {
       expect(reachProblem(name, "https://x.test")).toContain("https://x.test");
     }
+  });
+});
+
+/**
+ * The guard for the failure that sent somebody home from a shop.
+ *
+ * `DEFAULT_CONSUMER_URL` was written in the plural, from this repository's
+ * name — `ingredients.help` — and the deployed site is singular. That address
+ * resolves to nothing, so every scan in Test Mode failed at DNS and reported
+ * the shopper's app as unreachable, which is true and useless: the app was
+ * fine and had never been asked.
+ *
+ * Nothing could have caught it here, because the fact lives in the other
+ * repository. So this reads it from there, the same way
+ * `Ingredients.help/tests/shared-modules.test.ts` reads this one, and skips
+ * cleanly when the sibling is not checked out — CI without it loses the check,
+ * not the build.
+ */
+describe("the consumer app's address", () => {
+  const ENV_EXAMPLE = join(__dirname, "..", "..", "Ingredients.help", ".env.example");
+  const present = existsSync(ENV_EXAMPLE);
+
+  it.skipIf(!present)("matches the domain the app documents for itself", () => {
+    const text = readFileSync(ENV_EXAMPLE, "utf8");
+    // Commented out in that file — it is only set for a custom domain — so the
+    // leading `#` is part of what is being read, not a reason to ignore it.
+    const found = text.match(/^\s*#?\s*NEXT_PUBLIC_SITE_URL\s*=\s*(\S+)\s*$/m);
+    expect(found, "NEXT_PUBLIC_SITE_URL is not documented in the app's .env.example").not.toBeNull();
+    expect(DEFAULT_CONSUMER_URL).toBe(found![1].replace(/\/+$/, ""));
   });
 });

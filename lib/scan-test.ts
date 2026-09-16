@@ -292,7 +292,20 @@ export interface ConsumerTarget {
   problem: string | null;
 }
 
-export const DEFAULT_CONSUMER_URL = "https://ingredients.help";
+/**
+ * The shopper's app, as it is actually deployed.
+ *
+ * SINGULAR — `ingredient.help`, not `ingredients.help`. The repository is
+ * named in the plural and this default was written from the repository name,
+ * which resolves to nothing: `fetch` fails at DNS, throws TypeError, and every
+ * scan in Test Mode comes back "consumer_unreachable" from a shop aisle with
+ * no hint that the address itself is wrong.
+ *
+ * The app's own `.env.example` is the authority here (`NEXT_PUBLIC_SITE_URL`),
+ * and the test below reads it, so the two cannot drift apart again while both
+ * repositories are checked out.
+ */
+export const DEFAULT_CONSUMER_URL = "https://ingredient.help";
 
 export function resolveConsumerUrl(raw: string | undefined | null): ConsumerTarget {
   const trimmed = (raw ?? "").trim();
