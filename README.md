@@ -94,6 +94,48 @@ Capture used to be write-only, which meant a row that looked wrong in the
 consumer app left you guessing whether a correction had landed, gone to a
 different barcode, or never run.
 
+## Test Mode — measuring, and finding what to seed next
+
+A third desk beside Full and Express, and the only one that captures nothing.
+It scans a code, asks the consumer app the way a shopper's phone asks it
+(`GET /api/barcode`), and shows one word: answered, or not. There is no second
+implementation of "would this serve" here — whatever that endpoint returns *is*
+what the shopper would get.
+
+Two walks, answering different questions.
+
+**Whole aisle** is the measurement. Scan everything in front of you and get the
+hit rate: the fraction of a real shelf the app answers. That number exists
+nowhere else — the coverage page counts what we chose to research and the miss
+list counts what shoppers happened to scan, and neither is a sample of a shelf.
+Two rates are shown, not one: what the shopper gets, and how much of it is
+ours. An app scoring 70% on somebody else's database is one outage from zero.
+
+**One brand** is the errand that comes next. Pick the shelf strip you are
+standing at — Fancy Feast, Orijen — walk it end to end, and come home with the
+list of *that brand's* barcodes that are not in our catalog. This is the input
+[`docs/SEEDING-A-BATCH.md`](docs/SEEDING-A-BATCH.md) needs, and nothing could
+produce it before: an aisle's misses are scattered across every maker in it,
+and **a miss carries no brand of its own** — nobody holds the code, so nothing
+can say whose it is. The GS1 prefix names only the parent, and under a Fancy
+Feast tin that reads "Nestlé Purina", same as Friskies and Pro Plan.
+
+The person holding the tin knows. That observation exists nowhere else in the
+system and cannot be recovered from the digits afterwards, so the chosen brand
+is stored with the code as evidence. The one way it goes wrong is a tin in the
+wrong place, and where the app *does* name a brand the two are compared and the
+disagreement shown while the tin is still in your hand.
+
+A brand walk keeps adding up across shops and visits, where an aisle run does
+not: "of every Fancy Feast barcode I have met in a real shop, how many do we
+answer" wants Petco and PetSmart and the corner place together, and
+deduplication by code makes the union honest. **Copy run** gives a TSV with the
+observed brand in its own column, ready to paste into a research brief.
+
+The picker lists all 172 seeded brands with what we already hold under each,
+including the ones at zero — those are the untouched sections, and they are the
+ones worth walking. Reasoning lives in `lib/brand-walk.ts`.
+
 ## Corrections
 
 Users can't change a verified row — a shopper's photo that disagrees with one is

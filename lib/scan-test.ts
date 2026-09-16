@@ -138,6 +138,20 @@ export interface TestScan {
   outcome: ScanOutcome;
   /** What the app called it, where it named anything. */
   name: string | null;
+  /**
+   * The brand the app named, kept apart from `name` on purpose.
+   *
+   * A brand walk (lib/brand-walk.ts) compares it against the shelf the
+   * operator says they are standing at, and a stray tin is only catchable
+   * while the two are separate facts. Folded into the display name — as it
+   * was before that walk existed — "Purina Fancy Feast Gravy Lovers Tuna" is
+   * one string that nothing can compare against anything.
+   *
+   * Optional because runs written before this field exist in browsers that
+   * will reopen them, and an aisle walk in progress should survive the update
+   * rather than be discarded for missing a column it never needed.
+   */
+  answeredBrand?: string | null;
   /** Which database answered, for a hit. */
   source: string | null;
   /** What the seed says about a code the app could not serve. */
