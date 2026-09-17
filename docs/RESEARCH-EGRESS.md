@@ -63,7 +63,15 @@ bluebuffalo.com
 wellnesspetfood.com, instinctpetfood.com, merrickpetcare.com
 weruva.com, ziwipets.com
 tasteofthewildpetfood.com, diamondpet.com
+orijenpetfoods.com, acana.com, championpetfoods.com
 ```
+
+`championpetfoods.com` carries the maker-level material for **both** Orijen and
+Acana, and `data/manufacturers.ts` has no Champion entry — so that one host
+unblocks two brand pages rather than one. `acana.com` is here even though Acana
+is not yet briefed: the Orijen campaign has to be able to open an Acana page to
+tell the two brands apart, which is most of what `research/BRIEF-ORIJEN.md` §2
+is about.
 
 `mars.com` / `marspetcare.com` are not decoration: `data/manufacturers.ts` in the
 app repository has **no Mars entry at all**, so the five quality criteria for
