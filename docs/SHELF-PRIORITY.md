@@ -118,7 +118,11 @@ Not because they are small, but because they are not on these three shelves.
 34 of the 156 unfilled brands fall here:
 
 - **Chewy and Amazon own-brands** (American Journey, Tiny Tiger, Soulistic,
-  Frisco, Wag) — online only, never on a shelf. 5 brands.
+  Frisco, Wag) — online only, never on a shelf. 5 brands. American Journey is
+  briefed anyway (`research/BRIEF-AMERICAN-JOURNEY.md`): the shelf test is the
+  wrong one for a bag somebody already owns and scans in their own kitchen, and
+  Chewy is folding these labels into one brand, `Chewy Made`, which the seed
+  file does not know about.
 - **Direct-to-consumer fresh** (The Farmer's Dog, Ollie, Nom Nom, Spot & Tango,
   Smalls, Jinx, Maev, Sundays, Cat Person, Wild Earth, Raised Right,
   Life's Abundance, A Pup Above, JustFoodForDogs) — subscription, no aisle.
