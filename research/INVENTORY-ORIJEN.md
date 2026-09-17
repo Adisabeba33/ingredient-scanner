@@ -72,6 +72,9 @@ Researched but not seeded. Do not re-research; if one is wrong, correct it in pl
 | `064992106133` | source_verified | Six Fish — Six Fish — 13 lb | research/deep-research-orijen.json |
 | `064992106256` | source_verified | Six Fish — Six Fish — 23.5 lb | research/deep-research-orijen.json |
 | `064992106454` | source_verified | Six Fish — Six Fish — 4.5 lb | research/deep-research-orijen.json |
+| `064992107130` | source_verified | Fit & Trim — Fit & Trim — 13 lb | research/deep-research-orijen.json |
+| `064992107253` | source_verified | Fit & Trim — Fit & Trim — 23.5 lb | research/deep-research-orijen.json |
+| `064992107451` | source_verified | Fit & Trim — Fit & Trim — 4.5 lb | research/deep-research-orijen.json |
 | `064992108458` | source_verified | Tundra — Tundra — 4.5 lb | research/deep-research-orijen.json |
 | `064992109257` | candidate | Tundra — Tundra — 23.5 lb | research/deep-research-orijen.json |
 | `064992201135` | source_verified | Original — Original Cat — 12 lb | research/deep-research-orijen.json |
@@ -82,23 +85,40 @@ Researched but not seeded. Do not re-research; if one is wrong, correct it in pl
 | `064992203405` | source_verified | Six Fish — Six Fish — 4 lb | research/deep-research-orijen.json |
 | `064992204136` | source_verified | Fit & Trim — Fit & Trim — 12 lb | research/deep-research-orijen.json |
 | `064992204402` | source_verified | Fit & Trim — Fit & Trim — 4 lb | research/deep-research-orijen.json |
+| `064992580100` | source_verified | Small Breed — Small Breed — 10 lb | research/deep-research-orijen.json |
+| `064992581404` | source_verified | Small Breed — Small Breed — 4 lb | research/deep-research-orijen.json |
 | `064992716646` | source_verified | Kitten — Kitten — 4 lb | research/deep-research-orijen.json |
 | `064992718527` | source_verified | Guardian 8 — Guardian 8 — 4 lb | research/deep-research-orijen.json |
 | `064992718534` | source_verified | Guardian 8 — Guardian 8 — 10 lb | research/deep-research-orijen.json |
+| `064992720339` | source_verified | Amazing Grains — Original — 22.5 lb | research/deep-research-orijen.json |
+| `064992720346` | source_verified | Amazing Grains — Regional Red — 22.5 lb | research/deep-research-orijen.json |
+| `064992720353` | source_verified | Amazing Grains — Six Fish — 22.5 lb | research/deep-research-orijen.json |
+| `064992720360` | source_verified | Amazing Grains — Puppy — 22.5 lb | research/deep-research-orijen.json |
+| `064992720377` | source_verified | Amazing Grains — Puppy Large — 22.5 lb | research/deep-research-orijen.json |
+| `064992720384` | source_verified | Amazing Grains — Original — 4 lb | research/deep-research-orijen.json |
+| `064992720391` | source_verified | Amazing Grains — Regional Red — 4 lb | research/deep-research-orijen.json |
+| `064992720407` | source_verified | Amazing Grains — Six Fish — 4 lb | research/deep-research-orijen.json |
+| `064992720414` | source_verified | Amazing Grains — Puppy — 4 lb | research/deep-research-orijen.json |
 | `064992722562` | source_verified | Guardian Senior — Guardian Senior — 4 lb | research/deep-research-orijen.json |
 | `064992722579` | source_verified | Guardian Senior — Guardian Senior — 10 lb | research/deep-research-orijen.json |
 | `064992724078` | source_verified | Original — Original Cat — 7 lb | research/deep-research-orijen.json |
 | `064992724085` | source_verified | Six Fish — Six Fish — 7 lb | research/deep-research-orijen.json |
 | `064992724092` | source_verified | Kitten — Kitten — 7 lb | research/deep-research-orijen.json |
 | `064992724108` | source_verified | Fit & Trim — Fit & Trim — 7 lb | research/deep-research-orijen.json |
+| `064992724290` | source_verified | Amazing Grains — Small Breed — 4 lb | research/deep-research-orijen.json |
+| `064992724306` | source_verified | Amazing Grains — Small Breed — 10 lb | research/deep-research-orijen.json |
+| `064992724320` | source_verified | Amazing Grains — Fit & Trim — 4 lb | research/deep-research-orijen.json |
+| `064992724337` | source_verified | Amazing Grains — Fit & Trim — 22.5 lb | research/deep-research-orijen.json |
 | `064992726348` | source_verified | WILD RESERVE — Free-run Chicken & Wild-Caught Fish Recipe — 3.5 lb | research/deep-research-orijen.json |
 | `064992726355` | source_verified | WILD RESERVE — Free-run Chicken & Wild-Caught Fish Recipe — 6.5 lb | research/deep-research-orijen.json |
 | `064992726362` | source_verified | WILD RESERVE — Wild-Caught Fish Recipe — 3.5 lb | research/deep-research-orijen.json |
+| `064992727352` | source_verified | Small Breed — Puppy — 4 lb | research/deep-research-orijen.json |
 | `064992728441` | source_verified | Original — Original — 31 lb | research/deep-research-orijen.json |
+| `064992728458` | source_verified | Amazing Grains — Original — 30 lb | research/deep-research-orijen.json |
 
 ## The exclusion list
 
-Every barcode above, flat, for a mechanical check. 40 codes. A code in this list is not a new record whatever a retailer page says about it.
+Every barcode above, flat, for a mechanical check. 60 codes. A code in this list is not a new record whatever a retailer page says about it.
 
 ```
 064992101138
@@ -118,6 +138,9 @@ Every barcode above, flat, for a mechanical check. 40 codes. A code in this list
 064992106133
 064992106256
 064992106454
+064992107130
+064992107253
+064992107451
 064992108458
 064992109257
 064992201135
@@ -128,19 +151,36 @@ Every barcode above, flat, for a mechanical check. 40 codes. A code in this list
 064992203405
 064992204136
 064992204402
+064992580100
+064992581404
 064992716646
 064992718527
 064992718534
+064992720339
+064992720346
+064992720353
+064992720360
+064992720377
+064992720384
+064992720391
+064992720407
+064992720414
 064992722562
 064992722579
 064992724078
 064992724085
 064992724092
 064992724108
+064992724290
+064992724306
+064992724320
+064992724337
 064992726348
 064992726355
 064992726362
+064992727352
 064992728441
+064992728458
 ```
 
 `scripts/check-ledger.mjs` performs this check for you against the live files and will refuse a batch that repeats any of them, so this list is for planning rather than for verification.
