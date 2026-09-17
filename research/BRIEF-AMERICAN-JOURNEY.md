@@ -49,6 +49,14 @@ This is not style. The Orijen campaign lost most of a day to it:
   list — the list that exists to stop the next agent re-researching what is
   done.
 
+**And if the ledger outgrows your tooling**, which it will: a ledger runs about
+6 KB per record, so forty records is 235 KB and a connector that can only write
+a file whole eventually cannot commit your batch at all. Do not fight it and do
+not build a runner. §3a of `research/AGENTS.md` is the supported handover —
+write only the batch's new records, as a bare array, to
+`research/incoming/american-journey-batch-NN.json`, say so, and stop. That
+subdirectory is invisible to both scripts, so it cannot become a second ledger.
+
 Also, from the same campaign: **deliver by committing to the branch.** Do not
 hand the JSON back as a file or a link in a conversation; it had to be moved by
 hand. And **do not create a GitHub Actions workflow** to upload anything — two

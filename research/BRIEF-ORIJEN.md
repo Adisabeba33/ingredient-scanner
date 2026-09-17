@@ -309,6 +309,10 @@ Do not write a fourth file either. The Pedigree agent wrote itself a
 batch-2 brief; the handoff already has a "next batch" section and that is where
 it goes.
 
+**If the ledger grows past what your tooling can write**, do not fight it and do
+not build a runner: §3a of `research/AGENTS.md` is the supported handover —
+write only the batch's new records to `research/incoming/`, say so, and stop.
+
 **Do not create GitHub Actions workflows.** Two earlier campaigns spent 20 of 25
 and 23 of 26 commits on temporary runners that staged and restored themselves.
 

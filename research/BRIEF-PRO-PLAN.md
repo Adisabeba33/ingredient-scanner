@@ -273,6 +273,10 @@ prefix, splitting out Veterinary Diets, putting a code on the wrong-barcodes
 list and adding the recall are **all the seeding pass's job** — you say what
 they should be, in the handoff.
 
+**If the ledger grows past what your tooling can write**, do not fight it and do
+not build a runner: §3a of `research/AGENTS.md` is the supported handover —
+write only the batch's new records to `research/incoming/`, say so, and stop.
+
 **Do not create GitHub Actions workflows.** Two previous campaigns spent 20 of
 25 and 23 of 26 commits on temporary runners that staged and restored
 themselves. Write the JSON directly and commit it.
