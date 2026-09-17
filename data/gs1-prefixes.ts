@@ -116,4 +116,17 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // rather than as Sheba for the same reason as MPM above: a code under it that
   // turns out to be a sibling brand is not a wrong barcode.
   { prefix: "023100", maker: "Mars Petcare US (Sheba and siblings)" },
+  // Champion Petfoods, and the third entry named for a company rather than a
+  // brand — for the strongest version of the reason MPM and Mars have above.
+  // Champion makes Orijen AND Acana, in the same two kitchens, under the same
+  // "Biologically Appropriate" line on the bag, and the Orijen research
+  // established on 40 independently bound packages that both sit here. So this
+  // prefix is not a brand discriminator and must never be used as one: a
+  // 064992 code proves the maker and says nothing about which of the two
+  // brands is on the front of the pack. Only the pack does.
+  //
+  // Champion is owned by Mars, and the prefix is registered to Champion
+  // anyway, exactly as Merrick keeps 022808 under Nestlé Purina — the packs
+  // carry the business unit's prefix, not the parent's.
+  { prefix: "064992", maker: "Champion Petfoods (Orijen and Acana)" },
 ];

@@ -385,7 +385,28 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Orijen",
     owner: "Mars (Champion)",
     species: "both",
-    lines: ["Original", "Six Fish", "Regional Red", "Tundra", "Amazing Grains", "Guardian 8"],
+    // Seven of these came off actual current packs during the Orijen research
+    // and were missing from the six written from shelf memory: Puppy, Puppy
+    // Large, Senior, Fit & Trim, Guardian Senior, Kitten and WILD RESERVE.
+    // Eighteen of the campaign's first forty barcodes sit under them, so
+    // without these rows those products had nowhere honest to go.
+    //
+    // WILD RESERVE is capitalised the way the pack prints it.
+    lines: [
+      "Original",
+      "Six Fish",
+      "Regional Red",
+      "Tundra",
+      "Amazing Grains",
+      "Guardian 8",
+      "Guardian Senior",
+      "Puppy",
+      "Puppy Large",
+      "Senior",
+      "Fit & Trim",
+      "Kitten",
+      "WILD RESERVE",
+    ],
   },
   {
     name: "Acana",
