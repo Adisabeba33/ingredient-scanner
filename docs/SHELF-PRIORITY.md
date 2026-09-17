@@ -77,7 +77,7 @@ row in the catalog.
 | **Natural Balance** | both | PetSmart, Petco, TSC | L.I.D. is the limited-ingredient default. |
 | **Freshpet** | both | PetSmart, Petco, TSC | Its own fridge in all three. |
 | **Rachael Ray Nutrish** | both | PetSmart, TSC, Walmart | |
-| **Orijen** / **Acana** | both | PetSmart, Petco | Two brands, one maker; seed together. |
+| **Orijen** / **Acana** | both | PetSmart, Petco | Two brands, one maker; seed together. **Brief written:** `research/BRIEF-ORIJEN.md`. |
 | **Tiki Cat** | cat | Petco, PetSmart | Closest neighbour to Weruva, which is done. |
 | **Pup-Peroni** | dog | everywhere | |
 | **DentaLife** | both | PetSmart, TSC | |
