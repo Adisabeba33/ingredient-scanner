@@ -74,11 +74,31 @@ Researched but not seeded. Do not re-research; if one is wrong, correct it in pl
 | `064992106454` | source_verified | Six Fish — Six Fish — 4.5 lb | research/deep-research-orijen.json |
 | `064992108458` | source_verified | Tundra — Tundra — 4.5 lb | research/deep-research-orijen.json |
 | `064992109257` | candidate | Tundra — Tundra — 23.5 lb | research/deep-research-orijen.json |
+| `064992201135` | source_verified | Original — Original Cat — 12 lb | research/deep-research-orijen.json |
+| `064992201401` | source_verified | Original — Original Cat — 4 lb | research/deep-research-orijen.json |
+| `064992202132` | source_verified | Regional Red — Regional Red — 12 lb | research/deep-research-orijen.json |
+| `064992202408` | source_verified | Regional Red — Regional Red — 4 lb | research/deep-research-orijen.json |
+| `064992203139` | source_verified | Six Fish — Six Fish — 12 lb | research/deep-research-orijen.json |
+| `064992203405` | source_verified | Six Fish — Six Fish — 4 lb | research/deep-research-orijen.json |
+| `064992204136` | source_verified | Fit & Trim — Fit & Trim — 12 lb | research/deep-research-orijen.json |
+| `064992204402` | source_verified | Fit & Trim — Fit & Trim — 4 lb | research/deep-research-orijen.json |
+| `064992716646` | source_verified | Kitten — Kitten — 4 lb | research/deep-research-orijen.json |
+| `064992718527` | source_verified | Guardian 8 — Guardian 8 — 4 lb | research/deep-research-orijen.json |
+| `064992718534` | source_verified | Guardian 8 — Guardian 8 — 10 lb | research/deep-research-orijen.json |
+| `064992722562` | source_verified | Guardian Senior — Guardian Senior — 4 lb | research/deep-research-orijen.json |
+| `064992722579` | source_verified | Guardian Senior — Guardian Senior — 10 lb | research/deep-research-orijen.json |
+| `064992724078` | source_verified | Original — Original Cat — 7 lb | research/deep-research-orijen.json |
+| `064992724085` | source_verified | Six Fish — Six Fish — 7 lb | research/deep-research-orijen.json |
+| `064992724092` | source_verified | Kitten — Kitten — 7 lb | research/deep-research-orijen.json |
+| `064992724108` | source_verified | Fit & Trim — Fit & Trim — 7 lb | research/deep-research-orijen.json |
+| `064992726348` | source_verified | WILD RESERVE — Free-run Chicken & Wild-Caught Fish Recipe — 3.5 lb | research/deep-research-orijen.json |
+| `064992726355` | source_verified | WILD RESERVE — Free-run Chicken & Wild-Caught Fish Recipe — 6.5 lb | research/deep-research-orijen.json |
+| `064992726362` | source_verified | WILD RESERVE — Wild-Caught Fish Recipe — 3.5 lb | research/deep-research-orijen.json |
 | `064992728441` | source_verified | Original — Original — 31 lb | research/deep-research-orijen.json |
 
 ## The exclusion list
 
-Every barcode above, flat, for a mechanical check. 20 codes. A code in this list is not a new record whatever a retailer page says about it.
+Every barcode above, flat, for a mechanical check. 40 codes. A code in this list is not a new record whatever a retailer page says about it.
 
 ```
 064992101138
@@ -100,6 +120,26 @@ Every barcode above, flat, for a mechanical check. 20 codes. A code in this list
 064992106454
 064992108458
 064992109257
+064992201135
+064992201401
+064992202132
+064992202408
+064992203139
+064992203405
+064992204136
+064992204402
+064992716646
+064992718527
+064992718534
+064992722562
+064992722579
+064992724078
+064992724085
+064992724092
+064992724108
+064992726348
+064992726355
+064992726362
 064992728441
 ```
 
