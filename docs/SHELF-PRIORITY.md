@@ -69,7 +69,7 @@ row in the catalog.
 | **Meow Mix** | cat | TSC, Walmart, grocery | Post's cat volume. Pairs with 9Lives, already seeded. |
 | **Greenies** | both | PetSmart, Petco, TSC | Dental chews, all three chains. |
 | **Milk-Bone** | dog | everywhere | The default biscuit. |
-| **Instinct** | both | PetSmart, Petco | Raw-coated kibble, large facing in both. |
+| **Instinct** | both | PetSmart, Petco | Raw-coated kibble, large facing in both. **Brief written:** `research/BRIEF-INSTINCT.md`. |
 | **Stella & Chewy's** | both | PetSmart, Petco | Freeze-dried; premium end of both chains. |
 | **Victor** | dog | TSC | Working-dog bag; very strong at Tractor Supply. |
 | **Diamond Naturals** | both | TSC | Value premium at TSC. |
