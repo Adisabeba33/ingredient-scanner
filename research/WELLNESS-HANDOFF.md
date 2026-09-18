@@ -1,6 +1,6 @@
 # Wellness Deep Research Handoff
 
-Updated: 2026-09-17
+Updated: 2026-09-18
 
 ## 1. Role by range — first answer
 
@@ -80,3 +80,25 @@ Not started.
 Network/source access itself is available: Wellness manufacturer pages and AAFCO/public web sources were reachable on 2026-09-17. The campaign branch was created from current `main`.
 
 Stopped before dry-dog batch 1 because this connector session does not provide a real repository shell to run the mandatory inventory generator and ledger checker. Per BRIEF-WELLNESS §0.2/§0.3, I did not reconstruct the inventory, invent a checker result, build a runner, or begin writing candidate records without the live exclusion set.
+
+
+## 12. Deep Research recovery — 2026-09-18
+
+The external Deep Research passes reported approximately **40 Wellness UPC candidates** across two completed result sets. The exact record-level output for the first result set is no longer available in this connector context, so those candidates are **not being reconstructed from memory** and are **not being written into the canonical ledger**. Doing so would violate `AGENTS.md` evidence and status gates.
+
+The latest completed result set was reported as 20 candidates (19 wet-cat Wellness items plus 1 Kittles treat), all with valid UPC-A check digits, but the original result payload is likewise not available here. Two exact UPCs and their conflicts are recoverable from the research trail and were rechecked against public sources:
+
+- `076344079033` — Wellness CORE Pate Indoor Chicken & Chicken Liver, 5.5 oz. A current retailer page binds this exact UPC to the 5.5 oz item. Prior Deep Research flagged a generation/name conflict: older CORE Indoor identity versus current CORE+ naming. Keep out of `source_verified` until current manufacturer formula/adequacy and generation are reconciled.
+  - https://alaskamillandfeed.com/shop/50109033/
+  - Rechecked: 2026-09-18
+- `076344079057` — Wellness CORE Salmon, Whitefish & Herring canned cat food, 5.5 oz / case listing. Retailer evidence binds the UPC to the product/size, but prior Deep Research flagged current-formula support as too weak for `source_verified`.
+  - https://www.petcarerx.com/wellness-grain-free-canned-cat-food-core-salmon-whitefish-herring-recipe/18820
+  - Rechecked: 2026-09-18
+
+A 2025 UNFI catalog also shows the `076344` company prefix repeatedly on Wellness sellable items, supporting `076344` as a maker-associated prefix lead. It is **not yet registered as a brand-exclusive GS1 prefix** because sibling-brand sharing still needs to be established.
+
+### Delivery decision
+
+No `research/deep-research-wellness.json` was created in this pass. The binding contract requires complete formula fields, live repository exclusion checks, and `node scripts/check-ledger.mjs` before records can be committed as seedable research. This connector does not expose a repository shell, and the original Deep Research record payloads cannot be recovered exactly. Creating partial or memory-reconstructed records would make the branch look seed-ready when it is not.
+
+This handoff therefore preserves all recoverable Wellness findings without inventing a seedable ledger. The next shell-enabled/research pass should regenerate `research/INVENTORY-WELLNESS.md`, recover or re-research the candidate set, write the single canonical ledger, run the checker to exit 0, then update this handoff with exact counts/statuses.
