@@ -405,3 +405,52 @@ The earlier empty named-near-miss list is now closed for this batch. These produ
 - The cat **Chunks & Shreds** family (Original, Beef & Tuna, Duck & Liver, Regional Red, Salmon & Chicken, and Chicken & Tuna Kitten) remains for a later wet pass. Retail results mixed unit, case, and market-specific codes, so none was promoted without a clean current US individual-unit binding.
 - **Tundra Cat** remains excluded because of its previously documented packaging-generation collision.
 - Freeze-dried complete foods, FreshPrey, Freeze-Dried Dog Treats, Freeze-Dried Cat Treats, and all multipacks remain intentionally outside this batch. WILD RESERVE dry dog and the unresolved Tundra Dog dry candidate also remain in their existing tails.
+
+## Batch 5 — remaining current wet single cans (staged 2026-09-18)
+
+Batch 5 stages **15 additional individual-unit wet-cat records** in `research/incoming/orijen-batch-05.json`: **11 Chunks & Shreds cans** and **4 pâté cans at 5.5 oz**. All 15 are `source_verified`. The main ledger and generated inventory remain untouched for the merge pass. With both wet incoming arrays merged, the projected campaign ledger is **90 records: 89 `source_verified`, 1 `candidate`**; the unchanged candidate is Tundra Dog 23.5 lb `064992109257`.
+
+| Wet line / recipe | Size | Individual UPC-A | Status |
+|---|---:|---:|---|
+| Chunks & Shreds — Original Entrée | 3 oz | `064992724542` | source_verified |
+| Chunks & Shreds — Original Entrée | 5.5 oz | `064992726171` | source_verified |
+| Chunks & Shreds — Beef & Tuna Entrée | 3 oz | `064992724580` | source_verified |
+| Chunks & Shreds — Duck & Liver Entrée | 3 oz | `064992724559` | source_verified |
+| Chunks & Shreds — Duck & Liver Entrée | 5.5 oz | `064992726218` | source_verified |
+| Chunks & Shreds — Regional Red Entrée | 3 oz | `064992724573` | source_verified |
+| Chunks & Shreds — Regional Red Entrée | 5.5 oz | `064992726164` | source_verified |
+| Chunks & Shreds — Salmon & Chicken Entrée | 3 oz | `064992724566` | source_verified |
+| Chunks & Shreds — Salmon & Chicken Entrée | 5.5 oz | `064992726188` | source_verified |
+| Chunks & Shreds — Chicken & Tuna Entrée for Kittens | 3 oz | `064992724597` | source_verified |
+| Chunks & Shreds — Chicken & Tuna Entrée for Kittens | 5.5 oz | `064992726195` | source_verified |
+| Pâté — Original Entrée in Bone Broth | 5.5 oz | `064992721831` | source_verified |
+| Pâté — Regional Red Entrée in Bone Broth | 5.5 oz | `064992721848` | source_verified |
+| Pâté — Duck & Chicken Entrée in Bone Broth | 5.5 oz | `064992721879` | source_verified |
+| Pâté — Tuna, Salmon & Beef Entrée in Bone Broth | 5.5 oz | `064992721886` | source_verified |
+
+### Batch 5 source and normalization decisions
+
+- Every record has a current ORIJEN exact-SKU manufacturer route whose `data-pid` contains the UPC and whose product media or size statement establishes the exact can size. All 15 official pages returned HTTP 200, and their complete ingredient paragraphs match the staged records verbatim.
+- The five 5.5 oz Chunks & Shreds SKU pages use 155 g media assets whose filenames contain `Canada`, even though the pages are routed under `en-US`. Current retailer evidence independently binds Original, Duck & Liver, Regional Red, and Salmon & Chicken to the same UPC and 5.5 oz offer. Petco independently confirms the Chicken & Tuna kitten recipe is currently offered in 5.5 oz in the US; the exact UPC-size binding remains the current manufacturer SKU route. This market-marker issue is recorded on every affected record rather than silently ignored.
+- Chunks & Shreds is a dual-texture printed name, but the product description says the food is formed as hearty chunks and topped with shreds. The controlled field is therefore `texture: "chunks"`; the shreds remain in the printed identity and verification notes. The adequacy names say “in Bone Broth,” so `presentation: "in_broth"` is separate from texture.
+- All six Chunks & Shreds formulas print moisture at **85% max**, and every record retains both printed calorie bases for its exact size. The four 5.5 oz pâtés retain the same formula panels as their exact 3 oz siblings from Batch 4, with their separately proven 5.5 oz UPCs and printed per-can calorie values.
+- **No Beef & Tuna Chunks & Shreds 5.5 oz record was created.** The current manufacturer page lists only 3 oz. **No Chicken & Salmon kitten pâté 5.5 oz record was created.** Its current manufacturer page also lists only 3 oz. Neither missing sibling was inferred from neighboring codes.
+
+### Batch 5 printed conflicts retained
+
+- **Beef & Tuna Chunks & Shreds `064992724580`:** the exact SKU title and ingredient deck identify Beef & Tuna Entrée, while the adequacy sentence on the same page says **“Beef & Liver Entrée.”** Identity follows the exact SKU title; the printed adult-maintenance adequacy level remains usable and the wording conflict is explicit.
+- **Duck & Chicken pâté `064992721879`:** ORIJEN prints **975 kcal/kg** and **156 kcal per 5.5 oz / 155 g can**. The nominal-weight cross-check is about 152 kcal/can, a 4 kcal (about 2.6%) disagreement. Both printed values are retained without adjustment and the checker warning is answered in the record.
+
+### Batch 5 validation state
+
+The 15-record checker wrapper finished **Clean with 1 warning read and answered**, the Duck & Chicken pâté calorie difference immediately above. All 15 are `source_verified` and `individual_unit`; all include a moisture guarantee. UPC-A check digits and zero-left-padded GTIN-14 values validate. No UPC or GTIN collision was found across the live production sources, wrong-barcode list, 18 existing research ledgers, or Batch 4 incoming file.
+
+### ACANA boundary — named Batch 5 near-miss
+
+- **ACANA Chunks & Shreds Beef & Tuna Entrée Wet Cat Food** surfaced during the ORIJEN Beef & Tuna search. It was rejected at the explicit ACANA brand name despite the shared Champion context, nearly identical range wording, and a retailer description that incorrectly mentioned ORIJEN.
+
+### Wet coverage after Batch 5 / remaining ORIJEN tail
+
+- The current eligible US individual wet-can range found in this campaign is now covered: **10 dog cans from Batch 4 and 20 cat cans across Batches 4–5**. No eligible standalone tray was established. A future wet pass should require genuinely new manufacturer evidence rather than recycling case, variety-pack, Canadian-only, or inferred sibling codes.
+- Multipacks and case codes remain intentionally excluded from the individual-unit wet batches and are preserved in the Batch 4 handoff table.
+- Outside wet food, the remaining campaign tail is unchanged: WILD RESERVE dry dog, exact-size resolution for Tundra Dog `064992109257`, the Tundra Cat generation collision, freeze-dried complete foods, FreshPrey, and the separate late treat batch.
