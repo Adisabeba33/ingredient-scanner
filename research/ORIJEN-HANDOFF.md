@@ -1,5 +1,5 @@
 # ORIJEN Deep Research Handoff
-Checked: 2026-09-17
+Checked: 2026-09-18
 
 Scope: current **US-market ORIJEN** products. Canadian/EU formulas are not used to fill US records. ACANA is excluded even though it shares Champion Petfoods ownership and may share barcode prefixes.
 
@@ -333,3 +333,75 @@ The shell-enabled merge commit `0a74294427c227212d3a0edad4a34244e625944d` record
 - **Other categories still intentionally outside these dry batches:** wet dog/cat, freeze-dried complete foods, FreshPrey, treats and multipacks. Treats remain a separate late batch per the brief.
 - **Tundra Dog `064992109257`:** remains `candidate` until exact current UPC ↔ 23.5-lb package proof supersedes the retained 25-lb identity evidence.
 
+## Batch 4 — current wet single cans (staged 2026-09-18)
+
+Batch 4 stages **15 new individual-unit records** in `research/incoming/orijen-batch-04.json`: **10 dog cans at 12.8 oz** and **5 cat cans at 3 oz**. All 15 are `source_verified`. The main ledger and generated inventory remain untouched for the merge pass; after merge, the projected ledger total is **75 records: 74 `source_verified`, 1 `candidate`**. The existing Tundra Dog candidate is unchanged.
+
+| Species | Wet line / recipe | Size | Individual UPC-A | Status |
+|---|---|---:|---:|---|
+| dog | Puppy Poultry & Fish Pâté Recipe | 12.8 oz | `064992716158` | source_verified |
+| dog | Original Stew Recipe with Chicken, Turkey & Eggs | 12.8 oz | `064992716189` | source_verified |
+| dog | Regional Red Stew with Shredded Beef & Lamb | 12.8 oz | `064992716219` | source_verified |
+| dog | Tundra Stew Recipe with Shredded Beef, Duck & Lamb | 12.8 oz | `064992716240` | source_verified |
+| dog | Beef Recipe Stew with Shredded Beef & Eggs | 12.8 oz | `064992716271` | source_verified |
+| dog | Chicken Recipe Stew with Shredded Chicken & Eggs | 12.8 oz | `064992716301` | source_verified |
+| dog | Original Pâté with Liver | 12.8 oz | `064992723750` | source_verified |
+| dog | Tundra Pâté with Liver | 12.8 oz | `064992723767` | source_verified |
+| dog | Regional Red Pâté with Liver | 12.8 oz | `064992723774` | source_verified |
+| dog | Chicken Recipe Pâté with Liver | 12.8 oz | `064992723781` | source_verified |
+| cat | Original Entrée in Bone Broth | 3 oz | `064992719340` | source_verified |
+| cat | Regional Red Entrée in Bone Broth | 3 oz | `064992719357` | source_verified |
+| cat | Chicken & Salmon Entrée in Bone Broth, Kitten | 3 oz | `064992719371` | source_verified |
+| cat | Duck & Chicken Entrée in Bone Broth | 3 oz | `064992719388` | source_verified |
+| cat | Tuna, Salmon & Beef Entrée in Bone Broth | 3 oz | `064992719395` | source_verified |
+
+### Batch 4 source and normalization decisions
+
+- Every unit above has a current ORIJEN USA SKU page whose URL/product ID is the UPC. The same page exposes a front-face image or calorie statement with the exact printed size, so no code was promoted from sequence inference or from a case listing.
+- The five dog stews are normalized as `texture: "shredded"`. Their pages do not print an “in gravy” or “in broth” serving claim, so `presentation` is `null`; bone broth appearing in the ingredient deck does not by itself establish presentation.
+- The dog pâtés are `texture: "pate"`, `presentation: "plain"`. The cat entrées are described by ORIJEN as pâtés and named “in Bone Broth”, so they are `texture: "pate"`, `presentation: "in_broth"`.
+- Moisture is present on every record: 78% max for Puppy / Pâté with Liver dog cans, 82% max for dog stews, and 80% max for the cat cans.
+- Both printed calorie bases are retained. On multi-size cat pages, the exact 3 oz SKU keeps the printed 3 oz per-can figure; the 5.5 oz figure is documented in notes but is not attached to the 3 oz unit.
+- The cat pages put phosphorus, calcium, and magnesium under “Typical Analysis” without a min/max basis. Those values are not converted into guarantees. The explicitly printed Ash max and Taurine min values are retained.
+- The current ORIJEN Puppy Pâté page truncates its rendered ingredient paragraph after `pyridox`. Pet Food Express prints the complete matching deck through calcium carbonate; ORIJEN remains the exact-SKU source for size, guarantee, calories, and adequacy. This source split is explicit in the record.
+
+### Batch 4 printed conflicts retained
+
+- **Regional Red Stew `064992716219`:** ORIJEN prints **1101 kcal/kg** and **367 kcal per 12.8 oz / 363 g can**. Those bases do not agree arithmetically (1101 kcal/kg implies about 400 kcal/can). Both values are retained verbatim and the expected checker warning is answered in `conflicts` / `verification_notes`.
+- **Chicken Recipe Pâté with Liver `064992723781`:** the SKU title says **Chicken Recipe Pâté with Liver**, while the adequacy sentence on the same page calls it **“Paté with Liver Original Dog Food.”** Identity follows the exact SKU title; the printed All Life Stages adequacy level is retained separately.
+
+### Batch 4 validation state
+
+A temporary merge into the 60-record ledger produced **75 records: 74 `source_verified`, 1 `candidate`, all 75 `individual_unit`**, and the checker finished **Clean with 2 warnings read**. One is the pre-existing Small Breed Puppy `064992727352` missing kcal/kg basis. The one new warning is the Regional Red Stew printed calorie disagreement documented immediately above. All 15 incoming UPC-A check digits validate, their GTIN-14 forms are zero-left-padded, and none collides with the 1,530 claims in the repository's live research ledgers.
+
+### Multipack / case codes encountered and excluded
+
+These are not Batch 4 product records. They identify cartons or variety packs, not a single purchasable can under the batch contract:
+
+| Contents | Pack / non-unit UPC-A | Scope evidence |
+|---|---:|---|
+| Original Pâté with Liver, 12 × 12.8 oz | `064992723835` | retailer/Amazon 12-count listing |
+| Tundra Pâté with Liver, 12 × 12.8 oz | `064992723842` | retailer/Amazon 12-count listing |
+| Regional Red Pâté with Liver, 12 × 12.8 oz | `064992723859` | retailer/Amazon 12-count listing |
+| Chicken Recipe Pâté with Liver, 12 × 12.8 oz | `064992723866` | retailer 12-count listing |
+| Original Entrée, 24 × 3 oz | `064992719463` | retailer case-of-24 listing; unit is `064992719340` |
+| Regional Red Entrée, 24 × 3 oz | `064992719470` | retailer case-of-24 listing; unit is `064992719357` |
+| Chicken & Salmon Kitten Entrée, 24 × 3 oz | `064992719494` | retailer case-of-24 listing; unit is `064992719371` |
+| Duck & Chicken Entrée retail case/pack (member size mix unresolved) | `064992719500` | mixed retailer pack listing; not accepted as the unit, which is `064992719388` |
+| Tuna, Salmon & Beef Entrée, 24 × 3 oz | `064992719517` | mixed retailer pack listing; not accepted as the unit, which is `064992719395` |
+| Original + Duck & Chicken Pâté Variety Pack, 12 × 3 oz | `064992724047` | current ORIJEN variety-pack page |
+
+### ACANA boundary — named Batch 4 near-misses
+
+The earlier empty named-near-miss list is now closed for this batch. These products surfaced beside ORIJEN wet results and were rejected as ACANA despite the shared Champion context and similar bone-broth naming:
+
+- **ACANA Premium Pate Puppy Grain-Free Chicken Pate in Bone Broth Wet Dog Food, 12.8 oz** — surfaced in the Tractor Supply ORIJEN Puppy wet-food result/cross-sell.
+- **ACANA in Bone Broth Lamb + Lamb Liver Recipe Premium Pate Wet Cat Food** — surfaced during the cat entrée search and was rejected at the explicit ACANA brand name.
+
+### Why Batch 4 stops at 15 / remaining wet tail
+
+- The current eligible dog single-can range above is covered at 12.8 oz. No standalone eligible tray was established; tray/tub results encountered in this pass belonged to FreshPrey or pack-level offers and remain out of scope.
+- Current cat pâté pages also print 5.5 oz nutrition, but this pass did not establish exact individual-unit UPC ↔ 5.5 oz package bindings. They remain a physical-package / exact-SKU tail rather than inferred siblings of the 3 oz cans.
+- The cat **Chunks & Shreds** family (Original, Beef & Tuna, Duck & Liver, Regional Red, Salmon & Chicken, and Chicken & Tuna Kitten) remains for a later wet pass. Retail results mixed unit, case, and market-specific codes, so none was promoted without a clean current US individual-unit binding.
+- **Tundra Cat** remains excluded because of its previously documented packaging-generation collision.
+- Freeze-dried complete foods, FreshPrey, Freeze-Dried Dog Treats, Freeze-Dried Cat Treats, and all multipacks remain intentionally outside this batch. WILD RESERVE dry dog and the unresolved Tundra Dog dry candidate also remain in their existing tails.
