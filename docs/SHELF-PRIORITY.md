@@ -51,7 +51,7 @@ row in the catalog.
 | 2 | **Pedigree** | dog | TSC, Walmart, grocery | Highest-volume dog food in the US by units. Not at Petco (artificial). **Brief written:** `research/BRIEF-PEDIGREE.md`. |
 | 3 | **Sheba** | cat | PetSmart, TSC, grocery | **Already half-done** — 19 boxes seeded, zero formulas. Cheapest tier-1 win. |
 | 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. |
-| 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. |
+| 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. **Brief written:** `research/BRIEF-WELLNESS.md`. |
 | 6 | **Nutro** | both | PetSmart, Petco, TSC | Mars's natural line — one of the few Mars brands Petco still carries. |
 | 7 | **Taste of the Wild** | both | TSC, Petco | The Tractor Supply premium bag. Diamond, so it shares a plant with 4health. |
 | 8 | **Cesar** | dog | PetSmart, TSC, grocery | Small-dog wet trays, bought weekly, dozens of SKUs. |
