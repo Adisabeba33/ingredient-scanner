@@ -1,0 +1,1597 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "064992724542",
+    "canonical_gtin14": "00064992724542",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Original Entrée Wet Cat Food",
+    "variant": "Original Entrée",
+    "recipe": [
+      "chicken",
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Chicken, salmon, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, natural flavor, salmon oil, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Chicken",
+      "salmon",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "dried egg white",
+      "chicken liver",
+      "natural flavor",
+      "salmon oil",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "turmeric",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 767,
+      "kcal_per_unit": 65,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-original-entr%C3%A9e/064992724542.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 767 kcal/kg and 65 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992726171",
+    "canonical_gtin14": "00064992726171",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Original Entrée Wet Cat Food",
+    "variant": "Original Entrée",
+    "recipe": [
+      "chicken",
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Chicken, salmon, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, natural flavor, salmon oil, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Chicken",
+      "salmon",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "dried egg white",
+      "chicken liver",
+      "natural flavor",
+      "salmon oil",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "turmeric",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 767,
+      "kcal_per_unit": 119,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-original-entr%C3%A9e/064992726171-1.html",
+      "https://petswarehouse.com/products/orijen-chunks-shreds-canned-cat-food-original-entree-12ea-5-5-oz"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The current manufacturer exact-SKU page is routed under en-US, but its 155 g image asset filenames contain “Canada.” A current North American retailer listing independently binds the same UPC to the 5.5 oz recipe; formula data comes from the current en-US manufacturer page and is not filled from a non-US sibling."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 767 kcal/kg and 119 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992724580",
+    "canonical_gtin14": "00064992724580",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Beef & Tuna Entrée Wet Cat Food",
+    "variant": "Beef & Tuna Entrée",
+    "recipe": [
+      "beef",
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Beef, chicken, fish broth, beef broth, lamb broth, chicken broth, tuna, egg, dried egg white, beef kidney, salmon oil, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, vitamin A supplement, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Beef",
+      "chicken",
+      "fish broth",
+      "beef broth",
+      "lamb broth",
+      "chicken broth",
+      "tuna",
+      "egg",
+      "dried egg white",
+      "beef kidney",
+      "salmon oil",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "thiamine mononitrate",
+      "vitamin E supplement",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "vitamin A supplement",
+      "copper proteinate",
+      "manganese proteinate",
+      "inulin",
+      "turmeric",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 12,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 849,
+      "kcal_per_unit": 72,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-beef-and-tuna-entr%C3%A9e/064992724580.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [
+      "The exact SKU title and ingredient deck identify Beef & Tuna Entrée, while the adequacy sentence on the same page says “Beef & Liver Entrée.” Identity follows the exact SKU title; the printed adult-maintenance adequacy level is retained."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 849 kcal/kg and 72 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992724559",
+    "canonical_gtin14": "00064992724559",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Duck & Liver Entrée Wet Cat Food",
+    "variant": "Duck & Liver Entrée",
+    "recipe": [
+      "duck",
+      "chicken liver"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Duck, chicken liver, duck broth, turkey broth, fish broth, chicken, egg, salmon oil, dried egg white, natural flavor, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, niacin, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Duck",
+      "chicken liver",
+      "duck broth",
+      "turkey broth",
+      "fish broth",
+      "chicken",
+      "egg",
+      "salmon oil",
+      "dried egg white",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "inulin",
+      "turmeric",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 5.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 814,
+      "kcal_per_unit": 69,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-duck-and-liver-entr%C3%A9e/064992724559.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 814 kcal/kg and 69 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992726218",
+    "canonical_gtin14": "00064992726218",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Duck & Liver Entrée Wet Cat Food",
+    "variant": "Duck & Liver Entrée",
+    "recipe": [
+      "duck",
+      "chicken liver"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Duck, chicken liver, duck broth, turkey broth, fish broth, chicken, egg, salmon oil, dried egg white, natural flavor, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, niacin, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Duck",
+      "chicken liver",
+      "duck broth",
+      "turkey broth",
+      "fish broth",
+      "chicken",
+      "egg",
+      "salmon oil",
+      "dried egg white",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "inulin",
+      "turmeric",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 5.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 814,
+      "kcal_per_unit": 126,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-duck-and-liver-entr%C3%A9e/064992726218-1.html",
+      "https://petswarehouse.com/products/orijen-chunks-shreds-canned-cat-food-duck-liver-entree-12ea-5-5-oz"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The current manufacturer exact-SKU page is routed under en-US, but its 155 g image asset filenames contain “Canada.” A current North American retailer listing independently binds the same UPC to the 5.5 oz recipe; formula data comes from the current en-US manufacturer page and is not filled from a non-US sibling."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 814 kcal/kg and 126 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992724573",
+    "canonical_gtin14": "00064992724573",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Regional Red Entrée Wet Cat Food",
+    "variant": "Regional Red Entrée",
+    "recipe": [
+      "lamb",
+      "tuna",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Lamb, tuna, lamb broth, fish broth, beef broth, beef, egg, dried egg white, salmon oil, lamb kidney, taurine, organic guar gum, natural flavor, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Lamb",
+      "tuna",
+      "lamb broth",
+      "fish broth",
+      "beef broth",
+      "beef",
+      "egg",
+      "dried egg white",
+      "salmon oil",
+      "lamb kidney",
+      "taurine",
+      "organic guar gum",
+      "natural flavor",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "thiamine mononitrate",
+      "vitamin E supplement",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "vitamin A supplement",
+      "turmeric",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 12,
+      "crude_fat_min_percent": 6.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 847,
+      "kcal_per_unit": 72,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-regional-red-entr%C3%A9e/064992724573.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 847 kcal/kg and 72 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992726164",
+    "canonical_gtin14": "00064992726164",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Regional Red Entrée Wet Cat Food",
+    "variant": "Regional Red Entrée",
+    "recipe": [
+      "lamb",
+      "tuna",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Lamb, tuna, lamb broth, fish broth, beef broth, beef, egg, dried egg white, salmon oil, lamb kidney, taurine, organic guar gum, natural flavor, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Lamb",
+      "tuna",
+      "lamb broth",
+      "fish broth",
+      "beef broth",
+      "beef",
+      "egg",
+      "dried egg white",
+      "salmon oil",
+      "lamb kidney",
+      "taurine",
+      "organic guar gum",
+      "natural flavor",
+      "potassium chloride",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "thiamine mononitrate",
+      "vitamin E supplement",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "vitamin A supplement",
+      "turmeric",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 12,
+      "crude_fat_min_percent": 6.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 847,
+      "kcal_per_unit": 131,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-regional-red-entr%C3%A9e/064992726164-1.html",
+      "https://petswarehouse.com/products/orijen-chunks-shreds-canned-cat-food-regional-red-entree-12ea-5-5-oz"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The current manufacturer exact-SKU page is routed under en-US, but its 155 g image asset filenames contain “Canada.” A current North American retailer listing independently binds the same UPC to the 5.5 oz recipe; formula data comes from the current en-US manufacturer page and is not filled from a non-US sibling."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 847 kcal/kg and 131 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992724566",
+    "canonical_gtin14": "00064992724566",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Salmon & Chicken Entrée Wet Cat Food",
+    "variant": "Salmon & Chicken Entrée",
+    "recipe": [
+      "salmon",
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Salmon, chicken, chicken broth, fish broth, turkey broth, egg, salmon oil, dried egg white, chicken liver, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Salmon",
+      "chicken",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "salmon oil",
+      "dried egg white",
+      "chicken liver",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 808,
+      "kcal_per_unit": 69,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-salmon-and-chicken-entr%C3%A9e/064992724566.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 808 kcal/kg and 69 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992726188",
+    "canonical_gtin14": "00064992726188",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Salmon & Chicken Entrée Wet Cat Food",
+    "variant": "Salmon & Chicken Entrée",
+    "recipe": [
+      "salmon",
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Salmon, chicken, chicken broth, fish broth, turkey broth, egg, salmon oil, dried egg white, chicken liver, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Salmon",
+      "chicken",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "salmon oil",
+      "dried egg white",
+      "chicken liver",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "salt",
+      "tricalcium phosphate",
+      "zinc proteinate",
+      "vitamin E supplement",
+      "thiamine mononitrate",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "inulin",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "vitamin A supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-3 fatty acids",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Omega-6 fatty acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 1800,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 808,
+      "kcal_per_unit": 125,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-salmon-and-chicken-entr%C3%A9e/064992726188-1.html",
+      "https://petswarehouse.com/products/orijen-chunks-shreds-canned-cat-food-salmon-chicken-entree-12ea-5-5-oz"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The current manufacturer exact-SKU page is routed under en-US, but its 155 g image asset filenames contain “Canada.” A current North American retailer listing independently binds the same UPC to the 5.5 oz recipe; formula data comes from the current en-US manufacturer page and is not filled from a non-US sibling."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 808 kcal/kg and 125 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992724597",
+    "canonical_gtin14": "00064992724597",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Chicken & Tuna Entrée Wet Kitten Food",
+    "variant": "Chicken & Tuna Entrée for Kittens",
+    "recipe": [
+      "chicken",
+      "tuna"
+    ],
+    "life_stage": "kitten",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": "Chicken, tuna, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, salmon oil, sunflower oil, natural flavor, taurine, organic guar gum, potassium chloride, tricalcium phosphate, choline chloride, magnesium sulfate, salt, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Chicken",
+      "tuna",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "dried egg white",
+      "chicken liver",
+      "salmon oil",
+      "sunflower oil",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "tricalcium phosphate",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "zinc proteinate",
+      "thiamine mononitrate",
+      "vitamin E supplement",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "vitamin A supplement",
+      "inulin",
+      "turmeric",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11.5,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "EPA",
+          "basis": "min",
+          "value": 0.02,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "DHA",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 3000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 987,
+      "kcal_per_unit": 84,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-chicken-and-tuna-recipe-for-kittens/064992724597.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 3 oz can.",
+      "Printed calories retained in both bases: 987 kcal/kg and 84 kcal per 3 oz can.",
+      "Printed nutritional adequacy retained: AAFCO growth.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992726195",
+    "canonical_gtin14": "00064992726195",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Chunks & Shreds",
+    "product_name": "ORIJEN Chunks & Shreds Chicken & Tuna Entrée Wet Kitten Food",
+    "variant": "Chicken & Tuna Entrée for Kittens",
+    "recipe": [
+      "chicken",
+      "tuna"
+    ],
+    "life_stage": "kitten",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Chicken, tuna, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, salmon oil, sunflower oil, natural flavor, taurine, organic guar gum, potassium chloride, tricalcium phosphate, choline chloride, magnesium sulfate, salt, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.",
+    "ingredients_ordered_normalized": [
+      "Chicken",
+      "tuna",
+      "chicken broth",
+      "fish broth",
+      "turkey broth",
+      "egg",
+      "dried egg white",
+      "chicken liver",
+      "salmon oil",
+      "sunflower oil",
+      "natural flavor",
+      "taurine",
+      "organic guar gum",
+      "potassium chloride",
+      "tricalcium phosphate",
+      "choline chloride",
+      "magnesium sulfate",
+      "salt",
+      "zinc proteinate",
+      "thiamine mononitrate",
+      "vitamin E supplement",
+      "iron proteinate",
+      "menadione sodium bisulfite complex",
+      "niacin",
+      "copper proteinate",
+      "manganese proteinate",
+      "vitamin A supplement",
+      "inulin",
+      "turmeric",
+      "pyridoxine hydrochloride",
+      "calcium pantothenate",
+      "riboflavin supplement",
+      "folic acid",
+      "potassium iodide",
+      "biotin",
+      "vitamin B12 supplement",
+      "vitamin D3 supplement"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11.5,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 85,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.1,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "EPA",
+          "basis": "min",
+          "value": 0.02,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "DHA",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 3000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 987,
+      "kcal_per_unit": 153,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page supplies identity, full formula, guarantees, calories, and adequacy; for 5.5 oz units, a current retailer listing independently corroborates the exact UPC-size offer because the manufacturer image asset filename carries a Canada marker.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/chunks-and-shreds%2C-chicken-and-tuna-recipe-for-kittens/064992726195-1.html",
+      "https://www.petco.com/product/orijen-chunks-chicken-and-tuna-entree-wet-kitten-food"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The current manufacturer exact-SKU page is routed under en-US, but its 155 g image asset filenames contain “Canada.” A current North American retailer listing independently binds the same UPC to the 5.5 oz recipe; formula data comes from the current en-US manufacturer page and is not filled from a non-US sibling."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 987 kcal/kg and 153 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO growth.",
+      "The line prints both chunks and shreds; texture is normalized to “chunks” because the food is formed as hearty chunks and the shreds are the topping. “In Bone Broth” is retained separately as presentation."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992721831",
+    "canonical_gtin14": "00064992721831",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Original",
+    "product_name": "ORIJEN Original Entrée Wet Cat Food",
+    "variant": "Entrée",
+    "recipe": [
+      "chicken",
+      "mackerel",
+      "sardine"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Chicken, chicken liver, whole mackerel, chicken bone broth, fish bone broth, chicken heart, whole sardine, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Chicken",
+      "chicken liver",
+      "whole mackerel",
+      "chicken bone broth",
+      "fish bone broth",
+      "chicken heart",
+      "whole sardine",
+      "egg",
+      "taurine",
+      "salt",
+      "vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement]",
+      "minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide]",
+      "choline chloride"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 12,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 0.5,
+      "moisture_max_percent": 80,
+      "ash_max_percent": 3,
+      "taurine_min_percent": 0.2,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1156,
+      "kcal_per_unit": 180,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page; its URL/product ID and front-face image bind the UPC to the exact 5.5 oz can, and the same page prints the formula, guaranteed analysis, calories, and adequacy statement.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/original-entr%C3%A9e-wet-cat-food/064992721831.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 1156 kcal/kg and 180 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "Ash max is retained from the printed Typical Analysis. Phosphorous, calcium, and magnesium are printed there without min/max bases and are not promoted into guaranteed fields."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992721848",
+    "canonical_gtin14": "00064992721848",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": "Regional Red",
+    "product_name": "ORIJEN Regional Red Entrée Wet Cat Food",
+    "variant": "Entrée",
+    "recipe": [
+      "lamb",
+      "beef",
+      "chicken",
+      "salmon",
+      "sardine"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Lamb, beef, beef kidney, chicken, salmon, whole sardine, lamb kidney, beef bone broth, fish bone broth, lamb liver, beef liver, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, sodium selenite, potassium iodide], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Lamb",
+      "beef",
+      "beef kidney",
+      "chicken",
+      "salmon",
+      "whole sardine",
+      "lamb kidney",
+      "beef bone broth",
+      "fish bone broth",
+      "lamb liver",
+      "beef liver",
+      "taurine",
+      "salt",
+      "vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement]",
+      "minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, sodium selenite, potassium iodide]",
+      "choline chloride"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 12,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 0.5,
+      "moisture_max_percent": 80,
+      "ash_max_percent": 3,
+      "taurine_min_percent": 0.2,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1251,
+      "kcal_per_unit": 196,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page; its URL/product ID and front-face image bind the UPC to the exact 5.5 oz can, and the same page prints the formula, guaranteed analysis, calories, and adequacy statement.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/regional-red-entr%C3%A9e-wet-cat-food/064992721848.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 1251 kcal/kg and 196 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "Ash max is retained from the printed Typical Analysis. Phosphorous, calcium, and magnesium are printed there without min/max bases and are not promoted into guaranteed fields."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992721879",
+    "canonical_gtin14": "00064992721879",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": null,
+    "product_name": "ORIJEN Duck & Chicken Entrée Wet Cat Food",
+    "variant": "Duck & Chicken Entrée",
+    "recipe": [
+      "duck",
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Duck, chicken, chicken liver, chicken heart, chicken bone broth, duck bone broth, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Duck",
+      "chicken",
+      "chicken liver",
+      "chicken heart",
+      "chicken bone broth",
+      "duck bone broth",
+      "egg",
+      "taurine",
+      "salt",
+      "vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement]",
+      "minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide]",
+      "choline chloride"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 0.5,
+      "moisture_max_percent": 80,
+      "ash_max_percent": 4,
+      "taurine_min_percent": 0.2,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 975,
+      "kcal_per_unit": 156,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page; its URL/product ID and front-face image bind the UPC to the exact 5.5 oz can, and the same page prints the formula, guaranteed analysis, calories, and adequacy statement.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/duck-and-chicken-entree-wet-cat-food/064992721879.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [
+      "The manufacturer prints 975 kcal/kg and 156 kcal per 5.5 oz / 155 g can. The weight-based cross-check is about 152 kcal/can, a 4 kcal (about 2.6%) disagreement; both printed values are retained without adjustment."
+    ],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 975 kcal/kg and 156 kcal per 5.5 oz can. The nominal-weight cross-check is about 152 kcal/can; the 4 kcal difference is documented rather than reconciled.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "Ash max is retained from the printed Typical Analysis. Phosphorous, calcium, and magnesium are printed there without min/max bases and are not promoted into guaranteed fields."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "064992721886",
+    "canonical_gtin14": "00064992721886",
+    "barcode_scope": "individual_unit",
+    "brand": "Orijen",
+    "manufacturer": "Champion Petfoods",
+    "species": "cat",
+    "product_line": null,
+    "product_name": "ORIJEN Tuna, Salmon & Beef Entrée Wet Cat Food",
+    "variant": "Tuna, Salmon & Beef Entrée",
+    "recipe": [
+      "tuna",
+      "salmon",
+      "beef",
+      "sardine",
+      "shrimp"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "in_broth",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": "Tuna, chicken, salmon, whole sardine, chicken liver, fish bone broth, beef bone broth, beef, lamb, beef kidney, shrimp, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Tuna",
+      "chicken",
+      "salmon",
+      "whole sardine",
+      "chicken liver",
+      "fish bone broth",
+      "beef bone broth",
+      "beef",
+      "lamb",
+      "beef kidney",
+      "shrimp",
+      "taurine",
+      "salt",
+      "vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex]",
+      "minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide]",
+      "choline chloride"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 14,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 0.5,
+      "moisture_max_percent": 80,
+      "ash_max_percent": 3,
+      "taurine_min_percent": 0.2,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1059,
+      "kcal_per_unit": 165,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current ORIJEN USA manufacturer exact-SKU page; its URL/product ID and front-face image bind the UPC to the exact 5.5 oz can, and the same page prints the formula, guaranteed analysis, calories, and adequacy statement.",
+    "source_urls": [
+      "https://www.orijenpetfoods.com/en-US/cats/cat-food/tuna%2C-salmon-and-beef-entr%C3%A9e-wet-cat-food/064992721886.html"
+    ],
+    "source_accessed_at": "2026-09-18",
+    "barcode_notes": "Individual-unit UPC-A check digit validated; the current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit validated; canonical GTIN-14 is zero-left-padded UPC-A.",
+      "The shared 064992 Champion prefix does not establish the brand; explicit ORIJEN branding on this exact-SKU manufacturer page does.",
+      "The current ORIJEN USA exact-SKU URL/data-pid and front-face image bind this UPC to the printed 5.5 oz can.",
+      "Printed calories retained in both bases: 1059 kcal/kg and 165 kcal per 5.5 oz can.",
+      "Printed nutritional adequacy retained: AAFCO adult maintenance.",
+      "Ash max is retained from the printed Typical Analysis. Phosphorous, calcium, and magnesium are printed there without min/max bases and are not promoted into guaranteed fields."
+    ],
+    "research_status": "source_verified"
+  }
+]
