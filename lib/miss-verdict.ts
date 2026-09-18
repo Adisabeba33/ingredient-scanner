@@ -80,7 +80,9 @@ const seededByCode = new Map<string, { name: string; hasFormula: boolean }>();
 for (const product of KNOWN_PRODUCTS) {
   for (const pkg of product.packages) {
     seededByCode.set(canonicalBarcode(pkg.upc), {
-      name: `${product.brand} ${product.line} ${product.variant} — ${pkg.size}`,
+      name: `${[product.brand, product.line, product.variant]
+        .filter(Boolean)
+        .join(" ")} — ${pkg.size}`,
       hasFormula: !!KNOWN_FORMULAS[pkg.upc],
     });
   }

@@ -238,6 +238,17 @@ front; reading "adult" out of silence would turn an absence into a claim.
 **Add a new range** to `data/us-pet-brands.ts` before using it, or the coverage
 page files the products under "Other".
 
+**`line` is `null` when the pack prints no range at all**, and that is the only
+reason to write `null`. It is not a shortcut for "I could not find the range":
+if the pack has one and this file does not name it, the product is filed under
+"Other" and a whole shelf goes missing from coverage, which is the failure the
+rule above exists to prevent. Batch 033 met the real case — five ORIJEN wet
+recipes whose printed names carry no range, only the recipe — and could not
+seed them at all until `line` stopped being a required string. Never write `""`
+instead; `lib/known-products.test.ts` fails the build on an empty range, and
+treats a growing count of null ones as a sign that ranges are being missed
+rather than that the bound should go up.
+
 ### When to extend the vocabulary, and when not to
 
 Both have happened. The test is whether the new value **predicts something

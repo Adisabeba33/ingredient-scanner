@@ -1057,7 +1057,7 @@ describe("data/known-formulas.ts", () => {
       }).toEqual({ name: `${p.line} ${p.variant}`, vet: false });
     }
     for (const p of KNOWN_PRODUCTS.filter(
-      (p) => p.brand === "Royal Canin" && !RC_VET_LINES.has(p.line)
+      (p) => p.brand === "Royal Canin" && p.line !== null && !RC_VET_LINES.has(p.line)
     )) {
       expect({
         name: `${p.line} ${p.variant}`,
@@ -1313,7 +1313,9 @@ describe("the coverage page's ranges", () => {
     const orphans = [
       ...new Set(
         KNOWN_PRODUCTS.filter(
-          (p) => !linesByBrand.get(brandKey(p.brand))?.has(p.line)
+          // A null range prints on no pack, so it is filed under "Other"
+          // rather than being an orphan. See KnownProduct.line.
+          (p) => p.line !== null && !linesByBrand.get(brandKey(p.brand))?.has(p.line)
         ).map((p) => `${p.brand} — ${p.line}`)
       ),
     ];

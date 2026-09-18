@@ -107,7 +107,12 @@ function candidates(): Candidate[] {
       if (!formula) continue;
       // Range, name and flavour joined the way the catalog stores them, so a
       // later capture of the same tin produces the same string.
-      const productName = `${product.line} ${product.variant}`.trim();
+      // `line` is null where the pack prints no range, so the name is built
+      // from the parts that exist rather than around a hole.
+      const productName = [product.line, product.variant]
+        .filter(Boolean)
+        .join(" ")
+        .trim();
       out.push({
         code: canonicalBarcode(pkg.upc),
         printed: pkg.upc,

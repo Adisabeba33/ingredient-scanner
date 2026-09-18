@@ -9550,4 +9550,29 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     analysis: withCalories(ga(12, 7, 0.5, 80, 3, 0.2), 1292, 110, "can"),
     verifiedAt: VERIFIED_033,
   },
+  "064992716271": {
+    ingredients: `Beef, beef bone broth, fish bone broth, duck, eggs, beef kidney, dried egg whites, beef liver, whole sardine, carrots, natural flavor, organic guar gum, salt, pumpkin, broccoli, blueberries, sunflower oil, salmon oil, choline chloride, vitamins [vitamin E supplement, thiamine mononitrate, niacin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, biotin, vitamin B12 supplement, vitamin D3 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, potassium iodide], inulin, turmeric`,
+    analysis: withCalories(ga(11, 5.5, 1.5, 82, null, null), 1020, 370, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992716301": {
+    ingredients: `Chicken, chicken bone broth, turkey bone broth, chicken liver, dried egg whites, dried egg product, chicken heart, quail, carrots, natural flavor, salt, organic guar gum, herring oil (preserved with mixed tocopherols), broccoli, pumpkin, potassium chloride, minerals (zinc amino acid chelate, iron amino acid chelate, selenium yeast, copper amino acid chelate, manganese amino acid chelate, cobalt amino acid chelate, potassium iodide), blueberries, choline chloride, vitamins (vitamin E supplement, thiamine mononitrate, niacin supplement, D-calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), calcium carbonate, inulin, turmeric.`,
+    analysis: withCalories(ga(11, 4, 1.5, 82, null, null), 977, 355, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992723781": {
+    ingredients: `Chicken, chicken liver, chicken bone broth, turkey bone broth, turkey, chicken heart, natural pork flavor, broccoli, carrots, pumpkin, guar gum, agar-agar, salt, potassium chloride, minerals (zinc proteinate, iron proteinate, selenium yeast, copper proteinate, cobalt proteinate, manganese proteinate, potassium iodide), herring oil (preserved with mixed tocopherols), vitamins (vitamin E supplement, thiamine mononitrate, niacin supplement, calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), choline chloride, inulin, turmeric, sodium carbonate, magnesium sulfate.`,
+    analysis: withCalories(ga(10, 7, 1.5, 78, null, null), 1235, 448, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992719388": {
+    ingredients: `Duck, chicken, chicken liver, chicken heart, chicken bone broth, duck bone broth, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(11, 5, 0.5, 80, 4, 0.2), 975, 82, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992719395": {
+    ingredients: `Tuna, chicken, salmon, whole sardine, chicken liver, fish bone broth, beef bone broth, beef, lamb, beef kidney, shrimp, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(14, 4, 0.5, 80, 3, 0.2), 1059, 90, "can"),
+    verifiedAt: VERIFIED_033,
+  },
 };

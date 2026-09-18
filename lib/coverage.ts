@@ -531,10 +531,14 @@ export function buildCoverage(
     const identity = brandIdentity(item.brand);
     if (!identity) continue;
     const draft = draftFor(identity);
-    let items = draft.ranges.get(item.line);
+    // A seeded product whose pack prints no range goes where a SCANNED row
+    // with no range already goes (see the `productLine` read above), rather
+    // than opening a second bucket meaning the same thing.
+    const range = item.line ?? OTHER_RANGE;
+    let items = draft.ranges.get(range);
     if (!items) {
       items = new Map();
-      draft.ranges.set(item.line, items);
+      draft.ranges.set(range, items);
     }
     const key = labelKey(item.variant);
     const unseen = item.codes

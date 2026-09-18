@@ -18,7 +18,8 @@ import { KNOWN_PRODUCTS, type KnownProduct } from "../data/known-products";
 /** One recipe, with every barcode it is sold under. */
 export interface KnownItem {
   brand: string;
-  line: string;
+  /** Null where the pack prints no range — see KnownProduct.line. */
+  line: string | null;
   variant: string;
   species: "cat" | "dog";
   texture: string;

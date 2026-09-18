@@ -76,8 +76,31 @@ export interface KnownPackage {
 
 export interface KnownProduct {
   brand: string;
-  /** The range within the brand, matching data/us-pet-brands.ts. */
-  line: string;
+  /**
+   * The range within the brand, matching data/us-pet-brands.ts — or null where
+   * the pack prints none.
+   *
+   * ── Why null is a value and not a gap to fill ─────────────────────────
+   *
+   * Batch 033 could not seed five source-verified Orijen wet foods, and the
+   * reason was this line of TypeScript rather than anything about the food.
+   * Their printed names carry no seeded range: "ORIJEN Chicken Recipe Pâté with
+   * Liver" is a brand and a recipe and nothing in between. The campaign refused
+   * to inherit a neighbour's range, which was right — a range copied from the
+   * product next to it is an invention, and this file is the one place a reader
+   * is entitled to assume nothing was invented.
+   *
+   * So the choice was to guess or to drop, and the schema made it. Null is the
+   * third answer: the pack prints no range, we looked, and that is the fact.
+   * The same reasoning as `presentation: "unknown"` in the same batch, which
+   * was chosen over guessing "plain".
+   *
+   * Everything downstream reads it as absent rather than as a name:
+   * lib/coverage.ts files it under OTHER_RANGE — where a scanned row with no
+   * range already goes — and every display name drops it rather than printing
+   * a hole.
+   */
+  line: string | null;
   /** What distinguishes this pack from its siblings — the name minus the range. */
   variant: string;
   species: "cat" | "dog";
@@ -13439,5 +13462,65 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     proteins: ["chicken", "salmon", "sardine"],
     lifeStage: "kitten",
     packages: [{ size: "3 oz", container: CAN, upc: "064992719371", scope: UNIT }],
+  },
+  {
+    brand: "Orijen",
+    line: null,
+    variant: "Beef Recipe Stew with Shredded Beef & Eggs",
+    species: "dog",
+    texture: "shredded",
+    presentation: "unknown",
+    foodForm: "wet",
+    proteins: ["beef", "egg", "duck", "sardine"],
+    lifeStage: "adult",
+    packages: [{ size: "12.8 oz", container: CAN, upc: "064992716271", scope: UNIT }],
+  },
+  {
+    brand: "Orijen",
+    line: null,
+    variant: "Chicken Recipe Stew with Shredded Chicken & Eggs",
+    species: "dog",
+    texture: "shredded",
+    presentation: "unknown",
+    foodForm: "wet",
+    proteins: ["chicken", "egg", "quail"],
+    lifeStage: "adult",
+    packages: [{ size: "12.8 oz", container: CAN, upc: "064992716301", scope: UNIT }],
+  },
+  {
+    brand: "Orijen",
+    line: null,
+    variant: "Chicken Recipe Pâté with Liver",
+    species: "dog",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "all",
+    packages: [{ size: "12.8 oz", container: CAN, upc: "064992723781", scope: UNIT }],
+  },
+  {
+    brand: "Orijen",
+    line: null,
+    variant: "Duck & Chicken Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["duck", "chicken"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "064992719388", scope: UNIT }],
+  },
+  {
+    brand: "Orijen",
+    line: null,
+    variant: "Tuna, Salmon & Beef Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna", "salmon", "beef", "sardine", "shrimp"],
+    lifeStage: "adult",
+    packages: [{ size: "3 oz", container: CAN, upc: "064992719395", scope: UNIT }],
   },
 ];

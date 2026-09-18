@@ -176,13 +176,39 @@ describe("data/known-products.ts", () => {
 
   // Same for the range: one that isn't in the brand's `lines` lands under
   // "Other", where a whole shelf of Classic Pâté would be invisible as a shelf.
+  //
+  // A NULL range is exempt, and deliberately: it is not a range this file
+  // failed to name, it is a pack that prints none. See KnownProduct.line.
   it("names ranges the brand's seed entry already has", () => {
     const bad: string[] = [];
     for (const p of KNOWN_PRODUCTS) {
+      if (p.line === null) continue;
       const seed = US_PET_BRANDS.find((b) => brandKey(b.name) === brandKey(p.brand));
       if (!seed?.lines?.includes(p.line)) bad.push(`${p.brand} — ${p.line}`);
     }
     expect(bad).toEqual([]);
+  });
+
+  // The exemption above is a hole in a rule, so it is bounded here: a null
+  // range has to be rare and it has to be a whole pack's worth of absence, not
+  // an empty string somebody left behind.
+  it("uses a null range only where the pack really prints none", () => {
+    const nulls = KNOWN_PRODUCTS.filter((p) => p.line === null);
+    // Every one still has to be a complete product in every other respect.
+    for (const p of nulls) {
+      expect(p.variant.trim(), `${p.brand} ${p.variant}`).not.toBe("");
+      expect(p.packages.length, `${p.brand} ${p.variant}`).toBeGreaterThan(0);
+    }
+    // And it stays the exception. If this ever trips, the question is whether
+    // a range is being missed rather than whether to raise the number.
+    expect(nulls.length).toBeLessThan(KNOWN_PRODUCTS.length * 0.05);
+  });
+
+  // An empty string is the failure this type change could quietly introduce:
+  // it passes `line: string | null` and then prints as a hole everywhere.
+  it("never writes an empty range instead of a null one", () => {
+    const blank = KNOWN_PRODUCTS.filter((p) => p.line !== null && !p.line.trim());
+    expect(blank.map((p) => `${p.brand} ${p.variant}`)).toEqual([]);
   });
 });
 
