@@ -212,6 +212,99 @@ export function readGuaranteedAnalysis(raw: unknown): GuaranteedAnalysis {
 }
 
 /** Whether anything at all was read — a panel of nothing isn't worth storing. */
+const STORED_FIELDS: (keyof GuaranteedAnalysis)[] = [
+  "crudeProteinMin",
+  "crudeFatMin",
+  "crudeFiberMax",
+  "moistureMax",
+  "ashMax",
+  "taurineMin",
+  "kcalPerKg",
+  "kcalPerServing",
+];
+
+/**
+ * The extras list, validated entry by entry.
+ *
+ * Written defensively because this is the one field in the panel whose shape
+ * the database does not enforce: `guaranteed_analysis` is jsonb, so anything
+ * ever written under this key comes back exactly as written. A half-formed
+ * entry is dropped and the rest kept — the named figures beside it are still
+ * good.
+ */
+function readStoredExtras(value: unknown): PrintedGuarantee[] | null {
+  if (!Array.isArray(value)) return null;
+  const out: PrintedGuarantee[] = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object") continue;
+    const raw = item as Record<string, unknown>;
+    const nutrient = typeof raw.nutrient === "string" ? raw.nutrient.trim() : "";
+    const unit = typeof raw.unit === "string" ? raw.unit.trim() : "";
+    const figure = raw.value;
+    const basis = raw.basis;
+    if (!nutrient || !unit) continue;
+    if (typeof figure !== "number" || !Number.isFinite(figure)) continue;
+    if (basis !== "min" && basis !== "max") continue;
+    out.push({ nutrient, basis, value: figure, unit });
+  }
+  return out.length > 0 ? out : null;
+}
+
+/**
+ * Read a panel back OUT of `barcode_cache.guaranteed_analysis`.
+ *
+ * ── Why this is not `readGuaranteedAnalysis` ──────────────────────────────
+ *
+ * Because they read two different shapes, and confusing them is not a style
+ * question — it silently returns "no panel" for every row in the catalog.
+ *
+ * `readGuaranteedAnalysis` parses what the MODEL returns: `crude_protein_min`,
+ * `moisture_max`, `kcal_per_kg` — snake_case, because that is what the
+ * extraction schema in lib/extract.ts asks the model for. What gets STORED is
+ * the parsed result, `GuaranteedAnalysis` itself, in camelCase. Every writer
+ * does this: app/api/process/route.ts stores `extraction.guaranteed_analysis`,
+ * which lib/extract.ts has already run through the parser.
+ *
+ * So handing a stored value to the snake_case parser finds none of its keys
+ * and returns NO_ANALYSIS. That is exactly what the seed importer did, and it
+ * made every photographed row in the catalog report "no analysis panel — worth
+ * re-shooting" whether it had one or not, and then made the panel-fill pass
+ * offer the same rows forever because the panel it had just written read back
+ * as absent.
+ *
+ * SHAPE MIRROR with Ingredients.help's `readStoredAnalysis`, which is the
+ * consumer app's reader for this same column and the reason the column's shape
+ * is settled. Null means the row holds no figure at all — which is a real
+ * state, and not the same as a panel of nulls.
+ */
+export function readStoredAnalysis(value: unknown): GuaranteedAnalysis | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const raw = value as Record<string, unknown>;
+
+  const analysis = {} as GuaranteedAnalysis;
+  let any = false;
+  for (const field of STORED_FIELDS) {
+    const v = raw[field];
+    const ok = typeof v === "number" && Number.isFinite(v) && v >= 0;
+    (analysis[field] as number | null) = ok ? v : null;
+    if (ok) any = true;
+  }
+  analysis.servingName =
+    typeof raw.servingName === "string" && raw.servingName.trim()
+      ? raw.servingName.trim()
+      : null;
+  const extras = readStoredExtras(raw.extras);
+  if (extras) {
+    analysis.extras = extras;
+    // A panel that prints ONLY extras is still a panel. Hill's prints no ash
+    // and no taurine on anything, so a deck reduced to omega-6 and calcium is
+    // a real shape rather than a hypothetical one.
+    any = true;
+  }
+
+  return any ? analysis : null;
+}
+
 export function hasAnyFigure(analysis: GuaranteedAnalysis): boolean {
   // Extras are counted, and an EMPTY extras array is not a figure. The old
   // `Object.values(...).some(v => v !== null)` would have said it was: an array

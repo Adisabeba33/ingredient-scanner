@@ -70,6 +70,9 @@ interface Result {
   boxes?: BoxCounts;
   /** Photographed rows that took the seeded guaranteed analysis and nothing else. */
   panelsFilled?: number;
+  /** Rows the update did not reach — errored, or matched nothing. */
+  panelsFailed?: number;
+  panelError?: string | null;
   conflicts?: { code: string; name: string }[];
   flagged?: { code: string; note: string | null }[];
   error?: string;
@@ -314,6 +317,17 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               The variety packs were not marked: {result.boxes.error}
             </p>
           )}
+          {/* Said out loud, because a panel that did not get written looks
+              exactly like one that did until the next press offers it again. */}
+          {result.panelsFailed ? (
+            <p className="mt-1 text-[11px] leading-snug text-amber">
+              {result.panelsFailed} panel{result.panelsFailed === 1 ? "" : "s"}{" "}
+              could not be written
+              {result.panelError ? `: ${result.panelError}` : ""}. If they are
+              still offered above after a refresh, the row is not being reached
+              — that is a bug, not a re-shoot.
+            </p>
+          ) : null}
           {result.flagged && result.flagged.length > 0 && (
             <p className="mt-1 text-[11px] leading-snug text-muted">
               {result.flagged.length} of them have older records under the same

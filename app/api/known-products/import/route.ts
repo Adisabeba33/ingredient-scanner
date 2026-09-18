@@ -3,7 +3,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { compositionKey } from "@/lib/composition-key";
 import { allReportCacheKeys } from "@/lib/report-cache-key";
-import { hasAnyFigure, readGuaranteedAnalysis } from "@/lib/guaranteed-analysis";
+import { hasAnyFigure, readStoredAnalysis } from "@/lib/guaranteed-analysis";
 import { isUndefinedColumn, withoutColumns } from "@/lib/optional-columns";
 import { deleteIn, selectIn } from "@/lib/chunked-in";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
@@ -180,9 +180,12 @@ async function decide(
       const held = existing.get(c.code);
       // Computed BEFORE the verdict, because the verdict now depends on it:
       // a photographed row with no panel can take the seeded one.
-      const heldPanel = held
-        ? hasAnyFigure(readGuaranteedAnalysis(held.guaranteed_analysis))
-        : null;
+      // `readStoredAnalysis`, NOT `readGuaranteedAnalysis`. The two parse
+      // different shapes and this line had the wrong one: the stored column is
+      // camelCase and the snake_case parser found none of its keys, so every
+      // photographed row in the catalog answered "no panel" whether it had one
+      // or not. See the note on readStoredAnalysis.
+      const heldPanel = held ? readStoredAnalysis(held.guaranteed_analysis) !== null : null;
       return {
         ...c,
         held: held ?? null,
@@ -236,22 +239,39 @@ async function writePanels(
   if (list.length === 0) return { filled: 0, codes: [] as string[] };
 
   const filled: string[] = [];
+  let failed = 0;
+  let firstError: string | null = null;
   for (const c of list) {
     const patch: Record<string, unknown> = { guaranteed_analysis: c.analysis };
     if (c.held?.moisture_percent == null && c.analysis?.moistureMax != null) {
       patch.moisture_percent = c.analysis.moistureMax;
     }
-    const { error } = await admin
+    // `.select()` is not decoration. An UPDATE that matches no row succeeds:
+    // no error, nothing changed. Counting that as filled is how a pass reports
+    // "4 panels filled" and then offers the same four again on the next press,
+    // forever, with nothing anywhere saying otherwise. Only rows the database
+    // actually returns are counted.
+    const { data, error } = await admin
       .from("barcode_cache")
       .update(patch)
       .eq("code", c.code)
-      .eq("source", "verified");
-    // One row failing is not a reason to abandon the other fifteen, and the
-    // count below is what the operator reads — so a failure shows up as a
-    // smaller number rather than as a silent success.
-    if (!error) filled.push(c.code);
+      .eq("source", "verified")
+      .select("code");
+    // One row failing is not a reason to abandon the rest — but it is a reason
+    // to say so, which is why the error comes back rather than being dropped.
+    if (error) {
+      failed += 1;
+      firstError ??= error.message;
+    } else if ((data ?? []).length > 0) {
+      filled.push(c.code);
+    } else {
+      // Matched nothing. Ordinarily this means somebody re-photographed the
+      // pack between the read at the start of this request and now.
+      failed += 1;
+      firstError ??= `${c.printed} matched no row to update`;
+    }
   }
-  return { filled: filled.length, codes: filled };
+  return { filled: filled.length, codes: filled, failed, error: firstError };
 }
 
 /**
@@ -520,6 +540,8 @@ export async function POST(req: Request) {
       ok: true,
       written: 0,
       panelsFilled: panels.filled,
+      panelsFailed: panels.failed,
+      panelError: panels.error,
       reportsCleared: await clearReports(admin, panels.codes),
       boxes,
       counts: summarise(decided),
@@ -609,6 +631,8 @@ export async function POST(req: Request) {
     ok: true,
     written: toWrite.length,
     panelsFilled: panels.filled,
+    panelsFailed: panels.failed,
+    panelError: panels.error,
     reportsCleared,
     boxes,
     counts: summarise(decided),
