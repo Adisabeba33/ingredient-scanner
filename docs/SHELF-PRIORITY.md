@@ -51,7 +51,7 @@ row in the catalog.
 | 2 | **Pedigree** | dog | TSC, Walmart, grocery | Highest-volume dog food in the US by units. Not at Petco (artificial). **Brief written:** `research/BRIEF-PEDIGREE.md`. |
 | 3 | **Sheba** | cat | PetSmart, TSC, grocery | **Already half-done** — 19 boxes seeded, zero formulas. Cheapest tier-1 win. |
 | 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. |
-| 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. |
+| 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. **Brief written:** `research/BRIEF-WELLNESS.md`. |
 | 6 | **Nutro** | both | PetSmart, Petco, TSC | Mars's natural line — one of the few Mars brands Petco still carries. |
 | 7 | **Taste of the Wild** | both | TSC, Petco | The Tractor Supply premium bag. Diamond, so it shares a plant with 4health. |
 | 8 | **Cesar** | dog | PetSmart, TSC, grocery | Small-dog wet trays, bought weekly, dozens of SKUs. |
@@ -69,7 +69,7 @@ row in the catalog.
 | **Meow Mix** | cat | TSC, Walmart, grocery | Post's cat volume. Pairs with 9Lives, already seeded. |
 | **Greenies** | both | PetSmart, Petco, TSC | Dental chews, all three chains. |
 | **Milk-Bone** | dog | everywhere | The default biscuit. |
-| **Instinct** | both | PetSmart, Petco | Raw-coated kibble, large facing in both. |
+| **Instinct** | both | PetSmart, Petco | Raw-coated kibble, large facing in both. **Brief written:** `research/BRIEF-INSTINCT.md`. |
 | **Stella & Chewy's** | both | PetSmart, Petco | Freeze-dried; premium end of both chains. |
 | **Victor** | dog | TSC | Working-dog bag; very strong at Tractor Supply. |
 | **Diamond Naturals** | both | TSC | Value premium at TSC. |
@@ -118,7 +118,11 @@ Not because they are small, but because they are not on these three shelves.
 34 of the 156 unfilled brands fall here:
 
 - **Chewy and Amazon own-brands** (American Journey, Tiny Tiger, Soulistic,
-  Frisco, Wag) — online only, never on a shelf. 5 brands.
+  Frisco, Wag) — online only, never on a shelf. 5 brands. American Journey is
+  briefed anyway (`research/BRIEF-AMERICAN-JOURNEY.md`): the shelf test is the
+  wrong one for a bag somebody already owns and scans in their own kitchen, and
+  Chewy is folding these labels into one brand, `Chewy Made`, which the seed
+  file does not know about.
 - **Direct-to-consumer fresh** (The Farmer's Dog, Ollie, Nom Nom, Spot & Tango,
   Smalls, Jinx, Maev, Sundays, Cat Person, Wild Earth, Raised Right,
   Life's Abundance, A Pup Above, JustFoodForDogs) — subscription, no aisle.

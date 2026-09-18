@@ -56,6 +56,65 @@ Also inspect the repository's current vocabulary for `texture` and `presentation
 - Do not merge a PR without an explicit user request.
 - Keep commits narrow: one brand file or one documentation change per commit whenever practical.
 
+## 3a. When the ledger is too big for your tooling to write
+
+A ledger grows about 6 KB per record, because every record carries a full
+ingredient list. Forty records is 235 KB; a hundred is nearly 600 KB, and the
+Blue Buffalo ledger is 1.27 MB. An agent working through a GitHub connector
+rather than a shell can only write a file **whole**, so at some point the batch
+you have finished researching is a file you cannot commit.
+
+**This has happened three times and cost more than any research mistake in this
+repository.** Two campaigns spent 20 of 25 and 23 of 26 commits building
+temporary GitHub Actions runners that staged and restored themselves. The
+Orijen campaign researched a whole batch and then hung trying to PUT 350 KB.
+Those runners were not carelessness; they were this limit, worked around
+badly.
+
+So there is a supported way to hand a batch over, and it is short.
+
+**Do not write the ledger. Write only the new records, to a subdirectory:**
+
+```
+research/incoming/<brand-slug>-batch-NN.json
+```
+
+The file is a bare JSON **array of records** — no ledger wrapper, no
+`schema_version`, no `brand_scope`:
+
+```json
+[ { …record… }, { …record… } ]
+```
+
+Split it further if even that is too large: `-batch-NN-a.json`, `-batch-NN-b.json`.
+
+Then say so and stop. A shell-enabled pass merges the records into the real
+ledger, runs the checker, regenerates the inventory and deletes the incoming
+file.
+
+**Why a subdirectory and not `research/`.** Both `scripts/check-ledger.mjs` and
+`scripts/brand-inventory.mjs` scan `research/` with a non-recursive
+`readdirSync` and read **every** `*.json` they find there — not only
+`deep-research-*.json`. A batch file sitting directly in `research/` would
+therefore be read as a second ledger for the same brand: every barcode in it
+would come back as `already claimed`, and the inventory's exclusion list would
+count each code twice. `research/incoming/` is invisible to both, which was
+verified by putting a complete copy of a 40-record ledger there and watching
+the checker stay clean.
+
+**What this does not change.** There is still exactly one ledger per brand and
+batches still append to it — see §4. `incoming/` is a delivery mechanism, not a
+second ledger, and it is empty again by the time the batch is in.
+
+**Never do instead:** a second `deep-research-*.json` for the same brand, a
+temporary Actions workflow to upload anything, temporary files committed and
+then removed, or handing the JSON back as a file or a link in a conversation.
+All four have been tried here and all four cost a day.
+
+And if you are stuck on delivery rather than on research: **say that in one
+message and stop.** "Still working" with no commit behind it is worse than
+silence, because it reads as progress.
+
 ## 4. Starting a new brand ledger
 
 Fetch the latest branch immediately before creating the file. A new brand ledger begins with valid JSON shaped like this:
