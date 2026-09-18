@@ -416,6 +416,12 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Kitten",
       "Small Breed",
       "WILD RESERVE",
+      // The cat wet family, and a range rather than a texture: six recipes
+      // exist only inside it — Beef & Tuna, Duck & Liver, Salmon & Chicken,
+      // Chicken & Tuna Kitten — and none of them is sold as a pâté. Acana's
+      // "Premium Pâté" above is the same case: a maker may market a format as
+      // a range, and then it is one.
+      "Chunks & Shreds",
     ],
   },
   {

@@ -843,10 +843,31 @@ describe("data/known-formulas.ts", () => {
   // adult formula. That is the shape of the mistake this was written for — a
   // kitten deck tidied into the adult figure sitting next to it — and it does
   // not care what number a maker chose.
+  //
+  // ── And the comparison is between cans of the same wetness ─────────────
+  //
+  // Batch 035 broke the brand-wide version of this, correctly. Orijen sells two
+  // wet cat families: pâtés at 80% moisture guaranteeing 0.2% taurine, and the
+  // Chunks & Shreds broth cans at 85% guaranteeing 0.1%. Both families have a
+  // kitten recipe, and in BOTH the kitten figure equals its own adults —
+  // 0.2 against 0.2, 0.1 against 0.1. Nothing was tidied. What failed was
+  // measuring an 85% broth can against an 80% pâté, which is comparing a
+  // guarantee to one made on 25% more food, and a dry-matter conversion does
+  // not rescue it either (0.67% against 1.0%): the two families really are
+  // formulated differently, and neither is the other's kitten version.
+  //
+  // So a kitten figure is checked against the adults of the same brand whose
+  // moisture guarantee is within four points of it. Four, not two, because
+  // Blue Buffalo's kitten pâté guarantees 74.5% against its adults' 78% and is
+  // plainly the same kind of can; five points is where Orijen's two families
+  // separate. Every comparison the brand-wide version made is still made,
+  // except the one that was wrong — and the count below fails if that ever
+  // stops being true and the test goes quiet.
   it("never guarantees a kitten less taurine than the same maker's adults", () => {
-    const taurine = (upc: string) => KNOWN_FORMULAS[upc]?.analysis.taurineMin ?? null;
+    const analysis = (upc: string) => KNOWN_FORMULAS[upc]?.analysis ?? null;
+    interface Can { brand: string; taurine: number; moisture: number | null }
     const stated = (stage: string) => {
-      const byBrand = new Map<string, number[]>();
+      const cans: Can[] = [];
       for (const p of KNOWN_PRODUCTS) {
         if (p.foodForm !== "wet" || p.species !== "cat" || p.lifeStage !== stage) continue;
         for (const pkg of p.packages) {
@@ -856,28 +877,41 @@ describe("data/known-formulas.ts", () => {
           // into a comparison against a number: the bug sat here unseen for
           // six batches, because every seeded kitten product had a composition
           // until Blue Buffalo brought one that does not.
-          const t = taurine(pkg.upc);
-          if (t === null) continue;
-          byBrand.set(p.brand, [...(byBrand.get(p.brand) ?? []), t]);
+          const t = analysis(pkg.upc)?.taurineMin;
+          if (t === null || t === undefined) continue;
+          cans.push({ brand: p.brand, taurine: t, moisture: analysis(pkg.upc)?.moistureMax ?? null });
         }
       }
-      return byBrand;
+      return cans;
     };
 
     const kittens = stated("kitten");
     const adults = stated("adult");
-    expect(kittens.size).toBeGreaterThan(0);
+    expect(kittens.length).toBeGreaterThan(0);
 
     const wrong: string[] = [];
-    for (const [brand, kittenFigures] of kittens) {
-      const adultFigures = adults.get(brand);
-      if (!adultFigures?.length) continue;
-      const adultMax = Math.max(...adultFigures);
-      for (const t of kittenFigures) {
-        if (t < adultMax) wrong.push(`${brand}: kitten ${t}% against adult ${adultMax}%`);
+    let compared = 0;
+    for (const k of kittens) {
+      const comparable = adults.filter(
+        (a) =>
+          a.brand === k.brand &&
+          // A can with no moisture guarantee is not comparable to anything, and
+          // is dropped rather than compared as if it were.
+          a.moisture !== null &&
+          k.moisture !== null &&
+          Math.abs(a.moisture - k.moisture) <= 4
+      );
+      if (!comparable.length) continue;
+      compared += 1;
+      const adultMax = Math.max(...comparable.map((a) => a.taurine));
+      if (k.taurine < adultMax) {
+        wrong.push(`${k.brand}: kitten ${k.taurine}% at ${k.moisture}% moisture against adult ${adultMax}%`);
       }
     }
     expect(wrong).toEqual([]);
+    // Three brands currently sell both a kitten and an adult wet can of the
+    // same wetness. If this drops, the test has stopped testing its own claim.
+    expect(compared).toBeGreaterThanOrEqual(3);
   });
 
   // The field says what a deck said, never what a name suggests. A range name

@@ -454,3 +454,36 @@ The 15-record checker wrapper finished **Clean with 1 warning read and answered*
 - The current eligible US individual wet-can range found in this campaign is now covered: **10 dog cans from Batch 4 and 20 cat cans across Batches 4–5**. No eligible standalone tray was established. A future wet pass should require genuinely new manufacturer evidence rather than recycling case, variety-pack, Canadian-only, or inferred sibling codes.
 - Multipacks and case codes remain intentionally excluded from the individual-unit wet batches and are preserved in the Batch 4 handoff table.
 - Outside wet food, the remaining campaign tail is unchanged: WILD RESERVE dry dog, exact-size resolution for Tundra Dog `064992109257`, the Tundra Cat generation collision, freeze-dried complete foods, FreshPrey, and the separate late treat batch.
+
+### Batch 5 merged and seeded — 2026-09-18
+
+Merged into `research/deep-research-orijen.json` (75 → 90 records, 89
+`source_verified`, the unchanged Tundra Dog candidate `064992109257` the only
+one left) and `research/incoming/orijen-batch-05.json` deleted, per AGENTS.md
+§3a. The checker reports three warnings, all answered in the records
+themselves: the long-standing `064992727352` kcal basis, the `064992716219`
+calorie disagreement, and the Duck & Chicken 5.5 oz difference this batch
+documented.
+
+Seeded as catalog batch 035. Six new products, not fifteen: every 3 oz /
+5.5 oz pair the batch proved is one product with two packages, because the
+panels are byte-identical — checked, not assumed, per SEEDING-A-BATCH §2.4.7.
+The four 5.5 oz pâtés became packages on the four 3 oz products already
+seeded rather than duplicates of them. All fifteen barcodes have their own
+formula entry.
+
+Two decisions differ from a literal reading of the records:
+
+- `Chunks & Shreds` was added to Orijen's ranges in `data/us-pet-brands.ts`.
+  Batch 4 established that a wet FORMAT does not belong in `product_line`, and
+  this is the exception the rule allows: four recipes exist only inside this
+  family, and Acana's `Premium Pâté` above it is the same case — a maker may
+  market a format as a range, and then it is one.
+- `Duck & Liver` stores `proteins: ["duck", "liver"]`, not
+  `["duck", "chicken liver"]`. The catalog's protein vocabulary has used bare
+  `liver` since batch 001 and a two-word token would match nothing.
+
+Open for a physical pack: whether Chunks & Shreds should have its own texture
+value. The pack prints two words and the description says chunks topped with
+shreds; the record keeps `texture: "chunks"` and leaves the shreds in the
+printed identity, because a combined value predicts no different composition.

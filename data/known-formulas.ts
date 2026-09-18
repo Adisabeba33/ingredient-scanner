@@ -117,6 +117,9 @@ const VERIFIED_031 = "2026-09-13";
 // Batch 033 — the first three researched brands promoted together: Pro Plan,
 // Pedigree and Orijen, out of the campaign ledgers under research/.
 const VERIFIED_033 = "2026-09-18";
+// Batch 035 — the rest of the current ORIJEN wet cat shelf: the Chunks & Shreds
+// family, and the 5.5 oz sibling of every 3 oz pâté that has one.
+const VERIFIED_035 = "2026-09-18";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -9574,5 +9577,171 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Tuna, chicken, salmon, whole sardine, chicken liver, fish bone broth, beef bone broth, beef, lamb, beef kidney, shrimp, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
     analysis: withCalories(ga(14, 4, 0.5, 80, 3, 0.2), 1059, 90, "can"),
     verifiedAt: VERIFIED_033,
+  },
+
+  // ── Orijen (batch 035) ────────────────────────────────────────────────────────────
+
+  "064992724542": {
+    ingredients: `Chicken, salmon, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, natural flavor, salmon oil, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(11, 2.5, 1.5, 85, null, 0.1), 767, 65, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992726171": {
+    ingredients: `Chicken, salmon, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, natural flavor, salmon oil, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(11, 2.5, 1.5, 85, null, 0.1), 767, 119, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992724580": {
+    ingredients: `Beef, chicken, fish broth, beef broth, lamb broth, chicken broth, tuna, egg, dried egg white, beef kidney, salmon oil, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, vitamin A supplement, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(12, 5, 1.5, 85, null, 0.1), 849, 72, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.2, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992724559": {
+    ingredients: `Duck, chicken liver, duck broth, turkey broth, fish broth, chicken, egg, salmon oil, dried egg white, natural flavor, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, niacin, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(10, 5.5, 1.5, 85, null, 0.1), 814, 69, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992726218": {
+    ingredients: `Duck, chicken liver, duck broth, turkey broth, fish broth, chicken, egg, salmon oil, dried egg white, natural flavor, taurine, organic guar gum, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, niacin, copper proteinate, manganese proteinate, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(10, 5.5, 1.5, 85, null, 0.1), 814, 126, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992724573": {
+    ingredients: `Lamb, tuna, lamb broth, fish broth, beef broth, beef, egg, dried egg white, salmon oil, lamb kidney, taurine, organic guar gum, natural flavor, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(12, 6.5, 1.5, 85, null, 0.1), 847, 72, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.05, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992726164": {
+    ingredients: `Lamb, tuna, lamb broth, fish broth, beef broth, beef, egg, dried egg white, salmon oil, lamb kidney, taurine, organic guar gum, natural flavor, potassium chloride, choline chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, turmeric, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(12, 6.5, 1.5, 85, null, 0.1), 847, 131, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.05, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992724566": {
+    ingredients: `Salmon, chicken, chicken broth, fish broth, turkey broth, egg, salmon oil, dried egg white, chicken liver, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(10, 5, 1.5, 85, null, 0.1), 808, 69, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992726188": {
+    ingredients: `Salmon, chicken, chicken broth, fish broth, turkey broth, egg, salmon oil, dried egg white, chicken liver, natural flavor, taurine, organic guar gum, potassium chloride, magnesium sulfate, salt, tricalcium phosphate, zinc proteinate, vitamin E supplement, thiamine mononitrate, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, inulin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(10, 5, 1.5, 85, null, 0.1), 808, 125, "can"),
+      [
+        ["Omega-3 fatty acids", "min", 0.05, "%"],
+        ["Omega-6 fatty acids", "min", 0.3, "%"],
+        ["Vitamin A", "min", 1800, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992724597": {
+    ingredients: `Chicken, tuna, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, salmon oil, sunflower oil, natural flavor, taurine, organic guar gum, potassium chloride, tricalcium phosphate, choline chloride, magnesium sulfate, salt, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(11.5, 4, 1.5, 85, null, 0.1), 987, 84, "can"),
+      [
+        ["EPA", "min", 0.02, "%"],
+        ["DHA", "min", 0.05, "%"],
+        ["Vitamin A", "min", 3000, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992726195": {
+    ingredients: `Chicken, tuna, chicken broth, fish broth, turkey broth, egg, dried egg white, chicken liver, salmon oil, sunflower oil, natural flavor, taurine, organic guar gum, potassium chloride, tricalcium phosphate, choline chloride, magnesium sulfate, salt, zinc proteinate, thiamine mononitrate, vitamin E supplement, iron proteinate, menadione sodium bisulfite complex, niacin, copper proteinate, manganese proteinate, vitamin A supplement, inulin, turmeric, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, potassium iodide, biotin, vitamin B12 supplement, vitamin D3 supplement.`,
+    analysis: withExtras(
+      withCalories(ga(11.5, 4, 1.5, 85, null, 0.1), 987, 153, "can"),
+      [
+        ["EPA", "min", 0.02, "%"],
+        ["DHA", "min", 0.05, "%"],
+        ["Vitamin A", "min", 3000, "IU/kg"],
+        ["Vitamin E", "min", 60, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992721831": {
+    ingredients: `Chicken, chicken liver, whole mackerel, chicken bone broth, fish bone broth, chicken heart, whole sardine, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(12, 6, 0.5, 80, 3, 0.2), 1156, 180, "can"),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992721848": {
+    ingredients: `Lamb, beef, beef kidney, chicken, salmon, whole sardine, lamb kidney, beef bone broth, fish bone broth, lamb liver, beef liver, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(12, 6, 0.5, 80, 3, 0.2), 1251, 196, "can"),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992721879": {
+    ingredients: `Duck, chicken, chicken liver, chicken heart, chicken bone broth, duck bone broth, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(11, 5, 0.5, 80, 4, 0.2), 975, 156, "can"),
+    verifiedAt: VERIFIED_035,
+  },
+  "064992721886": {
+    ingredients: `Tuna, chicken, salmon, whole sardine, chicken liver, fish bone broth, beef bone broth, beef, lamb, beef kidney, shrimp, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(14, 4, 0.5, 80, 3, 0.2), 1059, 165, "can"),
+    verifiedAt: VERIFIED_035,
   },
 };
