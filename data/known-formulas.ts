@@ -114,6 +114,9 @@ const VERIFIED_028 = "2026-09-07";
 const VERIFIED_029 = "2026-09-07";
 const VERIFIED_030 = "2026-09-13";
 const VERIFIED_031 = "2026-09-13";
+// Batch 033 — the first three researched brands promoted together: Pro Plan,
+// Pedigree and Orijen, out of the campaign ledgers under research/.
+const VERIFIED_033 = "2026-09-18";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -7718,5 +7721,1833 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Liver flavor, beef fat preserved with mixed-tocopherols, partially hydrogenated vegetable oil, brewers dried yeast, crab flavor.`,
     analysis: withCalories(ga(23, 53, 11, 6, null, null), 6443, 3.3, "piece"),
     verifiedAt: VERIFIED_030,
+  },
+
+  // ── Pro Plan (batch 033) ──────────────────────────────────────────────────────────
+
+  "038100101679": {
+    ingredients: `Chicken, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, dried egg product, natural flavor, dried beet pulp, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, fish meal, salt, soybean oil, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3790, 369, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100130594": {
+    ingredients: `Chicken, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, dried egg product, natural flavor, dried beet pulp, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, fish meal, salt, soybean oil, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3790, 369, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100177667": {
+    ingredients: `Chicken, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, dried egg product, natural flavor, dried beet pulp, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, fish meal, salt, soybean oil, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3790, 369, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100130570": {
+    ingredients: `Beef, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, soybean oil, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3859, 382, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100130525": {
+    ingredients: `Beef, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, soybean oil, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3859, 382, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100130518": {
+    ingredients: `Beef, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, soybean oil, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3859, 382, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100180537": {
+    ingredients: `Beef, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, soybean oil, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3859, 382, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100101365": {
+    ingredients: `Lamb, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, natural flavor, dried beet pulp, mono and dicalcium phosphate, dried egg product, glycerin, soybean oil, fish meal, wheat bran, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, L-Lysine monohydrochloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3933, 390, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100101389": {
+    ingredients: `Lamb, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, natural flavor, dried beet pulp, mono and dicalcium phosphate, dried egg product, glycerin, soybean oil, fish meal, wheat bran, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, L-Lysine monohydrochloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3933, 390, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100130631": {
+    ingredients: `Lamb, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, natural flavor, dried beet pulp, mono and dicalcium phosphate, dried egg product, glycerin, soybean oil, fish meal, wheat bran, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, L-Lysine monohydrochloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3933, 390, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100177674": {
+    ingredients: `Lamb, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, corn protein meal, beef fat preserved with mixed-tocopherols, natural flavor, dried beet pulp, mono and dicalcium phosphate, dried egg product, glycerin, soybean oil, fish meal, wheat bran, salt, calcium carbonate, potassium chloride, MINERALS [zinc proteinate, manganese proteinate, ferrous sulfate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7)], choline chloride, L-Lysine monohydrochloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3933, 390, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100160515": {
+    ingredients: `Salmon, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, soybean oil, salt, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3856, 389, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100160539": {
+    ingredients: `Salmon, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, soybean oil, salt, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3856, 389, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100160546": {
+    ingredients: `Salmon, rice, whole grain wheat, poultry by-product meal, whole grain corn, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, fish meal, natural flavor, dried beet pulp, dried egg product, glycerin, mono and dicalcium phosphate, wheat bran, calcium carbonate, soybean oil, salt, potassium chloride, MINERALS [zinc proteinate, ferrous sulfate, manganese proteinate, copper proteinate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin D-3 supplement], choline chloride, dried Bacillus coagulans fermentation product, L-ascorbyl-2-polyphosphate (Vitamin C), L-Lysine monohydrochloride, garlic oil.`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 3, 12, null, null), 3856, 389, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.4, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 400, "other"],
+        ["Omega-6 Fatty Acids", "min", 1.5, "%"],
+        ["Bacillus coagulans (million CFU/lb)", "min", 600, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100100757": {
+    ingredients: `Salmon, rice, barley, canola meal, oat meal, fish meal, salmon meal, beef fat preserved with mixed-tocopherols, dried yeast, natural flavor, sunflower oil, fish oil, dried chicory root, calcium carbonate, salt, potassium chloride, L-Lysine monohydrochloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, choline chloride, L-ascorbyl-2-polyphosphate (Vitamin C).`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 4, 12, null, null), 3903, 449, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.5, "%"],
+        ["Eicosapentaenoic Acid (EPA)", "min", 0.1, "%"],
+        ["Docosahexaenoic Acid (DHA)", "min", 0.1, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 350, "other"],
+        ["Omega-3 Fatty Acids", "min", 0.75, "%"],
+        ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Sensitive Skin & Stomach; some exact-UPC sources retain legacy Focus naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100175458": {
+    ingredients: `Salmon, rice, barley, canola meal, oat meal, fish meal, salmon meal, beef fat preserved with mixed-tocopherols, dried yeast, natural flavor, sunflower oil, fish oil, dried chicory root, calcium carbonate, salt, potassium chloride, L-Lysine monohydrochloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, choline chloride, L-ascorbyl-2-polyphosphate (Vitamin C).`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 4, 12, null, null), 3903, 449, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.5, "%"],
+        ["Eicosapentaenoic Acid (EPA)", "min", 0.1, "%"],
+        ["Docosahexaenoic Acid (DHA)", "min", 0.1, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 350, "other"],
+        ["Omega-3 Fatty Acids", "min", 0.75, "%"],
+        ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Sensitive Skin & Stomach; some exact-UPC sources retain legacy Focus naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100175526": {
+    ingredients: `Salmon, rice, barley, canola meal, oat meal, fish meal, salmon meal, beef fat preserved with mixed-tocopherols, dried yeast, natural flavor, sunflower oil, fish oil, dried chicory root, calcium carbonate, salt, potassium chloride, L-Lysine monohydrochloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, choline chloride, L-ascorbyl-2-polyphosphate (Vitamin C).`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 4, 12, null, null), 3903, 449, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.5, "%"],
+        ["Eicosapentaenoic Acid (EPA)", "min", 0.1, "%"],
+        ["Docosahexaenoic Acid (DHA)", "min", 0.1, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 350, "other"],
+        ["Omega-3 Fatty Acids", "min", 0.75, "%"],
+        ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Sensitive Skin & Stomach; some exact-UPC sources retain legacy Focus naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+  "038100100771": {
+    ingredients: `Salmon, rice, barley, canola meal, oat meal, fish meal, salmon meal, beef fat preserved with mixed-tocopherols, dried yeast, natural flavor, sunflower oil, fish oil, dried chicory root, calcium carbonate, salt, potassium chloride, L-Lysine monohydrochloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), pyridoxine hydrochloride, folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], DL-Methionine, choline chloride, L-ascorbyl-2-polyphosphate (Vitamin C).`,
+    analysis: withExtras(
+      withCalories(ga(26, 16, 4, 12, null, null), 3903, 449, "cup"),
+      [
+        ["Linoleic Acid", "min", 1.5, "%"],
+        ["Eicosapentaenoic Acid (EPA)", "min", 0.1, "%"],
+        ["Docosahexaenoic Acid (DHA)", "min", 0.1, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Selenium (mg/kg)", "min", 0.35, "other"],
+        ["Vitamin A", "min", 15000, "IU/kg"],
+        ["Vitamin E", "min", 460, "IU/kg"],
+        ["Ascorbic Acid (Vitamin C) (mg/kg)", "min", 70, "other"],
+        ["Glucosamine (ppm)", "min", 350, "other"],
+        ["Omega-3 Fatty Acids", "min", 0.75, "%"],
+        ["Omega-6 Fatty Acids", "min", 1.6, "%"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current Purina name is Sensitive Skin & Stomach; some exact-UPC sources retain legacy Focus naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.",
+  },
+
+  // ── Pedigree (batch 033) ──────────────────────────────────────────────────────────
+
+  "023100125541": {
+    ingredients: `Ground Whole Grain Corn, Meat and Bone Meal (source of Calcium), Chicken by-Product Meal (source of Glucosamine and Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (source of Omega 6 Fatty Acids [preserved with BHA and Citric Acid]), Soybean Meal, Ground Whole Grain Wheat, Beef, Natural Flavor, Dried Plain Beet Pulp, Salt, Brewers Rice, Potassium Chloride, Lamb Meal, Calcium Carbonate, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Monocalcium Phosphate, Zinc Sulfate, Yellow 6, Dried Carrots, L-Tryptophan, Red 40, Yellow 5, Niacin [Vitamin B3], Blue 2, D-Calcium Pantothenate [source of Vitamin B5], Copper Sulfate, Vitamin A Supplement, Sodium Selenite, Potassium Iodide, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(27, 12, 4, 12, null, null), 3417, 315, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100143767": {
+    ingredients: `Ground Whole Grain Corn, Meat and Bone Meal (source of Calcium), Chicken by-Product Meal (source of Glucosamine and Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (source of Omega 6 Fatty Acids [preserved with BHA and Citric Acid]), Soybean Meal, Ground Whole Grain Wheat, Beef, Natural Flavor, Dried Plain Beet Pulp, Salt, Brewers Rice, Potassium Chloride, Lamb Meal, Calcium Carbonate, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Monocalcium Phosphate, Zinc Sulfate, Yellow 6, Dried Carrots, L-Tryptophan, Red 40, Yellow 5, Niacin [Vitamin B3], Blue 2, D-Calcium Pantothenate [source of Vitamin B5], Copper Sulfate, Vitamin A Supplement, Sodium Selenite, Potassium Iodide, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(27, 12, 4, 12, null, null), 3417, 315, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "DirectionsForMe binds UPC/size but displays an older 3437 kcal/kg, 342 kcal/cup formula generation. That older formula was not merged; the current Pedigree 3417 kcal/kg, 315 kcal/cup generation is stored.",
+  },
+  "023100143545": {
+    ingredients: `Ground Whole Grain Corn, Meat and Bone Meal (source of Calcium), Chicken by-Product Meal (source of Glucosamine and Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (source of Omega 6 Fatty Acids [preserved with BHA and Citric Acid]), Soybean Meal, Ground Whole Grain Wheat, Beef, Natural Flavor, Dried Plain Beet Pulp, Salt, Brewers Rice, Potassium Chloride, Lamb Meal, Calcium Carbonate, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Monocalcium Phosphate, Zinc Sulfate, Yellow 6, Dried Carrots, L-Tryptophan, Red 40, Yellow 5, Niacin [Vitamin B3], Blue 2, D-Calcium Pantothenate [source of Vitamin B5], Copper Sulfate, Vitamin A Supplement, Sodium Selenite, Potassium Iodide, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(27, 12, 4, 12, null, null), 3417, 315, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Target binds the exact 18 lb UPC but its label copy reflects an older ingredient/formula generation. Retailer formula text was not merged; the current Pedigree manufacturer generation is stored.",
+  },
+  "023100143323": {
+    ingredients: `Ground Whole Grain Corn, Meat and Bone Meal (source of Calcium), Chicken by-Product Meal (source of Glucosamine and Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (source of Omega 6 Fatty Acids [preserved with BHA and Citric Acid]), Soybean Meal, Ground Whole Grain Wheat, Beef, Natural Flavor, Dried Plain Beet Pulp, Salt, Brewers Rice, Potassium Chloride, Lamb Meal, Calcium Carbonate, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Monocalcium Phosphate, Zinc Sulfate, Yellow 6, Dried Carrots, L-Tryptophan, Red 40, Yellow 5, Niacin [Vitamin B3], Blue 2, D-Calcium Pantothenate [source of Vitamin B5], Copper Sulfate, Vitamin A Supplement, Sodium Selenite, Potassium Iodide, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(27, 12, 4, 12, null, null), 3417, 315, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100110349": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source Of Omega 6 Fatty Acids [Preserved With BHA/Citric Acid]), Meat And Bone Meal, Soybean Meal, Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, L-Tryptophan, Red 40, Yellow 6, Dried Carrots, Niacin [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3469, 332, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Target's exact-UPC label panel shows 1.5% linoleic acid, while the current Pedigree manufacturer panel shows 2.0%. Retailer panel was treated as a prior generation and was not merged.",
+  },
+  "023100143828": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source Of Omega 6 Fatty Acids [Preserved With BHA/Citric Acid]), Meat And Bone Meal, Soybean Meal, Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, L-Tryptophan, Red 40, Yellow 6, Dried Carrots, Niacin [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3469, 332, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100143675": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source Of Omega 6 Fatty Acids [Preserved With BHA/Citric Acid]), Meat And Bone Meal, Soybean Meal, Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, L-Tryptophan, Red 40, Yellow 6, Dried Carrots, Niacin [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3469, 332, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100103648": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source Of Omega 6 Fatty Acids [Preserved With BHA/Citric Acid]), Meat And Bone Meal, Soybean Meal, Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, L-Tryptophan, Yellow 5, Yellow 6, Dried Carrots, Blue 2, Niacin [Vitamin B3], Red 40, D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3469, 332, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Target's exact-UPC panel shows an older 1.5% linoleic-acid generation; the current Pedigree manufacturer panel shows 2.0%. Retailer formula was not merged.",
+  },
+  "023100143668": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source Of Omega 6 Fatty Acids [Preserved With BHA/Citric Acid]), Meat And Bone Meal, Soybean Meal, Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, L-Tryptophan, Yellow 5, Yellow 6, Dried Carrots, Blue 2, Niacin [Vitamin B3], Red 40, D-Calcium Pantothenate [Source Of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3469, 332, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Target's exact-UPC panel shows an older 1.5% linoleic-acid generation; the current Pedigree manufacturer panel shows 2.0%. Retailer formula was not merged.",
+  },
+  "023100135243": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids) [Preserved with BHA/Citric Acid], Soybean Meal, Meat and Bone Meal (Source of Calcium), Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Water, Glycerin, Chicken Meal, Salt, Sugar, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Phosphoric Acid, Dried Peas, Potassium Sorbate (preservative), DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, BHA (preservative), Citric Acid (preservative), Red 40, L-Tryptophan, Yellow 6, Dried Carrots, Niacin Supplement [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3454, 335, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "The exact-UPC retailer label copy differs from the current Pedigree manufacturer ingredient generation; retailer text was used only for identity/UPC binding and was not merged.",
+  },
+  "023100143866": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids) [Preserved with BHA/Citric Acid], Soybean Meal, Meat and Bone Meal (Source of Calcium), Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Water, Glycerin, Chicken Meal, Salt, Sugar, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Phosphoric Acid, Dried Peas, Potassium Sorbate (preservative), DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, BHA (preservative), Citric Acid (preservative), Red 40, L-Tryptophan, Yellow 6, Dried Carrots, Niacin Supplement [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3454, 335, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100143699": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids) [Preserved with BHA/Citric Acid], Soybean Meal, Meat and Bone Meal (Source of Calcium), Ground Whole Grain Wheat, Natural Flavor, Brewers Rice, Water, Glycerin, Chicken Meal, Salt, Sugar, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Phosphoric Acid, Dried Peas, Potassium Sorbate (preservative), DL-Methionine, Natural Grilled Steak Flavor, Vitamin E Supplement, Zinc Sulfate, BHA (preservative), Citric Acid (preservative), Red 40, L-Tryptophan, Yellow 6, Dried Carrots, Niacin Supplement [Vitamin B3], Blue 2, Yellow 5, D-Calcium Pantothenate [Source of Vitamin B5], Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement [Vitamin B2], Vitamin B12 Supplement, Thiamine Mononitrate [Vitamin B1], Vitamin D3 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 11, 4, 12, null, null), 3454, 335, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 2, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "The exact-UPC retailer label copy differs from the current Pedigree manufacturer ingredient generation; retailer text was used only for identity/UPC binding and was not merged.",
+  },
+  "023100143705": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA and Citric Acid]), Meat and Bone Meal, Ground Wheat, Soybean Meal, Brewers Rice, Natural Flavor (Source of Roasted Chicken Flavor), Dried Plain Beet Pulp, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, Yellow #5, Dried Carrots, L-Tryptophan, Red #40, Blue #2, Niacin Supplement, Yellow #6, D-Calcium Pantothenate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(22, 10, 4, 12, null, null), 3400, 321, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 1.5, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100143613": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA and Citric Acid]), Meat and Bone Meal, Ground Wheat, Soybean Meal, Brewers Rice, Natural Flavor (Source of Roasted Chicken Flavor), Dried Plain Beet Pulp, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, Yellow #5, Dried Carrots, L-Tryptophan, Red #40, Blue #2, Niacin Supplement, Yellow #6, D-Calcium Pantothenate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(22, 10, 4, 12, null, null), 3400, 321, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 1.5, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "023100181776": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA and Citric Acid]), Meat and Bone Meal, Ground Wheat, Soybean Meal, Brewers Rice, Natural Flavor (Source of Roasted Chicken Flavor), Dried Plain Beet Pulp, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, Yellow #5, Dried Carrots, L-Tryptophan, Red #40, Blue #2, Niacin Supplement, Yellow #6, D-Calcium Pantothenate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(22, 10, 4, 12, null, null), 3400, 321, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 1.5, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Target binds UPC 023100181776 to the current 38 lb unit but its ingredient copy is an older generation/order. The current Pedigree manufacturer formula was kept intact.",
+  },
+  "023100143569": {
+    ingredients: `Ground Whole Grain Corn, Chicken By-Product Meal (Source of Glucosamine & Chondroitin Sulfate), Corn Gluten Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA and Citric Acid]), Meat and Bone Meal, Ground Wheat, Soybean Meal, Brewers Rice, Natural Flavor (Source of Roasted Chicken Flavor), Dried Plain Beet Pulp, Salt, Calcium Carbonate, Monocalcium Phosphate, Potassium Chloride, Choline Chloride, Dried Peas, DL-Methionine, Vitamin E Supplement, Zinc Sulfate, Yellow #5, Dried Carrots, L-Tryptophan, Red #40, Blue #2, Niacin Supplement, Yellow #6, D-Calcium Pantothenate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(22, 10, 4, 12, null, null), 3400, 321, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acid)", "min", 1.5, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Glucosamine*", "min", 350, "other"],
+        ["Chondroitin Sulfate*", "min", 275, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Retail/distributor sources still use the historical 'For Big Dogs/Complete Nutrition' naming for UPC 023100143569; the current manufacturer page calls the range 'Large Breed'. Identity is consistent, but the line-name evolution is documented rather than silently normalized.",
+  },
+  "023100143682": {
+    ingredients: `Ground Whole Grain Corn, Meat and Bone Meal, Soybean Meal, Animal Fat (Source of Omega 6 Fatty Acids [Preserved with BHA and Citric Acid]), Corn Gluten Meal, Natural Flavor (Source of Chicken Flavor), Dried Plain Beet Pulp, Chicken By-Product Meal, Chicken Meal, Glycerin, Salt, Sugar, Ground Wheat, Potassium Chloride, Calcium Carbonate, Choline Chloride, Phosphoric Acid, Dried Peas, DL-Methionine, Potassium Sorbate (preservative), Natural Grilled Steak Flavor, Zinc Sulfate, Vitamin E Supplement, L-Tryptophan, Red #40, Dried Carrots, Niacin Supplement, Yellow #6, Copper Sulfate, Blue #2, Sodium Selenite, Potassium Iodide, D-Calcium Pantothenate, Yellow #5, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid`,
+    analysis: withExtras(
+      withCalories(ga(21, 10, 4, 12, null, null), 3376, 321, "cup"),
+      [
+        ["Linoleic Acid (Omega 6 Fatty Acids)", "min", 1.5, "%"],
+        ["Calcium", "min", 1, "%"],
+        ["Phosphorus", "min", 0.8, "%"],
+        ["Zinc", "min", 80, "other"],
+        ["Vitamin E", "min", 100, "IU/kg"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Chewy currently reports a materially different 3332 kcal/kg, 318 kcal/cup and ingredient order for this exact product family. The current Pedigree manufacturer page is treated as the authoritative formula generation; retailer formula copy is not merged.",
+  },
+
+  // ── Orijen (batch 033) ────────────────────────────────────────────────────────────
+
+  "064992103453": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated chicken liver, dehydrated egg, dehydrated sardine, chicken fat, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, pollock oil, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, salt, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992103132": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated chicken liver, dehydrated egg, dehydrated sardine, chicken fat, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, pollock oil, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, salt, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992103255": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated chicken liver, dehydrated egg, dehydrated sardine, chicken fat, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, pollock oil, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, salt, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992728441": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated chicken liver, dehydrated egg, dehydrated sardine, chicken fat, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, pollock oil, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, salt, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992106454": {
+    ingredients: `Whole herring, salmon, monkfish, Acadian redfish, flounder, whole hake, sardine meal, herring meal, blue whiting meal, pollock meal, whole red lentils, whole pinto beans, whole green lentils, dehydrated salmon, sunflower oil, whole navy beans, whole peas, natural fish flavor, dried apple pomace, herring oil, safflower oil, vitamin E supplement, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, dried kelp, zinc proteinate, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 16, 4, 12, null, null), 3760, 451, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.7, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.6, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.1, "%"],
+        ["Omega-3 fatty acids", "min", 1.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 300, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992106133": {
+    ingredients: `Whole herring, salmon, monkfish, Acadian redfish, flounder, whole hake, sardine meal, herring meal, blue whiting meal, pollock meal, whole red lentils, whole pinto beans, whole green lentils, dehydrated salmon, sunflower oil, whole navy beans, whole peas, natural fish flavor, dried apple pomace, herring oil, safflower oil, vitamin E supplement, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, dried kelp, zinc proteinate, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 16, 4, 12, null, null), 3760, 451, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.7, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.6, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.1, "%"],
+        ["Omega-3 fatty acids", "min", 1.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 300, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992106256": {
+    ingredients: `Whole herring, salmon, monkfish, Acadian redfish, flounder, whole hake, sardine meal, herring meal, blue whiting meal, pollock meal, whole red lentils, whole pinto beans, whole green lentils, dehydrated salmon, sunflower oil, whole navy beans, whole peas, natural fish flavor, dried apple pomace, herring oil, safflower oil, vitamin E supplement, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, dried kelp, zinc proteinate, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 16, 4, 12, null, null), 3760, 451, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.7, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.6, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.1, "%"],
+        ["Omega-3 fatty acids", "min", 1.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 300, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992105457": {
+    ingredients: `Beef, wild boar, lamb, pork, beef liver, beef meal, lamb meal, mackerel meal, herring meal, pork meal, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole herring, pork liver, beef fat, natural pork flavor, dried apple pomace, pollock oil, pork kidney, beef kidney, beef tripe, vitamin E supplement, dried kelp, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3860, 463, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 1.6, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 400, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992105136": {
+    ingredients: `Beef, wild boar, lamb, pork, beef liver, beef meal, lamb meal, mackerel meal, herring meal, pork meal, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole herring, pork liver, beef fat, natural pork flavor, dried apple pomace, pollock oil, pork kidney, beef kidney, beef tripe, vitamin E supplement, dried kelp, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3860, 463, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 1.6, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 400, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992105259": {
+    ingredients: `Beef, wild boar, lamb, pork, beef liver, beef meal, lamb meal, mackerel meal, herring meal, pork meal, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole herring, pork liver, beef fat, natural pork flavor, dried apple pomace, pollock oil, pork kidney, beef kidney, beef tripe, vitamin E supplement, dried kelp, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3860, 463, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 1.6, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 400, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992108458": {
+    ingredients: `Lamb, venison, duck, arctic char, rainbow trout, lamb meal, pollock meal, sardine meal, herring meal, mackerel meal, whole red lentils, whole pinto beans, pork, pork fat, duck liver, natural pork flavor, pork liver, lamb liver, whole herring, pollock oil, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, duck meal, lamb tripe, pork kidney, dried kelp, vitamin E supplement, zinc proteinate, whole butternut squash, whole pumpkin, mixed tocopherols (preservative), collard greens, whole pears, whole apples, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 18, 5, 12, null, null), 3860, 463, "cup"),
+      [
+        ["Dietary Starch", "max", 15, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.35, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 400, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992101459": {
+    ingredients: `Chicken, turkey, chicken liver, salmon, whole herring, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, chicken fat, pollock oil, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, chicken heart, salt, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 20, 6, 12, null, null), 3960, 475, "cup"),
+      [
+        ["Dietary Starch", "max", 15, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992101138": {
+    ingredients: `Chicken, turkey, chicken liver, salmon, whole herring, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, chicken fat, pollock oil, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, chicken heart, salt, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 20, 6, 12, null, null), 3960, 475, "cup"),
+      [
+        ["Dietary Starch", "max", 15, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992101251": {
+    ingredients: `Chicken, turkey, chicken liver, salmon, whole herring, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, chicken fat, pollock oil, whole navy beans, whole green lentils, whole chickpeas, whole peas, turkey giblets (liver, heart, gizzard), eggs, natural chicken flavor, dried apple pomace, chicken heart, salt, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 20, 6, 12, null, null), 3960, 475, "cup"),
+      [
+        ["Dietary Starch", "max", 15, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992102135": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, eggs, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, turkey giblets (liver, heart, gizzard), natural chicken flavor, pollock oil, chicken fat, dehydrated pumpkin, chicken heart, salt, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), taurine, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 16, 6, 12, null, 0.1), 3760, 451, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992102258": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, eggs, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, turkey giblets (liver, heart, gizzard), natural chicken flavor, pollock oil, chicken fat, dehydrated pumpkin, chicken heart, salt, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), taurine, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 16, 6, 12, null, 0.1), 3760, 451, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992104450": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, turkey giblets (liver, heart, gizzard), eggs, dehydrated turkey, natural chicken flavor, dehydrated pumpkin, pollock oil, chicken fat, lentil fiber, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 15, 8, 12, null, null), 3710, 427, "cup"),
+      [
+        ["Dietary Starch", "max", 17, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 0.9, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992104139": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, turkey giblets (liver, heart, gizzard), eggs, dehydrated turkey, natural chicken flavor, dehydrated pumpkin, pollock oil, chicken fat, lentil fiber, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 15, 8, 12, null, null), 3710, 427, "cup"),
+      [
+        ["Dietary Starch", "max", 17, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 0.9, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992104252": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole navy beans, whole green lentils, whole chickpeas, whole peas, dried apple pomace, turkey giblets (liver, heart, gizzard), eggs, dehydrated turkey, natural chicken flavor, dehydrated pumpkin, pollock oil, chicken fat, lentil fiber, chicken heart, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 15, 8, 12, null, null), 3710, 427, "cup"),
+      [
+        ["Dietary Starch", "max", 17, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 0.9, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992201401": {
+    ingredients: `Chicken, turkey, whole herring, turkey giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated turkey, dehydrated salmon, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole green lentils, chicken liver, eggs, chicken fat, natural chicken flavor, whole navy beans, whole chickpeas, whole peas, pollock oil, lentil fiber, chicken hearts, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), vitamin E supplement, zinc proteinate, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, thiamine mononitrate, copper proteinate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724078": {
+    ingredients: `Chicken, turkey, whole herring, turkey giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated turkey, dehydrated salmon, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole green lentils, chicken liver, eggs, chicken fat, natural chicken flavor, whole navy beans, whole chickpeas, whole peas, pollock oil, lentil fiber, chicken hearts, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), vitamin E supplement, zinc proteinate, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, thiamine mononitrate, copper proteinate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992201135": {
+    ingredients: `Chicken, turkey, whole herring, turkey giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated turkey, dehydrated salmon, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole green lentils, chicken liver, eggs, chicken fat, natural chicken flavor, whole navy beans, whole chickpeas, whole peas, pollock oil, lentil fiber, chicken hearts, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), vitamin E supplement, zinc proteinate, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, thiamine mononitrate, copper proteinate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992204402": {
+    ingredients: `Chicken, chicken liver, whole herring, turkey, turkey giblets (liver, heart, gizzard), flounder, eggs, cod, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, dehydrated herring, whole red lentils, whole pinto beans, whole peas, whole navy beans, chicken fat, natural fish flavor, dehydrated pumpkin, lentil fiber, whole green lentils, whole chickpeas, chicken heart, choline chloride, dried kelp, zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, mixed tocopherols (preservative), thiamine mononitrate, niacin, pyridoxine hydrochloride, vitamin E supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(42, 14, 6, 10, null, 0.2), 3700, 444, "cup"),
+      [
+        ["DHA", "min", 0.15, "%"],
+        ["EPA", "min", 0.15, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["L-Carnitine (mg/kg)", "min", 56, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724108": {
+    ingredients: `Chicken, chicken liver, whole herring, turkey, turkey giblets (liver, heart, gizzard), flounder, eggs, cod, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, dehydrated herring, whole red lentils, whole pinto beans, whole peas, whole navy beans, chicken fat, natural fish flavor, dehydrated pumpkin, lentil fiber, whole green lentils, whole chickpeas, chicken heart, choline chloride, dried kelp, zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, mixed tocopherols (preservative), thiamine mononitrate, niacin, pyridoxine hydrochloride, vitamin E supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(42, 14, 6, 10, null, 0.2), 3700, 444, "cup"),
+      [
+        ["DHA", "min", 0.15, "%"],
+        ["EPA", "min", 0.15, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["L-Carnitine (mg/kg)", "min", 56, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992204136": {
+    ingredients: `Chicken, chicken liver, whole herring, turkey, turkey giblets (liver, heart, gizzard), flounder, eggs, cod, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, dehydrated herring, whole red lentils, whole pinto beans, whole peas, whole navy beans, chicken fat, natural fish flavor, dehydrated pumpkin, lentil fiber, whole green lentils, whole chickpeas, chicken heart, choline chloride, dried kelp, zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, mixed tocopherols (preservative), thiamine mononitrate, niacin, pyridoxine hydrochloride, vitamin E supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(42, 14, 6, 10, null, 0.2), 3700, 444, "cup"),
+      [
+        ["DHA", "min", 0.15, "%"],
+        ["EPA", "min", 0.15, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["L-Carnitine (mg/kg)", "min", 56, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992203405": {
+    ingredients: `Whole herring, salmon, flounder, Acadian redfish, monkfish, whole hake, sardine meal, herring meal, blue whiting meal, herring oil, whole red lentils, whole pinto beans, salmon meal, pollock meal, sunflower oil, whole green lentils, whole navy beans, whole peas, natural fish flavor, lentil fiber, choline chloride, mixed tocopherols (preservative), whole cranberries, dried kelp, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, zinc proteinate, thiamine mononitrate, riboflavin, folic acid, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, niacin, pyridoxine hydrochloride, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.3), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.65, "%"],
+        ["EPA", "min", 0.65, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724085": {
+    ingredients: `Whole herring, salmon, flounder, Acadian redfish, monkfish, whole hake, sardine meal, herring meal, blue whiting meal, herring oil, whole red lentils, whole pinto beans, salmon meal, pollock meal, sunflower oil, whole green lentils, whole navy beans, whole peas, natural fish flavor, lentil fiber, choline chloride, mixed tocopherols (preservative), whole cranberries, dried kelp, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, zinc proteinate, thiamine mononitrate, riboflavin, folic acid, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, niacin, pyridoxine hydrochloride, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.3), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.65, "%"],
+        ["EPA", "min", 0.65, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992203139": {
+    ingredients: `Whole herring, salmon, flounder, Acadian redfish, monkfish, whole hake, sardine meal, herring meal, blue whiting meal, herring oil, whole red lentils, whole pinto beans, salmon meal, pollock meal, sunflower oil, whole green lentils, whole navy beans, whole peas, natural fish flavor, lentil fiber, choline chloride, mixed tocopherols (preservative), whole cranberries, dried kelp, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, zinc proteinate, thiamine mononitrate, riboflavin, folic acid, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, niacin, pyridoxine hydrochloride, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.3), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.65, "%"],
+        ["EPA", "min", 0.65, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992202408": {
+    ingredients: `Beef, wild boar, beef liver, whole herring, pork, beef meal, lamb meal, pork meal, sardine meal, pollock meal, whole red lentils, whole pinto beans, lamb, herring meal, beef fat, natural fish flavor, lamb liver, whole green lentils, whole navy beans, beef kidney, pollock oil, whole chickpeas, whole peas, lentil fiber, dehydrated salmon, beef tripe, pork liver, pork kidney, whole cranberries, dried kelp, choline chloride, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, vitamin E supplement, thiamine mononitrate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4080, 510, "cup"),
+      [
+        ["DHA", "min", 0.3, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.9, "%"],
+        ["Phosphorus", "min", 1.4, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992202132": {
+    ingredients: `Beef, wild boar, beef liver, whole herring, pork, beef meal, lamb meal, pork meal, sardine meal, pollock meal, whole red lentils, whole pinto beans, lamb, herring meal, beef fat, natural fish flavor, lamb liver, whole green lentils, whole navy beans, beef kidney, pollock oil, whole chickpeas, whole peas, lentil fiber, dehydrated salmon, beef tripe, pork liver, pork kidney, whole cranberries, dried kelp, choline chloride, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, vitamin E supplement, thiamine mononitrate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4080, 510, "cup"),
+      [
+        ["DHA", "min", 0.3, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.9, "%"],
+        ["Phosphorus", "min", 1.4, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992718527": {
+    ingredients: `Chicken, salmon, turkey, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, turkey giblets (liver, heart, gizzard), eggs, rabbit, pollock oil, whole green lentils, whole navy beans, whole chickpeas, whole peas, ground miscanthus grass, natural chicken flavor, chicken fat, chicken hearts, whole cranberries, choline chloride, dried kelp, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, vitamin E supplement, dried chicory root, hydrolyzed yeast, dried brewers yeast, thiamine mononitrate, riboflavin, niacin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 18, 4, 10, null, 0.1), 3980, 498, "cup"),
+      [
+        ["DHA", "min", 0.35, "%"],
+        ["EPA", "min", 0.35, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Vitamin A", "min", 25000, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992718534": {
+    ingredients: `Chicken, salmon, turkey, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, turkey giblets (liver, heart, gizzard), eggs, rabbit, pollock oil, whole green lentils, whole navy beans, whole chickpeas, whole peas, ground miscanthus grass, natural chicken flavor, chicken fat, chicken hearts, whole cranberries, choline chloride, dried kelp, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, vitamin E supplement, dried chicory root, hydrolyzed yeast, dried brewers yeast, thiamine mononitrate, riboflavin, niacin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 18, 4, 10, null, 0.1), 3980, 498, "cup"),
+      [
+        ["DHA", "min", 0.35, "%"],
+        ["EPA", "min", 0.35, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Vitamin A", "min", 25000, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992722562": {
+    ingredients: `Salmon, duck, chicken, turkey, flounder, whole herring, chicken liver, eggs, dehydrated egg, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated mackerel, turkey giblets (liver, heart, gizzard), whole red lentils, whole pinto beans, whole green peas, ground whole flaxseed, whole green lentils, whole chickpeas, whole yellow peas, whole navy beans, hydrolyzed blue whiting, hydrolyzed salmon, chicken fat, chicken hearts, whole cranberries, choline chloride, dried kelp, vitamin E supplement, mixed tocopherols (preservative), whole pumpkin, whole apples, collard greens, whole butternut squash, whole pears, zinc proteinate, dried chicory root, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract, dried Lactobacillus acidophilus fermentation product, dried Bifidobacterium animalis fermentation product, dried Lactobacillus casei fermentation product.`,
+    analysis: withExtras(
+      withCalories(ga(40, 15, 4, 10, null, 0.2), 3830, 460, "cup"),
+      [
+        ["DHA", "min", 0.15, "%"],
+        ["EPA", "min", 0.1, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Vitamin A", "min", 12000, "IU/kg"],
+        ["Vitamin E", "min", 300, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1.3, "%"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992722579": {
+    ingredients: `Salmon, duck, chicken, turkey, flounder, whole herring, chicken liver, eggs, dehydrated egg, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated mackerel, turkey giblets (liver, heart, gizzard), whole red lentils, whole pinto beans, whole green peas, ground whole flaxseed, whole green lentils, whole chickpeas, whole yellow peas, whole navy beans, hydrolyzed blue whiting, hydrolyzed salmon, chicken fat, chicken hearts, whole cranberries, choline chloride, dried kelp, vitamin E supplement, mixed tocopherols (preservative), whole pumpkin, whole apples, collard greens, whole butternut squash, whole pears, zinc proteinate, dried chicory root, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract, dried Lactobacillus acidophilus fermentation product, dried Bifidobacterium animalis fermentation product, dried Lactobacillus casei fermentation product.`,
+    analysis: withExtras(
+      withCalories(ga(40, 15, 4, 10, null, 0.2), 3830, 460, "cup"),
+      [
+        ["DHA", "min", 0.15, "%"],
+        ["EPA", "min", 0.1, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Vitamin A", "min", 12000, "IU/kg"],
+        ["Vitamin E", "min", 300, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1.3, "%"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992716646": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated herring, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, turkey giblets (liver, heart, gizzard), eggs, pollock oil, chicken fat, whole green lentils, whole navy beans, whole chickpeas, whole peas, natural chicken flavor, ground miscanthus grass, chicken hearts, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, riboflavin, folic acid, thiamine mononitrate, niacin, pyridoxine hydrochloride, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.4, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 4, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724092": {
+    ingredients: `Chicken, turkey, salmon, whole herring, chicken liver, dehydrated chicken, dehydrated turkey, dehydrated herring, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, turkey giblets (liver, heart, gizzard), eggs, pollock oil, chicken fat, whole green lentils, whole navy beans, whole chickpeas, whole peas, natural chicken flavor, ground miscanthus grass, chicken hearts, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, zinc proteinate, riboflavin, folic acid, thiamine mononitrate, niacin, pyridoxine hydrochloride, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.4, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 4, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992726348": {
+    ingredients: `Chicken, turkey, whole herring, turkey giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated turkey, dehydrated salmon, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole green lentils, chicken giblets (liver, heart, gizzard), eggs, chicken fat, natural chicken flavor, whole navy beans, whole chickpeas, whole peas, freeze-dried chicken breast, pollock oil, lentil fiber, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), vitamin E supplement, zinc proteinate, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, thiamine mononitrate, copper proteinate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992726355": {
+    ingredients: `Chicken, turkey, whole herring, turkey giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated turkey, dehydrated salmon, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole green lentils, chicken giblets (liver, heart, gizzard), eggs, chicken fat, natural chicken flavor, whole navy beans, whole chickpeas, whole peas, freeze-dried chicken breast, pollock oil, lentil fiber, choline chloride, whole cranberries, dried kelp, mixed tocopherols (preservative), vitamin E supplement, zinc proteinate, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, thiamine mononitrate, copper proteinate, niacin, pyridoxine hydrochloride, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.2), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.4, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992726362": {
+    ingredients: `Whole herring, salmon, flounder, Acadian redfish, monkfish, whole hake, sardine meal, herring meal, blue whiting meal, herring oil, whole red lentils, whole pinto beans, salmon meal, pollock meal, sunflower oil, whole green lentils, whole navy beans, whole peas, natural fish flavor, freeze-dried shrimp, lentil fiber, choline chloride, mixed tocopherols (preservative), whole cranberries, dried kelp, vitamin E supplement, whole pumpkin, whole butternut squash, collard greens, whole pears, whole apples, zinc proteinate, thiamine mononitrate, riboflavin, folic acid, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, niacin, pyridoxine hydrochloride, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(40, 20, 3, 10, null, 0.3), 4120, 515, "cup"),
+      [
+        ["DHA", "min", 0.65, "%"],
+        ["EPA", "min", 0.65, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.3, "%"],
+        ["Magnesium", "min", 0.1, "%"],
+        ["Omega-6 fatty acids", "min", 2, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992581404": {
+    ingredients: `Turkey, chicken, turkey giblets (liver, heart, gizzard), whole herring, salmon, dehydrated turkey, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole navy beans, chicken fat, whole green lentils, whole chickpeas, dried apple pomace, whole peas, chicken liver, eggs, natural chicken flavor, pollock oil, chicken heart, New Zealand green mussels, vitamin E supplement, whole cranberries, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, dried kelp, zinc proteinate, mixed tocopherols (preservative), salt, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.8, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 800, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992580100": {
+    ingredients: `Turkey, chicken, turkey giblets (liver, heart, gizzard), whole herring, salmon, dehydrated turkey, dehydrated chicken, dehydrated sardine, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, whole navy beans, chicken fat, whole green lentils, whole chickpeas, dried apple pomace, whole peas, chicken liver, eggs, natural chicken flavor, pollock oil, chicken heart, New Zealand green mussels, vitamin E supplement, whole cranberries, whole pumpkin, whole butternut squash, collard greens, whole apples, whole pears, dried kelp, zinc proteinate, mixed tocopherols (preservative), salt, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, null), 3940, 473, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.8, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 800, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992727352": {
+    ingredients: `Chicken, salmon, turkey, whole whiting, haddock, dehydrated turkey, dehydrated chicken, dehydrated herring, dehydrated chicken liver, dehydrated egg, whole red lentils, whole pinto beans, chicken giblets (liver, heart, gizzard), eggs, turkey giblets (liver, heart, gizzard), chicken fat, whole green lentils, whole navy beans, whole chickpeas, whole peas, natural chicken flavor, pollock oil, dried apple pomace, New Zealand green mussels, dried kelp, whole butternut squash, whole pumpkin, vitamin E supplement, salt, zinc proteinate, mixed tocopherols (preservative), whole apples, whole carrots, whole pears, whole zucchini, thiamine mononitrate, niacin, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, copper proteinate, beet greens, kale, spinach, turnip greens, whole cranberries, whole blueberries, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 19, null, 12, null, 0.1), null, 494, "cup"),
+      [
+        ["Total Carbohydrate", "max", 22, "%"],
+        ["Dietary Fiber", "max", 14, "%"],
+        ["EPA", "min", 0.15, "%"],
+        ["DHA", "min", 0.15, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-3 fatty acids", "min", 0.6, "%"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992107451": {
+    ingredients: `Chicken, chicken liver, turkey giblets (liver, heart, gizzard), turkey, cod, flounder, whole herring, eggs, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, whole red lentils, whole pinto beans, whole peas, whole navy beans, lentil fiber, natural chicken flavor, dehydrated pumpkin, whole chickpeas, whole green lentils, pea fiber, chicken heart, chicken fat, pollock oil, dried kelp, vitamin E supplement, mixed tocopherols (preservative), zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, copper proteinate, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract`,
+    analysis: withExtras(
+      withCalories(ga(42, 13, 8, 12, null, null), 3490, 401, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.21, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992107130": {
+    ingredients: `Chicken, chicken liver, turkey giblets (liver, heart, gizzard), turkey, cod, flounder, whole herring, eggs, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, whole red lentils, whole pinto beans, whole peas, whole navy beans, lentil fiber, natural chicken flavor, dehydrated pumpkin, whole chickpeas, whole green lentils, pea fiber, chicken heart, chicken fat, pollock oil, dried kelp, vitamin E supplement, mixed tocopherols (preservative), zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, copper proteinate, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract`,
+    analysis: withExtras(
+      withCalories(ga(42, 13, 8, 12, null, null), 3490, 401, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.21, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992107253": {
+    ingredients: `Chicken, chicken liver, turkey giblets (liver, heart, gizzard), turkey, cod, flounder, whole herring, eggs, dehydrated chicken liver, dehydrated egg, dehydrated sardine, dehydrated chicken, dehydrated turkey, whole red lentils, whole pinto beans, whole peas, whole navy beans, lentil fiber, natural chicken flavor, dehydrated pumpkin, whole chickpeas, whole green lentils, pea fiber, chicken heart, chicken fat, pollock oil, dried kelp, vitamin E supplement, mixed tocopherols (preservative), zinc proteinate, whole pumpkin, whole butternut squash, whole apples, whole pears, collard greens, whole cranberries, copper proteinate, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract`,
+    analysis: withExtras(
+      withCalories(ga(42, 13, 8, 12, null, null), 3490, 401, "cup"),
+      [
+        ["Dietary Starch", "max", 16, "%"],
+        ["Sugars", "max", 1.3, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.21, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.5, "%"],
+        ["Omega-3 fatty acids", "min", 1, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current retail title/body and Shopify variant evidence bind UPC 064992107253 to 23.5 lb, while some legacy URL/image text still says 25 lb; current printed size is retained as 23.5 lb and the legacy wording is documented rather than used as the size.",
+  },
+  "064992720384": {
+    ingredients: `Chicken, turkey, chicken giblets (liver, heart, gizzard), whole herring, salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, chicken fat, eggs, flounder, turkey giblets (liver, heart, gizzard), dehydrated herring, dehydrated turkey, dehydrated egg, natural chicken flavor, whole oats, ground whole flaxseed, pollock oil, quinoa seed, chia seed, inulin, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, salt, mixed tocopherols (preservative),whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, 0.1), 3920, 490, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.1, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720339": {
+    ingredients: `Chicken, turkey, chicken giblets (liver, heart, gizzard), whole herring, salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, chicken fat, eggs, flounder, turkey giblets (liver, heart, gizzard), dehydrated herring, dehydrated turkey, dehydrated egg, natural chicken flavor, whole oats, ground whole flaxseed, pollock oil, quinoa seed, chia seed, inulin, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, salt, mixed tocopherols (preservative),whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, 0.1), 3920, 490, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.1, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992728458": {
+    ingredients: `Chicken, turkey, chicken giblets (liver, heart, gizzard), whole herring, salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, chicken fat, eggs, flounder, turkey giblets (liver, heart, gizzard), dehydrated herring, dehydrated turkey, dehydrated egg, natural chicken flavor, whole oats, ground whole flaxseed, pollock oil, quinoa seed, chia seed, inulin, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, salt, mixed tocopherols (preservative),whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, 0.1), 3920, 490, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.1, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3.5, "%"],
+        ["Omega-3 fatty acids", "min", 0.8, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992724290": {
+    ingredients: `Turkey, chicken, turkey giblets (liver, heart, gizzard), whole herring, cod, dehydrated chicken, dehydrated sardine, oat groats, millet, dehydrated chicken liver, dehydrated herring, chicken fat, chicken giblets (liver, heart, gizzard), eggs, dried apple pomace, natural chicken flavor, whole oats, quinoa seed, chia seed, pollock oil, inulin, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, collard greens, whole pumpkin, whole butternut squash, whole carrots, whole apples, whole pears, mixed tocopherols (preservative), salt, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 5, 12, null, 0.1), 3860, 444, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.1, "%"],
+        ["Glucosamine (mg/kg)", "min", 800, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724306": {
+    ingredients: `Turkey, chicken, turkey giblets (liver, heart, gizzard), whole herring, cod, dehydrated chicken, dehydrated sardine, oat groats, millet, dehydrated chicken liver, dehydrated herring, chicken fat, chicken giblets (liver, heart, gizzard), eggs, dried apple pomace, natural chicken flavor, whole oats, quinoa seed, chia seed, pollock oil, inulin, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, collard greens, whole pumpkin, whole butternut squash, whole carrots, whole apples, whole pears, mixed tocopherols (preservative), salt, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, copper proteinate, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 5, 12, null, 0.1), 3860, 444, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.2, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.1, "%"],
+        ["Glucosamine (mg/kg)", "min", 800, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724320": {
+    ingredients: `Chicken, chicken giblets (liver, heart, gizzard), cod, whole herring, turkey giblets (liver, heart, gizzard), dehydrated chicken liver, dehydrated sardine, oat groats, millet, eggs, dehydrated chicken, dehydrated herring, dried apple pomace, dehydrated pumpkin, natural chicken flavor, whole oats, quinoa seed, chia seed, chicken fat, pollock oil, inulin, dried kelp, choline chloride, vitamin E supplement, mixed tocopherols (preservative), zinc proteinate, whole cranberries, collard greens, whole pumpkin, whole butternut squash, whole carrots, whole apples, whole pears, copper proteinate, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(42, 13, 6, 12, null, 0.1), 3570, 411, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 2, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.21, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.4, "%"],
+        ["Omega-3 fatty acids", "min", 1.1, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992724337": {
+    ingredients: `Chicken, chicken giblets (liver, heart, gizzard), cod, whole herring, turkey giblets (liver, heart, gizzard), dehydrated chicken liver, dehydrated sardine, oat groats, millet, eggs, dehydrated chicken, dehydrated herring, dried apple pomace, dehydrated pumpkin, natural chicken flavor, whole oats, quinoa seed, chia seed, chicken fat, pollock oil, inulin, dried kelp, choline chloride, vitamin E supplement, mixed tocopherols (preservative), zinc proteinate, whole cranberries, collard greens, whole pumpkin, whole butternut squash, whole carrots, whole apples, whole pears, copper proteinate, niacin, thiamine mononitrate, riboflavin, calcium pantothenate, pyridoxine hydrochloride, folic acid, vitamin B12 supplement, dried Bacillus coagulans fermentation product, dried chicory root, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(42, 13, 6, 12, null, 0.1), 3570, 411, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 2, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.21, "%"],
+        ["Calcium", "min", 1.5, "%"],
+        ["Phosphorus", "min", 1.1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.4, "%"],
+        ["Omega-3 fatty acids", "min", 1.1, "%"],
+        ["Glucosamine (mg/kg)", "min", 600, "other"],
+        ["Total Microorganisms (Bacillus coagulans) (CFU/lb)", "min", 100000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992720414": {
+    ingredients: `Chicken, turkey, whole whiting, whole herring, salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, chicken giblets (liver, heart, gizzard), eggs, turkey giblets (liver, heart, gizzard), chicken fat, dehydrated herring, dehydrated eggs, natural chicken flavor, whole oats, ground whole flaxseed, pollock oil, quinoa seed, chia seed, inulin, salt, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 20, 4, 12, null, 0.1), 4060, 528, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720360": {
+    ingredients: `Chicken, turkey, whole whiting, whole herring, salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, chicken giblets (liver, heart, gizzard), eggs, turkey giblets (liver, heart, gizzard), chicken fat, dehydrated herring, dehydrated eggs, natural chicken flavor, whole oats, ground whole flaxseed, pollock oil, quinoa seed, chia seed, inulin, salt, vitamin E supplement, whole cranberries, dried kelp, zinc proteinate, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 20, 4, 12, null, 0.1), 4060, 528, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.2, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3, "%"],
+        ["Omega-3 fatty acids", "min", 1.2, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720377": {
+    ingredients: `Chicken, whole herring, whole whiting, chicken giblets (liver, heart, gizzard), salmon, dehydrated chicken, dehydrated chicken liver, oat groats, millet, turkey, eggs, turkey giblets (liver, heart, gizzard), dehydrated herring, dehydrated egg, natural chicken flavor, whole oats, ground whole flaxseed, chicken fat, quinoa seed, chia seed, pollock oil, inulin, vitamin E supplement, whole cranberries, dried kelp, salt, zinc proteinate, mixed tocopherols (preservative), whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, taurine, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, copper proteinate, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 16, 4, 12, null, 0.1), 3860, 483, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.3, "%"],
+        ["EPA", "min", 0.2, "%"],
+        ["Calcium", "min", 1.3, "%"],
+        ["Phosphorus", "min", 1, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 3.2, "%"],
+        ["Omega-3 fatty acids", "min", 1.4, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720391": {
+    ingredients: `Beef, wild boar, lamb, beef liver, pork, beef meal, herring meal, oat groats, millet, mutton, salmon, natural pork flavor, lamb meal, whole oats, ground whole flaxseed, pollock oil, beef fat, pork fat, quinoa seed, chia seed, pork liver, beef kidney, lamb liver, wild boar liver, lamb tripe, pork heart, pork kidney, inulin, vitamin E supplement, dried kelp, whole cranberries, zinc proteinate, mixed tocopherols (preservative), vitamin D3 supplement, whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, 0.1), 3860, 483, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.3, "%"],
+        ["EPA", "min", 0.3, "%"],
+        ["Calcium", "min", 1.9, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 1.7, "%"],
+        ["Omega-3 fatty acids", "min", 1.4, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720346": {
+    ingredients: `Beef, wild boar, lamb, beef liver, pork, beef meal, herring meal, oat groats, millet, mutton, salmon, natural pork flavor, lamb meal, whole oats, ground whole flaxseed, pollock oil, beef fat, pork fat, quinoa seed, chia seed, pork liver, beef kidney, lamb liver, wild boar liver, lamb tripe, pork heart, pork kidney, inulin, vitamin E supplement, dried kelp, whole cranberries, zinc proteinate, mixed tocopherols (preservative), vitamin D3 supplement, whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, kale, spinach, beet greens, turnip greens, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, whole blueberries, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 18, 4, 12, null, 0.1), 3860, 483, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.3, "%"],
+        ["EPA", "min", 0.3, "%"],
+        ["Calcium", "min", 1.9, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 1.7, "%"],
+        ["Omega-3 fatty acids", "min", 1.4, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720407": {
+    ingredients: `Salmon, whole herring, whole whiting, rockfish, flounder, cod, herring meal, blue whiting meal, oat groats, millet, catfish oil, sardine meal, pollock meal, natural salmon flavor, whole oats, ground whole flaxseed, quinoa seed, chia seed, inulin, vitamin E supplement, mixed tocopherols (preservative), dried kelp, whole cranberries, zinc proteinate, whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, kale, spinach, beet greens, turnip greens, copper proteinate, whole blueberries, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 16, 4, 12, null, 0.1), 3900, 488, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.6, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.4, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992720353": {
+    ingredients: `Salmon, whole herring, whole whiting, rockfish, flounder, cod, herring meal, blue whiting meal, oat groats, millet, catfish oil, sardine meal, pollock meal, natural salmon flavor, whole oats, ground whole flaxseed, quinoa seed, chia seed, inulin, vitamin E supplement, mixed tocopherols (preservative), dried kelp, whole cranberries, zinc proteinate, whole pumpkin, whole butternut squash, whole zucchini, whole carrots, whole apples, whole pears, niacin, thiamine mononitrate, calcium pantothenate, pyridoxine hydrochloride, riboflavin, folic acid, vitamin B12 supplement, kale, spinach, beet greens, turnip greens, copper proteinate, whole blueberries, turmeric, sarsaparilla root, althea root, rosehips, juniper berries, dried Bacillus coagulans fermentation product, citric acid (preservative), rosemary extract.`,
+    analysis: withExtras(
+      withCalories(ga(38, 16, 4, 12, null, 0.1), 3900, 488, "cup"),
+      [
+        ["Dietary Starch", "max", 18, "%"],
+        ["Sugars", "max", 1, "%"],
+        ["DHA", "min", 0.6, "%"],
+        ["EPA", "min", 0.4, "%"],
+        ["Calcium", "min", 1.7, "%"],
+        ["Phosphorus", "min", 1.2, "%"],
+        ["Vitamin E", "min", 750, "IU/kg"],
+        ["Omega-6 fatty acids", "min", 2.4, "%"],
+        ["Omega-3 fatty acids", "min", 2, "%"],
+        ["Glucosamine (mg/kg)", "min", 500, "other"],
+        ["Total Microorganisms (Lactobacillus acidophilus, Bifidobacterium animalis, Lactobacillus casei) (CFU/lb)", "min", 1000000, "other"],
+      ]
+    ),
+    verifiedAt: VERIFIED_033,
+    conflict: "Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.",
+  },
+  "064992716158": {
+    ingredients: `Chicken, chicken liver, chicken heart, mackerel, chicken bone broth, turkey bone broth, broccoli, dried egg product, carrots, sweet potatoes, natural flavor, pumpkin, organic guar gum, dicalcium phosphate, potassium chloride, salt, minerals (zinc amino acid chelate, iron amino acid chelate, selenium yeast, copper amino acid chelate, manganese amino acid chelate, cobalt amino acid chelate, potassium iodide), agar-agar, herring oil (preserved with mixed tocopherols), vitamins (thiamine mononitrate, vitamin E supplement, niacin supplement, D-calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), choline chloride, inulin, turmeric, sodium carbonate, calcium carbonate.`,
+    analysis: withCalories(ga(11, 6.5, 1.5, 78, null, null), 1255, 455, "can"),
+    verifiedAt: VERIFIED_033,
+    conflict: "The current ORIJEN SKU page's rendered ingredient paragraph truncates after 'pyridox'; Pet Food Express prints the complete matching deck through calcium carbonate. ORIJEN remains the exact-SKU source for size, guarantee, calories, and adequacy.",
+  },
+  "064992716189": {
+    ingredients: `Chicken, chicken bone broth, turkey bone broth, chicken liver, turkey, dried egg whites, dried egg product, chicken heart, herring, turkey liver, carrots, mackerel, natural flavour, salt, herring oil (preserved with mixed tocopherols), organic guar gum, turkey heart, broccoli, pumpkin, potassium chloride, minerals (zinc amino acid chelate, iron amino acid chelate, selenium yeast, copper amino acid chelate, manganese amino acid chelate, cobalt amino acid chelate, potassium iodide), blueberries, calcium carbonate, choline chloride, vitamins (thiamine mononitrate, vitamin E supplement, niacin supplement, D-calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), inulin, turmeric.`,
+    analysis: withCalories(ga(11, 4, 1.5, 82, null, null), 977, 355, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992716219": {
+    ingredients: `Beef, beef bone broth, lamb bone broth, duck, beef kidney, eggs, dried egg whites, lamb liver, lamb, whole sardine, carrots, natural flavor, organic guar gum, salt, pumpkin, broccoli, blueberries, sunflower oil, salmon oil, choline chloride, vitamins [vitamin E supplement, thiamine mononitrate, niacin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, biotin, vitamin B12 supplement, vitamin D3 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, potassium iodide], inulin, turmeric.`,
+    analysis: withCalories(ga(11, 5.5, 1.5, 82, null, null), 1101, 367, "can"),
+    verifiedAt: VERIFIED_033,
+    conflict: "The manufacturer page prints 1101 kcal/kg and 367 kcal per 12.8 oz (363 g) can; those bases do not arithmetically agree (1101 kcal/kg implies about 400 kcal/can). Both are retained as printed.",
+  },
+  "064992716240": {
+    ingredients: `Lamb, lamb bone broth, beef bone broth, fish bone broth, duck, beef, lamb liver, eggs, dried egg whites, beef kidney, whole mackerel, carrots, natural flavor, organic guar gum, salt, pumpkin, broccoli, blueberries, sunflower oil, salmon oil, choline chloride, vitamins [vitamin E supplement, thiamine mononitrate, niacin, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, vitamin A supplement, folic acid, biotin, vitamin B12 supplement, vitamin D3 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, potassium iodide], inulin, turmeric`,
+    analysis: withCalories(ga(11, 4, 1.5, 82, null, null), 1100, 399, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992723767": {
+    ingredients: `Lamb, beef, lamb broth, beef bone broth, lamb liver, duck, beef kidney, cod, natural pork flavor, broccoli, carrots, pumpkin, guar gum, agar-agar, sunflower oil, salt, potassium chloride, minerals (zinc proteinate, iron proteinate, selenium yeast, copper proteinate, cobalt proteinate, manganese proteinate, potassium iodide), salmon oil (preserved with mixed tocopherols), vitamins (thiamine mononitrate, vitamin E supplement, niacin supplement, calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), choline chloride, inulin, turmeric, sodium carbonate, magnesium sulfate`,
+    analysis: withCalories(ga(10, 6.5, 1.5, 78, null, null), 1234, 448, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992723774": {
+    ingredients: `Beef, lamb broth, beef bone broth, beef liver, duck, beef kidney, lamb, cod, natural pork flavor, broccoli, carrots, pumpkin, guar gum, agar-agar, potassium chloride, salt, sunflower oil, salmon oil (preserved with mixed tocopherols), minerals (zinc proteinate, iron proteinate, selenium yeast, copper proteinate, manganese proteinate, cobalt proteinate, potassium iodide), vitamins (thiamine mononitrate, vitamin E supplement, niacin supplement, calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), choline chloride, inulin, turmeric, sodium carbonate, magnesium sulfate, calcium carbonate`,
+    analysis: withCalories(ga(10, 6, 1.5, 78, null, null), 1175, 427, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992723750": {
+    ingredients: `Chicken, turkey, chicken bone broth, turkey bone broth, chicken liver, turkey liver, cod, broccoli, carrots, turkey heart, chicken heart, natural pork flavor, herring, pumpkin, guar gum, agar-agar, salt, potassium chloride, minerals (zinc proteinate, iron proteinate, selenium yeast, copper proteinate, cobalt proteinate, manganese proteinate, potassium iodide), herring oil (preserved with mixed tocopherols), vitamins (thiamine mononitrate, vitamin E supplement, niacin supplement, calcium pantothenate, vitamin A supplement, riboflavin supplement, biotin, vitamin B12 supplement, pyridoxine hydrochloride, vitamin D3 supplement, folic acid), choline chloride, inulin, turmeric, sodium carbonate, magnesium sulfate`,
+    analysis: withCalories(ga(10, 7, 1.5, 78, null, null), 1231, 447, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992719340": {
+    ingredients: `Chicken, chicken liver, whole mackerel, chicken bone broth, fish bone broth, chicken heart, whole sardine, egg, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(12, 6, 0.5, 80, 3, 0.2), 1156, 98, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992719357": {
+    ingredients: `Lamb, beef, beef kidney, chicken, salmon, whole sardine, lamb kidney, beef bone broth, fish bone broth, lamb liver, beef liver, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, manganese amino acid chelate, copper amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(12, 6, 0.5, 80, 3, 0.2), 1251, 107, "can"),
+    verifiedAt: VERIFIED_033,
+  },
+  "064992719371": {
+    ingredients: `Chicken, salmon, chicken liver, whole sardine, chicken bone broth, fish bone broth, chicken heart, egg, tuna oil, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium sulfate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
+    analysis: withCalories(ga(12, 7, 0.5, 80, 3, 0.2), 1292, 110, "can"),
+    verifiedAt: VERIFIED_033,
   },
 };
