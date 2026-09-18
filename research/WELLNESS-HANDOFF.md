@@ -102,3 +102,34 @@ A 2025 UNFI catalog also shows the `076344` company prefix repeatedly on Wellnes
 No `research/deep-research-wellness.json` was created in this pass. The binding contract requires complete formula fields, live repository exclusion checks, and `node scripts/check-ledger.mjs` before records can be committed as seedable research. This connector does not expose a repository shell, and the original Deep Research record payloads cannot be recovered exactly. Creating partial or memory-reconstructed records would make the branch look seed-ready when it is not.
 
 This handoff therefore preserves all recoverable Wellness findings without inventing a seedable ledger. The next shell-enabled/research pass should regenerate `research/INVENTORY-WELLNESS.md`, recover or re-research the candidate set, write the single canonical ledger, run the checker to exit 0, then update this handoff with exact counts/statuses.
+
+## 13. The blocked prerequisite, unblocked — 2026-09-18
+
+§10 and §11 above stop the campaign at one thing: `node scripts/brand-inventory.mjs
+"Wellness"` could not be run, so BRIEF-WELLNESS §0.3's live exclusion set did not
+exist and batch 1 could not honestly start.
+
+It has now been run in a repository shell and its output committed as
+`research/INVENTORY-WELLNESS.md`. The answer is short: **the catalog holds no
+Wellness product at all** — 0 products, 0 barcodes, and all eleven named ranges
+empty. So the exclusion set is empty, and no candidate UPC from any Deep Research
+pass can collide with a seeded one.
+
+That removes the prerequisite, and nothing else. Every other gate in §10–§12
+stands exactly as written: the ~40 reported candidates were not recovered here
+and are **not** to be reconstructed from memory, and `deep-research-wellness.json`
+is still to be written by a pass that holds the actual record payloads and can
+run `node scripts/check-ledger.mjs` to exit 0.
+
+Two items in this file are cheap and worth doing in that same pass, because both
+are already evidenced above and neither needs a barcode:
+
+- the treat determinations in §1 — Puppy Bites, Kittles, Rewarding Life — belong
+  in `lib/nutrition-role.ts`'s treat-line list once the exact printed spelling is
+  read off a physical front panel, not off marketing copy;
+- the false folds in §2 are guard cases, and `Digestive Wellness` in particular
+  is a claim three other makers print. It is worth a test before it is worth a
+  ledger.
+
+Re-run the inventory before batch 1 regardless. It is current the moment it is
+generated and stale the moment somebody seeds.
