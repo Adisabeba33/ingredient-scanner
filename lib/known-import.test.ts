@@ -120,9 +120,81 @@ describe("importVerdict", () => {
   });
 
   it("has wording for every verdict", () => {
-    for (const v of ["write", "identical", "ours-is-better", "conflict"] as const) {
+    for (const v of [
+      "write",
+      "identical",
+      "ours-is-better",
+      "panel-only",
+      "conflict",
+    ] as const) {
       expect(verdictLabel(v).length).toBeGreaterThan(0);
     }
+  });
+
+  // ── The panel a photograph never caught ─────────────────────────────────
+  //
+  // Sixteen products sat in the catalog photographed, with ingredients and no
+  // guaranteed analysis, while the seed held a full panel for every one of
+  // them — and the import stepped around all sixteen because the rule read
+  // "ours is better" off the source column and never looked at what the row
+  // actually held. Their reports were poorer than the ones beside them, with
+  // nothing on any screen saying why.
+  //
+  // An absent panel is not a reading of the panel. It is an absence, and this
+  // codebase does not treat absences as data.
+  describe("a photograph with no panel", () => {
+    const ours = (over: Partial<ExistingRow> = {}) =>
+      row({ source: "verified", composition_key: "bbb", hasPanel: false, ...over });
+
+    it("takes the seeded panel when the recipe is the same", () => {
+      expect(importVerdict(ours(), "bbb")).toBe("panel-only");
+    });
+
+    it("keeps its own panel when it has one", () => {
+      expect(importVerdict(ours({ hasPanel: true }), "bbb")).toBe("ours-is-better");
+    });
+
+    // The rule that makes this safe. A panel belongs to a FORMULA, not to a
+    // barcode: lending these figures to a different ingredient list would
+    // staple one product's numbers onto another product's composition, which
+    // is worse than an empty panel because an empty panel is visibly empty.
+    it("refuses when the stored list is a different recipe", () => {
+      expect(importVerdict(ours({ composition_key: "zzz" }), "bbb")).toBe(
+        "ours-is-better"
+      );
+    });
+
+    // Same rule for a list too short to fingerprint, where the text is the
+    // only evidence there is.
+    it("compares the text when neither list can be fingerprinted", () => {
+      const short = ours({ composition_key: null, ingredients_text: "Lamb Trachea." });
+      expect(importVerdict(short, null, false, "lamb trachea")).toBe("panel-only");
+      expect(importVerdict(short, null, false, "Lamb Ears.")).toBe("ours-is-better");
+    });
+
+    // A caller that did not select the column must not thereby make every
+    // photographed row eligible. `undefined` means "not asked", not "no panel".
+    it("does nothing when the caller never asked about the panel", () => {
+      expect(importVerdict(row({ source: "verified", composition_key: "bbb" }), "bbb")).toBe(
+        "ours-is-better"
+      );
+    });
+
+    // A capture that read nothing at all is not a recipe to match against, so
+    // there is no basis for lending it figures either.
+    it("refuses a capture that holds no list at all", () => {
+      expect(importVerdict(ours({ ingredients_text: "  " }), "bbb")).toBe(
+        "ours-is-better"
+      );
+    });
+
+    // And it is still never a licence to touch the composition: forcing moves
+    // conflicts, and has nothing to say about our own photographs.
+    it("is not what force is for", () => {
+      expect(importVerdict(ours({ composition_key: "zzz" }), "bbb", true)).toBe(
+        "ours-is-better"
+      );
+    });
   });
 });
 

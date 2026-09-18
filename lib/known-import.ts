@@ -30,7 +30,37 @@ export type ImportVerdict =
    * is real — Friskies Pâté Ocean Whitefish & Tuna has gone from 11% protein to
    * 9% under one UPC. Overwriting silently is how the evidence disappears.
    */
-  | "conflict";
+  | "conflict"
+  /**
+   * Our own capture is there, it holds the SAME recipe, and it has no
+   * guaranteed analysis. The seeded panel fills that gap and nothing else.
+   *
+   * ── Why this is not an overwrite ──────────────────────────────────────
+   *
+   * Because there is nothing under it. "Ours is better" is a statement about
+   * two readings of the same thing, and a photograph that never caught the
+   * panel is not a reading of the panel — it is an absence, and this codebase's
+   * rule about absences is that they are never treated as data. The
+   * alternative is what the catalog actually did: sixteen products
+   * photographed before the scanner read panels kept rows with no figures at
+   * all, and their reports were poorer than the ones beside them, forever,
+   * with nothing on any screen explaining why.
+   *
+   * ── Why it demands the same recipe ────────────────────────────────────
+   *
+   * A panel belongs to a formula, not to a barcode. If the photographed list
+   * and the seeded list differ, then either the pack was reformulated or one
+   * of the two readings is wrong — and in both cases lending the seeded
+   * figures to the photographed ingredients would staple one product's
+   * numbers onto another product's composition. That is worse than an empty
+   * panel, because an empty panel is visibly empty. So this verdict requires
+   * the compositions to match, by fingerprint or, for a list too short to
+   * fingerprint, letter for letter.
+   *
+   * The ingredients, the source and the composition key are never touched.
+   * The photograph still wins everything it actually captured.
+   */
+  | "panel-only";
 
 /**
  * What these rows are written as. See the import route for why not "verified".
@@ -50,6 +80,15 @@ export interface ExistingRow {
   /** sha256 of brand + normalised composition. Null when too thin to fingerprint. */
   composition_key: string | null;
   ingredients_text: string | null;
+  /**
+   * Whether the stored row carries any guaranteed-analysis figure at all.
+   *
+   * Optional so every existing caller keeps working, and `undefined` is read
+   * as "not asked" rather than as "no panel" — a caller that does not select
+   * the column must not thereby make every photographed row eligible for a
+   * panel write.
+   */
+  hasPanel?: boolean | null;
 }
 
 /**
@@ -71,33 +110,41 @@ export function importVerdict(
   incomingText?: string | null
 ): ImportVerdict {
   if (!existing) return "write";
-  if (existing.source === "verified") return "ours-is-better";
 
   const hasComposition = !!(existing.ingredients_text ?? "").trim();
+
+  // Is this the same recipe we are offering?
+  //
+  // Both fingerprinted and equal is the ordinary answer. The second form is
+  // for a list too short to fingerprint: `compositionKey` declines to answer
+  // for a composition under five ingredients, which is not a defect but a fact
+  // about short lists. Ziwi Peak's chews are exactly that — a lamb trachea's
+  // whole ingredient list is "Lamb Trachea". Without this the importer wrote
+  // those eight rows and then, on every later run, reported them as conflicts
+  // against themselves: a permanent false alarm, and the kind that teaches an
+  // operator to stop reading the conflict count.
+  const sameRecipe =
+    hasComposition &&
+    ((incomingKey != null && existing.composition_key === incomingKey) ||
+      (!incomingKey &&
+        incomingText != null &&
+        normalizeComposition(existing.ingredients_text) ===
+          normalizeComposition(incomingText)));
+
+  // Our own photograph. It keeps everything it captured — but a panel it never
+  // captured is an absence, not a reading, and the seed can fill it when the
+  // two lists agree that this is one recipe. See "panel-only" above.
+  if (existing.source === "verified") {
+    return hasComposition && sameRecipe && existing.hasPanel === false
+      ? "panel-only"
+      : "ours-is-better";
+  }
+
   // A row holding a name and no ingredients is not a product — it is a shadow
   // over the open databases, and filling it in is the whole point.
   if (!hasComposition) return "write";
 
-  // Both fingerprinted and equal — the same recipe, already stored.
-  if (incomingKey && existing.composition_key === incomingKey) return "identical";
-
-  // Neither could be fingerprinted, so compare the lists themselves.
-  //
-  // A fingerprint is a cheap way to ask "same recipe?", and it declines to
-  // answer for a composition under five ingredients — which is not a defect
-  // but a fact about short lists. Ziwi Peak's chews are exactly that: a lamb
-  // trachea's whole ingredient list is "Lamb Trachea". Without this the
-  // importer wrote those eight rows and then, on every later run, reported
-  // them as conflicts against themselves — a permanent false alarm, and the
-  // kind that teaches an operator to stop reading the conflict count.
-  if (
-    !incomingKey &&
-    incomingText != null &&
-    normalizeComposition(existing.ingredients_text) ===
-      normalizeComposition(incomingText)
-  ) {
-    return "identical";
-  }
+  if (sameRecipe) return "identical";
 
   // A worse-sourced list. Replacing it is what the ranking is for.
   if (sourceRank(existing.source) < sourceRank(INCOMING_SOURCE)) return "write";
@@ -171,5 +218,6 @@ export function verdictLabel(verdict: ImportVerdict): string {
   if (verdict === "write") return "to write";
   if (verdict === "identical") return "already identical";
   if (verdict === "ours-is-better") return "ours is better — skipped";
+  if (verdict === "panel-only") return "our photo kept, panel filled in";
   return "conflict — left alone";
 }

@@ -151,18 +151,25 @@ async function decide(
   // server dropped read as "not there" — verdict `write`, forever, over rows
   // that already held the formula and sometimes over our own photographs.
   const { rows: data, error } = await selectIn<
-    ExistingRow & { code: string; guaranteed_analysis?: unknown }
+    ExistingRow & {
+      code: string;
+      guaranteed_analysis?: unknown;
+      moisture_percent?: number | null;
+    }
   >(
     admin,
     "barcode_cache",
-    "code, source, composition_key, ingredients_text, guaranteed_analysis",
+    "code, source, composition_key, ingredients_text, guaranteed_analysis, moisture_percent",
     "code",
     codes
   );
   if (error) {
     return { error, decided: [] as Decided[] };
   }
-  const existing = new Map<string, ExistingRow & { guaranteed_analysis?: unknown }>();
+  const existing = new Map<
+    string,
+    ExistingRow & { guaranteed_analysis?: unknown; moisture_percent?: number | null }
+  >();
   for (const row of data) {
     existing.set(row.code, row);
   }
@@ -171,17 +178,81 @@ async function decide(
     error: null,
     decided: list.map((c) => {
       const held = existing.get(c.code);
+      // Computed BEFORE the verdict, because the verdict now depends on it:
+      // a photographed row with no panel can take the seeded one.
+      const heldPanel = held
+        ? hasAnyFigure(readGuaranteedAnalysis(held.guaranteed_analysis))
+        : null;
       return {
         ...c,
-        verdict: importVerdict(held, c.compositionKey, force, c.ingredients),
+        held: held ?? null,
+        verdict: importVerdict(
+          held ? { ...held, hasPanel: heldPanel } : held,
+          c.compositionKey,
+          force,
+          c.ingredients
+        ),
         // Only meaningful for a row we are leaving alone; null elsewhere.
-        heldPanel: held ? hasAnyFigure(readGuaranteedAnalysis(held.guaranteed_analysis)) : null,
+        heldPanel,
       };
     }),
   };
 }
 
-type Decided = Candidate & { verdict: ImportVerdict; heldPanel: boolean | null };
+type Decided = Candidate & {
+  verdict: ImportVerdict;
+  heldPanel: boolean | null;
+  held: (ExistingRow & { moisture_percent?: number | null }) | null;
+};
+
+/**
+ * Give a photographed row the panel its photograph never caught.
+ *
+ * Separate from the main write, and deliberately not an upsert: an upsert
+ * sends a whole row, and a whole row is the one thing that must not happen
+ * here. These rows are OURS — somebody stood in a shop and photographed the
+ * pack — and everything they hold outranks the seed. Only two columns move,
+ * and only in one direction: from absent to present.
+ *
+ * `guaranteed_analysis` is the point. `moisture_percent` comes along only
+ * where it is null, because it is extracted separately from the panel and a
+ * capture may well have caught it alone; overwriting a figure read off the
+ * real pack with one from a manufacturer record is exactly the overwrite this
+ * route refuses everywhere else.
+ *
+ * The `source` guard on the update is not decoration. The rows were read at
+ * the start of the request, and between then and now somebody may have
+ * re-photographed one. If the row is no longer ours, the update matches
+ * nothing and the pass simply reports one fewer — which is the right outcome
+ * and needs no branch anywhere else.
+ */
+async function writePanels(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>,
+  decided: Decided[]
+) {
+  const list = decided.filter(
+    (d) => d.verdict === "panel-only" && d.analysis && hasAnyFigure(d.analysis)
+  );
+  if (list.length === 0) return { filled: 0, codes: [] as string[] };
+
+  const filled: string[] = [];
+  for (const c of list) {
+    const patch: Record<string, unknown> = { guaranteed_analysis: c.analysis };
+    if (c.held?.moisture_percent == null && c.analysis?.moistureMax != null) {
+      patch.moisture_percent = c.analysis.moistureMax;
+    }
+    const { error } = await admin
+      .from("barcode_cache")
+      .update(patch)
+      .eq("code", c.code)
+      .eq("source", "verified");
+    // One row failing is not a reason to abandon the other fifteen, and the
+    // count below is what the operator reads — so a failure shows up as a
+    // smaller number rather than as a silent success.
+    if (!error) filled.push(c.code);
+  }
+  return { filled: filled.length, codes: filled };
+}
 
 /**
  * The boxes, decided the same way and written in the same pass.
@@ -272,6 +343,7 @@ function summarise(decided: { verdict: ImportVerdict }[]) {
     write: 0,
     identical: 0,
     "ours-is-better": 0,
+    "panel-only": 0,
     conflict: 0,
   };
   for (const d of decided) counts[d.verdict] += 1;
@@ -330,6 +402,34 @@ async function writeBoxes(
   };
 }
 
+/**
+ * Retire every stored report for these codes, in every mode.
+ *
+ * Any report written before the row had a composition — or, for a panel fill,
+ * before it had any figures to do dry-matter arithmetic with — is now stale.
+ * Best-effort on purpose: the catalog rows are correct either way, and a
+ * report that fails to clear is a stale page, not a wrong one.
+ */
+async function clearReports(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>,
+  codes: string[]
+): Promise<number> {
+  if (codes.length === 0) return 0;
+  try {
+    // Chunked for the same reason as the reads above, and here the list is the
+    // longest in the route: every code times every mode's key.
+    const { deleted } = await deleteIn(
+      admin,
+      "report_cache",
+      "cache_key",
+      codes.flatMap((code) => allReportCacheKeys(code))
+    );
+    return deleted;
+  } catch {
+    return 0;
+  }
+}
+
 /** What WOULD happen, so the button can say it before anybody presses it. */
 export async function GET(req: Request) {
   const auth = checkAdmin(req);
@@ -364,6 +464,12 @@ export async function GET(req: Request) {
       // True when the row we are leaving alone already carries a guaranteed
       // analysis, false when it does not — the ones worth re-capturing.
       heldPanel: d.heldPanel,
+      // Whether that row holds an ingredient list at all. Sent because it is
+      // the difference between two reasons a photograph was left alone with no
+      // panel — "your list and ours disagree, so the seeded figures may belong
+      // to another formula" and "this capture read nothing at all" — and the
+      // screen should not guess which one it is looking at.
+      heldComposition: d.held ? !!(d.held.ingredients_text ?? "").trim() : null,
       // Surfaced in the preview because it changes how the consumer report
       // judges the product. A therapeutic diet written in as an everyday food
       // is the one mistake here that a reader cannot see and would not think
@@ -403,11 +509,18 @@ export async function POST(req: Request) {
   // carton open to the discovery screen.
   const boxes = await writeBoxes(admin);
 
+  // Also independent of the formula write, and for the same reason: these rows
+  // are already ours and are not waiting on anything. A batch with nothing new
+  // to write is no reason to leave sixteen photographs without a panel.
+  const panels = await writePanels(admin, decided);
+
   const toWrite = decided.filter((d) => d.verdict === "write");
   if (toWrite.length === 0) {
     return Response.json({
       ok: true,
       written: 0,
+      panelsFilled: panels.filled,
+      reportsCleared: await clearReports(admin, panels.codes),
       boxes,
       counts: summarise(decided),
       conflicts: decided
@@ -485,26 +598,17 @@ export async function POST(req: Request) {
     );
   }
 
-  // Any report stored for these codes was generated before we had a
-  // composition — in every mode, since the mode may have been wrong too.
-  let reportsCleared = 0;
-  try {
-    // Chunked for the same reason as the reads above, and here the list is the
-    // longest in the route: every written code times every mode's key.
-    const { deleted } = await deleteIn(
-      admin,
-      "report_cache",
-      "cache_key",
-      toWrite.flatMap((c) => allReportCacheKeys(c.code))
-    );
-    reportsCleared = deleted;
-  } catch {
-    /* best-effort — the products are written either way */
-  }
+  const reportsCleared = await clearReports(admin, [
+    ...toWrite.map((c) => c.code),
+    // A panel-filled row needs this every bit as much: its stored report was
+    // written when there were no figures to do dry-matter arithmetic with.
+    ...panels.codes,
+  ]);
 
   return Response.json({
     ok: true,
     written: toWrite.length,
+    panelsFilled: panels.filled,
     reportsCleared,
     boxes,
     counts: summarise(decided),

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Check, Loader2, Download, AlertTriangle, RefreshCw } from "lucide-react";
 import { verdictLabel, type ImportVerdict } from "@/lib/known-import";
+import { seedButtonLabel } from "@/lib/seed-button-label";
 
 /**
  * Put the seeded formulas into the catalog, and say what it will do first.
@@ -27,6 +28,8 @@ interface PreviewProduct {
   verdict: ImportVerdict;
   /** Whether the row we are leaving alone already carries a panel. */
   heldPanel?: boolean | null;
+  /** Whether it holds an ingredient list at all. */
+  heldComposition?: boolean | null;
 }
 
 /**
@@ -65,6 +68,8 @@ interface Result {
   reportsCleared?: number;
   counts?: Record<ImportVerdict, number>;
   boxes?: BoxCounts;
+  /** Photographed rows that took the seeded guaranteed analysis and nothing else. */
+  panelsFilled?: number;
   conflicts?: { code: string; name: string }[];
   flagged?: { code: string; note: string | null }[];
   error?: string;
@@ -184,9 +189,17 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   // screen. Counted together for the label only; the panels above keep them
   // apart, because they are opposite claims about a barcode.
   const boxesToMark = preview?.boxes?.write ?? 0;
-  const anythingToDo = toWrite + boxesToMark;
+  // Our own photographs that never caught a panel, and can take the seeded one
+  // because the two ingredient lists agree. Counted into the button for the
+  // same reason as the boxes: it is work this press will do, and a button that
+  // says "Nothing to write" while sixteen reports stay thin is lying.
+  const panelsToFill = preview?.counts?.["panel-only"] ?? 0;
+  const anythingToDo = toWrite + boxesToMark + panelsToFill;
   const ours = (preview?.products ?? []).filter(
     (p) => p.verdict === "ours-is-better"
+  );
+  const panelOnly = (preview?.products ?? []).filter(
+    (p) => p.verdict === "panel-only"
   );
 
   return (
@@ -218,7 +231,13 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
       ) : preview ? (
         <ul className="flex flex-col gap-1 text-[12.5px] text-muted">
           {(
-            ["write", "identical", "ours-is-better", "conflict"] as ImportVerdict[]
+            [
+              "write",
+              "panel-only",
+              "identical",
+              "ours-is-better",
+              "conflict",
+            ] as ImportVerdict[]
           ).map((verdict) => {
             const n = preview.counts?.[verdict] ?? 0;
             if (n === 0) return null;
@@ -226,7 +245,7 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               <li key={verdict} className="flex items-center gap-2">
                 <span
                   className={`w-6 text-right font-semibold tabular-nums ${
-                    verdict === "write"
+                    verdict === "write" || verdict === "panel-only"
                       ? "text-sage-600"
                       : verdict === "conflict"
                         ? "text-amber"
@@ -286,6 +305,7 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
           <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-sage-700">
             <Check size={14} strokeWidth={2.5} aria-hidden="true" />
             {result.written} written
+            {result.panelsFilled ? `, ${result.panelsFilled} panels filled in` : ""}
             {result.boxes?.written ? `, ${result.boxes.written} boxes marked` : ""}
             {result.reportsCleared ? `, ${result.reportsCleared} stale reports cleared` : ""}
           </p>
@@ -300,6 +320,30 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               barcode — the current formula was written.
             </p>
           )}
+        </div>
+      )}
+
+      {/* The ones this press can actually improve. Separate from the block
+          below because the answer is different: nothing about them needs a
+          person or a second trip to the shop. */}
+      {panelOnly.length > 0 && (
+        <div className="rounded-input bg-sage-50 px-3 py-2.5">
+          <p className="text-[12px] font-semibold text-ink">
+            {panelOnly.length} photographed with no analysis panel — fillable
+          </p>
+          <p className="mt-0.5 text-[11px] leading-snug text-muted">
+            Your photograph caught the ingredients and not the panel, and the
+            seeded list is the same recipe letter for letter — so the figures
+            belong to this food. Only the panel is written. The ingredients,
+            the source and everything else you shot are untouched.
+          </p>
+          <ul className="mt-1.5 flex flex-col gap-1">
+            {panelOnly.map((p) => (
+              <li key={p.code} className="text-[11px] leading-snug text-muted">
+                <span className="font-mono">{p.code}</span> · {p.name}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
@@ -322,8 +366,15 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               <li key={p.code} className="text-[11px] leading-snug text-muted">
                 <span className="font-mono">{p.code}</span> · {p.name}
                 {p.heldPanel === false && (
+                  // The ones the fill above could NOT reach, and the two
+                  // reasons are different jobs. A differing list means the
+                  // seeded figures may belong to another formula, so only the
+                  // pack settles it. No list at all means the capture read
+                  // nothing, which is a re-shoot of a different kind.
                   <span className="ml-1 rounded-full bg-amber-soft px-1.5 py-0.5 text-[10px] font-semibold text-ink">
-                    no analysis panel — worth re-shooting
+                    {p.heldComposition === false
+                      ? "nothing was read off this pack — re-shoot it"
+                      : "no panel, and the list differs — re-shoot the tin"}
                   </span>
                 )}
               </li>
@@ -365,13 +416,7 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         ) : (
           <Download size={16} strokeWidth={1.8} aria-hidden="true" />
         )}
-        {anythingToDo === 0
-          ? "Nothing to write"
-          : toWrite === 0
-            ? `Mark ${boxesToMark} variety pack${boxesToMark === 1 ? "" : "s"}`
-            : boxesToMark === 0
-              ? `Write ${toWrite} to the catalog`
-              : `Write ${toWrite} and mark ${boxesToMark} boxes`}
+        {seedButtonLabel({ toWrite, boxesToMark, panelsToFill })}
       </button>
 
       {/* Separate from the write, because it is a separate decision: the
