@@ -11,6 +11,7 @@ import { detectNutritionRole } from "@/lib/nutrition-role";
 import {
   importVerdict,
   multipackVerdict,
+  needsADecision,
   type ExistingBoxRow,
   type ExistingRow,
   type ImportVerdict,
@@ -490,6 +491,16 @@ export async function GET(req: Request) {
       // to another formula" and "this capture read nothing at all" — and the
       // screen should not guess which one it is looking at.
       heldComposition: d.held ? !!(d.held.ingredients_text ?? "").trim() : null,
+      // Both lists, for the handful of rows where somebody has to choose
+      // between them. Sent only for those: 900-odd products times two
+      // ingredient lists is a payload nobody reads, and the rows that agree
+      // have nothing to show.
+      ...(needsADecision(d)
+        ? {
+            heldIngredients: d.held?.ingredients_text ?? null,
+            seededIngredients: d.ingredients,
+          }
+        : {}),
       // Surfaced in the preview because it changes how the consumer report
       // judges the product. A therapeutic diet written in as an everyday food
       // is the one mistake here that a reader cannot see and would not think
@@ -503,6 +514,88 @@ export async function GET(req: Request) {
   });
 }
 
+/**
+ * Replace one row's composition with the seeded one, because a person said so.
+ *
+ * ── Why this exists, and why it is not the overwrite the route refuses ────
+ *
+ * The refusal has always been about SILENCE. Two readings of equal standing
+ * disagree, the importer picks one by arrival order, and the other stops
+ * existing with nobody ever seeing that a choice was made. That is what
+ * `conflict` prevents, and it should keep preventing it.
+ *
+ * It was never an argument that the disagreement should stay unresolved
+ * forever. Nine photographed rows sat in the catalog with a list that differs
+ * from the manufacturer's and no guaranteed analysis at all, and the only
+ * thing the screen could say about them was "re-shoot the tin" — a tin the
+ * operator may have photographed a year ago and no longer owns. The missing
+ * piece was not permission. It was the two lists side by side, and a button
+ * under them.
+ *
+ * So: the codes come from the operator, one press per row, after the screen
+ * has shown them what they are choosing between. Nothing here is automatic and
+ * nothing here runs over a row the operator did not name.
+ *
+ * ── What moves ───────────────────────────────────────────────────────────
+ *
+ * The composition, the panel, the fingerprint, and the fields derived from the
+ * range name. NOT the photograph itself: `image_url` is left where it is, so
+ * the picture that was taken is still there to go back to.
+ *
+ * `source` becomes `community`, and that is the honest part. `verified` means
+ * one thing in this project — we photographed that label and read it. Once the
+ * text is a manufacturer's rather than the photograph's, nobody has done that,
+ * and leaving the row `verified` would put a claim on it that no longer holds.
+ * See lib/catalog-edit.ts, which draws the same line for a hand edit.
+ */
+async function adoptSeeded(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>,
+  decided: Decided[],
+  codes: string[]
+) {
+  const wanted = new Set(codes.map((code) => canonicalBarcode(code)).filter(Boolean));
+  // Only rows this pass actually put a decision in front of somebody. A code
+  // that is not one of them — already identical, never seeded, simply made up
+  // — is refused rather than acted on.
+  const list = decided.filter((d) => wanted.has(d.code) && needsADecision(d));
+  const refused = [...wanted].filter((code) => !list.some((d) => d.code === code));
+
+  const adopted: string[] = [];
+  let firstError: string | null = null;
+  for (const c of list) {
+    const { data, error } = await admin
+      .from("barcode_cache")
+      .update({
+        found: true,
+        source: "community",
+        mode: "pet",
+        brands: c.brands,
+        product_name: c.productName,
+        ingredients_text: c.ingredients,
+        species: c.species,
+        food_form: c.foodForm,
+        food_form_confirmed: true,
+        moisture_percent: c.analysis?.moistureMax ?? null,
+        guaranteed_analysis:
+          c.analysis && hasAnyFigure(c.analysis) ? c.analysis : null,
+        nutrition_role: c.nutritionRole === "unknown" ? null : c.nutritionRole,
+        requires_vet: c.requiresVet,
+        reason: null,
+        composition_key: c.compositionKey,
+      })
+      .eq("code", c.code)
+      .select("code");
+    if (error) {
+      firstError ??= error.message;
+    } else if ((data ?? []).length > 0) {
+      adopted.push(c.code);
+    } else {
+      firstError ??= `${c.printed} matched no row to update`;
+    }
+  }
+  return { adopted, refused, error: firstError };
+}
+
 export async function POST(req: Request) {
   const auth = checkAdmin(req);
   if (!auth.ok) return adminRefusal(auth);
@@ -512,11 +605,37 @@ export async function POST(req: Request) {
   }
 
   let force = false;
+  let adopt: string[] = [];
   try {
-    const body = (await req.json()) as { force?: unknown };
+    const body = (await req.json()) as { force?: unknown; adopt?: unknown };
     force = body.force === true;
+    if (Array.isArray(body.adopt)) {
+      adopt = body.adopt.filter((code): code is string => typeof code === "string");
+    }
   } catch {
     /* no body is the ordinary case */
+  }
+
+  // An adoption is its own errand: named codes, nothing else touched. Folding
+  // it into the ordinary write would mean one press doing a batch import AND a
+  // per-row decision, and the operator could not tell afterwards which did
+  // what.
+  if (adopt.length > 0) {
+    const { error: adoptLookupError, decided: adoptDecided } = await decide(admin, false);
+    if (adoptLookupError) {
+      return Response.json(
+        { error: "lookup_failed", message: adoptLookupError },
+        { status: 500 }
+      );
+    }
+    const result = await adoptSeeded(admin, adoptDecided, adopt);
+    return Response.json({
+      ok: true,
+      adopted: result.adopted.length,
+      refused: result.refused.length,
+      adoptError: result.error,
+      reportsCleared: await clearReports(admin, result.adopted),
+    });
   }
 
   const { error, decided } = await decide(admin, force);

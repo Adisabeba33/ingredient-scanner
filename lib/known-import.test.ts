@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { multipackVerdict, type ExistingBoxRow, importVerdict, verdictLabel, type ExistingRow } from "./known-import";
+import { multipackVerdict, needsADecision, type ExistingBoxRow, importVerdict, verdictLabel, type ExistingRow } from "./known-import";
 import { KNOWN_FORMULAS } from "../data/known-formulas";
 import { KNOWN_PRODUCTS } from "../data/known-products";
 import { isVeterinaryDiet } from "./vet-diet";
@@ -117,6 +117,38 @@ describe("importVerdict", () => {
     expect(importVerdict(stored, null, false, "lamb trachea")).toBe("identical");
     // A genuinely different short list still wants a person.
     expect(importVerdict(stored, null, false, "Lamb Ears.")).toBe("conflict");
+  });
+
+  // What may be put in front of a person, and — the part that matters — what
+  // may not. The adoption endpoint replaces a row's whole composition, so it
+  // refuses every code this does not name: a row already identical, already
+  // written, or waiting to be written has nothing to decide, and a code that
+  // was simply made up must not reach an UPDATE.
+  describe("needsADecision", () => {
+    const d = (verdict: Parameters<typeof needsADecision>[0]["verdict"], heldPanel: boolean | null) =>
+      needsADecision({ verdict, heldPanel });
+
+    it("is true for a conflict, whatever the panel says", () => {
+      expect(d("conflict", true)).toBe(true);
+      expect(d("conflict", false)).toBe(true);
+      expect(d("conflict", null)).toBe(true);
+    });
+
+    it("is true for our own photograph with no panel and a differing list", () => {
+      expect(d("ours-is-better", false)).toBe(true);
+    });
+
+    it("is false for our own photograph that already has a panel", () => {
+      expect(d("ours-is-better", true)).toBe(false);
+    });
+
+    it("is false for everything with nothing to decide", () => {
+      for (const v of ["write", "identical", "panel-only"] as const) {
+        for (const panel of [true, false, null]) {
+          expect({ v, panel, decide: d(v, panel) }).toEqual({ v, panel, decide: false });
+        }
+      }
+    });
   });
 
   it("has wording for every verdict", () => {

@@ -30,6 +30,9 @@ interface PreviewProduct {
   heldPanel?: boolean | null;
   /** Whether it holds an ingredient list at all. */
   heldComposition?: boolean | null;
+  /** Both lists, sent only where somebody has to choose between them. */
+  heldIngredients?: string | null;
+  seededIngredients?: string | null;
 }
 
 /**
@@ -79,6 +82,85 @@ interface Result {
   message?: string;
 }
 
+/**
+ * The two lists, and the button under them.
+ *
+ * ── Why a comparison and not just a button ────────────────────────────────
+ *
+ * Because "the catalog holds a different composition" is not a decision
+ * anybody can make from that sentence. One of the two lists is a photograph
+ * that may have been a poor read, and the other is a manufacturer's record
+ * that may be a generation out of date, and which is which changes per row.
+ * Showing one and hiding the other would be asking for a signature on a
+ * document nobody may read.
+ *
+ * Collapsed by default: ten of these open at once is a wall of ingredients,
+ * and the operator is working through them one at a time anyway.
+ */
+function Compare({
+  product,
+  open,
+  onToggle,
+  onAdopt,
+  busy,
+}: {
+  product: PreviewProduct;
+  open: boolean;
+  onToggle: () => void;
+  onAdopt: () => void;
+  busy: boolean;
+}) {
+  if (!product.seededIngredients) return null;
+  return (
+    <div className="mt-1">
+      <button
+        onClick={onToggle}
+        className="text-[10.5px] font-semibold text-sage-700 underline underline-offset-2"
+      >
+        {open ? "Hide the two lists" : "Compare the two lists"}
+      </button>
+      {open && (
+        <div className="mt-1.5 flex flex-col gap-2 rounded-input bg-surface px-2.5 py-2">
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-wide text-faint">
+              What the catalog holds
+            </p>
+            <p className="mt-0.5 text-[11px] leading-snug text-ink">
+              {product.heldIngredients?.trim() || "— nothing —"}
+            </p>
+          </div>
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-wide text-faint">
+              The seeded formula
+            </p>
+            <p className="mt-0.5 text-[11px] leading-snug text-ink">
+              {product.seededIngredients}
+            </p>
+          </div>
+          <button
+            onClick={onAdopt}
+            disabled={busy}
+            className="btn-secondary self-start text-[11px]"
+          >
+            {busy ? (
+              <Loader2 className="animate-spin" size={13} aria-hidden="true" />
+            ) : null}
+            Use the seeded formula for this one
+          </button>
+          {/* Said here rather than in a tooltip, because it is the part the
+              operator is actually agreeing to. */}
+          <p className="text-[10px] leading-snug text-faint">
+            Replaces the composition, the panel and the fingerprint on this one
+            barcode, and relabels the row &ldquo;not photographed&rdquo; —
+            because once the text is a manufacturer&apos;s, nobody has
+            photographed it. Your picture stays on the row.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function SeedImport({ adminToken }: { adminToken: string }) {
   const [preview, setPreview] = useState<Preview | null>(null);
   const [loading, setLoading] = useState(true);
@@ -87,6 +169,9 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   const [error, setError] = useState<string | null>(null);
   const [clearing, setClearing] = useState(false);
   const [cleared, setCleared] = useState<string | null>(null);
+  const [open, setOpen] = useState<string | null>(null);
+  const [adopting, setAdopting] = useState<string | null>(null);
+  const [adopted, setAdopted] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -185,6 +270,39 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
       setClearing(false);
     }
   }, [clearing, adminToken]);
+
+  const adopt = useCallback(
+    async (code: string) => {
+      setAdopting(code);
+      setError(null);
+      setAdopted(null);
+      try {
+        const res = await fetch("/api/known-products/import", {
+          method: "POST",
+          headers: { "content-type": "application/json", "x-admin-token": adminToken },
+          body: JSON.stringify({ adopt: [code] }),
+        });
+        const data = (await res.json().catch(() => ({}))) as {
+          adopted?: number;
+          adoptError?: string | null;
+          message?: string;
+          error?: string;
+        };
+        if (!res.ok || data.adopted !== 1) {
+          setError(data.adoptError ?? data.message ?? data.error ?? "Couldn't replace it.");
+          return;
+        }
+        setAdopted(code);
+        setOpen(null);
+        await load();
+      } catch {
+        setError("Couldn't replace it — check your connection.");
+      } finally {
+        setAdopting(null);
+      }
+    },
+    [adminToken, load]
+  );
 
   const toWrite = preview?.counts?.write ?? 0;
   // The button is one press that does two things, so it must not read
@@ -302,6 +420,12 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
       ) : null}
 
       {error && <p className="text-[12.5px] text-risk-high">{error}</p>}
+      {adopted && (
+        <p className="text-[12px] text-sage-700">
+          <span className="font-mono">{adopted}</span> now holds the seeded
+          formula, and its stored reports were dropped.
+        </p>
+      )}
 
       {result && (
         <div className="rounded-input bg-sage-50 px-3 py-2.5">
@@ -380,17 +504,23 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               <li key={p.code} className="text-[11px] leading-snug text-muted">
                 <span className="font-mono">{p.code}</span> · {p.name}
                 {p.heldPanel === false && (
-                  // The ones the fill above could NOT reach, and the two
-                  // reasons are different jobs. A differing list means the
-                  // seeded figures may belong to another formula, so only the
-                  // pack settles it. No list at all means the capture read
-                  // nothing, which is a re-shoot of a different kind.
+                  // The ones the fill above could NOT reach. A capture that
+                  // read nothing needs the pack. A capture whose list differs
+                  // needs a person to look at both lists, which is what the
+                  // button does — so it says compare, not re-shoot.
                   <span className="ml-1 rounded-full bg-amber-soft px-1.5 py-0.5 text-[10px] font-semibold text-ink">
                     {p.heldComposition === false
                       ? "nothing was read off this pack — re-shoot it"
-                      : "no panel, and the list differs — re-shoot the tin"}
+                      : "no panel, and the list differs"}
                   </span>
                 )}
+                <Compare
+                  product={p}
+                  open={open === p.code}
+                  onToggle={() => setOpen(open === p.code ? null : p.code)}
+                  onAdopt={() => adopt(p.code)}
+                  busy={adopting === p.code}
+                />
               </li>
             ))}
           </ul>
@@ -414,6 +544,13 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               .map((p) => (
                 <li key={p.code} className="text-[11px] text-muted">
                   <span className="font-mono">{p.code}</span> · {p.name}
+                  <Compare
+                    product={p}
+                    open={open === p.code}
+                    onToggle={() => setOpen(open === p.code ? null : p.code)}
+                    onAdopt={() => adopt(p.code)}
+                    busy={adopting === p.code}
+                  />
                 </li>
               ))}
           </ul>

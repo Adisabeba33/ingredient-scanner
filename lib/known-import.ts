@@ -213,6 +213,31 @@ export function multipackVerdict(
   return "write";
 }
 
+/**
+ * Rows where the two compositions disagree and only a person can settle it.
+ *
+ * A `conflict` is the obvious one: two readings of equal standing, and the
+ * whole reason this module refuses to pick. The other is our own photograph
+ * with NO panel and a list that does not match the seed. The panel fill cannot
+ * help that row — the seeded figures might belong to the other formula — and
+ * for a long time the only thing the screen could say about it was "re-shoot
+ * the tin", about a tin the operator may have photographed a year ago and no
+ * longer owns.
+ *
+ * Being unable to decide automatically is not the same as there being nothing
+ * to decide. This names the rows worth putting in front of somebody, with both
+ * lists, and it is deliberately narrow: nothing that is already identical,
+ * already written, or waiting to be written appears here, so the adoption
+ * endpoint can refuse every code this does not return true for.
+ */
+export function needsADecision(d: {
+  verdict: ImportVerdict;
+  heldPanel: boolean | null;
+}): boolean {
+  if (d.verdict === "conflict") return true;
+  return d.verdict === "ours-is-better" && d.heldPanel === false;
+}
+
 /** Human wording for the summary the operator reads. */
 export function verdictLabel(verdict: ImportVerdict): string {
   if (verdict === "write") return "to write";
