@@ -204,3 +204,59 @@ PR #2 remains research-only and unmerged unless the user explicitly requests oth
 For the current product goal, **ZIWI Peak active-market barcode research is paused because coverage appears saturated**.
 
 Do not continue mining old/inactive SKUs just to increase the count. Resume only when a delta scan shows genuinely new, currently sold, orderable ZIWI products or when the user explicitly asks for historical/archive coverage.
+
+## Merge and seeding pass — 2026-09-18
+
+Merged into `main`. **Nothing was seeded, and nothing should have been:
+every one of the 109 `source_verified` records in this ledger is already in
+the catalog.** `node scripts/check-ledger.mjs` names all 109 in its
+already-in-the-catalog error, and the catalog holds 53 ZIWI Peak products under
+109 barcodes, all with a composition — the same 109.
+
+That includes the nine records this branch added as `source_verified`, which
+were new to the ledger file but not to the catalog: the two Good Dog Rewards
+3 oz bags, the three 3.5 oz trial bags, both Venison air-dried sizes, Provenance
+Otago Valley 6 oz and the Hoki 3 oz cat can. An earlier reading of this branch
+called them nine new seedable products; that was measured against the ledger
+file, which had fallen behind the catalog, and it was wrong.
+
+### What the merge is actually worth
+
+Two things, and neither is a product.
+
+**An independent confirmation of the whole ZIWI shelf.** Every one of the 109
+records was compared against what is seeded — guaranteed analysis field by
+field, and the ingredient string byte for byte. **109 agree, 0 differ.** This
+research was done separately from the batch that seeded those products, off
+partly different sources, and it reproduces them exactly. That is the strongest
+statement anyone has made about this brand's rows.
+
+**Thirty-one staged leads, honestly graded.** 24 `candidate` and 7
+`needs_physical_label`, none seedable by definition and none pretending
+otherwise: 9 case codes, 7 multipacks and 15 individual units. The largest
+group is Original Canned Wet (16), and five are **Raw Superboost** — the one
+range in this brand's seed entry that still holds no product at all.
+
+### The two records to be careful with when they are promoted
+
+Both are `source_verified` here, both already seeded, and both should be
+re-read against a pack before anyone treats them as settled:
+
+- `9421016595877` New Zealand Hoki, 3 oz cat can. This ledger files it under a
+  range it calls **Historical Canned Wet** and its own notes call the can
+  discontinued, sourced from archived retailer copy. The catalog files it under
+  **Original Canned Wet**. The formula and GA agree exactly, so nothing is
+  wrong in the rows; what is unresolved is whether the product is current.
+  AGENTS.md §6 forbids writing an old page's range as current, and
+  "Historical Canned Wet" is a research bucket, not a printed range.
+- `9421016597024` Provenance Otago Valley, 6 oz. Its evidence is Australian and
+  New Zealand retailers with no manufacturer page, and its `texture` is null.
+  The formula agrees with what is seeded; the market binding does not come from
+  a US source.
+
+### The rest of the tail
+
+The checker's twelve warnings are unchanged by this merge and belong to records
+that were already here — four Raw Superboost decks at 4% moisture, the shared
+Venison Shank half/full deck, the two Kahawai decks, and one calorie
+disagreement. Each is a question for a pack, not a blocker.
