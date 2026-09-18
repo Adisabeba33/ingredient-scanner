@@ -1739,3 +1739,57 @@ ordinary work for the next pass.
 bag of a product seeded with 3, 7 and 12 lb. Its deck matches its three
 siblings to the letter, so it joined their `packages` list rather than becoming
 a second product.
+
+---
+
+## Batch 033 — Pro Plan, Pedigree and Orijen, promoted together
+
+The first three brands to arrive from a research campaign rather than from a
+pasted document, and the first batch seeded out of `research/deep-research-*.json`
+ledgers. 104 records became 47 products; 37 of those 104 barcodes carry a
+conflict, which is a higher rate than any earlier batch and for a reason worth
+naming: a campaign reads a manufacturer page AND a retailer listing for every
+single barcode, so it meets every disagreement between them. An operator
+pasting a deck into the chat met only the ones the deck itself admitted.
+
+Three of these brands were also new makers, so §2.5 of
+[SEEDING-A-BATCH.md](SEEDING-A-BATCH.md) applied three times over: `038100` had
+to be registered for Pro Plan, and four ranges added — Orijen's Small Breed and
+Pedigree's Small Dog, Large Breed and TENDER BITES.
+
+What is NOT here, recorded so nobody looks for it: five Orijen wet records whose
+printed name carries no seeded range, so `product_line` is null and
+`known-products.ts` types `line` as a required string. They stayed out of the
+catalog rather than being given a neighbour's range. One Orijen candidate
+(Tundra 23.5 lb `064992109257`, held on 25 lb identity evidence) and three
+Pedigree `needs_physical_label` records stayed out for the ordinary reason.
+
+### Pro Plan — 18 barcodes
+
+The same disagreement in two flavours, and the one the campaign was briefed to expect: Purina renamed these ranges and distributors kept the old name against a current barcode. The rule applied throughout is that the current manufacturer deck controls the range name, the formula and the guarantees, while a legacy listing does one job only — bind an exact UPC to an exact printed bag size.
+
+- **038100101679, 038100130594, 038100177667, 038100130570, 038100130525, 038100130518, 038100180537, 038100101365, 038100101389, 038100130631, 038100177674, 038100160515, 038100160539, 038100160546** — Current Purina name is Complete Essentials; some exact-UPC sources retain legacy Savor naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.
+- **038100100757, 038100175458, 038100175526, 038100100771** — Current Purina name is Sensitive Skin & Stomach; some exact-UPC sources retain legacy Focus naming. Current manufacturer deck controls formula/line; legacy source only binds UPC to size.
+
+### Pedigree — 10 barcodes
+
+Nine of the twenty are a retailer showing an older formula generation under a current barcode, which is what this file exists for: the manufacturer page was taken as the current generation and the retailer text used for identity only. Two are worth reading on their own — 023100143767 and 023100143682 disagree on CALORIES rather than wording, and a calorie statement is a second independent measurement of the pack. The last is not a formula conflict at all: 023100143569 is a range that changed NAME, from the historical “For Big Dogs / Complete Nutrition” wording to “Large Breed”.
+
+- **023100143767** — DirectionsForMe binds UPC/size but displays an older 3437 kcal/kg, 342 kcal/cup formula generation. That older formula was not merged; the current Pedigree 3417 kcal/kg, 315 kcal/cup generation is stored.
+- **023100143545** — Target binds the exact 18 lb UPC but its label copy reflects an older ingredient/formula generation. Retailer formula text was not merged; the current Pedigree manufacturer generation is stored.
+- **023100110349** — Target's exact-UPC label panel shows 1.5% linoleic acid, while the current Pedigree manufacturer panel shows 2.0%. Retailer panel was treated as a prior generation and was not merged.
+- **023100103648, 023100143668** — Target's exact-UPC panel shows an older 1.5% linoleic-acid generation; the current Pedigree manufacturer panel shows 2.0%. Retailer formula was not merged.
+- **023100135243, 023100143699** — The exact-UPC retailer label copy differs from the current Pedigree manufacturer ingredient generation; retailer text was used only for identity/UPC binding and was not merged.
+- **023100181776** — Target binds UPC 023100181776 to the current 38 lb unit but its ingredient copy is an older generation/order. The current Pedigree manufacturer formula was kept intact.
+- **023100143569** — Retail/distributor sources still use the historical 'For Big Dogs/Complete Nutrition' naming for UPC 023100143569; the current manufacturer page calls the range 'Large Breed'. Identity is consistent, but the line-name evolution is documented rather than silently normalized.
+- **023100143682** — Chewy currently reports a materially different 3332 kcal/kg, 318 kcal/cup and ingredient order for this exact product family. The current Pedigree manufacturer page is treated as the authoritative formula generation; retailer formula copy is not merged.
+
+### Orijen — 13 barcodes
+
+Thirteen barcodes in three shapes. Ten are a maker disagreeing with itself inside one panel: the ingredient deck names dried Bacillus coagulans while the printed Total Microorganisms guarantee names three different organisms. Both are stored as printed, because choosing between them would be inventing a label. One is a size whose legacy wording still says 25 lb where the current pack prints 23.5. One is a page whose rendered ingredient paragraph truncates after “pyridox”, completed from a retailer printing the same deck through calcium carbonate — the manufacturer stays the source for size, guarantees, calories and adequacy. And one is arithmetic: 064992716219 prints 1101 kcal/kg and 367 kcal per 12.8 oz can, which do not agree — 1101 implies about 400. Both printed figures are kept and neither is corrected.
+
+- **064992107253** — Current retail title/body and Shopify variant evidence bind UPC 064992107253 to 23.5 lb, while some legacy URL/image text still says 25 lb; current printed size is retained as 23.5 lb and the legacy wording is documented rather than used as the size.
+- **064992720384, 064992720339, 064992728458, 064992720414, 064992720360, 064992720377, 064992720391, 064992720346, 064992720407, 064992720353** — Current ORIJEN USA page ingredient deck names dried Bacillus coagulans fermentation product, while its printed Total Microorganisms guarantee names Lactobacillus acidophilus, Bifidobacterium animalis, and Lactobacillus casei; both statements are retained as printed.
+- **064992716158** — The current ORIJEN SKU page's rendered ingredient paragraph truncates after 'pyridox'; Pet Food Express prints the complete matching deck through calcium carbonate. ORIJEN remains the exact-SKU source for size, guarantee, calories, and adequacy.
+- **064992716219** — The manufacturer page prints 1101 kcal/kg and 367 kcal per 12.8 oz (363 g) can; those bases do not arithmetically agree (1101 kcal/kg implies about 400 kcal/can). Both are retained as printed.
+

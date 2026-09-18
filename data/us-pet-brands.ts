@@ -276,11 +276,20 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Pedigree",
     owner: "Mars",
     species: "dog",
+    // Small Dog, Large Breed and TENDER BITES came off current packs during the
+    // Pedigree research and were missing from the six written from shelf
+    // memory; thirteen of that campaign's twenty barcodes sit under them.
+    // "Small Dog" is the spelling its own packs use — retailers also print
+    // "Small Breed", and the handoff says to settle that from a pack rather
+    // than from a listing. TENDER BITES is capitalised the way the bag is.
     lines: [
       "Complete Nutrition",
       "Choice Cuts",
       "Chopped Ground Dinner",
       "High Protein",
+      "Small Dog",
+      "Large Breed",
+      "TENDER BITES",
       "Puppy",
       "DentaStix",
     ],
@@ -405,6 +414,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Senior",
       "Fit & Trim",
       "Kitten",
+      "Small Breed",
       "WILD RESERVE",
     ],
   },

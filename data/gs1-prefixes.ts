@@ -129,4 +129,13 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // anyway, exactly as Merrick keeps 022808 under Nestlé Purina — the packs
   // carry the business unit's prefix, not the parent's.
   { prefix: "064992", maker: "Champion Petfoods (Orijen and Acana)" },
+  // Purina's THIRD prefix, and the one that finally makes the pattern plain:
+  // Fancy Feast and Friskies sit under 050000, Purina ONE and Alpo under
+  // 017800, and Pro Plan under this. A maker this size runs its prefixes by
+  // business unit, and knowing two of them tells you nothing about the third.
+  //
+  // It went into research/BRIEF-PRO-PLAN.md as an unconfirmed lead because GS1
+  // could not be reached, and the campaign then proved it on 18 independently
+  // bound packages across two ranges.
+  { prefix: "038100", maker: "Nestlé Purina (Pro Plan)" },
 ];
