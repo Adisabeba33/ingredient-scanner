@@ -328,8 +328,8 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
       <div>
         <h2 className="text-[14px] font-semibold text-ink">Seeded formulas</h2>
         <p className="mt-0.5 text-[11.5px] leading-snug text-muted">
-          Fancy Feast and Friskies compositions from manufacturer records. Filed
-          as community readings — a photograph of the real pack still wins.
+          Compositions from manufacturer records. Filed as community readings —
+          a photograph of the real pack still wins.
         </p>
         {/* Not every seeded product has a composition. The ones without appear
             on the coverage page with a barcode to look for, and stay out of the
@@ -365,7 +365,13 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
             return (
               <li key={verdict} className="flex items-center gap-2">
                 <span
-                  className={`w-6 text-right font-semibold tabular-nums ${
+                  // `min-w`, not `w`. A fixed 24px column was sized when the
+                  // biggest count was two digits; at 1350 the number overflows
+                  // its own box, eats the gap and prints as "1350already
+                  // identical", and every row below it sits at a different
+                  // indent. Tabular numerals keep the column aligned; the
+                  // minimum keeps small counts from drifting left.
+                  className={`min-w-[2.5rem] shrink-0 text-right font-semibold tabular-nums ${
                     verdict === "write" || verdict === "panel-only"
                       ? "text-sage-600"
                       : verdict === "conflict"
