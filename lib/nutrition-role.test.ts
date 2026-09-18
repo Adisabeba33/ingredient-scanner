@@ -88,6 +88,33 @@ describe("detectNutritionRole", () => {
     ).toBe("treat");
   });
 
+  // Wellness was briefed before a barcode of it was researched, and its brief
+  // §4 named this in advance: "Soft Puppy Bites" is in the seed's own `lines`
+  // for the brand, so with no entry here a bag of training treats is judged as
+  // a puppy's whole diet. The maker's pages print "intended for intermittent or
+  // supplemental feeding only" on both ranges.
+  it("reads Wellness's snack ranges as snacks", () => {
+    for (const parts of [
+      ["Wellness", "Soft Puppy Bites", "Lamb & Salmon"],
+      ["Wellness", "Wellness Puppy Bites", "Lamb & Salmon"],
+      ["Wellness", "Kittles", "Chicken & Cranberry"],
+      ["Wellness", "Rewarding Life", "Chicken & Turkey"],
+    ]) {
+      expect({ parts, role: detectNutritionRole({ parts }) }).toEqual({ parts, role: "treat" });
+    }
+  });
+
+  // And the guess this list refuses to make. "Bites" is a word complete foods
+  // use — Hill's sells Puppy Small Bites — so only the maker's two printed
+  // spellings are listed, never bare "puppy bites".
+  it("does not read every puppy food with 'bites' in it as a snack", () => {
+    expect(
+      detectNutritionRole({
+        parts: ["Hill's Science Diet", "Puppy", "Chicken Meal & Barley Recipe Small Bites"],
+      })
+    ).not.toBe("treat");
+  });
+
   // The bug I nearly shipped. Cesar's "Loaf & Topper in Sauce" is complete and
   // balanced dog food — the topper is the garnish ON the loaf. Filing it as a
   // garnish would excuse a real dinner from the standard it should be held to,

@@ -66,6 +66,31 @@ export interface SeedBrand {
   family?: string;
   /** Ranges within the brand. Flavours are NOT listed — see the note above. */
   lines?: string[];
+  /**
+   * This brand's name is an ordinary English word, so it may only be folded
+   * from a longer string when it LEADS that string.
+   *
+   * Wellness is why this exists. `lib/brand-key.ts` folds by whole-word
+   * containment, which is right for "Purina Friskies Cat Food" and wrong here:
+   * "Digestive Wellness" contains the word and is not this brand. That is not
+   * hypothetical — three other makers print it. Dr. Bill's Pet Nutrition uses
+   * "Digestive Wellness" as a product family, Now Fresh uses it as a category,
+   * and Purina ONE +Plus Digestive Health carries it as benefit copy. A model
+   * reading a front of pack can lift any of them into the brand field, and the
+   * report would then be attributed to a brand that did not make the food.
+   *
+   * With this set, "WELLNESS CORE" and "Wellness Complete Health" still fold —
+   * the word leads — and "Digestive Wellness" or "Dental Wellness Chews" no
+   * longer do. They become their own unseeded brand instead, which is the
+   * honest answer: the coverage page shows a brand nobody seeded, and nobody's
+   * product is filed under somebody else's name.
+   *
+   * Set it only where a name really is an ordinary word AND the false fold has
+   * been seen in the wild. A false fold misattributes a real product; a missed
+   * fold only creates a visible extra row, so the cost is not symmetric — but
+   * it is not zero either, and a guess is not evidence.
+   */
+  leadingWordOnly?: boolean;
 }
 
 export const US_PET_BRANDS: SeedBrand[] = [
@@ -695,6 +720,9 @@ export const US_PET_BRANDS: SeedBrand[] = [
   // ── WellPet ──────────────────────────────────────────────────────────────
   {
     name: "Wellness",
+    // An ordinary English word — see `leadingWordOnly` above for the three
+    // makers who print "Digestive Wellness" on something that is not this.
+    leadingWordOnly: true,
     owner: "WellPet",
     species: "both",
     aliases: ["wellness natural pet food"],

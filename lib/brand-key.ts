@@ -31,6 +31,12 @@ import { US_PET_BRANDS, type SeedBrand } from "../data/us-pet-brands";
  *    by specificity: "purina fancy feast" contains "fancy feast" (two words),
  *    which beats "purina" outright. This is the rule that survives the model
  *    prefixing the parent company onto everything.
+ *
+ *    A brand marked `leadingWordOnly` in the seed is the exception: its name is
+ *    an ordinary English word, so it is only folded from a longer string when
+ *    it LEADS that string. "WELLNESS CORE" is the brand; "Digestive Wellness"
+ *    is a claim three other makers print. The flag's own note in
+ *    data/us-pet-brands.ts carries the evidence.
  * 4. No seeded brand at all: the normalised string is its own key, and the
  *    brand exists from that moment as a brand nobody seeded. That is the point
  *    — the shelf is allowed to teach us brands the list never knew.
@@ -42,6 +48,11 @@ import { US_PET_BRANDS, type SeedBrand } from "../data/us-pet-brands";
  * way of seeing it had happened. Everything here is exact or whole-word
  * containment, so a wrong fold can only come from a wrong alias in the seed
  * file, where it can be read and fixed.
+ *
+ * It also does not guess which of a brand's names are ordinary words. That is
+ * declared per brand in the seed, where somebody can see the claim and the
+ * evidence for it, rather than inferred from a word list this module would
+ * have to carry and keep right for eighty one-word brand names.
  */
 
 /**
@@ -84,7 +95,7 @@ interface Index {
    * The same spellings, sorted so the most specific is tried first. Sorting
    * once here is what keeps `brandKey` cheap enough to call per catalog row.
    */
-  contained: { text: string; words: number; brand: SeedBrand }[];
+  contained: { text: string; words: number; leading: boolean; brand: SeedBrand }[];
   byKey: Map<string, SeedBrand>;
 }
 
@@ -102,7 +113,15 @@ function buildIndex(brands: SeedBrand[]): Index {
       // makes it show up as one brand swallowing another rather than silently
       // reversing depending on array order.
       if (!exact.has(text)) exact.set(text, brand);
-      contained.push({ text, words: text.split(" ").length, brand });
+      contained.push({
+        text,
+        words: text.split(" ").length,
+        // Per spelling, not per brand: the flag is about the ordinary word,
+        // and an alias like "wellness natural pet food" is not one, so it
+        // keeps the ordinary containment rule.
+        leading: brand.leadingWordOnly === true && text.split(" ").length === 1,
+        brand,
+      });
     }
   }
   // Most words first, then longest — "fancy feast" before "purina", and
@@ -120,6 +139,12 @@ function containsWords(haystack: string, needle: string): boolean {
   return at !== -1;
 }
 
+/** Does `haystack` BEGIN with `needle` as whole words? Both already normalised. */
+function startsWithWords(haystack: string, needle: string): boolean {
+  if (haystack === needle) return true;
+  return haystack.startsWith(`${needle} `);
+}
+
 /**
  * The seeded brand a raw string belongs to, or null when nothing matches.
  *
@@ -132,7 +157,10 @@ export function matchSeedBrand(raw: string | null | undefined): SeedBrand | null
   const exact = INDEX.exact.get(text);
   if (exact) return exact;
   for (const candidate of INDEX.contained) {
-    if (containsWords(text, candidate.text)) return candidate.brand;
+    const hit = candidate.leading
+      ? startsWithWords(text, candidate.text)
+      : containsWords(text, candidate.text);
+    if (hit) return candidate.brand;
   }
   return null;
 }

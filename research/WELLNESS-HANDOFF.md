@@ -133,3 +133,101 @@ are already evidenced above and neither needs a barcode:
 
 Re-run the inventory before batch 1 regardless. It is current the moment it is
 generated and stale the moment somebody seeds.
+
+## 14. The campaign was attempted from a shell-enabled session and stopped — 2026-09-18
+
+§13 removed the inventory prerequisite, so this pass tried to run batch 1 for
+real. It got one step further and hit the other half of the problem
+`docs/RESEARCH-EGRESS.md` describes. PR #20's session had web access and no
+shell; this one has a shell and no web access.
+
+BRIEF-WELLNESS §0.1's own check, run verbatim:
+
+```
+www.wellnesspetfood.com        000
+www.chewy.com                  000
+www.petsmart.com               000
+www.fda.gov                    000
+web.archive.org                000
+www.petco.com                  000
+```
+
+`curl: (56) CONNECT tunnel failed, response 403`, and the proxy's own log names
+it: `connect_rejected — gateway answered 403 to CONNECT (policy denial or
+upstream failure)`. It is not brand-specific or even pet-food-specific — the
+same 403 comes back for `en.wikipedia.org`.
+
+Search *results* still arrive, with titles, URLs and a sentence of snippet.
+That is the trap `RESEARCH-EGRESS.md` documents: a Kittles search returns the
+exact manufacturer URL and a partial ingredient sentence, and **no** guaranteed
+analysis, no calorie statement, no adequacy sentence and no UPC. AGENTS.md §10
+requires the complete printed panel and the calories for `source_verified`, so
+under a blocked policy that status is unreachable **by definition**, not by
+effort. BRIEF-WELLNESS §0.1 says to stop rather than write `candidate` records
+that pass the checker and seed nothing, and that is what happened here.
+
+**No `research/deep-research-wellness.json` exists after this pass either, and
+that is the correct outcome.** The ~40 Deep Research candidates from §12 are
+still not reconstructed. Nothing was routed around.
+
+### What was done instead, because it needed no source
+
+Two findings already in this file were evidence, not leads, and both were
+code defects sitting in production while the ledger waits. Neither needed a
+page opened.
+
+**1. The false fold is now impossible.** §2 above listed `Digestive Wellness`
+as a hazard. It was a live one: `brandKey("Digestive Wellness")` returned
+`wellness`, so Dr. Bill's supplement family, Now Fresh's category page and
+Purina ONE +Plus's benefit copy would each have been filed under this brand,
+and with brand pages live that is a real product attributed to a maker that did
+not make it.
+
+`data/us-pet-brands.ts` gained a `leadingWordOnly` flag, set on Wellness alone
+and carrying the three makers as its justification. A brand so marked folds
+from a longer string only when its name LEADS it. `WELLNESS CORE` and
+`Wellness Complete Health` still fold; `Digestive Wellness` and
+`Dental Wellness Chews` no longer do — they become their own unseeded brand,
+which is the honest answer. `Now Fresh Digestive Wellness` still lands on Now
+Fresh, because a two-word seeded name was already winning that one.
+
+The flag is per brand and opt-in, not a word list the matcher carries: a false
+fold misattributes a real product and a missed fold only shows an extra row, so
+the costs are not symmetric — but a missed fold is not free either, and a guess
+is not evidence. A test asserts Wellness is still the only brand carrying it.
+
+**2. The treat ranges are in the role detector.** BRIEF-WELLNESS §4 predicted
+this one before the brand was researched: `Soft Puppy Bites` is in the seed's
+own `lines` for Wellness, and `lib/nutrition-role.ts` did not know it was a
+snack, so a bag of training treats would have been judged as a puppy's whole
+diet. §1 above settles it with the maker's own sentence — "intended for
+intermittent or supplemental feeding only" — for Puppy Bites, Kittles and
+Rewarding Life.
+
+`wellness puppy bites`, `soft puppy bites`, `kittles` and `rewarding life` are
+now in `KNOWN_TREAT_LINES`. Both spellings of the puppy range are listed because
+the maker prints both. **Bare `puppy bites` is deliberately not listed**: a
+complete food may carry those two words — Hill's sells Puppy Small Bites — and
+that list's own rule is that a range guessed wrong here excuses a real food. A
+test holds that line in both directions.
+
+`Healthy Indulgence` was left alone, exactly as §1 and BRIEF-WELLNESS §4 say:
+its pages read as complete and balanced, the small-print AAFCO sentence has not
+been seen, and some Wellness cat pouches are meal complements. That one is a
+pack question.
+
+### Still untouched, and still blocked
+
+- `research/deep-research-wellness.json` — needs a session with egress.
+- `Kittles` is not among the eleven seeded ranges. Adding it is a
+  recommendation, not a change: BRIEF-WELLNESS §5 says ranges come from packs,
+  and treats are a later batch.
+- The six recalls in BRIEF-WELLNESS §7 are still leads. A `data/recalls.ts` row
+  is written from a primary notice, and `www.fda.gov` is one of the 403s above.
+- `data/manufacturers.ts` still has no WellPet entry, so a Wellness brand page
+  stays blocked. `ownsPlants` in particular cannot be answered from here — the
+  May 2012 Salmonella recall came from Diamond's Gaston plant, which is
+  evidence against a naive yes and not an answer to the question.
+- The `076344` prefix stays a lead. Whether Old Mother Hubbard, Eagle Pack,
+  Holistic Select or Whimzees share it decides whether it proves the maker or
+  the brand, and that needs barcodes nobody here can read.

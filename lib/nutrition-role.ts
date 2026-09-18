@@ -225,6 +225,23 @@ const KNOWN_TREAT_LINES = [
   // brief named it in advance as the thing that would go wrong on this brand,
   // and it was right.
   "meaty tender sticks",
+  // Wellness's snack ranges, and the reason the brand was briefed before a
+  // single barcode of it was researched: "Soft Puppy Bites" is in the seed's
+  // own `lines` list for this brand, so without this a bag of training treats
+  // is judged as a puppy's entire diet. The maker's current pages settle it
+  // outright — Puppy Bites and Kittles both print "intended for intermittent
+  // or supplemental feeding only", quoted with their URLs in
+  // research/WELLNESS-HANDOFF.md §1.
+  //
+  // Both spellings of the puppy range are here because the maker prints both:
+  // the product page heads it "Wellness Puppy Bites" and the marketing copy
+  // calls it "Soft Puppy Bites". Neither is bare "puppy bites", which would be
+  // the guess this list refuses — a complete food may well carry those two
+  // words, and a range guessed wrong here excuses a real food.
+  "wellness puppy bites",
+  "soft puppy bites",
+  "kittles",
+  "rewarding life",
 ];
 
 /**

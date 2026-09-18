@@ -6,6 +6,7 @@ import {
   matchSeedBrand,
   seededIdentities,
 } from "./brand-key";
+import { US_PET_BRANDS } from "../data/us-pet-brands";
 
 describe("brandKey", () => {
   // The whole reason this module exists. Four spellings of one maker on one
@@ -111,6 +112,59 @@ describe("matchSeedBrand", () => {
   it("matches whole words only", () => {
     // "Halo" is a seeded brand; "Halogen Pet Co" is not it.
     expect(matchSeedBrand("Halogen Pet Co")).toBeNull();
+  });
+});
+
+// ── A brand whose name is an ordinary English word ────────────────────────
+//
+// Whole-word containment is the right rule for "Purina Friskies Cat Food" and
+// the wrong one for a brand called Wellness, because the word turns up in other
+// makers' claim lines. `leadingWordOnly` in the seed is the answer, and these
+// are the strings it was written against — every "not this brand" case below is
+// a real product or a real piece of pack copy, not an invented one.
+describe("a brand named after an ordinary word", () => {
+  it("still folds every way the brand itself is written", () => {
+    for (const written of [
+      "Wellness",
+      "WELLNESS",
+      "WELLNESS CORE",
+      "Wellness Complete Health",
+      "Wellness Complete Health Kittles",
+      "wellness natural pet food",
+    ]) {
+      expect({ written, key: brandKey(written) }).toEqual({ written, key: "wellness" });
+    }
+  });
+
+  it("does not swallow another maker's product that prints the word", () => {
+    // Dr. Bill's Pet Nutrition sells a "Digestive Wellness" family; Now Fresh
+    // uses it as a category; Purina ONE +Plus Digestive Health carries it as
+    // benefit copy. A model reading a front of pack can lift any of them.
+    for (const written of [
+      "Digestive Wellness",
+      "Dental Wellness Chews",
+      "Dr. Bill's Digestive Wellness",
+    ]) {
+      expect({ written, seed: matchSeedBrand(written)?.name ?? null }).toEqual({
+        written,
+        seed: null,
+      });
+    }
+  });
+
+  it("leaves a longer seeded name in the same string alone", () => {
+    // The containment order already handles these — the point is that the new
+    // rule does not break them by bailing out early.
+    expect(brandKey("Now Fresh Digestive Wellness")).toBe("now fresh");
+    expect(brandKey("Purina Pro Plan Wellness Formula")).toBe("pro plan");
+  });
+
+  it("keeps the flag off every other seeded brand", () => {
+    // If this grows, each addition needs its own evidence in the seed file.
+    const flagged = US_PET_BRANDS.filter((b) => b.leadingWordOnly).map((b) => b.name);
+    expect(flagged).toEqual(["Wellness"]);
+    // And the ordinary rule still holds for a one-word name that is not flagged.
+    expect(brandKey("Purina Friskies Cat Food")).toBe("friskies");
   });
 });
 
