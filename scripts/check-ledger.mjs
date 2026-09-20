@@ -487,12 +487,52 @@ for (const [, group] of byComposition) {
     group.map((r) => [r.species, r.product_line, r.variant].map(normalise).join("|"))
   );
   if (identities.size > 1) {
-    warn(
-      group.map((r) => r.upc).join(", "),
-      `share one ingredient list to the letter across different names: ` +
-        `${[...identities].join("  /  ")}. If that is a rename, say so in conflicts; ` +
-        `if it is a paste, one of them has the wrong deck.`
-    );
+    const codes = group.map((r) => r.upc).join(", ");
+    const said = group.some((r) => (r.conflicts ?? []).length > 0);
+    const claimsVerified = group.some((r) => r.research_status === "source_verified");
+    // Two narrowings, because a gate that fires wrongly teaches people to
+    // write a meaningless conflict note to get past it — which is worse than
+    // no gate at all.
+    //
+    // 1. Only across different RANGES. "Gullet Stix 5 count" and "Gullet Stix
+    //    48 count" are one product in two pack sizes; the identity key counts
+    //    them as different because the count lives in `variant`, and they
+    //    obviously share a deck.
+    // 2. Only for a deck long enough to be a fingerprint. A bully stick's
+    //    whole ingredient list is "Beef Pizzle", and every product made of
+    //    that thing collides with every other one. Five is the same floor
+    //    lib/composition-key.ts uses, and for the same reason.
+    const lines = new Set(group.map((r) => normalise(r.product_line)));
+    const items = (group[0].ingredients_verbatim ?? "").split(",").length;
+    const worthGating = lines.size > 1 && items >= 5;
+    // "Somebody has to say which" was the whole point, and nothing made
+    // anybody. Three I and love and you jerky records carried the Naked
+    // Essentials KIBBLE deck — complete premix, 10% moisture, calories per CUP
+    // on a 4 oz bag of jerky — this warning named all three, and they stayed
+    // `source_verified` for three weeks because a warning is not a gate.
+    //
+    // AGENTS.md §10 already says `source_verified` means "conflicts are
+    // resolved or precisely documented". An undocumented shared deck is a
+    // conflict that is neither, so the status is the thing that has to give.
+    // One record answering for the group is enough — the disagreement is
+    // findable, which is all the rule ever asked for.
+    if (claimsVerified && !said && worthGating) {
+      err(
+        codes,
+        `share one ingredient list to the letter across different names: ` +
+          `${[...identities].join("  /  ")}. Not one of them says why in ` +
+          `conflicts, and at least one claims source_verified — which asserts ` +
+          `that conflicts are resolved or documented. Either say which it is, ` +
+          `or drop the status.`
+      );
+    } else {
+      warn(
+        codes,
+        `share one ingredient list to the letter across different names: ` +
+          `${[...identities].join("  /  ")}. If that is a rename, say so in conflicts; ` +
+          `if it is a paste, one of them has the wrong deck.`
+      );
+    }
   }
 }
 

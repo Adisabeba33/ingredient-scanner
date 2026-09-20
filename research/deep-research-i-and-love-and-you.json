@@ -6,7 +6,7 @@
     "I and love and you"
   ],
   "created_at": "2026-08-28",
-  "updated_at": "2026-08-29",
+  "updated_at": "2026-09-20",
   "rules_source": "research/AGENTS.md",
   "records": [
     {
@@ -5954,14 +5954,17 @@
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Historical distributor/retailer evidence maps this valid UPC-A to the exact individual sellable size; UPC-A check digit was independently recomputed during the 2026-08-29 repair pass.",
-      "conflicts": [],
+      "conflicts": [
+        "The stored deck is this brand's NAKED ESSENTIALS complete dry dog food, letter for letter — the ledger checker names the collision itself (818336011849, 818336011856, 818336012587, 818336013485). It opens chicken, chicken meal, turkey meal, dried chickpeas, pea starch, carries a full vitamin and mineral premix with dl-methionine and l-threonine, guarantees 10% moisture and states 412 kcal PER CUP. A 4 oz bag of jerky is not measured in cups. The identity is Nice Jerky! Chicken + Duck; the composition is a bag of kibble."
+      ],
       "verification_notes": [
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
-        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation."
+        "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
+        "2026-09-20 seeding pass: held back from the catalog and downgraded from source_verified. The three Nice Jerky! 4 oz records were the last three unseeded individual units in this ledger, and each fails on its own terms — see conflicts. The campaign's own formula_source already records that the manufacturer HTML ingredient module served the wrong deck for two other UPCs in this brand; these look like the same defect, unrepaired. A photograph of the 4 oz bag settles all of it."
       ],
-      "research_status": "source_verified",
+      "research_status": "needs_physical_label",
       "multipack_contents": []
     },
     {
@@ -6019,15 +6022,18 @@
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Historical distributor/retailer evidence maps this valid UPC-A to the exact individual sellable size; UPC-A check digit was independently recomputed during the 2026-08-29 repair pass.",
-      "conflicts": [],
+      "conflicts": [
+        "The deck is right for a jerky — chicken, salmon, pea flour, vegetable glycerin, cane molasses, natural smoke flavor — and the guaranteed analysis is impossible: 27% protein + 11% fat + 2% fibre + 82% moisture is 122% of the pack. The ledger checker has warned on exactly this pair since it was written, and its own comment cites this product as the reason the rule exists. Moisture is the likely misreading; a soft jerky runs nearer 18%. The panel cannot be stored as printed because as printed it cannot be true."
+      ],
       "verification_notes": [
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred."
+        "2026-08-29 contract audit: life_stage remains null because the cited evidence used for this record does not print a life-stage value; no value was inferred.",
+        "2026-09-20 seeding pass: held back from the catalog and downgraded from source_verified. The three Nice Jerky! 4 oz records were the last three unseeded individual units in this ledger, and each fails on its own terms — see conflicts. The campaign's own formula_source already records that the manufacturer HTML ingredient module served the wrong deck for two other UPCs in this brand; these look like the same defect, unrepaired. A photograph of the 4 oz bag settles all of it."
       ],
-      "research_status": "source_verified",
+      "research_status": "needs_physical_label",
       "multipack_contents": []
     },
     {
@@ -6144,15 +6150,18 @@
       ],
       "source_accessed_at": "2026-08-29",
       "barcode_notes": "Historical distributor/retailer evidence maps this valid UPC-A to the exact individual sellable size; UPC-A check digit was independently recomputed during the 2026-08-29 repair pass.",
-      "conflicts": [],
+      "conflicts": [
+        "Same as 818336012068, against NAKED ESSENTIALS ANCIENT GRAINS (818336013324, 818336013461): beef meal, menhaden fish meal, ground sorghum, oatmeal, millet and a full premix at 10% moisture and 380 kcal PER CUP, under a 4 oz jerky identity. This record also contradicts itself — its own verification note says the page exposed no calorie statement and that 'calorie fields remain null rather than inferred', while the record carries 3480 kcal/kg and 380 kcal/cup."
+      ],
       "verification_notes": [
         "UPC-A check digit independently validated.",
         "Canonical GTIN-14 is UPC-A left-padded with two zeros.",
         "Record rebuilt to the full research/AGENTS.md contract; formula fields are expanded on this size rather than referenced by sibling UPC.",
         "Repository code search for manufacturer prefix 818336 returned no pre-existing catalog/research collision outside this I and love and you campaign before consolidation.",
-        "Current manufacturer page prints ingredients and GA but exposes no calorie statement in retrieved label/PDP text; calorie fields remain null rather than inferred."
+        "Current manufacturer page prints ingredients and GA but exposes no calorie statement in retrieved label/PDP text; calorie fields remain null rather than inferred.",
+        "2026-09-20 seeding pass: held back from the catalog and downgraded from source_verified. The three Nice Jerky! 4 oz records were the last three unseeded individual units in this ledger, and each fails on its own terms — see conflicts. The campaign's own formula_source already records that the manufacturer HTML ingredient module served the wrong deck for two other UPCs in this brand; these look like the same defect, unrepaired. A photograph of the 4 oz bag settles all of it."
       ],
-      "research_status": "source_verified",
+      "research_status": "needs_physical_label",
       "multipack_contents": []
     },
     {

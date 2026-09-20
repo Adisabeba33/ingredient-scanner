@@ -2697,4 +2697,58 @@ export const KNOWN_MULTIPACKS: KnownMultipack[] = [
     unitSize: "4 oz dual pack",
     contains: [],
   },
+  // ── Batch 036 ───────────────────────────────────────────────────────────
+  //
+  // The last three boxes in the research folder, from three campaigns that
+  // were otherwise fully seeded. All three are outer identity only: no ledger
+  // claims a composition for them, and none is invented here.
+  //
+  // Both Reveal cases are filed under Limited Ingredient because that is the
+  // 2.47 oz tin range — the seed entry says so in its own note, and the three
+  // Reveal cases already here are the same 2.47 oz format under the same
+  // range. Their ledger records carry a null range, which is the researcher
+  // declining to guess rather than evidence of a different one.
+  {
+    brand: "Reveal",
+    line: "Limited Ingredient",
+    variant: "Variety Selection in Broth",
+    species: "cat",
+    size: "12 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817006875",
+    packCount: 12,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+  {
+    brand: "Reveal",
+    line: "Limited Ingredient",
+    variant: "Fish Selection in Broth",
+    species: "cat",
+    size: "18 × 2.47 oz cans",
+    container: BOX,
+    upc: "886817014276",
+    packCount: 18,
+    unitSize: "2.47 oz",
+    contains: [],
+  },
+  // The first Sheba row in either data file. The brand's whole ledger is
+  // twenty records and every one of them is a case or a multipack, so this
+  // box is not the start of a Sheba shelf — it is the only Sheba barcode
+  // anybody has proven. `Meaty Tender Sticks` is already in the brand's seed
+  // ranges and already in KNOWN_TREAT_LINES, which is the part that matters:
+  // forty dried sticks judged as a complete diet is the error that list
+  // exists to prevent.
+  {
+    brand: "Sheba",
+    line: "Meaty Tender Sticks",
+    variant: "Salmon, Tuna & Chicken Flavors Variety Pack",
+    species: "cat",
+    size: "5.68 oz (40 sticks)",
+    container: BOX,
+    upc: "023100142951",
+    packCount: 40,
+    unitSize: "individually wrapped stick",
+    contains: [],
+  },
 ];
