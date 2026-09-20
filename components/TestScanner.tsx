@@ -2,16 +2,26 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  AlertTriangle,
   Check,
   ClipboardCopy,
   Loader2,
   ScanLine,
   Search,
+  SearchX,
   Trash2,
   X,
 } from "lucide-react";
 import { BarcodeScanner } from "@/components/BarcodeScanner";
 import { missLabel, printedForm } from "@/lib/miss-verdict";
+import {
+  FLASH_FAILED,
+  FLASH_MS,
+  buzz,
+  flashFor,
+  type FlashKind,
+  type ScanFlash,
+} from "@/lib/scan-flash";
 import type { MissClassification } from "@/lib/miss-verdict";
 import {
   addScan,
@@ -134,6 +144,65 @@ const HEADLINE: Record<ScanOutcome, string> = {
   "not-found": "NOT IN THE DATABASE",
 };
 
+const FLASH_TONE: Record<FlashKind, { box: string; text: string }> = {
+  ok: { box: "bg-sage-600/90", text: "text-white" },
+  odd: { box: "bg-amber/90", text: "text-white" },
+  none: { box: "bg-ink/85", text: "text-white" },
+};
+
+const FLASH_ICON: Record<FlashKind, typeof Check> = {
+  ok: Check,
+  odd: AlertTriangle,
+  none: SearchX,
+};
+
+/**
+ * One second of "yes, that landed" over the camera.
+ *
+ * Also covers the wait before it. A lookup takes a moment, and a moment of
+ * nothing is exactly the silence this overlay exists to end — so the spinner
+ * sits in the same place, at the same size, and the answer replaces it rather
+ * than arriving somewhere new.
+ *
+ */
+function ScanFlashOverlay({
+  flash,
+  busy,
+}: {
+  flash: ScanFlash | null;
+  busy: boolean;
+}) {
+  if (!flash && !busy) return null;
+  const tone = flash ? FLASH_TONE[flash.kind] : { box: "bg-ink/70", text: "text-white" };
+  const Icon = flash ? FLASH_ICON[flash.kind] : Loader2;
+  return (
+    <div
+      // z-[60] clears the reader's z-50. `pointer-events-none` throughout:
+      // the camera underneath is live and its close button must stay reachable
+      // — the next tin cannot be waiting for anything to be dismissed.
+      className="pointer-events-none fixed inset-0 z-[60] flex items-center justify-center"
+      // Announced rather than only drawn: the same second of feedback, for
+      // somebody who is not watching the screen at all.
+      role="status"
+      aria-live="polite"
+    >
+      <div
+        className={`flex flex-col items-center gap-2 rounded-2xl px-6 py-5 ${tone.box}`}
+      >
+        <Icon
+          size={44}
+          strokeWidth={2.5}
+          className={`${tone.text} ${flash ? "" : "animate-spin"}`}
+          aria-hidden="true"
+        />
+        <span className={`text-[15px] font-semibold tracking-wide ${tone.text}`}>
+          {flash ? flash.headline : "CHECKING"}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function TestScanner({ adminToken }: { adminToken: string }) {
   const [mode, setMode] = useState<WalkMode>("aisle");
   const [aisleRun, setAisleRun] = useState<TestScan[]>([]);
@@ -155,6 +224,16 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
    * it the only honest next step is to walk out and open a laptop.
    */
   const [errorAt, setErrorAt] = useState<string | null>(null);
+  /**
+   * The answer, on the camera, for a moment.
+   *
+   * Kept apart from `last` because they answer different questions and live
+   * different lengths of time: `last` is the card below, which stays until the
+   * next scan and spells out the detail, and this is the second of feedback
+   * that tells a hand holding a tin to move on. See lib/scan-flash.ts.
+   */
+  const [flash, setFlash] = useState<ScanFlash | null>(null);
+  const flashTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [copied, setCopied] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
   /** Set once the stored runs have been read, so an empty first render cannot save over them. */
@@ -236,8 +315,30 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
   const misses = useMemo(() => run.filter((s) => !isHit(s.outcome)), [run]);
 
   /** Where a scan lands. The only thing the two walks do differently. */
+  /** Put an answer on the camera, and take it down again. */
+  const showFlash = useCallback((next: ScanFlash) => {
+    if (flashTimer.current) clearTimeout(flashTimer.current);
+    setFlash(next);
+    buzz(next.vibrate);
+    flashTimer.current = setTimeout(() => setFlash(null), FLASH_MS);
+  }, []);
+
+  // A flash outliving the screen would fire setState on nothing.
+  useEffect(
+    () => () => {
+      if (flashTimer.current) clearTimeout(flashTimer.current);
+    },
+    []
+  );
+
   const record = useCallback(
     (scan: Omit<TestScan, "times">) => {
+      showFlash(
+        flashFor(
+          scan.outcome,
+          brand ? brandFit(brand.key, scan.answeredBrand) : "unnamed"
+        )
+      );
       if (mode === "brand") {
         if (!brand) return;
         setWalks((prev) => {
@@ -253,7 +354,7 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
         return next;
       });
     },
-    [mode, brand]
+    [mode, brand, showFlash]
   );
 
   const probe = useCallback(
@@ -276,6 +377,7 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
           // unreachable app as a miss would be worse than no run at all.
           setError(data.message ?? data.error ?? "Lookup failed.");
           setErrorAt(data.askedAt ?? null);
+          showFlash(FLASH_FAILED);
           return;
         }
         record({
@@ -291,11 +393,12 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
         });
       } catch {
         setError("Couldn't reach the desk — check your connection.");
+        showFlash(FLASH_FAILED);
       } finally {
         setBusy(false);
       }
     },
-    [adminToken, record]
+    [adminToken, record, showFlash]
   );
 
   /**
@@ -566,11 +669,20 @@ export function TestScanner({ adminToken }: { adminToken: string }) {
           filed under, and nothing else can tell afterwards.
         </p>
       ) : scanning ? (
-        <BarcodeScanner
-          key={readerKey}
-          onDetected={onDetected}
-          onCancel={() => setScanning(false)}
-        />
+        // The reader is `fixed inset-0 z-50` — a full-screen camera, not a box
+        // in this column. That is the whole reason the verdict was invisible:
+        // the card below it in the DOM is behind it on the glass. So the flash
+        // is fixed too, one layer up, and rendered as a SIBLING rather than
+        // wrapped around the reader — a wrapper would have done nothing, since
+        // a fixed child does not position against it.
+        <>
+          <BarcodeScanner
+            key={readerKey}
+            onDetected={onDetected}
+            onCancel={() => setScanning(false)}
+          />
+          <ScanFlashOverlay flash={flash} busy={busy} />
+        </>
       ) : (
         <button
           onClick={() => {
