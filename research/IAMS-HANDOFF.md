@@ -490,3 +490,42 @@ Evidence notes:
 - No new UPCs discovered or inserted.
 
 Environment note: a direct local clone/checker attempt was made, but the container has no DNS/network route to github.com. GitHub connector reads/writes work, but a real Node checker exit code is still unavailable here; none is fabricated.
+
+
+## Formula campaign — FINAL AUDIT / handoff to Vitaly (2026-09-21)
+
+This closes the web-research pass on the existing 133 staged IAMS UPC rows. No UPC was added, renumbered, or silently corrected during the formula campaign.
+
+### Current audited state
+- Total staged rows: **133** across `research/incoming/iams-batch-01.json` … `-10.json`.
+- Statuses after final audit: **125 needs_physical_label**, **8 rejected**, **0 source_verified**. Conservative status is intentional: retailer-only or cross-page evidence was not promoted through the AGENTS §10 gate.
+- Practical formula completeness audit (ingredients + core GA + at least one numeric printed calorie basis): **110 / 125 non-rejected rows complete**.
+- **15 non-rejected rows remain partial** and require label/source follow-up before formula-complete promotion.
+- Of those 15, **5 have no trustworthy complete ingredient deck at all** and are hard physical-label blockers:
+  - 019014807963 — Perfect Portions Cuts in Gravy Chicken/Tuna/Salmon Variety Pack.
+  - 019014803231 — Perfect Portions Indoor Cuts in Gravy Tuna.
+  - 019014807956 — Perfect Portions Cuts in Gravy Chicken.
+  - 019014807970 — Perfect Portions Cuts in Gravy Tuna.
+  - 019014807987 — Perfect Portions Cuts in Gravy Salmon.
+- The other 10 partial rows have some formula evidence but are still missing a complete numeric GA/calorie basis under the formula-campaign definition: 019014025206, 019014013326, 019014013296, 019014013319, 019014802371, 019014802364, 019014803217, 019014802708, 019014808168, 019014806805.
+
+### Final defect audit
+- Legacy string guarantees: **0 remain**. Minichunks Chicken, Adult Chicken pâté and Indoor Chicken Cuts guarantees were converted to structured nutrient/basis/value/unit objects without changing printed values.
+- Healthy Digestion dog selenium defect fixed across 019014805747/5754/5761/5778: **0.35 mg/kg**, not IU. Vitamin E unit normalized to IU/kg.
+- `ingredients_ordered_normalized`: populated deterministically from `ingredients_verbatim` for all ordinary single-formula rows touched by the audit. Parenthesized premix blocks were kept intact. Two multi-recipe variety-pack records (019014802371 and 019014802708) remain intentionally unflattened because the current single-array schema cannot honestly represent two independent ordered ingredient decks without losing recipe boundaries.
+- Adult vs Kitten Perfect Portions Chicken (019014802296 vs 019014802333): kept as separate records. Current retailer evidence can display an identical ingredient deck while GA/life-stage evidence differs; no assumption was made that the formulas are interchangeable. Physical/current manufacturer label remains the version-settling evidence.
+- 019014025190 Senior Pâté mapping: **rejected** in final audit because exact current retailer UPC evidence binds that code to Adult Chunks with Chicken in Gravy, materially contradicting the staged Senior Pâté identity.
+- 019014803224 Indoor Salmon mapping: **rejected** because independent current evidence binds the UPC to an IAMS dry-dog Sensitive Skin & Stomach item, not the staged cat product.
+- Six previously identified invalid-check-digit UPC rows remain rejected; barcode strings were never “fixed” by inference.
+- Variety-pack calorie values for 019014802371 and 019014802708 are retained recipe-by-recipe in descriptive fields because the current `calorie_content` object supports only one numeric formula. Do not promote these until the schema or merge step preserves separate recipe panels cleanly.
+
+### Rejected rows (8)
+019014025190; 019014808420; 019014808444; 019014803224; 019014830365; 019014830389; 019014830396; 019014830402.
+
+### Validation / merge caveat
+Every one of the ten incoming JSON files was fetched from the remote branch again during the final audit and parsed successfully. The audit found **0 legacy string guarantees** and **0 Selenium guarantees with unit `IU`** after fixes.
+
+A real `node scripts/check-ledger.mjs research/deep-research-iams.json` exit code is **still not available in this environment**: this branch contains the campaign as ten `research/incoming/iams-batch-*.json` files and no merged `research/deep-research-iams.json`, while the GitHub connector does not provide a shell. Do not claim checker=0. Vitaly's shell-enabled merge pass should: merge the ten incoming batches into the single IAMS ledger, regenerate `research/WORKLIST-IAMS.md`, run the checker, resolve any checker-reported schema warnings, regenerate inventory if required, then remove incoming delivery files per AGENTS §3a.
+
+### Final recommendation for handoff
+Treat the web research as exhausted, not as 100% source-verified. Merge the 110 practically complete non-rejected rows conservatively, keep the 15 partial rows at `needs_physical_label`, keep all 8 rejected rows out of production seeding, and use package photos/manufacturer label panels for the remaining blockers. No production files were edited in this formula campaign.
