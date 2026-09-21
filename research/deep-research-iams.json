@@ -7517,7 +7517,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Adult Salmon & Tuna / current Healthy Adult Salmon was reviewed across existing Chewy/Target evidence. The naming/formula-version transition is not resolved by a second character-for-character complete panel tied to the staged UPC generation, so the records are not promoted; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -7636,7 +7637,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Adult Salmon & Tuna / current Healthy Adult Salmon was reviewed across existing Chewy/Target evidence. The naming/formula-version transition is not resolved by a second character-for-character complete panel tied to the staged UPC generation, so the records are not promoted; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -7754,7 +7756,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Adult Salmon & Tuna / current Healthy Adult Salmon was reviewed across existing Chewy/Target evidence. The naming/formula-version transition is not resolved by a second character-for-character complete panel tied to the staged UPC generation, so the records are not promoted; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -7882,7 +7885,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Indoor Weight & Hairball Care Salmon recipe identity. Exact staged 16 lb UPC remains separately proven; complete label panel is still needed for source_verified.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Indoor Weight & Hairball Care Salmon has multiple marketplace/product references, but no qualifying second independent retailer whole-panel witness reproducing the complete ingredient statement, every printed guarantee, and 3283 kcal/kg / 318 kcal/cup was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -7996,7 +8000,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page independently confirms Long Hair Care Chicken & Salmon recipe identity and current positioning. Exact 6 lb UPC evidence remains separate.",
         "Formula campaign 2026-09-21: discontinued US Chewy page retains complete Long Hair Care Chicken & Salmon ingredients, GA and calorie panel. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Long Hair Care Chicken & Salmon has Atlas Pet plus Chewy references, but accessible evidence does not establish two independent character-for-character complete formula panels including all guarantees and calories. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8106,7 +8111,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Enjoyment Chicken & Salmon and its current 3/6/15 lb size family.",
         "Formula campaign 2026-09-21 continuation: complete US Chewy panel captured whole from one page for Healthy Enjoyment Immune Support Chicken & Salmon. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Salmon has AnimalWiz plus Chewy references, but a second qualifying whole-panel reproduction of the complete ingredient/GA/calorie panel was not established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8331,14 +8337,17 @@
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-      "conflicts": [],
+      "conflicts": [
+        "Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities."
+      ],
       "verification_notes": [
         "US evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Senior recipe family. Exact UPC-to-size evidence remains distributor-bound.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: these Healthy Senior UPCs were compared with 019014712625 ('Healthy Senior with Chicken'). The stored formula panel is currently identical, but the naming difference is treated as a rename/version boundary rather than silently merged identity. No second complete retailer panel tied to each staged UPC resolves the rename; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8451,14 +8460,17 @@
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-      "conflicts": [],
+      "conflicts": [
+        "Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities."
+      ],
       "verification_notes": [
         "US evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Senior recipe family. Exact UPC-to-size evidence remains distributor-bound.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: these Healthy Senior UPCs were compared with 019014712625 ('Healthy Senior with Chicken'). The stored formula panel is currently identical, but the naming difference is treated as a rename/version boundary rather than silently merged identity. No second complete retailer panel tied to each staged UPC resolves the rename; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8594,7 +8606,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation.",
         "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: High Protein Chicken & Salmon has several retailer identity/listing references, but no two qualifying independent sources were established that reproduce the complete stored ingredient statement, every printed guarantee, and 3874 kcal/kg / 439 kcal/cup character-for-character. Existing generic-vs-specific naming conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8730,7 +8743,8 @@
         "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation.",
         "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: High Protein Chicken & Salmon has several retailer identity/listing references, but no two qualifying independent sources were established that reproduce the complete stored ingredient statement, every printed guarantee, and 3874 kcal/kg / 439 kcal/cup character-for-character. Existing generic-vs-specific naming conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
