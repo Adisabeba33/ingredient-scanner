@@ -837,27 +837,65 @@
     "presentation": null,
     "package_type": "bag",
     "size": "6 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 280,
+          "unit": "mg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 480,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.375,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3664,
+      "kcal_per_unit": 373,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat",
+      "https://www.chewy.com/iams-advanced-health-skin-coat/dp/616926"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
@@ -865,7 +903,8 @@
     "verification_notes": [
       "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
       "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
-      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -890,27 +929,65 @@
     "presentation": null,
     "package_type": "bag",
     "size": "13.5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 280,
+          "unit": "mg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 480,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.375,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3664,
+      "kcal_per_unit": 373,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat",
+      "https://www.chewy.com/iams-advanced-health-skin-coat/dp/616926"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
@@ -918,7 +995,8 @@
     "verification_notes": [
       "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
       "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
-      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -943,27 +1021,65 @@
     "presentation": null,
     "package_type": "bag",
     "size": "36 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 280,
+          "unit": "mg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 480,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.375,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3664,
+      "kcal_per_unit": 373,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat",
+      "https://www.chewy.com/iams-advanced-health-skin-coat/dp/616926"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
@@ -971,7 +1087,8 @@
     "verification_notes": [
       "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
       "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
-      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -2168,27 +2285,65 @@
     "presentation": null,
     "package_type": "bag",
     "size": "4.5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 280,
+          "unit": "mg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 480,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.375,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3664,
+      "kcal_per_unit": 373,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer 4.5 lb product page plus exact current retail/GTIN evidence.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-advanced-health-skin-coat-chicken-and-salmon-recipe-adult-dry-dog-food-45-lb-bag",
-      "https://www.palletfly.com/product/269686/iams-advanced-health-skin--coat-chicken-and-salmon"
+      "https://www.palletfly.com/product/269686/iams-advanced-health-skin--coat-chicken-and-salmon",
+      "https://www.chewy.com/iams-advanced-health-skin-coat/dp/616926"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
@@ -2196,7 +2351,8 @@
     "verification_notes": [
       "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
       "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
-      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label."
+      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   }
