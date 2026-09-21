@@ -151,5 +151,58 @@
       "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806805",
+    "canonical_gtin14": "00019014806805",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Salmon",
+    "recipe": [
+      "Chicken",
+      "Salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "27 lb",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US specialty retailer exact UPC + 27 lb product identity; ingredient deck independently exposed by retailer.",
+    "source_urls": [
+      "https://feederspetsupply.com/iams-advanced-health-skin-coat-chicken-salmon-recipe-dry-dog-food/",
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "UPC 019014806805 is explicitly published for the 27 lb US retail product by multiple current specialty-retail sources; not inferred from neighboring codes.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current retail evidence independently binds UPC 019014806805 to the 27 lb Chicken & Salmon Skin & Coat product.",
+      "Retail evidence exposes the ingredient deck; GA/calories/AAFCO are not complete enough in accessible text for source_verified.",
+      "Kroger-family pages expose additional 13.5 lb identifiers, but their displayed numeric strings were not promoted here because exact UPC-A normalization/check-digit identity was not independently resolved."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
