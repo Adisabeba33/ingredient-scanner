@@ -230,5 +230,15 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Batch 3 audit `71190e5edd2d10c8d6157008da42a4d0c1d21bef`; Batch 9 audit `9c3343ae64ca7b704075802f469bdf4ca7b84995`.
 - Running staged UPC count remains **101**. This audit is increasingly showing that physical/current manufacturer label capture, rather than more retailer aggregation, is the bottleneck for promotion.
 
+
+## Dry source-upgrade pass 1 — Minichunks + Healthy Digestion
+- Pivoted from wet to dry as planned. No speculative UPCs added; running staged count remains **101**.
+- Minichunks Chicken & Whole Grains: upgraded all six proven US bag-size UPCs in Batch 2 (`019014610860`, `019014711086`, `019014610907`, `019014700714`, `019014700769`, `019014805020`) with the shared current recipe panel: ingredients, GA and **3,646 kcal/kg / 380 kcal/cup**. Per-bag calories were deliberately not manufactured.
+- The recipe-level GA captured for Minichunks is protein 25% min, fat 14% min, fiber 4% max, moisture 10% max, vitamin E 60 IU/kg, selenium 0.35 mg/kg and omega-6 fatty acids 2.5% min.
+- All six remain `needs_physical_label`: exact size UPCs are proven, and the shared formula panel is strong, but the complete current AAFCO adequacy/deck/version evidence is not proven together for promotion under AGENTS §10.
+- Advanced Health Healthy Digestion Chicken & Whole Grain: all four proven size UPCs (`019014805747`, `019014805754`, `019014805761`, `019014805778`) gained independent current IAMS manufacturer recipe/size-ladder corroboration. Formula fields were left conservative where the accessible representation was incomplete.
+- Commits: Minichunks upgrade `2ed5c8c8f9bc9ca95373f31cde4ef56c31d0c3e6`; Healthy Digestion corroboration `8260d2c6b59418cb32df4c72afa77993a02f1b17`.
+- Dry is proving more efficient than Perfect Portions because one current recipe panel can legitimately support several separately proven bag-size UPCs without conflating barcode identity or inventing per-bag nutrition.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
