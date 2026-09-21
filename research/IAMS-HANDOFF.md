@@ -358,5 +358,18 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **118 UPC records**.
 - Commit: `867d8020be173fe4a961a1db9bd6922f883d79e0`.
 
+
+## Missing-current-UPC sweep 7 — Advanced Health Mobility Support
+- Continued mining the Mars manufacturer participating-product exhibit and recovered the **Advanced Health Mobility Support Chicken & Whole Grain** dog family.
+- Added four manufacturer-bound UPC-A records:
+  - `019014805822` — 6 lb.
+  - `019014805839` — 13.5 lb.
+  - `019014805846` — 27 lb.
+  - `019014805853` — 36 lb.
+- Mars supplies Unit UPC without check digit and exact product/size; UPC-A was reconstructed/validated from that manufacturer body, not inferred from adjacent SKU sequence.
+- All four remain `needs_physical_label` because complete current ingredients + GA + calories + AAFCO/deck are not jointly captured.
+- New staged total: **122 UPC records**.
+- Commit: `0fe774eb35061476b102cd58c3fc0f6c8a8a57ce`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 118 total incoming records are now staged. Advanced Health Skin & Coat and Immune Health current 6/13.5/27/36 lb ladders are now closed from Mars manufacturer UPC evidence. Next: mine the same Mars exhibit for additional IAMS families not yet staged (notably Mobility Support, Active, and Advanced Health cat).
+Missing-current-UPC sweep is active. 122 total incoming records are now staged. Advanced Health Mobility Support 6/13.5/27/36 lb is now staged from manufacturer UPC evidence. Continue mining manufacturer exhibits for Active and Advanced Health cat families, deduping against Batches 1–10.
