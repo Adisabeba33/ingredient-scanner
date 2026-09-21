@@ -102,13 +102,15 @@
     "ingredients_verbatim": null,
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
-      "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "crude_protein_min_percent": 9.5,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
+      "ash_max_percent": 4,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        "Vitamin E min 80 IU/kg"
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
@@ -119,7 +121,9 @@
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
-      "https://www.target.com/p/-/A-52093601"
+      "https://www.target.com/p/-/A-52093601",
+      "https://www.target.com/p/-/A-52249459",
+      "https://www.walmart.com/ip/1455793467"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC identifies this exact UPC as a 12 x 2.6 oz Perfect Portions variety pack; barcode_scope is multipack, not an individual tray.",
@@ -129,7 +133,10 @@
       "Perfect Portions serving/calorie quantity is not inferred from package weight.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
       "Second-pass Target evidence corroborates the 12 x 2.6 oz Indoor Salmon & Turkey variety-pack identity and multipack scope.",
-      "Variety pack contains two recipes; a single merged ingredient/GA deck was deliberately not invented. Exact per-flavor current panels and adequacy evidence are still required."
+      "Variety pack contains two recipes; a single merged ingredient/GA deck was deliberately not invented. Exact per-flavor current panels and adequacy evidence are still required.",
+      "Current Target label panel supplies Salmon-recipe GA: protein 9.5% min, fat 5% min, fiber 1% max, moisture 78% max, ash 4%, vitamin E 80 IU/kg, taurine 0.06%.",
+      "Current Walmart listing independently states this 12-tray pack contains 24 servings and describes the food as complete and balanced nutrition.",
+      "Still needs_physical_label: Turkey-recipe panel, calories and the exact AAFCO adequacy statement are not all exposed together; no box-level synthetic formula created."
     ],
     "research_status": "needs_physical_label"
   },
