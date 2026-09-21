@@ -322,5 +322,16 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **106 UPC records**.
 - Commit: `fe56bd68237c5ab93ee3788706131c49cef8d67e`.
 
+
+## Missing-current-UPC sweep 4 — High Protein dog ladder closed
+- Recovered the remaining two exact current UPC-A records for **ProActive Health High Protein Chicken & Beef**:
+  - `019014830396` — 30 lb (retailer display `0001901483039`).
+  - `019014830402` — 38.5 lb (retailer display `0001901483040`).
+- As in sweep 3, these are normalized from retailer strings explicitly labeled UPC by removing one left padding zero; each resulting UPC-A passes its check digit. They were not generated from neighboring sequence.
+- Together with `019014830365` 5 lb and `019014830389` 15 lb, the entire current manufacturer-listed **5/15/30/38.5 lb** High Protein Chicken & Beef size ladder now has exact staged UPCs.
+- All four remain `needs_physical_label` pending complete current ingredients/GA/calories/AAFCO/deck evidence.
+- New staged total: **108 UPC records**.
+- Commit: `0b03c4d302508e3c42ff3d33f555c3a66a680e7a`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 106 total incoming records are now staged. High Protein Chicken & Beef 5/15 lb are now exact UPC-A records; 30/38.5 lb remain exact-barcode targets alongside Advanced Health unresolved sizes.
+Missing-current-UPC sweep is active. 108 total incoming records are now staged. High Protein Chicken & Beef current 5/15/30/38.5 lb ladder is now closed with exact UPC-A records; next priority is Beef & Rice 5/7/11 lb and Advanced Health unresolved sizes.
