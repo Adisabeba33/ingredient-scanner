@@ -124,5 +124,25 @@ Batch 5 incoming commit: `04550c1b663ef8888140f22a26d8e2324f0169ec`.
 
 Shell remains unavailable; inventory/checker were not run or simulated.
 
+
+## Batch 6 — Healthy Enjoyment size-ladder resolution
+- Staging path: `research/incoming/iams-batch-06.json`.
+- Added: **5 records** (running incoming total: **84**).
+- Status: 0 source_verified; 5 needs_physical_label.
+- Resolved the previously conflicting Healthy Enjoyment size ladder with exact US UPC-to-size bindings:
+  - Chicken & Salmon 6 lb — `019014806386`
+  - Chicken & Salmon 15 lb — `019014806416`
+  - Chicken & Beef 3 lb — `019014806324`
+  - Chicken & Beef 6 lb — `019014806348`
+  - Chicken & Beef 15 lb — `019014806362`
+- Together with Batch 5's Chicken & Salmon 3 lb `019014806379`, the Chicken & Salmon US ladder is now 3/6/15 lb with individually bound UPCs.
+- The earlier Canadian `019014807093` 6 lb feed is a market-specific/conflicting listing and was **not** substituted for the US 6 lb code. Multiple US retailers independently expose `019014806386` for the 6 lb US bag.
+- Chicken & Beef has strong US UPC evidence for 3/6/15 lb, but 2026 Chewy evidence explicitly says the flavor has been discontinued. Keep these as proven historical/recent US SKUs, not as a claim that all three remain current shelf.
+- No additional speculative size-ladder codes were generated.
+
+Batch 6 incoming commit: `b6bce202933e9da496f7e8956a6ce203100b1b49`.
+
+Shell remains unavailable; inventory/checker were not run or simulated.
+
 ## Stop point
-Stopped after batch 5 with 79 total incoming records staged. Alternate-source research is still yielding exact US UPCs, but the remaining shelf increasingly contains naming transitions and conflicting retailer GTIN feeds; continue only with exact pack/retailer bindings and do not infer size-ladder UPCs.
+Stopped after batch 6 with 84 total incoming records staged. Healthy Enjoyment's US 3/6/15 lb Chicken & Salmon ladder is now UPC-bound, and the discontinued Chicken & Beef 3/6/15 lb ladder is also documented. Remaining research is now a thinner tail and should focus on unresolved current cat size ladders/Perfect Portions variants and upgrades from needs_physical_label.
