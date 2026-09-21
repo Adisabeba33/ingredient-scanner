@@ -20,7 +20,7 @@
     "presentation": "plain",
     "package_type": "box",
     "size": "12 x 2.6 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken Recipe - Chicken, Water, Poultry Liver, Chicken Broth, Dried Egg Product, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Tapioca Starch, DL-Methionine, Choline Chloride, Salt, Calcium Carbonate, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Iron Oxide Color, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex. Tuna Recipe - Chicken, Water, Tuna, Poultry Liver, Chicken Broth, Dried Egg Product, Guar Gum, Calcium Carbonate, Potassium Chloride, Fish Oil, Sodium Tripolyphosphate, Magnesium Sulfate, Taurine, Tapioca Starch, DL-Methionine, Choline Chloride, Salt, Thiamine Mononitrate, Vitamin E Supplement, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
       "crude_protein_min_percent": null,
@@ -51,7 +51,8 @@
       "Perfect Portions package/serving distinction preserved; no serving calories inferred from pack weight.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
       "Second-pass current Target evidence corroborates exact Chicken & Tuna 12 x 2.6 oz variety-pack identity and multipack scope.",
-      "The box contains distinct Chicken and Tuna recipes. No single ingredient deck or GA was fabricated for the whole box; exact per-flavor panels plus adequacy evidence remain required."
+      "The box contains distinct Chicken and Tuna recipes. No single ingredient deck or GA was fabricated for the whole box; exact per-flavor panels plus adequacy evidence remain required.",
+      "Formula campaign 2026-09-21: Target US explicitly prints UPC 019014802364 and both Chicken/Tuna recipe ingredient statements on the same variety-pack page. Existing staged GA/calorie evidence retained; no cross-recipe ingredient collapse."
     ],
     "research_status": "needs_physical_label"
   },
