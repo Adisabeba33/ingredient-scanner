@@ -405,27 +405,41 @@
     "presentation": "plain",
     "package_type": "tray",
     "size": "2.6 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Water, Poultry Liver, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Guar Gum, Calcium Carbonate, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, Fructooligosaccharides, Salt, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
-      "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "crude_protein_min_percent": 9.5,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
+      "ash_max_percent": 3.5,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 50,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 1208,
+      "kcal_per_unit": 45,
       "unit_name": "serving"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
+    "formula_source": "US Chewy complete formula panel captured whole from the IAMS Perfect Portions Optimal Metabolism Chicken recipe product page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.chewy.com/iams-perfect-portions-optimal/dp/158374"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -435,7 +449,8 @@
       "US evidence only; no European formula substituted.",
       "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
       "Second-pass Mars qualifying-product evidence independently confirms UPC 019014802357 as IAMS Perfect Portions Optimal Metabolism 2.6 oz.",
-      "No complete current US ingredient/GA/calorie/adequacy deck was found together; status remains needs_physical_label."
+      "No complete current US ingredient/GA/calorie/adequacy deck was found together; status remains needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Optimal Metabolism Chicken recipe panel captured from one US Chewy page, including ingredients, GA, L-carnitine and calories. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
