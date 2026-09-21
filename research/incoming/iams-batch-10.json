@@ -226,27 +226,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal (Source Of Glucosamine And Chondroitin Sulfate), Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Brewers Rice, Beef, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, Dl-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 18,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 150,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.4,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 1500,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 900,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3830,
+      "kcal_per_unit": 417,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer recipe family plus exact current Kroger-family UPC-to-size retail evidence.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483036",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food",
+      "https://www.chewy.com/iams-proactive-health-high-protein/dp/3758102"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
@@ -254,7 +310,8 @@
     "verification_notes": [
       "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
       "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
-      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label."
+      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -279,27 +336,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "15 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal (Source Of Glucosamine And Chondroitin Sulfate), Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Brewers Rice, Beef, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, Dl-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 18,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 150,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.4,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 1500,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 900,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3830,
+      "kcal_per_unit": 417,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer recipe family plus exact current Kroger-family UPC-to-size retail evidence.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483038",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food",
+      "https://www.chewy.com/iams-proactive-health-high-protein/dp/3758102"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
@@ -307,7 +420,8 @@
     "verification_notes": [
       "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
       "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
-      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label."
+      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -332,27 +446,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "30 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal (Source Of Glucosamine And Chondroitin Sulfate), Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Brewers Rice, Beef, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, Dl-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 18,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 150,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.4,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 1500,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 900,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3830,
+      "kcal_per_unit": 417,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer recipe family plus current Kroger-family exact UPC display for this bag size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483039",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food",
+      "https://www.chewy.com/iams-proactive-health-high-protein/dp/3758102"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer explicitly displays 0001901483039 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830396; check digit validates.",
@@ -360,7 +530,8 @@
     "verification_notes": [
       "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
       "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
-      "Full current label panel still incomplete; keep needs_physical_label."
+      "Full current label panel still incomplete; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -385,27 +556,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "38.5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal (Source Of Glucosamine And Chondroitin Sulfate), Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Brewers Rice, Beef, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, Dl-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 18,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 150,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.4,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 1500,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 900,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3830,
+      "kcal_per_unit": 417,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer recipe family plus current Kroger-family exact UPC display for this bag size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483040",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food",
+      "https://www.chewy.com/iams-proactive-health-high-protein/dp/3758102"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer explicitly displays 0001901483040 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830402; check digit validates.",
@@ -413,7 +640,8 @@
     "verification_notes": [
       "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
       "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
-      "Full current label panel still incomplete; keep needs_physical_label."
+      "Full current label panel still incomplete; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -957,7 +1185,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Whole Grain",
+    "variant": "Mobility Support Chicken & Whole Grain",
     "recipe": [
       "Chicken",
       "Whole Grain"
@@ -968,27 +1196,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "6 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 21,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Eicosapentaenoic Acid (EPA)",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 40,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 760,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 540,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3608,
       "kcal_per_unit": null,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
+      "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -996,7 +1280,8 @@
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
       "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
-      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1010,7 +1295,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Whole Grain",
+    "variant": "Mobility Support Chicken & Whole Grain",
     "recipe": [
       "Chicken",
       "Whole Grain"
@@ -1021,27 +1306,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "13.5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 21,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Eicosapentaenoic Acid (EPA)",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 40,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 760,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 540,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3608,
       "kcal_per_unit": null,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
+      "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -1049,7 +1390,8 @@
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
       "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
-      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1063,7 +1405,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Whole Grain",
+    "variant": "Mobility Support Chicken & Whole Grain",
     "recipe": [
       "Chicken",
       "Whole Grain"
@@ -1074,27 +1416,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "27 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 21,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Eicosapentaenoic Acid (EPA)",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 40,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 760,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 540,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3608,
       "kcal_per_unit": null,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
+      "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -1102,7 +1500,8 @@
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
       "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
-      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1116,7 +1515,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Whole Grain",
+    "variant": "Mobility Support Chicken & Whole Grain",
     "recipe": [
       "Chicken",
       "Whole Grain"
@@ -1127,27 +1526,83 @@
     "presentation": null,
     "package_type": "bag",
     "size": "36 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 21,
+      "crude_fat_min_percent": 13.5,
+      "crude_fiber_max_percent": 3.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Eicosapentaenoic Acid (EPA)",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 40,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 760,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 540,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3608,
       "kcal_per_unit": null,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
+      "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -1155,7 +1610,8 @@
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
       "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
-      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
