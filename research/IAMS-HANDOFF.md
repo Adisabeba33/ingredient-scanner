@@ -108,5 +108,21 @@ Batch 4 incoming commit: `bf1b39d3157f6277c47cd9bd0ee4956bb7098f84`.
 
 Shell remains unavailable; inventory/checker were not run or simulated.
 
+
+## Batch 5 — alternate-source second pass
+- Staging path: `research/incoming/iams-batch-05.json`.
+- Added: **15 records** (running incoming total: **79**).
+- Status: 0 source_verified; 15 needs_physical_label.
+- This pass deliberately switched away from the exhausted South ADMC list and used the newer North ADMC list, Mars qualifying-product evidence, Target/Kroger and specialist US retailers.
+- New exact UPCs include: Perfect Portions Healthy Kitten 2.6 oz; Perfect Portions Indoor Salmon & Turkey 12 x 2.6 oz variety pack; Urinary Tract Health 16 lb; Healthy Adult Salmon & Tuna 3.5/7/16 lb; Indoor Weight & Hairball Care Salmon 16 lb; Long Hair Care 6 lb; Healthy Enjoyment Chicken & Salmon 3 lb; Healthy Weight 3.5/7 lb; Healthy Senior 3.5/16 lb; and legacy/current-evidence High Protein 3/13 lb.
+- The Perfect Portions variety-pack UPC `019014802371` is explicitly `barcode_scope: multipack`; it is not filed as one 2.6 oz tray.
+- Important taxonomy finding: **Healthy Enjoyment is a current printed IAMS range** on the manufacturer site and is not in the six-range memory list in `data/us-pet-brands.ts`. Recommend adding `Healthy Enjoyment` before seeding its products.
+- The current IAMS Healthy Enjoyment page shows 3/6/15 lb sizes. Only the 3 lb exact UPC (`019014806379`) was staged in this pass; retailer evidence for 6 lb conflicts across feeds (`0001901480638` in Kroger-family feeds versus `019014807093` in a Canadian distributor), so neither was silently normalized into the US ledger without stronger pack evidence.
+- Healthy Adult Salmon/Tuna naming has changed across sources: older Mars/ADMC calls it Salmon & Tuna, while current IAMS/Target merchandising often shortens the front-facing name to Salmon. UPC `019014804122` is independently bound to the 7 lb US unit by both. Keep the naming history visible rather than treating it as two products.
+
+Batch 5 incoming commit: `04550c1b663ef8888140f22a26d8e2324f0169ec`.
+
+Shell remains unavailable; inventory/checker were not run or simulated.
+
 ## Stop point
-Stopped after batch 4 with 64 total incoming records staged. The strong distributor UPC source is exhausted; next pass should prioritize alternate US retailer/distributor evidence for the newer cat shelf rather than padding records from ambiguous GTIN displays.
+Stopped after batch 5 with 79 total incoming records staged. Alternate-source research is still yielding exact US UPCs, but the remaining shelf increasingly contains naming transitions and conflicting retailer GTIN feeds; continue only with exact pack/retailer bindings and do not infer size-ladder UPCs.
