@@ -191,5 +191,26 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Batch 3 upgrade `485fde34e8a49b5fcaffd0f2bd2f7a628f27b2db`; Batch 8 staging `50f3e86116c9339e236bb586cb273824e22a900f`.
 - Running total: **95 staged Iams UPC records**. Source-upgrade work has materially strengthened all originally staged Perfect Portions pâté/variety targets, but 0 have been promoted to `source_verified` under the strict AGENTS §10 threshold.
 
+
+## Batch 9 — current Perfect Portions Cuts/Sensitive sweep
+- Staging path: `research/incoming/iams-batch-09.json`.
+- Added: **6 current US Perfect Portions UPCs** (running incoming total: **101**).
+- Status: 0 source_verified; 6 needs_physical_label.
+- Exact current retail twin-tray UPCs staged from US Target evidence:
+  - `019014803224` — Indoor Cuts in Gravy Salmon, 2.6 oz
+  - `019014803231` — Indoor Cuts in Gravy Tuna, 2.6 oz
+  - `019014807956` — Cuts in Gravy Chicken, 2.6 oz
+  - `019014807970` — Cuts in Gravy Tuna, 2.6 oz
+  - `019014807987` — Cuts in Gravy Salmon, 2.6 oz
+  - `019014808069` — Sensitive Digestion & Skin Pâté Turkey, 2.6 oz
+- All six are explicitly scoped as the 2.6 oz retail twin-tray unit, not one snapped serving and not an outer case.
+- Formula fields remain conservative where Target's accessible representation does not expose a complete current panel; no values were copied from Canadian/EU pages.
+- The IAMS wet-cat shelf has now crossed **100 staged UPC records overall for the brand campaign**; running total is 101.
+- This pass confirms the newer `0190148079xx` / `0190148080xx` UPC block is genuine current US IAMS shelf, not a neighboring inferred sequence. No unstated neighbors were generated.
+
+Batch 9 commit: `bfec717c71e6fc9fbafe5c097534022e354fcbf1`.
+
+Shell remains unavailable; inventory/checker were not run or simulated.
+
 ## Stop point
-Stopped after source-upgrade pass 3 / Batch 8 with 95 total incoming records staged. The original Perfect Portions pâté set has now had a second evidence pass, and current Cuts in Gravy shelf UPCs are being added. Highest-value next work is to continue current Perfect Portions Cuts/Sensitive variants and then move to dry-record panel upgrades.
+Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
