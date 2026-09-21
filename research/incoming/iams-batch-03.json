@@ -50,11 +50,13 @@
     "guaranteed_analysis": {
       "crude_protein_min_percent": 9,
       "crude_fat_min_percent": 5,
-      "crude_fiber_max_percent": 1.5,
+      "crude_fiber_max_percent": 1,
       "moisture_max_percent": 78,
-      "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "ash_max_percent": 3.5,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        "Vitamin E min 80 IU/kg"
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
@@ -66,17 +68,22 @@
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-chicken-recipe",
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-chicken-recipe-2-6oz/-/A-52093596"
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-chicken-recipe-2-6oz/-/A-52093596",
+      "https://www.target.com/p/-/A-52093083"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
-    "conflicts": [],
+    "conflicts": [
+      "Current Target panel at TCIN 52093083 displays a materially different Chicken ingredient deck from the earlier retailer panel captured in upgrade pass 1; likely formula/version drift. Do not promote until current physical/manufacturer label resolves which deck applies."
+    ],
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
       "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
       "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
-      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
+      "Second panel pass corrected/expanded the current Target GA: fiber 1% max (not 1.5), ash 3.5% max, vitamin E 80 IU/kg, taurine 0.06%. Target's current displayed ingredient deck also differs materially from the earlier captured retailer deck; this is recorded as a live formula/source conflict rather than silently overwritten.",
+      "Because current retailer decks conflict, this record cannot be source_verified until a physical/current manufacturer label settles the formula version."
     ],
     "research_status": "needs_physical_label"
   },
