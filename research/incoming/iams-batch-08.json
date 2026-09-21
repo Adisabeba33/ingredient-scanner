@@ -202,7 +202,8 @@
     "conflicts": [],
     "verification_notes": [
       "Current Target evidence proves the multipack identity. Per-recipe panels are only partial/incomplete in accessible text; no synthetic merged formula was created.",
-      "US evidence only; no Canadian/EU formula substituted."
+      "US evidence only; no Canadian/EU formula substituted.",
+      "Formula campaign 2026-09-21 final online pass: Target current page explicitly binds UPC 019014807963 to the Chicken/Tuna/Salmon Cuts in Gravy multipack, but the same page contains internally inconsistent merchandising text (its Highlights describe a pâté Chicken/Salmon assortment while Description says cuts in gravy chicken, tuna or salmon). Because a complete three-recipe ingredient/GA/calorie deck tied to this UPC is not exposed, do not synthesize the formula; physical-label capture required."
     ],
     "research_status": "needs_physical_label"
   }
