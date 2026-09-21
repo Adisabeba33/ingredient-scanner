@@ -1626,5 +1626,110 @@
       "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830060",
+    "canonical_gtin14": "00019014830060",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Healthy Digestion Adult Dry Dog Food with Real Chicken",
+    "variant": "Healthy Digestion",
+    "recipe": [
+      "Chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "4.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer 4.5 lb product page plus exact current retail/GTIN evidence.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-advanced-health-healthy-digestion-adult-dry-dog-food-with-real-chicken/0001901483006",
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-adult-dry-dog-food-real-chicken-45-lb-bag"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
+      "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
+      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830053",
+    "canonical_gtin14": "00019014830053",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
+    "variant": "Skin & Coat",
+    "recipe": [
+      "Chicken",
+      "Salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "4.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer 4.5 lb product page plus exact current retail/GTIN evidence.",
+    "source_urls": [
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat-chicken-and-salmon-recipe-adult-dry-dog-food-45-lb-bag",
+      "https://www.palletfly.com/product/269686/iams-advanced-health-skin--coat-chicken-and-salmon"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
+      "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
+      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
