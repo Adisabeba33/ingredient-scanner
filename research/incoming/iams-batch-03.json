@@ -284,7 +284,9 @@
     "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-indoor-pate-salmon-recipe",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.metro.ca/en/online-grocery/aisles/pet-care/cats/canned-cat-food/salmon-flavoured-pate-cat-food/p/019014802340",
+      "https://www.petscience.ca/iams-perfect-portions-indoor-adult-wet-cat-food-pate-salmon-24-2-6oz-242-80234"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -292,7 +294,9 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass evidence independently re-binds UPC 019014802340 to Indoor Adult Pâté Salmon 2.6 oz and confirms the twin-tray/two-individual-meals construction plus complete-and-balanced positioning.",
+      "A Canadian retailer exposes an ingredient list, but it was deliberately NOT copied into the US formula fields because the Iams brief forbids cross-market formula substitution. US current label panel still needed for promotion."
     ],
     "research_status": "needs_physical_label"
   },
@@ -343,7 +347,8 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass ADMC North evidence re-confirms exact US UPC 019014802302 as Perfect Portions Indoor Pâté Turkey Recipe 2.6 oz. No sufficiently complete current US ingredient/GA/calorie panel was found in this pass; status remains needs_physical_label."
     ],
     "research_status": "needs_physical_label"
   },
@@ -386,7 +391,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -394,7 +400,9 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass Mars qualifying-product evidence independently confirms UPC 019014802357 as IAMS Perfect Portions Optimal Metabolism 2.6 oz.",
+      "No complete current US ingredient/GA/calorie/adequacy deck was found together; status remains needs_physical_label."
     ],
     "research_status": "needs_physical_label"
   },
