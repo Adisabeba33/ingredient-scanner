@@ -144,5 +144,21 @@ Batch 6 incoming commit: `b6bce202933e9da496f7e8956a6ce203100b1b49`.
 
 Shell remains unavailable; inventory/checker were not run or simulated.
 
+
+## Batch 7 — thin-tail Mars/IAMS evidence
+- Staging path: `research/incoming/iams-batch-07.json`.
+- Added: **8 records** (running incoming total: **92**).
+- Status: 0 source_verified; 8 needs_physical_label.
+- Added Perfect Portions Healthy Adult Chicken & Tuna variety pack `019014802364` (12 x 2.6 oz, explicit `multipack` scope).
+- Added Mars-qualified ProActive Health High Protein cat dry size ladder: 5 lb `019014804702`, 12 lb `019014804719`, 22 lb `019014804726`.
+- Added missing dog size-ladder units from IAMS/Mars qualifying-product evidence: Adult Large Breed 11 lb `019014804870`, 40 lb `019014707294`, 50 lb `019014044191`; Smart Puppy Large Breed 11 lb `019014805402`.
+- The 50 lb Large Breed UPC has contemporary 2026 US marketplace corroboration in addition to the older IAMS qualifying list.
+- No guessed neighbors were added. This pass specifically searched the unresolved `019014802xxx`, `804xxx`, `805xxx` and old size-ladder tails and stopped where only barcode-database similarity suggestions remained.
+- Target currently exposes full ingredients and GA for some Perfect Portions (notably Healthy Kitten and the Chicken/Tuna variety pack). These are useful upgrade leads, but `source_verified` still requires calories + adequacy + current deck completeness together; this batch does not promote partial panels.
+
+Batch 7 incoming commit: `8c4a8446d37349e3ceb627549af863d69fa07483`.
+
+Shell remains unavailable; inventory/checker were not run or simulated.
+
 ## Stop point
-Stopped after batch 6 with 84 total incoming records staged. Healthy Enjoyment's US 3/6/15 lb Chicken & Salmon ladder is now UPC-bound, and the discontinued Chicken & Beef 3/6/15 lb ladder is also documented. Remaining research is now a thinner tail and should focus on unresolved current cat size ladders/Perfect Portions variants and upgrades from needs_physical_label.
+Stopped after batch 7 with 92 total incoming records staged. The remaining new-UPC tail is now sparse. Highest-value next work is a source-upgrade pass on the 92 staged records (especially Perfect Portions, where current Target pages expose ingredients/GA) plus targeted searches for any unresolved current size-ladder UPCs.
