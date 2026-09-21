@@ -120,27 +120,59 @@
     "presentation": null,
     "package_type": "bag",
     "size": "30 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3654,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current US Kroger exact UPC/size page plus current IAMS manufacturer recipe page.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480815",
-      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice",
+      "https://www.chewy.com/iams-proactive-health-minichunks-beef/dp/3758104"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact current US retail UPC-to-size binding. No UPC inferred from sequence.",
@@ -148,7 +180,8 @@
     "verification_notes": [
       "Exact UPC and bag size are independently exposed by current Kroger retail evidence.",
       "Current IAMS manufacturer page lists Beef & Rice current sizes 5/7/11/15/30 lb and states 100% complete and balanced adult nutrition.",
-      "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label."
+      "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -678,27 +711,59 @@
     "presentation": null,
     "package_type": "bag",
     "size": "5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3654,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480812",
-      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice",
+      "https://www.chewy.com/iams-proactive-health-minichunks-beef/dp/3758104"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer display 0001901480812 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808120.",
@@ -706,7 +771,8 @@
     "verification_notes": [
       "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
       "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
-      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -731,27 +797,59 @@
     "presentation": null,
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3654,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480813",
-      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice",
+      "https://www.chewy.com/iams-proactive-health-minichunks-beef/dp/3758104"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer display 0001901480813 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808137.",
@@ -759,7 +857,8 @@
     "verification_notes": [
       "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
       "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
-      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -784,27 +883,59 @@
     "presentation": null,
     "package_type": "bag",
     "size": "11 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3654,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480814",
-      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice",
+      "https://www.chewy.com/iams-proactive-health-minichunks-beef/dp/3758104"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer display 0001901480814 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808144.",
@@ -812,7 +943,8 @@
     "verification_notes": [
       "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
       "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
-      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
