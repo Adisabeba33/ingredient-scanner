@@ -241,7 +241,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://terms.snipp.com/IAMS%20Vet%20Rebate%202005410/Terms/IAMS%20Check%20Up%20Challenge%20-%20Terms%20%26%20Conditions.pdf"
+      "https://terms.snipp.com/IAMS%20Vet%20Rebate%202005410/Terms/IAMS%20Check%20Up%20Challenge%20-%20Terms%20%26%20Conditions.pdf",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
@@ -249,7 +250,9 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
+      "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -292,7 +295,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://terms.snipp.com/IAMS%20Vet%20Rebate%202005410/Terms/IAMS%20Check%20Up%20Challenge%20-%20Terms%20%26%20Conditions.pdf"
+      "https://terms.snipp.com/IAMS%20Vet%20Rebate%202005410/Terms/IAMS%20Check%20Up%20Challenge%20-%20Terms%20%26%20Conditions.pdf",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
@@ -300,7 +304,9 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
+      "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -343,7 +349,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://www.upcitemdb.com/upc/19014044191"
+      "https://www.upcitemdb.com/upc/19014044191",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
@@ -351,7 +358,9 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
+      "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred."
     ],
     "research_status": "needs_physical_label"
   },
