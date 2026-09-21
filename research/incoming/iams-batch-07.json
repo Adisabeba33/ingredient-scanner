@@ -397,27 +397,83 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "11 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Chicken By-Product Meal, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, Salt, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Calcium Carbonate, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 27,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid (DHA)",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.45,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 350,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 35,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3633,
+      "kcal_per_unit": 378,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
+    "formula_source": "US Chewy complete formula panel captured whole from current Large Breed Puppy product page.",
     "source_urls": [
       "https://terms.snipp.com/IAMS%20Vet%20Rebate%202005410/Terms/IAMS%20Check%20Up%20Challenge%20-%20Terms%20%26%20Conditions.pdf",
-      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed"
+      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed",
+      "https://www.chewy.com/iams-proactive-health-large-breed/dp/4841878"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
@@ -426,7 +482,8 @@
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry audit: current IAMS manufacturer page independently confirms the Smart Puppy Large Breed Chicken & Whole Grain recipe. The staged 11 lb UPC is retained as exact retail-size evidence; no formula values were transcribed from image-only nutrition."
+      "Dry audit: current IAMS manufacturer page independently confirms the Smart Puppy Large Breed Chicken & Whole Grain recipe. The staged 11 lb UPC is retained as exact retail-size evidence; no formula values were transcribed from image-only nutrition.",
+      "Formula campaign 2026-09-21: complete Large Breed Puppy Chicken panel captured from one current US Chewy page. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   }
