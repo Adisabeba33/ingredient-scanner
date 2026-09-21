@@ -2248,34 +2248,79 @@
     "presentation": null,
     "package_type": "bag",
     "size": "3 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 34,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 550,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 100,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.6,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3654,
       "kcal_per_unit": null,
-      "unit_name": "cup"
+      "unit_name": null
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry"
+      "https://www.iams.com/products/dry",
+      "https://www.chewy.com/iams-advanced-health-immune-health/dp/908366"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
     "conflicts": [],
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
-      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label."
+      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -2300,34 +2345,79 @@
     "presentation": null,
     "package_type": "bag",
     "size": "6 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 34,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 550,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 100,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.6,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3654,
       "kcal_per_unit": null,
-      "unit_name": "cup"
+      "unit_name": null
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry"
+      "https://www.iams.com/products/dry",
+      "https://www.chewy.com/iams-advanced-health-immune-health/dp/908366"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
     "conflicts": [],
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
-      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label."
+      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -2352,34 +2442,79 @@
     "presentation": null,
     "package_type": "bag",
     "size": "13 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 34,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 550,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 100,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.6,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 3654,
       "kcal_per_unit": null,
-      "unit_name": "cup"
+      "unit_name": null
     },
     "label_deck_code": null,
-    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
-      "https://www.iams.com/products/dry"
+      "https://www.iams.com/products/dry",
+      "https://www.chewy.com/iams-advanced-health-immune-health/dp/908366"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
     "conflicts": [],
     "verification_notes": [
       "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
-      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label."
+      "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
+      "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
