@@ -12750,7 +12750,8 @@
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Immune Health Chicken & Superfoods adult dog panel captured whole from current US Chewy page; applied recipe-level across four staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for the full Immune Health Chicken & Superfoods dog formula. No qualifying second retailer page exposing the complete ingredient statement, full guaranteed analysis, and calories was found; the existing Chewy panel remains the sole complete witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12866,7 +12867,8 @@
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Immune Health Chicken & Superfoods adult dog panel captured whole from current US Chewy page; applied recipe-level across four staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for the full Immune Health Chicken & Superfoods dog formula. No qualifying second retailer page exposing the complete ingredient statement, full guaranteed analysis, and calories was found; the existing Chewy panel remains the sole complete witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12995,7 +12997,8 @@
       "source_urls": [
         "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
-        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
+        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974",
+        "https://www.shipt.com/up/iams-advanced-health-mobility-support-chicken--whole-grain-dry-dog-food/3555e38c-851f-11f0-8dc6-d79e638477d4"
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -13005,7 +13008,8 @@
         "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
         "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Shipt independently identifies the same Mobility Support Chicken & Whole Grain recipe and prints 3608 kcal ME/kg / 375 kcal ME/cup while exposing the matching opening ingredient deck. However the accessible Shipt result truncates the ingredient statement and does not expose the complete guaranteed-analysis panel, so it is not a qualifying whole-panel second witness under the corroboration brief. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13134,7 +13138,8 @@
       "source_urls": [
         "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
-        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
+        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974",
+        "https://www.shipt.com/up/iams-advanced-health-mobility-support-chicken--whole-grain-dry-dog-food/3555e38c-851f-11f0-8dc6-d79e638477d4"
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -13144,7 +13149,8 @@
         "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
         "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Shipt independently identifies the same Mobility Support Chicken & Whole Grain recipe and prints 3608 kcal ME/kg / 375 kcal ME/cup while exposing the matching opening ingredient deck. However the accessible Shipt result truncates the ingredient statement and does not expose the complete guaranteed-analysis panel, so it is not a qualifying whole-panel second witness under the corroboration brief. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13273,7 +13279,8 @@
       "source_urls": [
         "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
-        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
+        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974",
+        "https://www.shipt.com/up/iams-advanced-health-mobility-support-chicken--whole-grain-dry-dog-food/3555e38c-851f-11f0-8dc6-d79e638477d4"
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -13283,7 +13290,8 @@
         "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
         "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Shipt independently identifies the same Mobility Support Chicken & Whole Grain recipe and prints 3608 kcal ME/kg / 375 kcal ME/cup while exposing the matching opening ingredient deck. However the accessible Shipt result truncates the ingredient statement and does not expose the complete guaranteed-analysis panel, so it is not a qualifying whole-panel second witness under the corroboration brief. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13412,7 +13420,8 @@
       "source_urls": [
         "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-mobility-support",
-        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974"
+        "https://www.chewy.com/iams-advanced-health-mobility-support/dp/930974",
+        "https://www.shipt.com/up/iams-advanced-health-mobility-support-chicken--whole-grain-dry-dog-food/3555e38c-851f-11f0-8dc6-d79e638477d4"
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
@@ -13422,7 +13431,8 @@
         "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
         "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Shipt independently identifies the same Mobility Support Chicken & Whole Grain recipe and prints 3608 kcal ME/kg / 375 kcal ME/cup while exposing the matching opening ingredient deck. However the accessible Shipt result truncates the ingredient statement and does not expose the complete guaranteed-analysis panel, so it is not a qualifying whole-panel second witness under the corroboration brief. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13962,7 +13972,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer searches did not produce a qualifying second US page with the complete Immune Health Chicken & Superfoods cat ingredient statement, full guaranteed analysis, and calories. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14342,7 +14353,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Healthy Digestion Chicken & Turkey cat panel captured whole from current US Chewy page; applied recipe-level across three staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer searches did not produce a qualifying second US page with the complete Healthy Digestion Chicken & Turkey cat ingredient statement, full guaranteed analysis, and calories. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14470,7 +14482,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Healthy Digestion Chicken & Turkey cat panel captured whole from current US Chewy page; applied recipe-level across three staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer searches did not produce a qualifying second US page with the complete Healthy Digestion Chicken & Turkey cat ingredient statement, full guaranteed analysis, and calories. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14598,7 +14611,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Healthy Digestion Chicken & Turkey cat panel captured whole from current US Chewy page; applied recipe-level across three staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer searches did not produce a qualifying second US page with the complete Healthy Digestion Chicken & Turkey cat ingredient statement, full guaranteed analysis, and calories. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
