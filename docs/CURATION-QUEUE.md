@@ -73,6 +73,24 @@ barcode question, and on that question those three sites add nothing.
 
 **Write both briefs up front.** A brand is not seeded until B is done.
 
+### And a campaign C that should not have been needed
+
+Iams needed a third pass, because campaign B stopped one page short of the
+gate. It captured 114 complete panels from Chewy and then held every one at
+`needs_physical_label`, on the grounds that a single retailer's panel is not
+proof.
+
+No other campaign here has used that bar. **124 of Blue Buffalo's 133
+`source_verified` records name a retailer as the formula source**, one of them
+on a shop transcription plus a single corroborating Chewy page. Seven of the
+seventeen ledgers hold **zero** label deck codes and are `source_verified`
+anyway — three of them entirely — because a deck code exists only where the
+maker publishes label-deck PDFs, which is Purina and Hill's and nobody else.
+
+So campaign B's brief must say what the gate actually is, in numbers, or the
+agent will invent a stricter one and stop just short of it. Two independent
+retailers agreeing is the bar. Say so.
+
 ---
 
 ## The queue
@@ -88,7 +106,7 @@ once buys the siblings behind it.
 
 | # | Brand | Species | Maker | Status | Why here |
 |---|-------|---------|-------|--------|----------|
-| 1 | **Iams** | both | Mars | **RESEARCHING** — barcodes done (133 records, prefix `019014` proven), formulas open: `research/BRIEF-IAMS-FORMULAS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
+| 1 | **Iams** | both | Mars | **RESEARCHING** — 133 records merged, checker green, 114 with a full panel; awaiting a second witness: `research/BRIEF-IAMS-CORROBORATION.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
 | 2 | **Purina Cat Chow** | cat | Nestlé Purina | QUEUED | The value bag in every supermarket. Purina is the most-travelled maker in this repo — three GS1 prefixes proven, vitamin constants already written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | QUEUED | Same shelf, dogs. Runs straight after #2 on the same prefixes and the same size-ladder rules. |
 | 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
