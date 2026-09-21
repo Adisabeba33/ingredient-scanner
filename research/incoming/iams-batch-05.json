@@ -1163,27 +1163,86 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "3 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 38,
+      "crude_fat_min_percent": 17,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 300,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3874,
+      "kcal_per_unit": 439,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "formula_source": "US formula evidence for the staged High Protein Chicken & Salmon generation: exact UPC/product identity independently supported by Kroger/BrickSeek/Mars lists; ingredient statement from Instacart and GA from H-E-B; calorie value independently indexed for the same named formula. Evidence is multi-source rather than a single complete panel, so status remains needs_physical_label.",
     "source_urls": [
       "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon",
+      "https://www.instacart.com/products/16977183-iams-high-protein-adult-dry-cat-food-with-chicken-salmon-3-lb",
+      "https://www.heb.com/product-detail/iams-proactive-health-high-protein-chicken-salmon-cat-food/2239924",
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-adult-dry-cat-food-chicken-salmon-recipe/0001901480217",
+      "https://brickseek.com/products/iams-proactive-health-high/2114823"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -1194,7 +1253,8 @@
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation."
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation.",
+      "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1216,27 +1276,86 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "13 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 38,
+      "crude_fat_min_percent": 17,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Zinc",
+          "basis": "min",
+          "value": 300,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3874,
+      "kcal_per_unit": 439,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "formula_source": "US formula evidence for the staged High Protein Chicken & Salmon generation: exact UPC/product identity independently supported by Kroger/BrickSeek/Mars lists; ingredient statement from Instacart and GA from H-E-B; calorie value independently indexed for the same named formula. Evidence is multi-source rather than a single complete panel, so status remains needs_physical_label.",
     "source_urls": [
       "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon",
+      "https://www.instacart.com/products/16977183-iams-high-protein-adult-dry-cat-food-with-chicken-salmon-3-lb",
+      "https://www.heb.com/product-detail/iams-proactive-health-high-protein-chicken-salmon-cat-food/2239924",
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-adult-dry-cat-food-chicken-salmon-recipe/0001901480217",
+      "https://brickseek.com/products/iams-proactive-health-high/2114823"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -1247,7 +1366,8 @@
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation."
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation.",
+      "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift."
     ],
     "research_status": "needs_physical_label"
   }
