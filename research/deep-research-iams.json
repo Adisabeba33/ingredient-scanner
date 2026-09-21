@@ -8856,7 +8856,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Enjoyment Chicken & Salmon current 3/6/15 lb family; this row's exact UPC-to-size remains separately proven.",
         "Formula campaign 2026-09-21 continuation: complete US Chewy panel captured whole from one page for Healthy Enjoyment Immune Support Chicken & Salmon. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Salmon size variants have independent listing evidence in addition to Chewy, but a second qualifying retailer reproduction of the entire ingredient statement, every printed guarantee, and 3791 kcal/kg / 381 kcal/cup was not established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -8968,7 +8969,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Enjoyment Chicken & Salmon current 3/6/15 lb family; this row's exact UPC-to-size remains separately proven.",
         "Formula campaign 2026-09-21 continuation: complete US Chewy panel captured whole from one page for Healthy Enjoyment Immune Support Chicken & Salmon. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Salmon size variants have independent listing evidence in addition to Chewy, but a second qualifying retailer reproduction of the entire ingredient statement, every printed guarantee, and 3791 kcal/kg / 381 kcal/cup was not established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9081,7 +9083,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: Chicken & Beef identity remains supported by prior US retail evidence, but no current IAMS manufacturer page was found in this pass. Treat as discontinued/recent historical rather than current shelf until contrary evidence appears.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Beef remains subject to the documented currentness/discontinuation conflict. Independent listings do not establish a current second whole-panel witness reproducing complete ingredients, every guarantee, and 3784 kcal/kg / 381 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9194,7 +9197,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: Chicken & Beef identity remains supported by prior US retail evidence, but no current IAMS manufacturer page was found in this pass. Treat as discontinued/recent historical rather than current shelf until contrary evidence appears.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Beef remains subject to the documented currentness/discontinuation conflict. Independent listings do not establish a current second whole-panel witness reproducing complete ingredients, every guarantee, and 3784 kcal/kg / 381 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9307,7 +9311,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: Chicken & Beef identity remains supported by prior US retail evidence, but no current IAMS manufacturer page was found in this pass. Treat as discontinued/recent historical rather than current shelf until contrary evidence appears.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Healthy Enjoyment Chicken & Beef remains subject to the documented currentness/discontinuation conflict. Independent listings do not establish a current second whole-panel witness reproducing complete ingredients, every guarantee, and 3784 kcal/kg / 381 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9332,65 +9337,8 @@
       "presentation": "plain",
       "package_type": "box",
       "size": "12 x 2.6 oz",
-      "ingredients_verbatim": "Chicken Recipe - Chicken, Water, Poultry Liver, Chicken Broth, Dried Egg Product, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Tapioca Starch, DL-Methionine, Choline Chloride, Salt, Calcium Carbonate, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Iron Oxide Color, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex. Tuna Recipe - Chicken, Water, Tuna, Poultry Liver, Chicken Broth, Dried Egg Product, Guar Gum, Calcium Carbonate, Potassium Chloride, Fish Oil, Sodium Tripolyphosphate, Magnesium Sulfate, Taurine, Tapioca Starch, DL-Methionine, Choline Chloride, Salt, Thiamine Mononitrate, Vitamin E Supplement, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex.",
-      "ingredients_ordered_normalized": [
-        "Chicken Recipe - Chicken",
-        "Water",
-        "Poultry Liver",
-        "Chicken Broth",
-        "Dried Egg Product",
-        "Guar Gum",
-        "Potassium Chloride",
-        "Sodium Tripolyphosphate",
-        "Fish Oil",
-        "Magnesium Sulfate",
-        "Taurine",
-        "Tapioca Starch",
-        "DL-Methionine",
-        "Choline Chloride",
-        "Salt",
-        "Calcium Carbonate",
-        "Thiamine Mononitrate",
-        "Vitamin E Supplement",
-        "Zinc Sulfate",
-        "Iron Oxide Color",
-        "Ferrous Sulfate",
-        "Manganese Sulfate",
-        "Copper Sulfate",
-        "Pyridoxine Hydrochloride",
-        "Potassium Iodide",
-        "Vitamin D3 Supplement",
-        "Folic Acid",
-        "Menadione Sodium Bisulfite Complex. Tuna Recipe - Chicken",
-        "Water",
-        "Tuna",
-        "Poultry Liver",
-        "Chicken Broth",
-        "Dried Egg Product",
-        "Guar Gum",
-        "Calcium Carbonate",
-        "Potassium Chloride",
-        "Fish Oil",
-        "Sodium Tripolyphosphate",
-        "Magnesium Sulfate",
-        "Taurine",
-        "Tapioca Starch",
-        "DL-Methionine",
-        "Choline Chloride",
-        "Salt",
-        "Thiamine Mononitrate",
-        "Vitamin E Supplement",
-        "Iron Oxide Color",
-        "Zinc Sulfate",
-        "Ferrous Sulfate",
-        "Manganese Sulfate",
-        "Copper Sulfate",
-        "Pyridoxine Hydrochloride",
-        "Potassium Iodide",
-        "Vitamin D3 Supplement",
-        "Folic Acid",
-        "Menadione Sodium Bisulfite Complex"
-      ],
+      "ingredients_verbatim": "",
+      "ingredients_ordered_normalized": [],
       "guaranteed_analysis": {
         "crude_protein_min_percent": null,
         "crude_fat_min_percent": null,
@@ -9422,7 +9370,8 @@
         "Second-pass current Target evidence corroborates exact Chicken & Tuna 12 x 2.6 oz variety-pack identity and multipack scope.",
         "The box contains distinct Chicken and Tuna recipes. No single ingredient deck or GA was fabricated for the whole box; exact per-flavor panels plus adequacy evidence remain required.",
         "Formula campaign 2026-09-21: Target US explicitly prints UPC 019014802364 and both Chicken/Tuna recipe ingredient statements on the same variety-pack page. Existing staged GA/calorie evidence retained; no cross-recipe ingredient collapse.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: this UPC is a Chicken & Tuna variety-pack box rather than a single formula. Per BRIEF-IAMS-CORROBORATION, box-level ingredient fields were cleared; individual recipe compositions belong on the component recipe records. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9558,7 +9507,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate.",
         "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: High Protein size variants have several retailer identity/listing references, but no two qualifying independent sources were established that reproduce the complete stored ingredient statement, every printed guarantee, and 3874 kcal/kg / 439 kcal/cup character-for-character. Preserve the generic-vs-Chicken & Salmon naming conflict and retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9694,7 +9644,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate.",
         "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: High Protein size variants have several retailer identity/listing references, but no two qualifying independent sources were established that reproduce the complete stored ingredient statement, every printed guarantee, and 3874 kcal/kg / 439 kcal/cup character-for-character. Preserve the generic-vs-Chicken & Salmon naming conflict and retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9830,7 +9781,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate.",
         "Formula campaign 2026-09-21: High Protein Chicken & Salmon generation recovered. UPC 019014802173 is explicitly tied to the 3-lb product by Kroger and BrickSeek; Mars historical qualifying lists independently tie 019014802913, 019014804719 and 019014804726 to High Protein package sizes. Formula evidence is not a single-page whole panel, so this record is populated for completeness but deliberately not promoted to source_verified. Physical-label confirmation remains desirable, especially for package-generation drift.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: High Protein size variants have several retailer identity/listing references, but no two qualifying independent sources were established that reproduce the complete stored ingredient statement, every printed guarantee, and 3874 kcal/kg / 439 kcal/cup character-for-character. Preserve the generic-vs-Chicken & Salmon naming conflict and retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -9952,7 +9904,8 @@
         "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
         "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: 11 lb Adult Large Breed Chicken has a complete Chewy panel plus manufacturer identity evidence, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
