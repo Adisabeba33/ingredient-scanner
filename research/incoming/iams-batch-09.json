@@ -51,9 +51,10 @@
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
       "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
       "Audit pass retained exact Target UPC binding but did not import formula fields from non-US mirrors or neighboring Cuts recipes. Current complete US deck remains the missing promotion evidence.",
-      "Formula campaign 2026-09-21 BLOCKER: staged UPC 019014803224 conflicts with current external product evidence. BrickSeek identifies 019014803224 as IAMS ProActive Health Sensitive Skin & Stomach Grain Free Chicken & Peas dry DOG food, while IAMS/Chewy independently document the Indoor Cuts in Gravy Salmon CAT recipe without tying that recipe to this UPC. Do not attach the salmon formula to this staged barcode until the original retailer/physical label proves the mapping. No barcode mutation performed."
+      "Formula campaign 2026-09-21 BLOCKER: staged UPC 019014803224 conflicts with current external product evidence. BrickSeek identifies 019014803224 as IAMS ProActive Health Sensitive Skin & Stomach Grain Free Chicken & Peas dry DOG food, while IAMS/Chewy independently document the Indoor Cuts in Gravy Salmon CAT recipe without tying that recipe to this UPC. Do not attach the salmon formula to this staged barcode until the original retailer/physical label proves the mapping. No barcode mutation performed.",
+      "Formula campaign 2026-09-21 final disposition: REJECTED as staged barcode/product mapping. Independent current external evidence identifies UPC 019014803224 as IAMS ProActive Health Sensitive Skin & Stomach Grain Free Chicken & Peas dry DOG food (BrickSeek; matching manufacturer part number also indexed by AgriSeek), not Perfect Portions Indoor Salmon cat food. Barcode string was not changed. Re-add the cat product only from a proven original retailer/physical-label UPC."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
