@@ -4985,7 +4985,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey",
-        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260"
+        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260",
+        "https://www.petco.com/product/iams-proactive-health-with-chicken-and-turkey-adult-indoor-weight-and-hairball-care-dry-cat-food-7-lbs-3169186"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -4998,7 +4999,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Complete current US Chewy Indoor Weight & Hairball Care Chicken & Turkey panel captured whole; staged shorter product name retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently exposes the Indoor Weight & Hairball Care Chicken & Turkey recipe and the same core GA (30% protein, 11% fat min/13.5% max, 8.3% fiber, 10% moisture) plus matching calcium/phosphorus/potassium/taurine/L-carnitine/omega guarantees. Accessible Petco evidence does not independently establish the complete calorie statement required by the brief, and the existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5115,7 +5117,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey",
-        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260"
+        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260",
+        "https://www.petco.com/product/iams-proactive-health-with-chicken-and-turkey-adult-indoor-weight-and-hairball-care-dry-cat-food-7-lbs-3169186"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -5128,7 +5131,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Complete current US Chewy Indoor Weight & Hairball Care Chicken & Turkey panel captured whole; staged shorter product name retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently exposes the Indoor Weight & Hairball Care Chicken & Turkey recipe and the same core GA (30% protein, 11% fat min/13.5% max, 8.3% fiber, 10% moisture) plus matching calcium/phosphorus/potassium/taurine/L-carnitine/omega guarantees. Accessible Petco evidence does not independently establish the complete calorie statement required by the brief, and the existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5245,7 +5249,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey",
-        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260"
+        "https://www.chewy.com/iams-proactive-health-indoor-weight/dp/121260",
+        "https://www.petco.com/product/iams-proactive-health-with-chicken-and-turkey-adult-indoor-weight-and-hairball-care-dry-cat-food-7-lbs-3169186"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -5258,7 +5263,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Complete current US Chewy Indoor Weight & Hairball Care Chicken & Turkey panel captured whole; staged shorter product name retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently exposes the Indoor Weight & Hairball Care Chicken & Turkey recipe and the same core GA (30% protein, 11% fat min/13.5% max, 8.3% fiber, 10% moisture) plus matching calcium/phosphorus/potassium/taurine/L-carnitine/omega guarantees. Accessible Petco evidence does not independently establish the complete calorie statement required by the brief, and the existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5355,18 +5361,22 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken",
-        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258"
+        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258",
+        "https://www.petco.com/product/iams-proactive-health-hairball-care-with-chicken-adult-dry-cat-food"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified."
+      ],
       "verification_notes": [
         "US dry bag evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently confirms the current Hairball Care recipe family and GA values, but its current ingredient presentation is not a character-for-character whole-panel match to the stored Chewy generation. Retain needs_physical_label rather than merging formula generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5463,18 +5473,22 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken",
-        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258"
+        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258",
+        "https://www.petco.com/product/iams-proactive-health-hairball-care-with-chicken-adult-dry-cat-food"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified."
+      ],
       "verification_notes": [
         "US dry bag evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently confirms the current Hairball Care recipe family and GA values, but its current ingredient presentation is not a character-for-character whole-panel match to the stored Chewy generation. Retain needs_physical_label rather than merging formula generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5571,18 +5585,22 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken",
-        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258"
+        "https://www.chewy.com/iams-proactive-health-adult-hairball/dp/121258",
+        "https://www.petco.com/product/iams-proactive-health-hairball-care-with-chicken-adult-dry-cat-food"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified."
+      ],
       "verification_notes": [
         "US dry bag evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Petco independently confirms the current Hairball Care recipe family and GA values, but its current ingredient presentation is not a character-for-character whole-panel match to the stored Chewy generation. Retain needs_physical_label rather than merging formula generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -6515,7 +6533,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Sensitive Digestion & Skin recipe family; this completes manufacturer corroboration across staged 3/6/13 lb UPCs.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched Petco, Target and PetSmart results for Sensitive Digestion & Skin dry cat food. No qualifying independent page exposing the complete ingredient statement, full guaranteed analysis and calories was found. Existing Chewy panel remains the sole complete witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -6632,7 +6651,8 @@
         "Not source_verified because complete current label evidence required by AGENTS §10 is not fully readable/proven.",
         "Dry cat audit: current IAMS manufacturer page independently confirms Sensitive Digestion & Skin dry cat recipe identity and current US positioning. Exact UPC-to-size evidence remains separate; formula values were not guessed from image-only label assets.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one page. Single-retailer evidence; retained needs_physical_label pending independent exact-panel match or manufacturer label.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched Petco, Target and PetSmart results for Sensitive Digestion & Skin dry cat food. No qualifying independent page exposing the complete ingredient statement, full guaranteed analysis and calories was found. Existing Chewy panel remains the sole complete witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14099,7 +14119,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for the complete Advanced Health Immune Health cat panel. No qualifying second page exposing the entire ingredient statement, every printed guarantee, and calories was found. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14225,7 +14246,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Advanced Health cat recipe and bag size.",
         "Current formula/present-day shelf status and complete label panel require additional verification; retained needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for the complete Advanced Health Immune Health cat panel. No qualifying second page exposing the entire ingredient statement, every printed guarantee, and calories was found. Existing Chewy panel remains the sole complete formula witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
