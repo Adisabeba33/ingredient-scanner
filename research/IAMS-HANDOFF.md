@@ -177,5 +177,19 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Batch 5 upgrade `d5fea916107c8e26f5bfbc9a47b2b146478e7cfb`; Batch 7 upgrade `828783f4c5ed8bc56d877e21841a99163d47ee74`.
 - Upgrade result so far: 6 Perfect Portions records materially strengthened across passes 1–2, but 0 promoted to source_verified because AGENTS §10 remains stricter than the currently accessible evidence.
 
+
+## Source-upgrade pass 3 + Batch 8 — remaining pâté and current Cuts in Gravy
+- Revisited the three remaining Batch 3 pâté records: Indoor Salmon `019014802340`, Indoor Turkey `019014802302`, Optimal Metabolism Chicken `019014802357`.
+- Indoor Salmon now has independent exact-UPC identity/twin-tray corroboration. A Canadian retailer exposes ingredients, but those were **not copied** into the US formula fields because the Iams brief explicitly forbids cross-market formula substitution.
+- Indoor Turkey was re-confirmed by the North ADMC US list; Optimal Metabolism was independently re-confirmed by Mars qualifying-product evidence. Neither has a complete current US deck accessible enough for promotion.
+- New current-shelf discovery: staged `research/incoming/iams-batch-08.json` with **3 additional US Perfect Portions Cuts in Gravy UPCs**, bringing the running incoming total from 92 to **95**:
+  - `019014803217` — Indoor Cuts in Gravy Chicken, 2.6 oz retail twin tray.
+  - `019014802708` — Indoor Cuts in Gravy Salmon & Tuna, 12 x 2.6 oz variety multipack.
+  - `019014807963` — Cuts in Gravy Chicken/Tuna/Salmon, 24 x 2.6 oz multipack.
+- Target exposes a particularly strong panel for `019014803217`: exact UPC, ingredients and extended GA (protein 9%, fat 4%, fiber 1.04%, moisture 82%, ash 3.54%, calcium 0.25%, potassium 0.2%, vitamin E 80 IU/kg, taurine 0.06%). It still lacks calories + complete adequacy/deck together, so it remains `needs_physical_label`.
+- No variety-pack formula was synthesized from multiple recipes.
+- Commits: Batch 3 upgrade `485fde34e8a49b5fcaffd0f2bd2f7a628f27b2db`; Batch 8 staging `50f3e86116c9339e236bb586cb273824e22a900f`.
+- Running total: **95 staged Iams UPC records**. Source-upgrade work has materially strengthened all originally staged Perfect Portions pâté/variety targets, but 0 have been promoted to `source_verified` under the strict AGENTS §10 threshold.
+
 ## Stop point
-Stopped after batch 7 with 92 total incoming records staged. The remaining new-UPC tail is now sparse. Highest-value next work is a source-upgrade pass on the 92 staged records (especially Perfect Portions, where current Target pages expose ingredients/GA) plus targeted searches for any unresolved current size-ladder UPCs.
+Stopped after source-upgrade pass 3 / Batch 8 with 95 total incoming records staged. The original Perfect Portions pâté set has now had a second evidence pass, and current Cuts in Gravy shelf UPCs are being added. Highest-value next work is to continue current Perfect Portions Cuts/Sensitive variants and then move to dry-record panel upgrades.
