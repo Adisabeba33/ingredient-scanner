@@ -1649,16 +1649,29 @@
     "presentation": null,
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "CHICKEN BY-PRODUCTS, SUFFICIENT WATER FOR PROCESSING, CHICKEN, CHICKEN LIVER, LAMB, BROWN RICE, BREWERS RICE, FLAX SEED, CAROB GUM, SODIUM TRIPOLYPHOSPHATE, MINERALS (POTASSIUM CHLORIDE, MAGNESIUM PROTEINATE, ZINC SULFATE, COPPER PROTEINATE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), CARRAGEENAN, ADDED COLOR, GUAR GUM, DRIED YAM, VITAMINS (CHOLINE CHLORIDE, VITAMIN E SUPPLEMENT, BIOTIN, CALCIUM PANTOTHENATE, THIAMINE MONOITRATE {VITAMIN B1}, MINERAL OIL, VITAMIN A SUPPLEMENT, VITAMIN D3 SUPPLEMENT), FISH OIL, SODIUM NITRITE (FOR COLOR RETENTION), SAGE, VITAMIN B6.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
@@ -1666,9 +1679,10 @@
       "unit_name": "can"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US That Pet Place page prints exact UPC 019014013319, ingredients and guaranteed analysis together; existing staged calorie evidence retained rather than guessed.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.thatpetplace.com/Iams-ProActive-Health-Dog-Lamb-Rice-13-oz"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -1676,7 +1690,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Formula campaign 2026-09-21: exact UPC + ingredient statement + GA captured together from That Pet Place. Other web listings show a materially different ingredient generation for the same UPC, so this is treated as version-sensitive and status is not promoted. Existing staged calories were not replaced."
     ],
     "research_status": "needs_physical_label"
   }
