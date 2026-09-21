@@ -701,27 +701,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "6 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Corn Protein Meal, Corn Grits, Ground Whole Grain Corn, Dried Plain Beet Pulp, Powdered Cellulose, Salmon, Brewers Dried Yeast, Sodium Bisulfate, Natural Flavor, Fish Oil (Preserved With Mixed Tocopherols), Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharide, Salt, Calcium Carbonate, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 39,
+      "crude_fat_min_percent": 16,
+      "crude_fiber_max_percent": 7,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.6,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3489,
+      "kcal_per_unit": 355,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "formula_source": "US Chewy complete formula panel captured whole from the discontinued product page.",
     "source_urls": [
       "https://atlaspet.net/products/iams-proactive-health-long-hair-care-dry-cat-food",
-      "https://www.iams.com/products/dry/iams-long-hair-care-chicken-salmon"
+      "https://www.iams.com/products/dry/iams-long-hair-care-chicken-salmon",
+      "https://www.chewy.com/iams-proactive-health-long-hair-care/dp/395049"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -730,7 +762,8 @@
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry cat audit: current IAMS manufacturer page independently confirms Long Hair Care Chicken & Salmon recipe identity and current positioning. Exact 6 lb UPC evidence remains separate."
+      "Dry cat audit: current IAMS manufacturer page independently confirms Long Hair Care Chicken & Salmon recipe identity and current positioning. Exact 6 lb UPC evidence remains separate.",
+      "Formula campaign 2026-09-21: discontinued US Chewy page retains complete Long Hair Care Chicken & Salmon ingredients, GA and calorie panel. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
