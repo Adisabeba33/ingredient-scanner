@@ -1184,27 +1184,89 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "30 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta-Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 26,
+      "crude_fat_min_percent": 11,
+      "crude_fiber_max_percent": 5.5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Crude Fat",
+          "basis": "max",
+          "value": 13.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.15,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Beta-Carotene",
+          "basis": "min",
+          "value": 10,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 1.6,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 350,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 35,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3452,
+      "kcal_per_unit": 347,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
+    "formula_source": "US Chewy complete formula panel captured from one page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
-      "https://www.iams.com/products/dry/iams-healthy-aging-large-breed"
+      "https://www.iams.com/products/dry/iams-healthy-aging-large-breed",
+      "https://www.chewy.com/iams-proactive-health-healthy-aging/dp/46729"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -1215,7 +1277,8 @@
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
-      "Dry audit: current IAMS manufacturer page presents the large-breed senior recipe as Healthy Aging Large Breed Chicken & Whole Grain. Exact staged 30 lb Mature Adult Large Breed UPC remains distributor-era evidence."
+      "Dry audit: current IAMS manufacturer page presents the large-breed senior recipe as Healthy Aging Large Breed Chicken & Whole Grain. Exact staged 30 lb Mature Adult Large Breed UPC remains distributor-era evidence.",
+      "Formula campaign 2026-09-21: Current Chewy Healthy Aging Large Breed panel captured whole; staged Mature Adult Large Breed identity retained. Single-retailer evidence; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1239,27 +1302,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "29.1 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 24,
+      "crude_fat_min_percent": 10.5,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Beta-Carotene",
+          "basis": "min",
+          "value": 10,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 1.6,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3428,
+      "kcal_per_unit": 349,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
+    "formula_source": "US Chewy complete formula panel captured from one page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
-      "https://www.iams.com/products/dry/iams-healthy-aging"
+      "https://www.iams.com/products/dry/iams-healthy-aging",
+      "https://www.chewy.com/iams-proactive-health-healthy-aging/dp/47358"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -1270,7 +1365,8 @@
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
-      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
+      "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1294,27 +1390,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 24,
+      "crude_fat_min_percent": 10.5,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Beta-Carotene",
+          "basis": "min",
+          "value": 10,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 1.6,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3428,
+      "kcal_per_unit": 349,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
+    "formula_source": "US Chewy complete formula panel captured from one page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
-      "https://www.iams.com/products/dry/iams-healthy-aging"
+      "https://www.iams.com/products/dry/iams-healthy-aging",
+      "https://www.chewy.com/iams-proactive-health-healthy-aging/dp/47358"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -1325,7 +1453,8 @@
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
-      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
+      "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1349,27 +1478,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "15 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 24,
+      "crude_fat_min_percent": 10.5,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Beta-Carotene",
+          "basis": "min",
+          "value": 10,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 30,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 1.6,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3428,
+      "kcal_per_unit": 349,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
+    "formula_source": "US Chewy complete formula panel captured from one page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
-      "https://www.iams.com/products/dry/iams-healthy-aging"
+      "https://www.iams.com/products/dry/iams-healthy-aging",
+      "https://www.chewy.com/iams-proactive-health-healthy-aging/dp/47358"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -1380,7 +1541,8 @@
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
-      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
+      "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted."
     ],
     "research_status": "needs_physical_label"
   }
