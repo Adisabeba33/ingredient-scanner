@@ -382,5 +382,15 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **125 UPC records**.
 - Commit: `74fbb6f0d75f5bddc726c7471deda76ba3a7917c`.
 
+
+## Missing-current-UPC sweep 9 — Advanced Health cat
+- Manufacturer-exhibit mining recovered two previously unstaged Advanced Health dry-cat families, six exact UPC-A records total:
+  - Immune Health Chicken & Superfoods: `019014806898` 3 lb; `019014806904` 6 lb; `019014806911` 13 lb.
+  - Healthy Digestion Chicken & Turkey: `019014806928` 3 lb; `019014806935` 6 lb; `019014806942` 13 lb.
+- Mars official exhibit supplies Unit UPC without check digit plus exact product/size. Leading zero/check digit were restored and validated algorithmically; no neighboring-code inference.
+- All six remain `needs_physical_label` until current formula/current-shelf status and complete ingredients/GA/calories/AAFCO/deck are jointly verified.
+- New staged total: **131 UPC records**.
+- Commit: `001ecf2520d6f450f8f8401f5bd19a0c73ab8392`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 125 total incoming records are now staged. ProActive Health Active Chicken & Turkey 7/15/30 lb has been recovered from Mars manufacturer UPC evidence. Continue with Advanced Health cat and any remaining manufacturer-exhibit IAMS rows, while separating historical/recent SKU proof from current-shelf proof.
+Missing-current-UPC sweep is active. 131 total incoming records are now staged. Two Advanced Health cat families (Immune Health and Healthy Digestion) are now staged across 3/6/13 lb. Continue manufacturer-exhibit exhaustion/dedupe before declaring the IAMS UPC discovery ceiling.
