@@ -1519,14 +1519,17 @@
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "UPC 019014025190 is staged as Senior Pâté Slow Cooked Chicken & Rice in distributor evidence, but current US Farm & Home Supply binds the exact UPC to Adult Chunks with Chicken in Gravy. Identity conflict is material and unresolved; do not seed this mapping."
+    ],
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
-      "Formula campaign 2026-09-21: Farm & Home Supply page explicitly prints UPC 019014025190, ingredients and GA together. Calorie value was not visible in the captured source, so existing staged calorie evidence is retained rather than guessed."
+      "Formula campaign 2026-09-21: Farm & Home Supply page explicitly prints UPC 019014025190, ingredients and GA together. Calorie value was not visible in the captured source, so existing staged calorie evidence is retained rather than guessed.",
+      "Final audit 2026-09-21 disposition: REJECTED staged barcode/product mapping. Exact current retailer UPC evidence contradicts the staged Senior Pâté identity. Barcode string was not changed; correct product may be re-staged later only from proven UPC/physical-label evidence."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
