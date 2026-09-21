@@ -1,0 +1,267 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "019014806386",
+    "canonical_gtin14": "00019014806386",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Chicken & Salmon Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Salmon Recipe",
+    "recipe": [
+      "chicken",
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC, recipe and US bag size are bound by the cited US retail listing. Healthy Enjoyment is treated as the printed range. Complete current label evidence is not promoted from secondary feeds.",
+    "source_urls": [
+      "https://feederspetsupply.com/iams-healthy-enjoyment-chicken-salmon-recipe-dry-cat-food-6-lb/"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact 12-digit UPC is displayed with the cited bag size; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Chicken & Salmon remains the current Healthy Enjoyment flavor in major US retail evidence.",
+      "Healthy Enjoyment is not in the old six-range brand-memory list and should be added to taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806416",
+    "canonical_gtin14": "00019014806416",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Chicken & Salmon Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Salmon Recipe",
+    "recipe": [
+      "chicken",
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "15 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC, recipe and US bag size are bound by the cited US retail listing. Healthy Enjoyment is treated as the printed range. Complete current label evidence is not promoted from secondary feeds.",
+    "source_urls": [
+      "https://www.ebay.com/itm/235843029807"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact 12-digit UPC is displayed with the cited bag size; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Chicken & Salmon remains the current Healthy Enjoyment flavor in major US retail evidence.",
+      "Healthy Enjoyment is not in the old six-range brand-memory list and should be added to taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806324",
+    "canonical_gtin14": "00019014806324",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Chicken & Beef Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Beef Recipe",
+    "recipe": [
+      "chicken",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC, recipe and US bag size are bound by the cited US retail listing. Healthy Enjoyment is treated as the printed range. Complete current label evidence is not promoted from secondary feeds.",
+    "source_urls": [
+      "https://store.animalwiz.com/products/iams-proactive-health-healthy-enjoyment-dry-cat-food-chicken-beef-3lb"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact 12-digit UPC is displayed with the cited bag size; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Chicken & Beef is discontinued/being discontinued in 2026 retail evidence; retained as a proven US shelf/history SKU rather than silently dropped.",
+      "Healthy Enjoyment is not in the old six-range brand-memory list and should be added to taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806348",
+    "canonical_gtin14": "00019014806348",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Chicken & Beef Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Beef Recipe",
+    "recipe": [
+      "chicken",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC, recipe and US bag size are bound by the cited US retail listing. Healthy Enjoyment is treated as the printed range. Complete current label evidence is not promoted from secondary feeds.",
+    "source_urls": [
+      "https://k9outdoors.com/products/iams-proactive-health-healthy-enjoyment-dry-cat-food-chicken-beef-1ea-6-lb"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact 12-digit UPC is displayed with the cited bag size; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Chicken & Beef is discontinued/being discontinued in 2026 retail evidence; retained as a proven US shelf/history SKU rather than silently dropped.",
+      "Healthy Enjoyment is not in the old six-range brand-memory list and should be added to taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806362",
+    "canonical_gtin14": "00019014806362",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Chicken & Beef Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Beef Recipe",
+    "recipe": [
+      "chicken",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "15 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC, recipe and US bag size are bound by the cited US retail listing. Healthy Enjoyment is treated as the printed range. Complete current label evidence is not promoted from secondary feeds.",
+    "source_urls": [
+      "https://www.ebay.com/itm/235843300544"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact 12-digit UPC is displayed with the cited bag size; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Chicken & Beef is discontinued/being discontinued in 2026 retail evidence; retained as a proven US shelf/history SKU rather than silently dropped.",
+      "Healthy Enjoyment is not in the old six-range brand-memory list and should be added to taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
