@@ -92,15 +92,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version."
+    ],
     "verification_notes": [
       "Mars qualifying-product evidence names this as IAMS ProActive Health High Protein. It is retained as a proven US SKU even if current shelf status may have changed.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate."
     ],
     "research_status": "needs_physical_label"
   },
@@ -141,15 +145,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version."
+    ],
     "verification_notes": [
       "Mars qualifying-product evidence names this as IAMS ProActive Health High Protein. It is retained as a proven US SKU even if current shelf status may have changed.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate."
     ],
     "research_status": "needs_physical_label"
   },
@@ -190,15 +198,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and retail size are bound by Mars/IAMS qualifying-product evidence or a current US retailer/barcode listing. Complete current label-deck evidence is not inferred from identity-only sources.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to the cited US unit size; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version."
+    ],
     "verification_notes": [
       "Mars qualifying-product evidence names this as IAMS ProActive Health High Protein. It is retained as a proven US SKU even if current shelf status may have changed.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Exact UPC-to-size evidence for this staged bag remains separate."
     ],
     "research_status": "needs_physical_label"
   },
