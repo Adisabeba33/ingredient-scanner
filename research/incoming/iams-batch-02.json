@@ -743,7 +743,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-smart-puppy-small-breed"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -751,7 +752,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Small Breed Chicken & Whole Grain recipe and its current small-breed positioning. Exact staged UPC-to-size binding remains distributor evidence; no neighboring size UPC inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -794,7 +796,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -802,7 +805,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition."
     ],
     "research_status": "needs_physical_label"
   },
@@ -845,7 +849,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -853,7 +858,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition."
     ],
     "research_status": "needs_physical_label"
   },
@@ -896,7 +902,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-smart-puppy-original"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -904,7 +911,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Original Chicken & Whole Grain recipe and puppy growth positioning. Exact UPC-to-size binding remains separate from shared recipe evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -947,7 +955,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-smart-puppy-original"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -955,7 +964,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Original Chicken & Whole Grain recipe and puppy growth positioning. Exact UPC-to-size binding remains separate from shared recipe evidence."
     ],
     "research_status": "needs_physical_label"
   },
