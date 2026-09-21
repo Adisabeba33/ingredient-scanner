@@ -302,5 +302,14 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **103 UPC records**.
 - Commit: `7323a4164dd28e3bd6d17acfa01c6ff0c4813c1f`.
 
+
+## Missing-current-UPC sweep 2 — Advanced Health
+- Added one further exact current US UPC: `019014806805` — **Advanced Health Skin & Coat Chicken & Salmon, 27 lb**. Multiple current specialty-retail sources expose this exact UPC and 27 lb identity; ingredient deck is also available.
+- Staged in Batch 10 as `needs_physical_label`; complete GA/calories/AAFCO remain unresolved in accessible evidence.
+- Current Kroger-family evidence also proves **Advanced Health Immune Health Chicken & Superfoods** exists in 6 lb and 13.5 lb, and Skin & Coat in 13.5 lb. However, those pages expose 13-digit retailer identifier strings that were not blindly normalized into UPC-A records because the exact barcode representation/check-digit mapping was not independently resolved.
+- This is deliberate: existence/size evidence is not enough to create a barcode record under AGENTS rules.
+- New staged total: **104 UPC records**.
+- Commit: `bdd8d0ae062848d1ee377bb9a28854f40ecce8b3`.
+
 ## Stop point
-Missing-current-UPC sweep has started. 103 total incoming records are now staged. Dry identity/currentness audit is complete; next target is exact UPC proof for Beef & Rice 5/7/11 lb, High Protein Adult Dog Chicken & Beef, and newer Advanced Health recipes.
+Missing-current-UPC sweep is active. 104 total incoming records are now staged. Advanced Health has additional proven current sizes, but unresolved retailer identifier normalization must be solved before those become UPC records.
