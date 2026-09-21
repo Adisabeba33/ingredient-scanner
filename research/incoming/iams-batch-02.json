@@ -19,27 +19,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "3.3 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -47,7 +84,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
@@ -71,27 +111,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -99,7 +176,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
@@ -123,27 +203,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "15 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -151,7 +268,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
@@ -175,27 +295,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "30 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -203,7 +360,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
@@ -227,27 +387,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "38.5 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -255,7 +452,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
@@ -279,27 +479,64 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "44 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "ground whole grain corn",
+      "ground whole grain sorghum",
+      "chicken by-product meal",
+      "dried plain beet pulp",
+      "natural flavor",
+      "chicken fat (preserved with mixed tocopherols)",
+      "dried egg product",
+      "caramel color",
+      "potassium chloride",
+      "fructooligosaccharides",
+      "vitamins (vitamin e supplement",
+      "niacin",
+      "d-calcium pantothenate",
+      "vitamin a supplement",
+      "biotin",
+      "thiamine mononitrate (vitamin b1)",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "vitamin b12 supplement",
+      "riboflavin supplement (vitamin b2)",
+      "inositol",
+      "vitamin d3 supplement",
+      "folic acid)",
+      "salt",
+      "choline chloride",
+      "minerals (zinc oxide",
+      "manganese sulfate",
+      "copper sulfate",
+      "potassium iodide)",
+      "calcium carbonate",
+      "rosemary extract"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        "Vitamin E min 60 IU/kg",
+        "Selenium min 0.35 mg/kg",
+        "Omega-6 fatty acids min 2.5%"
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3646,
+      "kcal_per_unit": 380,
       "unit_name": "cup"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/-/A-14910451"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -307,7 +544,10 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
+      "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
     ],
     "research_status": "needs_physical_label"
   },
