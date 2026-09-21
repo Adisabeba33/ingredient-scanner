@@ -44,6 +44,37 @@ any brand here.
 
 ---
 
+## A brand is two campaigns, not one
+
+The Iams campaign taught this and it is now the expected shape. Step 3 above
+is really two jobs with different sources, different failure modes and
+different units of work, and running them as one produces a campaign that is
+90% finished at either end and useful at neither.
+
+**Campaign A — the barcodes.** Prove which code is which product at which
+printed size. Its sources are distributor catalogs, manufacturer UPC exhibits
+and retailer listings. Its unit is the barcode. Iams's ran to 133 records.
+
+**Campaign B — the formulas.** Fill in the ingredient list, the guaranteed
+analysis and the calories. Its sources are retailers that publish panels as
+text, and the maker's own label images. **Its unit is the recipe, not the
+barcode** — one Minichunks panel answers six codes, and Iams's 133 barcodes
+collapse to 63 recipes. `scripts/formula-worklist.mjs` does that collapse and
+prints what is left, which is the difference between 58 pages and 133.
+
+The order matters: A first, because B is a join onto A's proven identities and
+needs nothing more than the recipe and the size to go looking.
+
+What the Iams run cost by not separating them: the campaign spent its whole
+budget on A, reported 133 records and 13 compositions, and never opened
+Chewy, Petco or PetSmart — the three retailers that publish the text it was
+missing. Not because it was careless, but because it was answering the
+barcode question, and on that question those three sites add nothing.
+
+**Write both briefs up front.** A brand is not seeded until B is done.
+
+---
+
 ## The queue
 
 Status is one of: **QUEUED**, **BRIEFED** (assignment written, research not
@@ -57,7 +88,7 @@ once buys the siblings behind it.
 
 | # | Brand | Species | Maker | Status | Why here |
 |---|-------|---------|-------|--------|----------|
-| 1 | **Iams** | both | Mars | **BRIEFED** — `research/BRIEF-IAMS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
+| 1 | **Iams** | both | Mars | **RESEARCHING** — barcodes done (133 records, prefix `019014` proven), formulas open: `research/BRIEF-IAMS-FORMULAS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
 | 2 | **Purina Cat Chow** | cat | Nestlé Purina | QUEUED | The value bag in every supermarket. Purina is the most-travelled maker in this repo — three GS1 prefixes proven, vitamin constants already written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | QUEUED | Same shelf, dogs. Runs straight after #2 on the same prefixes and the same size-ladder rules. |
 | 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
