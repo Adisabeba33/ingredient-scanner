@@ -155,17 +155,21 @@
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-salmon-recipe",
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-salmon-recipe-2-6oz/-/A-52093599"
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-salmon-recipe-2-6oz/-/A-52093599",
+      "https://www.target.com/p/-/A-52093084"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
-    "conflicts": [],
+    "conflicts": [
+      "Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Salmon retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck."
+    ],
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
       "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
       "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
-      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
+      "Audit pass found current-retailer version drift for Salmon. Existing ingredients/GA are retained as captured evidence, but promotion is blocked until a current physical/manufacturer label resolves the formula version."
     ],
     "research_status": "needs_physical_label"
   },
@@ -237,17 +241,21 @@
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-tuna-recipe",
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-tuna-recipe-2-6oz/-/A-52093597"
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-tuna-recipe-2-6oz/-/A-52093597",
+      "https://www.target.com/p/-/A-52093085"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
-    "conflicts": [],
+    "conflicts": [
+      "Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Tuna retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck."
+    ],
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
       "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
       "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
-      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
+      "Audit pass found current-retailer version drift for Tuna. Existing captured panel remains evidence only; current physical/manufacturer label is required to resolve the formula version before promotion."
     ],
     "research_status": "needs_physical_label"
   },
