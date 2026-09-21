@@ -221,5 +221,14 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Batch 5 upgrade `996b01cbe16afb539bae276958aab61f848db3d1`; Batch 3 conflict/GA update `f928331f472c8343008fda723859b39ff7d118eb`.
 - Running staged UPC count remains **101**.
 
+
+## Source-upgrade pass 5 — reformulation audit
+- Audited Healthy Adult Salmon `019014802326` and Tuna `019014802319` against fresh current Target panels. Both show the same warning pattern already found on Chicken: current retailer ingredient/GA snapshots differ from the earlier captured panel evidence. Explicit `conflicts` were added; no cross-snapshot field merging was done.
+- Result: all three core Healthy Adult pâté flavors (Chicken/Salmon/Tuna) now have documented formula-version drift risk and should be resolved from a current physical/manufacturer label before any `source_verified` promotion.
+- Sensitive Digestion & Skin Pâté Turkey `019014808069` gained independent current IAMS manufacturer identity confirmation. The accessible manufacturer page still does not expose the complete ingredients + GA + calories + exact AAFCO statement together, so status remains `needs_physical_label`.
+- Indoor Cuts Salmon `019014803224` and Tuna `019014803231` were audited conservatively: exact US UPC binding retained, but no formula fields were imported from non-US mirrors or neighboring Cuts recipes.
+- Commits: Batch 3 audit `71190e5edd2d10c8d6157008da42a4d0c1d21bef`; Batch 9 audit `9c3343ae64ca7b704075802f469bdf4ca7b84995`.
+- Running staged UPC count remains **101**. This audit is increasingly showing that physical/current manufacturer label capture, rather than more retailer aggregation, is the bottleneck for promotion.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
