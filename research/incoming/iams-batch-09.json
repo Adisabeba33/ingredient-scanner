@@ -46,7 +46,8 @@
     "verification_notes": [
       "Current US retail evidence only; no Canadian or European formula substituted.",
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
-      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
+      "Audit pass retained exact Target UPC binding but did not import formula fields from non-US mirrors or neighboring Cuts recipes. Current complete US deck remains the missing promotion evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -97,7 +98,8 @@
     "verification_notes": [
       "Current US retail evidence only; no Canadian or European formula substituted.",
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
-      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
+      "Audit pass retained exact Target UPC binding but did not import formula fields from non-US mirrors or neighboring Cuts recipes. Current complete US deck remains the missing promotion evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -293,7 +295,8 @@
     "label_deck_code": null,
     "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
     "source_urls": [
-      "https://www.target.com/p/-/A-94414989"
+      "https://www.target.com/p/-/A-94414989",
+      "https://www.iams.com/products/wet/iams-perfect-portions-sensitive-digestion-skin-pate-turkey-recipe"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
@@ -301,7 +304,8 @@
     "verification_notes": [
       "Current US retail evidence only; no Canadian or European formula substituted.",
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
-      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
+      "Current IAMS manufacturer page independently confirms the Sensitive Digestion & Skin Pâté Turkey recipe and Perfect Portions twin-tray positioning. Manufacturer accessible text still does not expose the complete label deck/GA/calorie/AAFCO statement together."
     ],
     "research_status": "needs_physical_label"
   }
