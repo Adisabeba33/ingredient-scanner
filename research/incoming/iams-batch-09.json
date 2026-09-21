@@ -1,0 +1,308 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "019014803224",
+    "canonical_gtin14": "00019014803224",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Indoor Cuts in Gravy Salmon Recipe Wet Cat Food",
+    "variant": "Indoor Cuts in Gravy Salmon Recipe",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-75666102"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014803231",
+    "canonical_gtin14": "00019014803231",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Indoor Cuts in Gravy Tuna Recipe Wet Cat Food",
+    "variant": "Indoor Cuts in Gravy Tuna Recipe",
+    "recipe": [
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-75666103"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014807956",
+    "canonical_gtin14": "00019014807956",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Cuts in Gravy Chicken Recipe Wet Cat Food",
+    "variant": "Cuts in Gravy Chicken Recipe",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94414985"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014807970",
+    "canonical_gtin14": "00019014807970",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Cuts in Gravy Tuna Recipe Wet Cat Food",
+    "variant": "Cuts in Gravy Tuna Recipe",
+    "recipe": [
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94414986"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014807987",
+    "canonical_gtin14": "00019014807987",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Cuts in Gravy Salmon Recipe Wet Cat Food",
+    "variant": "Cuts in Gravy Salmon Recipe",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94414987"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808069",
+    "canonical_gtin14": "00019014808069",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Sensitive Digestion & Skin Pâté Turkey Recipe Wet Cat Food",
+    "variant": "Sensitive Digestion & Skin Pâté Turkey Recipe",
+    "recipe": [
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94414989"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current US retail evidence only; no Canadian or European formula substituted.",
+      "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
+      "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
