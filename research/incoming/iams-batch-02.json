@@ -1333,7 +1333,7 @@
     "presentation": null,
     "package_type": "can",
     "size": "12.3 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Sufficient Water For Processing, Meat By-Products, Chicken, Beef, Chicken Liver, Carrots, Green Beans, Rice, Wheat Flour, Wheat Gluten, Modified Corn Starch, Flax Seed, Dried Plain Beet Pulp, Calcium Carbonate, Carob Bean Gum, Sodium Tripolyphosphate, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Selenium, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Carrageenan, Xanthan Gum, Salt, Dried Yam, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin A Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement), Fish Oil, Yellow #6, Yellow #5.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
       "crude_protein_min_percent": null,
@@ -1350,9 +1350,10 @@
       "unit_name": "can"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US retailer formula evidence for IAMS Chunks with Beef, Rice, Carrots & Green Beans: exact product formula ingredient panel captured; existing staged GA/calorie values retained rather than altered.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.farmandhomesupply.com/iams-proactive-health-adult-chunks-with-beef-rice-carrots-green-beans-in-gravy-wet-dog-food-12-3oz.html"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -1360,7 +1361,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Formula campaign 2026-09-21: exact named Chunks with Beef, Rice, Carrots & Green Beans formula ingredient statement captured from US Farm & Home Supply. Existing staged GA/calorie fields were already present and were not stitched/recomputed. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
