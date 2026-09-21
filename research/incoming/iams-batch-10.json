@@ -310,5 +310,111 @@
       "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830396",
+    "canonical_gtin14": "00019014830396",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Dog Food With Chicken & Beef",
+    "variant": "Chicken & Beef",
+    "recipe": [
+      "Chicken",
+      "Beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "30 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer recipe family plus current Kroger-family exact UPC display for this bag size.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483039",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Retailer explicitly displays 0001901483039 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830396; check digit validates.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
+      "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
+      "Full current label panel still incomplete; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830402",
+    "canonical_gtin14": "00019014830402",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Dog Food With Chicken & Beef",
+    "variant": "Chicken & Beef",
+    "recipe": [
+      "Chicken",
+      "Beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "38.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer recipe family plus current Kroger-family exact UPC display for this bag size.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483040",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Retailer explicitly displays 0001901483040 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830402; check digit validates.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
+      "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
+      "Full current label panel still incomplete; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
