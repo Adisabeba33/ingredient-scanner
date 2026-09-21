@@ -814,12 +814,14 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-minichunks-lamb-rice",
-        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998"
+        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998",
+        "https://www.petco.com/product/iams-proactive-health-high-protein-with-lamb-and-rice-adult-dry-dog-food-30-lbs-2904089"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
       "conflicts": [
-        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked.",
+        "Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal after Soybean Meal, and guarantees Selenium 0.35 mg/kg, Vitamin E 60 IU/kg and Omega-6 1.75%; the stored Chewy panel has a materially different ingredient order/deck and no captured additional guarantees. Do not promote; retain as formula/naming-version conflict pending physical-label resolution."
       ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
@@ -828,7 +830,8 @@
         "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
         "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Chewy panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -899,12 +902,14 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-minichunks-lamb-rice",
-        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998"
+        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998",
+        "https://www.petco.com/product/iams-proactive-health-high-protein-with-lamb-and-rice-adult-dry-dog-food-30-lbs-2904089"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
       "conflicts": [
-        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked.",
+        "Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal after Soybean Meal, and guarantees Selenium 0.35 mg/kg, Vitamin E 60 IU/kg and Omega-6 1.75%; the stored Chewy panel has a materially different ingredient order/deck and no captured additional guarantees. Do not promote; retain as formula/naming-version conflict pending physical-label resolution."
       ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
@@ -913,7 +918,8 @@
         "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
         "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Chewy panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -984,12 +990,14 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-minichunks-lamb-rice",
-        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998"
+        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998",
+        "https://www.petco.com/product/iams-proactive-health-high-protein-with-lamb-and-rice-adult-dry-dog-food-30-lbs-2904089"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
       "conflicts": [
-        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked.",
+        "Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal after Soybean Meal, and guarantees Selenium 0.35 mg/kg, Vitamin E 60 IU/kg and Omega-6 1.75%; the stored Chewy panel has a materially different ingredient order/deck and no captured additional guarantees. Do not promote; retain as formula/naming-version conflict pending physical-label resolution."
       ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
@@ -998,7 +1006,8 @@
         "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
         "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Chewy panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1069,12 +1078,14 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-minichunks-lamb-rice",
-        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998"
+        "https://www.chewy.com/iams-proactive-health-minichunks/dp/171998",
+        "https://www.petco.com/product/iams-proactive-health-high-protein-with-lamb-and-rice-adult-dry-dog-food-30-lbs-2904089"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
       "conflicts": [
-        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+        "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked.",
+        "Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal after Soybean Meal, and guarantees Selenium 0.35 mg/kg, Vitamin E 60 IU/kg and Omega-6 1.75%; the stored Chewy panel has a materially different ingredient order/deck and no captured additional guarantees. Do not promote; retain as formula/naming-version conflict pending physical-label resolution."
       ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
@@ -1083,7 +1094,8 @@
         "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
         "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Chewy panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2231,11 +2243,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2243,7 +2258,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2339,11 +2355,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2351,7 +2370,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2447,11 +2467,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2459,7 +2482,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2555,11 +2579,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2567,7 +2594,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2663,11 +2691,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2675,7 +2706,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2771,11 +2803,14 @@
       "source_urls": [
         "https://www.iams.com/products/dry/iams-minichunks-chicken-whole-grains",
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-        "https://www.target.com/p/-/A-14910451"
+        "https://www.target.com/p/-/A-14910451",
+        "https://www.petco.com/product/iams-proactive-health-minichunks-adult-dog-food-15-lbs-2143339"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identity requires physical-label/version resolution."
+      ],
       "verification_notes": [
         "US evidence only; no EU composition substituted.",
         "Current IAMS manufacturer page confirms ProActive Health Adult Minichunks Chicken & Whole Grain Recipe and its current size ladder; nutrition panels remain image-only in accessible text.",
@@ -2783,7 +2818,8 @@
         "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
         "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
         "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
-        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
+        "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against the stored Target panel; mismatch documented as formula drift, so needs_physical_label is retained."
       ],
       "research_status": "needs_physical_label"
     },
