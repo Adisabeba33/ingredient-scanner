@@ -270,5 +270,16 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Hairball Care Chicken (3.5/7/16 lb) gained current manufacturer recipe-family corroboration.
 - Commits: Batch 4 `96439d9b77ec4520f0446f6e0e36146d9f752c00`; Batch 5 `4bfa659259dbdf9bea281ecdc5fa34b9005fd142`; Batch 3 `097fca454b9ca1285124c06c25eee94ac266e463`.
 
+
+## Dry source-upgrade pass 5 — finish remaining cat-dry families
+- Audited **23 existing dry-cat rows** across Batches 3/5/6/7; running staged count remains **101**.
+- Healthy Adult Original Chicken (3.5/7/16/22 lb), Healthy Kitten (3.5/7 lb), Healthy Senior (3.5/7/16 lb), Healthy Weight (3.5/7 lb), and Sensitive Digestion & Skin 3 lb gained current IAMS manufacturer recipe-family corroboration.
+- Sensitive Digestion & Skin now has manufacturer corroboration across all staged 3/6/13 lb UPCs.
+- High Protein: all five staged sizes now have current IAMS **High Protein Chicken & Salmon** manufacturer corroboration. Because staged distributor identities are generic `High Protein`, each carries a naming/version warning instead of a silent rename.
+- Healthy Enjoyment Chicken & Salmon: all staged 3/6/15 lb UPCs now align with the current IAMS manufacturer size family.
+- Healthy Enjoyment Chicken & Beef (3/6/15 lb) remains a proven recent/historical US SKU, but no current IAMS manufacturer catalog page was found in this pass; all three are explicitly flagged as discontinued/phase-out currentness risk rather than being presented as current shelf.
+- Commits: Batch 3 `1cf19d08437d15289244052cacd77523a3b1d9da`; Batch 5 `2fdd42884e733aa3cddc8d14108f8fa653a34065`; Batch 6 `504c562bf899ca82708807aeb0da7ac67951d594`; Batch 7 `7450209d3d58eb1faebfb911762e8ba4ad682519`.
+- At this point the staged **dry-cat catalog has effectively completed its second-pass identity/currentness audit**. Remaining work is primarily full label-panel completion (ingredients/GA/calories/AAFCO) and any genuinely new UPC discovery, not basic recipe-family identification.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
