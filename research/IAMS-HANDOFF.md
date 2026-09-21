@@ -160,5 +160,14 @@ Batch 7 incoming commit: `8c4a8446d37349e3ceb627549af863d69fa07483`.
 
 Shell remains unavailable; inventory/checker were not run or simulated.
 
+
+## Source-upgrade pass 1 — Perfect Portions
+- Revisited Batch 3 rather than adding new UPCs.
+- Upgraded evidence for three exact Perfect Portions adult twin-tray UPCs: Chicken `019014802296`, Salmon `019014802326`, Tuna `019014802319`.
+- Current US Target product panels were added alongside the existing manufacturer/distributor identity evidence. The staged rows now carry the displayed complete ingredient list, core GA (protein 9% min, fat 5% min, fiber 1.5% max, moisture 78% max) and 38 kcal/serving for these three recipes.
+- **No status inflation:** all three remain `needs_physical_label`. The accessible retailer/manufacturer evidence still does not prove the complete current AAFCO adequacy statement/deck and every printed guarantee together, which AGENTS §10 requires for `source_verified`.
+- Batch 3 evidence-upgrade commit: `be229c45d744d693823082a7d1409acbf10bdf87`.
+- Next upgrade targets: Healthy Kitten `019014802333`, Chicken & Tuna variety pack `019014802364`, then the remaining Perfect Portions adult/indoor variants.
+
 ## Stop point
 Stopped after batch 7 with 92 total incoming records staged. The remaining new-UPC tail is now sparse. Highest-value next work is a source-upgrade pass on the 92 staged records (especially Perfect Portions, where current Target pages expose ingredients/GA) plus targeted searches for any unresolved current size-ladder UPCs.
