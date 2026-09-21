@@ -103,10 +103,21 @@ const LIFE_STAGES = ["adult", "senior", "kitten", "puppy", "all"];
 const STATUSES = [
   "candidate",
   "source_verified",
+  // Everything the catalog needs to ANSWER A SCAN, and not everything the
+  // contract wants. See AGENTS.md §10 — the short version is that the app
+  // serves a row on its composition alone (ingredients.help lib/barcode-serve.ts
+  // asks for a source and text that reads like an ingredient list, and nothing
+  // else), while `source_verified` also demands the panel and the calories. One
+  // gate was doing both jobs, so a record with a settled ingredient list sat
+  // outside the catalog for want of a kcal figure nobody serves.
+  "composition_verified",
   "needs_physical_label",
   "rejected",
   "promoted_to_seed",
 ];
+
+/** The two statuses that assert "somebody established what is in this pack". */
+const VERIFIED = ["source_verified", "composition_verified"];
 const GTIN_LENGTHS = [8, 12, 13, 14];
 const GRAMS_PER_OZ = 28.3495;
 const KCAL_SLACK = 1.3;
@@ -388,19 +399,43 @@ for (const r of records) {
     }
   }
 
-  // ── The status gate, checked rather than promised ────────────────────
-  if (r.research_status === "source_verified") {
-    if (!isBox) {
-      if (!(r.ingredients_verbatim ?? "").trim()) {
-        err(upc, "source_verified with no ingredients_verbatim");
-      }
-      for (const k of ["crude_protein_min_percent", "crude_fat_min_percent", "moisture_max_percent"]) {
-        if (ga?.[k] == null) err(upc, `source_verified with no ${k}`);
-      }
+  // ── The status gates, checked rather than promised ───────────────────
+  //
+  // Both verified statuses need the same IDENTITY: what it is, how big it is,
+  // and where that was read. They differ on the panel, and only on the panel.
+  const status = r.research_status;
+  if (VERIFIED.includes(status)) {
+    if (!isBox && !(r.ingredients_verbatim ?? "").trim()) {
+      err(upc, `${status} with no ingredients_verbatim`);
     }
-    if (!(r.size ?? "").trim()) err(upc, "source_verified with no printed size");
+    if (!(r.size ?? "").trim()) err(upc, `${status} with no printed size`);
     if (!Array.isArray(r.source_urls) || r.source_urls.length === 0) {
-      err(upc, "source_verified with no source_urls");
+      err(upc, `${status} with no source_urls`);
+    }
+  }
+
+  if (status === "source_verified" && !isBox) {
+    for (const k of ["crude_protein_min_percent", "crude_fat_min_percent", "moisture_max_percent"]) {
+      if (ga?.[k] == null) err(upc, `source_verified with no ${k}`);
+    }
+  }
+
+  if (status === "composition_verified") {
+    // The panel is what this status gives up, so a record holding the whole
+    // panel anyway has probably been filed too low — and a status that
+    // understates what was established is a record somebody researches twice.
+    const full =
+      !isBox &&
+      ["crude_protein_min_percent", "crude_fat_min_percent", "moisture_max_percent"]
+        .every((k) => ga?.[k] != null) &&
+      r.calorie_content?.kcal_per_kg != null;
+    if (full) {
+      warn(
+        upc,
+        `composition_verified while carrying the complete panel and calories. ` +
+          `That is the source_verified gate met in full — if something else is ` +
+          `unresolved, say what in conflicts; otherwise raise the status.`
+      );
     }
   }
 
@@ -489,7 +524,7 @@ for (const [, group] of byComposition) {
   if (identities.size > 1) {
     const codes = group.map((r) => r.upc).join(", ");
     const said = group.some((r) => (r.conflicts ?? []).length > 0);
-    const claimsVerified = group.some((r) => r.research_status === "source_verified");
+    const claimsVerified = group.some((r) => VERIFIED.includes(r.research_status));
     // Two narrowings, because a gate that fires wrongly teaches people to
     // write a meaningless conflict note to get past it — which is worse than
     // no gate at all.
@@ -521,7 +556,7 @@ for (const [, group] of byComposition) {
         codes,
         `share one ingredient list to the letter across different names: ` +
           `${[...identities].join("  /  ")}. Not one of them says why in ` +
-          `conflicts, and at least one claims source_verified — which asserts ` +
+          `conflicts, and at least one claims a verified status — which asserts ` +
           `that conflicts are resolved or documented. Either say which it is, ` +
           `or drop the status.`
       );
