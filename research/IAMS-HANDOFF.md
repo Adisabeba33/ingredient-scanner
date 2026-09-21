@@ -93,5 +93,20 @@ European pages rejected as ledger evidence remains 0 counted. Batch 3 incoming c
 
 Shell is still unavailable, so the Node inventory/checker were not run or simulated. All three incoming arrays require shell-enabled merge/check before promotion/seeding.
 
+
+## Batch 4 — evidence-limited tail
+- Staging path: `research/incoming/iams-batch-04.json`.
+- Added: **4 records**, not padded to 20 (running incoming total: **64**).
+- Status: 0 source_verified; 4 needs_physical_label.
+- New exact US units: Sensitive Digestion & Skin 6 lb / 13 lb and Urinary Tract Health with Chicken 3.5 lb / 7 lb.
+- The 2025 ADMC catalog has now been exhausted for new IAMS unit UPCs beyond the 60 already staged plus these four. Its Urinary rows are duplicated at two price points, not four products.
+- The 13 lb Sensitive Digestion row is printed by ADMC as `19014805129` (11 digits). It is staged as `019014805129` only with an explicit conflict: restored leading zero, consistent with the observed IAMS prefix and UPC-A check digit. Physical-pack confirmation remains desirable.
+- Current IAMS manufacturer pages confirm Urinary Tract Health and additional current cat recipes/size ladders (including Healthy Adult Salmon, Indoor Weight & Hairball Care Salmon, Healthy Weight and newer Healthy Enjoyment), but I did **not** manufacture UPCs for those sizes. Retail search results that did not give an unambiguous 12-digit unit UPC were left out rather than used to fill a 20-record quota.
+- This is the first batch intentionally shorter than 20 because the currently strong exact-UPC source is exhausted. Better evidence is required before adding the remaining current shelf.
+
+Batch 4 incoming commit: `bf1b39d3157f6277c47cd9bd0ee4956bb7098f84`.
+
+Shell remains unavailable; inventory/checker were not run or simulated.
+
 ## Stop point
-Stopped after batch 3 with 60 total incoming records staged. Perfect Portions twin-tray scope has now been handled explicitly; next research should continue the remaining IAMS cat dry size ladders/current cat recipes and then assess whether better label evidence can upgrade any needs_physical_label records.
+Stopped after batch 4 with 64 total incoming records staged. The strong distributor UPC source is exhausted; next pass should prioritize alternate US retailer/distributor evidence for the newer cat shelf rather than padding records from ambiguous GTIN displays.
