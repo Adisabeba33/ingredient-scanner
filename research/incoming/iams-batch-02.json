@@ -819,27 +819,71 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Brewers Rice, Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Soybean Meal, Natural Flavor, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Salt, Dicalcium Phosphate, Caramel Color, Carrots, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 18,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.5,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3798,
+      "kcal_per_unit": 454,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-smart-puppy-small-breed"
+      "https://www.iams.com/products/dry/iams-smart-puppy-small-breed",
+      "https://www.chewy.com/iams-proactive-health-small-toy-breed/dp/172001"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -848,7 +892,8 @@
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
-      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Small Breed Chicken & Whole Grain recipe and its current small-breed positioning. Exact staged UPC-to-size binding remains distributor evidence; no neighboring size UPC inferred."
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Small Breed Chicken & Whole Grain recipe and its current small-breed positioning. Exact staged UPC-to-size binding remains distributor evidence; no neighboring size UPC inferred.",
+      "Formula campaign 2026-09-21: Complete current US Chewy Small Breed Puppy panel captured whole. Single-retailer evidence; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
