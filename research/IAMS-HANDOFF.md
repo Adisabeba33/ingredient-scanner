@@ -240,5 +240,14 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Minichunks upgrade `2ed5c8c8f9bc9ca95373f31cde4ef56c31d0c3e6`; Healthy Digestion corroboration `8260d2c6b59418cb32df4c72afa77993a02f1b17`.
 - Dry is proving more efficient than Perfect Portions because one current recipe panel can legitimately support several separately proven bag-size UPCs without conflating barcode identity or inventing per-bag nutrition.
 
+
+## Dry source-upgrade pass 2 — Lamb & Rice + Large Breed
+- Audited 12 existing dry dog UPC rows; running staged UPC count remains **101**.
+- Large Breed Adult Chicken: current IAMS manufacturer page now corroborates all six staged sizes represented across Batches 1/7 (11, 15, 30, 40/44/50 lb where staged) and publishes the broader current ladder **11/15/30/38.5/40/44/50 lb**. Manufacturer also states the recipe is 100% complete and balanced for adults. Exact UPC-to-size evidence remains separate; no missing UPCs were inferred.
+- Adult Lamb & Rice: current IAMS now markets the recipe as **Minichunks Lamb & Rice**, with current sizes **3.3/5/7/11/15/30/38.5/44 lb**. Four staged distributor-era Lamb & Rice rows received an explicit naming/version-transition conflict rather than being silently renamed.
+- Large Breed Lamb & Rice: current IAMS confirms sizes **11/15/30/40 lb** and complete-and-balanced adult positioning. The staged `019014700776` 38.5 lb record is therefore flagged as a likely prior-size/version SKU; `019014805303` 40 lb aligns with the current manufacturer ladder.
+- Nutrition on these manufacturer pages is primarily image-rendered in the accessible representation, so ingredients/GA/calories were **not transcribed from guesses or OCR**. This pass strengthens identity/currentness and surfaces version conflicts rather than fabricating formula completeness.
+- Commits: Batch 1 audit `8f372469080daf1a51a15876e42f944eda6337af`; Batch 7 Large Breed Chicken corroboration `47018a0b752dab4e3df5e565d09c19cba941de05`.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
