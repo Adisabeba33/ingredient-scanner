@@ -179,7 +179,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-urinary-tract-health-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -187,7 +188,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms the Urinary Tract Health Chicken recipe family; exact 16 lb UPC remains independently bound by distributor evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -230,15 +232,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly."
     ],
     "research_status": "needs_physical_label"
   },
@@ -282,15 +288,19 @@
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
-      "https://www.target.com/p/-/A-53371743"
+      "https://www.target.com/p/-/A-53371743",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly."
     ],
     "research_status": "needs_physical_label"
   },
@@ -333,15 +343,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page markets the recipe as Healthy Adult Salmon. The staged distributor-era identity is Healthy Adult Salmon & Tuna; exact UPC-to-size evidence is retained while the naming/formula transition is treated explicitly."
     ],
     "research_status": "needs_physical_label"
   },
@@ -385,7 +399,8 @@
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
       "https://www.ebay.com/itm/165694068926",
-      "https://www.walmart.com/ip/732119170"
+      "https://www.walmart.com/ip/732119170",
+      "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -393,7 +408,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms Indoor Weight & Hairball Care Salmon recipe identity. Exact staged 16 lb UPC remains separately proven; complete label panel is still needed for source_verified."
     ],
     "research_status": "needs_physical_label"
   },
@@ -436,7 +452,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://atlaspet.net/products/iams-proactive-health-long-hair-care-dry-cat-food"
+      "https://atlaspet.net/products/iams-proactive-health-long-hair-care-dry-cat-food",
+      "https://www.iams.com/products/dry/iams-long-hair-care-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -444,7 +461,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page independently confirms Long Hair Care Chicken & Salmon recipe identity and current positioning. Exact 6 lb UPC evidence remains separate."
     ],
     "research_status": "needs_physical_label"
   },
