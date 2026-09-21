@@ -371,5 +371,16 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **122 UPC records**.
 - Commit: `0fe774eb35061476b102cd58c3fc0f6c8a8a57ce`.
 
+
+## Missing-current-UPC sweep 8 — ProActive Health Active
+- Continued the Mars manufacturer exhibit and recovered three **ProActive Health Active Chicken & Turkey** dry-dog records:
+  - `019014805884` — 7 lb.
+  - `019014805891` — 15 lb.
+  - `019014805907` — 30 lb.
+- Exact product/size bindings come from Mars's Unit UPC-without-check-digit exhibit; UPC-A check digits were restored/validated algorithmically, with no adjacent-SKU inference.
+- These are staged conservatively as `needs_physical_label`: the manufacturer exhibit proves barcode identity, but complete current formula/GA/calories/AAFCO plus present-day catalog status are not jointly established.
+- New staged total: **125 UPC records**.
+- Commit: `74fbb6f0d75f5bddc726c7471deda76ba3a7917c`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 122 total incoming records are now staged. Advanced Health Mobility Support 6/13.5/27/36 lb is now staged from manufacturer UPC evidence. Continue mining manufacturer exhibits for Active and Advanced Health cat families, deduping against Batches 1–10.
+Missing-current-UPC sweep is active. 125 total incoming records are now staged. ProActive Health Active Chicken & Turkey 7/15/30 lb has been recovered from Mars manufacturer UPC evidence. Continue with Advanced Health cat and any remaining manufacturer-exhibit IAMS rows, while separating historical/recent SKU proof from current-shelf proof.
