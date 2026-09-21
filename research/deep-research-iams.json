@@ -10027,7 +10027,8 @@
         "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
         "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: 40 lb Adult Large Breed Chicken has complete Chewy formula evidence plus manufacturer/identity support, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10149,7 +10150,8 @@
         "Dry audit: current IAMS manufacturer page includes this bag size in the Large Breed Adult Chicken & Whole Grain ladder (11/15/30/38.5/40/44/50 lb) and states complete and balanced adult nutrition.",
         "Exact UPC-to-size evidence remains separate from the shared recipe evidence; no neighboring UPCs were inferred.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: 50 lb Adult Large Breed Chicken has complete Chewy formula evidence; UPCItemDB is identity evidence rather than an independent formula panel. No qualifying second whole-panel retailer witness was established; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10283,7 +10285,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
         "Dry audit: current IAMS manufacturer page independently confirms the Smart Puppy Large Breed Chicken & Whole Grain recipe. The staged 11 lb UPC is retained as exact retail-size evidence; no formula values were transcribed from image-only nutrition.",
         "Formula campaign 2026-09-21: complete Large Breed Puppy Chicken panel captured from one current US Chewy page. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: 11 lb Smart Puppy Large Breed Chicken has a complete Chewy panel plus manufacturer identity evidence, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10386,7 +10389,8 @@
       "verification_notes": [
         "Current Target panel provides ingredients and extended GA including ash, calcium, potassium, vitamin E and taurine. Calories and complete AAFCO adequacy/deck are still not exposed together, so it remains needs_physical_label.",
         "US evidence only; no Canadian/EU formula substituted.",
-        "Final audit 2026-09-21: converted Calcium, Potassium and Vitamin E guarantees from legacy strings to structured objects; values unchanged."
+        "Final audit 2026-09-21: converted Calcium, Potassium and Vitamin E guarantees from legacy strings to structured objects; values unchanged.",
+        "Corroboration pass 2026-09-21: Indoor Cuts in Gravy Chicken currently has a Target ingredient/GA panel but no complete calorie statement and no qualifying second whole-panel witness. Formula remains incomplete under the corroboration brief; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10411,7 +10415,7 @@
       "presentation": "in_gravy",
       "package_type": "box",
       "size": "12 x 2.6 oz",
-      "ingredients_verbatim": "INDOOR TUNA RECIPE: Water, Chicken, Tuna, Chicken Liver, Meat By-Products, Tapioca Starch, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Glycine, Sodium Tripolyphosphate, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Salt, Natural Flavor, Magnesium Sulfate, Xanthan Gum, Choline Chloride, Taurine, Fructooligosaccharides, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Guar Gum, Zinc Sulfate, Iron Oxide Color, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source of Vitamin K).\nINDOOR SALMON RECIPE: Water, Chicken, Salmon, Chicken Liver, Meat By-Products, Tapioca Starch, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Glycine, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Salt, Natural Flavor, Magnesium Sulfate, Xanthan Gum, Sodium Tripolyphosphate, Choline Chloride, Taurine, Fructooligosaccharides, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Guar Gum, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source of Vitamin K).",
+      "ingredients_verbatim": "",
       "ingredients_ordered_normalized": [],
       "guaranteed_analysis": {
         "crude_protein_min_percent": 10,
@@ -10449,7 +10453,8 @@
         "US evidence only; no Canadian/EU formula substituted.",
         "Formula campaign 2026-09-21: Target US explicitly prints UPC 019014802708 and separate Salmon/Tuna GA panels (each protein 10%, fat 4%, fiber 1%, moisture 82%, ash 3.5%, vitamin E 80 IU/kg, taurine 0.06%). The page establishes the exact variety-pack identity and separate recipe panels. Ingredient text was not fully exposed in the retrieved page, so this record remains unresolved for exact verbatim ingredients and is not counted as closed.",
         "Formula campaign 2026-09-21 closure: Target explicitly binds UPC 019014802708 to the Indoor Tuna + Salmon Cuts in Gravy variety pack and prints separate matching GA panels. PetSmart exposes complete ingredient statements, GA, and calories for both recipes; official IAMS independently confirms this exact two-recipe variety. Recipes remain explicitly separated in ingredients/calorie text. Status not promoted because the full panel is distributed across identity and formula sources rather than one UPC-bearing label page.",
-        "Panel scope: the retailer prints one guaranteed analysis covering BOTH the Indoor Tuna and Indoor Salmon recipes in this variety pack. Recorded here rather than in other_printed_guarantees, which takes printed nutrient guarantees only ({nutrient, basis: min|max, value: number, unit}) and cannot hold a scope note. The two recipes still need their own panels before promotion."
+        "Panel scope: the retailer prints one guaranteed analysis covering BOTH the Indoor Tuna and Indoor Salmon recipes in this variety pack. Recorded here rather than in other_printed_guarantees, which takes printed nutrient guarantees only ({nutrient, basis: min|max, value: number, unit}) and cannot hold a scope note. The two recipes still need their own panels before promotion.",
+        "Corroboration/side-question pass 2026-09-21: this UPC is an Indoor Salmon & Tuna variety-pack box rather than one recipe. Per BRIEF-IAMS-CORROBORATION, box-level ingredient fields were cleared; component Tuna and Salmon formula panels belong on their individual recipe records. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10502,7 +10507,8 @@
       "verification_notes": [
         "Current Target evidence proves the multipack identity. Per-recipe panels are only partial/incomplete in accessible text; no synthetic merged formula was created.",
         "US evidence only; no Canadian/EU formula substituted.",
-        "Formula campaign 2026-09-21 final online pass: Target current page explicitly binds UPC 019014807963 to the Chicken/Tuna/Salmon Cuts in Gravy multipack, but the same page contains internally inconsistent merchandising text (its Highlights describe a pâté Chicken/Salmon assortment while Description says cuts in gravy chicken, tuna or salmon). Because a complete three-recipe ingredient/GA/calorie deck tied to this UPC is not exposed, do not synthesize the formula; physical-label capture required."
+        "Formula campaign 2026-09-21 final online pass: Target current page explicitly binds UPC 019014807963 to the Chicken/Tuna/Salmon Cuts in Gravy multipack, but the same page contains internally inconsistent merchandising text (its Highlights describe a pâté Chicken/Salmon assortment while Description says cuts in gravy chicken, tuna or salmon). Because a complete three-recipe ingredient/GA/calorie deck tied to this UPC is not exposed, do not synthesize the formula; physical-label capture required.",
+        "Corroboration pass 2026-09-21: 24-count Cuts in Gravy Chicken/Tuna/Salmon is a variety-pack identity record with no box-level composition. Target establishes the pack identity only; no single formula panel should be attached. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10614,7 +10620,8 @@
         "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
         "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
         "Audit pass retained exact Target UPC binding but did not import formula fields from non-US mirrors or neighboring Cuts recipes. Current complete US deck remains the missing promotion evidence.",
-        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied."
+        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied.",
+        "Corroboration pass 2026-09-21: Indoor Cuts in Gravy Tuna has Target/IAMS/Chewy identity evidence but the ledger still lacks a proven complete formula panel. Corroboration cannot promote a record without ingredients, full GA and calories; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10668,7 +10675,8 @@
         "Current US retail evidence only; no Canadian or European formula substituted.",
         "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
         "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
-        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied."
+        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied.",
+        "Corroboration pass 2026-09-21: Cuts in Gravy Chicken has Target/IAMS/Chewy identity evidence but no proven complete formula panel in the ledger. Retain needs_physical_label pending full ingredient + GA + calorie evidence."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10722,7 +10730,8 @@
         "Current US retail evidence only; no Canadian or European formula substituted.",
         "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
         "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
-        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied."
+        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied.",
+        "Corroboration pass 2026-09-21: Cuts in Gravy Tuna has Target/IAMS/Chewy identity evidence but no proven complete formula panel in the ledger. Retain needs_physical_label pending full ingredient + GA + calorie evidence."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10776,7 +10785,8 @@
         "Current US retail evidence only; no Canadian or European formula substituted.",
         "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
         "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
-        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied."
+        "Formula campaign 2026-09-21 deep tail pass: official IAMS and US Chewy product pages independently establish the named Cuts in Gravy recipe family, but accessible evidence still does not prove a complete verbatim panel tied to this exact staged UPC. Record intentionally remains needs_physical_label; no neighboring recipe/formula was copied.",
+        "Corroboration pass 2026-09-21: Cuts in Gravy Salmon has Target/IAMS/Chewy identity evidence but no proven complete formula panel in the ledger. Retain needs_physical_label pending full ingredient + GA + calorie evidence."
       ],
       "research_status": "needs_physical_label"
     },
