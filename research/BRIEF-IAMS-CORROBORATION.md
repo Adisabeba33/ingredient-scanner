@@ -29,11 +29,16 @@ left to merge. The numbers:
 | With a complete panel — ingredients, analysis and calories | **114** |
 | Distinct recipes behind them | **63** |
 | Recipes with a complete panel | **47** |
-| **Of those, already carrying two or more independent retail sources** | **7** |
-| **Of those, resting on a single retailer** | **40** |
+| **Of those, corroborated by two or more shops** | **11** |
+| **Of those, resting on a single shop** | **36** |
 | `source_verified` | **0** |
 
-**Those 40 recipes are the whole assignment.**
+**The worklist has a section for each of those two.** "Needs a second witness"
+is the whole assignment; "Corroborated" is ready to promote once you have
+checked the two panels actually match.
+
+Regenerate before you start and trust the file over these numbers — they are
+correct the day this was written and wrong the day somebody captures a page.
 
 ---
 
@@ -86,8 +91,7 @@ repository has actually used, and the Iams records sit one page short of it.
 
 ## 3. What you are doing
 
-For each of the **40 recipes** in the worklist that has a complete panel from
-one retailer only:
+For each recipe under **"Needs a second witness"** in the worklist:
 
 1. **Open a second, independent retail page** for the same recipe.
    Chewy is usually the one already held, so go to **Petco**, **Target** or

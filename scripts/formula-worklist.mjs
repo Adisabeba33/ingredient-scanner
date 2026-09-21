@@ -73,17 +73,51 @@ const hasAnalysis = (r) => r.guaranteed_analysis?.crude_protein_min_percent != n
 const hasCalories = (r) =>
   r.calorie_content?.kcal_per_kg != null || r.calorie_content?.kcal_per_unit != null;
 
+/**
+ * Retail hosts that publish a full nutrition panel as text.
+ *
+ * This list is what "a second independent source" is counted against, and it
+ * is deliberately only shops. A manufacturer page outranks all of them
+ * (AGENTS.md §6) and is better evidence, not worse — but iams.com renders its
+ * panels as images, so it appears in almost every Iams record as IDENTITY
+ * evidence while proving nothing about the formula. Counting it would report
+ * a second witness that nobody read. Distributor price lists (admc.us) and
+ * the makers' UPC exhibits bind a code to a size and print no formula at all.
+ *
+ * So a recipe "has two sources" here when two different shops carry the panel.
+ * A transcribed manufacturer image is stronger and is not automatic: say so in
+ * verification_notes and promote on that.
+ */
+const RETAIL_PANEL_HOSTS = new Set([
+  "chewy.com", "petco.com", "petsmart.com", "target.com", "walmart.com",
+  "kroger.com", "samsclub.com", "instacart.com", "heb.com", "tractorsupply.com",
+  "brickseek.com", "farmandhomesupply.com", "coastalcountry.com",
+  "feederspetsupply.com", "k9outdoors.com", "store.animalwiz.com",
+]);
+
+const hostOf = (url) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+};
+
 const recipes = new Map();
 for (const r of records) {
   const key = recipeKey(r);
   if (!recipes.has(key)) {
-    recipes.set(key, { key, rows: [], ingredients: 0, analysis: 0, calories: 0 });
+    recipes.set(key, { key, rows: [], ingredients: 0, analysis: 0, calories: 0, shops: new Set() });
   }
   const recipe = recipes.get(key);
   recipe.rows.push(r);
   if (hasIngredients(r)) recipe.ingredients++;
   if (hasAnalysis(r)) recipe.analysis++;
   if (hasCalories(r)) recipe.calories++;
+  for (const url of r.source_urls ?? []) {
+    const host = hostOf(url);
+    if (host && RETAIL_PANEL_HOSTS.has(host)) recipe.shops.add(host);
+  }
 }
 
 const all = [...recipes.values()].sort(
@@ -92,6 +126,8 @@ const all = [...recipes.values()].sort(
 const missing = all.filter((r) => r.ingredients === 0);
 const partial = all.filter((r) => r.ingredients > 0 && (r.analysis === 0 || r.calories === 0));
 const done = all.filter((r) => r.ingredients > 0 && r.analysis > 0 && r.calories > 0);
+const oneWitness = done.filter((r) => r.shops.size < 2);
+const corroborated = done.filter((r) => r.shops.size >= 2);
 
 const brands = [...new Set(records.map((r) => r.brand))].join(", ");
 const line = (r) => `${r.size ?? "?"}`;
@@ -107,12 +143,15 @@ console.log();
 console.log(`- Barcode records: **${records.length}**`);
 console.log(`- Distinct recipes behind them: **${all.length}**`);
 console.log(`- Recipes with a complete panel (ingredients + analysis + calories): **${done.length}**`);
+console.log(`  - of those, corroborated by two or more shops: **${corroborated.length}**`);
+console.log(`  - of those, resting on a single shop: **${oneWitness.length}**`);
 console.log(`- Recipes with a partial panel: **${partial.length}**`);
 console.log(`- Recipes with no ingredients at all: **${missing.length}**`);
 console.log();
 console.log(
   `One panel answers every barcode listed beside it. The whole point of this ` +
-    `page is that the work is ${missing.length + partial.length} panels, not ${records.length} pages.`,
+    `page is that the work is ${missing.length + partial.length} panels, not ${records.length} pages ` +
+    `— plus ${oneWitness.length} recipes that need a second witness rather than a new panel.`,
 );
 
 const section = (title, note, list) => {
@@ -122,8 +161,8 @@ const section = (title, note, list) => {
   console.log();
   console.log(note);
   console.log();
-  console.log("| n | species | range | recipe | have | the barcodes one panel answers |");
-  console.log("|---:|---|---|---|---|---|");
+  console.log("| n | species | range | recipe | have | shops carrying it | the barcodes one panel answers |");
+  console.log("|---:|---|---|---|---|---|---|");
   for (const recipe of list) {
     const [species, range, variant] = recipe.key.split(" | ");
     const have = [
@@ -132,8 +171,9 @@ const section = (title, note, list) => {
       recipe.calories > 0 ? "calories" : null,
     ].filter(Boolean);
     const codes = recipe.rows.map((r) => `\`${r.upc}\` ${line(r)}`).join("<br>");
+    const shops = recipe.shops.size ? [...recipe.shops].sort().join(", ") : "—";
     console.log(
-      `| ${recipe.rows.length} | ${species} | ${range} | ${variant} | ${have.join(" + ") || "**none**"} | ${codes} |`,
+      `| ${recipe.rows.length} | ${species} | ${range} | ${variant} | ${have.join(" + ") || "**none**"} | ${shops} | ${codes} |`,
     );
   }
 };
@@ -149,7 +189,17 @@ section(
   partial,
 );
 section(
-  "Complete — do not research these again",
-  "Ingredients, guaranteed analysis and calories are all present on at least one barcode of the recipe. Check the rest of the recipe's barcodes carry the same panel before calling it done.",
-  done,
+  "Needs a second witness — the panel is complete, one shop carries it",
+  "**No new research.** Every one of these has ingredients, guaranteed analysis and calories " +
+    "already, from a single shop. Open a SECOND shop's page for the same recipe, compare the " +
+    "panel field by field, and promote to `source_verified` if they agree — or record the " +
+    "disagreement in `conflicts` and leave it at `needs_physical_label` if they do not. " +
+    "A manufacturer panel transcribed from an image counts and outranks both; say so in " +
+    "`verification_notes`.",
+  oneWitness,
+);
+section(
+  "Corroborated — two shops already agree",
+  "Ready to promote per record, once you have checked the two panels actually match. Nothing to fetch.",
+  corroborated,
 );
