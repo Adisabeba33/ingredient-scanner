@@ -765,27 +765,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "3.5 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3750,
+      "kcal_per_unit": 377,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
+      "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -794,7 +826,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -818,27 +851,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3750,
+      "kcal_per_unit": 377,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
+      "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -847,7 +912,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -871,27 +937,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "16 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3750,
+      "kcal_per_unit": 377,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
+      "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -900,7 +998,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
@@ -924,27 +1023,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "22 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 15,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "%"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 80,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3750,
+      "kcal_per_unit": 377,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US Chewy product page: complete ingredient statement, guaranteed analysis, and calorie panel captured as one retailer panel. Single-retailer panel remains needs_physical_label pending an independent match or manufacturer-label confirmation.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
+      "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -953,7 +1084,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
