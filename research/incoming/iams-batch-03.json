@@ -19,27 +19,54 @@
     "presentation": "plain",
     "package_type": "tray",
     "size": "2.6 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "chicken broth",
+      "chicken liver",
+      "dried egg product",
+      "natural flavor",
+      "fish oil",
+      "calcium carbonate",
+      "guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "carrageenan",
+      "choline chloride",
+      "taurine",
+      "salt",
+      "thiamine mononitrate",
+      "vitamin e supplement",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "manganese sulfate",
+      "copper sulfate",
+      "sodium selenite",
+      "potassium iodide",
+      "vitamin d3 supplement",
+      "folic acid",
+      "vitamin b12 supplement"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
       "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_unit": 38,
       "unit_name": "serving"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-chicken-recipe",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-chicken-recipe-2-6oz/-/A-52093596"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -47,7 +74,9 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
     ],
     "research_status": "needs_physical_label"
   },
@@ -71,27 +100,55 @@
     "presentation": "plain",
     "package_type": "tray",
     "size": "2.6 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Salmon, Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.",
+    "ingredients_ordered_normalized": [
+      "salmon",
+      "chicken",
+      "chicken broth",
+      "chicken liver",
+      "dried egg product",
+      "natural flavor",
+      "fish oil",
+      "calcium carbonate",
+      "guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "carrageenan",
+      "choline chloride",
+      "taurine",
+      "salt",
+      "thiamine mononitrate",
+      "vitamin e supplement",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "manganese sulfate",
+      "copper sulfate",
+      "sodium selenite",
+      "potassium iodide",
+      "vitamin d3 supplement",
+      "folic acid",
+      "vitamin b12 supplement"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
       "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_unit": 38,
       "unit_name": "serving"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-salmon-recipe",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-salmon-recipe-2-6oz/-/A-52093599"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -99,7 +156,9 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
     ],
     "research_status": "needs_physical_label"
   },
@@ -123,27 +182,55 @@
     "presentation": "plain",
     "package_type": "tray",
     "size": "2.6 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Tuna, Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.",
+    "ingredients_ordered_normalized": [
+      "tuna",
+      "chicken",
+      "chicken broth",
+      "chicken liver",
+      "dried egg product",
+      "natural flavor",
+      "fish oil",
+      "calcium carbonate",
+      "guar gum",
+      "potassium chloride",
+      "magnesium sulfate",
+      "carrageenan",
+      "choline chloride",
+      "taurine",
+      "salt",
+      "thiamine mononitrate",
+      "vitamin e supplement",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "manganese sulfate",
+      "copper sulfate",
+      "sodium selenite",
+      "potassium iodide",
+      "vitamin d3 supplement",
+      "folic acid",
+      "vitamin b12 supplement"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
       "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_unit": 38,
       "unit_name": "serving"
     },
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds the UPC to a 2.6 oz Perfect Portions retail unit. Current IAMS pages describe Perfect Portions as a twin easy-peel tray containing two individual meals/servings; readable nutrition panels remain image-only, so calories and the exact serving weight are not transcribed.",
     "source_urls": [
       "https://www.iams.com/products/wet/iams-perfect-portions-healthy-adult-pate-tuna-recipe",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.target.com/p/iams-perfect-portions-healthy-adult-grain-free-wet-cat-food-pate-tuna-recipe-2-6oz/-/A-52093597"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC lists this UPC as a 2.6 oz unit and 24 units/case. The record treats the barcode as the retail twin-tray unit, not as one snapped half and not as the case code.",
@@ -151,7 +238,9 @@
     "verification_notes": [
       "Perfect Portions trap handled explicitly: printed retail-unit size is 2.6 oz; the package contains two individual servings. Calorie unit is therefore 'serving', but no numeric calories or serving ounces are inferred without a readable current panel.",
       "US evidence only; no European formula substituted.",
-      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
+      "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
+      "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met."
     ],
     "research_status": "needs_physical_label"
   },
