@@ -61,9 +61,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -87,7 +102,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
@@ -153,9 +169,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -179,7 +210,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
@@ -245,9 +277,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -271,7 +318,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
@@ -337,9 +385,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -363,7 +426,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
@@ -429,9 +493,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -455,7 +534,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
@@ -521,9 +601,24 @@
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 60 IU/kg",
-        "Selenium min 0.35 mg/kg",
-        "Omega-6 fatty acids min 2.5%"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
@@ -547,7 +642,8 @@
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
       "Dry audit pass bound this size UPC to the shared current US Minichunks Chicken & Whole Grains recipe. Current manufacturer/retailer panels provide the recipe ingredients, GA and 3,646 kcal/kg / 380 kcal/cup.",
       "Same recipe panel is intentionally reused across proven bag-size UPCs; no per-bag calories were manufactured.",
-      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC."
+      "Still needs_physical_label because the exact current AAFCO adequacy/deck and all label-version details are not proven together for this size UPC.",
+      "Final audit 2026-09-21: converted three printed guarantees from legacy strings to structured nutrient/basis/value/unit objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
