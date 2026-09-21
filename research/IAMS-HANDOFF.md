@@ -345,5 +345,18 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **111 UPC records**.
 - Commit: `a84aecdfae5c99e8a5e641546a72993823ba6807`.
 
+
+## Missing-current-UPC sweep 6 — Advanced Health manufacturer recovery
+- Major source improvement: Mars Petcare US 2024 IAMS Checkup Challenge official participating-product exhibit explicitly publishes **Unit UPC (without check digit)** plus exact product and bag size.
+- This allowed safe UPC-A reconstruction by restoring the standard leading zero and computing the UPC-A check digit from the manufacturer-supplied body. This is manufacturer-backed barcode reconstruction, not neighboring-SKU inference.
+- Added **7 exact records**:
+  - Skin & Coat Chicken & Salmon: `019014806768` 6 lb; `019014806782` 13.5 lb; `019014806812` 36 lb.
+  - Immune Health Chicken & Superfoods: `019014806638` 6 lb; `019014806669` 13.5 lb; `019014806676` 27 lb; `019014806683` 36 lb.
+- Existing Skin & Coat `019014806805` 27 lb completes that official 6/13.5/27/36 lb ladder.
+- Immune Health now has its official 6/13.5/27/36 lb ladder fully represented.
+- All remain `needs_physical_label` pending complete current label panels.
+- New staged total: **118 UPC records**.
+- Commit: `867d8020be173fe4a961a1db9bd6922f883d79e0`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 111 total incoming records are now staged. Beef & Rice current 5/7/11/15/30 lb ladder and High Protein Chicken & Beef 5/15/30/38.5 lb ladder are now closed with exact UPC-A records. Next priority: Advanced Health unresolved sizes/current recipes.
+Missing-current-UPC sweep is active. 118 total incoming records are now staged. Advanced Health Skin & Coat and Immune Health current 6/13.5/27/36 lb ladders are now closed from Mars manufacturer UPC evidence. Next: mine the same Mars exhibit for additional IAMS families not yet staged (notably Mobility Support, Active, and Advanced Health cat).
