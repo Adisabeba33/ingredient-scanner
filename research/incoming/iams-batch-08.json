@@ -62,9 +62,24 @@
       "ash_max_percent": 3.54,
       "taurine_min_percent": 0.06,
       "other_printed_guarantees": [
-        "Calcium min 0.25%",
-        "Potassium min 0.2%",
-        "Vitamin E min 80 IU/kg"
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        }
       ]
     },
     "calorie_content": {
@@ -82,7 +97,8 @@
     "conflicts": [],
     "verification_notes": [
       "Current Target panel provides ingredients and extended GA including ash, calcium, potassium, vitamin E and taurine. Calories and complete AAFCO adequacy/deck are still not exposed together, so it remains needs_physical_label.",
-      "US evidence only; no Canadian/EU formula substituted."
+      "US evidence only; no Canadian/EU formula substituted.",
+      "Final audit 2026-09-21: converted Calcium, Potassium and Vitamin E guarantees from legacy strings to structured objects; values unchanged."
     ],
     "research_status": "needs_physical_label"
   },
