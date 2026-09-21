@@ -333,5 +333,17 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **108 UPC records**.
 - Commit: `0b03c4d302508e3c42ff3d33f555c3a66a680e7a`.
 
+
+## Missing-current-UPC sweep 5 — Beef & Rice ladder closed
+- Recovered the remaining exact current UPC-A records for **Adult Minichunks Beef & Rice**:
+  - `019014808120` — 5 lb.
+  - `019014808137` — 7 lb.
+  - `019014808144` — 11 lb.
+- Retailer padded UPC representations were normalized only by removing the single left padding zero; each resulting UPC-A passes its check digit. This is exact retailer UPC-to-size evidence, not sequence inference.
+- Together with previously staged `019014808168` 15 lb and `019014808151` 30 lb, the current IAMS manufacturer-listed **5/7/11/15/30 lb** Beef & Rice ladder is now fully represented with exact UPCs.
+- All five remain `needs_physical_label` until complete current GA/calories/AAFCO/deck evidence is jointly proven.
+- New staged total: **111 UPC records**.
+- Commit: `a84aecdfae5c99e8a5e641546a72993823ba6807`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 108 total incoming records are now staged. High Protein Chicken & Beef current 5/15/30/38.5 lb ladder is now closed with exact UPC-A records; next priority is Beef & Rice 5/7/11 lb and Advanced Health unresolved sizes.
+Missing-current-UPC sweep is active. 111 total incoming records are now staged. Beef & Rice current 5/7/11/15/30 lb ladder and High Protein Chicken & Beef 5/15/30/38.5 lb ladder are now closed with exact UPC-A records. Next priority: Advanced Health unresolved sizes/current recipes.
