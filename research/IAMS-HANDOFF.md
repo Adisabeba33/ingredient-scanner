@@ -47,5 +47,31 @@ Incoming batch commit: `41fea1eb26f62e53a3a60181c622a924ab40b8ec`.
 3. Zero records were marked source_verified because the complete current formula/GA/calorie evidence required by AGENTS §10 was not readable/proven. This is deliberate.
 4. No GS1 prefix file or brand-line file was edited because the assignment says research staging only.
 
+
+
+## Batch 2
+- Staging path: `research/incoming/iams-batch-02.json`.
+- Added: 20 records (running incoming total: 40).
+- Status this batch: 0 source_verified; 20 needs_physical_label.
+- Scope: 14 additional ProActive Health dry bags plus 6 ProActive Health wet dog units.
+- Current IAMS manufacturer evidence directly confirms that **Minichunks is presented under ProActive Health** and describes Minichunks as the smaller kibble; it should not be treated as a peer product_line to ProActive Health.
+- The current IAMS Minichunks page exposes a broader size ladder (3.3, 5, 7, 11, 15, 30, 38.5, 40, 44, 50 lb), but only sizes with separately proven UPCs were staged.
+- ADMC evidence also surfaced additional puppy, small-breed and wet-food identities with exact UPC + unit size.
+
+### Batch 2 UPCs
+019014610860, 019014711086, 019014610907, 019014700714, 019014700769,
+019014805020, 019014700691, 019014803446, 019014803453, 019014803378,
+019014610945, 019014700738, 019014711109, 019014704200, 019014025206,
+019014025190, 019014013302, 019014013326, 019014013296, 019014013319.
+
+### Batch 2 evidence notes
+The six wet records above are dog wet food, not Perfect Portions. Perfect Portions research found six exact 2.6 oz cat UPCs in the same US distributor source (Chicken 019014802296, Salmon 019014802326, Tuna 019014802319, Indoor Salmon 019014802340, Indoor Turkey 019014802302, Optimal Metabolism Chicken 019014802357), and the current IAMS Tuna page confirms the twin easy-peel/two-individual-meals construction. They are deliberately reserved for the next batch so the tray/portion/barcode-scope question can be handled explicitly rather than mixed into this batch.
+
+European pages rejected as ledger evidence remains 0 counted; no EU composition was used.
+
+Batch 2 incoming commit: `86d9509a11b9b58d21e27744e0ad5cc53c16dba8`.
+
+As in batch 1, this environment still has no shell. The Node inventory/checker were not run or simulated; both incoming arrays require a shell-enabled merge/check pass before promotion or seeding.
+
 ## Stop point
-Stopped after exactly batch 1 (20 records), as requested. The next pass should be shell-enabled merge/validation first; only after that should research continue to Perfect Portions.
+Stopped after batch 2 with 40 total incoming records staged. Next research target is Perfect Portions, with six exact US UPCs already isolated for explicit twin-tray/portion-scope handling.
