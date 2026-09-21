@@ -294,7 +294,26 @@
     "package_type": "tray",
     "size": "2.6 oz",
     "ingredients_verbatim": "Turkey, Water, Beef Liver, Meat Broth, Whitefish, Dried Plain Beet Pulp, Minerals, Dried Egg Product, Guar Gum, Sodium Tripolyphosphate, Vitamins, Fish Oil, Carrageenan, Taurine, Tapioca Starch, Dl-Methionine, Fructooligosaccharide, Salt.",
-    "ingredients_ordered_normalized": [],
+    "ingredients_ordered_normalized": [
+      "Turkey",
+      "Water",
+      "Beef Liver",
+      "Meat Broth",
+      "Whitefish",
+      "Dried Plain Beet Pulp",
+      "Minerals",
+      "Dried Egg Product",
+      "Guar Gum",
+      "Sodium Tripolyphosphate",
+      "Vitamins",
+      "Fish Oil",
+      "Carrageenan",
+      "Taurine",
+      "Tapioca Starch",
+      "Dl-Methionine",
+      "Fructooligosaccharide",
+      "Salt"
+    ],
     "guaranteed_analysis": {
       "crude_protein_min_percent": 9,
       "crude_fat_min_percent": 5,
@@ -355,7 +374,8 @@
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
       "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
       "Current IAMS manufacturer page independently confirms the Sensitive Digestion & Skin Pâté Turkey recipe and Perfect Portions twin-tray positioning. Manufacturer accessible text still does not expose the complete label deck/GA/calorie/AAFCO statement together.",
-      "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted."
+      "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted.",
+      "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
     ],
     "research_status": "needs_physical_label"
   }
