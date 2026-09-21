@@ -259,5 +259,16 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - This pass reinforces an important catalog rule: historical/distributor UPC identity and current manufacturer recipe naming must stay distinct until an exact current UPC/label proves continuity.
 - Commits: Smart Puppy Batch 2 `ae2e0c87ec9be86aeac5434af5aaf260b86289cf`; weight/aging Batch 1 `d593b72ea6d875fbeb93dc01c1c12d2d33fae7ec`; Smart Puppy Large Breed 11 lb Batch 7 `23e05c9e2df4792dccfde35bbc065667f72b3d3a`.
 
+
+## Dry source-upgrade pass 4 — core cat dry
+- Audited **16 existing dry-cat UPC rows** across Batches 3/4/5; staged count remains **101**.
+- Urinary Tract Health Chicken: all three staged sizes (3.5/7/16 lb) now have current IAMS recipe-family corroboration while exact UPC-to-size evidence stays separate.
+- Sensitive Digestion & Skin: 6 lb and 13 lb rows gained current manufacturer recipe corroboration (the 3 lb row remains for the next pass).
+- Healthy Adult Salmon & Tuna: all three staged sizes now carry an explicit transition conflict because current IAMS markets the recipe as **Healthy Adult Salmon**, while distributor-era identity says **Salmon & Tuna**. No silent formula merge.
+- Indoor Weight & Hairball Care Salmon 16 lb and Long Hair Care Chicken & Salmon 6 lb gained current manufacturer identity corroboration.
+- Indoor Weight & Hairball Care (3.5/7/16 lb) now carries a naming/version warning because current IAMS exposes the recipe as **Chicken & Turkey**, while the staged distributor identity lacks that flavor qualifier.
+- Hairball Care Chicken (3.5/7/16 lb) gained current manufacturer recipe-family corroboration.
+- Commits: Batch 4 `96439d9b77ec4520f0446f6e0e36146d9f752c00`; Batch 5 `4bfa659259dbdf9bea281ecdc5fa34b9005fd142`; Batch 3 `097fca454b9ca1285124c06c25eee94ac266e463`.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
