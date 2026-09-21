@@ -1,0 +1,762 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "019014802333",
+    "canonical_gtin14": "00019014802333",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Perfect Portions Healthy Kitten Pâté Chicken Recipe Wet Cat Food",
+    "variant": "Perfect Portions Healthy Kitten Pâté Chicken Recipe",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "kitten",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Perfect Portions serving/calorie quantity is not inferred from package weight.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802371",
+    "canonical_gtin14": "00019014802371",
+    "barcode_scope": "multipack",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Perfect Portions Indoor Salmon & Turkey Recipe Variety Pack Wet Cat Food",
+    "variant": "Perfect Portions Indoor Salmon & Turkey Recipe Variety Pack",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "box",
+    "size": "12 x 2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "ADMC identifies this exact UPC as a 12 x 2.6 oz Perfect Portions variety pack; barcode_scope is multipack, not an individual tray.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Perfect Portions serving/calorie quantity is not inferred from package weight.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802234",
+    "canonical_gtin14": "00019014802234",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Urinary Tract Health with Chicken Dry Cat Food",
+    "variant": "Urinary Tract Health with Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014804115",
+    "canonical_gtin14": "00019014804115",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Adult with Salmon & Tuna Dry Cat Food",
+    "variant": "Healthy Adult with Salmon & Tuna",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014804122",
+    "canonical_gtin14": "00019014804122",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Adult with Salmon & Tuna Dry Cat Food",
+    "variant": "Healthy Adult with Salmon & Tuna",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "7 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
+      "https://www.target.com/p/-/A-53371743"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014804139",
+    "canonical_gtin14": "00019014804139",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Adult with Salmon & Tuna Dry Cat Food",
+    "variant": "Healthy Adult with Salmon & Tuna",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805808",
+    "canonical_gtin14": "00019014805808",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Indoor Weight & Hairball Care with Salmon Dry Cat Food",
+    "variant": "Indoor Weight & Hairball Care with Salmon",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.ebay.com/itm/165694068926",
+      "https://www.walmart.com/ip/732119170"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805464",
+    "canonical_gtin14": "00019014805464",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Long Hair Care with Chicken & Salmon Dry Cat Food",
+    "variant": "Long Hair Care with Chicken & Salmon",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://atlaspet.net/products/iams-proactive-health-long-hair-care-dry-cat-food"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806379",
+    "canonical_gtin14": "00019014806379",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Healthy Enjoyment",
+    "product_name": "IAMS Healthy Enjoyment Healthy Enjoyment Chicken & Salmon Recipe Dry Cat Food",
+    "variant": "Healthy Enjoyment Chicken & Salmon Recipe",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://store.animalwiz.com/products/iams-proactive-health-healthy-enjoyment-dry-cat-food-chicken-salmon-3lb",
+      "https://www.iams.com/products/dry/iams-healthy-enjoyment-dry-cat-chicken-salmon"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "Healthy Enjoyment is a current printed IAMS range not present in the six-range memory list; handoff should recommend adding it to brand taxonomy before seeding.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808420",
+    "canonical_gtin14": "00019014808420",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Weight with Chicken Dry Cat Food",
+    "variant": "Healthy Weight with Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480842"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808444",
+    "canonical_gtin14": "00019014808444",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Weight with Chicken Dry Cat Food",
+    "variant": "Healthy Weight with Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "7 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480844"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014712618",
+    "canonical_gtin14": "00019014712618",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Senior Dry Cat Food",
+    "variant": "Healthy Senior",
+    "recipe": [],
+    "life_stage": "senior",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014611874",
+    "canonical_gtin14": "00019014611874",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Healthy Senior Dry Cat Food",
+    "variant": "Healthy Senior",
+    "recipe": [],
+    "life_stage": "senior",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802173",
+    "canonical_gtin14": "00019014802173",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Cat Food",
+    "variant": "High Protein",
+    "recipe": [],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802913",
+    "canonical_gtin14": "00019014802913",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Cat Food",
+    "variant": "High Protein",
+    "recipe": [],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "13 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "source_urls": [
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European formula substituted.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
