@@ -204,5 +204,111 @@
       "Kroger-family pages expose additional 13.5 lb identifiers, but their displayed numeric strings were not promoted here because exact UPC-A normalization/check-digit identity was not independently resolved."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830365",
+    "canonical_gtin14": "00019014830365",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Dog Food With Chicken & Beef",
+    "variant": "Chicken & Beef",
+    "recipe": [
+      "Chicken",
+      "Beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer recipe family plus exact current Kroger-family UPC-to-size retail evidence.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483036",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
+      "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
+      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014830389",
+    "canonical_gtin14": "00019014830389",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health High Protein Dry Dog Food With Chicken & Beef",
+    "variant": "Chicken & Beef",
+    "recipe": [
+      "Chicken",
+      "Beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "15 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer recipe family plus exact current Kroger-family UPC-to-size retail evidence.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-high-protein-dry-dog-food-with-chicken-beef/0001901483038",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-and-beef-dry-dog-food"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
+      "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
+      "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
