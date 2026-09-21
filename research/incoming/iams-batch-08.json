@@ -1,0 +1,192 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "019014803217",
+    "canonical_gtin14": "00019014803217",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Indoor Cuts in Gravy Chicken Recipe Wet Cat Food",
+    "variant": "Indoor Cuts in Gravy Chicken Recipe",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "tray",
+    "size": "2.6 oz",
+    "ingredients_verbatim": "chicken broth, chicken, chicken liver, meat by-products, tapioca starch, dried egg product, dried plain beet pulp, glycine, fish oil (preserved with mixed tocopherols), potassium chloride, salt, sodium tripolyphosphate, natural flavor, magnesium sulfate, xanthan gum, choline chloride, caramel color, taurine, fructooligosaccharides, dl-methionine, vitamin e supplement, thiamine mononitrate (vitamin b1), guar gum, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, pyridoxine hydrochloride (vitamin b6), potassium iodide, vitamin d3 supplement, folic acid, menadione sodium bisulfite complex (source of vitamin k)",
+    "ingredients_ordered_normalized": [
+      "chicken broth",
+      "chicken",
+      "chicken liver",
+      "meat by-products",
+      "tapioca starch",
+      "dried egg product",
+      "dried plain beet pulp",
+      "glycine",
+      "fish oil (preserved with mixed tocopherols)",
+      "potassium chloride",
+      "salt",
+      "sodium tripolyphosphate",
+      "natural flavor",
+      "magnesium sulfate",
+      "xanthan gum",
+      "choline chloride",
+      "caramel color",
+      "taurine",
+      "fructooligosaccharides",
+      "dl-methionine",
+      "vitamin e supplement",
+      "thiamine mononitrate (vitamin b1)",
+      "guar gum",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "manganese sulfate",
+      "copper sulfate",
+      "pyridoxine hydrochloride (vitamin b6)",
+      "potassium iodide",
+      "vitamin d3 supplement",
+      "folic acid",
+      "menadione sodium bisulfite complex (source of vitamin k)"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1.04,
+      "moisture_max_percent": 82,
+      "ash_max_percent": 3.54,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        "Calcium min 0.25%",
+        "Potassium min 0.2%",
+        "Vitamin E min 80 IU/kg"
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds exact UPC to the retail unit/multipack and exposes current product panel information. No missing nutrition values are inferred.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-75666101"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "UPC is explicitly for one 2.6 oz twin-pack tray retail unit.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current Target panel provides ingredients and extended GA including ash, calcium, potassium, vitamin E and taurine. Calories and complete AAFCO adequacy/deck are still not exposed together, so it remains needs_physical_label.",
+      "US evidence only; no Canadian/EU formula substituted."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802708",
+    "canonical_gtin14": "00019014802708",
+    "barcode_scope": "multipack",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Indoor Cuts in Gravy Salmon & Tuna Recipes Variety Pack Wet Cat Food",
+    "variant": "Indoor Cuts in Gravy Salmon & Tuna Recipes Variety Pack",
+    "recipe": [
+      "salmon",
+      "tuna"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "box",
+    "size": "12 x 2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds exact UPC to the retail unit/multipack and exposes current product panel information. No missing nutrition values are inferred.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-75666332"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "UPC is explicitly for the 12 x 2.6 oz retail multipack, not one twin tray.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current Target evidence proves the multipack identity. Per-recipe panels are only partial/incomplete in accessible text; no synthetic merged formula was created.",
+      "US evidence only; no Canadian/EU formula substituted."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014807963",
+    "canonical_gtin14": "00019014807963",
+    "barcode_scope": "multipack",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "Perfect Portions",
+    "product_name": "IAMS Perfect Portions Cuts in Gravy Chicken, Tuna & Salmon Variety Pack Wet Cat Food",
+    "variant": "Cuts in Gravy Chicken, Tuna & Salmon Variety Pack",
+    "recipe": [
+      "chicken",
+      "tuna",
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts_in_gravy",
+    "presentation": "gravy",
+    "package_type": "box",
+    "size": "24 x 2.6 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "serving"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US Target listing binds exact UPC to the retail unit/multipack and exposes current product panel information. No missing nutrition values are inferred.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94414988"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "UPC is explicitly for the 24 x 2.6 oz retail multipack, not one twin tray.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current Target evidence proves the multipack identity. Per-recipe panels are only partial/incomplete in accessible text; no synthetic merged formula was created.",
+      "US evidence only; no Canadian/EU formula substituted."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
