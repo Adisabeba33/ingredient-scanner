@@ -100,11 +100,14 @@
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe",
-        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667"
+        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667",
+        "https://www.petco.com/product/iams-advanced-health-adult-healthy-digestion-real-chicken-dry-dog-food-135-lb-3541030"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; retain needs_physical_label as formula/version conflict."
+      ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
         "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
@@ -113,7 +116,8 @@
         "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
         "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against stored Chewy panel; mismatch documented rather than merging generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -208,11 +212,14 @@
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe",
-        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667"
+        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667",
+        "https://www.petco.com/product/iams-advanced-health-adult-healthy-digestion-real-chicken-dry-dog-food-135-lb-3541030"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; retain needs_physical_label as formula/version conflict."
+      ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
         "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
@@ -221,7 +228,8 @@
         "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
         "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against stored Chewy panel; mismatch documented rather than merging generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -316,11 +324,14 @@
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe",
-        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667"
+        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667",
+        "https://www.petco.com/product/iams-advanced-health-adult-healthy-digestion-real-chicken-dry-dog-food-135-lb-3541030"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; retain needs_physical_label as formula/version conflict."
+      ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
         "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
@@ -329,7 +340,8 @@
         "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
         "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against stored Chewy panel; mismatch documented rather than merging generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -424,11 +436,14 @@
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
         "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
         "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe",
-        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667"
+        "https://www.chewy.com/iams-advanced-health-healthy/dp/388667",
+        "https://www.petco.com/product/iams-advanced-health-adult-healthy-digestion-real-chicken-dry-dog-food-135-lb-3541030"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; retain needs_physical_label as formula/version conflict."
+      ],
       "verification_notes": [
         "US dry bag evidence only; European EAN/composition pages were not used.",
         "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
@@ -437,7 +452,8 @@
         "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
         "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Second-witness campaign 2026-09-21: Petco full ingredient/GA panel reviewed against stored Chewy panel; mismatch documented rather than merging generations."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5668,7 +5684,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
-        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
+        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898",
+        "https://www.petco.com/product/iams-proactive-health-original-with-chicken-adult-cat-food-7-lbs-2536183"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -5679,7 +5696,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent Petco panel matches the stored Chewy ingredient deck and every captured guaranteed-analysis field for Healthy Adult Original with Chicken. Petco does not expose the calorie statement in accessible text, so the stored 3,750 kcal/kg / 377 kcal/cup calorie pair is not independently corroborated by this source."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5781,7 +5799,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
-        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
+        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898",
+        "https://www.petco.com/product/iams-proactive-health-original-with-chicken-adult-cat-food-7-lbs-2536183"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -5792,7 +5811,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent Petco panel matches the stored Chewy ingredient deck and every captured guaranteed-analysis field for Healthy Adult Original with Chicken. Petco does not expose the calorie statement in accessible text, so the stored 3,750 kcal/kg / 377 kcal/cup calorie pair is not independently corroborated by this source."
       ],
       "research_status": "needs_physical_label"
     },
@@ -5894,7 +5914,8 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
-        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
+        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898",
+        "https://www.petco.com/product/iams-proactive-health-original-with-chicken-adult-cat-food-7-lbs-2536183"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -5905,7 +5926,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent Petco panel matches the stored Chewy ingredient deck and every captured guaranteed-analysis field for Healthy Adult Original with Chicken. Petco does not expose the calorie statement in accessible text, so the stored 3,750 kcal/kg / 377 kcal/cup calorie pair is not independently corroborated by this source."
       ],
       "research_status": "needs_physical_label"
     },
@@ -6007,18 +6029,23 @@
       "source_urls": [
         "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
         "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken",
-        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898"
+        "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/32898",
+        "https://www.petco.com/product/iams-proactive-health-original-with-chicken-adult-cat-food-7-lbs-2536183",
+        "https://www.target.com/p/-/A-52087812"
       ],
       "source_accessed_at": "2026-09-20",
       "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-      "conflicts": [],
+      "conflicts": [
+        "Target UPC 019014712274 currently exposes a materially different ingredient generation (adds Brewers Rice and Caramel Color and changes the vitamin/mineral deck/order) while Petco matches the stored Chewy panel. Treat Target as formula/version drift for this size; do not promote until the current physical label/version is resolved."
+      ],
       "verification_notes": [
         "US dry bag evidence only; no European formula substituted.",
         "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
         "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
         "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred.",
         "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent Petco panel matches the stored Chewy ingredient deck and every captured guaranteed-analysis field for Healthy Adult Original with Chicken. Petco does not expose the calorie statement in accessible text, so the stored 3,750 kcal/kg / 377 kcal/cup calorie pair is not independently corroborated by this source."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12489,7 +12516,8 @@
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Immune Health Chicken & Superfoods adult dog panel captured whole from current US Chewy page; applied recipe-level across four staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched Petco, Target and PetSmart for an independent full US Immune Health Chicken & Superfoods ingredient/GA panel; no qualifying second retailer panel was found in accessible results. Existing Chewy panel remains the sole complete formula witness, so status is not promoted."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12605,7 +12633,8 @@
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Immune Health Chicken & Superfoods adult dog panel captured whole from current US Chewy page; applied recipe-level across four staged UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched Petco, Target and PetSmart for an independent full US Immune Health Chicken & Superfoods ingredient/GA panel; no qualifying second retailer panel was found in accessible results. Existing Chewy panel remains the sole complete formula witness, so status is not promoted."
       ],
       "research_status": "needs_physical_label"
     },
