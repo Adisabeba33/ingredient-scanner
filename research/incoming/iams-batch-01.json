@@ -412,15 +412,20 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-minichunks-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
+      "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed."
     ],
     "research_status": "needs_physical_label"
   },
@@ -464,15 +469,20 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-minichunks-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
+      "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed."
     ],
     "research_status": "needs_physical_label"
   },
@@ -516,15 +526,20 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-minichunks-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
+      "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed."
     ],
     "research_status": "needs_physical_label"
   },
@@ -568,15 +583,20 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-minichunks-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page shows the adult Lamb & Rice recipe is now marketed as Minichunks Lamb & Rice and exposes sizes 3.3/5/7/11/15/30/38.5/44 lb.",
+      "Historical/distributor UPC binding is retained, but current naming is recorded rather than silently rewriting the staged product identity. Full machine-readable label panel still needed."
     ],
     "research_status": "needs_physical_label"
   },
@@ -620,15 +640,20 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-large-breed-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current IAMS manufacturer size ladder is 11/15/30/40 lb; this proven distributor 38.5 lb UPC appears to be an older size/version and should not be treated as current shelf without physical/current retailer confirmation."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page confirms Large Breed Adult Lamb & Rice as 100% complete and balanced and shows current sizes 11/15/30/40 lb.",
+      "Staged 38.5 lb UPC is therefore potentially a prior-size/version SKU; 40 lb aligns with the current manufacturer ladder. No UPC was inferred for current missing sizes."
     ],
     "research_status": "needs_physical_label"
   },
@@ -672,7 +697,8 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-large-breed-lamb-rice"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -680,7 +706,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page confirms Large Breed Adult Lamb & Rice as 100% complete and balanced and shows current sizes 11/15/30/40 lb.",
+      "Staged 38.5 lb UPC is therefore potentially a prior-size/version SKU; 40 lb aligns with the current manufacturer ladder. No UPC was inferred for current missing sizes."
     ],
     "research_status": "needs_physical_label"
   },
@@ -723,7 +751,8 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -731,7 +760,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
+      "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative."
     ],
     "research_status": "needs_physical_label"
   },
@@ -774,7 +805,8 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -782,7 +814,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
+      "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative."
     ],
     "research_status": "needs_physical_label"
   },
@@ -825,7 +859,8 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/proactive-health-large-breed-adult-chicken-whole-grain-recipe-dry-dog-food"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -833,7 +868,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
+      "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative."
     ],
     "research_status": "needs_physical_label"
   },
