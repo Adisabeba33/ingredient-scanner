@@ -590,15 +590,19 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-weight-large-breed"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged distributor identity is Optimal Weight Large Breed; current IAMS uses Healthy Weight Large Breed. Exact current UPC/physical label required before treating as formula-identical."
+    ],
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Final dog-dry audit: current IAMS manufacturer catalog presents the large-breed weight-management successor/current recipe as Healthy Weight Large Breed. Staged Optimal Weight Large Breed identity is retained as distributor-era evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -641,7 +645,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-small-breed-chicken-whole-grains"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -649,7 +654,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Final dog-dry audit: current IAMS manufacturer page confirms Small Breed Adult Chicken & Whole Grains recipe family. Exact 7/15 lb UPC bindings remain distributor evidence; no current neighboring UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -692,7 +698,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-small-breed-chicken-whole-grains"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -700,7 +707,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Final dog-dry audit: current IAMS manufacturer page confirms Small Breed Adult Chicken & Whole Grains recipe family. Exact 7/15 lb UPC bindings remain distributor evidence; no current neighboring UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
