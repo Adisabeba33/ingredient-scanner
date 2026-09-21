@@ -1450,26 +1450,40 @@
     "presentation": null,
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Sufficient Water For Processing, Meat By-Products, Beef, Brewers Rice, Flax Seed, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Sodium Tripolyphosphate, Added Color, Carrageenan, Dried Yam, Natural Smoke Flavor, Guar Gum, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate {Vitamin B1} D-Calcium Pantothenate, Biotin, Vitamin A Supplement, Vitamin D3 Supplement), Xanthan Gum, Fish Oil, Sodium Nitrite (For Color Retention), Sage, Pyridoxine Hydrochloride (Vitamin B6).",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": "can"
+      "kcal_per_kg": 1153,
+      "kcal_per_unit": 425,
+      "unit_name": "serving"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US Grange Co-op page prints UPC, ingredients, guaranteed analysis and calorie content together.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.grangecoop.com/iams-proactive-health-with-beef-and-rice-pate-wet-adult-dog-food-13-oz"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -1477,7 +1491,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Formula campaign 2026-09-21: complete Beef & Rice wet dog panel captured whole from one US retailer page, including UPC 019014013302 and calories. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
