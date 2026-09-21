@@ -514,7 +514,8 @@
     "verification_notes": [
       "Healthy Enjoyment is a current printed IAMS range not present in the six-range memory list; handoff should recommend adding it to brand taxonomy before seeding.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Enjoyment Chicken & Salmon and its current 3/6/15 lb size family."
     ],
     "research_status": "needs_physical_label"
   },
@@ -557,7 +558,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480842"
+      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480842",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-weight-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -565,7 +567,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate."
     ],
     "research_status": "needs_physical_label"
   },
@@ -608,7 +611,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480844"
+      "https://www.kroger.com/p/iams-proactive-health-healthy-weight-adult-dry-cat-food-chicken/0001901480844",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-weight-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -616,7 +620,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate."
     ],
     "research_status": "needs_physical_label"
   },
@@ -657,7 +662,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-senior"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -665,7 +671,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Senior recipe family. Exact UPC-to-size evidence remains distributor-bound."
     ],
     "research_status": "needs_physical_label"
   },
@@ -706,7 +713,8 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-senior"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
@@ -714,7 +722,8 @@
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Senior recipe family. Exact UPC-to-size evidence remains distributor-bound."
     ],
     "research_status": "needs_physical_label"
   },
@@ -755,15 +764,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -804,15 +817,19 @@
     "label_deck_code": null,
     "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
     "source_urls": [
-      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf"
+      "https://terms.snipp.com/MarsPortfolioTest%26Learn2005207/Qualifying%20Product%20List.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-high-protein-chicken-salmon"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
-      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together."
+      "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
+      "Dry cat audit: current IAMS manufacturer page confirms High Protein Chicken & Salmon recipe family. Staged generic High Protein naming is retained pending exact current label reconciliation."
     ],
     "research_status": "needs_physical_label"
   }
