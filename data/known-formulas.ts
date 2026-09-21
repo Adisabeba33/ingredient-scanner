@@ -120,6 +120,12 @@ const VERIFIED_033 = "2026-09-18";
 // Batch 035 — the rest of the current ORIJEN wet cat shelf: the Chunks & Shreds
 // family, and the 5.5 oz sibling of every 3 oz pâté that has one.
 const VERIFIED_035 = "2026-09-18";
+// Batch 037 — Iams, and the first brand here whose panels had to be read off
+// retailers because the maker publishes its own as images. 114 compositions
+// from Chewy, Petco and Target; 52 of them carry a conflict note, which is a
+// far higher proportion than any previous batch and is the finding rather
+// than a defect — see section M of docs/CATALOG-CONFLICTS.md.
+const VERIFIED_037 = "2026-09-21";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -9743,5 +9749,688 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Tuna, chicken, salmon, whole sardine, chicken liver, fish bone broth, beef bone broth, beef, lamb, beef kidney, shrimp, taurine, salt, vitamins [vitamin E supplement, thiamine mononitrate, niacin, vitamin A supplement, pyridoxine hydrochloride, calcium pantothenate, riboflavin supplement, folic acid, vitamin D3 supplement, biotin, vitamin B12 supplement, menadione sodium bisulfite complex], minerals [potassium chloride, magnesium amino acid chelate, zinc amino acid chelate, iron amino acid chelate, copper amino acid chelate, manganese amino acid chelate, sodium selenite, potassium iodide], choline chloride.`,
     analysis: withCalories(ga(14, 4, 0.5, 80, 3, 0.2), 1059, 165, "can"),
     verifiedAt: VERIFIED_035,
+  },
+  // ── Iams — batch 037 ─────────────────────────────────────────────────────
+  //
+  // 114 compositions under the 121 barcodes seeded in data/known-products.ts.
+  // Seven of those barcodes have no entry here and are seeded as identity
+  // only: their panels were never captured whole from one page, and half a
+  // panel is not a formula.
+  //
+  // These lists come from Chewy, Petco and Target rather than from the maker.
+  // That is not a shortcut — iams.com renders every ingredient and guaranteed
+  // analysis panel as an IMAGE, so there is no manufacturer text to copy, and
+  // the first research campaign correctly refused to guess at one. It is also
+  // not new: 124 of Blue Buffalo's 133 source-verified records name a retailer
+  // the same way. Everything here enters the catalog as `community`, which a
+  // photograph of the real bag outranks.
+  "019014805747": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
+  },
+  "019014805754": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
+  },
+  "019014805761": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
+  },
+  "019014805778": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
+  },
+  "019014711123": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Potassium Chloride, Flaxseed, Dicalcium Phosphate, Caramel Color, Salt, DL-Methionine, Carrots, Calcium Carbonate, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(20, 9, 5, 10, null, null), 3380, 304, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.",
+  },
+  "019014610891": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Potassium Chloride, Flaxseed, Dicalcium Phosphate, Caramel Color, Salt, DL-Methionine, Carrots, Calcium Carbonate, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(20, 9, 5, 10, null, null), 3380, 304, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.",
+  },
+  "019014700677": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Potassium Chloride, Flaxseed, Dicalcium Phosphate, Caramel Color, Salt, DL-Methionine, Carrots, Calcium Carbonate, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(20, 9, 5, 10, null, null), 3380, 304, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.",
+  },
+  "019014803316": {
+    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
+  },
+  "019014803347": {
+    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
+  },
+  "019014803330": {
+    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
+  },
+  "019014805358": {
+    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
+  },
+  "019014700776": {
+    ingredients: `Lamb, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dicalcium Phosphate, L-Lysine, Dried Egg Product, Flaxseed, Caramel Color, Potassium Chloride, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Calcium Carbonate, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3538, 335, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current IAMS manufacturer size ladder is 11/15/30/40 lb; this proven distributor 38.5 lb UPC appears to be an older size/version and should not be treated as current shelf without physical/current retailer confirmation.",
+  },
+  "019014805303": {
+    ingredients: `Lamb, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dicalcium Phosphate, L-Lysine, Dried Egg Product, Flaxseed, Caramel Color, Potassium Chloride, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Calcium Carbonate, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3538, 335, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014610976": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine And Chondrotin Sulfate), Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Flaxseed, Peas, Caramel Color, Dl-Methionine, Potassium Chloride, Fructooligosaccharides, Choline Chloride, Dicalcium Phosphate, Carrots, Mixed Tocopherol (Preservative), Citric Acid (Preservative), Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3561, 354, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014700721": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine And Chondrotin Sulfate), Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Flaxseed, Peas, Caramel Color, Dl-Methionine, Potassium Chloride, Fructooligosaccharides, Choline Chloride, Dicalcium Phosphate, Carrots, Mixed Tocopherol (Preservative), Citric Acid (Preservative), Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3561, 354, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805037": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Chicken By-Product Meal (Source Of Glucosamine And Chondrotin Sulfate), Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Flaxseed, Peas, Caramel Color, Dl-Methionine, Potassium Chloride, Fructooligosaccharides, Choline Chloride, Dicalcium Phosphate, Carrots, Mixed Tocopherol (Preservative), Citric Acid (Preservative), Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3561, 354, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014611331": {
+    ingredients: `Chicken, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta-Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(26, 11, 5.5, 10, null, null), 3452, 347, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged 'Mature Adult Large Breed' versus current 'Healthy Aging Large Breed'. Current exact UPC/size label proof is required before treating this as the same formula version.",
+  },
+  "019014700684": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(24, 10.5, 5, 10, null, null), 3428, 349, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.",
+  },
+  "019014711147": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(24, 10.5, 5, 10, null, null), 3428, 349, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.",
+  },
+  "019014612062": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Calcium Carbonate, Marine Microalgae (source of DHA), Caramel Color, Potassium Chloride, L-Lysine, Chicken Fat (preserved with Mixed Tocopherols), Carrots, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Beta Carotene, Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(24, 10.5, 5, 10, null, null), 3428, 349, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.",
+  },
+  "019014610860": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014711086": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014610907": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014700714": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014700769": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014805020": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
+  },
+  "019014700691": {
+    ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Salt, Potassium Chloride, Caramel Color, DL-Methionine, Carrots, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
+    analysis: withCalories(ga(22, 9, 5, 10, null, null), 3417, 327, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version transition: staged distributor identity is Optimal Weight Large Breed; current IAMS uses Healthy Weight Large Breed. Exact current UPC/physical label required before treating as formula-identical.",
+  },
+  "019014803446": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Flaxseed, Caramel Color, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(27, 17, 4, 10, null, null), 3800, 396, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014803453": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Soybean Meal, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Flaxseed, Caramel Color, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(27, 17, 4, 10, null, null), 3800, 396, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014803378": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Brewers Rice, Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Soybean Meal, Natural Flavor, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Salt, Dicalcium Phosphate, Caramel Color, Carrots, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(30, 18, 4, 10, null, null), 3798, 454, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014610945": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Brewers Rice, Soybean Meal, Natural Flavor, Corn Gluten Meal, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Dicalcium Phosphate, Salt, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(28, 14, 4, 10, null, null), 3633, 378, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014700738": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Brewers Rice, Soybean Meal, Natural Flavor, Corn Gluten Meal, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Dicalcium Phosphate, Salt, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(28, 14, 4, 10, null, null), 3633, 378, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014711109": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Brewers Rice, Dried Plain Beet Pulp, Soybean Meal, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Salt, Dicalcium Phosphate, Caramel Color, Carrots, Potassium Chloride, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(29, 17.5, 4, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014704200": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Brewers Rice, Dried Plain Beet Pulp, Soybean Meal, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Salt, Dicalcium Phosphate, Caramel Color, Carrots, Potassium Chloride, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(29, 17.5, 4, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014013302": {
+    ingredients: `Chicken, Sufficient Water For Processing, Meat By-Products, Beef, Brewers Rice, Flax Seed, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Sodium Tripolyphosphate, Added Color, Carrageenan, Dried Yam, Natural Smoke Flavor, Guar Gum, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate {Vitamin B1} D-Calcium Pantothenate, Biotin, Vitamin A Supplement, Vitamin D3 Supplement), Xanthan Gum, Fish Oil, Sodium Nitrite (For Color Retention), Sage, Pyridoxine Hydrochloride (Vitamin B6).`,
+    analysis: withCalories(ga(8, 6, 1, 78, null, null), 1153, 425, "serving"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014013326": {
+    ingredients: `Sufficient Water For Processing, Chicken, Meat By-Products, Animal Liver, Dried Egg Product, Brown Rice, Dried Tomato Pomace, Fish Oil (Source Of Dha), Flax Seed, Plain Dried Beet Pulp, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Selenium, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Carrageenan, Sodium Tripolyphosphate, Dried Yam, Xanthan Gum, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin A Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement), Guar Gum, Sodium Nitrite (For Color Retention)`,
+    analysis: ga(9, 8, 1.5, 78, null, null),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014013296": {
+    ingredients: `Chicken, Sufficient Water For Processing, Meat By-Products, Animal Liver, Brown Rice, Flax Seed, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Selenium, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Carrageenan, Sodium Tripolyphosphate, Dried Yam, Xanthan Gum, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin A Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement), Guar Gum, Fish Oil, Yellow #6, Yellow #5`,
+    analysis: ga(8, 6, 1, 78, null, null),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014013319": {
+    ingredients: `CHICKEN BY-PRODUCTS, SUFFICIENT WATER FOR PROCESSING, CHICKEN, CHICKEN LIVER, LAMB, BROWN RICE, BREWERS RICE, FLAX SEED, CAROB GUM, SODIUM TRIPOLYPHOSPHATE, MINERALS (POTASSIUM CHLORIDE, MAGNESIUM PROTEINATE, ZINC SULFATE, COPPER PROTEINATE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), CARRAGEENAN, ADDED COLOR, GUAR GUM, DRIED YAM, VITAMINS (CHOLINE CHLORIDE, VITAMIN E SUPPLEMENT, BIOTIN, CALCIUM PANTOTHENATE, THIAMINE MONOITRATE {VITAMIN B1}, MINERAL OIL, VITAMIN A SUPPLEMENT, VITAMIN D3 SUPPLEMENT), FISH OIL, SODIUM NITRITE (FOR COLOR RETENTION), SAGE, VITAMIN B6.`,
+    analysis: ga(8, 6, 1, 78, null, null),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014802296": {
+    ingredients: `Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.`,
+    analysis: withCalories(ga(9, 5, 1, 78, 3.5, 0.06), null, 38, "serving"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Target panel at TCIN 52093083 displays a materially different Chicken ingredient deck from the earlier retailer panel captured in upgrade pass 1; likely formula/version drift. Do not promote until current physical/manufacturer label resolves which deck applies.",
+  },
+  "019014802326": {
+    ingredients: `Salmon, Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.`,
+    analysis: withCalories(ga(9, 5, 1.5, 78, null, null), null, 38, "serving"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Salmon retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck.",
+  },
+  "019014802319": {
+    ingredients: `Tuna, Chicken, Chicken Broth, Chicken Liver, Dried Egg Product, Natural Flavor, Fish Oil, Calcium Carbonate, Guar Gum, Potassium Chloride, Magnesium Sulfate, Carrageenan, Choline Chloride, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Vitamin B12 Supplement.`,
+    analysis: withCalories(ga(9, 5, 1.5, 78, null, null), null, 38, "serving"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Tuna retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck.",
+  },
+  "019014802340": {
+    ingredients: `Chicken, Water, Salmon, Poultry Liver, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Calcium Carbonate, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, Fructooligosaccharides, Salt, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex.`,
+    analysis: withCalories(ga(9.5, 5, 1, 78, 4, 0.06), 1009, 38, "serving"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014802302": {
+    ingredients: `Chicken, Turkey, Poultry Liver, Water, Turkey Broth, Plain Dried Beet Pulp, Calcium Carbonate, Dried Egg Product, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, DL-Methionine, Fructooligiosaccharides, Salt, Vitamin E Supplement, Thiamine Mononitrate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex.`,
+    analysis: withCalories(ga(9.5, 5, 1, 78, 3.5, 0.06), 1271, 48, "serving"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014802357": {
+    ingredients: `Chicken, Water, Poultry Liver, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Guar Gum, Calcium Carbonate, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, Fructooligosaccharides, Salt, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex.`,
+    analysis: withCalories(ga(9.5, 5, 1, 78, 3.5, 0.06), 1208, 45, "serving"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712465": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Corn Protein Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Turkey, Dried Plain Beet Pulp, Powdered Cellulose, Brewers Dried Yeast, Natural Flavor, Dried Egg Product, Sodium Bisulfate, Caramel Color, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fish Oil (Preserved With Mixed Tocopherols), Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 11, 8.3, 10, null, 0.13), 3314, 302, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.",
+  },
+  "019014712458": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Corn Protein Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Turkey, Dried Plain Beet Pulp, Powdered Cellulose, Brewers Dried Yeast, Natural Flavor, Dried Egg Product, Sodium Bisulfate, Caramel Color, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fish Oil (Preserved With Mixed Tocopherols), Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 11, 8.3, 10, null, 0.13), 3314, 302, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.",
+  },
+  "019014712298": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Corn Protein Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Turkey, Dried Plain Beet Pulp, Powdered Cellulose, Brewers Dried Yeast, Natural Flavor, Dried Egg Product, Sodium Bisulfate, Caramel Color, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fish Oil (Preserved With Mixed Tocopherols), Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 11, 8.3, 10, null, 0.13), 3314, 302, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.",
+  },
+  "019014712380": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Powdered Cellulose, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Brewers Dried Yeast, Dried Egg Product, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 14, 8.5, 10, null, 0.15), 3421, 356, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.",
+  },
+  "019014712434": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Powdered Cellulose, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Brewers Dried Yeast, Dried Egg Product, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 14, 8.5, 10, null, 0.15), 3421, 356, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.",
+  },
+  "019014611911": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Powdered Cellulose, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Brewers Dried Yeast, Dried Egg Product, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 14, 8.5, 10, null, 0.15), 3421, 356, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.",
+  },
+  "019014712564": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3750, 377, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712571": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3750, 377, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712267": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3750, 377, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712274": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Dried Plain Beet Pulp, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Sodium Bisulfate, Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Dl-Methionine, Fructooligosaccharides, Citric Acid (Preservative), Mixed Tocopherols (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3750, 377, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Target UPC 019014712274 currently exposes a materially different ingredient generation (adds Brewers Rice and Caramel Color and changes the vitamin/mineral deck/order) while Petco matches the stored Chewy panel. Treat Target as formula/version drift for this size; do not promote until the current physical label/version is resolved.",
+  },
+  "019014712496": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Sorghum, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Choline Chloride, Brewers Dried Yeast, Salt, Calcium Carbonate, DL-Methionine, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, Vitamin A Acetate, Calcium Pantothenate, Biotin, Thiamine Mononitrate (source of Vitamin B1), Pyridoxine Hydrochloride (source of Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (source of Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Rosemary Extract`,
+    analysis: withCalories(ga(33, 21, 3, 10, null, 0.15), 4015, 484, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712502": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Sorghum, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Choline Chloride, Brewers Dried Yeast, Salt, Calcium Carbonate, DL-Methionine, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, Vitamin A Acetate, Calcium Pantothenate, Biotin, Thiamine Mononitrate (source of Vitamin B1), Pyridoxine Hydrochloride (source of Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (source of Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Rosemary Extract`,
+    analysis: withCalories(ga(33, 21, 3, 10, null, 0.15), 4015, 484, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712625": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Ground Whole Grain Corn, Dried Plain Beet Pulp, Dried Egg Product, Brewers Dried Yeast, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, 0.15), 3805, 432, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805105": {
+    ingredients: `Turkey, Chicken By-Product Meal, Ground Whole Grain Corn, Brewers Rice, Chicken Meal, Corn Protein Meal, Chicken Fat (Preserved With Mixed Tocopherols), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Natural Flavor, Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Sodium Bisulfate, Caramel Color, Fructooligosaccharides, Potassium Chloride, Brewers Dried Yeast, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Dl-Methionine, Choline Chloride, Calcium Carbonate, Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(33, 14, 3, 10, null, 0.15), 3705, 346, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805112": {
+    ingredients: `Turkey, Chicken By-Product Meal, Ground Whole Grain Corn, Brewers Rice, Chicken Meal, Corn Protein Meal, Chicken Fat (Preserved With Mixed Tocopherols), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Natural Flavor, Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Sodium Bisulfate, Caramel Color, Fructooligosaccharides, Potassium Chloride, Brewers Dried Yeast, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Dl-Methionine, Choline Chloride, Calcium Carbonate, Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(33, 14, 3, 10, null, 0.15), 3705, 346, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805129": {
+    ingredients: `Turkey, Chicken By-Product Meal, Ground Whole Grain Corn, Brewers Rice, Chicken Meal, Corn Protein Meal, Chicken Fat (Preserved With Mixed Tocopherols), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Natural Flavor, Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Sodium Bisulfate, Caramel Color, Fructooligosaccharides, Potassium Chloride, Brewers Dried Yeast, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Dl-Methionine, Choline Chloride, Calcium Carbonate, Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(33, 14, 3, 10, null, 0.15), 3705, 346, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "ADMC PDF omits the leading zero and prints 19014805129; normalized to 019014805129. Physical pack confirmation is still desirable.",
+  },
+  "019014802203": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Protein Meal, Corn Grits, Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Powdered Cellulose, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Sodium Bisulfate, Potassium Chloride, Salt, Fish Oil (Preserved With Mixed Tocopherols), Dl-Methionine, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Vitamin E Supplement, Vitamin B3 [Niacinamide], Vitamin C [Ascorbic Acid], Vitamin B5 [Calcium Pantothenate], Vitamin A Supplement, Vitamin B7 [Biotin], Vitamin B1 [Thiamine Mononitrate], Vitamin B6 [Pyridoxine Hydrochloride], Vitamin B12 Supplement, Vitamin D3 Supplement, Vitamin B2 [Riboflavin Supplement], Vitamin B9 [Folic Acid]), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 6, 10, null, 0.15), 3587, 361, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014802210": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Protein Meal, Corn Grits, Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Powdered Cellulose, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Sodium Bisulfate, Potassium Chloride, Salt, Fish Oil (Preserved With Mixed Tocopherols), Dl-Methionine, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Vitamin E Supplement, Vitamin B3 [Niacinamide], Vitamin C [Ascorbic Acid], Vitamin B5 [Calcium Pantothenate], Vitamin A Supplement, Vitamin B7 [Biotin], Vitamin B1 [Thiamine Mononitrate], Vitamin B6 [Pyridoxine Hydrochloride], Vitamin B12 Supplement, Vitamin D3 Supplement, Vitamin B2 [Riboflavin Supplement], Vitamin B9 [Folic Acid]), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 6, 10, null, 0.15), 3587, 361, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014802234": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Protein Meal, Corn Grits, Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Powdered Cellulose, Dried Egg Product, Chicken Fat (Preserved With Mixed Tocopherols), Natural Flavor, Sodium Bisulfate, Potassium Chloride, Salt, Fish Oil (Preserved With Mixed Tocopherols), Dl-Methionine, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Vitamin E Supplement, Vitamin B3 [Niacinamide], Vitamin C [Ascorbic Acid], Vitamin B5 [Calcium Pantothenate], Vitamin A Supplement, Vitamin B7 [Biotin], Vitamin B1 [Thiamine Mononitrate], Vitamin B6 [Pyridoxine Hydrochloride], Vitamin B12 Supplement, Vitamin D3 Supplement, Vitamin B2 [Riboflavin Supplement], Vitamin B9 [Folic Acid]), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 6, 10, null, 0.15), 3587, 361, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014804115": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Grits, Corn Protein Meal, Chicken Meal, Chicken, Brewers Rice, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3693, 384, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.",
+  },
+  "019014804122": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Grits, Corn Protein Meal, Chicken Meal, Chicken, Brewers Rice, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3693, 384, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.",
+  },
+  "019014804139": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Grits, Corn Protein Meal, Chicken Meal, Chicken, Brewers Rice, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Dl-Methionine, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3693, 384, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.",
+  },
+  "019014805808": {
+    ingredients: `Salmon, Chicken By-Product Meal, Corn Grits, Ground Whole Grain Corn, Chicken, Corn Protein Meal, Dried Plain Beet Pulp, Powdered Cellulose, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (Preserved With Mixed Tocopherols), Dried Egg Product, Natural Flavor, Brewers Dried Yeast, Potassium Chloride, Sodium Bisulfate, Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, D-Calcium Pantothenate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 11, 8.3, 10, null, 0.13), 3283, 318, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805464": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Protein Meal, Corn Grits, Ground Whole Grain Corn, Dried Plain Beet Pulp, Powdered Cellulose, Salmon, Brewers Dried Yeast, Sodium Bisulfate, Natural Flavor, Fish Oil (Preserved With Mixed Tocopherols), Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharide, Salt, Calcium Carbonate, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, Rosemary Extract.`,
+    analysis: withCalories(ga(39, 16, 7, 10, null, 0.15), 3489, 355, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806379": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Dried Meat By-Products, Sodium Bisulfate, Potassium Chloride, Dried Egg Product, Caramel Color, Calcium Carbonate, Brewers Dried Yeast, Choline Chloride, Dl-Methionine, Fructooligosaccharides, Fish Oil (Preserved With Mixed Tocopherols), Chicken Fat (Preserved With Mixed Tocopherols), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3791, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014712618": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Ground Whole Grain Corn, Dried Plain Beet Pulp, Dried Egg Product, Brewers Dried Yeast, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, 0.15), 3805, 432, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities.",
+  },
+  "019014611874": {
+    ingredients: `Chicken, Chicken By-Product Meal, Corn Grits, Ground Whole Grain Corn, Dried Plain Beet Pulp, Dried Egg Product, Brewers Dried Yeast, Natural Flavor, Chicken Fat (Preserved With Mixed Tocopherols), Potassium Chloride, Fish Oil (Preserved With Mixed Tocopherols), Choline Chloride, Calcium Carbonate, Fructooligosaccharides, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Taurine, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(34, 17, 3, 10, null, 0.15), 3805, 432, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities.",
+  },
+  "019014802173": {
+    ingredients: `CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.`,
+    analysis: withCalories(ga(38, 17, 3, 10, null, 0.15), 3874, 439, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked.",
+  },
+  "019014802913": {
+    ingredients: `CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.`,
+    analysis: withCalories(ga(38, 17, 3, 10, null, 0.15), 3874, 439, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked.",
+  },
+  "019014806386": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Dried Meat By-Products, Sodium Bisulfate, Potassium Chloride, Dried Egg Product, Caramel Color, Calcium Carbonate, Brewers Dried Yeast, Choline Chloride, Dl-Methionine, Fructooligosaccharides, Fish Oil (Preserved With Mixed Tocopherols), Chicken Fat (Preserved With Mixed Tocopherols), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3791, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806416": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Salmon, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Dried Meat By-Products, Sodium Bisulfate, Potassium Chloride, Dried Egg Product, Caramel Color, Calcium Carbonate, Brewers Dried Yeast, Choline Chloride, Dl-Methionine, Fructooligosaccharides, Fish Oil (Preserved With Mixed Tocopherols), Chicken Fat (Preserved With Mixed Tocopherols), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3791, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806324": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Beef, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Potassium Chloride, Dried Meat By-Products, Sodium Bisulfate, Dried Egg Product, Choline Chloride, Caramel Color, Brewers Dried Yeast, Dl-Methionine, Fish Oil (Preserved With Mixed Tocopherols), Calcium Carbonate, Fructooligosaccharides, Chicken Fat (Preserved With Mixed Tocopherols), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3784, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.",
+  },
+  "019014806348": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Beef, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Potassium Chloride, Dried Meat By-Products, Sodium Bisulfate, Dried Egg Product, Choline Chloride, Caramel Color, Brewers Dried Yeast, Dl-Methionine, Fish Oil (Preserved With Mixed Tocopherols), Calcium Carbonate, Fructooligosaccharides, Chicken Fat (Preserved With Mixed Tocopherols), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3784, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.",
+  },
+  "019014806362": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Beef, Dried Plain Beet Pulp, Animal Fat (Preserved With Mixed Tocopherols), Natural Flavors, Wheat Flour, Brewers Rice, Potassium Chloride, Dried Meat By-Products, Sodium Bisulfate, Dried Egg Product, Choline Chloride, Caramel Color, Brewers Dried Yeast, Dl-Methionine, Fish Oil (Preserved With Mixed Tocopherols), Calcium Carbonate, Fructooligosaccharides, Chicken Fat (Preserved With Mixed Tocopherols), Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Zinc Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Taurine, Vitamin E Supplement, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Salt, Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, Vitamin A Supplement, D-Calcium Pantothenate, Thiamine Mononitrate [Vitamin B1], Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride [Vitamin B6], Riboflavin Supplement [Vitamin B2], Vitamin D3 Supplement, Folic Acid), Vegetable Oil, L-Carnitine, Dried Cheese, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, null), 3784, 381, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.",
+  },
+  "019014804702": {
+    ingredients: `CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.`,
+    analysis: withCalories(ga(38, 17, 3, 10, null, 0.15), 3874, 439, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.",
+  },
+  "019014804719": {
+    ingredients: `CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.`,
+    analysis: withCalories(ga(38, 17, 3, 10, null, 0.15), 3874, 439, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.",
+  },
+  "019014804726": {
+    ingredients: `CHICKEN, CHICKEN BYPRODUCT MEAL, CORN GRITS, GROUND WHOLE GRAIN CORN, SALMON, CHICKEN MEAL (SOURCE OF GLUCOSAMINE AND CHONDROITIN SULFATE), DRIED PLAIN BEET PULP, NATURAL FLAVOR, SODIUM BISULFATE, CARAMEL COLOR, BREWERS DRIED YEAST, DRIED EGG PRODUCT, POTASSIUM CHLORIDE, SALT, CHOLINE CHLORIDE, FRUCTOOLIGOSACCHARIDES, CALCIUM CARBONATE, TAURINE, VITAMINS (VITAMIN E SUPPLEMENT, NIACIN, ASCORBIC ACID, VITAMIN A ACETATE, CALCIUM PANTOTHENATE, BIOTIN, THIAMINE MONONITRATE (SOURCE OF VITAMIN B1), PYRIDOXINE HYDROCHLORIDE (SOURCE OF VITAMIN B6), VITAMIN B12 SUPPLEMENT, RIBOFLAVIN SUPPLEMENT (SOURCE OF VITAMIN B2), VITAMIN D3 SUPPLEMENT, FOLIC ACID), MINERALS (ZINC OXIDE, MANGANESE SULFATE, COPPER SULFATE, POTASSIUM IODIDE), L-CARNITINE.`,
+    analysis: withCalories(ga(38, 17, 3, 10, null, 0.15), 3874, 439, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.",
+  },
+  "019014804870": {
+    ingredients: `Chicken, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Dried Egg Product, Fructooligosaccharides, Salt, Caramel Color, Choline Chloride, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3534, 353, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014707294": {
+    ingredients: `Chicken, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Dried Egg Product, Fructooligosaccharides, Salt, Caramel Color, Choline Chloride, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3534, 353, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014044191": {
+    ingredients: `Chicken, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Dried Egg Product, Fructooligosaccharides, Salt, Caramel Color, Choline Chloride, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(22.5, 12.5, 5, 10, null, null), 3534, 353, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805402": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Chicken By-Product Meal, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (Preserved With Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, Salt, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Calcium Carbonate, Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(27, 14, 4, 10, null, null), 3633, 378, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014803217": {
+    ingredients: `chicken broth, chicken, chicken liver, meat by-products, tapioca starch, dried egg product, dried plain beet pulp, glycine, fish oil (preserved with mixed tocopherols), potassium chloride, salt, sodium tripolyphosphate, natural flavor, magnesium sulfate, xanthan gum, choline chloride, caramel color, taurine, fructooligosaccharides, dl-methionine, vitamin e supplement, thiamine mononitrate (vitamin b1), guar gum, zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, pyridoxine hydrochloride (vitamin b6), potassium iodide, vitamin d3 supplement, folic acid, menadione sodium bisulfite complex (source of vitamin k)`,
+    analysis: ga(9, 4, 1.04, 82, 3.54, 0.06),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014808069": {
+    ingredients: `Turkey, Water, Beef Liver, Meat Broth, Whitefish, Dried Plain Beet Pulp, Minerals, Dried Egg Product, Guar Gum, Sodium Tripolyphosphate, Vitamins, Fish Oil, Carrageenan, Taurine, Tapioca Starch, Dl-Methionine, Fructooligosaccharide, Salt.`,
+    analysis: withKcalPerKg(ga(9, 5, 1, 78, 4, 0.06), 1213),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014808151": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014808120": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014808137": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014808144": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Beef, Brewers Rice, Ground Barley, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Dried Yeast, Dried Egg Product, Potassium Chloride, Caramel Color, Choline Chloride, Fructooligosaccharides, DL-Methionine, Calcium Carbonate, Salt, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3654, 380, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806768": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 13.5, 3.5, 10, null, null), 3664, 373, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.",
+  },
+  "019014806782": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 13.5, 3.5, 10, null, null), 3664, 373, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.",
+  },
+  "019014806812": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 13.5, 3.5, 10, null, null), 3664, 373, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.",
+  },
+  "019014806638": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Dried Bacillus subtilis Fermentation Product, Caramel Color, Potassium Chloride, Choline Chloride, Fructooligosaccharides, DL-Methionine, Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806669": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Dried Bacillus subtilis Fermentation Product, Caramel Color, Potassium Chloride, Choline Chloride, Fructooligosaccharides, DL-Methionine, Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806676": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Dried Bacillus subtilis Fermentation Product, Caramel Color, Potassium Chloride, Choline Chloride, Fructooligosaccharides, DL-Methionine, Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806683": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Dried Bacillus subtilis Fermentation Product, Caramel Color, Potassium Chloride, Choline Chloride, Fructooligosaccharides, DL-Methionine, Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805822": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(21, 13.5, 3.5, 10, null, null), 3608),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805839": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(21, 13.5, 3.5, 10, null, null), 3608),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805846": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(21, 13.5, 3.5, 10, null, null), 3608),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805853": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Byproduct Meal (Source of Glucosamine and Chondroitin Sulfate), Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Fish Oil, Marine Microalgae, Dried Egg Product, Calcium Carbonate, Potassium Chloride, Salt, Caramel Color, DL-Methionine, Fructooligosaccharides, Dried Bacillus subtilis Fermentation Product, Dicalcium Phosphate, Choline Chloride, Vitamin E Supplement, Vitamin C (Ascorbic Acid), L-Carnitine, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Vitamins (D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(21, 13.5, 3.5, 10, null, null), 3608),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805884": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Turkey, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, DL-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (preservative), Citric Acid (preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 18, 5, 10, null, null), 3830, 417, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805891": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Turkey, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, DL-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (preservative), Citric Acid (preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 18, 5, 10, null, null), 3830, 417, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014805907": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken Meal, Turkey, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavors, Dried Egg Product, Brewers Dried Yeast, Whole Flaxseed, Potassium Chloride, Caramel Color, Peas, Choline Chloride, Fructooligosaccharides, DL-Methionine, L-Lysine Hydrochloride, Mixed Tocopherols (preservative), Citric Acid (preservative), Carrots, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 18, 5, 10, null, null), 3830, 417, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806898": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(34, 15, 3, 10, null, 0.15), 3654),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806904": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(34, 15, 3, 10, null, 0.15), 3654),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806911": {
+    ingredients: `Salmon, Chicken By-Product Meal, Ground Whole Grain Corn, Chicken Meal, Chicken, Brewers Rice, Corn Grits, Ground Whole Grain Sorghum, Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavors, Chicken Fat (preserved with Mixed Tocopherols), Sodium Bisulfate, Caramel Color, Potassium Chloride, Dried Egg Product, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Dried Bacillus subtilis Fermentation Product, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Citric Acid (preservative), Mixed Tocopherols (preservative), L-Carnitine, Rosemary Extract.`,
+    analysis: withKcalPerKg(ga(34, 15, 3, 10, null, 0.15), 3654),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806928": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Turkey, Dried Plain Beet Pulp, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Fructooligosaccharides, Choline Chloride, Calcium Carbonate, DL-Methionine, Fish Oil (preserved with Mixed Tocopherols), Mixed Tocopherols (preservative), Citric Acid (preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3727, 376, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806935": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Turkey, Dried Plain Beet Pulp, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Fructooligosaccharides, Choline Chloride, Calcium Carbonate, DL-Methionine, Fish Oil (preserved with Mixed Tocopherols), Mixed Tocopherols (preservative), Citric Acid (preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3727, 376, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014806942": {
+    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Turkey, Dried Plain Beet Pulp, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Fructooligosaccharides, Choline Chloride, Calcium Carbonate, DL-Methionine, Fish Oil (preserved with Mixed Tocopherols), Mixed Tocopherols (preservative), Citric Acid (preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
+    analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3727, 376, "cup"),
+    verifiedAt: VERIFIED_037,
+  },
+  "019014830060": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, DL-Methionine, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
+    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Current-formula conflict: current Chewy Healthy Digestion panel reports 26% protein, 14% fat, 4% fiber and 3649 kcal/kg / 380 kcal/cup, while this staged UPC record carries 25% protein, 13% fat, 5% fiber and 3570 kcal/kg / 364 kcal/cup. Kroger still identifies UPC 019014830060 as the 4.5 lb product, so treat this as formula-generation drift pending physical-label dating.",
+  },
+  "019014830053": {
+    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract`,
+    analysis: withCalories(ga(25, 13.5, 3.5, 10, null, null), 3664, 373, "cup"),
+    verifiedAt: VERIFIED_037,
+    conflict:
+      "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation may shorten the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse naming generations.",
   },
 };

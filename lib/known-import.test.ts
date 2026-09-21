@@ -446,6 +446,24 @@ describe("data/known-formulas.ts", () => {
       "Weruva Wx Chicken & Tilapia Formula in Gravy / Weruva Wx Phos Focused Chicken & Tilapia Formula in Gravy",
       "Weruva Wx Chicken Formula in Gravy / Weruva Wx Phos Focused Chicken Formula in Gravy",
       "Weruva Wx Chicken Formula in a Hydrating Purée / Weruva Wx Phos Focused Chicken Formula in a Hydrating Purée",
+      // Iams adding a flavour qualifier to two range names, caught mid-shelf
+      // the same way. The distributor-era packs print "Healthy Senior" and
+      // "Skin & Coat"; the current ones print "Healthy Senior with Chicken"
+      // and "Skin & Coat Chicken & Salmon". Two independent shops carry one
+      // deck and one panel for each pair, under barcodes that are in shops
+      // now — which is a rename, not a paste, by the same test the two pairs
+      // above pass: a paste error would put one list on two DIFFERENT
+      // flavours, and there is only one flavour here under two spellings.
+      //
+      // The pair this deliberately does NOT cover is Perfect Portions Healthy
+      // Adult Chicken and Healthy Kitten Chicken, whose decks are also
+      // identical. An adult food and a kitten food are not one product under
+      // two names, and their guaranteed analyses differ (fibre 1% against
+      // 1.5%), so one of the two lists is wrong. The kitten barcode is
+      // therefore seeded as identity with NO formula rather than allowed
+      // here. See section M of docs/CATALOG-CONFLICTS.md.
+      "Iams ProActive Health Healthy Senior / Iams ProActive Health Healthy Senior with Chicken",
+      "Iams Advanced Health Skin & Coat / Iams Advanced Health Skin & Coat Chicken & Salmon",
     ]);
     // Keyed by the product's POSITION, not its printed name. Two entries can
     // carry an identical `brand line variant` and still be two products — that
