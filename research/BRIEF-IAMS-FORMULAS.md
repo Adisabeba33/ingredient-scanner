@@ -80,6 +80,18 @@ first campaign simply spent its effort on barcode discovery instead.
    and the calorie content as **text**, per recipe and per size. Start here.
 2. **Petco** and **PetSmart.** The same shape, and — this is the point —
    *independent* of Chewy. §3 is about why you want two.
+
+   For Petco this is not a guess: `research/PETCO-BRANDS.md` walked its food
+   facets on 2026-09-21 and found **at least 35 Iams foods** — a confirmed
+   minimum of 15 dry dog, 13 dry cat and 7 wet cat, with wet dog present too —
+   at `petco.com/brand/iams`. The panels are there. Go and get them.
+
+   That survey also disproved a claim this repository was making in writing:
+   `docs/SHELF-PRIORITY.md` had Iams down as "not at Petco", reasoning from
+   Petco's 2019 removal of foods with artificial ingredients. Both that file
+   and `research/BRIEF-PEDIGREE.md` §7 have been corrected. **If you meet
+   another "do not bother looking there" in a brief, treat it as a claim with
+   an expiry date** and say so in your handoff.
 3. **Target.** Already proven to work on this brand. Finish what the first
    campaign started rather than treating it as exhausted.
 4. **The images on iams.com.** See §4. This is not a last resort; for some
