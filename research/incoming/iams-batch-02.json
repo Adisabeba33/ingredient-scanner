@@ -571,27 +571,59 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "29.1 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Salt, Potassium Chloride, Caramel Color, DL-Methionine, Carrots, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 22,
+      "crude_fat_min_percent": 9,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Crude Fat",
+          "basis": "max",
+          "value": 11.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "L-Carnitine",
+          "basis": "min",
+          "value": 50,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 1.75,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 350,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 35,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3417,
+      "kcal_per_unit": 327,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US Chewy current complete panel; Petco independently matches ingredients/GA for current Healthy Weight Large Breed naming.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-healthy-weight-large-breed"
+      "https://www.iams.com/products/dry/iams-healthy-weight-large-breed",
+      "https://www.chewy.com/iams-proactive-health-healthy-weight/dp/47234"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -602,7 +634,8 @@
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
-      "Final dog-dry audit: current IAMS manufacturer catalog presents the large-breed weight-management successor/current recipe as Healthy Weight Large Breed. Staged Optimal Weight Large Breed identity is retained as distributor-era evidence."
+      "Final dog-dry audit: current IAMS manufacturer catalog presents the large-breed weight-management successor/current recipe as Healthy Weight Large Breed. Staged Optimal Weight Large Breed identity is retained as distributor-era evidence.",
+      "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity."
     ],
     "research_status": "needs_physical_label"
   },
@@ -785,27 +818,83 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "15 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Brewers Rice, Soybean Meal, Natural Flavor, Corn Gluten Meal, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Dicalcium Phosphate, Salt, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 28,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 350,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 35,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3633,
+      "kcal_per_unit": 378,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US PetSmart complete panel; Petco independently matches the printed GA for current Large Breed Puppy Chicken.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed"
+      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed",
+      "https://www.petsmart.com/dog/food/dry-food/iams-proactive-health-large-breed-puppy-dry-dog-food---healthy-development-chicken-3483.html"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -814,7 +903,8 @@
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
-      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition."
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition.",
+      "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity."
     ],
     "research_status": "needs_physical_label"
   },
@@ -838,27 +928,83 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "30.6 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Whole Grain Sorghum, Dried Plain Beet Pulp, Brewers Rice, Soybean Meal, Natural Flavor, Corn Gluten Meal, Fish Oil (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Dicalcium Phosphate, Salt, Carrots, Choline Chloride, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 28,
+      "crude_fat_min_percent": 14,
+      "crude_fiber_max_percent": 4,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Docosahexaenoic Acid",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Selenium",
+          "basis": "min",
+          "value": 0.35,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 130,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Glucosamine",
+          "basis": "min",
+          "value": 350,
+          "unit": "mg/kg"
+        },
+        {
+          "nutrient": "Chondroitin Sulfate",
+          "basis": "min",
+          "value": 35,
+          "unit": "mg/kg"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3633,
+      "kcal_per_unit": 378,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US PetSmart complete panel; Petco independently matches the printed GA for current Large Breed Puppy Chicken.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
-      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed"
+      "https://www.iams.com/products/dry/iams-smart-puppy-large-breed",
+      "https://www.petsmart.com/dog/food/dry-food/iams-proactive-health-large-breed-puppy-dry-dog-food---healthy-development-chicken-3483.html"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -867,7 +1013,8 @@
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
       "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
-      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition."
+      "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition.",
+      "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity."
     ],
     "research_status": "needs_physical_label"
   },
