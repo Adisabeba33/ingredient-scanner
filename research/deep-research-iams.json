@@ -555,7 +555,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation.",
         "Formula campaign 2026-09-21 continuation: Current US Chewy page merchandises this panel as Adult Healthy Weight Control with Real Chicken; staged identity is historical Adult Weight Control. Formula captured without changing UPC or staged product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for the current Healthy Weight / legacy Adult Weight Control recipe did not yield a qualifying second whole-panel witness tied cleanly to this staged formula generation. Existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -657,7 +658,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation.",
         "Formula campaign 2026-09-21 continuation: Current US Chewy page merchandises this panel as Adult Healthy Weight Control with Real Chicken; staged identity is historical Adult Weight Control. Formula captured without changing UPC or staged product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for the current Healthy Weight / legacy Adult Weight Control recipe did not yield a qualifying second whole-panel witness tied cleanly to this staged formula generation. Existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -759,7 +761,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation.",
         "Formula campaign 2026-09-21 continuation: Current US Chewy page merchandises this panel as Adult Healthy Weight Control with Real Chicken; staged identity is historical Adult Weight Control. Formula captured without changing UPC or staged product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for the current Healthy Weight / legacy Adult Weight Control recipe did not yield a qualifying second whole-panel witness tied cleanly to this staged formula generation. Existing naming/version conflict remains; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1223,7 +1226,8 @@
         "Dry audit: current IAMS manufacturer page confirms Large Breed Adult Lamb & Rice as 100% complete and balanced and shows current sizes 11/15/30/40 lb.",
         "Staged 38.5 lb UPC is therefore potentially a prior-size/version SKU; 40 lb aligns with the current manufacturer ladder. No UPC was inferred for current missing sizes.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for Large Breed Lamb & Rice found current product-family evidence, but no qualifying second whole-panel source that resolves the 38.5/40 lb generation boundary and matches the stored Chewy ingredient/GA/calorie panel character-for-character. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1333,7 +1337,8 @@
         "Dry audit: current IAMS manufacturer page confirms Large Breed Adult Lamb & Rice as 100% complete and balanced and shows current sizes 11/15/30/40 lb.",
         "Staged 38.5 lb UPC is therefore potentially a prior-size/version SKU; 40 lb aligns with the current manufacturer ladder. No UPC was inferred for current missing sizes.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for Large Breed Lamb & Rice found current product-family evidence, but no qualifying second whole-panel source that resolves the 38.5/40 lb generation boundary and matches the stored Chewy ingredient/GA/calorie panel character-for-character. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1447,7 +1452,8 @@
         "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
         "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative.",
         "Formula campaign 2026-09-21 continuation: US Chewy full panel matched by Petco ingredient/GA text for current Large Breed Adult Chicken & Whole Grain naming; staged historical identity retained.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: current retailer results for Large Breed Chicken show the same recipe family, but accessible evidence does not provide a second complete ingredient + every printed GA + calorie panel suitable for character-for-character corroboration of the stored Chewy generation. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1561,7 +1567,8 @@
         "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
         "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative.",
         "Formula campaign 2026-09-21 continuation: US Chewy full panel matched by Petco ingredient/GA text for current Large Breed Adult Chicken & Whole Grain naming; staged historical identity retained.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: current retailer results for Large Breed Chicken show the same recipe family, but accessible evidence does not provide a second complete ingredient + every printed GA + calorie panel suitable for character-for-character corroboration of the stored Chewy generation. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1675,7 +1682,8 @@
         "Dry audit: current IAMS manufacturer page independently confirms the Large Breed Adult Chicken & Whole Grain recipe and current size ladder 11/15/30/38.5/40/44/50 lb. Manufacturer states 100% complete and balanced adult nutrition.",
         "This row's exact UPC-to-size binding remains from distributor evidence. Nutrition images are not machine-readable enough here to transcribe ingredients/GA/calories safely, so those fields remain conservative.",
         "Formula campaign 2026-09-21 continuation: US Chewy full panel matched by Petco ingredient/GA text for current Large Breed Adult Chicken & Whole Grain naming; staged historical identity retained.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: current retailer results for Large Breed Chicken show the same recipe family, but accessible evidence does not provide a second complete ingredient + every printed GA + calorie panel suitable for character-for-character corroboration of the stored Chewy generation. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1818,7 +1826,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the large-breed senior recipe as Healthy Aging Large Breed Chicken & Whole Grain. Exact staged 30 lb Mature Adult Large Breed UPC remains distributor-era evidence.",
         "Formula campaign 2026-09-21: Current Chewy Healthy Aging Large Breed panel captured whole; staged Mature Adult Large Breed identity retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: current Healthy Aging Large Breed retailer evidence does not resolve the staged Mature Adult Large Breed naming/formula-generation transition with a second complete whole-panel match. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -1933,7 +1942,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: current Healthy Aging retailer evidence does not resolve the staged Mature Adult naming/formula-generation transition with a second complete whole-panel match. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
