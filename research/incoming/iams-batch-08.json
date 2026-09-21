@@ -107,26 +107,41 @@
     "presentation": "in_gravy",
     "package_type": "box",
     "size": "12 x 2.6 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "INDOOR TUNA RECIPE: Water, Chicken, Tuna, Chicken Liver, Meat By-Products, Tapioca Starch, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Glycine, Sodium Tripolyphosphate, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Salt, Natural Flavor, Magnesium Sulfate, Xanthan Gum, Choline Chloride, Taurine, Fructooligosaccharides, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Guar Gum, Zinc Sulfate, Iron Oxide Color, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source of Vitamin K).\nINDOOR SALMON RECIPE: Water, Chicken, Salmon, Chicken Liver, Meat By-Products, Tapioca Starch, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Glycine, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Salt, Natural Flavor, Magnesium Sulfate, Xanthan Gum, Sodium Tripolyphosphate, Choline Chloride, Taurine, Fructooligosaccharides, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate (Vitamin B1), Guar Gum, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex (Source of Vitamin K).",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
-      "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 82,
+      "ash_max_percent": 3.5,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Recipe panel scope",
+          "basis": "printed",
+          "value": null,
+          "unit": "same printed GA for both Indoor Tuna and Indoor Salmon recipes"
+        }
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
       "kcal_per_unit": null,
-      "unit_name": "serving"
+      "unit_name": "Indoor Tuna: 1003 kcal/kg, 38 kcal/serving; Indoor Salmon: 807 kcal/kg, 30 kcal/serving"
     },
     "label_deck_code": null,
-    "formula_source": "Current US Target listing binds exact UPC to the retail unit/multipack and exposes current product panel information. No missing nutrition values are inferred.",
+    "formula_source": "Exact Target UPC 019014802708 identity/GA plus complete US PetSmart recipe panels for the same Indoor Tuna & Salmon variety pack; official IAMS independently confirms the two-recipe product and nutrition sections.",
     "source_urls": [
-      "https://www.target.com/p/-/A-75666332"
+      "https://www.target.com/p/-/A-75666332",
+      "https://www.petsmart.com/cat/food-and-treats/wet-food/iams-perfect-portions-indoor-adult-wet-cat-food---cuts-in-gravy-variety-pack-24-ct-317-oz-52411.html",
+      "https://www.iams.com/products/wet/iams-perfect-portions-indoor-cuts-gravy-variety-pack-tuna-recipe-salmon-recipe-12ct"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "UPC is explicitly for the 12 x 2.6 oz retail multipack, not one twin tray.",
@@ -134,7 +149,8 @@
     "verification_notes": [
       "Current Target evidence proves the multipack identity. Per-recipe panels are only partial/incomplete in accessible text; no synthetic merged formula was created.",
       "US evidence only; no Canadian/EU formula substituted.",
-      "Formula campaign 2026-09-21: Target US explicitly prints UPC 019014802708 and separate Salmon/Tuna GA panels (each protein 10%, fat 4%, fiber 1%, moisture 82%, ash 3.5%, vitamin E 80 IU/kg, taurine 0.06%). The page establishes the exact variety-pack identity and separate recipe panels. Ingredient text was not fully exposed in the retrieved page, so this record remains unresolved for exact verbatim ingredients and is not counted as closed."
+      "Formula campaign 2026-09-21: Target US explicitly prints UPC 019014802708 and separate Salmon/Tuna GA panels (each protein 10%, fat 4%, fiber 1%, moisture 82%, ash 3.5%, vitamin E 80 IU/kg, taurine 0.06%). The page establishes the exact variety-pack identity and separate recipe panels. Ingredient text was not fully exposed in the retrieved page, so this record remains unresolved for exact verbatim ingredients and is not counted as closed.",
+      "Formula campaign 2026-09-21 closure: Target explicitly binds UPC 019014802708 to the Indoor Tuna + Salmon Cuts in Gravy variety pack and prints separate matching GA panels. PetSmart exposes complete ingredient statements, GA, and calories for both recipes; official IAMS independently confirms this exact two-recipe variety. Recipes remain explicitly separated in ingredients/calorie text. Status not promoted because the full panel is distributed across identity and formula sources rather than one UPC-bearing label page."
     ],
     "research_status": "needs_physical_label"
   },
