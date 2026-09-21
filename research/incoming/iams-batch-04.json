@@ -1,0 +1,216 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "019014805112",
+    "canonical_gtin14": "00019014805112",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Sensitive Digestion & Skin Dry Cat Food",
+    "variant": "Sensitive Digestion & Skin",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US IAMS manufacturer page confirms the recipe/range and current product identity; the 2025 ADMC US distributor catalog binds the UPC to the exact unit bag size. Complete nutrition panels remain image-only in accessible manufacturer text.",
+    "source_urls": [
+      "https://www.iams.com/products/dry/iams-proactive-health-sensitive-digestion-skin",
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "UPC-A printed directly in the US distributor catalog; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European composition substituted.",
+      "Current IAMS page exposes the nutrition panel as images in accessible text, so no ingredient/GA/calorie values were transcribed or inferred.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current label evidence required by AGENTS §10 is not fully readable/proven."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805129",
+    "canonical_gtin14": "00019014805129",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Sensitive Digestion & Skin Dry Cat Food",
+    "variant": "Sensitive Digestion & Skin",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "13 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US IAMS manufacturer page confirms the recipe/range and current product identity; the 2025 ADMC US distributor catalog binds the UPC to the exact unit bag size. Complete nutrition panels remain image-only in accessible manufacturer text.",
+    "source_urls": [
+      "https://www.iams.com/products/dry/iams-proactive-health-sensitive-digestion-skin",
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "ADMC line prints 19014805129 (11 digits); normalized here to UPC-A 019014805129 by restoring the leading zero. This normalization matches the observed IAMS 019014 prefix and valid UPC-A check digit; retain as a disclosed conflict until physical-label confirmation.",
+    "conflicts": [
+      "ADMC PDF omits the leading zero and prints 19014805129; normalized to 019014805129. Physical pack confirmation is still desirable."
+    ],
+    "verification_notes": [
+      "US evidence only; no European composition substituted.",
+      "Current IAMS page exposes the nutrition panel as images in accessible text, so no ingredient/GA/calorie values were transcribed or inferred.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current label evidence required by AGENTS §10 is not fully readable/proven."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802203",
+    "canonical_gtin14": "00019014802203",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Urinary Tract Health with Chicken Dry Cat Food",
+    "variant": "Urinary Tract Health with Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US IAMS manufacturer page confirms the recipe/range and current product identity; the 2025 ADMC US distributor catalog binds the UPC to the exact unit bag size. Complete nutrition panels remain image-only in accessible manufacturer text.",
+    "source_urls": [
+      "https://www.iams.com/products/dry/iams-proactive-health-urinary-tract-health-chicken",
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "UPC-A printed directly in the US distributor catalog; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European composition substituted.",
+      "Current IAMS page exposes the nutrition panel as images in accessible text, so no ingredient/GA/calorie values were transcribed or inferred.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current label evidence required by AGENTS §10 is not fully readable/proven."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014802210",
+    "canonical_gtin14": "00019014802210",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "cat",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Urinary Tract Health with Chicken Dry Cat Food",
+    "variant": "Urinary Tract Health with Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "7 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current US IAMS manufacturer page confirms the recipe/range and current product identity; the 2025 ADMC US distributor catalog binds the UPC to the exact unit bag size. Complete nutrition panels remain image-only in accessible manufacturer text.",
+    "source_urls": [
+      "https://www.iams.com/products/dry/iams-proactive-health-urinary-tract-health-chicken",
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+    ],
+    "source_accessed_at": "2026-09-20",
+    "barcode_notes": "UPC-A printed directly in the US distributor catalog; canonical GTIN-14 is zero-left-padded.",
+    "conflicts": [],
+    "verification_notes": [
+      "US evidence only; no European composition substituted.",
+      "Current IAMS page exposes the nutrition panel as images in accessible text, so no ingredient/GA/calorie values were transcribed or inferred.",
+      "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
+      "Not source_verified because complete current label evidence required by AGENTS §10 is not fully readable/proven."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
