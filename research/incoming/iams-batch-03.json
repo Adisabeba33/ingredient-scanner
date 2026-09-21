@@ -55,7 +55,12 @@
       "ash_max_percent": 3.5,
       "taurine_min_percent": 0.06,
       "other_printed_guarantees": [
-        "Vitamin E min 80 IU/kg"
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        }
       ]
     },
     "calorie_content": {
@@ -83,7 +88,8 @@
       "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
       "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
       "Second panel pass corrected/expanded the current Target GA: fiber 1% max (not 1.5), ash 3.5% max, vitamin E 80 IU/kg, taurine 0.06%. Target's current displayed ingredient deck also differs materially from the earlier captured retailer deck; this is recorded as a live formula/source conflict rather than silently overwritten.",
-      "Because current retailer decks conflict, this record cannot be source_verified until a physical/current manufacturer label settles the formula version."
+      "Because current retailer decks conflict, this record cannot be source_verified until a physical/current manufacturer label settles the formula version.",
+      "Final audit 2026-09-21: converted Vitamin E guarantee from legacy string to structured object. Adult Chicken and Kitten Chicken remain separate records with explicitly documented current retailer-panel conflict; identical displayed ingredient decks were not treated as proof that the life-stage formulas are identical."
     ],
     "research_status": "needs_physical_label"
   },
