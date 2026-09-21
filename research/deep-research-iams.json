@@ -2058,7 +2058,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for Mature Adult / current Healthy Aging Chicken & Whole Grain did not produce a qualifying second complete panel that resolves the naming/formula-generation transition. Existing Chewy panel remains the sole complete witness for the staged formula; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2173,7 +2174,8 @@
         "Because formula evidence is incomplete, this record is deliberately not source_verified.",
         "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation.",
         "Formula campaign 2026-09-21: Current Chewy Healthy Aging senior panel captured whole; staged Mature Adult identity retained. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer search for Mature Adult / current Healthy Aging Chicken & Whole Grain did not produce a qualifying second complete panel that resolves the naming/formula-generation transition. Existing Chewy panel remains the sole complete witness for the staged formula; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -2958,7 +2960,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Final dog-dry audit: current IAMS manufacturer catalog presents the large-breed weight-management successor/current recipe as Healthy Weight Large Breed. Staged Optimal Weight Large Breed identity is retained as distributor-era evidence.",
         "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: independent retailer evidence for current Healthy Weight Large Breed does not resolve the staged Optimal Weight Large Breed naming/formula generation with a character-for-character ingredient + full GA + calorie match. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3060,7 +3063,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Final dog-dry audit: current IAMS manufacturer page confirms Small Breed Adult Chicken & Whole Grains recipe family. Exact 7/15 lb UPC bindings remain distributor evidence; no current neighboring UPCs inferred.",
         "Formula campaign 2026-09-21: Current Chewy Small Breed Adult panel captured whole. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Small Breed Chicken & Whole Grains. Current product-family evidence is available, but no second source exposed the entire ingredient statement, every printed guarantee, and calories as a qualifying whole-panel witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3162,7 +3166,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Final dog-dry audit: current IAMS manufacturer page confirms Small Breed Adult Chicken & Whole Grains recipe family. Exact 7/15 lb UPC bindings remain distributor evidence; no current neighboring UPCs inferred.",
         "Formula campaign 2026-09-21: Current Chewy Small Breed Adult panel captured whole. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Small Breed Chicken & Whole Grains. Current product-family evidence is available, but no second source exposed the entire ingredient statement, every printed guarantee, and calories as a qualifying whole-panel witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3287,7 +3292,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Dry audit: current IAMS manufacturer page confirms Smart Puppy Small Breed Chicken & Whole Grain recipe and its current small-breed positioning. Exact staged UPC-to-size binding remains distributor evidence; no neighboring size UPC inferred.",
         "Formula campaign 2026-09-21: Complete current US Chewy Small Breed Puppy panel captured whole. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Small Breed Smart Puppy. No qualifying second complete ingredient + full GA + calorie panel was found beyond the stored Chewy witness; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3422,7 +3428,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition.",
         "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: the stored PetSmart panel remains the complete retailer witness for Smart Puppy Large Breed; independent current retailer search did not yield a second complete whole-panel match suitable for promotion. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3557,7 +3564,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Dry audit: current IAMS manufacturer page confirms Smart Puppy Large Breed Chicken & Whole Grain recipe, growth/large-breed positioning and current recipe identity. Exact UPC-to-size remains independently bound; formula fields are not filled from image-only nutrition.",
         "Formula campaign 2026-09-21: full US formula panel captured without changing the staged UPC/product identity.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: the stored PetSmart panel remains the complete retailer witness for Smart Puppy Large Breed; independent current retailer search did not yield a second complete whole-panel match suitable for promotion. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3680,7 +3688,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Dry audit: current IAMS manufacturer page confirms Smart Puppy Original Chicken & Whole Grain recipe and puppy growth positioning. Exact UPC-to-size binding remains separate from shared recipe evidence.",
         "Formula campaign 2026-09-21: current US Smart Puppy with Real Chicken ingredients + GA + calories captured together from Chewy. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Smart Puppy Original with Chicken. No qualifying second complete ingredient + every printed GA + calorie panel was found beyond the stored Chewy witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -3803,7 +3812,8 @@
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Dry audit: current IAMS manufacturer page confirms Smart Puppy Original Chicken & Whole Grain recipe and puppy growth positioning. Exact UPC-to-size binding remains separate from shared recipe evidence.",
         "Formula campaign 2026-09-21: current US Smart Puppy with Real Chicken ingredients + GA + calories captured together from Chewy. Single-retailer evidence; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Smart Puppy Original with Chicken. No qualifying second complete ingredient + every printed GA + calorie panel was found beyond the stored Chewy witness. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
