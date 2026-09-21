@@ -1384,16 +1384,29 @@
     "presentation": null,
     "package_type": "can",
     "size": "12.3 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Sufficient Water For Processing, Meat By-Products, Chicken, Chicken By-Products, Brown Rice, Wheat Flour, Wheat Gluten, Flax Seed, Calcium Carbonate, Carob Bean Gum, Sodium Tripolyphosphate, Carageenan, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Selenium, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Xanthan Gum, Salt, Dried Yam, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin A Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement), Fish Oil, Yellow #6, Yellow #5",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 7,
+      "crude_fat_min_percent": 3,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 84,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
@@ -1401,9 +1414,10 @@
       "unit_name": "can"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US retailer formula evidence: ingredients and guaranteed analysis captured together from one page; existing staged calorie evidence left untouched where source did not print calories.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.farmandhomesupply.com/iams-proactive-health-adult-chunks-with-chicken-in-gravy-wet-dog-food-12-3oz.html"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -1411,7 +1425,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Formula campaign 2026-09-21: Farm & Home Supply page explicitly prints UPC 019014025190, ingredients and GA together. Calorie value was not visible in the captured source, so existing staged calorie evidence is retained rather than guessed."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1486,16 +1501,29 @@
     "presentation": null,
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Sufficient Water For Processing, Chicken, Meat By-Products, Animal Liver, Dried Egg Product, Brown Rice, Dried Tomato Pomace, Fish Oil (Source Of Dha), Flax Seed, Plain Dried Beet Pulp, Minerals (Potassium Chloride, Magnesium Proteinate, Zinc Sulfate, Selenium, Copper Proteinate, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Carrageenan, Sodium Tripolyphosphate, Dried Yam, Xanthan Gum, Vitamins (Choline Chloride, Vitamin E Supplement, Thiamine Mononitrate, Calcium Pantothenate, Biotin, Riboflavin Supplement, Vitamin A Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement), Guar Gum, Sodium Nitrite (For Color Retention)",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 8,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.1,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
@@ -1503,9 +1531,10 @@
       "unit_name": "can"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health identity and unit size. Current complete US label formula/GA/calorie evidence was not proven in readable primary text in this session.",
+    "formula_source": "US retailer formula evidence: ingredients and guaranteed analysis captured together from one page; existing staged calorie evidence left untouched where source did not print calories.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.farmandhomesupply.com/iamsr-proactive-health-puppy-ground-dinner-with-chicken-and-rice-13-2oz.html"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains an observed IAMS US prefix, not claimed GS1-confirmed.",
@@ -1513,7 +1542,8 @@
     "verification_notes": [
       "US evidence only; no EU composition substituted.",
       "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
-      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven."
+      "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
+      "Formula campaign 2026-09-21: Farm & Home Supply page explicitly prints UPC 019014013326, ingredients and GA together; independent US retailer That Pet Place prints the same UPC and core GA but a different/older ingredient statement, so no source stitching or status promotion was done."
     ],
     "research_status": "needs_physical_label"
   },
