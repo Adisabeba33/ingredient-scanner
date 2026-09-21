@@ -99,31 +99,115 @@
     "presentation": "plain",
     "package_type": "box",
     "size": "12 x 2.6 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Salmon Recipe: Chicken, Water, Salmon, Poultry Liver, Chicken Broth, Dried Egg Product, Dried Plain Beet Pulp, Calcium Carbonate, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, Fructooligosaccharides, Salt, DL-Methionine, Vitamin E Supplement, Thiamine Mononitrate, Iron Oxide Color, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex. Turkey Recipe: Chicken, Turkey, Poultry Liver, Water, Turkey Broth, Plain Dried Beet Pulp, Calcium Carbonate, Dried Egg Product, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Magnesium Sulfate, Taurine, Choline Chloride, Tapioca Starch, DL-Methionine, Fructooligiosaccharides, Salt, Vitamin E Supplement, Thiamine Mononitrate, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid, Potassium Iodide, Menadione Sodium Bisulfite Complex.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": 9.5,
-      "crude_fat_min_percent": 5,
-      "crude_fiber_max_percent": 1,
-      "moisture_max_percent": 78,
-      "ash_max_percent": 4,
-      "taurine_min_percent": 0.06,
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
       "other_printed_guarantees": [
-        "Vitamin E min 80 IU/kg"
+        {
+          "nutrient": "Salmon Recipe — Crude Protein",
+          "basis": "min",
+          "value": 9.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Salmon Recipe — Crude Fat",
+          "basis": "min",
+          "value": 5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Salmon Recipe — Crude Fiber",
+          "basis": "max",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Salmon Recipe — Moisture",
+          "basis": "max",
+          "value": 78,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Salmon Recipe — Ash",
+          "basis": "max",
+          "value": 4,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Salmon Recipe — Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Salmon Recipe — Taurine",
+          "basis": "min",
+          "value": 0.06,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Crude Protein",
+          "basis": "min",
+          "value": 9.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Crude Fat",
+          "basis": "min",
+          "value": 5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Crude Fiber",
+          "basis": "max",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Moisture",
+          "basis": "max",
+          "value": 78,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Ash",
+          "basis": "max",
+          "value": 3.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Turkey Recipe — Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Turkey Recipe — Taurine",
+          "basis": "min",
+          "value": 0.06,
+          "unit": "%"
+        }
       ]
     },
     "calorie_content": {
       "kcal_per_kg": null,
       "kcal_per_unit": null,
-      "unit_name": "serving"
+      "unit_name": "variety pack: Salmon 1009 kcal/kg, 38 kcal/serving; Turkey 1271 kcal/kg, 48 kcal/serving"
     },
     "label_deck_code": null,
-    "formula_source": "Exact US UPC and package identity were bound by US distributor/retailer or Mars qualifying-product evidence. Current formula fields are intentionally left untranscribed unless a complete current label deck is readable.",
+    "formula_source": "US Chewy variety-pack page prints both Salmon and Turkey recipe panels together.",
     "source_urls": [
       "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_5.12.25.pdf",
       "https://www.target.com/p/-/A-52093601",
       "https://www.target.com/p/-/A-52249459",
-      "https://www.walmart.com/ip/1455793467"
+      "https://www.walmart.com/ip/1455793467",
+      "https://www.chewy.com/iams-perfect-portions-indoor-grain/dp/158384"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "ADMC identifies this exact UPC as a 12 x 2.6 oz Perfect Portions variety pack; barcode_scope is multipack, not an individual tray.",
@@ -136,7 +220,8 @@
       "Variety pack contains two recipes; a single merged ingredient/GA deck was deliberately not invented. Exact per-flavor current panels and adequacy evidence are still required.",
       "Current Target label panel supplies Salmon-recipe GA: protein 9.5% min, fat 5% min, fiber 1% max, moisture 78% max, ash 4%, vitamin E 80 IU/kg, taurine 0.06%.",
       "Current Walmart listing independently states this 12-tray pack contains 24 servings and describes the food as complete and balanced nutrition.",
-      "Still needs_physical_label: Turkey-recipe panel, calories and the exact AAFCO adequacy statement are not all exposed together; no box-level synthetic formula created."
+      "Still needs_physical_label: Turkey-recipe panel, calories and the exact AAFCO adequacy statement are not all exposed together; no box-level synthetic formula created.",
+      "Formula campaign 2026-09-21: variety-pack evidence retained as two explicitly labeled recipe panels rather than collapsing unlike GA/calorie values into one formula."
     ],
     "research_status": "needs_physical_label"
   },
