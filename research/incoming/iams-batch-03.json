@@ -784,7 +784,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -792,7 +793,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -835,7 +837,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -843,7 +846,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -886,7 +890,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -894,7 +899,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -937,7 +943,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-adult-original-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -945,7 +952,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Adult Original Chicken recipe family. Exact UPC-to-size evidence remains separate; no missing UPCs inferred."
     ],
     "research_status": "needs_physical_label"
   },
@@ -997,7 +1005,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1049,7 +1058,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1092,7 +1102,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-healthy-senior"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -1100,7 +1111,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Senior recipe family. This 7 lb UPC remains exact distributor-era size evidence pending full current label panel."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1143,7 +1155,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-sensitive-digestion-skin"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -1151,7 +1164,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Sensitive Digestion & Skin recipe family; this completes manufacturer corroboration across staged 3/6/13 lb UPCs."
     ],
     "research_status": "needs_physical_label"
   }
