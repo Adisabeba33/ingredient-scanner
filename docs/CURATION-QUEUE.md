@@ -1,0 +1,170 @@
+# The curation queue — the twenty brands a shopper is actually holding
+
+`docs/SHELF-PRIORITY.md` ranks all 172 seed brands by shelf presence. This file
+is narrower and harder: it is the **operator's own list** of the brands whose
+absence is felt at the till, worked **one brand at a time**, with a named
+assignment per brand and a status that is either DONE or not.
+
+The list came from the operator, not from this repository's ranking, and where
+the two disagree the operator wins. Six brands here — Ol' Roy, Special Kitty,
+Pure Balance, Kindfull, American Journey, Frisco — sit under
+"Explicitly deprioritised" in `SHELF-PRIORITY.md` because the three target
+chains were PetSmart, Petco and Tractor Supply. Naming them puts Walmart,
+Target and a Chewy carton in somebody's kitchen back on the target list. That is
+a business decision and it is recorded here rather than argued with; see
+§"Why the ranking moved" below.
+
+**154 of 172 seed brands hold nothing.** These twenty are the ones where that
+emptiness meets an ordinary weekly shop.
+
+---
+
+## How a brand moves through this queue
+
+One brand, one agent, one campaign, in this order:
+
+1. **Brief** — `research/BRIEF-<BRAND>.md`, written from the repository before
+   the agent starts. It names the brand boundary, the prerequisites, and the
+   traps specific to that maker. The brief is the assignment.
+2. **Inventory** — `node scripts/brand-inventory.mjs "<Brand>" > research/INVENTORY-<BRAND>.md`,
+   regenerated at the moment the campaign starts, never pasted.
+3. **Ledger** — `research/deep-research-<brand-slug>.json`, built under the
+   binding contract in `research/AGENTS.md`. Evidence, not catalog data.
+4. **Checker green** — `node scripts/check-ledger.mjs research/deep-research-<slug>.json`
+   exits 0 and every WARN has been answered.
+5. **Seed** — the `source_verified` records are promoted into
+   `data/known-products.ts` and `data/known-formulas.ts` per
+   `docs/SEEDING-A-BATCH.md`.
+6. **Handoff** — `research/<BRAND>-HANDOFF.md`, and the row below flips.
+
+A campaign that stops at step 3 with `candidate` records has produced nothing
+seedable. That is not a failure of effort; it is what a blocked egress policy
+looks like from the inside — read `docs/RESEARCH-EGRESS.md` **before** starting
+any brand here.
+
+---
+
+## The queue
+
+Status is one of: **QUEUED**, **BRIEFED** (assignment written, research not
+started), **RESEARCHING**, **SEEDING**, **DONE**.
+
+### Wave 1 — national brands, one maker family at a time
+
+Grouped by maker on purpose. A maker's first batch is where the engine
+prerequisites show up (`docs/SEEDING-A-BATCH.md` §2.5), and paying that cost
+once buys the siblings behind it.
+
+| # | Brand | Species | Maker | Status | Why here |
+|---|-------|---------|-------|--------|----------|
+| 1 | **Iams** | both | Mars | **BRIEFED** — `research/BRIEF-IAMS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
+| 2 | **Purina Cat Chow** | cat | Nestlé Purina | QUEUED | The value bag in every supermarket. Purina is the most-travelled maker in this repo — three GS1 prefixes proven, vitamin constants already written. |
+| 3 | **Purina Dog Chow** | dog | Nestlé Purina | QUEUED | Same shelf, dogs. Runs straight after #2 on the same prefixes and the same size-ladder rules. |
+| 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
+| 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
+| 6 | **Cesar** | dog | Mars | QUEUED | Tier-1 #8. Small-dog wet trays bought weekly; the tray/twin-pack scope question is the whole campaign. |
+| 7 | **Temptations** | cat | Mars | QUEUED | Tier-1 #9, highest-volume cat treat in the country. Already in `KNOWN_TREAT_LINES`. |
+| 8 | **Greenies** | both | Mars | QUEUED | Dental chews in all three chains. Already in `KNOWN_TREAT_LINES`; Pill Pockets is a supplement-shaped edge case. |
+| 9 | **Whiskas** | cat | Mars | QUEUED | **`lines: []`** — the brand entry names no ranges at all, so every product lands under "Other" until that is fixed. See prerequisites. |
+| 10 | **Meow Mix** | cat | Post | QUEUED | Post's cat volume. Pairs with 9Lives, which is seeded, so the Post prefix family is partly mapped. |
+| 11 | **Kibbles 'n Bits** | dog | Post | QUEUED | Post sibling of #10; run it immediately after while the prefix work is warm. |
+
+### Wave 2 — store own-brands
+
+Each is enormous inside exactly one chain and invisible outside it. Worth the
+whole wave only because the operator named those chains as targets.
+
+| # | Brand | Species | Chain | Status | Note |
+|---|-------|---------|-------|--------|------|
+| 12 | **Ol' Roy** | dog | Walmart | QUEUED | **`lines: []`**. The highest-volume dog food in America by units sold. |
+| 13 | **Special Kitty** | cat | Walmart | QUEUED | **`lines: []`**. Ol' Roy's cat counterpart, same aisle. |
+| 14 | **Pure Balance** | both | Walmart | QUEUED | Walmart's premium tier; three ranges already named. |
+| 15 | **WholeHearted** | both | Petco | QUEUED | Petco's own food, five ranges named. A Petco shopper meets it more often than any national brand. |
+| 16 | **Simply Nourish** | both | PetSmart | QUEUED | Five ranges named. |
+| 17 | **Authority** | both | PetSmart | QUEUED | **`lines: []`**. |
+| 18 | **Kindfull** | both | Target | QUEUED | **`lines: []`**. Target's own brand, launched 2021. |
+| 19 | **American Journey** | both | Chewy | QUEUED | Brief already written: `research/BRIEF-AMERICAN-JOURNEY.md`. Chewy is folding its labels into `Chewy Made`, which the seed file does not know. |
+| 20 | **Frisco** | both | Chewy | QUEUED | **`lines: []`**. Mostly hard goods and treats; check the food scope before briefing. |
+
+---
+
+## Prerequisites that block whole groups
+
+Found by reading the repository, not by guessing. Each one is cheap now and
+expensive after a campaign has already written records against it.
+
+### 1. No Mars manufacturer entry — blocks #1, #6, #7, #8, #9
+
+`Ingredients.help/data/manufacturers.ts` has entries for Nestlé Purina, Hill's
+and Post, and **none for Mars**. Five brands in wave 1 are Mars. Without that
+entry none of them can have the maker-quality panel the app shows for a Purina
+or a Hill's product, and `docs/RESEARCH-EGRESS.md` names `mars.com` and
+`marspetcare.com` as the hosts the five criteria have to come from.
+
+This is app-repo work, and it is a **separate assignment** from any brand
+campaign — see `research/BRIEF-IAMS.md` §"What this campaign does not do".
+
+### 2. Six brands name no ranges — blocks #9, #12, #13, #17, #18, #20
+
+`Whiskas`, `Ol' Roy`, `Special Kitty`, `Authority`, `Kindfull` and `Frisco`
+carry no `lines` array in `data/us-pet-brands.ts`. `docs/SEEDING-A-BATCH.md` §3
+is explicit about what that costs: a product whose range is not in that file is
+filed under "Other" and a whole shelf goes missing from the coverage page.
+
+The ranges must be added **from the packs the campaign actually reads**, not
+from memory, which means the brief for each of those brands has to carry the
+range-discovery step as an explicit deliverable rather than assuming the entry
+is ready.
+
+### 3. No GS1 prefix for any of the twenty except the Purina four
+
+`data/gs1-prefixes.ts` holds `050000`, `017800` and `038100` for Purina,
+`023100` for Mars Petcare US, `071190`/`079100` for Post. That covers #2–#5 and
+#10–#11 outright, and probably #6–#9 through the Mars block.
+
+It covers **none of the store brands**, and an unknown prefix makes
+`scripts/check-batch.mjs` call every row in the batch a failure — the exact
+twenty-false-failures problem `data/gs1-prefixes.ts` documents in its own
+header. Each store-brand campaign must add its prefix before its first check
+run, and say plainly whether the prefix was confirmed at GS1 or merely observed
+on packs.
+
+**Iams has no entry.** Iams packs are believed to carry a prefix of their own
+rather than Mars's `023100`, in the same way Merrick keeps `022808` under
+Purina and Champion keeps `064992` under Mars. That is a lead, not a fact, and
+`research/BRIEF-IAMS.md` §4 is where the campaign is told to settle it.
+
+---
+
+## Why the ranking moved
+
+`SHELF-PRIORITY.md` says of Walmart, Target and Chewy own-brands: "Worth doing
+the day one of those chains becomes a target; not today." The operator's list
+makes that day today, for six brands.
+
+The reasoning in `SHELF-PRIORITY.md` still stands on its own terms — those
+brands genuinely are invisible in a PetSmart. What changed is the question. The
+old one was "which aisle are we serving?"; the new one is "whose pack is in the
+hand holding the phone?", and a bag of Ol' Roy in a Walmart cart is a scan
+exactly as often as a bag of Pro Plan in a PetSmart one.
+
+That also makes the SHELF-PRIORITY line about American Journey the general rule
+rather than the exception it was written as: **the shelf test is the wrong one
+for a bag somebody already owns and scans in their own kitchen.**
+
+Neither file is retired. `SHELF-PRIORITY.md` still ranks the other 134 empty
+brands; this file governs these twenty.
+
+---
+
+## Where the catalog stands
+
+Regenerate rather than trusting the numbers:
+
+```bash
+grep -oP '^\s*brand: "\K[^"]+' data/known-products.ts | sort | uniq -c | sort -rn
+grep -oP '^\s*brand: "\K[^"]+' data/known-multipacks.ts | sort | uniq -c | sort -rn
+```
+
+At the time this file was written, 18 of 172 brands held products, and **not
+one of the twenty above was among them**.

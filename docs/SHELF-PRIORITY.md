@@ -7,6 +7,15 @@ ingredient list is, not how easy the research would be.
 
 ## Why this file exists
 
+> **A narrower queue now sits on top of this file.**
+> `docs/CURATION-QUEUE.md` holds the twenty brands the operator named as the
+> holes an ordinary shopper falls into, worked one at a time with a brief each.
+> Six of them are brands this file deprioritised as off-shelf — Ol' Roy,
+> Special Kitty, Pure Balance, Kindfull, American Journey, Frisco — because the
+> question changed from "which aisle are we serving?" to "whose pack is in the
+> hand holding the phone?". That file's "Why the ranking moved" explains it.
+> This file still ranks the other 134 empty brands.
+
 The seed list holds 172 brands and 16 of them have anything at all. Worked in
 list order that is eighteen months of batches before the app answers a scan in
 a supermarket. Worked in shelf order, the first ten brands cover most of what
@@ -50,7 +59,7 @@ row in the catalog.
 | 1 | **Pro Plan** | both | PetSmart, Petco, TSC | The premium bag at all three chains at once. The single biggest hole in the catalog. **Brief written:** `research/BRIEF-PRO-PLAN.md`. |
 | 2 | **Pedigree** | dog | TSC, Walmart, grocery | Highest-volume dog food in the US by units. Not at Petco (artificial). **Brief written:** `research/BRIEF-PEDIGREE.md`. |
 | 3 | **Sheba** | cat | PetSmart, TSC, grocery | **Already half-done** — 19 boxes seeded, zero formulas. Cheapest tier-1 win. |
-| 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. |
+| 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. **Brief written:** `research/BRIEF-IAMS.md`. |
 | 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. **Brief written:** `research/BRIEF-WELLNESS.md`. |
 | 6 | **Nutro** | both | PetSmart, Petco, TSC | Mars's natural line — one of the few Mars brands Petco still carries. |
 | 7 | **Taste of the Wild** | both | TSC, Petco | The Tractor Supply premium bag. Diamond, so it shares a plant with 4health. |
