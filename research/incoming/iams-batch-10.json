@@ -416,5 +416,164 @@
       "Full current label panel still incomplete; keep needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808120",
+    "canonical_gtin14": "00019014808120",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Adult Minichunks Beef & Rice Recipe Dry Dog Food",
+    "variant": "Beef & Rice",
+    "recipe": [
+      "Beef",
+      "Rice"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480812",
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Retailer display 0001901480812 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808120.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
+      "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808137",
+    "canonical_gtin14": "00019014808137",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Adult Minichunks Beef & Rice Recipe Dry Dog Food",
+    "variant": "Beef & Rice",
+    "recipe": [
+      "Beef",
+      "Rice"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "7 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480813",
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Retailer display 0001901480813 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808137.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
+      "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014808144",
+    "canonical_gtin14": "00019014808144",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "ProActive Health",
+    "product_name": "IAMS ProActive Health Adult Minichunks Beef & Rice Recipe Dry Dog Food",
+    "variant": "Beef & Rice",
+    "recipe": [
+      "Beef",
+      "Rice"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "11 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current IAMS manufacturer size family plus exact current retailer UPC display for this bag size.",
+    "source_urls": [
+      "https://www.kroger.com/p/iams-proactive-health-adult-dry-dog-food-beef-and-rice-recipe/0001901480814",
+      "https://www.iams.com/products/dry/iams-adult-beef-and-rice"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Retailer display 0001901480814 is treated only as an explicitly labeled padded UPC representation; removing one left padding zero yields check-digit-valid UPC-A 019014808144.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current IAMS manufacturer page independently confirms Beef & Rice current size family 5/7/11/15/30 lb.",
+      "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
+      "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
