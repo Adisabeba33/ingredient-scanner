@@ -73,5 +73,25 @@ Batch 2 incoming commit: `86d9509a11b9b58d21e27744e0ad5cc53c16dba8`.
 
 As in batch 1, this environment still has no shell. The Node inventory/checker were not run or simulated; both incoming arrays require a shell-enabled merge/check pass before promotion or seeding.
 
+
+## Batch 3
+- Staging path: `research/incoming/iams-batch-03.json`.
+- Added: 20 records (running incoming total: 60).
+- Status this batch: 0 source_verified; 20 needs_physical_label.
+- Scope: 6 Perfect Portions cat wet twin-tray retail units + 14 ProActive Health cat dry bags.
+- Perfect Portions barcode scope was handled explicitly: ADMC lists each UPC as a **2.6 oz unit** and 24 units/case; current IAMS pages describe the retail package as two individual meals/servings in easy-peel trays. The ledger therefore records the UPC as the retail twin-tray `individual_unit`, `size: "2.6 oz"`, `package_type: "tray"`, and calorie `unit_name: "serving"`. No serving-ounce or calorie number was inferred from the 2.6 oz package weight.
+- Cat dry records cover Indoor Weight & Hairball Care, Hairball Care with Chicken, Healthy Adult Original with Chicken, Healthy Kitten with Chicken, Healthy Senior with Chicken, and Sensitive Digestion & Skin.
+- Current IAMS pages confirm several of these current cat ranges and size ladders, but nutrition/ingredient panels remain image-only in the accessible representation; no stale deck was substituted.
+
+### Batch 3 UPCs
+019014802296, 019014802326, 019014802319, 019014802340, 019014802302,
+019014802357, 019014712465, 019014712458, 019014712298, 019014712380,
+019014712434, 019014611911, 019014712564, 019014712571, 019014712267,
+019014712274, 019014712496, 019014712502, 019014712625, 019014805105.
+
+European pages rejected as ledger evidence remains 0 counted. Batch 3 incoming commit: `025c7d3cfb31347a0c15743e71116cf8e743093e`.
+
+Shell is still unavailable, so the Node inventory/checker were not run or simulated. All three incoming arrays require shell-enabled merge/check before promotion/seeding.
+
 ## Stop point
-Stopped after batch 2 with 40 total incoming records staged. Next research target is Perfect Portions, with six exact US UPCs already isolated for explicit twin-tray/portion-scope handling.
+Stopped after batch 3 with 60 total incoming records staged. Perfect Portions twin-tray scope has now been handled explicitly; next research should continue the remaining IAMS cat dry size ladders/current cat recipes and then assess whether better label evidence can upgrade any needs_physical_label records.
