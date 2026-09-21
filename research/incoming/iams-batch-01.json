@@ -45,13 +45,13 @@
           "nutrient": "Selenium",
           "basis": "min",
           "value": 0.35,
-          "unit": "IU"
+          "unit": "mg/kg"
         },
         {
           "nutrient": "Vitamin E",
           "basis": "min",
           "value": 60,
-          "unit": "IU"
+          "unit": "IU/kg"
         }
       ]
     },
@@ -77,7 +77,8 @@
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
       "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
       "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect."
     ],
     "research_status": "needs_physical_label"
   },
@@ -127,13 +128,13 @@
           "nutrient": "Selenium",
           "basis": "min",
           "value": 0.35,
-          "unit": "IU"
+          "unit": "mg/kg"
         },
         {
           "nutrient": "Vitamin E",
           "basis": "min",
           "value": 60,
-          "unit": "IU"
+          "unit": "IU/kg"
         }
       ]
     },
@@ -159,7 +160,8 @@
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
       "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
       "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect."
     ],
     "research_status": "needs_physical_label"
   },
@@ -209,13 +211,13 @@
           "nutrient": "Selenium",
           "basis": "min",
           "value": 0.35,
-          "unit": "IU"
+          "unit": "mg/kg"
         },
         {
           "nutrient": "Vitamin E",
           "basis": "min",
           "value": 60,
-          "unit": "IU"
+          "unit": "IU/kg"
         }
       ]
     },
@@ -241,7 +243,8 @@
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
       "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
       "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect."
     ],
     "research_status": "needs_physical_label"
   },
@@ -291,13 +294,13 @@
           "nutrient": "Selenium",
           "basis": "min",
           "value": 0.35,
-          "unit": "IU"
+          "unit": "mg/kg"
         },
         {
           "nutrient": "Vitamin E",
           "basis": "min",
           "value": 60,
-          "unit": "IU"
+          "unit": "IU/kg"
         }
       ]
     },
@@ -323,7 +326,8 @@
       "Because formula evidence is incomplete, this record is deliberately not source_verified.",
       "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
       "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Final audit 2026-09-21: corrected structured guarantee units to Selenium 0.35 mg/kg and Vitamin E 60 IU/kg; prior IU-only selenium unit was a transcription/schema defect."
     ],
     "research_status": "needs_physical_label"
   },
