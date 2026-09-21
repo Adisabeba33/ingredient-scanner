@@ -13625,7 +13625,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Active recipe and bag size.",
         "Complete current label panel/currentness evidence is not jointly captured; needs_physical_label retained.",
         "Formula campaign 2026-09-21: complete Active Chicken & Turkey recipe panel captured from current US Chewy page; applied recipe-level to all three staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Active Chicken & Turkey 7 lb has a complete Chewy formula panel plus campaign/manufacturer identity evidence, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13763,7 +13764,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Active recipe and bag size.",
         "Complete current label panel/currentness evidence is not jointly captured; needs_physical_label retained.",
         "Formula campaign 2026-09-21: complete Active Chicken & Turkey recipe panel captured from current US Chewy page; applied recipe-level to all three staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Active Chicken & Turkey 15 lb has a complete Chewy formula panel plus campaign/manufacturer identity evidence, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13901,7 +13903,8 @@
         "Mars official exhibit binds the manufacturer UPC body to this exact Active recipe and bag size.",
         "Complete current label panel/currentness evidence is not jointly captured; needs_physical_label retained.",
         "Formula campaign 2026-09-21: complete Active Chicken & Turkey recipe panel captured from current US Chewy page; applied recipe-level to all three staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Active Chicken & Turkey 30 lb has a complete Chewy formula panel plus campaign/manufacturer identity evidence, but no qualifying second independent retailer whole-panel reproduction was established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14770,13 +14773,16 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
-      "conflicts": [],
+      "conflicts": [
+        "Current-formula conflict: current Chewy Healthy Digestion panel reports 26% protein, 14% fat, 4% fiber and 3649 kcal/kg / 380 kcal/cup, while this staged UPC record carries 25% protein, 13% fat, 5% fiber and 3570 kcal/kg / 364 kcal/cup. Kroger still identifies UPC 019014830060 as the 4.5 lb product, so treat this as formula-generation drift pending physical-label dating."
+      ],
       "verification_notes": [
         "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
         "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
         "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label.",
         "Formula campaign 2026-09-21: complete current Healthy Digestion adult dog formula panel captured from one US Chewy page. This UPC is kept separate from other staged Healthy Digestion package-family records because formula/version identity must not be assumed across differing staged rows. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: 4.5 lb Healthy Digestion was checked against current Kroger and Chewy evidence. Kroger confirms exact UPC 019014830060 and identity, but the accessible page does not reproduce the complete panel. Current Chewy panel is a different formula generation (26% protein, 14% fat, 4% fiber; 3649 kcal/kg, 380 kcal/cup) versus the stored 25/13/5 panel and 3570/364 calories. Record remains needs_physical_label; preserve as formula-version conflict."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14887,13 +14893,16 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
-      "conflicts": [],
+      "conflicts": [
+        "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation may shorten the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse naming generations."
+      ],
       "verification_notes": [
         "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
         "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
         "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: 4.5 lb Skin & Coat Chicken & Salmon has current Chewy evidence matching the stored GA and calories (25% protein, 13.5% fat, 3.5% fiber; 3664 kcal/kg, 373 kcal/cup), but no second independent retailer whole-panel reproduction was established. Current shortened Skin & Coat naming remains a version/naming boundary. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     }
