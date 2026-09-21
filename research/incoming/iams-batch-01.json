@@ -258,15 +258,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-weight"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -309,15 +313,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-weight"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -360,15 +368,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-weight"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the successor/current adult weight-management recipe as Healthy Weight Chicken & Whole Grain. Staged distributor-era Weight Control identity is retained pending label-version reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -913,15 +925,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-aging-large-breed"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged 'Mature Adult Large Breed' versus current 'Healthy Aging Large Breed'. Current exact UPC/size label proof is required before treating this as the same formula version."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the large-breed senior recipe as Healthy Aging Large Breed Chicken & Whole Grain. Exact staged 30 lb Mature Adult Large Breed UPC remains distributor-era evidence."
     ],
     "research_status": "needs_physical_label"
   },
@@ -964,15 +980,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-aging"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1015,15 +1035,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-aging"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1066,15 +1090,19 @@
     "label_deck_code": null,
     "formula_source": "ADMC US distributor price book binds the UPC to the exact IAMS ProActive Health dry bag identity and size; a current readable manufacturer label panel was not available in this session.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-healthy-aging"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas."
+    ],
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current complete label formula, guaranteed analysis, calories, and adequacy statement were not proven from a readable primary label source in this session.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit: current IAMS manufacturer page presents the senior/adult-aging recipe as Healthy Aging Chicken & Whole Grain. Staged Mature Adult identity remains historical/distributor evidence pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   }
