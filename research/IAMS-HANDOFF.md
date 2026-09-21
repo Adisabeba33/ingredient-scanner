@@ -290,5 +290,17 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Remaining dry work is not basic identity research: it is (a) complete label-panel acquisition for ingredients/GA/calories/AAFCO, (b) exact current UPC proof for renamed/reformulated successor products, and (c) targeted discovery of genuinely missing current sizes without sequence inference.
 - Commit: `b8c6438c7ab04d6429e81e306a5643a14072520a`.
 
+
+## Missing-current-UPC sweep 1 — new current Beef & Rice family
+- Broad current-retail sweep found a genuinely missing US recipe family: **IAMS ProActive Health Adult Minichunks Beef & Rice**. Current IAMS lists sizes **5/7/11/15/30 lb** and states complete-and-balanced adult nutrition.
+- Two exact current UPC-to-size bindings were strong enough to stage without sequence inference:
+  - `019014808168` — 15 lb, exact Target UPC; Target also exposes the current ingredient deck.
+  - `019014808151` — 30 lb, exact Kroger-family UPC/size binding.
+- Staged as `research/incoming/iams-batch-10.json`; both remain `needs_physical_label` because a complete current GA + calories + exact AAFCO/deck panel is not yet jointly proven.
+- Current manufacturer also lists 5, 7 and 11 lb, but those UPCs were **not inferred** from the 8081xx sequence. They remain targeted discovery gaps.
+- Retail sweep also surfaced other potentially missing current families, notably **High Protein Adult Dog Chicken & Beef** and newer Advanced Health dog recipes; these require exact UPC proof before staging.
+- New staged total: **103 UPC records**.
+- Commit: `7323a4164dd28e3bd6d17acfa01c6ff0c4813c1f`.
+
 ## Stop point
-Stopped after dry source-upgrade pass 6 with 101 total incoming records staged. All staged dry dog and dry cat UPCs have now received a second-pass identity/currentness audit. Highest-value next step is a targeted missing-current-UPC sweep plus a final unresolved/physical-label triage, not another broad identity pass.
+Missing-current-UPC sweep has started. 103 total incoming records are now staged. Dry identity/currentness audit is complete; next target is exact UPC proof for Beef & Rice 5/7/11 lb, High Protein Adult Dog Chicken & Beef, and newer Advanced Health recipes.
