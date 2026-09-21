@@ -276,27 +276,59 @@
     "presentation": "plain",
     "package_type": "tray",
     "size": "2.6 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Turkey, Water, Beef Liver, Meat Broth, Whitefish, Dried Plain Beet Pulp, Minerals, Dried Egg Product, Guar Gum, Sodium Tripolyphosphate, Vitamins, Fish Oil, Carrageenan, Taurine, Tapioca Starch, Dl-Methionine, Fructooligosaccharide, Salt.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
-      "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
+      "ash_max_percent": 4,
+      "taurine_min_percent": 0.06,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 0.6,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Potassium",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 80,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
+      "kcal_per_kg": 1213,
       "kcal_per_unit": null,
-      "unit_name": "serving"
+      "unit_name": null
     },
     "label_deck_code": null,
-    "formula_source": "Current US Target listing binds the exact 12-digit UPC to this current IAMS Perfect Portions retail twin-tray identity. Formula values are left null unless a complete current panel is readable.",
+    "formula_source": "US Chewy complete formula panel captured whole from one product page.",
     "source_urls": [
       "https://www.target.com/p/-/A-94414989",
-      "https://www.iams.com/products/wet/iams-perfect-portions-sensitive-digestion-skin-pate-turkey-recipe"
+      "https://www.iams.com/products/wet/iams-perfect-portions-sensitive-digestion-skin-pate-turkey-recipe",
+      "https://www.chewy.com/iams-perfect-portions-sensitive/dp/992270"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC is bound to one 2.6 oz Perfect Portions retail twin-tray unit; it is not an outer case code and not the code for one snapped half.",
@@ -305,7 +337,8 @@
       "Current US retail evidence only; no Canadian or European formula substituted.",
       "Perfect Portions package/serving distinction preserved: printed retail size is 2.6 oz and calorie unit is serving; no per-serving ounces/calories inferred without a readable panel.",
       "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
-      "Current IAMS manufacturer page independently confirms the Sensitive Digestion & Skin Pâté Turkey recipe and Perfect Portions twin-tray positioning. Manufacturer accessible text still does not expose the complete label deck/GA/calorie/AAFCO statement together."
+      "Current IAMS manufacturer page independently confirms the Sensitive Digestion & Skin Pâté Turkey recipe and Perfect Portions twin-tray positioning. Manufacturer accessible text still does not expose the complete label deck/GA/calorie/AAFCO statement together.",
+      "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted."
     ],
     "research_status": "needs_physical_label"
   }
