@@ -392,5 +392,17 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **131 UPC records**.
 - Commit: `001ecf2520d6f450f8f8401f5bd19a0c73ab8392`.
 
+
+## Missing-current-UPC sweep 10 — new 4.5 lb Advanced Health packs
+- Current IAMS catalog exposes newer standalone **4.5 lb** product pages that were not represented in the older manufacturer exhibit ladders.
+- Added two exact current UPC-A records:
+  - `019014830060` — Advanced Health Healthy Digestion Adult with Real Chicken, 4.5 lb. Kroger-family current page explicitly shows `UPC: 0001901483006`; normalized UPC-A is `019014830060`. Current IAMS has a dedicated 4.5 lb manufacturer page.
+  - `019014830053` — Advanced Health Skin & Coat Chicken & Salmon, 4.5 lb. Current IAMS has a dedicated 4.5 lb page; independent current GTIN/wholesale evidence directly exposes UPC `019014830053`.
+- These appear to be newer small-pack extensions alongside older 6/13.5/27/36 lb ladders, so they are separate UPC records, not replacements inferred from prior sizes.
+- Current IAMS also exposes a dedicated **Mobility Support 4.5 lb** page, proving that pack exists, but no sufficiently strong exact UPC was recovered in this pass; it remains an explicit barcode gap rather than an inferred record.
+- Both new records remain `needs_physical_label` because nutrition panels are image-rendered and were not guessed/OCR-transcribed.
+- New staged total: **133 unique UPC records**.
+- Commit: `8b3d57b7cf400f88fdd83e80f20e8461d950d059`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 131 total incoming records are now staged. Two Advanced Health cat families (Immune Health and Healthy Digestion) are now staged across 3/6/13 lb. Continue manufacturer-exhibit exhaustion/dedupe before declaring the IAMS UPC discovery ceiling.
+Missing-current-UPC sweep is active. 133 unique UPC records are now staged. New 4.5 lb Advanced Health Healthy Digestion and Skin & Coat packs are captured; Mobility Support 4.5 lb is proven to exist but remains an exact-UPC gap. Continue current-catalog small-pack and newly introduced SKU sweep.
