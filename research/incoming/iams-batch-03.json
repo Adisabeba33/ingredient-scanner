@@ -1325,27 +1325,66 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "3.5 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Sorghum, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Choline Chloride, Brewers Dried Yeast, Salt, Calcium Carbonate, DL-Methionine, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, Vitamin A Acetate, Calcium Pantothenate, Biotin, Thiamine Mononitrate (source of Vitamin B1), Pyridoxine Hydrochloride (source of Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (source of Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 33,
+      "crude_fat_min_percent": 21,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Docosahexaenoic Acid (DHA)",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 4015,
+      "kcal_per_unit": 484,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US retailer complete formula panel (Coastal Country) for UPC 019014712502; Target independently confirms the same UPC/product identity. Applied recipe-level panel to both staged package-size UPCs.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-proactive-health-healthy-kitten",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.coastalcountry.com/products/pet/cat/cat-food/dry-cat-food/iams-proactive-health-healthy-kitten-chicken-cat-food-7-lb-451a----111250",
+      "https://www.target.com/p/-/A-53548356"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -1354,7 +1393,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence.",
+      "Formula campaign 2026-09-21: US Healthy Kitten Chicken panel captured whole from one retailer page. UPC 019014712502 explicitly printed by both Coastal Country and Target. 019014712496 is the same staged recipe/alternate size; formula applied recipe-level. Status not promoted from a single complete formula-panel source."
     ],
     "research_status": "needs_physical_label"
   },
@@ -1378,27 +1418,66 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "7 lb",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Sorghum, Chicken Fat (preserved with Mixed Tocopherols), Corn Gluten Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Choline Chloride, Brewers Dried Yeast, Salt, Calcium Carbonate, DL-Methionine, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, Ascorbic Acid, Vitamin A Acetate, Calcium Pantothenate, Biotin, Thiamine Mononitrate (source of Vitamin B1), Pyridoxine Hydrochloride (source of Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (source of Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Rosemary Extract",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 33,
+      "crude_fat_min_percent": 21,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
-      "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Docosahexaenoic Acid (DHA)",
+          "basis": "min",
+          "value": 0.05,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 140,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "%"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 4015,
+      "kcal_per_unit": 484,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
+    "formula_source": "US retailer complete formula panel (Coastal Country) for UPC 019014712502; Target independently confirms the same UPC/product identity. Applied recipe-level panel to both staged package-size UPCs.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-proactive-health-healthy-kitten",
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.coastalcountry.com/products/pet/cat/cat-food/dry-cat-food/iams-proactive-health-healthy-kitten-chicken-cat-food-7-lb-451a----111250",
+      "https://www.target.com/p/-/A-53548356"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -1407,7 +1486,8 @@
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
       "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
-      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence."
+      "Dry cat audit: current IAMS manufacturer page confirms Healthy Kitten Chicken recipe identity and kitten-growth positioning. Exact UPC-to-size binding remains distributor evidence.",
+      "Formula campaign 2026-09-21: US Healthy Kitten Chicken panel captured whole from one retailer page. UPC 019014712502 explicitly printed by both Coastal Country and Target. 019014712496 is the same staged recipe/alternate size; formula applied recipe-level. Status not promoted from a single complete formula-panel source."
     ],
     "research_status": "needs_physical_label"
   },
