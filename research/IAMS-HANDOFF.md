@@ -169,5 +169,13 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Batch 3 evidence-upgrade commit: `be229c45d744d693823082a7d1409acbf10bdf87`.
 - Next upgrade targets: Healthy Kitten `019014802333`, Chicken & Tuna variety pack `019014802364`, then the remaining Perfect Portions adult/indoor variants.
 
+
+## Source-upgrade pass 2 — Kitten + variety packs
+- Upgraded Healthy Kitten Perfect Portions `019014802333`: added current US Target ingredient panel, core GA and 38 kcal/serving. It remains `needs_physical_label` because the complete current AAFCO adequacy/deck evidence is still not proven together.
+- Upgraded Indoor Salmon & Turkey variety pack `019014802371` and Healthy Adult Chicken & Tuna variety pack `019014802364` with current Target identity/scope corroboration.
+- Both variety packs remain `needs_physical_label`. They contain distinct recipes, so no synthetic single ingredient/GA deck was created for the box; exact per-flavor current panels are required.
+- Commits: Batch 5 upgrade `d5fea916107c8e26f5bfbc9a47b2b146478e7cfb`; Batch 7 upgrade `828783f4c5ed8bc56d877e21841a99163d47ee74`.
+- Upgrade result so far: 6 Perfect Portions records materially strengthened across passes 1–2, but 0 promoted to source_verified because AGENTS §10 remains stricter than the currently accessible evidence.
+
 ## Stop point
 Stopped after batch 7 with 92 total incoming records staged. The remaining new-UPC tail is now sparse. Highest-value next work is a source-upgrade pass on the 92 staged records (especially Perfect Portions, where current Target pages expose ingredients/GA) plus targeted searches for any unresolved current size-ladder UPCs.
