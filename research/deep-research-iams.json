@@ -3893,7 +3893,8 @@
         "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Formula campaign 2026-09-21: exact named Chunks with Beef, Rice, Carrots & Green Beans formula ingredient statement captured from US Farm & Home Supply. Existing staged GA/calorie fields were already present and were not stitched/recomputed. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Chunks with Beef, Rice, Carrots & Green Beans remains incomplete at the formula level: the existing retailer source supplies an ingredient statement but no complete guaranteed analysis or calorie statement. No qualifying independent whole-panel witness was found; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4071,7 +4072,8 @@
         "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Formula campaign 2026-09-21: complete Beef & Rice wet dog panel captured whole from one US retailer page, including UPC 019014013302 and calories. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: searched independent US retailer results for Pâté with Beef & Rice. No second source was found that independently reproduces the complete stored ingredient statement, every printed guarantee and 1153 kcal/kg / 425 kcal serving statement. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4158,7 +4160,8 @@
         "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Formula campaign 2026-09-21: Farm & Home Supply page explicitly prints UPC 019014013326, ingredients and GA together; independent US retailer That Pet Place prints the same UPC and core GA but a different/older ingredient statement, so no source stitching or status promotion was done.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Puppy Pâté with Chicken & Rice still lacks a complete calorie statement and no independent whole-panel retailer witness was found. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4242,7 +4245,8 @@
         "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Formula campaign 2026-09-21: UPC, full ingredient statement and GA captured together from one US retailer page. Existing staged calories were not replaced because this source does not print calories. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Pâté with Chicken & Whole Grain Rice still lacks a complete calorie statement and no independent whole-panel retailer witness was found. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4331,7 +4335,8 @@
         "Exact UPC + identity + unit size are established by the US distributor catalog, but a current complete readable primary label panel is still required.",
         "Not source_verified because complete current formula, guaranteed analysis, calories and adequacy evidence required by AGENTS §10 are not all proven.",
         "Formula campaign 2026-09-21: exact UPC + ingredient statement + GA captured together from That Pet Place. Other web listings show a materially different ingredient generation for the same UPC, so this is treated as version-sensitive and status is not promoted. Existing staged calories were not replaced.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Pâté with Lamb & Rice still lacks a complete calorie statement and no independent whole-panel retailer witness was found. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4425,7 +4430,8 @@
         "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
         "Second panel pass corrected/expanded the current Target GA: fiber 1% max (not 1.5), ash 3.5% max, vitamin E 80 IU/kg, taurine 0.06%. Target's current displayed ingredient deck also differs materially from the earlier captured retailer deck; this is recorded as a live formula/source conflict rather than silently overwritten.",
         "Because current retailer decks conflict, this record cannot be source_verified until a physical/current manufacturer label settles the formula version.",
-        "Final audit 2026-09-21: converted Vitamin E guarantee from legacy string to structured object. Adult Chicken and Kitten Chicken remain separate records with explicitly documented current retailer-panel conflict; identical displayed ingredient decks were not treated as proof that the life-stage formulas are identical."
+        "Final audit 2026-09-21: converted Vitamin E guarantee from legacy string to structured object. Adult Chicken and Kitten Chicken remain separate records with explicitly documented current retailer-panel conflict; identical displayed ingredient decks were not treated as proof that the life-stage formulas are identical.",
+        "Corroboration pass 2026-09-21: Adult Perfect Portions Chicken was reviewed separately from Kitten Chicken as required. Current retailer evidence does not resolve the already documented Target formula drift or independently corroborate the complete stored panel including calorie basis. Do not treat the byte-similar adult/kitten ingredient decks as one recipe; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4511,7 +4517,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
         "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
         "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
-        "Audit pass found current-retailer version drift for Salmon. Existing ingredients/GA are retained as captured evidence, but promotion is blocked until a current physical/manufacturer label resolves the formula version."
+        "Audit pass found current-retailer version drift for Salmon. Existing ingredients/GA are retained as captured evidence, but promotion is blocked until a current physical/manufacturer label resolves the formula version.",
+        "Corroboration pass 2026-09-21: Adult Perfect Portions Salmon has an existing current-vs-earlier Target formula/GA conflict. No independent whole-panel witness was found that resolves the formula generation and supplies the complete calorie basis; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4597,7 +4604,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
         "Second-pass US retailer panel captured complete displayed ingredients and core guaranteed analysis plus 38 kcal per serving.",
         "Kept needs_physical_label: accessible evidence still does not prove the complete current AAFCO adequacy statement/deck and all printed guarantees together, so AGENTS §10 source_verified threshold is not met.",
-        "Audit pass found current-retailer version drift for Tuna. Existing captured panel remains evidence only; current physical/manufacturer label is required to resolve the formula version before promotion."
+        "Audit pass found current-retailer version drift for Tuna. Existing captured panel remains evidence only; current physical/manufacturer label is required to resolve the formula version before promotion.",
+        "Corroboration pass 2026-09-21: Adult Perfect Portions Tuna has an existing current-vs-earlier Target formula/GA conflict. No independent whole-panel witness was found that resolves the formula generation and supplies the complete calorie basis; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4695,7 +4703,8 @@
         "Second-pass evidence independently re-binds UPC 019014802340 to Indoor Adult Pâté Salmon 2.6 oz and confirms the twin-tray/two-individual-meals construction plus complete-and-balanced positioning.",
         "A Canadian retailer exposes an ingredient list, but it was deliberately NOT copied into the US formula fields because the Iams brief forbids cross-market formula substitution. US current label panel still needed for promotion.",
         "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Indoor Perfect Portions Salmon already has Chewy plus Canadian retailer references, but Canadian evidence is not a qualifying second US witness under the brief. No second independent US whole-panel match was established; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -4788,7 +4797,8 @@
         "Not source_verified because complete current ingredients, guaranteed analysis and calorie statement are not all readable/proven.",
         "Second-pass ADMC North evidence re-confirms exact US UPC 019014802302 as Perfect Portions Indoor Pâté Turkey Recipe 2.6 oz. No sufficiently complete current US ingredient/GA/calorie panel was found in this pass; status remains needs_physical_label.",
         "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Indoor Perfect Portions Turkey remains supported by a single complete US retailer panel (Chewy). No qualifying independent US whole-panel match was established; retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
