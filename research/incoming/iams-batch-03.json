@@ -460,15 +460,19 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity."
+    ],
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -511,15 +515,19 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity."
+    ],
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -562,15 +570,19 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-indoor-weight-hairball-care-chicken-turkey"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
-    "conflicts": [],
+    "conflicts": [
+      "Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity."
+    ],
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page presents the indoor weight/hairball recipe as Chicken & Turkey. Staged distributor-era identity is retained pending exact current UPC/label reconciliation."
     ],
     "research_status": "needs_physical_label"
   },
@@ -613,7 +625,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -621,7 +634,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images."
     ],
     "research_status": "needs_physical_label"
   },
@@ -664,7 +678,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -672,7 +687,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images."
     ],
     "research_status": "needs_physical_label"
   },
@@ -715,7 +731,8 @@
     "label_deck_code": null,
     "formula_source": "US ADMC distributor catalog binds this UPC to the exact IAMS ProActive Health cat dry identity and bag size. Current IAMS manufacturer pages confirm the corresponding range/recipe where available, but complete nutrition panels are image-only in accessible text.",
     "source_urls": [
-      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2025-South-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.iams.com/products/dry/iams-proactive-health-hairball-care-chicken"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A printed in the US distributor catalog; canonical GTIN-14 is zero-left-padded. 019014 remains observed across US IAMS packs and is not claimed GS1-confirmed.",
@@ -723,7 +740,8 @@
     "verification_notes": [
       "US dry bag evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness is unavailable; no per-bag calories were manufactured.",
-      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven."
+      "Not source_verified because complete current ingredients, guaranteed analysis, calories and adequacy statement are not all proven.",
+      "Dry cat audit: current IAMS manufacturer page confirms Hairball Care Chicken recipe family. Exact UPC-to-size evidence remains distributor-bound; no nutrition fields inferred from inaccessible label images."
     ],
     "research_status": "needs_physical_label"
   },
