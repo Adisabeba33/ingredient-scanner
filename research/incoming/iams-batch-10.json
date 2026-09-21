@@ -2961,27 +2961,59 @@
     "presentation": null,
     "package_type": "bag",
     "size": "4.5 lb",
-    "ingredients_verbatim": "",
+    "ingredients_verbatim": "Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, DL-Methionine, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 13,
+      "crude_fiber_max_percent": 5,
+      "moisture_max_percent": 10,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 60,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Omega-6 Fatty Acids",
+          "basis": "min",
+          "value": 2.5,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Omega-3 Fatty Acids",
+          "basis": "min",
+          "value": 0.25,
+          "unit": "%"
+        },
+        {
+          "nutrient": "Bacillus subtilis",
+          "basis": "min",
+          "value": 600000000,
+          "unit": "CFU/lb"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 3570,
+      "kcal_per_unit": 364,
       "unit_name": "cup"
     },
     "label_deck_code": null,
-    "formula_source": "Current IAMS manufacturer 4.5 lb product page plus exact current retail/GTIN evidence.",
+    "formula_source": "US Chewy complete formula panel captured whole from current Advanced Health Healthy Digestion adult dog product page.",
     "source_urls": [
       "https://www.kroger.com/p/iams-advanced-health-healthy-digestion-adult-dry-dog-food-with-real-chicken/0001901483006",
-      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-adult-dry-dog-food-real-chicken-45-lb-bag"
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-adult-dry-dog-food-real-chicken-45-lb-bag",
+      "https://www.chewy.com/iams-advanced-health-healthy/dp/388667"
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact 4.5 lb UPC-A is directly exposed by current retail/GTIN evidence and passes check digit; not inferred from neighboring codes.",
@@ -2989,7 +3021,8 @@
     "verification_notes": [
       "Current IAMS manufacturer page independently confirms the 4.5 lb product and complete-and-balanced adult positioning.",
       "Exact UPC-A is directly tied to the 4.5 lb item by external current product evidence.",
-      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label."
+      "Nutrition images are not transcribed by guess/OCR in this pass; complete label panel remains unresolved, so needs_physical_label.",
+      "Formula campaign 2026-09-21: complete current Healthy Digestion adult dog formula panel captured from one US Chewy page. This UPC is kept separate from other staged Healthy Digestion package-family records because formula/version identity must not be assumed across differing staged rows. Single retailer; status not promoted."
     ],
     "research_status": "needs_physical_label"
   },
