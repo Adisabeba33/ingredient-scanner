@@ -39,7 +39,8 @@
     "formula_source": "Current US IAMS manufacturer page establishes the current range, adult dry-food identity, and size ladder, but nutrition/ingredients are image-only in the accessible page text; ADMC distributor price book independently binds the UPC to the exact size.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -47,7 +48,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
+      "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified."
     ],
     "research_status": "needs_physical_label"
   },
@@ -91,7 +94,8 @@
     "formula_source": "Current US IAMS manufacturer page establishes the current range, adult dry-food identity, and size ladder, but nutrition/ingredients are image-only in the accessible page text; ADMC distributor price book independently binds the UPC to the exact size.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -99,7 +103,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
+      "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified."
     ],
     "research_status": "needs_physical_label"
   },
@@ -143,7 +149,8 @@
     "formula_source": "Current US IAMS manufacturer page establishes the current range, adult dry-food identity, and size ladder, but nutrition/ingredients are image-only in the accessible page text; ADMC distributor price book independently binds the UPC to the exact size.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -151,7 +158,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
+      "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified."
     ],
     "research_status": "needs_physical_label"
   },
@@ -195,7 +204,8 @@
     "formula_source": "Current US IAMS manufacturer page establishes the current range, adult dry-food identity, and size ladder, but nutrition/ingredients are image-only in the accessible page text; ADMC distributor price book independently binds the UPC to the exact size.",
     "source_urls": [
       "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion",
-      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-healthy-digestion-chicken-whole-grain-recipe"
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "UPC-A is printed as an IAMS unit code in the US distributor price book; canonical GTIN-14 is zero-left-padded. Prefix 019014 is observed across this batch and is not claimed as GS1-confirmed.",
@@ -203,7 +213,9 @@
     "verification_notes": [
       "US dry bag evidence only; European EAN/composition pages were not used.",
       "Current IAMS page lists 6, 13.5, 27 and 36 lb sizes and states the food is complete and balanced for adult dogs; the ingredient and guaranteed-analysis panels are image-only in the accessible text interface.",
-      "Because formula evidence is incomplete, this record is deliberately not source_verified."
+      "Because formula evidence is incomplete, this record is deliberately not source_verified.",
+      "Dry audit pass independently confirms the current US Advanced Health Healthy Digestion Chicken & Whole Grain recipe and its shared size ladder from the manufacturer. Formula fields were not filled from a partial/snippet representation.",
+      "Exact UPC-to-size evidence remains preserved from the distributor source; complete current label panel/AAFCO evidence is still required before source_verified."
     ],
     "research_status": "needs_physical_label"
   },
