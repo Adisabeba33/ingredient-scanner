@@ -19,9 +19,18 @@ on one campaign.
 
 ---
 
-## 0. Before anything else: can this session reach the sources?
+## 0. Which kind of session you are, and what that changes
 
-**Run this first and read the answer honestly.**
+Two capabilities decide how this campaign runs, and you have to know which ones
+you have **before** you start, not when you are trying to commit 350 KB.
+
+**Web access.** You need to open manufacturer and retailer *pages*, not just
+see search results. Search returning titles is not web access. If you cannot
+read a product page, `source_verified` is unreachable by definition
+(`AGENTS.md` §10) and a ledger of `candidate` rows is a day the seeding step
+throws away — that is what happened to the Pedigree batch-1 campaign, 14
+records, zero seedable. `docs/RESEARCH-EGRESS.md` is the full story and the
+host list. If you have a shell, this is the test:
 
 ```bash
 for h in www.iams.com www.mars.com www.walmart.com www.petsmart.com www.fda.gov web.archive.org; do
@@ -29,20 +38,32 @@ for h in www.iams.com www.mars.com www.walmart.com www.petsmart.com www.fda.gov 
 done
 ```
 
-Anything printing `000` is blocked at the egress proxy, and
-`docs/RESEARCH-EGRESS.md` is the whole story: a campaign run against a blocked
-policy produces `candidate` records and a clean checker run, **which looks like
-success and is not.** That is what happened to the Pedigree batch-1 campaign —
-14 records, zero seedable.
+**A shell.** With one, you run the two commands in §1 yourself, merge into the
+ledger and commit normally. **Without one** — working through a GitHub
+connector, able only to write a file whole — you hit the limit `AGENTS.md` §3a
+exists for. A ledger grows ~6 KB per record, so a finished batch becomes a file
+you cannot commit. Do not fight it, and above all do not build a temporary
+Actions runner to work around it: that has been tried three times here and cost
+more than any research mistake in this repository.
 
-If the hosts are blocked: **say so in one message and stop.** Do not harvest
-barcodes out of search-result URLs, do not write an ingredient list from a
-search snippet, and do not open a ledger. Under `AGENTS.md` §10 a
-`source_verified` record is unreachable without a page you can actually read,
-and a ledger of `candidate` rows is a day spent producing something the seeding
-step must throw away.
+Instead, write **only the new records** as a bare JSON array — no ledger
+wrapper, no `schema_version` — to:
 
-Web search returning titles is not web access. The test above is the test.
+```
+research/incoming/iams-batch-NN.json
+```
+
+Split further if needed (`-batch-NN-a.json`, `-batch-NN-b.json`), say so, and
+stop. A shell-enabled pass merges them, runs the checker, regenerates the
+inventory and deletes the file. That directory is invisible to both scripts on
+purpose; a batch file left directly in `research/` would be read as a second
+ledger and every barcode in it would come back `already claimed`.
+
+The Pro Plan campaign (PR #14) was the mirror image of Pedigree's: web access
+but no shell, so its inventory was hand-reconstructed and its checker run
+simulated. Both were disclosed honestly in the handoff and both were later run
+for real. **Disclose the same way.** Say in your handoff which of the two
+capabilities you had.
 
 ---
 
@@ -368,8 +389,9 @@ prefix settled first.
 it must carry everything `AGENTS.md` §15 requires plus the four questions this
 brief opened:
 
-1. **Egress** — which hosts answered, and whether the batch is evidence or
-   wishful thinking. State this first, in a sentence, before the counts.
+1. **Capabilities** — did you have web access to real product pages, and did
+   you have a shell? State this first, in a sentence, before the counts, and
+   name anything you simulated or reconstructed by hand.
 2. **The prefix** — what the first six digits are, on how many independently
    bound packs, across how many ranges, and whether GS1 confirmed it.
 3. **The ranges** — what the packs actually print; which of the six the brand
