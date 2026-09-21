@@ -311,5 +311,16 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - New staged total: **104 UPC records**.
 - Commit: `bdd8d0ae062848d1ee377bb9a28854f40ecce8b3`.
 
+
+## Missing-current-UPC sweep 3 — High Protein dog
+- Added two genuinely new current US UPC-A records for **ProActive Health High Protein Chicken & Beef**:
+  - `019014830365` — 5 lb.
+  - `019014830389` — 15 lb.
+- Kroger-family pages explicitly label their 13-digit retail display strings as UPC. Removing the single retailer padding zero yields the 12-digit UPC-A above; both pass UPC-A check digit and preserve the observed IAMS `019014` prefix. This is normalization of an explicitly labeled UPC, not sequence inference.
+- Current IAMS manufacturer page independently confirms the recipe and current **5/15/30/38.5 lb** size family and states 100% complete and balanced adult nutrition.
+- 30 lb and 38.5 lb remain targeted barcode gaps: current product/size existence is proven, but exact UPC-A has not yet been independently recovered.
+- New staged total: **106 UPC records**.
+- Commit: `fe56bd68237c5ab93ee3788706131c49cef8d67e`.
+
 ## Stop point
-Missing-current-UPC sweep is active. 104 total incoming records are now staged. Advanced Health has additional proven current sizes, but unresolved retailer identifier normalization must be solved before those become UPC records.
+Missing-current-UPC sweep is active. 106 total incoming records are now staged. High Protein Chicken & Beef 5/15 lb are now exact UPC-A records; 30/38.5 lb remain exact-barcode targets alongside Advanced Health unresolved sizes.
