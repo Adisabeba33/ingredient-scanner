@@ -249,5 +249,15 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Nutrition on these manufacturer pages is primarily image-rendered in the accessible representation, so ingredients/GA/calories were **not transcribed from guesses or OCR**. This pass strengthens identity/currentness and surfaces version conflicts rather than fabricating formula completeness.
 - Commits: Batch 1 audit `8f372469080daf1a51a15876e42f944eda6337af`; Batch 7 Large Breed Chicken corroboration `47018a0b752dab4e3df5e565d09c19cba941de05`.
 
+
+## Dry source-upgrade pass 3 — Smart Puppy + weight/aging transitions
+- Audited **13 existing dry dog UPC rows**; running staged count remains **101**.
+- Smart Puppy: current IAMS manufacturer evidence was attached to Small Breed, Original and Large Breed recipe groups. Six staged UPC rows across Batches 2/7 now have current recipe-family corroboration while preserving exact UPC-to-size evidence separately.
+- Adult Weight Control: the three staged distributor-era UPCs (`019014711123`, `019014610891`, `019014700677`) now carry an explicit naming/version conflict because current IAMS markets the weight-management recipe as **Healthy Weight Chicken & Whole Grain**. They were not silently renamed or assumed formula-identical.
+- Mature Adult: three standard staged UPCs (`019014700684`, `019014711147`, `019014612062`) now carry a transition conflict against current **Healthy Aging Chicken & Whole Grain**.
+- Mature Adult Large Breed `019014611331` likewise carries a transition conflict against current **Healthy Aging Large Breed Chicken & Whole Grain**.
+- This pass reinforces an important catalog rule: historical/distributor UPC identity and current manufacturer recipe naming must stay distinct until an exact current UPC/label proves continuity.
+- Commits: Smart Puppy Batch 2 `ae2e0c87ec9be86aeac5434af5aaf260b86289cf`; weight/aging Batch 1 `d593b72ea6d875fbeb93dc01c1c12d2d33fae7ec`; Smart Puppy Large Breed 11 lb Batch 7 `23e05c9e2df4792dccfde35bbc065667f72b3d3a`.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
