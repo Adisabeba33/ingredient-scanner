@@ -575,5 +575,376 @@
       "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806768",
+    "canonical_gtin14": "00019014806768",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Salmon",
+    "recipe": [
+      "Chicken",
+      "Salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806782",
+    "canonical_gtin14": "00019014806782",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Salmon",
+    "recipe": [
+      "Chicken",
+      "Salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "13.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806812",
+    "canonical_gtin14": "00019014806812",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Salmon",
+    "recipe": [
+      "Chicken",
+      "Salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "36 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-skin-coat"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806638",
+    "canonical_gtin14": "00019014806638",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Superfoods",
+    "recipe": [
+      "Chicken",
+      "Superfoods"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/iams-advanced-health"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806669",
+    "canonical_gtin14": "00019014806669",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Superfoods",
+    "recipe": [
+      "Chicken",
+      "Superfoods"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "13.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/iams-advanced-health"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806676",
+    "canonical_gtin14": "00019014806676",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Superfoods",
+    "recipe": [
+      "Chicken",
+      "Superfoods"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "27 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/iams-advanced-health"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014806683",
+    "canonical_gtin14": "00019014806683",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Superfoods",
+    "recipe": [
+      "Chicken",
+      "Superfoods"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "36 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official 2024 IAMS Checkup Challenge participating-product list; source explicitly provides Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/iams-advanced-health"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
+      "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
+      "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
