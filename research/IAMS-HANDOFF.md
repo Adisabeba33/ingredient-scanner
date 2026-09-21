@@ -212,5 +212,14 @@ Batch 9 commit: `bfec717c71e6fc9fbafe5c097534022e354fcbf1`.
 
 Shell remains unavailable; inventory/checker were not run or simulated.
 
+
+## Source-upgrade pass 4 — variety nutrition + formula-version conflict
+- No speculative new UPCs were added in this pass; effort went into resolving label evidence.
+- Indoor Salmon & Turkey variety pack `019014802371`: current Target label panel now supplies the Salmon recipe GA (protein 9.5% min, fat 5% min, fiber 1% max, moisture 78% max, ash 4%, vitamin E 80 IU/kg, taurine 0.06%). Current Walmart independently states the 12 twin trays equal 24 servings and describes the product as complete and balanced. It remains `needs_physical_label` because the Turkey panel, calories and exact AAFCO adequacy statement are not all exposed together.
+- Healthy Adult Chicken `019014802296`: a fresh current Target panel exposed a **material formula/version conflict** versus the ingredient deck captured in upgrade pass 1. The current Target GA also expands/corrects the row to fiber 1% max, ash 3.5% max, vitamin E 80 IU/kg and taurine 0.06%. The conflicting ingredient decks were not silently reconciled; a `conflicts` entry now blocks promotion until a current manufacturer/physical label settles the version.
+- This pass is a useful warning for the wider upgrade campaign: retailer panels can be current enough to expose real reformulation drift, so source_verified should not be achieved by simply accumulating fields from different snapshots.
+- Commits: Batch 5 upgrade `996b01cbe16afb539bae276958aab61f848db3d1`; Batch 3 conflict/GA update `f928331f472c8343008fda723859b39ff7d118eb`.
+- Running staged UPC count remains **101**.
+
 ## Stop point
 Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
