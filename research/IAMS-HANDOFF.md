@@ -281,5 +281,14 @@ Shell remains unavailable; inventory/checker were not run or simulated.
 - Commits: Batch 3 `1cf19d08437d15289244052cacd77523a3b1d9da`; Batch 5 `2fdd42884e733aa3cddc8d14108f8fa653a34065`; Batch 6 `504c562bf899ca82708807aeb0da7ac67951d594`; Batch 7 `7450209d3d58eb1faebfb911762e8ba4ad682519`.
 - At this point the staged **dry-cat catalog has effectively completed its second-pass identity/currentness audit**. Remaining work is primarily full label-panel completion (ingredients/GA/calories/AAFCO) and any genuinely new UPC discovery, not basic recipe-family identification.
 
+
+## Dry source-upgrade pass 6 — dog-dry audit completion
+- Final unreviewed dog-dry identities were checked; running staged UPC count remains **101**.
+- Small Breed Adult (7/15 lb; `019014803446`, `019014803453`) gained current IAMS manufacturer recipe-family corroboration for Small Breed Adult Chicken & Whole Grains.
+- Optimal Weight Large Breed `019014700691` now carries an explicit naming/version transition against current IAMS **Healthy Weight Large Breed**. The distributor-era identity is preserved; no silent formula merge or UPC substitution.
+- With this pass, every staged dry-dog UPC has now received a second-pass identity/currentness review. Combined with pass 5, the staged dry catalog (dog + cat) has effectively completed this audit phase.
+- Remaining dry work is not basic identity research: it is (a) complete label-panel acquisition for ingredients/GA/calories/AAFCO, (b) exact current UPC proof for renamed/reformulated successor products, and (c) targeted discovery of genuinely missing current sizes without sequence inference.
+- Commit: `b8c6438c7ab04d6429e81e306a5643a14072520a`.
+
 ## Stop point
-Stopped after Batch 9 with 101 total incoming records staged. The current Perfect Portions Cuts/Sensitive shelf is now substantially covered. Next pass should search for remaining multipacks/current wet variants and then pivot to dry-label upgrades rather than infer UPC neighbors.
+Stopped after dry source-upgrade pass 6 with 101 total incoming records staged. All staged dry dog and dry cat UPCs have now received a second-pass identity/currentness audit. Highest-value next step is a targeted missing-current-UPC sweep plus a final unresolved/physical-label triage, not another broad identity pass.
