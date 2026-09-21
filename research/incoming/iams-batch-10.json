@@ -946,5 +946,217 @@
       "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805822",
+    "canonical_gtin14": "00019014805822",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Whole Grain",
+    "recipe": [
+      "Chicken",
+      "Whole Grain"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "6 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
+      "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805839",
+    "canonical_gtin14": "00019014805839",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Whole Grain",
+    "recipe": [
+      "Chicken",
+      "Whole Grain"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "13.5 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
+      "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805846",
+    "canonical_gtin14": "00019014805846",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Whole Grain",
+    "recipe": [
+      "Chicken",
+      "Whole Grain"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "27 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
+      "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "019014805853",
+    "canonical_gtin14": "00019014805853",
+    "barcode_scope": "individual_unit",
+    "brand": "Iams",
+    "manufacturer": "Mars Petcare US",
+    "species": "dog",
+    "product_line": "Advanced Health",
+    "product_name": "IAMS Advanced Health Mobility Support Chicken & Whole Grain Recipe Adult Dry Dog Food",
+    "variant": "Chicken & Whole Grain",
+    "recipe": [
+      "Chicken",
+      "Whole Grain"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": null,
+    "presentation": null,
+    "package_type": "bag",
+    "size": "36 lb",
+    "ingredients_verbatim": "",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "cup"
+    },
+    "label_deck_code": null,
+    "formula_source": "Mars Petcare US official IAMS participating-product exhibit with Unit UPC without check digit and exact product/size.",
+    "source_urls": [
+      "https://snippdocs.blob.core.windows.net/docs/IAMS_Check_Up_Challenge_2024_2007269/2024%20Checkup%20Challenge%20Terms%20%26%20Conditions%20FINAL.pdf",
+      "https://www.iams.com/products/dry/iams-advanced-health-mobility-support"
+    ],
+    "source_accessed_at": "2026-09-21",
+    "barcode_notes": "Manufacturer source supplies exact Unit UPC body without check digit; UPC-A leading zero/check digit restored algorithmically and validated. No sequence inference.",
+    "conflicts": [],
+    "verification_notes": [
+      "Mars official exhibit binds the manufacturer UPC body to this exact Mobility Support bag size.",
+      "Current IAMS manufacturer catalog independently confirms Mobility Support recipe family.",
+      "Complete current label panel is not jointly machine-readable in collected evidence; needs_physical_label."
+    ],
+    "research_status": "needs_physical_label"
   }
 ]
