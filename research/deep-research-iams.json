@@ -10892,7 +10892,8 @@
         "Not source_verified because complete current ingredients, GA, calories and AAFCO adequacy/deck are not all proven together.",
         "Current IAMS manufacturer page independently confirms the Sensitive Digestion & Skin Pâté Turkey recipe and Perfect Portions twin-tray positioning. Manufacturer accessible text still does not expose the complete label deck/GA/calorie/AAFCO statement together.",
         "Formula campaign 2026-09-21: complete Perfect Portions recipe panel captured from one US Chewy page; no cross-recipe stitching. Single retailer, status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Sensitive Digestion & Skin Pâté Turkey has Target/IAMS/Chewy references, but a second independent retailer whole-panel match including the complete ingredient statement, every printed guarantee and calorie basis was not established. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -10992,7 +10993,8 @@
       "verification_notes": [
         "Target exposes exact 15 lb UPC and complete ingredient text.",
         "Current IAMS manufacturer page lists Beef & Rice current sizes 5/7/11/15/30 lb and states 100% complete and balanced adult nutrition.",
-        "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label."
+        "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label.",
+        "Corroboration pass 2026-09-21: 15 lb Adult Minichunks Beef & Rice currently has an ingredient statement but no complete GA/calorie panel in the ledger; Target/manufacturer identity evidence cannot satisfy whole-panel corroboration. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11104,7 +11106,8 @@
         "Current IAMS manufacturer page lists Beef & Rice current sizes 5/7/11/15/30 lb and states 100% complete and balanced adult nutrition.",
         "GA/calorie/deck are not fully accessible as machine-readable current label evidence in this pass; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Adult Minichunks Beef & Rice has Kroger/Chewy/manufacturer references, but the corroboration search did not establish two independent character-for-character complete panels for ingredients, every printed guarantee and 3654 kcal/kg / 380 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11177,12 +11180,15 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "UPC 019014806805 is explicitly published for the 27 lb US retail product by multiple current specialty-retail sources; not inferred from neighboring codes.",
-      "conflicts": [],
+      "conflicts": [
+        "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations."
+      ],
       "verification_notes": [
         "Current retail evidence independently binds UPC 019014806805 to the 27 lb Chicken & Salmon Skin & Coat product.",
         "Retail evidence exposes the ingredient deck; GA/calories/AAFCO are not complete enough in accessible text for source_verified.",
         "Kroger-family pages expose additional 13.5 lb identifiers, but their displayed numeric strings were not promoted here because exact UPC-A normalization/check-digit identity was not independently resolved.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: 27 lb Skin & Coat Chicken & Salmon has an ingredient panel but incomplete GA/calorie fields in the ledger. Current IAMS naming shortens the family to Skin & Coat; treat this as a naming/version boundary until exact package chronology is proven. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11862,7 +11868,8 @@
         "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
         "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Adult Minichunks Beef & Rice has Kroger/Chewy/manufacturer references, but the corroboration search did not establish two independent character-for-character complete panels for ingredients, every printed guarantee and 3654 kcal/kg / 380 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11974,7 +11981,8 @@
         "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
         "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Adult Minichunks Beef & Rice has Kroger/Chewy/manufacturer references, but the corroboration search did not establish two independent character-for-character complete panels for ingredients, every printed guarantee and 3654 kcal/kg / 380 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12086,7 +12094,8 @@
         "Exact UPC-to-size binding is retailer evidence; no neighboring sequence inference.",
         "Full current GA/calories/AAFCO/deck remains incomplete, so needs_physical_label.",
         "Formula campaign 2026-09-21: complete recipe panel captured from one US Chewy page and applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration pass 2026-09-21: Adult Minichunks Beef & Rice has Kroger/Chewy/manufacturer references, but the corroboration search did not establish two independent character-for-character complete panels for ingredients, every printed guarantee and 3654 kcal/kg / 380 kcal/cup. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12197,13 +12206,16 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
-      "conflicts": [],
+      "conflicts": [
+        "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations."
+      ],
       "verification_notes": [
         "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: Advanced Health Skin & Coat Chicken & Salmon was compared against current shortened Skin & Coat naming. The stored complete panel is consistent across these size records, but no second qualifying independent retailer whole-panel witness tied to each staged UPC resolves the rename/version boundary. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12314,13 +12326,16 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
-      "conflicts": [],
+      "conflicts": [
+        "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations."
+      ],
       "verification_notes": [
         "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: Advanced Health Skin & Coat Chicken & Salmon was compared against current shortened Skin & Coat naming. The stored complete panel is consistent across these size records, but no second qualifying independent retailer whole-panel witness tied to each staged UPC resolves the rename/version boundary. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12431,13 +12446,16 @@
       ],
       "source_accessed_at": "2026-09-21",
       "barcode_notes": "Mars official source labels the value as Unit UPC (without check digit). Restored the leading UPC-A zero and mathematically computed the final UPC-A check digit; exact product/size binding comes from Mars, not sequence inference.",
-      "conflicts": [],
+      "conflicts": [
+        "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations."
+      ],
       "verification_notes": [
         "Mars Petcare US official participating-product exhibit directly binds the check-digit-omitted Unit UPC to this exact recipe and bag size.",
         "UPC-A check digit was restored algorithmically from the manufacturer-supplied 11-digit body (including leading zero).",
         "Complete current ingredients/GA/calories/AAFCO/deck are not jointly proven in accessible text; keep needs_physical_label.",
         "Formula campaign 2026-09-21: complete Advanced Health Skin & Coat Chicken & Salmon panel captured from current US Chewy page; applied recipe-level across staged package UPCs. Single retailer; status not promoted.",
-        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order."
+        "Final audit 2026-09-21: populated ingredients_ordered_normalized deterministically from ingredients_verbatim by splitting only top-level comma separators; parenthesized premix/mineral/vitamin blocks remain intact and in printed order.",
+        "Corroboration/side-question pass 2026-09-21: Advanced Health Skin & Coat Chicken & Salmon was compared against current shortened Skin & Coat naming. The stored complete panel is consistent across these size records, but no second qualifying independent retailer whole-panel witness tied to each staged UPC resolves the rename/version boundary. Retain needs_physical_label."
       ],
       "research_status": "needs_physical_label"
     },
