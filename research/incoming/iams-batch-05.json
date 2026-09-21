@@ -563,14 +563,17 @@
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate."
+      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
@@ -616,14 +619,17 @@
     ],
     "source_accessed_at": "2026-09-20",
     "barcode_notes": "Exact UPC is bound to this US retail unit/size by the cited source; canonical GTIN-14 is zero-left-padded.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "US evidence only; no European formula substituted.",
       "Dry calorie arithmetic witness unavailable; no per-bag calories manufactured.",
       "Not source_verified because the complete current ingredients, guaranteed analysis, calorie statement and adequacy evidence required by AGENTS §10 are not all proven together.",
-      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate."
+      "Dry cat audit: current IAMS manufacturer page independently confirms Healthy Weight Chicken recipe identity. Exact staged UPC-to-size evidence remains separate.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
