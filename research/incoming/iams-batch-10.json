@@ -162,7 +162,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Salmon",
+    "variant": "Skin & Coat Chicken & Salmon",
     "recipe": [
       "Chicken",
       "Salmon"
@@ -306,14 +306,17 @@
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
       "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
       "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
@@ -416,14 +419,17 @@
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Exact UPC-A recovered from retailer's 13-digit display by removing one retailer padding zero; resulting 12-digit UPC-A passes check digit and matches IAMS 019014 company prefix. This normalization is corroborated by the same retailer explicitly labeling the displayed identifier as UPC.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "Current IAMS lists this recipe in 5/15/30/38.5 lb and states 100% complete and balanced for adult dogs.",
       "Exact retailer page labels this bag size with the corresponding padded UPC representation; normalized UPC-A is check-digit valid.",
       "Full current machine-readable ingredients/GA/calories/deck are not jointly available in this evidence set, so remains needs_physical_label.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
@@ -526,14 +532,17 @@
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer explicitly displays 0001901483039 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830396; check digit validates.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
       "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
       "Full current label panel still incomplete; keep needs_physical_label.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
@@ -636,14 +645,17 @@
     ],
     "source_accessed_at": "2026-09-21",
     "barcode_notes": "Retailer explicitly displays 0001901483040 as UPC for this size. Removing the retailer's single left padding zero gives UPC-A 019014830402; check digit validates.",
-    "conflicts": [],
+    "conflicts": [
+      "Formula campaign audit: this 12-digit value fails the UPC-A check digit. The prior claim that removing one leading zero from a 13-digit retailer display produced a valid UPC-A is false. Per BRIEF-IAMS-FORMULAS §6.1, the code is rejected rather than patched to a guessed check digit."
+    ],
     "verification_notes": [
       "Current IAMS independently confirms the Chicken & Beef High Protein recipe and 5/15/30/38.5 lb size family.",
       "This exact bag size is bound to an explicitly labeled retailer UPC display; normalization is left-padding removal, not neighboring-code inference.",
       "Full current label panel still incomplete; keep needs_physical_label.",
-      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted."
+      "Formula campaign 2026-09-21: complete Chewy US panel captured whole from one product page; not assembled across sources. One retailer only, so status not promoted.",
+      "Rejected 2026-09-21: UPC-A check digit fails; original retailer display must be re-resolved from source/physical pack before this SKU can be restored."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "rejected"
   },
   {
     "catalog_number": null,
@@ -814,7 +826,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Salmon",
+    "variant": "Skin & Coat Chicken & Salmon",
     "recipe": [
       "Chicken",
       "Salmon"
@@ -867,7 +879,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Salmon",
+    "variant": "Skin & Coat Chicken & Salmon",
     "recipe": [
       "Chicken",
       "Salmon"
@@ -920,7 +932,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Skin & Coat Chicken & Salmon Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Salmon",
+    "variant": "Skin & Coat Chicken & Salmon",
     "recipe": [
       "Chicken",
       "Salmon"
@@ -973,7 +985,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1026,7 +1038,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1079,7 +1091,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1132,7 +1144,7 @@
     "species": "dog",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Adult Dry Dog Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1781,7 +1793,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Dry Cat Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1833,7 +1845,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Dry Cat Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1885,7 +1897,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Immune Health Chicken & Superfoods Recipe Dry Cat Food",
-    "variant": "Chicken & Superfoods",
+    "variant": "Immune Health Chicken & Superfoods",
     "recipe": [
       "Chicken",
       "Superfoods"
@@ -1937,7 +1949,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Healthy Digestion Chicken & Turkey Recipe Dry Cat Food",
-    "variant": "Chicken & Turkey",
+    "variant": "Healthy Digestion Chicken & Turkey",
     "recipe": [
       "Chicken",
       "Turkey"
@@ -1989,7 +2001,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Healthy Digestion Chicken & Turkey Recipe Dry Cat Food",
-    "variant": "Chicken & Turkey",
+    "variant": "Healthy Digestion Chicken & Turkey",
     "recipe": [
       "Chicken",
       "Turkey"
@@ -2041,7 +2053,7 @@
     "species": "cat",
     "product_line": "Advanced Health",
     "product_name": "IAMS Advanced Health Healthy Digestion Chicken & Turkey Recipe Dry Cat Food",
-    "variant": "Chicken & Turkey",
+    "variant": "Healthy Digestion Chicken & Turkey",
     "recipe": [
       "Chicken",
       "Turkey"
