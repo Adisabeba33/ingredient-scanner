@@ -471,3 +471,22 @@ Source count added in this continuation:
 - IAMS manufacturer images: +0
 
 No new UPCs were introduced. Shell/checker limitation remains unchanged from the preceding handoff entry; no checker exit code is fabricated.
+
+
+## Formula campaign — continuation 2 (2026-09-21)
+
+Additional formula-only work completed without adding or changing UPC strings.
+
+Closed/captured panels in this continuation:
+- Healthy Enjoyment Immune Support Chicken & Salmon — 3 existing UPC rows (`019014806379`, `019014806386`, `019014806416`). Complete US Chewy panel captured whole: ingredients + GA + calories.
+- Historical Adult Weight Control — 3 existing UPC rows (`019014711123`, `019014610891`, `019014700677`). Current US Chewy Healthy Weight Control panel captured; historical/current naming relationship is explicitly noted rather than silently renaming the staged records.
+- Large Breed with Chicken — 3 existing UPC rows (`019014610976`, `019014700721`, `019014805037`). Complete current US Chewy Large Breed Adult Chicken panel captured. Petco independently displays the same ingredient/GA formula under current Chicken & Whole Grain naming, so the naming/version relationship is documented while staged UPC identity remains unchanged.
+
+This continuation adds **3 recipe panels / 9 staged UPC rows**. Cumulative formula-campaign capture is now **15 recipe panels / 48 staged barcode rows** (the cumulative row figure still includes the four separately rejected invalid High Protein Chicken & Beef barcode strings from the first pass).
+
+Evidence notes:
+- Chewy: +3 recipe panels
+- Petco: used as independent current-formula/name cross-check for Large Breed Adult; Petco's Large Breed page matches the Chewy ingredients/GA and adds Omega-3 0.3% to its displayed GA. Because the exact retailer text is not character-for-character identical, status was not promoted solely on that basis.
+- No new UPCs discovered or inserted.
+
+Environment note: a direct local clone/checker attempt was made, but the container has no DNS/network route to github.com. GitHub connector reads/writes work, but a real Node checker exit code is still unavailable here; none is fabricated.
