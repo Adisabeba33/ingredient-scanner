@@ -494,8 +494,36 @@ for (const r of records) {
     byComposition.set(comp, [...(byComposition.get(comp) ?? []), r]);
   }
 
+  // An array of STRINGS, and the second half of that is not pedantry.
+  //
+  // AGENTS.md §9 shows all three as arrays of sentences, and every consumer
+  // of them — the handoff, the seeding pass, docs/CATALOG-CONFLICTS.md —
+  // joins and reads them as text. An object slipped into one survives
+  // Array.isArray, survives JSON.parse, and then prints as "[object Object]"
+  // wherever somebody reads it, which is the point at which the evidence it
+  // held is gone.
+  //
+  // Two Purina Cat Chow records arrived with conflicts as
+  // {field, note} objects carrying a real and useful calorie disagreement.
+  // Nothing caught it: the note was intact in the file and unreadable
+  // everywhere else. This is the same shape of defect as a printed guarantee
+  // written as free text, which this checker has caught since the first
+  // ledger that did it.
   for (const k of ["source_urls", "conflicts", "verification_notes"]) {
-    if (!Array.isArray(r[k])) err(upc, `${k} must be an array`);
+    if (!Array.isArray(r[k])) {
+      err(upc, `${k} must be an array`);
+      continue;
+    }
+    for (const entry of r[k]) {
+      if (typeof entry !== "string") {
+        err(
+          upc,
+          `${k} holds a ${Array.isArray(entry) ? "array" : typeof entry} where a string belongs ` +
+            `(${JSON.stringify(entry).slice(0, 70)}…). Every entry is a sentence; ` +
+            `an object here reads as "[object Object]" everywhere it is used.`,
+        );
+      }
+    }
   }
 }
 

@@ -48,11 +48,70 @@ them has earned its way off, say so out loud rather than quietly.
 | `050000551217` | a 12 × 3 oz case of Classic Pâté Chicken Feast | `050000429943` |
 | `050000504862` | a 24 × 3 oz case of Classic Pâté Chicken Feast | `050000429943` |
 
+## Already claimed by a research ledger
+
+Researched but not seeded. Do not re-research; if one is wrong, correct it in place.
+
+| barcode | status | what | ledger |
+|---|---|---|---|
+| `017800028677` | source_verified | Indoor — With Chicken — 18 oz | research/deep-research-purina-cat-chow.json |
+| `017800113205` | source_verified | Naturals — Original With Chicken & Salmon — 6.3 lb | research/deep-research-purina-cat-chow.json |
+| `017800113229` | source_verified | Naturals — Original With Chicken & Salmon — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800145008` | source_verified | Naturals — Original With Chicken & Salmon — 13 lb | research/deep-research-purina-cat-chow.json |
+| `017800145916` | source_verified | Complete — With Real Chicken — 25 lb | research/deep-research-purina-cat-chow.json |
+| `017800150125` | source_verified | Complete — With Real Chicken — 6.3 lb | research/deep-research-purina-cat-chow.json |
+| `017800150149` | source_verified | Complete — With Real Chicken — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800150163` | source_verified | Indoor — With Chicken — 6.3 lb | research/deep-research-purina-cat-chow.json |
+| `017800150187` | source_verified | Indoor — With Chicken — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800162579` | source_verified | Naturals — Original With Chicken & Salmon — 18 lb | research/deep-research-purina-cat-chow.json |
+| `017800166294` | source_verified | Gentle — With Turkey — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800166317` | source_verified | Gentle — With Turkey — 6.3 lb | research/deep-research-purina-cat-chow.json |
+| `017800166331` | source_verified | Gentle — With Turkey — 13 lb | research/deep-research-purina-cat-chow.json |
+| `017800171564` | source_verified | Naturals — Indoor With Chicken & Turkey — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800171595` | source_verified | Naturals — Indoor With Chicken & Turkey — 6.3 lb | research/deep-research-purina-cat-chow.json |
+| `017800171625` | source_verified | Naturals — Indoor With Chicken & Turkey — 13 lb | research/deep-research-purina-cat-chow.json |
+| `017800171632` | source_verified | Naturals — Indoor With Chicken & Turkey — 18 lb | research/deep-research-purina-cat-chow.json |
+| `017800184953` | source_verified | Complete — With Real Chicken — 15 lb | research/deep-research-purina-cat-chow.json |
+| `017800184960` | source_verified | Complete — With Real Chicken — 20 lb | research/deep-research-purina-cat-chow.json |
+| `017800184984` | source_verified | Indoor — With Chicken — 20 lb | research/deep-research-purina-cat-chow.json |
+| `017800184991` | source_verified | Indoor — With Chicken — 15 lb | research/deep-research-purina-cat-chow.json |
+| `017800190084` | source_verified | Healthy Aging — 7+ With Chicken — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800190237` | source_verified | Healthy Aging — 7+ With Chicken — 14 lb | research/deep-research-purina-cat-chow.json |
+| `017800194778` | source_verified | Complete — With Real Salmon — 3.15 lb | research/deep-research-purina-cat-chow.json |
+| `017800194808` | source_verified | Complete — With Real Salmon — 15 lb | research/deep-research-purina-cat-chow.json |
+| `017800450072` | source_verified | Complete — With Real Chicken — 18 oz | research/deep-research-purina-cat-chow.json |
+
 ## The exclusion list
 
-Every barcode above, flat, for a mechanical check. 0 codes. A code in this list is not a new record whatever a retailer page says about it.
+Every barcode above, flat, for a mechanical check. 26 codes. A code in this list is not a new record whatever a retailer page says about it.
 
 ```
+017800028677
+017800113205
+017800113229
+017800145008
+017800145916
+017800150125
+017800150149
+017800150163
+017800150187
+017800162579
+017800166294
+017800166317
+017800166331
+017800171564
+017800171595
+017800171625
+017800171632
+017800184953
+017800184960
+017800184984
+017800184991
+017800190084
+017800190237
+017800194778
+017800194808
+017800450072
 ```
 
 `scripts/check-ledger.mjs` performs this check for you against the live files and will refuse a batch that repeats any of them, so this list is for planning rather than for verification.

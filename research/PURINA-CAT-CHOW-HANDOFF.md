@@ -261,3 +261,62 @@ The user explicitly stopped the Purina Cat Chow campaign here and considers the 
 Shell remains unavailable in this environment. Therefore the required inventory regeneration and `node scripts/check-ledger.mjs research/deep-research-purina-cat-chow.json` have **not been run** here, and the incoming batches have **not** been merged into the strict main Cat Chow ledger or production seed files. No claim of checker success is made.
 
 When this campaign is resumed in a shell-enabled session, first read this handoff and `AGENTS.md`; merge the three strict incoming batches, regenerate inventory, run the checker, resolve any ERROR/WARN as required by the brief, and only then commit/promote. Keep `PURINA-CAT-CHOW-UPC-LEADS.json` separate unless individual leads acquire enough evidence to satisfy the strict ledger contract.
+
+
+## Shell-enabled pass (2026-09-22)
+
+Run from a session with a shell, which the campaign did not have. It did what
+the "Next shell-enabled action" section above asked for, and nothing else.
+
+- **Merged** the three incoming batches into
+  `research/deep-research-purina-cat-chow.json` — 26 records — and deleted the
+  incoming files. `research/incoming/` is empty of Cat Chow again.
+- **`node scripts/check-ledger.mjs research/deep-research-purina-cat-chow.json`
+  exits 0. Clean, zero warnings.** That is a real run, not an assertion.
+- **Inventory regenerated** from the live seed, and
+  `research/WORKLIST-PURINA-CAT-CHOW.md` generated: 7 recipes behind 26
+  barcodes, all 7 with a complete panel, none partial, none missing.
+
+### Verified independently rather than taken from this handoff
+
+- All 26 UPC-A check digits recomputed: 26 correct.
+- Prefix `017800` on 26 of 26, with no exception.
+- Panel bounds per food form (dry: moisture 5–20%, protein ≤50%): 26 of 26
+  inside.
+- Calorie basis `cup` on 26 of 26; no per-bag figure invented anywhere.
+- No two recipes share an ingredient deck.
+- `017800150149` is held as Complete / With Real Chicken / 3.15 lb, which
+  matches this handoff's rejection of the Indoor attribution.
+
+### One defect fixed
+
+The two Healthy Aging records carried `conflicts` as `{field, note}` **objects**
+rather than strings. `AGENTS.md` §9 shows an array of sentences, and every
+consumer of the field joins and reads it as text — so the calorie disagreement
+it held, which is real and useful, would have printed as `[object Object]`
+everywhere it was read. Rewritten as `"calorie_content: <note>"`, keeping every
+word.
+
+Nothing caught this: the checker tested `Array.isArray` and stopped. It now
+checks the entries too, which is the same rule it has always applied to a
+printed guarantee written as free text. Verified by re-inserting an object and
+watching it error, and by confirming eleven other ledgers report the same
+counts before and after the change.
+
+### Left for the seeding pass, not done here
+
+- **`Healthy Aging` is a real current range and is NOT in
+  `data/us-pet-brands.ts`**, which names five: Complete, Indoor, Naturals,
+  Gentle, Hairball. Two records would land under "Other" until it is added.
+- **`Hairball` may not be a range at all.** This campaign found hairball
+  control presented as a property of the Indoor recipe rather than as a
+  separate product identity, which is the Iams "Minichunks" question in
+  reverse. A pack decides; do not delete it from the seed file on this
+  evidence alone.
+- **`research/PURINA-CAT-CHOW-UPC-LEADS.json` is safe where it sits, but by
+  accident.** Both `scripts/check-ledger.mjs` and `scripts/brand-inventory.mjs`
+  read `parsed.records ?? []` from every `*.json` in `research/`, and that file
+  is a bare array, so they skip it — verified by probing one of its 24
+  barcode-bearing leads against the checker and getting no "already claimed".
+  Wrap it in `{ "records": [...] }` at any point and it becomes a phantom
+  ledger that blocks the promotion of its own leads.
