@@ -126,7 +126,7 @@ once buys the siblings behind it.
 |---|-------|---------|-------|--------|----------|
 | 1 | **Iams** | both | Mars | **SEEDED** — batch 037: 121 barcodes, 98 compositions. 15 contested panels held back in `research/IAMS-CONTESTED-PANELS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
 | 2 | **Purina Cat Chow** | cat | Nestlé Purina | **BRIEFED** — `research/BRIEF-PURINA-CAT-CHOW.md` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
-| 3 | **Purina Dog Chow** | dog | Nestlé Purina | QUEUED | Same shelf, dogs. Runs straight after #2 on the same prefixes and the same size-ladder rules. |
+| 3 | **Purina Dog Chow** | dog | Nestlé Purina | **BRIEFED** — `research/BRIEF-PURINA-DOG-CHOW.md` | Same shelf, dogs. Runs straight after #2 on the same decks and prefixes; `research/deep-research-pro-plan.json` is a worked example of exactly this shape. |
 | 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
 | 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
 | 6 | **Cesar** | dog | Mars | QUEUED | Tier-1 #8. Small-dog wet trays bought weekly; the tray/twin-pack scope question is the whole campaign. |
@@ -152,6 +152,21 @@ whole wave only because the operator named those chains as targets.
 | 18 | **Kindfull** | both | Target | QUEUED | **`lines: []`**. Target's own brand, launched 2021. |
 | 19 | **American Journey** | both | Chewy | QUEUED | Brief already written: `research/BRIEF-AMERICAN-JOURNEY.md`. Chewy is folding its labels into `Chewy Made`, which the seed file does not know. |
 | 20 | **Frisco** | both | Chewy | QUEUED | **`lines: []`**. Mostly hard goods and treats; check the food scope before briefing. |
+
+---
+
+### A sibling brief inherits rather than repeats
+
+`research/BRIEF-PURINA-DOG-CHOW.md` is the first brief written as a delta. It
+names the six sections of the Cat Chow brief that carry over unchanged — the
+promotion gate, the deck source, the vitamin constants, the prefixes, where
+things go, batch size — and then says only what is different: a sharper
+boundary trap, a longer size ladder, a different worked example.
+
+Do this for every sibling after the first in a maker family. A brief that
+repeats its sibling is a brief that will disagree with it in six months, and
+the sections most worth keeping identical are exactly the ones an agent is
+most likely to re-derive differently.
 
 ---
 
