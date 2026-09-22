@@ -386,16 +386,19 @@
     "upc": "017800134163",
     "canonical_gtin14": "00017800134163",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence consistently binds this UPC to Purina Cat Chow Indoor 16 lb. The 16 lb size is outside the current manufacturer size ladder observed in this campaign, so retain as a historical package.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800134163",
+      "https://www.google.com/search?q=%22017800134163%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -409,16 +412,19 @@
     "upc": "017800134156",
     "canonical_gtin14": "00017800134156",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence consistently binds this UPC to Purina Cat Chow Complete 16 lb. Current manufacturer sizing differs; retain as historical.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800134156",
+      "https://www.google.com/search?q=%22017800134156%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -432,16 +438,19 @@
     "upc": "017800148382",
     "canonical_gtin14": "00017800148382",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Naturals 13 lb. A current Naturals Original 13 lb package is separately proved under UPC 017800145008, making this useful as an older package-generation mapping.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800148382",
+      "https://www.google.com/search?q=%22017800148382%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -455,16 +464,19 @@
     "upc": "017800148412",
     "canonical_gtin14": "00017800148412",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Healthy Weight 3.15 lb. Healthy Weight as a standalone Cat Chow identity was not found in the current manufacturer lineup; retain as historical/discontinued identity.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800148412",
+      "https://www.google.com/search?q=%22017800148412%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -556,16 +568,19 @@
     "upc": "017800028707",
     "canonical_gtin14": "00017800028707",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Indoor 3.5 lb. Current Indoor small-bag sizing differs, so retain as historical package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800028707",
+      "https://www.google.com/search?q=%22017800028707%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -602,16 +617,19 @@
     "upc": "017800170147",
     "canonical_gtin14": "00017800170147",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Gentle 6.3 lb. Current Gentle 6.3 lb is separately proved as UPC 017800166317, indicating an older package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800170147",
+      "https://www.google.com/search?q=%22017800170147%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -625,16 +643,19 @@
     "upc": "017800170185",
     "canonical_gtin14": "00017800170185",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Naturals Original 6.3 lb. Current Naturals Original 6.3 lb is separately proved as UPC 017800113205, indicating an older package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800170185",
+      "https://www.google.com/search?q=%22017800170185%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -648,16 +669,19 @@
     "upc": "017800136846",
     "canonical_gtin14": "00017800136846",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Indoor With Chicken 18.5 lb. This size is not in the current manufacturer size ladder; retain as historical.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800136846",
+      "https://www.google.com/search?q=%22017800136846%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -671,16 +695,19 @@
     "upc": "017800141338",
     "canonical_gtin14": "00017800141338",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Indoor 16 lb; retain as another historical package generation rather than collapsing it into current Indoor.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800141338",
+      "https://www.google.com/search?q=%22017800141338%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -694,16 +721,19 @@
     "upc": "017800141321",
     "canonical_gtin14": "00017800141321",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Complete 16 lb; retain as another historical package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800141321",
+      "https://www.google.com/search?q=%22017800141321%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -769,16 +799,19 @@
     "upc": "017800171540",
     "canonical_gtin14": "00017800171540",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Healthy Weight 6.3 lb. Standalone Healthy Weight was not established as current in this campaign, so retain as historical/discontinued.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800171540",
+      "https://www.google.com/search?q=%22017800171540%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -792,16 +825,19 @@
     "upc": "017800028691",
     "canonical_gtin14": "00017800028691",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Indoor 16 lb; retain as historical package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800028691",
+      "https://www.google.com/search?q=%22017800028691%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   },
   {
@@ -815,16 +851,19 @@
     "upc": "017800104210",
     "canonical_gtin14": "00017800104210",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical indexed/search evidence supports Purina Cat Chow Complete 16 lb; retain as historical package generation.",
     "source_urls": [
-      "https://www.upcitemdb.com/info-purina-cat-chow"
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800104210",
+      "https://www.google.com/search?q=%22017800104210%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_formula_binding",
-      "independent_exact_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
     ]
   }
 ]
