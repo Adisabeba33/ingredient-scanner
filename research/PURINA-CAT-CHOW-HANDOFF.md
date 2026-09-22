@@ -216,3 +216,15 @@ The three preserved leads are:
 - Complete / With Real Chicken — 12 lb
 - Complete / With Real Salmon — 12 lb
 - Indoor / Hairball + Healthy Weight With Chicken — 12 lb
+
+
+## Expanded low-confidence / legacy lead preservation
+
+Per user direction, the separate near-ready lead file was expanded rather than discarding useful but sub-ledger evidence. It now contains **6 leads total**: the three current 12 lb packages with missing UPCs plus three barcode-bearing low-confidence/legacy leads.
+
+Newly preserved barcode leads:
+- `017800113182` — indexed as Purina Cat Chow Naturals; valid UPC-A check digit, but current exact-size/current-formula binding is not strong enough for the strict ledger.
+- `017800173063` — historical wholesale evidence: Cat Chow Complete 25 lb. Kept as a legacy/package-generation lead because the current campaign already proves a different current 25 lb UPC.
+- `017800173087` — historical wholesale evidence: Cat Chow Indoor 25 lb. Kept as legacy because current manufacturer evidence does not establish that 25 lb Indoor is a current U.S. package.
+
+These records are deliberately stored only in `research/PURINA-CAT-CHOW-UPC-LEADS.json`. They are not counted in the 26 strict `source_verified` records and should not be seeded until their stated missing evidence is resolved.
