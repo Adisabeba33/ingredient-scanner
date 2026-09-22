@@ -1929,3 +1929,54 @@ walking into.
 - **019014806348** — Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.
 - **019014806362** — Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.
 - **019014830060** — Current-formula conflict: current Chewy Healthy Digestion panel reports 26% protein, 14% fat, 4% fiber and 3649 kcal/kg / 380 kcal/cup, while this staged UPC record carries 25% protein, 13% fat, 5% fiber and 3570 kcal/kg / 364 kcal/cup. Kroger still identifies UPC 019014830060 as the 4.5 lb product, so treat this as formula-generation drift pending physical-label dating.
+
+
+## Batch 038 — Purina Cat Chow
+
+Two of 26 stored compositions carry a conflict note, and both are the same
+disagreement: **the maker contradicting itself between its own two surfaces.**
+
+### Purina's page and Purina's deck print different calories
+
+- **017800190084, 017800190237** — Cat Chow Healthy Aging 7+ With Chicken,
+  3.15 lb and 14 lb. Purina's current product webpage displays **3586 kcal/kg
+  and 393 kcal/cup**; the manufacturer label-deck PDF that same page links,
+  `C450823`, prints **3602 kcal/kg and 382 kcal/cup**. The ingredient order and
+  the AAFCO adult-maintenance statement agree on both.
+
+**The deck's figures are stored**, for the reason rule 1 at the top of this
+file gives: a label deck beats a website. A deck is the artwork that goes to
+print; a product page is marketing copy that is edited on a different clock and
+by different people. The campaign recorded the disagreement rather than
+choosing quietly, which is the whole point.
+
+Note which way the numbers move. 3586 against 3602 is a fifth of a percent —
+the sort of gap a rounding change produces. 393 against 382 per cup is nearly
+three percent, which is larger than the per-kg gap and in the opposite
+direction, so the two statements are not one figure rounded two ways. Something
+changed between them, and only a dated pack says what.
+
+These records remain `source_verified`: §10 asks for conflicts to be
+*resolved or precisely documented without undermining identity*, and a calorie
+disagreement between two of the maker's own surfaces does not put in doubt
+which product the barcode is or what is in it. Had the two surfaces disagreed
+on the INGREDIENT ORDER, that would be a different food and the composition
+would have been withheld, as fifteen Iams records were in batch 037.
+
+### Three 12 lb barcodes deliberately not seeded
+
+Not a conflict, recorded here because the next person will wonder. Current
+Purina pages list a 12 lb bag for Complete With Real Chicken, Complete With
+Real Salmon and Indoor, and retailers prove all three exist. No exact UPC was
+found for any of them, and none was guessed.
+
+The tempting wrong answers were written down rather than taken: a multi-size
+retailer page can say "available in 12 lb" while displaying the **15 lb** UPC,
+which is a size ladder and not barcode proof; and DoorDash UUIDs, Instacart
+product IDs and Tractor Supply SKUs are retailer identifiers, not barcodes.
+Two historical wholesale codes for 25 lb bags were also found and not
+substituted.
+
+All three are held in `research/PURINA-CAT-CHOW-UPC-LEADS.json` with the
+formula and package identity already proved, so each becomes a mechanical
+promotion the moment a real UPC witness turns up.

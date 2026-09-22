@@ -139,6 +139,12 @@ const VERIFIED_035 = "2026-09-18";
 // changed under a stable barcode, and one is about a leading zero in a
 // distributor PDF. Neither casts doubt on the list.
 const VERIFIED_037 = "2026-09-21";
+// Batch 038 — Purina Cat Chow. Every one of the 26 comes from a current
+// Purina label-deck PDF, which is priority 2 under AGENTS.md §6 and needs no
+// second witness; the retailer source behind each record binds the UPC to a
+// printed bag size and nothing else. All 26 carry a deck code, which only
+// Purina and Hill's print.
+const VERIFIED_038 = "2026-09-22";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -10343,5 +10349,145 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_037,
     conflict:
       "Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation may shorten the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse naming generations.",
+  },
+  // ── Purina Cat Chow — batch 038 ──────────────────────────────────────────
+  //
+  // 26 of 26 seeded barcodes have a composition, which no previous batch has
+  // managed. Dry food throughout, so the calorie statement is per CUP and the
+  // package-weight arithmetic witness is unavailable — these went in without
+  // it, and no per-bag figure was invented to supply one.
+  "017800150149": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800150125": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800184953": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800184960": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800145916": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800194778": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soybean meal, animal fat preserved with mixed-tocopherols, salmon, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3737, 410, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800194808": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soybean meal, animal fat preserved with mixed-tocopherols, salmon, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3737, 410, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800150187": {
+    ingredients: `Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.`,
+    analysis: withCalories(ga(30, 9.5, 4.7, 12, null, 0.12), 3382, 359, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800150163": {
+    ingredients: `Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.`,
+    analysis: withCalories(ga(30, 9.5, 4.7, 12, null, 0.12), 3382, 359, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800184991": {
+    ingredients: `Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.`,
+    analysis: withCalories(ga(30, 9.5, 4.7, 12, null, 0.12), 3382, 359, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800184984": {
+    ingredients: `Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.`,
+    analysis: withCalories(ga(30, 9.5, 4.7, 12, null, 0.12), 3382, 359, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800113229": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal, rice, soybean meal, ground yellow corn, ground whole wheat, beef tallow preserved with mixed-tocopherols, salmon, natural liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, dried spinach, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride.`,
+    analysis: withCalories(ga(34, 13, 3, 12, null, 0.15), 3740, 398, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800113205": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal, rice, soybean meal, ground yellow corn, ground whole wheat, beef tallow preserved with mixed-tocopherols, salmon, natural liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, dried spinach, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride.`,
+    analysis: withCalories(ga(34, 13, 3, 12, null, 0.15), 3740, 398, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800145008": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal, rice, soybean meal, ground yellow corn, ground whole wheat, beef tallow preserved with mixed-tocopherols, salmon, natural liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, dried spinach, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride.`,
+    analysis: withCalories(ga(34, 13, 3, 12, null, 0.15), 3740, 398, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800162579": {
+    ingredients: `Chicken, corn gluten meal, chicken by-product meal, rice, soybean meal, ground yellow corn, ground whole wheat, beef tallow preserved with mixed-tocopherols, salmon, natural liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, dried spinach, choline chloride, taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], potassium chloride.`,
+    analysis: withCalories(ga(34, 13, 3, 12, null, 0.15), 3740, 398, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800171564": {
+    ingredients: `Chicken, corn protein meal, rice, chicken by-product meal, soybean meal, ground yellow corn, animal fat preserved with mixed-tocopherols, turkey, powdered cellulose, natural flavor, soybean hulls, calcium carbonate, phosphoric acid, salt, dried spinach, choline chloride, taurine, DL-Methionine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Vitamin E supplement, potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)].`,
+    analysis: withCalories(ga(34, 9, 5.4, 12, null, 0.15), 3481, 371, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800171595": {
+    ingredients: `Chicken, corn protein meal, rice, chicken by-product meal, soybean meal, ground yellow corn, animal fat preserved with mixed-tocopherols, turkey, powdered cellulose, natural flavor, soybean hulls, calcium carbonate, phosphoric acid, salt, dried spinach, choline chloride, taurine, DL-Methionine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Vitamin E supplement, potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)].`,
+    analysis: withCalories(ga(34, 9, 5.4, 12, null, 0.15), 3481, 371, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800171625": {
+    ingredients: `Chicken, corn protein meal, rice, chicken by-product meal, soybean meal, ground yellow corn, animal fat preserved with mixed-tocopherols, turkey, powdered cellulose, natural flavor, soybean hulls, calcium carbonate, phosphoric acid, salt, dried spinach, choline chloride, taurine, DL-Methionine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Vitamin E supplement, potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)].`,
+    analysis: withCalories(ga(34, 9, 5.4, 12, null, 0.15), 3481, 371, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800171632": {
+    ingredients: `Chicken, corn protein meal, rice, chicken by-product meal, soybean meal, ground yellow corn, animal fat preserved with mixed-tocopherols, turkey, powdered cellulose, natural flavor, soybean hulls, calcium carbonate, phosphoric acid, salt, dried spinach, choline chloride, taurine, DL-Methionine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], Vitamin E supplement, potassium chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)].`,
+    analysis: withCalories(ga(34, 9, 5.4, 12, null, 0.15), 3481, 371, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800166294": {
+    ingredients: `Poultry by-product meal, corn protein meal, soybean meal, rice, ground yellow corn, whole grain wheat, animal fat preserved with mixed-tocopherols, liver flavor, turkey, dried chicory root, phosphoric acid, salt, natural flavor, choline chloride, calcium carbonate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride.`,
+    analysis: withCalories(ga(34, 11, 5, 12, null, null), 3603, 402, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800166317": {
+    ingredients: `Poultry by-product meal, corn protein meal, soybean meal, rice, ground yellow corn, whole grain wheat, animal fat preserved with mixed-tocopherols, liver flavor, turkey, dried chicory root, phosphoric acid, salt, natural flavor, choline chloride, calcium carbonate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride.`,
+    analysis: withCalories(ga(34, 11, 5, 12, null, null), 3603, 402, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800166331": {
+    ingredients: `Poultry by-product meal, corn protein meal, soybean meal, rice, ground yellow corn, whole grain wheat, animal fat preserved with mixed-tocopherols, liver flavor, turkey, dried chicory root, phosphoric acid, salt, natural flavor, choline chloride, calcium carbonate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], taurine, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride.`,
+    analysis: withCalories(ga(34, 11, 5, 12, null, null), 3603, 402, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800450072": {
+    ingredients: `Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(32, 12, 3, 12, null, 0.15), 3688, 411, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800028677": {
+    ingredients: `Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.`,
+    analysis: withCalories(ga(30, 9.5, 4.7, 12, null, 0.12), 3382, 359, "cup"),
+    verifiedAt: VERIFIED_038,
+  },
+  "017800190084": {
+    ingredients: `Poultry by-product meal, soy flour, corn protein meal, rice, oat meal, whole grain wheat, animal fat preserved with mixed-tocopherols, chicken, liver flavor, soybean hulls, dried chicory root, phosphoric acid, calcium carbonate, salt, natural flavor, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride.`,
+    analysis: withCalories(ga(34, 12, 4, 12, null, 0.15), 3602, 382, "cup"),
+    verifiedAt: VERIFIED_038,
+    conflict:
+      "calorie_content: Purina's current product webpage displays 3586 kcal/kg and 393 kcal/cup, while its linked manufacturer label-deck PDF C450823 prints 3602 kcal/kg and 382 kcal/cup. Ledger preserves the values printed on the downloadable deck and records the manufacturer-page discrepancy explicitly.",
+  },
+  "017800190237": {
+    ingredients: `Poultry by-product meal, soy flour, corn protein meal, rice, oat meal, whole grain wheat, animal fat preserved with mixed-tocopherols, chicken, liver flavor, soybean hulls, dried chicory root, phosphoric acid, calcium carbonate, salt, natural flavor, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], L-Lysine monohydrochloride.`,
+    analysis: withCalories(ga(34, 12, 4, 12, null, 0.15), 3602, 382, "cup"),
+    verifiedAt: VERIFIED_038,
+    conflict:
+      "calorie_content: Purina's current product webpage displays 3586 kcal/kg and 393 kcal/cup, while its linked manufacturer label-deck PDF C450823 prints 3602 kcal/kg and 382 kcal/cup. Ledger preserves the values printed on the downloadable deck and records the manufacturer-page discrepancy explicitly.",
   },
 };

@@ -226,7 +226,19 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Nestlé Purina",
     species: "cat",
     aliases: ["cat chow"],
-    lines: ["Complete", "Indoor", "Naturals", "Gentle", "Hairball"],
+    // "Healthy Aging" came off current packs during the batch-038 campaign and
+    // was missing from the five written from shelf memory. Two senior products
+    // had nowhere to go but "Other" without it.
+    //
+    // "Hairball" is kept although that campaign found none, and the reason is
+    // worth knowing before somebody deletes it: current Cat Chow presents
+    // hairball control as a PROPERTY of the Indoor recipe rather than as a
+    // separate product, so this may be a benefit claim that was written down
+    // as a range. That is the Iams "Minichunks" question mirrored, and one
+    // campaign's reading is not enough to settle it — a pack is. An unused
+    // range costs a row showing zero products; a deleted real one costs a
+    // whole shelf off the coverage page.
+    lines: ["Complete", "Indoor", "Naturals", "Gentle", "Healthy Aging", "Hairball"],
   },
   {
     name: "Beneful",

@@ -14498,4 +14498,139 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "4.5 lb", container: BAG, upc: "019014830053", scope: UNIT },
     ],
   },
+  // ── Purina Cat Chow — batch 038 ──────────────────────────────────────────
+  //
+  // 7 products under 26 barcodes, promoted from
+  // research/deep-research-purina-cat-chow.json. The first brand here to come
+  // back finished on a single campaign, and the reason is that Purina
+  // publishes its label decks as readable PDFs: every one of these 26 carries
+  // a deck code and a complete panel, where the previous brand's maker
+  // rendered its panels as images and needed three passes.
+  //
+  // Every barcode sits under GS1 prefix 017800 — Purina ONE's and Alpo's, NOT
+  // the 050000 that Fancy Feast and Friskies use. A campaign that assumed
+  // "Purina means 050000" would have been wrong 26 times.
+  //
+  // Three 12 lb bags are missing on purpose: Complete Chicken, Complete Salmon
+  // and Indoor. The packages are proved to exist and their UPCs were not
+  // found, so none was guessed — a multi-size retailer page can list 12 lb
+  // while displaying the 15 lb code. They are held in
+  // research/PURINA-CAT-CHOW-UPC-LEADS.json with what is still missing.
+  {
+    brand: "Purina Cat Chow",
+    line: "Complete",
+    variant: "With Real Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800150149", scope: UNIT },
+      { size: "6.3 lb", container: BAG, upc: "017800150125", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "017800184953", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "017800184960", scope: UNIT },
+      { size: "25 lb", container: BAG, upc: "017800145916", scope: UNIT },
+      { size: "18 oz", container: BAG, upc: "017800450072", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Complete",
+    variant: "With Real Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800194778", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "017800194808", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Indoor",
+    variant: "With Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800150187", scope: UNIT },
+      { size: "6.3 lb", container: BAG, upc: "017800150163", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "017800184991", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "017800184984", scope: UNIT },
+      { size: "18 oz", container: BAG, upc: "017800028677", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Naturals",
+    variant: "Original With Chicken & Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800113229", scope: UNIT },
+      { size: "6.3 lb", container: BAG, upc: "017800113205", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "017800145008", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "017800162579", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Naturals",
+    variant: "Indoor With Chicken & Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800171564", scope: UNIT },
+      { size: "6.3 lb", container: BAG, upc: "017800171595", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "017800171625", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "017800171632", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Gentle",
+    variant: "With Turkey",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800166294", scope: UNIT },
+      { size: "6.3 lb", container: BAG, upc: "017800166317", scope: UNIT },
+      { size: "13 lb", container: BAG, upc: "017800166331", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Cat Chow",
+    line: "Healthy Aging",
+    variant: "7+ With Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [
+      { size: "3.15 lb", container: BAG, upc: "017800190084", scope: UNIT },
+      { size: "14 lb", container: BAG, upc: "017800190237", scope: UNIT },
+    ],
+  },
 ];

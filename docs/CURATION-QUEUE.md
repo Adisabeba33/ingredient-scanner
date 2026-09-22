@@ -125,7 +125,7 @@ once buys the siblings behind it.
 | # | Brand | Species | Maker | Status | Why here |
 |---|-------|---------|-------|--------|----------|
 | 1 | **Iams** | both | Mars | **SEEDED** — batch 037: 121 barcodes, 98 compositions. 15 contested panels held back in `research/IAMS-CONTESTED-PANELS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
-| 2 | **Purina Cat Chow** | cat | Nestlé Purina | **BRIEFED** — `research/BRIEF-PURINA-CAT-CHOW.md` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
+| 2 | **Purina Cat Chow** | cat | Nestlé Purina | **SEEDED** — batch 038: 26 barcodes, 26 compositions, one campaign. 3 unproven 12 lb UPCs held in `research/PURINA-CAT-CHOW-UPC-LEADS.json` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | **BRIEFED** — `research/BRIEF-PURINA-DOG-CHOW.md` | Same shelf, dogs. Runs straight after #2 on the same decks and prefixes; `research/deep-research-pro-plan.json` is a worked example of exactly this shape. |
 | 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
 | 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
