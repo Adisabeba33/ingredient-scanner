@@ -228,3 +228,36 @@ Newly preserved barcode leads:
 - `017800173087` — historical wholesale evidence: Cat Chow Indoor 25 lb. Kept as legacy because current manufacturer evidence does not establish that 25 lb Indoor is a current U.S. package.
 
 These records are deliberately stored only in `research/PURINA-CAT-CHOW-UPC-LEADS.json`. They are not counted in the 26 strict `source_verified` records and should not be seeded until their stated missing evidence is resolved.
+
+
+## STOP POINT — campaign paused by user (2026-09-22)
+
+The user explicitly stopped the Purina Cat Chow campaign here and considers the present coverage sufficient for now. **Do not continue historical label/deck research unless the user reopens the campaign.**
+
+### State at pause
+
+- Strict staged current records: **26**.
+- Strict `source_verified`: **26 / 26**.
+- Strict `needs_physical_label`: **0**.
+- All 26 proved current UPCs use prefix `017800`.
+- Current formula/product families represented: Complete With Real Chicken; Complete With Real Salmon; Indoor Hairball + Healthy Weight With Chicken; Naturals Original With Chicken & Salmon; Naturals Indoor With Chicken & Turkey; Gentle Sensitive Stomach + Skin With Turkey; Healthy Aging 7+ Senior With Chicken.
+- Separate preservation file: `research/PURINA-CAT-CHOW-UPC-LEADS.json`.
+- That lead file contains **27 records total** and is intentionally outside the strict ledger workflow.
+- **21 historical UPCs** have been raised to `historical_confirmed` and bound to an historical formula family. Their period-correct full label panels remain intentionally unresolved.
+- Three current 12 lb packages are preserved as near-ready candidates with `upc: null`: Complete With Real Chicken, Complete With Real Salmon, and Indoor Hairball + Healthy Weight With Chicken. Package existence/formula identity is established; exact UPC binding is the missing fact.
+- Two raw barcode leads remain unresolved (`017800150101`, `017800465724`) and one weak attribution collision is explicitly rejected (`017800150149` as Indoor, because that UPC is proved as current Complete With Real Chicken 3.15 lb).
+- Historical/legacy records must **not** be treated as current sellable-package mappings without new evidence.
+
+### Files created/staged during this campaign
+
+- `research/incoming/purina-cat-chow-batch-01.json` — 11 strict records.
+- `research/incoming/purina-cat-chow-batch-02.json` — 11 strict records.
+- `research/incoming/purina-cat-chow-batch-03.json` — 4 strict records.
+- `research/PURINA-CAT-CHOW-UPC-LEADS.json` — 27 near-ready, historical, unresolved, and collision records retained for future work.
+- `research/PURINA-CAT-CHOW-HANDOFF.md` — this running research/handoff record.
+
+### Validation / integration status
+
+Shell remains unavailable in this environment. Therefore the required inventory regeneration and `node scripts/check-ledger.mjs research/deep-research-purina-cat-chow.json` have **not been run** here, and the incoming batches have **not** been merged into the strict main Cat Chow ledger or production seed files. No claim of checker success is made.
+
+When this campaign is resumed in a shell-enabled session, first read this handoff and `AGENTS.md`; merge the three strict incoming batches, regenerate inventory, run the checker, resolve any ERROR/WARN as required by the brief, and only then commit/promote. Keep `PURINA-CAT-CHOW-UPC-LEADS.json` separate unless individual leads acquire enough evidence to satisfy the strict ledger contract.
