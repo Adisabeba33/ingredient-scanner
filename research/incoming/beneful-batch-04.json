@@ -1,0 +1,514 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "017800109680",
+    "canonical_gtin14": "00017800109680",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Freshly Prepared Meals Roasted Turkey Medley",
+    "variant": "Roasted Turkey Medley",
+    "recipe": [
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 943,
+      "kcal_per_unit": 267,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "Roasted Turkey Medley 10 oz tub; current retailer binding and 2025 distributor list corroborate UPC/size.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-14919071",
+      "https://shop.foodland.com/sm/pickup/rsid/3/product/beneful-prepared-meals-roasted-turkey-medley-id-017800109680"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Roasted Turkey Medley 10 oz tub; current retailer binding and 2025 distributor list corroborate UPC/size.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800109673",
+    "canonical_gtin14": "00017800109673",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Freshly Prepared Meals Savory Rice & Lamb Stew",
+    "variant": "Savory Rice & Lamb Stew",
+    "recipe": [
+      "lamb"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 933,
+      "kcal_per_unit": 264,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact Target and Farm & Home pages bind UPC to 10 oz recipe.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-14919070",
+      "https://www.farmandhomesupply.com/purina-beneful-prepared-meals-savory-rice-lamb-stew-wet-dog-food-10oz.html"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact Target and Farm & Home pages bind UPC to 10 oz recipe.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800109635",
+    "canonical_gtin14": "00017800109635",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Freshly Prepared Meals Simmered Beef Entrée",
+    "variant": "Simmered Beef Entrée",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 927,
+      "kcal_per_unit": 262,
+      "unit_name": "tub"
+    },
+    "label_deck_code": "F406024",
+    "formula_source": "Exact Target UPC/size plus current Purina label deck F406024.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-14919068",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4060_f406024_beneful_freshly_prepared_meals_simmered_beef_entree_wet_dog_food_bc6.pdf"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact Target UPC/size plus current Purina label deck F406024.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800109710",
+    "canonical_gtin14": "00017800109710",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Prepared Meals Roasted Chicken Recipe",
+    "variant": "Roasted Chicken Recipe",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 967,
+      "kcal_per_unit": 274,
+      "unit_name": "tub"
+    },
+    "label_deck_code": "F406324",
+    "formula_source": "UPC has multiple retailer bindings; current Purina formula is F406324, but UPC appears legacy alongside current 107648, so retained below promotion gate.",
+    "source_urls": [
+      "https://www.upcitemdb.com/upc/17800109710",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4063_f406324_beneful_freshly_prepared_meals_roasted_chicken_recipe_wet_dog_food_bc8.pdf"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC has multiple retailer bindings; current Purina formula is F406324, but UPC appears legacy alongside current 107648, so retained below promotion gate.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800109734",
+    "canonical_gtin14": "00017800109734",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Prepared Meals Simmered Beef Entrée",
+    "variant": "Simmered Beef Entrée",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 927,
+      "kcal_per_unit": 262,
+      "unit_name": "tub"
+    },
+    "label_deck_code": "F406024",
+    "formula_source": "Retailer UPC binding found, but current Purina page/deck and retailer calorie panel disagree with older retailer calories; preserve conflict and do not promote.",
+    "source_urls": [
+      "https://www.petcarerx.com/beneful-prepared-meals-simmered-beef-wet-dog-food/31675",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4060_f406024_beneful_freshly_prepared_meals_simmered_beef_entree_wet_dog_food_bc6.pdf"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Retailer UPC binding found, but current Purina page/deck and retailer calorie panel disagree with older retailer calories; preserve conflict and do not promote.",
+    "conflicts": [
+      "PetCareRx reports 953 kcal/kg / 270 kcal/tub while current Purina F406024 reports 927 kcal/kg / 262 kcal/tub."
+    ],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800109741",
+    "canonical_gtin14": "00017800109741",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Meals",
+    "product_name": "Beneful Prepared Meals Simmered Chicken Medley",
+    "variant": "Simmered Chicken Medley",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 976,
+      "kcal_per_unit": 276,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "Case/legacy UPC binding found; current unit UPC in prior batch is 109642, so retain as unresolved legacy/case identity.",
+    "source_urls": [
+      "https://www.petcarerx.com/beneful-prepared-meals-simmered-chicken-medley-wet-dog-food/32815?sku=50717",
+      "https://www.ubuy.az/en/product/G2RRV40G-purina-beneful-prepared-meals-adult-wet-dog-food-8-10-oz-tubs"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Case/legacy UPC binding found; current unit UPC in prior batch is 109642, so retain as unresolved legacy/case identity.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800154949",
+    "canonical_gtin14": "00017800154949",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Blends",
+    "product_name": "Beneful Chopped Blends with Beef, Carrots, Peas & Barley",
+    "variant": "Beef, Carrots, Peas & Barley",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact Target UPC and 2025 distributor list establish identity/size; current full Purina deck not recovered in this pass.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-14918970",
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_4.9.25-compressed.pdf"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact Target UPC and 2025 distributor list establish identity/size; current full Purina deck not recovered in this pass.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800169622",
+    "canonical_gtin14": "00017800169622",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Blends",
+    "product_name": "Beneful Chopped Blends with Salmon, Sweet Potatoes, Brown Rice & Spinach",
+    "variant": "Salmon, Sweet Potatoes, Brown Rice & Spinach",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 995,
+      "kcal_per_unit": 281,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size current retail evidence; formula witness recovered only as older Purina C370120, so do not promote as current.",
+    "source_urls": [
+      "https://www.retailmarket.net/products/purina-beneful-chopped-blends-wet-dog-food-with-salmon-sweet-potatoes-brown-rice-and-spinach-10-oz-tub-8-pack/",
+      "https://www.purina.com/sites/default/files/products/files/C370120_Beneful_Chopped_Blends_w_Salmon_Sweet_Potatoes_Brown_Rice_Spinach_Dog_Food.pdf"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact UPC/size current retail evidence; formula witness recovered only as older Purina C370120, so do not promote as current.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800159494",
+    "canonical_gtin14": "00017800159494",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites for Small Dogs with Chicken, Tomatoes, Carrots & Wild Rice",
+    "variant": "Chicken, Tomatoes, Carrots & Wild Rice",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "3 x 3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 76,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1026,
+      "kcal_per_unit": 87,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact Target UPC binds 3-count pack; formula/calorie evidence corroborated, but barcode is multipack rather than individual can.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-15172094",
+      "https://polypet.com.sg/products/beneful-incredibites-for-small-dogs-chicken-with-gravy-85g-x-3"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact Target UPC binds 3-count pack; formula/calorie evidence corroborated, but barcode is multipack rather than individual can.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800154994",
+    "canonical_gtin14": "00017800154994",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Blends",
+    "product_name": "Beneful Chopped Blends with Lamb, Brown Rice, Carrots, Tomatoes & Spinach",
+    "variant": "Lamb, Brown Rice, Carrots, Tomatoes & Spinach",
+    "recipe": [
+      "lamb"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "tub"
+    },
+    "label_deck_code": null,
+    "formula_source": "UPC/product lead found; exact current manufacturer formula deck not recovered, so retained as candidate-grade ledger row.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc",
+      "https://www.petcarerx.com/beneful-prepared-meals-roasted-chicken-wet-dog-food/31931"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product lead found; exact current manufacturer formula deck not recovered, so retained as candidate-grade ledger row.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
