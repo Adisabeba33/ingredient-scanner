@@ -1,0 +1,511 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "017800152921",
+    "canonical_gtin14": "00017800152921",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Kitchen Creations",
+    "product_name": "Beneful Kitchen Creations with Beef & Garden Veggies in Sauce",
+    "variant": "Beef & Garden Veggies",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_sauce",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 832,
+      "kcal_per_unit": 71,
+      "unit_name": "can"
+    },
+    "label_deck_code": "E408225",
+    "formula_source": "Current Purina manufacturer label deck plus exact UPC/size retailer or label database binding",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-01/4082_e408225_beneful_kitchen_creations_w_beef_wet_dog_food_jp1.pdf",
+      "https://www.directionsforme.org/product/309438"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked against net weight; printed kcal/can is consistent within rounding.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800152952",
+    "canonical_gtin14": "00017800152952",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Kitchen Creations",
+    "product_name": "Beneful Kitchen Creations with Chicken & Vibrant Veggies in Sauce",
+    "variant": "Chicken & Vibrant Veggies",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_sauce",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 859,
+      "kcal_per_unit": 73,
+      "unit_name": "can"
+    },
+    "label_deck_code": "E408125",
+    "formula_source": "Current Purina manufacturer label deck plus exact UPC/size retailer or label database binding",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-01/4081_e408125_beneful_kitchen_creations_w_chicken_wet_dog_food_jp2.pdf",
+      "https://www.directionsforme.org/product/309439"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked against net weight; printed kcal/can is consistent within rounding.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800189705",
+    "canonical_gtin14": "00017800189705",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites Pâté with Real Beef, Tomatoes, Carrots & Spinach",
+    "variant": "Real Beef, Tomatoes, Carrots & Spinach",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1254,
+      "kcal_per_unit": 106,
+      "unit_name": "can"
+    },
+    "label_deck_code": "A371320",
+    "formula_source": "Current Purina manufacturer label deck plus exact UPC/size retailer or label database binding",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A371320_Beneful_IncrediBites_Pate_w_Real_Beef_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
+      "https://www.directionsforme.org/product/16703"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked against net weight; printed kcal/can is consistent within rounding.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800189736",
+    "canonical_gtin14": "00017800189736",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites Pâté with Real Chicken, Tomatoes, Carrots & Spinach",
+    "variant": "Real Chicken, Tomatoes, Carrots & Spinach",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 1261,
+      "kcal_per_unit": 107,
+      "unit_name": "can"
+    },
+    "label_deck_code": "A371420",
+    "formula_source": "Current Purina manufacturer label deck plus exact UPC/size retailer or label database binding",
+    "source_urls": [
+      "https://live.purina.com/sites/default/files/products/files/A371420_Beneful_IncrediBites_Pate_w_Real_Chicken_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
+      "https://www.kroger.com/p/purina-beneful-small-breed-wet-dog-food-incredibites-pate-with-real-chicken-recipe/0001780018973"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked against net weight; printed kcal/can is consistent within rounding.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800189767",
+    "canonical_gtin14": "00017800189767",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites Pâté with Real Salmon, Tomatoes, Carrots & Spinach",
+    "variant": "Real Salmon, Tomatoes, Carrots & Spinach",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "can",
+    "size": "3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "source_urls": [
+      "https://www.shoprite.com/sm/pickup/rsid/589/product/purina-beneful-incredibites-dog-food-3-oz-id-00017800189767"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103220",
+    "canonical_gtin14": "00017800103220",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Wet",
+    "product_name": "Beneful with Real Chicken & Peas in Gravy",
+    "variant": "Chicken & Peas",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 80,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": 878,
+      "kcal_per_unit": 136,
+      "unit_name": "can"
+    },
+    "label_deck_code": "A371925",
+    "formula_source": "Current Purina manufacturer label deck plus exact UPC/size retailer or label database binding",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-01/3719_a371925_beneful_w_chicken_peas_in_gravy_wet_dog_food_5cd.pdf",
+      "https://www.kroger.com/p/purina-beneful-in-gravy-wet-dog-food-with-real-chicken-and-peas/0001780010322"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Wet calorie arithmetic checked against net weight; printed kcal/can is consistent within rounding.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103268",
+    "canonical_gtin14": "00017800103268",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Wet",
+    "product_name": "Beneful Steak Flavor & Green Beans in Gravy",
+    "variant": "Steak Flavor & Green Beans",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "source_urls": [
+      "https://www.kroger.com/p/purina-beneful-in-gravy-wet-dog-food-steak-flavor-with-green-beans/0001780010326"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103169",
+    "canonical_gtin14": "00017800103169",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Wet",
+    "product_name": "Beneful with Real Beef & Peas Loaf",
+    "variant": "Beef & Peas",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "loaf",
+    "presentation": "plain",
+    "package_type": "can",
+    "size": "5.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "source_urls": [
+      "https://www.kroger.com/p/purina-beneful-loaf-wet-dog-food-with-real-beef-and-peas/0001780010316"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact individual can UPC and printed size established.",
+    "conflicts": [],
+    "verification_notes": [
+      "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103466",
+    "canonical_gtin14": "00017800103466",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Wet",
+    "product_name": "Beneful Chicken & Steak Flavor in Gravy Wet Dog Food Variety Pack",
+    "variant": "Chicken & Steak Flavor Variety Pack",
+    "recipe": [
+      "chicken",
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "12 x 5.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "source_urls": [
+      "https://www.smithsfoodanddrug.com/p/purina-beneful-in-gravy-wet-dog-food-variety-pack-with-real-chicken-or-steak-flavor/0001780010346"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Outer multipack UPC; not an individual can barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800190831",
+    "canonical_gtin14": "00017800190831",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Kitchen Creations",
+    "product_name": "Beneful Kitchen Creations Beef, Chicken & Lamb Wet Dog Food Variety Pack",
+    "variant": "Beef, Chicken & Lamb Variety Pack",
+    "recipe": [
+      "beef",
+      "chicken",
+      "lamb"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_sauce",
+    "package_type": "can",
+    "size": "30 x 3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "source_urls": [
+      "https://www.target.com/p/-/A-80893964",
+      "https://www.kroger.com/p/beneful-kitchen-creations-with-beef-chicken-or-lamb-wet-dog-food-variety-pack/0001780019083"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Outer multipack UPC; not an individual can barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
