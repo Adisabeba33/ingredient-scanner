@@ -121,10 +121,23 @@ const VERIFIED_033 = "2026-09-18";
 // family, and the 5.5 oz sibling of every 3 oz pâté that has one.
 const VERIFIED_035 = "2026-09-18";
 // Batch 037 — Iams, and the first brand here whose panels had to be read off
-// retailers because the maker publishes its own as images. 114 compositions
-// from Chewy, Petco and Target; 52 of them carry a conflict note, which is a
-// far higher proportion than any previous batch and is the finding rather
-// than a defect — see section M of docs/CATALOG-CONFLICTS.md.
+// retailers because the maker publishes its own as images. 98 compositions
+// from Chewy, Petco and Target under 121 seeded barcodes.
+//
+// Twenty-three of those barcodes carry NO composition, which is a higher
+// proportion than any previous batch and is deliberate in every case. Fifteen
+// are contested: two large retailers publish different ingredient ORDERS for
+// the same barcode, which on an American label is a disagreement about the
+// food rather than about wording. Storing either one would put a list in front
+// of a shopper with even odds of being the previous generation and no way to
+// tell, because `conflictNote` reaches the import panel and never reaches
+// `barcode_cache`. They are listed, with what disagrees and how to settle it,
+// in research/IAMS-CONTESTED-PANELS.md.
+//
+// Of the 98 that ARE here, 37 carry a conflict note. Those are a different
+// thing and are seeded normally: 36 record that the product's printed NAME
+// changed under a stable barcode, and one is about a leading zero in a
+// distributor PDF. Neither casts doubt on the list.
 const VERIFIED_037 = "2026-09-21";
 
 /**
@@ -9752,10 +9765,9 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   },
   // ── Iams — batch 037 ─────────────────────────────────────────────────────
   //
-  // 114 compositions under the 121 barcodes seeded in data/known-products.ts.
-  // Seven of those barcodes have no entry here and are seeded as identity
-  // only: their panels were never captured whole from one page, and half a
-  // panel is not a formula.
+  // 98 compositions under the 121 barcodes seeded in data/known-products.ts.
+  // Twenty-three of those barcodes have no entry here and are seeded as
+  // identity only — a barcode to go and find.
   //
   // These lists come from Chewy, Petco and Target rather than from the maker.
   // That is not a shortcut — iams.com renders every ingredient and guaranteed
@@ -9764,34 +9776,10 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
   // not new: 124 of Blue Buffalo's 133 source-verified records name a retailer
   // the same way. Everything here enters the catalog as `community`, which a
   // photograph of the real bag outranks.
-  "019014805747": {
-    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
-    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
-  },
-  "019014805754": {
-    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
-    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
-  },
-  "019014805761": {
-    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
-    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
-  },
-  "019014805778": {
-    ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Fructooligosaccharides, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Carrots, Choline Chloride, DL-Methionine, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract.`,
-    analysis: withCalories(ga(26, 14, 4, 10, null, null), 3649, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 mg/kg and Vitamin E 60 IU/kg guarantees. Do not promote; reta",
-  },
+  //
+  // Where the two retailers disagreed, nothing is here at all. See
+  // research/IAMS-CONTESTED-PANELS.md for the fifteen barcodes that fell out
+  // and what it would take to finish them.
   "019014711123": {
     ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Potassium Chloride, Flaxseed, Dicalcium Phosphate, Caramel Color, Salt, DL-Methionine, Carrots, Calcium Carbonate, Choline Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
     analysis: withCalories(ga(20, 9, 5, 10, null, null), 3380, 304, "cup"),
@@ -9812,34 +9800,6 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_037,
     conflict:
       "Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.",
-  },
-  "019014803316": {
-    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
-    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
-  },
-  "019014803347": {
-    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
-    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
-  },
-  "019014803330": {
-    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
-    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
-  },
-  "019014805358": {
-    ingredients: `Lamb, Brewers Rice, Chicken By-Product Meal, Ground Whole Grain Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Corn Gluten Meal, Chicken Fat (preserved with Mixed Tocopherols), Chicken Meal, Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dried Egg Product, Flaxseed, Potassium Chloride, Caramel Color, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, Ascorbic Acid, Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Manganous Oxide, Potassium Iodide), Mixed Tocopherols (Preservative), Citric Acid (Preservative), Rosemary Extract`,
-    analysis: withCalories(ga(25, 14, 5, 10, null, null), 3672, 382, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole Grain Barley), adds Soybean Meal, places Corn Gluten Meal a",
   },
   "019014700776": {
     ingredients: `Lamb, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Dried Plain Beet Pulp, Natural Flavor, Brewers Yeast, Dicalcium Phosphate, L-Lysine, Dried Egg Product, Flaxseed, Caramel Color, Potassium Chloride, Carrots, Fructooligosaccharides, Choline Chloride, Vitamins (Vitamin E Supplement, (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Calcium Carbonate, Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), Rosemary Extract`,
@@ -9895,48 +9855,6 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     verifiedAt: VERIFIED_037,
     conflict:
       "Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.",
-  },
-  "019014610860": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
-  },
-  "019014711086": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
-  },
-  "019014610907": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
-  },
-  "019014700714": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
-  },
-  "019014700769": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
-  },
-  "019014805020": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fructooligosaccharides, Vitamins (Vitamin E Supplement, Niacin, d-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Inositol, Vitamin D3 Supplement, Folic Acid), Salt, Choline Chloride, Minerals (Zinc Oxide, Manganese Sulfate, Copper Sulfate, Potassium Iodide), Calcium Carbonate, Rosemary Extract.`,
-    analysis: withCalories(ga(25, 14, 4, 10, null, null), 3646, 380, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingredient deck. Do not promote; current-vs-legacy formula identit",
   },
   "019014700691": {
     ingredients: `Chicken, Ground Barley, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal (source of Glucosamine and Chondroitin Sulfate), Soybean Meal, Dried Plain Beet Pulp, Natural Flavor, Dried Egg Product, Salt, Potassium Chloride, Caramel Color, DL-Methionine, Carrots, Choline Chloride, Fructooligosaccharides, Calcium Carbonate, Vitamins (Vitamin E Supplement, Ascorbic Acid, D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Mixed Tocopherols (preservative), Citric Acid (preservative), L-Carnitine, Rosemary Extract`,
@@ -10418,13 +10336,6 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Protein Meal, Turkey, Dried Plain Beet Pulp, Ground Whole Grain Sorghum, Brewers Rice, Chicken Fat (preserved with Mixed Tocopherols), Natural Flavor, Dried Egg Product, Brewers Dried Yeast, Sodium Bisulfate, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Fructooligosaccharides, Choline Chloride, Calcium Carbonate, DL-Methionine, Fish Oil (preserved with Mixed Tocopherols), Mixed Tocopherols (preservative), Citric Acid (preservative), Taurine, Minerals (Zinc Oxide, Manganese Sulfate, Ferrous Sulfate, Copper Sulfate, Sodium Selenite, Potassium Iodide), Vitamins (Niacin Supplement, L-Ascorbyl-2-Polyphosphate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate [Vitamin B1], Pyridoxine Hydrochloride [Vitamin B6], Vitamin B12 Supplement, Vitamin D3 Supplement, Riboflavin Supplement [Vitamin B2], Folic Acid), Vitamin E Supplement, L-Carnitine, Rosemary Extract.`,
     analysis: withCalories(ga(32, 15, 3, 10, null, 0.15), 3727, 376, "cup"),
     verifiedAt: VERIFIED_037,
-  },
-  "019014830060": {
-    ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, DL-Methionine, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate [Vitamin C], D-Calcium Pantothenate, Biotin, Thiamine Mononitrate [Vitamin B1], Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement [Vitamin B2], Pyridoxine Hydrochloride [Vitamin B6], Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Copper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract.`,
-    analysis: withCalories(ga(25, 13, 5, 10, null, null), 3570, 364, "cup"),
-    verifiedAt: VERIFIED_037,
-    conflict:
-      "Current-formula conflict: current Chewy Healthy Digestion panel reports 26% protein, 14% fat, 4% fiber and 3649 kcal/kg / 380 kcal/cup, while this staged UPC record carries 25% protein, 13% fat, 5% fiber and 3570 kcal/kg / 364 kcal/cup. Kroger still identifies UPC 019014830060 as the 4.5 lb product, so treat this as formula-generation drift pending physical-label dating.",
   },
   "019014830053": {
     ingredients: `Chicken, Ground Whole Grain Corn, Ground Whole Grain Sorghum, Chicken By-Product Meal, Ground Barley, Salmon, Dried Plain Beet Pulp, Natural Flavor, Chicken Fat (preserved with Mixed Tocopherols), Dried Egg Product, Caramel Color, Potassium Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Bacillus subtilis Fermentation Product, Choline Chloride, Fructooligosaccharides, Zinc-Methionine complex, DL-Methionine, Vitamins (Vitamin E Supplement, L-ascorbyl-2-polyphosphate (source of Vitamin C), D-Calcium Pantothenate, Biotin, Thiamine Mononitrate (Vitamin B1), Vitamin B12 Supplement, Vitamin A Supplement, Niacin Supplement, Riboflavin Supplement (Vitamin B2), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Sodium Selenite, Manganese Sulfate, Cooper Sulfate, Potassium Iodide, Manganous Oxide), Citric Acid (preservative), Mixed Tocopherols (preservative), Rosemary Extract`,

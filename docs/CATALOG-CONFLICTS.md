@@ -1796,9 +1796,25 @@ Thirteen barcodes in three shapes. Ten are a maker disagreeing with itself insid
 
 ## Batch 037 — Iams
 
-Fifty-two of 113 stored Iams compositions carry a conflict note. That is a far
-higher proportion than any previous batch — Pedigree's was 20, Orijen's 13 —
-and it is the finding rather than a defect in the research.
+Thirty-seven of 98 stored Iams compositions carry a conflict note, and a
+further **fifteen barcodes were seeded with no composition at all** because
+theirs could not be settled. That is a far higher proportion than any previous
+batch — Pedigree's was 20, Orijen's 13 — and it is the finding rather than a
+defect in the research.
+
+**The fifteen that fell out are in
+[`research/IAMS-CONTESTED-PANELS.md`](../research/IAMS-CONTESTED-PANELS.md)**,
+with what disagrees on each and what it would take to finish it. They were
+pulled for a reason specific to how this catalog works: `conflictNote` is built
+into the import panel's report and is **never written to `barcode_cache`**, so
+a conflict is something the operator sees and the shopper does not. A list with
+even odds of being the previous generation, shown with no signal, is the
+"plausible wrong number" this file's own rules refuse. An absent composition
+sends a reader to the pack in their hand; a confidently wrong one does not.
+
+The thirty-seven that stayed are a different thing: thirty-six record that a
+product's printed NAME changed under a stable barcode, and one is about a
+leading zero in a distributor PDF. Neither casts doubt on the ingredient list.
 
 The reason is where the panels came from. **iams.com renders every ingredient
 and guaranteed-analysis panel as an image**, so there is no manufacturer text
@@ -1843,7 +1859,17 @@ available: a kitten fed from an adult panel is a real mistake, and a plausible
 wrong list is worse than a missing one. So the barcode is seeded as a thing to
 go and find, and waits for a photograph.
 
-### Two shops, two formula generations — 14 barcodes
+### Two shops, two formula generations — moved out
+
+The fourteen barcodes that were listed here, plus `019014830060`, no longer
+carry a composition in `data/known-formulas.ts` and are therefore no longer
+conflicts in the sense this file tracks — there is nothing stored to be in
+conflict with. They are seeded as identity and listed in
+`research/IAMS-CONTESTED-PANELS.md`. The paragraphs below are kept as the
+record of what was found, because the next pass needs to know what it is
+walking into.
+
+#### What was found
 
 - **019014805747** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m
 - **019014805754** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m

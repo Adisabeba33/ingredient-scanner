@@ -13637,6 +13637,13 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   // `rejected` in the ledger with the reason, so the next campaign does not
   // re-derive them. Four multipack codes are also out: a box is not a unit.
   //
+  // Twenty-three of the 121 carry no composition and are seeded as identity —
+  // a barcode to go and find. Fifteen of those are CONTESTED rather than
+  // merely unresearched: Chewy and Petco publish different ingredient orders
+  // for the same barcode, and storing either would show a shopper a list with
+  // even odds of being the previous generation. They are named, with what
+  // disagrees and how to settle it, in research/IAMS-CONTESTED-PANELS.md.
+  //
   // Two variants here were rebuilt from the printed product name rather than
   // copied from the ledger, because the ledger's `variant` drops the part that
   // tells them apart: a wet "Pâté with Beef & Rice" and a dry "Adult
