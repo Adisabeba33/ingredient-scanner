@@ -200,3 +200,19 @@ A catalog-focused pass searched exact 12 lb product/UPC/GTIN combinations and di
 No new current U.S. 12 lb UPC reached the brief's identity standard in this pass. The three unresolved 12 lb packages remain unresolved rather than being assigned the 15 lb UPC shown on multi-size pages or a historical wholesale code.
 
 Running staged total remains **26 / 26 source_verified**. At this point the ordinary web, retailer and indexed distributor/catalog surfaces have been substantially exhausted for the three 12 lb codes. A future attempt should prioritize a photographed current 12 lb back label, a current wholesaler item master with explicit UPC+size columns, or GS1/package data rather than repeating general web searches.
+
+
+## Near-ready UPC leads preserved by user request
+
+The user explicitly chose a lower evidence threshold for **retaining unfinished work for future pickup**, not for promoting it as verified. To keep the strict ledger contract intact, the three current 12 lb packages were saved separately in:
+
+`research/PURINA-CAT-CHOW-UPC-LEADS.json`
+
+That file contains **3 candidate records** with the already-proved manufacturer formula/panel, exact 12 lb package identity and current package-existence sources. Their `upc` and `canonical_gtin14` are deliberately `null` because the missing fact is exactly the barcode binding.
+
+These are intentionally **not** in `research/deep-research-purina-cat-chow.json` or an incoming strict-ledger batch, because `AGENTS.md` §9 requires a zero-padded UPC string there and §10 requires the individual barcode to be proved for `source_verified`. Future work can promote each lead almost mechanically once an exact current UPC witness is found, check digit/collision checks pass, and the strict record fields are restored.
+
+The three preserved leads are:
+- Complete / With Real Chicken — 12 lb
+- Complete / With Real Salmon — 12 lb
+- Indoor / Hairball + Healthy Weight With Chicken — 12 lb
