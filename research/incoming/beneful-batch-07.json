@@ -1,0 +1,492 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "017800152938",
+    "canonical_gtin14": "00017800152938",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Medleys",
+    "product_name": "Beneful Tuscan Style Medley",
+    "variant": "Tuscan Style Medley",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "3 oz case of 8",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5377/beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800153003",
+    "canonical_gtin14": "00017800153003",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Medleys",
+    "product_name": "Beneful Mediterranean Style Medley",
+    "variant": "Mediterranean Style Medley",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "3 oz case of 8",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5377/beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800144476",
+    "canonical_gtin14": "00017800144476",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prepared Meals",
+    "product_name": "Beneful Prepared Meals Dog Food",
+    "variant": "Prepared Meals",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "tub",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5377/beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800126267",
+    "canonical_gtin14": "00017800126267",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Playful Life",
+    "product_name": "Beneful Playful Life Dry Dog Food",
+    "variant": "Beef & Egg",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "size unresolved",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5377/beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800141888",
+    "canonical_gtin14": "00017800141888",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Healthy Fiesta",
+    "product_name": "Beneful Healthy Fiesta Dry Dog Food",
+    "variant": "Healthy Fiesta",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5377/beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800168243",
+    "canonical_gtin14": "00017800168243",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites for Small Dogs Variety Pack",
+    "variant": "Variety Pack",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "27 x 3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800144469",
+    "canonical_gtin14": "00017800144469",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prepared Meals",
+    "product_name": "Beneful Prepared Meals Hearty Roasters Beef",
+    "variant": "Hearty Roasters Beef",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "tub",
+    "size": "8 x 10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800144506",
+    "canonical_gtin14": "00017800144506",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prepared Meals",
+    "product_name": "Beneful Prepared Meals Hearty Roasters Pork",
+    "variant": "Hearty Roasters Pork",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "tub",
+    "size": "8 x 10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800144537",
+    "canonical_gtin14": "00017800144537",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prepared Meals",
+    "product_name": "Beneful Hearty Roasters Savory Turkey",
+    "variant": "Hearty Roasters Savory Turkey",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "tub",
+    "size": "8 x 10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800151047",
+    "canonical_gtin14": "00017800151047",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prepared Meals",
+    "product_name": "Beneful Prepared Meals Stew Variety Pack",
+    "variant": "Stew Variety Pack",
+    "recipe": [],
+    "life_stage": null,
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "tub",
+    "size": "6 x 10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
+    "source_urls": [
+      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
+    "conflicts": [],
+    "verification_notes": [
+      "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
+      "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
+      "No shell available in connector pass; merge only after repository checker exits 0."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
