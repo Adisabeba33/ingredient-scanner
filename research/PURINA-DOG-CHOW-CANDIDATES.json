@@ -1,0 +1,43 @@
+{
+  "brand": "Purina Dog Chow",
+  "purpose": "Parking lot for credible unresolved candidates. These are NOT source_verified records and must not be promoted or seeded without completing the missing evidence described per item.",
+  "updated_at": "2026-09-22",
+  "rules": [
+    "Do not infer adjacent UPCs or sizes.",
+    "Re-check exact UPC against all live ledgers before promotion.",
+    "For formula promotion, use the current exact Purina label deck when available; preserve old deck evidence as historical only when currentness is unresolved.",
+    "PUPPY CHOW-branded packages are outside Purina Dog Chow and must not be promoted here."
+  ],
+  "candidates": [
+    {
+      "upc": "017800104067",
+      "product_line": "Little Bites",
+      "size": "3.5 lb",
+      "evidence_state": "candidate_needs_followup",
+      "missing_or_open": "Strong exact-size retailer candidate; current formula family known, but UPC/size needs a second strong identity witness before promotion.",
+      "source_urls": [
+        "https://shop.pathmark.com/store/pathmark/products/96831544-purina-dog-chow-little-bites-chicken-dry-dog-food-3-5-lb"
+      ]
+    },
+    {
+      "upc": "017800183529",
+      "product_line": "High Protein",
+      "size": "13 oz",
+      "evidence_state": "candidate_needs_followup",
+      "missing_or_open": "Classic Ground Chicken; exact UPC and manufacturer formula deck located, but only older Purina products/files deck path was found. Already staged in batch 02 as needs_physical_label.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A412618_Purina_Dog_Chow_Brand_Dog_Food_High_Protein_With_Real_Chicken.pdf"
+      ]
+    },
+    {
+      "upc": "017800183499",
+      "product_line": "High Protein",
+      "size": "13 oz",
+      "evidence_state": "candidate_needs_followup",
+      "missing_or_open": "Classic Ground Beef; exact UPC and manufacturer formula deck located, but only older Purina products/files deck path was found. Already staged in batch 02 as needs_physical_label.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A412518_Purina_Dog_Chow_Brand_Dog_Food_High_Protein_With_Real_Beef.pdf"
+      ]
+    }
+  ]
+}
