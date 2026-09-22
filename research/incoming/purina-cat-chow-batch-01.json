@@ -1,0 +1,1047 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "017800150149",
+    "canonical_gtin14": "00017800150149",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "size": "3.15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "O450123",
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://www.cub.com/store/cub/products/38621-purina-cat-chow-high-protein-dry-cat-food-complete-3-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800150125",
+    "canonical_gtin14": "00017800150125",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "size": "6.3 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "O450123",
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://www.cub.com/store/cub/products/16410601-purina-cat-chow-high-protein-dry-cat-food-complete-6-3-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800184953",
+    "canonical_gtin14": "00017800184953",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "size": "15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "O450123",
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://www.cub.com/store/cub/products/20037991-purina-cat-chow-high-protein-dry-cat-food-complete-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800184960",
+    "canonical_gtin14": "00017800184960",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "size": "20 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "O450123",
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://www.shoprite.com/sm/planning/rsid/613/product/purina-cat-chow-complete-cat-food-20-lb-id-00017800184960"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800145916",
+    "canonical_gtin14": "00017800145916",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "size": "25 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "O450123",
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://shopwoodmans.com/store/woodmans-food-markets/products/2778983-purina-cat-chow-high-protein-dry-cat-food-complete-25-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800194778",
+    "canonical_gtin14": "00017800194778",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Salmon",
+    "variant": "With Real Salmon",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "all",
+    "size": "3.15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soybean meal, animal fat preserved with mixed-tocopherols, salmon, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3737,
+      "kcal_per_unit": 410,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "B450923",
+    "formula_source": "Current Purina label deck B450923; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4509_b450923_cat_chow_complete_w_salmon_dry_cat_food_c03.pdf",
+      "https://www.cub.com/store/cub/products/29125003-purina-cat-chow-salmon-dry-cat-food-3-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800194808",
+    "canonical_gtin14": "00017800194808",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Salmon",
+    "variant": "With Real Salmon",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "all",
+    "size": "15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soybean meal, animal fat preserved with mixed-tocopherols, salmon, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Red 40, Yellow 5, Blue 2.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3737,
+      "kcal_per_unit": 410,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "B450923",
+    "formula_source": "Current Purina label deck B450923; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4509_b450923_cat_chow_complete_w_salmon_dry_cat_food_c03.pdf",
+      "https://www.cub.com/store/cub/products/28676226-purina-cat-chow-complete-with-real-salmon-dry-cat-food-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800150187",
+    "canonical_gtin14": "00017800150187",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Healthy Weight and Hairball Dry Cat Food With Chicken",
+    "variant": "With Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "size": "3.15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 9.5,
+      "crude_fiber_max_percent": 4.7,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.12,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 250,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Ascorbic Acid (mg/kg)",
+          "basis": "min",
+          "value": 30,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3382,
+      "kcal_per_unit": 359,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "P450025",
+    "formula_source": "Current Purina label deck P450025; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/4500_p450025_cat_chow_indoor_hairball_healthy_weight_dry_cat_food_cb7_2.pdf",
+      "https://www.cub.com/store/cub/products/38632-purina-cat-chow-indoor-dry-cat-food-hairball-healthy-weight-3-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800150163",
+    "canonical_gtin14": "00017800150163",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Healthy Weight and Hairball Dry Cat Food With Chicken",
+    "variant": "With Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "size": "6.3 lb",
+    "ingredients_verbatim": "Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 9.5,
+      "crude_fiber_max_percent": 4.7,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.12,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 250,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Ascorbic Acid (mg/kg)",
+          "basis": "min",
+          "value": 30,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3382,
+      "kcal_per_unit": 359,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "P450025",
+    "formula_source": "Current Purina label deck P450025; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/4500_p450025_cat_chow_indoor_hairball_healthy_weight_dry_cat_food_cb7_2.pdf",
+      "https://www.target.com/p/-/A-14769258"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800184991",
+    "canonical_gtin14": "00017800184991",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Healthy Weight and Hairball Dry Cat Food With Chicken",
+    "variant": "With Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "size": "15 lb",
+    "ingredients_verbatim": "Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 9.5,
+      "crude_fiber_max_percent": 4.7,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.12,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 250,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Ascorbic Acid (mg/kg)",
+          "basis": "min",
+          "value": 30,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3382,
+      "kcal_per_unit": 359,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "P450025",
+    "formula_source": "Current Purina label deck P450025; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/4500_p450025_cat_chow_indoor_hairball_healthy_weight_dry_cat_food_cb7_2.pdf",
+      "https://www.cub.com/store/cub/products/20036671-purina-cat-chow-indoor-dry-cat-food-hairball-healthy-weight-15-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800184984",
+    "canonical_gtin14": "00017800184984",
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Cat Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "cat",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Healthy Weight and Hairball Dry Cat Food With Chicken",
+    "variant": "With Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "size": "20 lb",
+    "ingredients_verbatim": "Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.",
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 9.5,
+      "crude_fiber_max_percent": 4.7,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.12,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 250,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Ascorbic Acid (mg/kg)",
+          "basis": "min",
+          "value": 30,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3382,
+      "kcal_per_unit": 359,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "P450025",
+    "formula_source": "Current Purina label deck P450025; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/4500_p450025_cat_chow_indoor_hairball_healthy_weight_dry_cat_food_cb7_2.pdf",
+      "https://www.target.com/p/-/A-23953562"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "UPC-A check digit verified; exact sellable bag size is bound by the cited retailer/distributor source.",
+    "conflicts": [],
+    "verification_notes": [
+      "UPC-A check digit verified; canonical GTIN-14 is the UPC-A left-padded with two zeros.",
+      "Dry-food calories are printed per cup; no per-bag calorie value was derived and no package-weight arithmetic witness was used.",
+      "Current Purina manufacturer deck supplies ingredients, guaranteed analysis, calories and AAFCO adequacy statement."
+    ],
+    "research_status": "source_verified"
+  }
+]

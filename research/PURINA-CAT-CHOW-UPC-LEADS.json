@@ -1,0 +1,830 @@
+[
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Chicken",
+    "variant": "With Real Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "all",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "12 lb",
+    "upc": null,
+    "canonical_gtin14": null,
+    "label_deck_code": "O450123",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soy flour, animal fat preserved with mixed-tocopherols, chicken, fish meal, liver flavor, calcium carbonate, phosphoric acid, salt, potassium chloride, choline chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], DL-Methionine, Red 40, Yellow 5, Blue 2.",
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3688,
+      "kcal_per_unit": 411,
+      "unit_name": "cup"
+    },
+    "formula_source": "Current Purina label deck O450123; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4501_o450123_cat_chow_complete_dry_cat_food_cb6.pdf",
+      "https://www.purina.com/cats/shop/cat-chow-complete-dry-cat-food",
+      "https://www.doordash.com/products/purina-cat-chow-chicken-complete-high-protein-dry-cat-food-bag-12-lb/urpc_439bef32-f2ca-469e-91d9-1a0942c27a2a"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "research_status": "candidate",
+    "missing_fields": [
+      "upc",
+      "canonical_gtin14"
+    ],
+    "barcode_notes": "12 lb current package is confirmed, but no acceptable exact UPC witness was found. Candidate intentionally stores UPC as null rather than inferring from another size.",
+    "verification_notes": [
+      "Current 12 lb sellable package existence is proved, and the formula is already manufacturer-backed from the same recipe family.",
+      "Do not promote to the strict deep-research ledger until an exact UPC-to-12-lb binding is found and the UPC check digit/collision checks pass.",
+      "Known UPCs shown on multi-size retailer pages for 15 lb packages must not be reused for this 12 lb candidate."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete High Protein Dry Cat Food With Real Salmon",
+    "variant": "With Real Salmon",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "all",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "12 lb",
+    "upc": null,
+    "canonical_gtin14": null,
+    "label_deck_code": "B450923",
+    "ingredients_verbatim": "Chicken by-product meal, ground yellow corn, corn protein meal, whole grain wheat, rice, soybean meal, animal fat preserved with mixed-tocopherols, salmon, liver flavor, fish meal, calcium carbonate, phosphoric acid, salt, choline chloride, potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], Red 40, Yellow 5, Blue 2.",
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 32,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.15,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.25,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Arachidonic Acid",
+          "basis": "min",
+          "value": 0.03,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 70,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3737,
+      "kcal_per_unit": 410,
+      "unit_name": "cup"
+    },
+    "formula_source": "Current Purina label deck B450923; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-08/4509_b450923_cat_chow_complete_w_salmon_dry_cat_food_c03.pdf",
+      "https://www.purina.com/cats/shop/cat-chow-complete-salmon-dry-cat-food",
+      "https://www.instacart.com/products/27821583-purina-cat-chow-complete-high-protein-with-salmon-cat-food-dry-formula-12-lb"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "research_status": "candidate",
+    "missing_fields": [
+      "upc",
+      "canonical_gtin14"
+    ],
+    "barcode_notes": "12 lb current package is confirmed, but no acceptable exact UPC witness was found. Candidate intentionally stores UPC as null rather than inferring from another size.",
+    "verification_notes": [
+      "Current 12 lb sellable package existence is proved, and the formula is already manufacturer-backed from the same recipe family.",
+      "Do not promote to the strict deep-research ledger until an exact UPC-to-12-lb binding is found and the UPC check digit/collision checks pass.",
+      "Known UPCs shown on multi-size retailer pages for 15 lb packages must not be reused for this 12 lb candidate."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Healthy Weight and Hairball Dry Cat Food With Chicken",
+    "variant": "With Chicken",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "12 lb",
+    "upc": null,
+    "canonical_gtin14": null,
+    "label_deck_code": "P450025",
+    "ingredients_verbatim": "Chicken by-product meal, whole grain corn, soy flour, whole grain wheat, corn protein meal, rice, animal fat preserved with mixed tocopherols, chicken, powdered cellulose, soybean hulls, liver flavor, calcium carbonate, phosphoric acid, salt, natural flavor, choline chloride, parsley flakes, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7), menadione sodium bisulfite complex (Vitamin K)], potassium chloride, taurine, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], L-ascorbyl-2-polyphosphate (Vitamin C), Red 40, Blue 2, Yellow 5.",
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 30,
+      "crude_fat_min_percent": 9.5,
+      "crude_fiber_max_percent": 4.7,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": 0.12,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.2,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Selenium (mg/kg)",
+          "basis": "min",
+          "value": 0.3,
+          "unit": "other"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 250,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Ascorbic Acid (mg/kg)",
+          "basis": "min",
+          "value": 30,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3382,
+      "kcal_per_unit": 359,
+      "unit_name": "cup"
+    },
+    "formula_source": "Current Purina label deck P450025; exact-size retail evidence binds UPC to the individual bag.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-10/4500_p450025_cat_chow_indoor_hairball_healthy_weight_dry_cat_food_cb7_2.pdf",
+      "https://www.purina.com/cats/shop/cat-chow-indoor-dry-cat-food"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "research_status": "candidate",
+    "missing_fields": [
+      "upc",
+      "canonical_gtin14"
+    ],
+    "barcode_notes": "12 lb current package is confirmed, but no acceptable exact UPC witness was found. Candidate intentionally stores UPC as null rather than inferring from another size.",
+    "verification_notes": [
+      "Current 12 lb sellable package existence is proved, and the formula is already manufacturer-backed from the same recipe family.",
+      "Do not promote to the strict deep-research ledger until an exact UPC-to-12-lb binding is found and the UPC check digit/collision checks pass.",
+      "Known UPCs shown on multi-size retailer pages for 15 lb packages must not be reused for this 12 lb candidate."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Naturals",
+    "product_name": "Purina Cat Chow Naturals Original Cat Food",
+    "variant": "Original With Chicken & Salmon",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "13 lb / legacy-current-transition lead",
+    "upc": "017800113182",
+    "canonical_gtin14": "00017800113182",
+    "research_status": "candidate",
+    "evidence_level": "low",
+    "barcode_notes": "Valid UPC-A check digit. Indexed UPC/product databases associate this code with Purina Cat Chow Naturals, but current exact-size/current-formula binding was not strong enough for the strict ledger. Preserve as a barcode lead only; do not promote without a current package witness.",
+    "source_urls": [
+      "https://www.upcitemdb.com/upc/17800113182"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_exact_size_binding",
+      "current_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete Cat Food",
+    "variant": "legacy package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "25 lb",
+    "upc": "017800173063",
+    "canonical_gtin14": "00017800173063",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Complete 25 lb. Current campaign already has a different current 25 lb UPC, so this is retained as a legacy/package-generation lead, not a current barcode.",
+    "source_urls": [
+      "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Cat Food",
+    "variant": "legacy package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "25 lb",
+    "upc": "017800173087",
+    "canonical_gtin14": "00017800173087",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Indoor 25 lb. Current manufacturer size ladder does not establish this as a current U.S. package, so retain only as a legacy/package-generation lead.",
+    "source_urls": [
+      "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete Cat Food",
+    "variant": "historical package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "unknown historical size",
+    "upc": "017800150101",
+    "canonical_gtin14": "00017800150101",
+    "research_status": "candidate",
+    "evidence_level": "low",
+    "barcode_notes": "Barcode-family lead adjacent to proved current Complete UPCs. Preserve only for future package-image/item-master matching; no acceptable exact current size binding established in this pass.",
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "exact_product_size_binding",
+      "current_package_witness",
+      "current_generation_confirmation"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Cat Food",
+    "variant": "historical package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "unknown historical size",
+    "upc": "017800150149",
+    "canonical_gtin14": "00017800150149",
+    "research_status": "rejected",
+    "evidence_level": "collision",
+    "barcode_notes": "Do not use as Indoor lead: this UPC is already proved in the strict campaign as Complete With Real Chicken 3.15 lb. Retained only as a collision warning against weak indexed/catalog attribution.",
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": []
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800134163",
+    "canonical_gtin14": "00017800134163",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800134156",
+    "canonical_gtin14": "00017800134156",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Naturals",
+    "product_name": "Purina Cat Chow Naturals",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "13 lb",
+    "upc": "017800148382",
+    "canonical_gtin14": "00017800148382",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Healthy Weight",
+    "product_name": "Purina Cat Chow Healthy Weight",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "3.15 lb",
+    "upc": "017800148412",
+    "canonical_gtin14": "00017800148412",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor With Chicken",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "20 lb",
+    "upc": "017800156042",
+    "canonical_gtin14": "00017800156042",
+    "research_status": "candidate",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Second-source historical retail/catalog search corroborates Cat Chow Indoor With Chicken 20 lb. Treat as a confirmed historical package generation, not current, because current campaign separately proves 20 lb UPC 017800184984.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800156042",
+      "https://www.google.com/search?q=%22017800156042%22"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor With Chicken",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800150170",
+    "canonical_gtin14": "00017800150170",
+    "research_status": "candidate",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Indexed barcode identity consistently resolves to Cat Chow Indoor With Chicken 6.3 lb, but current campaign separately proves 6.3 lb UPC 017800150163. This is a historical package-generation barcode.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800150170",
+      "https://www.google.com/search?q=%22017800150170%22"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Gentle",
+    "product_name": "Purina Cat Chow Gentle Sensitive Stomach + Skin",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800166324",
+    "canonical_gtin14": "00017800166324",
+    "research_status": "candidate",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Indexed identity resolves to Cat Chow Gentle 6.3 lb. Current campaign separately proves 6.3 lb UPC 017800166317, so preserve as an older package-generation barcode.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800166324",
+      "https://www.google.com/search?q=%22017800166324%22"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Formula",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "3.5 lb",
+    "upc": "017800028707",
+    "canonical_gtin14": "00017800028707",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete Formula",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "unknown",
+    "upc": "017800465724",
+    "canonical_gtin14": "00017800465724",
+    "research_status": "candidate",
+    "evidence_level": "low",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Gentle",
+    "product_name": "Purina Cat Chow Gentle",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800170147",
+    "canonical_gtin14": "00017800170147",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Naturals",
+    "product_name": "Purina Cat Chow Naturals Original",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800170185",
+    "canonical_gtin14": "00017800170185",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor With Chicken",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "18.5 lb",
+    "upc": "017800136846",
+    "canonical_gtin14": "00017800136846",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800141338",
+    "canonical_gtin14": "00017800141338",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800141321",
+    "canonical_gtin14": "00017800141321",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor With Chicken",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "15 lb",
+    "upc": "017800136853",
+    "canonical_gtin14": "00017800136853",
+    "research_status": "candidate",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical index/search evidence supports Cat Chow Indoor With Chicken 15 lb. Current campaign proves current 15 lb UPC 017800184991; this code is therefore useful as a prior package-generation mapping.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800136853",
+      "https://www.google.com/search?q=%22017800136853%22"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Naturals",
+    "product_name": "Purina Cat Chow Naturals Grain Free",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800179560",
+    "canonical_gtin14": "00017800179560",
+    "research_status": "candidate",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Search/index evidence supports discontinued Cat Chow Naturals Grain Free 6.3 lb. Formula is not in the current Cat Chow manufacturer lineup observed in this campaign; preserve as historical/discontinued.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow",
+      "https://www.upcitemdb.com/upc/17800179560",
+      "https://www.google.com/search?q=%22017800179560%22"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Healthy Weight",
+    "product_name": "Purina Cat Chow Healthy Weight",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "6.3 lb",
+    "upc": "017800171540",
+    "canonical_gtin14": "00017800171540",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800028691",
+    "canonical_gtin14": "00017800028691",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete",
+    "variant": "historical/indexed barcode lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "16 lb",
+    "upc": "017800104210",
+    "canonical_gtin14": "00017800104210",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-cat-chow"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_formula_binding",
+      "independent_exact_package_witness"
+    ]
+  }
+]
