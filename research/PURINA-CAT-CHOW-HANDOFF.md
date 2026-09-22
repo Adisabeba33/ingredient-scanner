@@ -182,3 +182,21 @@ The unresolved current 12 lb set is therefore now:
 Several search results and retail pages expose internal product IDs, DoorDash URPC UUIDs, Instacart product IDs, Tractor Supply SKUs, or a UPC belonging to a different size selected on a multi-size page. None is sufficient to bind one of these three 12 lb packages to a UPC. In particular, a retailer page may say that a recipe is available in 12 lb while displaying the 15 lb UPC; that is a size ladder, not barcode proof for the 12 lb bag.
 
 No new record was staged from this hunt. Running total remains **26 / 26 source_verified**. This is deliberate: three current package gaps are now explicitly documented rather than filled with inferred or cross-size barcodes.
+
+
+## Distributor/catalog UPC pass
+
+A catalog-focused pass searched exact 12 lb product/UPC/GTIN combinations and distributor-style indexes rather than ordinary product discovery.
+
+### What it proved
+
+- A current/specialty-retailer Cat Chow Complete page exposes UPC `017800184953`, but that UPC is already independently proved as the **15 lb** package. The same page lists 12 lb only as another available size. It is therefore **not** evidence for the 12 lb UPC.
+- A current specialty pet-food catalog similarly exposes `017800184953` for generic Cat Chow and `017800184991` for generic Cat Chow Indoor. Those are the already-proved **15 lb** codes, not 12 lb bindings.
+- A historical wholesale UPC list exposes `017800173063` as **Cat Chow Complete 25 lb** and `017800173087` as **Cat Chow Indoor 25 lb**. These are useful legacy/package-generation leads but do not match the current package evidence already staged and were **not added** to the current ledger.
+- Canadian distributor catalogs were also encountered, but their package weights are metric and their UPC/business-unit evidence is not a valid substitute for the current U.S. 12 lb packages.
+
+### Decision
+
+No new current U.S. 12 lb UPC reached the brief's identity standard in this pass. The three unresolved 12 lb packages remain unresolved rather than being assigned the 15 lb UPC shown on multi-size pages or a historical wholesale code.
+
+Running staged total remains **26 / 26 source_verified**. At this point the ordinary web, retailer and indexed distributor/catalog surfaces have been substantially exhausted for the three 12 lb codes. A future attempt should prioritize a photographed current 12 lb back label, a current wholesaler item master with explicit UPC+size columns, or GS1/package data rather than repeating general web searches.
