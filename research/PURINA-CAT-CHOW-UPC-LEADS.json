@@ -476,15 +476,19 @@
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow",
       "https://www.upcitemdb.com/upc/17800148412",
-      "https://www.google.com/search?q=%22017800148412%22"
+      "https://www.google.com/search?q=%22017800148412%22",
+      "https://www.google.com/search?q=%22Purina+Cat+Chow+Healthy+Weight%22+ingredients"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Healthy Weight",
+    "historical_formula_status": "historical_formula_identified",
+    "historical_formula_notes": "Standalone Healthy Weight is corroborated as a historical Cat Chow formula/package family. It must not be collapsed into current Indoor Healthy Weight + Hairball; contemporaneous complete label panel remains needed."
   },
   {
     "brand": "Purina Cat Chow",
@@ -629,15 +633,19 @@
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow",
       "https://www.upcitemdb.com/upc/17800170147",
-      "https://www.google.com/search?q=%22017800170147%22"
+      "https://www.google.com/search?q=%22017800170147%22",
+      "https://www.google.com/search?q=%22017800170147%22+ingredients"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Gentle",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "Historical UPC is bound to the Gentle recipe family. Current Gentle formula cannot automatically be assigned because package-generation UPC changed; a period-correct deck/image is still required to establish whether ingredients changed."
   },
   {
     "brand": "Purina Cat Chow",
@@ -655,15 +663,19 @@
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow",
       "https://www.upcitemdb.com/upc/17800170185",
-      "https://www.google.com/search?q=%22017800170185%22"
+      "https://www.google.com/search?q=%22017800170185%22",
+      "https://www.google.com/search?q=%22017800170185%22+ingredients"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Naturals Original",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "Historical UPC is bound to Naturals Original recipe family. Do not clone the current H452120 panel without contemporaneous evidence; old package generation may represent a formula revision."
   },
   {
     "brand": "Purina Cat Chow",
@@ -785,15 +797,19 @@
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow",
       "https://www.upcitemdb.com/upc/17800179560",
-      "https://www.google.com/search?q=%22017800179560%22"
+      "https://www.google.com/search?q=%22017800179560%22",
+      "https://www.google.com/search?q=%22Purina+Cat+Chow+Naturals+Grain+Free%22+ingredients"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Naturals Grain Free With Real Chicken",
+    "historical_formula_status": "historical_formula_identified",
+    "historical_formula_notes": "Historical Purina/retail remnants identify the discontinued Naturals Grain Free recipe as a real Cat Chow formula. Exact contemporaneous manufacturer label deck with full printed panel was not recovered in this pass; do not copy a current Naturals formula onto this UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -811,15 +827,19 @@
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow",
       "https://www.upcitemdb.com/upc/17800171540",
-      "https://www.google.com/search?q=%22017800171540%22"
+      "https://www.google.com/search?q=%22017800171540%22",
+      "https://www.google.com/search?q=%22Purina+Cat+Chow+Healthy+Weight%22+%226.3+lb%22"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Healthy Weight",
+    "historical_formula_status": "historical_formula_identified",
+    "historical_formula_notes": "Standalone Healthy Weight 6.3 lb belongs to the historical Healthy Weight family, distinct from today's Indoor naming. Full period-correct manufacturer label deck remains unresolved."
   },
   {
     "brand": "Purina Cat Chow",
