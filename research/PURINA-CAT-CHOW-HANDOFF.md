@@ -161,3 +161,24 @@ A further current-shelf search was run specifically against the two unresolved m
 - No separate `Hairball` recipe was created: current manufacturer evidence continues to present hairball control as a benefit of the Indoor recipe rather than a separately proved current Cat Chow product identity.
 
 This pass strengthens the conclusion that the remaining work is now narrow UPC identity work rather than missing formula work. The two 12 lb packages remain explicit unresolved leads, not guessed records.
+
+
+## Deep UPC hunt — 12 lb variants
+
+A second, narrower barcode hunt was run after the exhaustion pass, using exact product names, Purina prefix fragments, UPC/GTIN wording, retailer catalog pages and distributor-style listings.
+
+### New size lead discovered
+
+The current Purina manufacturer page for **Complete With Real Chicken** also lists a **12 lb** bag. Earlier batches proved 18 oz, 3.15 lb, 6.3 lb, 15 lb, 20 lb and 25 lb, but did not include this current 12 lb size. Current retailer pages also prove that the 12 lb Chicken package exists. As with the two previously unresolved 12 lb packages, this pass did not find an acceptable exact UPC binding, so **no barcode was guessed**.
+
+The unresolved current 12 lb set is therefore now:
+
+1. Complete / With Real Chicken — 12 lb — package existence proved, UPC unresolved.
+2. Complete / With Real Salmon — 12 lb — package existence proved, UPC unresolved.
+3. Indoor / Hairball + Healthy Weight With Chicken — 12 lb — package existence proved, UPC unresolved.
+
+### Evidence-quality finding
+
+Several search results and retail pages expose internal product IDs, DoorDash URPC UUIDs, Instacart product IDs, Tractor Supply SKUs, or a UPC belonging to a different size selected on a multi-size page. None is sufficient to bind one of these three 12 lb packages to a UPC. In particular, a retailer page may say that a recipe is available in 12 lb while displaying the 15 lb UPC; that is a size ladder, not barcode proof for the 12 lb bag.
+
+No new record was staged from this hunt. Running total remains **26 / 26 source_verified**. This is deliberate: three current package gaps are now explicitly documented rather than filled with inferred or cross-size barcodes.
