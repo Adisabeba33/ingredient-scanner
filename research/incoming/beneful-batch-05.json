@@ -1,0 +1,517 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "017800103367",
+    "canonical_gtin14": "00017800103367",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Classics",
+    "product_name": "Beneful Freshly Prepared Classics Chicken Dinner with Carrots & Peas",
+    "variant": "Chicken Dinner with Carrots & Peas",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891803"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Current listing exposes full ingredient panel and guaranteed analysis; staged for shell validation.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103404",
+    "canonical_gtin14": "00017800103404",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Classics",
+    "product_name": "Beneful Freshly Prepared Classics Turkey Dinner with Sweet Potatoes & Green Beans",
+    "variant": "Turkey Dinner with Sweet Potatoes & Green Beans",
+    "recipe": [
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891792"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Current listing exposes full ingredient panel and guaranteed analysis; staged for shell validation.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103756",
+    "canonical_gtin14": "00017800103756",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Classics",
+    "product_name": "Beneful Freshly Prepared Classics with Salmon, Green Beans & Spinach",
+    "variant": "Salmon, Green Beans & Spinach",
+    "recipe": [
+      "salmon"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891799"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103770",
+    "canonical_gtin14": "00017800103770",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Classics",
+    "product_name": "Beneful Freshly Prepared Classics with Lamb, Chopped Kale & Carrots",
+    "variant": "Lamb, Chopped Kale & Carrots",
+    "recipe": [
+      "lamb"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891797"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103794",
+    "canonical_gtin14": "00017800103794",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Classics",
+    "product_name": "Beneful Freshly Prepared Classics Turkey, Lamb & Chicken Variety Pack",
+    "variant": "Turkey, Lamb & Chicken Variety Pack",
+    "recipe": [
+      "turkey",
+      "lamb",
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "pate",
+    "presentation": "plain",
+    "package_type": "carton",
+    "size": "6 x 9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891784"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103428",
+    "canonical_gtin14": "00017800103428",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Stews",
+    "product_name": "Beneful Freshly Prepared Stews Chicken Dinner with Carrots & Rice",
+    "variant": "Chicken Dinner with Carrots & Rice",
+    "recipe": [
+      "chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "stew",
+    "presentation": "in_gravy",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891788"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Current listing exposes full ingredient panel and guaranteed analysis; staged for shell validation.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103732",
+    "canonical_gtin14": "00017800103732",
+    "barcode_scope": "individual_unit",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Stews",
+    "product_name": "Beneful Freshly Prepared Stews Turkey Dinner with Spinach & Ditalini Pasta",
+    "variant": "Turkey Dinner with Spinach & Ditalini Pasta",
+    "recipe": [
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "stew",
+    "presentation": "in_gravy",
+    "package_type": "carton",
+    "size": "9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891793"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current UPC and unit size confirmed.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Current listing exposes full ingredient panel and guaranteed analysis; staged for shell validation.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800103800",
+    "canonical_gtin14": "00017800103800",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Freshly Prepared Stews",
+    "product_name": "Beneful Freshly Prepared Stews Chicken & Turkey Variety Pack",
+    "variant": "Chicken & Turkey Variety Pack",
+    "recipe": [
+      "chicken",
+      "turkey"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "stew",
+    "presentation": "in_gravy",
+    "package_type": "carton",
+    "size": "6 x 9.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "carton"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-94891795"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800159470",
+    "canonical_gtin14": "00017800159470",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "IncrediBites",
+    "product_name": "Beneful IncrediBites Small Breed Wet Dog Food with Real Beef, Tomatoes, Carrots & Wild Rice",
+    "variant": "Beef, Tomatoes, Carrots & Wild Rice",
+    "recipe": [
+      "beef"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "3 x 3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-80274267"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800190831",
+    "canonical_gtin14": "00017800190831",
+    "barcode_scope": "multipack",
+    "brand": "Beneful",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Kitchen Creations",
+    "product_name": "Beneful Kitchen Creations Beef, Chicken & Lamb Variety Pack",
+    "variant": "Beef, Chicken & Lamb Variety Pack",
+    "recipe": [
+      "beef",
+      "chicken",
+      "lamb"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "chunks",
+    "presentation": "in_sauce",
+    "package_type": "can",
+    "size": "30 x 3 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": "can"
+    },
+    "label_deck_code": null,
+    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "source_urls": [
+      "https://www.target.com/p/-/A-80893964"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
+    "conflicts": [],
+    "verification_notes": [
+      "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
+      "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
+      "No shell available in connector pass; do not merge until repository checks succeed."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
