@@ -10,16 +10,6 @@
   ],
   "candidates": [
     {
-      "upc": "017800104067",
-      "product_line": "Little Bites",
-      "size": "3.5 lb",
-      "evidence_state": "candidate_needs_followup",
-      "missing_or_open": "Strong exact-size retailer candidate; current formula family known, but UPC/size needs a second strong identity witness before promotion.",
-      "source_urls": [
-        "https://shop.pathmark.com/store/pathmark/products/96831544-purina-dog-chow-little-bites-chicken-dry-dog-food-3-5-lb"
-      ]
-    },
-    {
       "upc": "017800183529",
       "product_line": "High Protein",
       "size": "13 oz",
@@ -37,6 +27,36 @@
       "missing_or_open": "Classic Ground Beef; exact UPC and manufacturer formula deck located, but only older Purina products/files deck path was found. Already staged in batch 02 as needs_physical_label.",
       "source_urls": [
         "https://www.purina.com/sites/default/files/products/files/A412518_Purina_Dog_Chow_Brand_Dog_Food_High_Protein_With_Real_Beef.pdf"
+      ]
+    },
+    {
+      "upc": "017800153317",
+      "product_line": "Healthy Weight",
+      "size": "4 lb",
+      "evidence_state": "candidate_needs_followup",
+      "missing_or_open": "Exact UPC/product/size is supported by a retailer inventory source, but no current exact Purina Healthy Weight label deck was located in this pass. Do not promote until current formula evidence is found or a physical label is captured.",
+      "source_urls": [
+        "https://brickseek.com/walmart-inventory-checker?sku=28985817"
+      ]
+    },
+    {
+      "upc": "654163977954",
+      "product_line": "Healthy Weight",
+      "size": "32 lb",
+      "evidence_state": "candidate_low_confidence",
+      "missing_or_open": "Historical marketplace/barcode-index listing calls this a 32 lb Healthy Weight bag, but the UPC is outside the proven Purina 017800 prefix and may represent a reseller/bundle identifier. Preserve only as a lead; do not file as an individual Purina package without physical-package proof.",
+      "source_urls": [
+        "https://barcodeindex.com/upc/654163977954/"
+      ]
+    }
+  ],
+  "boundary_findings": [
+    {
+      "topic": "Puppy range",
+      "finding": "Current Purina site treats Dog Chow and Puppy Chow as separate brands and current puppy shopping surfaces found in this pass are Puppy Chow-branded, not a proven DOG CHOW / Puppy-range package. The seeded Dog Chow Puppy range therefore remains unproven and should not receive records without a front-of-pack DOG CHOW witness.",
+      "source_urls": [
+        "https://www.purina.com/brands",
+        "https://www.purina.com/dog-chow/100-years"
       ]
     }
   ]
