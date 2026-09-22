@@ -338,5 +338,41 @@
       "current_generation_confirmation",
       "current_package_witness"
     ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete Cat Food",
+    "variant": "historical package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "unknown historical size",
+    "upc": "017800150101",
+    "canonical_gtin14": "00017800150101",
+    "research_status": "candidate",
+    "evidence_level": "low",
+    "barcode_notes": "Barcode-family lead adjacent to proved current Complete UPCs. Preserve only for future package-image/item-master matching; no acceptable exact current size binding established in this pass.",
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "exact_product_size_binding",
+      "current_package_witness",
+      "current_generation_confirmation"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Cat Food",
+    "variant": "historical package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "unknown historical size",
+    "upc": "017800150149",
+    "canonical_gtin14": "00017800150149",
+    "research_status": "rejected",
+    "evidence_level": "collision",
+    "barcode_notes": "Do not use as Indoor lead: this UPC is already proved in the strict campaign as Complete With Real Chicken 3.15 lb. Retained only as a collision warning against weak indexed/catalog attribution.",
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": []
   }
 ]
