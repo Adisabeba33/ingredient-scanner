@@ -111,3 +111,38 @@ All batch-2 rows are dry food and therefore again carry no invented per-bag calo
 ### Boundary observations after batch 2
 
 No sibling Purina brand was added. Kitten Chow remains excluded. The Cat Chow shelf now has proved records in four of the five named catalog ranges encountered in this campaign: Complete, Indoor, Naturals and Gentle. `Hairball` has not yet been treated as a separate product range because current Cat Chow Indoor and Naturals Indoor packaging uses hairball-control wording inside those products; a future pass should only create a distinct Hairball-range record if a current package actually prints a distinct product/range identity rather than merely a benefit claim.
+
+
+## Batch 3 status
+
+- Delivery path: `research/incoming/purina-cat-chow-batch-03.json`
+- Records staged this batch: **4**
+- Running staged total: **26**
+- Running `source_verified`: **26 / 26**
+- New current recipe: **Healthy Aging 7+ Senior With Chicken**
+- New package formats/sizes proved for already-covered recipes: Complete 18 oz and Indoor 18 oz
+- Running GS1 prefix result: **017800 on 26 / 26 proved packages**
+- Checker exit code remains **not run — shell unavailable**; §3a delivery mode remains in force.
+- No production seed files were touched.
+
+### Batch 3 additions
+
+**Complete / With Real Chicken**
+- 18 oz — `017800450072`
+
+**Indoor / Hairball + Healthy Weight With Chicken**
+- 18 oz — `017800028677`
+
+**Healthy Aging 7+ / With Chicken**
+- 3.15 lb — `017800190084`
+- 14 lb — `017800190237`
+
+The Healthy Aging package itself is currently branded **CAT CHOW**, so it belongs to this campaign despite the original inventory's five named empty ranges not listing a Senior/Healthy Aging range. The current Purina brand site also presents a Senior Cat Chow product. This is a range recommendation for the later seeding pass; no production range file was changed.
+
+### Healthy Aging manufacturer-source discrepancy
+
+Purina's current product page links manufacturer deck `C450823`. The deck prints **3602 kcal/kg / 382 kcal/cup**; the current HTML product page displays **3586 kcal/kg / 393 kcal/cup**. Ingredient order and the adult-maintenance AAFCO identity agree. The staged records preserve the values printed in the downloadable label deck and explicitly record the calorie discrepancy in `conflicts`; they remain `source_verified` because the brand brief makes the exact manufacturer deck sufficient evidence and only an ingredient-order disagreement is an automatic physical-label gate.
+
+### Remaining leads after batch 3
+
+Purina currently advertises 12 lb bags for Indoor and Complete Salmon, but an acceptable exact UPC-to-size witness still has not been proved, so neither was guessed. Older Cat Chow UPC databases expose numerous discontinued/legacy packages (Healthy Weight, older Indoor/Complete sizes, old Naturals codes); these were not padded into the current campaign without current package/formula evidence.
