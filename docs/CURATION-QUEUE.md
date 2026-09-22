@@ -73,6 +73,24 @@ barcode question, and on that question those three sites add nothing.
 
 **Write both briefs up front.** A brand is not seeded until B is done.
 
+### When A and B are one campaign
+
+The split is forced by the SOURCE, not by the work. Where the maker publishes
+a readable label deck, that one document carries the ingredient statement, the
+guaranteed analysis, the calories and the adequacy statement — so campaign B
+is a PDF read per product rather than a hunt across shops, and it rides along
+with A.
+
+That is the case for Purina and Hill's, the only two makers here that publish
+decks, and it is why `research/BRIEF-PURINA-CAT-CHOW.md` is one file covering
+both. Check before you write two briefs: if `data/known-formulas.ts` holds
+`label_deck_code` values for a maker, its decks are readable and the brand is
+a one-pass job.
+
+It is also the whole reason Iams cost three passes. Its maker renders every
+panel as an image, so the formula had to be assembled from shops, and then the
+shops disagreed.
+
 ### And a campaign C that should not have been needed
 
 Iams needed a third pass, because campaign B stopped one page short of the
@@ -106,8 +124,8 @@ once buys the siblings behind it.
 
 | # | Brand | Species | Maker | Status | Why here |
 |---|-------|---------|-------|--------|----------|
-| 1 | **Iams** | both | Mars | **RESEARCHING** — 133 records merged, checker green, 114 with a full panel; awaiting a second witness: `research/BRIEF-IAMS-CORROBORATION.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
-| 2 | **Purina Cat Chow** | cat | Nestlé Purina | QUEUED | The value bag in every supermarket. Purina is the most-travelled maker in this repo — three GS1 prefixes proven, vitamin constants already written. |
+| 1 | **Iams** | both | Mars | **SEEDED** — batch 037: 121 barcodes, 98 compositions. 15 contested panels held back in `research/IAMS-CONTESTED-PANELS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
+| 2 | **Purina Cat Chow** | cat | Nestlé Purina | **BRIEFED** — `research/BRIEF-PURINA-CAT-CHOW.md` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | QUEUED | Same shelf, dogs. Runs straight after #2 on the same prefixes and the same size-ladder rules. |
 | 4 | **Beneful** | dog | Nestlé Purina | QUEUED | Tier-1 #10. Purina's mass dog shelf; Prepared Meals is wet and the rest is bags. |
 | 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
