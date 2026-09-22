@@ -292,11 +292,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Naturals",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -316,11 +319,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Complete",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -340,11 +346,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -402,11 +411,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -428,11 +440,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Complete",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -454,11 +469,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Naturals",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -510,11 +528,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor With Chicken",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -536,11 +557,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor With Chicken",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -562,11 +586,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Gentle",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -588,11 +615,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -697,11 +727,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor With Chicken",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -723,11 +756,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -749,11 +785,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Complete",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -775,11 +814,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor With Chicken",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -861,11 +903,14 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Indoor",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   },
   {
     "brand": "Purina Cat Chow",
@@ -887,10 +932,13 @@
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "historical_formula_label_deck_or_physical_label"
+      "contemporaneous_complete_label_panel"
     ],
     "verification_notes": [
       "Second-pass historical identity corroboration completed 2026-09-22; retained outside strict current ledger."
-    ]
+    ],
+    "historical_formula": "Purina Cat Chow Complete",
+    "historical_formula_status": "historical_formula_family_bound",
+    "historical_formula_notes": "UPC identity and historical product family are sufficiently corroborated to preserve the formula-family relationship. Exact period-correct ingredient order, guaranteed analysis, calories, and label-deck revision remain unproved; do not clone a current panel onto this historical UPC."
   }
 ]
