@@ -225,8 +225,8 @@ Every object in `records` must follow this contract:
   "recipe": ["string"],
   "life_stage": "adult | senior | kitten | puppy | all | null",
   "food_form": "wet | dry | treat | supplement | unknown",
-  "texture": "repository vocabulary value or null",
-  "presentation": "repository vocabulary value or null",
+  "texture": "one of the values below, or null",
+  "presentation": "one of the values below, or null",
   "package_type": "can | pouch | tub | tray | bag | box | other",
   "size": "printed package size",
   "ingredients_verbatim": "complete label text in printed order",
@@ -262,6 +262,45 @@ Every object in `records` must follow this contract:
   "research_status": "candidate | source_verified | needs_physical_label | rejected | promoted_to_seed"
 }
 ```
+
+### The two controlled vocabularies, written out
+
+These are the complete sets. `lib/presentation.ts` is the source of truth and
+may have grown since; read it if you can. But **these are not fields where you
+invent a near-synonym**, and an agent working without a shell has repeatedly
+had no way to check, so they are written here.
+
+```
+texture       pate loaf mousse minced ground chopped_ground flaked shredded
+              morsels chunks cuts choice_cuts slices filets bits stew medley
+              kibble biscuit freeze_dried air_dried steam_dried dehydrated
+              fresh raw unknown
+
+presentation  in_gravy extra_gravy in_sauce in_broth in_jelly in_water
+              gravy_center gravy_halo plain unknown
+```
+
+**They answer two different questions and the difference is the point.**
+Texture is what the meat has been CUT or SHAPED into. Presentation is what it
+is SUSPENDED IN. "Flaked Salmon in Gravy" is `flaked` + `in_gravy`. Answering
+"gravy" to *what texture is it?* is the exact mistake that module exists to
+prevent.
+
+**The failure this keeps producing, twice in two campaigns:** writing the
+plain English word where the vocabulary has a prefixed term — `"gravy"` for
+`in_gravy`, `"cuts_in_gravy"` for `cuts` + `in_gravy`. Both were caught only
+by a later shell pass, because the campaigns that made them had web access and
+no way to run the checker. Neither is a judgement call; both are a lookup
+against the lists above.
+
+Use `null` when the pack gives you nothing to answer with, and `unknown` when
+you looked and the answer is genuinely not determinable. A dry food is
+normally `kibble` + `plain`.
+
+If a product truly needs a value that is not here, **do not add one** — say so
+in `conflicts` and in the handoff. `docs/SEEDING-A-BATCH.md` §3 sets the test
+for when the vocabulary is extended (does the new value predict something
+different?) and records three refusals alongside the extensions.
 
 Use JSON `null` for a permitted missing value, never the string `"null"`. Do not add speculative values to make a record look complete.
 

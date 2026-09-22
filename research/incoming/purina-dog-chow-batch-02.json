@@ -340,7 +340,7 @@
     "life_stage": "adult",
     "food_form": "wet",
     "texture": "chunks",
-    "presentation": "gravy",
+    "presentation": "in_gravy",
     "package_type": "can",
     "size": "13 oz",
     "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
@@ -369,7 +369,8 @@
     "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
     "conflicts": [],
     "verification_notes": [
-      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+      "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
     ],
     "research_status": "source_verified"
   },
@@ -390,7 +391,7 @@
     "life_stage": "adult",
     "food_form": "wet",
     "texture": "chunks",
-    "presentation": "gravy",
+    "presentation": "in_gravy",
     "package_type": "can",
     "size": "13 oz",
     "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Beef, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
@@ -419,7 +420,8 @@
     "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
     "conflicts": [],
     "verification_notes": [
-      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+      "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
     ],
     "research_status": "source_verified"
   },
@@ -440,7 +442,7 @@
     "life_stage": "adult",
     "food_form": "wet",
     "texture": "chunks",
-    "presentation": "gravy",
+    "presentation": "in_gravy",
     "package_type": "can",
     "size": "13 oz",
     "ingredients_verbatim": "Water, Chicken, Meat By-Products, Wheat Gluten, Lamb, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
@@ -469,7 +471,8 @@
     "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
     "conflicts": [],
     "verification_notes": [
-      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+      "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
     ],
     "research_status": "source_verified"
   },
@@ -490,7 +493,7 @@
     "life_stage": "adult",
     "food_form": "wet",
     "texture": "chunks",
-    "presentation": "gravy",
+    "presentation": "in_gravy",
     "package_type": "can",
     "size": "13 oz",
     "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Corn Starch-Modified, Turkey, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
@@ -519,7 +522,8 @@
     "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
     "conflicts": [],
     "verification_notes": [
-      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+      "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
     ],
     "research_status": "source_verified"
   },
