@@ -146,3 +146,18 @@ Purina's current product page links manufacturer deck `C450823`. The deck prints
 ### Remaining leads after batch 3
 
 Purina currently advertises 12 lb bags for Indoor and Complete Salmon, but an acceptable exact UPC-to-size witness still has not been proved, so neither was guessed. Older Cat Chow UPC databases expose numerous discontinued/legacy packages (Healthy Weight, older Indoor/Complete sizes, old Naturals codes); these were not padded into the current campaign without current package/formula evidence.
+
+
+## Exhaustion pass after batch 3
+
+A further current-shelf search was run specifically against the two unresolved manufacturer-listed 12 lb packages and against additional current Cat Chow recipes.
+
+- Purina's current **Complete With Real Salmon** page still lists **3.15 lb, 12 lb and 15 lb**.
+- Purina's current **Indoor Healthy Weight + Hairball With Chicken** page still lists **3.15 lb, 6.3 lb, 12 lb, 15 lb and 20 lb**.
+- Current retail pages independently prove that both 12 lb sellable products exist.
+- However, the accessible current sources found in this pass still do **not expose an acceptable UPC-to-12-lb binding** for either product. Instacart/Grocery Outlet product IDs are retailer/catalog IDs, not UPCs, and were deliberately not promoted to barcode evidence.
+- Therefore **zero records were added in this exhaustion pass**. The running staged result remains **26 / 26 source_verified**.
+- No legacy UPC was substituted for either current 12 lb package.
+- No separate `Hairball` recipe was created: current manufacturer evidence continues to present hairball control as a benefit of the Indoor recipe rather than a separately proved current Cat Chow product identity.
+
+This pass strengthens the conclusion that the remaining work is now narrow UPC identity work rather than missing formula work. The two 12 lb packages remain explicit unresolved leads, not guessed records.
