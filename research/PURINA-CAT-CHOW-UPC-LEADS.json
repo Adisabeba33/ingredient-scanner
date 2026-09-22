@@ -273,5 +273,70 @@
       "Do not promote to the strict deep-research ledger until an exact UPC-to-12-lb binding is found and the UPC check digit/collision checks pass.",
       "Known UPCs shown on multi-size retailer pages for 15 lb packages must not be reused for this 12 lb candidate."
     ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Naturals",
+    "product_name": "Purina Cat Chow Naturals Original Cat Food",
+    "variant": "Original With Chicken & Salmon",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "13 lb / legacy-current-transition lead",
+    "upc": "017800113182",
+    "canonical_gtin14": "00017800113182",
+    "research_status": "candidate",
+    "evidence_level": "low",
+    "barcode_notes": "Valid UPC-A check digit. Indexed UPC/product databases associate this code with Purina Cat Chow Naturals, but current exact-size/current-formula binding was not strong enough for the strict ledger. Preserve as a barcode lead only; do not promote without a current package witness.",
+    "source_urls": [
+      "https://www.upcitemdb.com/upc/17800113182"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_exact_size_binding",
+      "current_package_witness"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Complete",
+    "product_name": "Purina Cat Chow Complete Cat Food",
+    "variant": "legacy package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "25 lb",
+    "upc": "017800173063",
+    "canonical_gtin14": "00017800173063",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Complete 25 lb. Current campaign already has a different current 25 lb UPC, so this is retained as a legacy/package-generation lead, not a current barcode.",
+    "source_urls": [
+      "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation"
+    ]
+  },
+  {
+    "brand": "Purina Cat Chow",
+    "product_line": "Indoor",
+    "product_name": "Purina Cat Chow Indoor Cat Food",
+    "variant": "legacy package lead",
+    "food_form": "dry",
+    "package_type": "bag",
+    "size": "25 lb",
+    "upc": "017800173087",
+    "canonical_gtin14": "00017800173087",
+    "research_status": "candidate",
+    "evidence_level": "legacy",
+    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Indoor 25 lb. Current manufacturer size ladder does not establish this as a current U.S. package, so retain only as a legacy/package-generation lead.",
+    "source_urls": [
+      "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
+    ],
+    "source_accessed_at": "2026-09-22",
+    "missing_fields": [
+      "current_generation_confirmation",
+      "current_package_witness"
+    ]
   }
 ]
