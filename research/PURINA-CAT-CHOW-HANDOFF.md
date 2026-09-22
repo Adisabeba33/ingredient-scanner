@@ -71,3 +71,43 @@ node scripts/check-ledger.mjs research/deep-research-purina-cat-chow.json
 ```
 
 Do not commit the merged ledger unless the checker exits 0. No production seed files were touched.
+
+
+## Batch 2 status
+
+- Delivery path: `research/incoming/purina-cat-chow-batch-02.json`
+- Records staged this batch: **11**
+- Running staged total: **22**
+- Running `source_verified`: **22 / 22**
+- New ranges touched: **Naturals, Gentle**
+- Additional exact formulas/decks/documents: **3** — Naturals Original `H452120`, Naturals Indoor `E450524`, Gentle `G450423`
+- Running GS1 prefix result: **017800 on 22 / 22 proved packages**
+- Checker exit code remains **not run — shell unavailable**; §3a delivery mode remains in force.
+- No production seed files were touched.
+
+### Batch 2 size ladders
+
+**Naturals / Original With Chicken & Salmon**
+- 3.15 lb — `017800113229`
+- 6.3 lb — `017800113205`
+- 13 lb — `017800145008`
+- 18 lb — `017800162579`
+
+**Naturals / Indoor With Chicken & Turkey**
+- 3.15 lb — `017800171564`
+- 6.3 lb — `017800171595`
+- 13 lb — `017800171625`
+- 18 lb — `017800171632`
+
+**Gentle / Sensitive Stomach + Skin With Turkey**
+- 3.15 lb — `017800166294`
+- 6.3 lb — `017800166317`
+- 13 lb — `017800166331`
+
+For Naturals Original, Purina manufacturer document `H452120` supplies the complete panel and AAFCO all-life-stages statement. For Naturals Indoor, the current Purina page plus its downloadable/current formula identity `E450524` supplies the panel and 3481 kcal/kg / 371 kcal/cup; exact package UPCs are independently bound to sizes. Gentle uses the current Purina label-deck PDF `G450423`, which prints the full ingredient panel, guaranteed analysis, adult-maintenance feeding-test statement, and 3603 kcal/kg / 402 kcal/cup.
+
+All batch-2 rows are dry food and therefore again carry no invented per-bag calorie figure and no package-weight arithmetic witness.
+
+### Boundary observations after batch 2
+
+No sibling Purina brand was added. Kitten Chow remains excluded. The Cat Chow shelf now has proved records in four of the five named catalog ranges encountered in this campaign: Complete, Indoor, Naturals and Gentle. `Hairball` has not yet been treated as a separate product range because current Cat Chow Indoor and Naturals Indoor packaging uses hairball-control wording inside those products; a future pass should only create a distinct Hairball-range record if a current package actually prints a distinct product/range identity rather than merely a benefit claim.
