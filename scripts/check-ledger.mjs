@@ -179,7 +179,27 @@ for (const r of records) {
   // ── Identity and barcode ────────────────────────────────────────────
   if (typeof r.upc !== "string") err(upc, "upc must be a quoted STRING, never a number");
   if (!upc || !validGtin(upc)) {
-    err(upc, `not a valid barcode — ${upc ? "check digit or length" : "missing"}`);
+    // A `rejected` record holding an invalid code is not a defect — it is the
+    // status doing its job. AGENTS.md §10 names "invalid code" as a reason to
+    // reject, and §12 requires this checker to exit 0 before a batch is
+    // finished. Read together with an unconditional error here, those two
+    // rules cannot both be satisfied: the only ways to green are deleting the
+    // evidence, which guarantees the next agent rediscovers the same code and
+    // spends the same day on it, or inventing a check digit, which §7 forbids
+    // outright.
+    //
+    // The Iams campaign met this with six codes normalised out of 13-digit
+    // retailer strings. It rejected all six and said so rather than patching
+    // them, which is exactly right, and the ledger still could not go green.
+    //
+    // So a rejected record's bad barcode is reported as a question, not a
+    // blocker. Every other rule below still applies to it, and a bad code on
+    // any OTHER status is an error as before.
+    if (r.research_status === "rejected") {
+      warn(upc, "rejected, and the barcode is invalid — which is presumably why. Say in verification_notes what the source actually printed, so the next agent does not re-derive it.");
+    } else {
+      err(upc, `not a valid barcode — ${upc ? "check digit or length" : "missing"}`);
+    }
   } else {
     if (r.canonical_gtin14 !== upc.padStart(14, "0")) {
       err(upc, `canonical_gtin14 should be "${upc.padStart(14, "0")}"`);

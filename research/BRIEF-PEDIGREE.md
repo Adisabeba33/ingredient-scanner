@@ -190,16 +190,32 @@ the handoff with the pack it should point at.
 
 ## 7. Where the evidence will and will not come from
 
-Worth knowing before you start hunting: **Petco does not stock Pedigree.** Petco
-removed every food with artificial colours, flavours or preservatives in 2019
-and Pedigree was named in the coverage, for sodium tripolyphosphate. So there is
-no Petco listing to find, and its absence is not evidence the product does not
-exist.
+**This section used to say "Petco does not stock Pedigree" and send you
+elsewhere. It was wrong, and it is corrected here rather than quietly deleted,
+because the mistake is the instructive part.**
 
-Where Pedigree actually sells: Walmart, Target, Tractor Supply, Dollar General,
-Sam's Club, grocery, Amazon, Chewy, PetSmart. Evidence priority in
-`AGENTS.md` §6 is unchanged — manufacturer deck first, retailer listing second,
-UPC database never on its own.
+`research/PETCO-BRANDS.md` walked Petco's own food facets on 2026-09-21 and
+found **27 Pedigree dog foods — 9 dry and 18 wet** — with a live brand page at
+`petco.com/brand/pedigree`. The old text reasoned from the 2019 removal of
+foods with artificial colours, flavours and preservatives, in whose coverage
+Pedigree was named. Whatever that removal did, it did not leave Pedigree off
+the shelf in 2026.
+
+So Petco is a source for this brand, not a dead end.
+
+The lesson is bigger than one retailer. A brief that tells an agent a source
+is empty is stronger than a brief that says nothing, because the agent will
+not look — and if the claim is stale, nothing in the campaign can discover it.
+The Iams campaign lost most of its formula coverage to the same shape of
+error: it never opened Chewy, Petco or PetSmart, and came back with 13
+compositions out of 133 records. **Treat a "do not bother looking there" in
+any brief as a claim with an expiry date, and say so in your handoff if you
+find one that has passed.**
+
+Where Pedigree sells: Walmart, Target, Tractor Supply, Dollar General,
+Sam's Club, grocery, Amazon, Chewy, PetSmart **and Petco**. Evidence priority
+in `AGENTS.md` §6 is unchanged — manufacturer deck first, retailer listing
+second, UPC database never on its own.
 
 ---
 

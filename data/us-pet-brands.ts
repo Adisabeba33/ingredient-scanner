@@ -359,12 +359,30 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Iams",
     owner: "Mars",
     species: "both",
+    // Six of these were shelf memory. The research campaign read 121 current
+    // US packs and corrected two of them.
+    //
+    // "Minichunks" is gone: it is a KIBBLE SIZE inside ProActive Health, not a
+    // range — the bag reads "IAMS ProActive Health Adult MiniChunks", and the
+    // maker's own page presents it beneath ProActive Health. It lived here for
+    // the same reason a range usually does, because somebody saw it printed
+    // large. Left in, it would have taken the products that belong to
+    // ProActive Health and filed them under a heading no shelf has.
+    //
+    // "Healthy Enjoyment" is new, and is the opposite error: a real current
+    // range on the manufacturer's site that this list had never heard of. Its
+    // products had nowhere to go but "Other".
+    //
+    // "Healthy Naturals" and "Grain Free Naturals" are kept although the
+    // campaign met neither. Absence from one campaign's 121 packs is not
+    // evidence a range is gone, and an unused range costs a row that shows
+    // zero products; a missing one costs a whole shelf off the coverage page.
     lines: [
       "ProActive Health",
-      "Minichunks",
-      "Healthy Naturals",
-      "Perfect Portions",
       "Advanced Health",
+      "Perfect Portions",
+      "Healthy Enjoyment",
+      "Healthy Naturals",
       "Grain Free Naturals",
     ],
   },

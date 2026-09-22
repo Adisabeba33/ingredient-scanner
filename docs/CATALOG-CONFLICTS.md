@@ -1793,3 +1793,113 @@ Thirteen barcodes in three shapes. Ten are a maker disagreeing with itself insid
 - **064992716158** — The current ORIJEN SKU page's rendered ingredient paragraph truncates after 'pyridox'; Pet Food Express prints the complete matching deck through calcium carbonate. ORIJEN remains the exact-SKU source for size, guarantee, calories, and adequacy.
 - **064992716219** — The manufacturer page prints 1101 kcal/kg and 367 kcal per 12.8 oz (363 g) can; those bases do not arithmetically agree (1101 kcal/kg implies about 400 kcal/can). Both are retained as printed.
 
+
+## Batch 037 — Iams
+
+Fifty-two of 113 stored Iams compositions carry a conflict note. That is a far
+higher proportion than any previous batch — Pedigree's was 20, Orijen's 13 —
+and it is the finding rather than a defect in the research.
+
+The reason is where the panels came from. **iams.com renders every ingredient
+and guaranteed-analysis panel as an image**, so there is no manufacturer text
+to copy and no single authority to settle a disagreement against. Every one of
+these lists was read off a shop, and when a second shop was opened to
+corroborate it, the two shops turned out to disagree fourteen times — not in
+wording, but in the order of the ingredients, which on an American label is the
+data itself.
+
+Rule 2 at the top of this file decides what happens then: **two differing lists
+are two formulas, not one record to fix.** Nothing was merged, averaged or
+reconciled. The list captured whole from one page is what is stored; the
+disagreement is recorded here and the barcode stays a candidate for a
+photograph of the real bag.
+
+### Why a rename shows up here 33 times
+
+Most of these are not formula disagreements at all. Iams is renaming across its
+shelf — `Adult Weight Control` is becoming `Healthy Weight Chicken & Whole
+Grain`, `Mature Adult` is becoming `Healthy Aging`, `Salmon & Tuna` is becoming
+`Salmon`, `Lamb & Rice` is moving under `Minichunks` — and for each pair both
+names are in shops now under the barcode the campaign proved. The staged
+distributor-era identity is kept and the current manufacturer naming is
+recorded beside it, because assuming the formula carried across a rename is
+exactly the assumption that this file exists to refuse.
+
+### The one composition that was NOT stored
+
+`019014802333` — Perfect Portions Healthy Kitten Pâté Chicken — is seeded in
+`data/known-products.ts` as identity only, with no entry in
+`data/known-formulas.ts`.
+
+Its ingredient deck came back byte-identical to `019014802296`, the Healthy
+Adult Pâté Chicken, while the two guaranteed analyses differ (crude fibre 1%
+against 1.5%). Two shops show the same thing. An adult food and a kitten food
+are not one product under two names — that is the difference between this and
+the two Iams renames the seed does allow — so one of the two lists is wrong and
+there is no way from here to say which.
+
+Storing the adult deck against a kitten barcode would be the worst outcome
+available: a kitten fed from an adult panel is a real mistake, and a plausible
+wrong list is worse than a missing one. So the barcode is seeded as a thing to
+go and find, and waits for a photograph.
+
+### Two shops, two formula generations — 14 barcodes
+
+- **019014805747** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m
+- **019014805754** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m
+- **019014805761** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m
+- **019014805778** — Corroboration pass 2026-09-21: current Petco Healthy Digestion panel is a different formula generation from the stored Chewy panel. Petco moves Ground Flaxseed ahead of Chicken Fat, moves Carrots and Dried Bacillus subtilis Fermentation Product, changes vitamin/mineral wording/order, and prints Calcium 1.0%, Omega-6 3.25%, Omega-3 0.35% and Bacillus subtilis 600 million CFU/lb without the stored Chewy Selenium 0.35 m
+- **019014803316** — Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole
+- **019014803347** — Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole
+- **019014803330** — Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole
+- **019014805358** — Current IAMS naming presents this adult Lamb & Rice recipe as Minichunks Lamb & Rice; staged distributor-era naming is ProActive Health Lamb & Rice. Treat as naming/version transition until current physical label is checked. Corroboration pass 2026-09-21: current Petco Lamb & Rice / Minichunks Lamb & Rice panel is a different formula generation from the stored Chewy panel. Petco prints Ground Barley (not Ground Whole
+- **019014610860** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+- **019014711086** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+- **019014610907** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+- **019014700714** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+- **019014700769** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+- **019014805020** — Corroboration pass 2026-09-21: current Petco Minichunks Chicken & Whole Grain panel is a different formula generation from the stored Target panel. Petco prints soybean meal, brewers dried yeast, flaxseed, peas and carrots and guarantees crude fat 14.5%, vitamin E 130 IU/kg, omega-6 3.25% and omega-3 0.35%; stored Target panel has crude fat 14.0%, vitamin E 60 IU/kg and omega-6 2.5% with a materially different ingred
+
+### A range renamed under a stable barcode — 33 barcodes
+
+- **019014711123** — Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.
+- **019014610891** — Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.
+- **019014700677** — Naming/version transition: staged UPC is distributor-era 'Adult Weight Control'; current IAMS markets the weight-management recipe as 'Healthy Weight Chicken & Whole Grain'. Do not silently treat names/formulas as identical without current UPC/label proof.
+- **019014700776** — Current IAMS manufacturer size ladder is 11/15/30/40 lb; this proven distributor 38.5 lb UPC appears to be an older size/version and should not be treated as current shelf without physical/current retailer confirmation.
+- **019014611331** — Naming/version transition: staged 'Mature Adult Large Breed' versus current 'Healthy Aging Large Breed'. Current exact UPC/size label proof is required before treating this as the same formula version.
+- **019014700684** — Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.
+- **019014711147** — Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.
+- **019014612062** — Naming/version transition: staged UPC is 'Mature Adult with Chicken'; current IAMS uses 'Healthy Aging Chicken & Whole Grain'. Treat as possible successor/rebrand rather than silently merging formulas.
+- **019014700691** — Naming/version transition: staged distributor identity is Optimal Weight Large Breed; current IAMS uses Healthy Weight Large Breed. Exact current UPC/physical label required before treating as formula-identical.
+- **019014802296** — Current Target panel at TCIN 52093083 displays a materially different Chicken ingredient deck from the earlier retailer panel captured in upgrade pass 1; likely formula/version drift. Do not promote until current physical/manufacturer label resolves which deck applies.
+- **019014802326** — Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Salmon retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck.
+- **019014802319** — Current Target panel displays an ingredient/GA snapshot that differs from the earlier captured Tuna retailer panel; treat as possible formula/version drift and do not merge snapshots into a synthetic current deck.
+- **019014712465** — Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.
+- **019014712458** — Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.
+- **019014712298** — Current naming/version appears as Indoor Weight & Hairball Care Chicken & Turkey, while staged distributor identity omits the flavor qualifier. Confirm current physical label before assuming formula continuity.
+- **019014712380** — Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.
+- **019014712434** — Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.
+- **019014611911** — Current Petco Hairball Care panel represents a different formula/presentation generation from the stored Chewy panel despite matching headline GA. Whole-panel corroboration therefore fails; physical-label/version resolution is required before source_verified.
+- **019014712274** — Target UPC 019014712274 currently exposes a materially different ingredient generation (adds Brewers Rice and Caramel Color and changes the vitamin/mineral deck/order) while Petco matches the stored Chewy panel. Treat Target as formula/version drift for this size; do not promote until the current physical label/version is resolved.
+- **019014804115** — Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.
+- **019014804122** — Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.
+- **019014804139** — Naming/formula-version transition: staged distributor identity says 'Healthy Adult Salmon & Tuna'; current IAMS page says 'Healthy Adult Salmon'. Do not silently merge formula versions until exact current UPC/physical label proves continuity.
+- **019014712618** — Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities.
+- **019014611874** — Rename/version question: UPC 019014712625 is staged as 'Healthy Senior with Chicken' while this record is staged as 'Healthy Senior'. Stored formula panels are identical, but exact package chronology/current naming is not proven; do not silently collapse the identities.
+- **019014802173** — Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked.
+- **019014802913** — Current manufacturer naming specifies High Protein Chicken & Salmon, while staged distributor identity is generic High Protein. Treat as naming/version detail until exact current package label is checked.
+- **019014804702** — Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.
+- **019014804719** — Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.
+- **019014804726** — Current manufacturer naming specifies Chicken & Salmon; staged distributor identity is generic High Protein. Preserve both until exact current package label reconciles naming/version.
+- **019014806768** — Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.
+- **019014806782** — Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.
+- **019014806812** — Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation shortens the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse the naming generations.
+- **019014830053** — Naming/version question: staged identity is 'Skin & Coat Chicken & Salmon' while current manufacturer presentation may shorten the family to 'Skin & Coat'. Exact package chronology/UPC continuity is not proven; do not silently collapse naming generations.
+
+### Everything else — 5 barcodes
+
+- **019014805129** — ADMC PDF omits the leading zero and prints 19014805129; normalized to 019014805129. Physical pack confirmation is still desirable.
+- **019014806324** — Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.
+- **019014806348** — Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.
+- **019014806362** — Currentness conflict: Chicken & Beef was previously supported as a US SKU but current IAMS manufacturer catalog does not expose it in this audit; prior evidence indicates discontinuation/phase-out. Do not mark current without fresh shelf evidence.
+- **019014830060** — Current-formula conflict: current Chewy Healthy Digestion panel reports 26% protein, 14% fat, 4% fiber and 3649 kcal/kg / 380 kcal/cup, while this staged UPC record carries 25% protein, 13% fat, 5% fiber and 3570 kcal/kg / 364 kcal/cup. Kroger still identifies UPC 019014830060 as the 4.5 lb product, so treat this as formula-generation drift pending physical-label dating.

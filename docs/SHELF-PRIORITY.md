@@ -7,6 +7,15 @@ ingredient list is, not how easy the research would be.
 
 ## Why this file exists
 
+> **A narrower queue now sits on top of this file.**
+> `docs/CURATION-QUEUE.md` holds the twenty brands the operator named as the
+> holes an ordinary shopper falls into, worked one at a time with a brief each.
+> Six of them are brands this file deprioritised as off-shelf — Ol' Roy,
+> Special Kitty, Pure Balance, Kindfull, American Journey, Frisco — because the
+> question changed from "which aisle are we serving?" to "whose pack is in the
+> hand holding the phone?". That file's "Why the ranking moved" explains it.
+> This file still ranks the other 134 empty brands.
+
 The seed list holds 172 brands and 16 of them have anything at all. Worked in
 list order that is eighteen months of batches before the app answers a scan in
 a supermarket. Worked in shelf order, the first ten brands cover most of what
@@ -21,22 +30,49 @@ shelf, so a brand marked **TSC** below is usually a Walmart brand too.
 Same honesty rule as the header of `data/us-pet-brands.ts`, and it matters more
 here because a ranking invites you to trust it:
 
-- **Store presence was NOT read off a live planogram.** No agent here can walk a
-  PetSmart. It comes from what the model knows plus a handful of searches; the
-  Tractor Supply house brands and the Petco artificial-ingredient ban were
-  checked against sources, the rest was not.
+- **Store presence is read off a live planogram for exactly one chain.**
+  `research/PETCO-BRANDS.md` surveyed Petco's own food facets on 2026-09-21 and
+  every Petco claim below now comes from it. **PetSmart and Tractor Supply have
+  had no such survey**; those columns are what the model knows plus a handful
+  of searches, and the paragraph below this list is what that is worth.
 - **It is a queue, not a verdict.** A brand lower down that somebody actually
   scans jumps the queue immediately — a real scan outranks this whole file.
 - **Ranks will be wrong in places.** Being wrong about the order of #7 and #12
   costs nothing. Being wrong about the shape of the first tier would cost
   months, which is why the first tier is only brands that are unmistakable.
 
-One fact that reshapes the ranking and is easy to get wrong: **Petco removed
-every food with artificial colours, flavours or preservatives in 2019.**
-Pedigree, Iams, Purina Dog Chow and Cat Chow, Friskies and Fancy Feast are not
-on a Petco shelf. They are still enormous — at Tractor Supply, at Walmart, in
-every supermarket — so this does not demote them. It means "in all three
-chains" is not the test; "in the chain where its shoppers are" is.
+**This file used to carry a "fact that reshapes the ranking" here, and it was
+wrong.** It said that Petco's 2019 removal of foods with artificial colours,
+flavours and preservatives had taken Pedigree, Iams, Purina Dog Chow and Cat
+Chow, Friskies and Fancy Feast off the Petco shelf. `research/PETCO-BRANDS.md`
+walked Petco's own food facets on 2026-09-21 and found all six:
+
+| Brand | This file said | Petco's own pages, 2026-09-21 |
+|---|---|---:|
+| Fancy Feast | not on a Petco shelf | **166** (4 dry + 162 wet) |
+| Friskies | not on a Petco shelf | **58** |
+| Iams | not on a Petco shelf | **≥35** |
+| Pedigree | not on a Petco shelf | **27** (9 dry + 18 wet) |
+| Beneful | not at Petco | **21** (5 dry + 16 wet) |
+| Purina Dog Chow | not on a Petco shelf | **7** |
+| Purina Cat Chow | not on a Petco shelf | **3** |
+
+The 2019 removal happened; the inference drawn from it did not survive seven
+years, and nothing in this repository could have noticed, because a ranking
+written from shelf memory has no way to check itself. **That is what the survey
+is for, and it is why the honesty rules above are not decoration.**
+
+The rule the old paragraph was reaching for still stands, and now it stands on
+evidence rather than on a press release: "in all three chains" is not the test;
+**"in the chain where its shoppers are"** is. Those six brands are enormous at
+Tractor Supply, at Walmart and in every supermarket whether or not Petco also
+carries them.
+
+`research/PETCO-BRANDS.md` covers **one** of the three chains and **food only**
+— treats, chews, supplements and toppers are out of its scope, so it says
+nothing about whether Petco stocks Temptations, Milk-Bone or Pup-Peroni.
+PetSmart and Tractor Supply have had no survey at all. Every claim about them
+below is still memory.
 
 ---
 
@@ -48,26 +84,26 @@ row in the catalog.
 | # | Brand | Species | Where | Why it is here |
 |---|-------|---------|-------|----------------|
 | 1 | **Pro Plan** | both | PetSmart, Petco, TSC | The premium bag at all three chains at once. The single biggest hole in the catalog. **Brief written:** `research/BRIEF-PRO-PLAN.md`. |
-| 2 | **Pedigree** | dog | TSC, Walmart, grocery | Highest-volume dog food in the US by units. Not at Petco (artificial). **Brief written:** `research/BRIEF-PEDIGREE.md`. |
+| 2 | **Pedigree** | dog | TSC, Walmart, grocery, **Petco** | Highest-volume dog food in the US by units. Petco carries 27 (surveyed). **Brief written:** `research/BRIEF-PEDIGREE.md`. |
 | 3 | **Sheba** | cat | PetSmart, TSC, grocery | **Already half-done** — 19 boxes seeded, zero formulas. Cheapest tier-1 win. |
-| 4 | **Iams** | both | PetSmart, TSC, Walmart | Mid-market default for dogs and cats. Not at Petco. |
+| 4 | **Iams** | both | PetSmart, TSC, Walmart, **Petco** | Mid-market default for dogs and cats. Petco carries ≥35 (surveyed). **Briefs written:** `research/BRIEF-IAMS.md`, `research/BRIEF-IAMS-FORMULAS.md`. |
 | 5 | **Wellness** | both | PetSmart, Petco | The natural-channel default; Complete Health and CORE are both big ranges. **Brief written:** `research/BRIEF-WELLNESS.md`. |
 | 6 | **Nutro** | both | PetSmart, Petco, TSC | Mars's natural line — one of the few Mars brands Petco still carries. |
 | 7 | **Taste of the Wild** | both | TSC, Petco | The Tractor Supply premium bag. Diamond, so it shares a plant with 4health. |
-| 8 | **Cesar** | dog | PetSmart, TSC, grocery | Small-dog wet trays, bought weekly, dozens of SKUs. |
+| 8 | **Cesar** | dog | PetSmart, TSC, grocery, **Petco** | Small-dog wet trays, bought weekly, dozens of SKUs. Petco carries it; the survey would not give a food-only count because the page mixes in meal toppers. |
 | 9 | **Temptations** | cat | PetSmart, TSC, Walmart | Highest-volume cat treat in the country. |
-| 10 | **Beneful** | dog | PetSmart, TSC, Walmart | Purina's mass dog shelf. Not at Petco. |
+| 10 | **Beneful** | dog | PetSmart, TSC, Walmart, **Petco** | Purina's mass dog shelf. Petco carries 21 (surveyed). |
 
 ## Tier 2 — the rest of the weekly shop
 
 | Brand | Species | Where | Note |
 |-------|---------|-------|------|
-| **Purina Dog Chow** | dog | TSC, Walmart, grocery | The value bag. |
-| **Purina Cat Chow** | cat | TSC, Walmart, grocery | Same shelf, cats. |
+| **Purina Dog Chow** | dog | TSC, Walmart, grocery, Petco | The value bag. Petco carries 7 (surveyed). |
+| **Purina Cat Chow** | cat | TSC, Walmart, grocery, Petco | Same shelf, cats. Petco carries 3 (surveyed). |
 | **Purina** (umbrella) | both | TSC, Walmart | Moist & Meaty, Kit & Kaboodle, Puppy/Kitten Chow. |
 | **Beyond** | both | Petco, PetSmart | Purina's natural line, and Petco-legal. |
-| **Meow Mix** | cat | TSC, Walmart, grocery | Post's cat volume. Pairs with 9Lives, already seeded. |
-| **Greenies** | both | PetSmart, Petco, TSC | Dental chews, all three chains. |
+| **Meow Mix** | cat | TSC, Walmart, grocery, Petco | Post's cat volume. Petco carries 23 (9 dry + 14 wet, surveyed). Pairs with 9Lives, already seeded. |
+| **Greenies** | both | PetSmart, Petco, TSC | Dental chews, all three chains. Petco also lists 4 Smart Essentials **dry foods** (surveyed); its other 7 Petco listings are toppers. |
 | **Milk-Bone** | dog | everywhere | The default biscuit. |
 | **Instinct** | both | PetSmart, Petco | Raw-coated kibble, large facing in both. **Brief written:** `research/BRIEF-INSTINCT.md`. |
 | **Stella & Chewy's** | both | PetSmart, Petco | Freeze-dried; premium end of both chains. |
@@ -180,9 +216,17 @@ Only the two claims that were actually checked:
   Sunshine Mills value line — [Tractor Supply](https://www.tractorsupply.com/tsc/brand/4health/dog-food),
   [Dog Food Advisor](https://www.dogfoodadvisor.com/forums/topic/tractor-supply-4health-dog-foods-who-makes-it/)
 - Petco's 2019 removal of foods with artificial colours, flavours and
-  preservatives, and the brands it took off the shelf —
+  preservatives —
   [Fortune](https://fortune.com/2018/11/14/petco-stop-selling-food-artificial-ingredients/),
-  [dvm360](https://www.dvm360.com/view/petco-bans-pet-food-and-treats-with-artificial-ingredients)
+  [dvm360](https://www.dvm360.com/view/petco-bans-pet-food-and-treats-with-artificial-ingredients).
+  The removal is sourced; **the list of brands it supposedly took off the
+  shelf was not**, and the survey below disproved it. The two sources are
+  kept because the event is real and the inference was ours.
+- **Petco's current food shelf, brand by brand** — `research/PETCO-BRANDS.md`,
+  walked 2026-09-21 from Petco's own facets and brand pages. 76 qualifying
+  food brands, 13 candidate labels rejected as toppers or treats, one
+  Petco-owned food brand (WholeHearted). This is the only claim in this file
+  read off a live shelf rather than remembered.
 
 Everything else above is shelf memory. Correct it from a real shop, not from
 another model.

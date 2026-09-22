@@ -138,4 +138,16 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // could not be reached, and the campaign then proved it on 18 independently
   // bound packages across two ranges.
   { prefix: "038100", maker: "Nestlé Purina (Pro Plan)" },
+  // Iams, and the clearest case yet of a prefix not following its parent.
+  // Mars bought the Iams business from Procter & Gamble in 2014 and the packs
+  // still carry the prefix Iams registered as its own company — not Mars
+  // Petcare's 023100, which Sheba sits under. Exactly like Merrick keeping
+  // 022808 under Nestlé Purina and Champion keeping 064992 under Mars.
+  //
+  // Observed on 121 independently bound US packs across four ranges —
+  // ProActive Health, Advanced Health, Perfect Portions and Healthy
+  // Enjoyment — with no exceptions. NOT GEPIR-confirmed: gs1us.org and
+  // gepir.gs1.org were unreachable from the research environment, so this is
+  // an observation, the same standing as TheraDiet's two entries above.
+  { prefix: "019014", maker: "Iams (Mars Petcare US, observed, not GEPIR-confirmed)" },
 ];
