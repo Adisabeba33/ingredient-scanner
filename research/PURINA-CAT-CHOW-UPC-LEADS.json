@@ -285,15 +285,17 @@
     "upc": "017800113182",
     "canonical_gtin14": "00017800113182",
     "research_status": "candidate",
-    "evidence_level": "low",
-    "barcode_notes": "Valid UPC-A check digit. Indexed UPC/product databases associate this code with Purina Cat Chow Naturals, but current exact-size/current-formula binding was not strong enough for the strict ledger. Preserve as a barcode lead only; do not promote without a current package witness.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Indexed/search evidence supports Purina Cat Chow Naturals 13 lb. Current Naturals Original 13 lb is separately proved as UPC 017800145008; preserve this as an older package-generation barcode rather than a current mapping.",
     "source_urls": [
       "https://www.upcitemdb.com/upc/17800113182"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_exact_size_binding",
-      "current_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
     ]
   },
   {
@@ -307,14 +309,17 @@
     "upc": "017800173063",
     "canonical_gtin14": "00017800173063",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Complete 25 lb. Current campaign already has a different current 25 lb UPC, so this is retained as a legacy/package-generation lead, not a current barcode.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical wholesale item list explicitly binds UPC 017800173063 to Purina Cat Chow Complete 25 lb. Current campaign separately proves current Complete 25 lb as UPC 017800145916, so this is a confirmed older package generation.",
     "source_urls": [
       "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
     ]
   },
   {
@@ -328,15 +333,17 @@
     "upc": "017800173087",
     "canonical_gtin14": "00017800173087",
     "research_status": "candidate",
-    "evidence_level": "legacy",
-    "barcode_notes": "Historical wholesale list associates this UPC with Cat Chow Indoor 25 lb. Current manufacturer size ladder does not establish this as a current U.S. package, so retain only as a legacy/package-generation lead.",
+    "evidence_level": "historical_confirmed",
+    "barcode_notes": "Historical wholesale item list explicitly binds UPC 017800173087 to Purina Cat Chow Indoor 25 lb. Current Purina size ladder no longer establishes 25 lb Indoor, so retain as historical/discontinued package.",
     "source_urls": [
       "https://www.scribd.com/document/695434893/BJs-Wholesale-Club-List-Cleaned-Final"
     ],
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
-      "current_generation_confirmation",
-      "current_package_witness"
+      "historical_formula_label_deck_or_physical_label"
+    ],
+    "verification_notes": [
+      "Identity/size reclassified as historical-confirmed on 2026-09-22; do not substitute for current package UPC."
     ]
   },
   {
@@ -350,8 +357,8 @@
     "upc": "017800150101",
     "canonical_gtin14": "00017800150101",
     "research_status": "candidate",
-    "evidence_level": "low",
-    "barcode_notes": "Barcode-family lead adjacent to proved current Complete UPCs. Preserve only for future package-image/item-master matching; no acceptable exact current size binding established in this pass.",
+    "evidence_level": "unresolved",
+    "barcode_notes": "Search/index evidence was insufficient to establish an exact Cat Chow product/size generation. Retained only as a raw lead; do not use for catalog or formula matching without a package/item-master witness.",
     "source_accessed_at": "2026-09-22",
     "missing_fields": [
       "exact_product_size_binding",
@@ -594,8 +601,8 @@
     "upc": "017800465724",
     "canonical_gtin14": "00017800465724",
     "research_status": "candidate",
-    "evidence_level": "low",
-    "barcode_notes": "Indexed Purina Cat Chow barcode/product-size association preserved for future reconciliation. This is below the strict current-package evidence threshold and must not be seeded without a current package/item-master witness and collision check.",
+    "evidence_level": "unresolved",
+    "barcode_notes": "Indexed Cat Chow association remains too weak to bind exact product, size, and generation. Retained as raw barcode lead only.",
     "source_urls": [
       "https://www.upcitemdb.com/info-purina-cat-chow"
     ],
