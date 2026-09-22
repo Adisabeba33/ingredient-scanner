@@ -622,5 +622,164 @@
       "Exact manufacturer deck exists but is not on the current dated label-deck path located for the gravy recipes; retained needs_physical_label rather than overstating freshness."
     ],
     "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Dog Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "ingredients_ordered_normalized": [],
+    "source_accessed_at": "2026-09-22",
+    "conflicts": [],
+    "research_status": "source_verified",
+    "upc": "017800104043",
+    "canonical_gtin14": "00017800104043",
+    "product_line": "Complete Adult",
+    "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+    "variant": "Chicken Flavor",
+    "recipe": [
+      "chicken"
+    ],
+    "size": "3.5 lb",
+    "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 21,
+      "crude_fat_min_percent": 10,
+      "crude_fiber_max_percent": 4.5,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1.5,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 10000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 100,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3469,
+      "kcal_per_unit": 405,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "H410123",
+    "formula_source": "Current Purina label deck H410123 + exact UPC/size Target identity source.",
+    "source_urls": [
+      "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+      "https://www.target.com/p/-/A-94947678"
+    ],
+    "barcode_notes": "Target explicitly prints UPC 017800104043 for the 3.5 lb bag; not inferred.",
+    "verification_notes": [
+      "Current manufacturer deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+    ]
+  },
+  {
+    "catalog_number": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Purina Dog Chow",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "ingredients_ordered_normalized": [],
+    "source_accessed_at": "2026-09-22",
+    "conflicts": [],
+    "research_status": "source_verified",
+    "upc": "017800104067",
+    "canonical_gtin14": "00017800104067",
+    "product_line": "Little Bites",
+    "product_name": "Purina Dog Chow Little Bites With Real Chicken And Beef Small Breed Dry Dog Food",
+    "variant": "With Real Chicken and Beef",
+    "recipe": [
+      "chicken",
+      "beef"
+    ],
+    "size": "3.2 lb",
+    "ingredients_verbatim": "Whole grain corn, corn protein meal, meat and bone meal, soybean meal, animal fat preserved with mixed-tocopherols, poultry by-product meal, whole grain wheat, chicken, beef, poultry and pork digest, ground rice, salt, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, Yellow 5, Red 40, Blue 2, garlic oil.",
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 25,
+      "crude_fat_min_percent": 12,
+      "crude_fiber_max_percent": 4.5,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Calcium",
+          "basis": "min",
+          "value": 1.1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus",
+          "basis": "min",
+          "value": 0.9,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Vitamin A",
+          "basis": "min",
+          "value": 12000,
+          "unit": "IU/kg"
+        },
+        {
+          "nutrient": "Vitamin E",
+          "basis": "min",
+          "value": 100,
+          "unit": "IU/kg"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3542,
+      "kcal_per_unit": 402,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "M412023",
+    "formula_source": "Current Purina label deck M412023 + independent exact UPC/size sources.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4120-m412023-dog-chow-little-bites-for-small-dogs-dry-dog-food-lb1-1.pdf",
+      "https://go-upc.com/search?q=17800104067",
+      "https://corp.commissaries.com/sites/default/files/2026-06/03800_%20DOG%20FOOD-DRY_%2044FT_TIER%203_5.6.26.pdf"
+    ],
+    "barcode_notes": "UPC 017800104067 is independently associated with the 3.2 lb Little Bites bag; not inferred.",
+    "verification_notes": [
+      "Current manufacturer deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+      "2026 commissary planogram independently shows the Little Bites 3.2 lb shelf item."
+    ]
   }
 ]
