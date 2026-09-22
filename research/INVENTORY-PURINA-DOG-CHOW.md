@@ -48,11 +48,82 @@ them has earned its way off, say so out loud rather than quietly.
 | `050000551217` | a 12 × 3 oz case of Classic Pâté Chicken Feast | `050000429943` |
 | `050000504862` | a 24 × 3 oz case of Classic Pâté Chicken Feast | `050000429943` |
 
+## Already claimed by a research ledger
+
+Researched but not seeded. Do not re-research; if one is wrong, correct it in place.
+
+| barcode | status | what | ledger |
+|---|---|---|---|
+| `017800100205` | source_verified | Complete Adult — Beef Flavor — 40 lb | research/deep-research-purina-dog-chow.json |
+| `017800100212` | source_verified | Complete Adult — Chicken Flavor — 40 lb | research/deep-research-purina-dog-chow.json |
+| `017800100250` | source_verified | Complete Adult — Chicken Flavor — 48 lb | research/deep-research-purina-dog-chow.json |
+| `017800100311` | source_verified | Complete Adult — Chicken Flavor — 44 lb | research/deep-research-purina-dog-chow.json |
+| `017800100328` | source_verified | Complete Adult — Beef Flavor — 44 lb | research/deep-research-purina-dog-chow.json |
+| `017800100335` | needs_physical_label | Complete Adult — Lamb Flavor — 44 lb | research/deep-research-purina-dog-chow.json |
+| `017800100380` | source_verified | Little Bites — With Real Chicken and Beef — 15 lb | research/deep-research-purina-dog-chow.json |
+| `017800101844` | source_verified | High Protein — With Real Beef — 13 lb | research/deep-research-purina-dog-chow.json |
+| `017800101851` | source_verified | High Protein — With Real Beef — 18 lb | research/deep-research-purina-dog-chow.json |
+| `017800101868` | source_verified | High Protein — With Real Beef — 44 lb | research/deep-research-purina-dog-chow.json |
+| `017800102612` | source_verified | High Protein — With Real Chicken — 44 lb | research/deep-research-purina-dog-chow.json |
+| `017800104043` | source_verified | Complete Adult — Chicken Flavor — 3.5 lb | research/deep-research-purina-dog-chow.json |
+| `017800104067` | source_verified | Little Bites — With Real Chicken and Beef — 3.2 lb | research/deep-research-purina-dog-chow.json |
+| `017800110303` | source_verified | Little Bites — With Real Chicken and Beef — 4 lb | research/deep-research-purina-dog-chow.json |
+| `017800149075` | source_verified | Little Bites — With Real Chicken and Beef — 32 lb | research/deep-research-purina-dog-chow.json |
+| `017800149150` | source_verified | Complete Adult — Chicken Flavor — 18.5 lb | research/deep-research-purina-dog-chow.json |
+| `017800149167` | source_verified | Complete Adult — Chicken Flavor — 32 lb | research/deep-research-purina-dog-chow.json |
+| `017800152105` | source_verified | Complete Adult — Chicken Flavor — 20 lb | research/deep-research-purina-dog-chow.json |
+| `017800158091` | source_verified | Complete Adult — Chicken Flavor — 46 lb | research/deep-research-purina-dog-chow.json |
+| `017800178280` | source_verified | Complete Adult — Beef Flavor — 18.5 lb | research/deep-research-purina-dog-chow.json |
+| `017800178389` | source_verified | Complete Adult — Beef Flavor — 20 lb | research/deep-research-purina-dog-chow.json |
+| `017800178396` | source_verified | Complete Adult — Beef Flavor — 46 lb | research/deep-research-purina-dog-chow.json |
+| `017800183406` | source_verified | High Protein — With Real Beef in Savory Gravy — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800183437` | source_verified | High Protein — With Real Chicken in Savory Gravy — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800183451` | source_verified | High Protein — With Real Turkey in Savory Gravy — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800183468` | source_verified | High Protein — With Real Lamb in Savory Gravy — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800183499` | needs_physical_label | High Protein — With Real Beef Classic Ground — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800183529` | needs_physical_label | High Protein — With Real Chicken Classic Ground — 13 oz | research/deep-research-purina-dog-chow.json |
+| `017800193429` | source_verified | Complete Adult — Beef Flavor — 48 lb | research/deep-research-purina-dog-chow.json |
+| `017800193931` | needs_physical_label | Complete Adult — Lamb Flavor — 4.4 lb | research/deep-research-purina-dog-chow.json |
+| `017800193955` | needs_physical_label | Complete Adult — Lamb Flavor — 18.5 lb | research/deep-research-purina-dog-chow.json |
+| `017800410274` | source_verified | Complete Adult — Chicken Flavor — 4.4 lb | research/deep-research-purina-dog-chow.json |
+
 ## The exclusion list
 
-Every barcode above, flat, for a mechanical check. 0 codes. A code in this list is not a new record whatever a retailer page says about it.
+Every barcode above, flat, for a mechanical check. 32 codes. A code in this list is not a new record whatever a retailer page says about it.
 
 ```
+017800100205
+017800100212
+017800100250
+017800100311
+017800100328
+017800100335
+017800100380
+017800101844
+017800101851
+017800101868
+017800102612
+017800104043
+017800104067
+017800110303
+017800149075
+017800149150
+017800149167
+017800152105
+017800158091
+017800178280
+017800178389
+017800178396
+017800183406
+017800183437
+017800183451
+017800183468
+017800183499
+017800183529
+017800193429
+017800193931
+017800193955
+017800410274
 ```
 
 `scripts/check-ledger.mjs` performs this check for you against the live files and will refuse a batch that repeats any of them, so this list is for planning rather than for verification.

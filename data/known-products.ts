@@ -14633,4 +14633,212 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
       { size: "14 lb", container: BAG, upc: "017800190237", scope: UNIT },
     ],
   },
+  // ── Purina Dog Chow — batch 039 ──────────────────────────────────────────
+  //
+  // 12 products under 32 barcodes, from research/deep-research-purina-dog-chow.json.
+  // Twenty-six dry bags and six 13 oz cans: High Protein is sold both ways,
+  // which is why this brand has a `presentation` worth reading where Cat Chow
+  // in batch 038 was `plain` throughout.
+  //
+  // Prefix 017800 on all 32, the same business unit as Purina ONE, Alpo and
+  // Cat Chow rather than the 050000 that Fancy Feast and Friskies use.
+  //
+  // The seeded `Puppy` range stays EMPTY on purpose. The campaign found that
+  // Purina treats Dog Chow and Puppy Chow as separate brands and every current
+  // puppy surface it met was PUPPY CHOW-branded, so filling this range from
+  // those packs would file another brand's shelf here. It needs a
+  // front-of-pack DOG CHOW witness, and until then zero is the honest number.
+  //
+  // `Little Bites` is confirmed as a real range and not a kibble size — deck
+  // M412023 is titled for DOG CHOW LITTLE BITES FOR SMALL DOGS. That is the
+  // opposite finding to Iams's "Minichunks" in batch 037, which was a size
+  // wearing a range's clothes and was deleted from data/us-pet-brands.ts.
+  {
+    brand: "Purina Dog Chow",
+    line: "Complete Adult",
+    variant: "Chicken Flavor",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.4 lb", container: BAG, upc: "017800410274", scope: UNIT },
+      { size: "18.5 lb", container: BAG, upc: "017800149150", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "017800152105", scope: UNIT },
+      { size: "32 lb", container: BAG, upc: "017800149167", scope: UNIT },
+      { size: "40 lb", container: BAG, upc: "017800100212", scope: UNIT },
+      { size: "44 lb", container: BAG, upc: "017800100311", scope: UNIT },
+      { size: "46 lb", container: BAG, upc: "017800158091", scope: UNIT },
+      { size: "48 lb", container: BAG, upc: "017800100250", scope: UNIT },
+      { size: "3.5 lb", container: BAG, upc: "017800104043", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "Complete Adult",
+    variant: "Beef Flavor",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "18.5 lb", container: BAG, upc: "017800178280", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "017800178389", scope: UNIT },
+      { size: "40 lb", container: BAG, upc: "017800100205", scope: UNIT },
+      { size: "44 lb", container: BAG, upc: "017800100328", scope: UNIT },
+      { size: "46 lb", container: BAG, upc: "017800178396", scope: UNIT },
+      { size: "48 lb", container: BAG, upc: "017800193429", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "Complete Adult",
+    variant: "Lamb Flavor",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.4 lb", container: BAG, upc: "017800193931", scope: UNIT },
+      { size: "18.5 lb", container: BAG, upc: "017800193955", scope: UNIT },
+      { size: "44 lb", container: BAG, upc: "017800100335", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "Little Bites",
+    variant: "With Real Chicken and Beef",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4 lb", container: BAG, upc: "017800110303", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "017800100380", scope: UNIT },
+      { size: "32 lb", container: BAG, upc: "017800149075", scope: UNIT },
+      { size: "3.2 lb", container: BAG, upc: "017800104067", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Beef",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 lb", container: BAG, upc: "017800101844", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "017800101851", scope: UNIT },
+      { size: "44 lb", container: BAG, upc: "017800101868", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Chicken",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "44 lb", container: BAG, upc: "017800102612", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Chicken in Savory Gravy",
+    species: "dog",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183437", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Beef in Savory Gravy",
+    species: "dog",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183406", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Lamb in Savory Gravy",
+    species: "dog",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["lamb"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183468", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Turkey in Savory Gravy",
+    species: "dog",
+    texture: "chunks",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183451", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Chicken Classic Ground",
+    species: "dog",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183529", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Purina Dog Chow",
+    line: "High Protein",
+    variant: "With Real Beef Classic Ground",
+    species: "dog",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "13 oz", container: CAN, upc: "017800183499", scope: UNIT },
+    ],
+  },
 ];

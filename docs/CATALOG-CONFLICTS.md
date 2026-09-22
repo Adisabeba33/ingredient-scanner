@@ -1980,3 +1980,65 @@ substituted.
 All three are held in `research/PURINA-CAT-CHOW-UPC-LEADS.json` with the
 formula and package identity already proved, so each becomes a mechanical
 promotion the moment a real UPC witness turns up.
+
+
+## Batch 039 — Purina Dog Chow
+
+Two of 32 stored compositions carry a conflict, and both are about the **age**
+of the evidence rather than its content. Nothing here disagrees with anything;
+the question is whether a manufacturer panel is still the current one.
+
+### A deck on the maker's older path
+
+- **017800183529, 017800183499** — Dog Chow High Protein Classic Ground, With
+  Real Chicken and With Real Beef, 13 oz cans. Their panels come from Purina
+  label decks `A412618` and `A412518`, published at
+  `purina.com/sites/default/files/**products/files**/…`.
+
+Every other deck in this batch — and the 26 in batch 038 — sits on the current
+dated path, `…/product-label-deck-file/<YYYY-MM>/…`. The four gravy recipes in
+this same range are on the current path. These two are not.
+
+The panels are the maker's own and are stored as printed. The doubt is whether
+they describe today's can, and there is nothing on the older path that dates
+itself. Both records stay `source_verified` for the reason §10 gives —
+conflicts precisely documented without undermining identity — because which
+product the barcode is was never in question. A current deck or a photographed
+can settles it.
+
+**This is not the batch 037 case.** There, fifteen Iams compositions were
+withheld from the catalog entirely because Chewy and Petco printed different
+ingredient ORDERS for the same barcode: two sources, one of them wrong, no way
+to say which. Here there is one source, it is the manufacturer, and it may
+simply be old. A possibly-dated maker's panel is better than nothing; a list
+that is known to contradict another list is not.
+
+### Three records with no deck at all, and why they are not conflicts
+
+Complete Adult Lamb Flavor in 4.4 lb, 18.5 lb and 44 lb — `017800193931`,
+`017800193955`, `017800100335` — carry no deck code. Their panel comes from
+Purina's own current product page, which is a manufacturer source at §6
+priority 3 and is what most of this catalog rests on. No second source
+contradicts it and nothing about it is in doubt, so there is no conflict note
+and none is warranted. The campaign held them at `needs_physical_label` for
+wanting a deck specifically; the composition is not the weak part.
+
+### Three barcodes left in the parking lot, not seeded
+
+Recorded here because the next person will ask.
+`research/PURINA-DOG-CHOW-CANDIDATES.json` holds four leads. Two of them —
+the Classic Ground pair above — are seeded and their entry there is now
+historical. The other two are not seeded:
+
+- **`017800153317`** — Healthy Weight 4 lb. Its only evidence is a Walmart
+  inventory-checker SKU lookup, which is a stock tool rather than a product
+  page binding a barcode to a printed size. Below the bar even for an
+  identity-only row.
+- **`654163977954`** — claimed as Healthy Weight 32 lb by a barcode index, and
+  **outside the 017800 prefix** that all 32 seeded packs share. It may be a
+  reseller or bundle identifier. It would fail `every barcode sits under a
+  maker's GS1 prefix` in `lib/known-products.test.ts` if anybody tried.
+
+Both stay leads. The `Healthy Weight` range therefore holds nothing, alongside
+`Puppy`, which stays empty for a different and better-evidenced reason — see
+the batch 039 comment in `data/known-products.ts`.

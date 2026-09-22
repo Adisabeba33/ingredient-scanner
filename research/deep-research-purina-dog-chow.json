@@ -1,0 +1,2423 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Purina Dog Chow"
+  ],
+  "created_at": "2026-09-22",
+  "updated_at": "2026-09-22",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "017800410274",
+      "canonical_gtin14": "00017800410274",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4.4 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.kroger.com/p/purina-dog-chow-complete-adult-real-chicken-dry-dog-food/0001780041027"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800149150",
+      "canonical_gtin14": "00017800149150",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "18.5 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.target.com/p/-/A-11223967"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800152105",
+      "canonical_gtin14": "00017800152105",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "20 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.countrymax.com/purina-dog-chow-chicken-complete-adult-dry-dog-food/"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800149167",
+      "canonical_gtin14": "00017800149167",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "32 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.upcitemdb.com/info-purina"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100212",
+      "canonical_gtin14": "00017800100212",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "40 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.target.com/p/-/A-87442234"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100311",
+      "canonical_gtin14": "00017800100311",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "44 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.runnings.com/purinar-dog-chowr-complete-dog-food-42-lb.html"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800158091",
+      "canonical_gtin14": "00017800158091",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "46 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.ralphs.com/p/dog-chow-complete-adult-with-real-chicken-dry-dog-food/0001780015809"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100250",
+      "canonical_gtin14": "00017800100250",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "48 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-chicken-dry-dog-food",
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.bjs.com/product/purina-dog-chow-complete-adult-dry-dog-food-with-chicken-flavor-48-lbs/3000000000004271285/"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800178280",
+      "canonical_gtin14": "00017800178280",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "18.5 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.target.com/p/-/A-52316748"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800178389",
+      "canonical_gtin14": "00017800178389",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "20 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.admc.us/wp-content/uploads/2022/02/2024-South-Complete-Price-List_1.11.24.pdf"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100205",
+      "canonical_gtin14": "00017800100205",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "40 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.directionsforme.org/product/16548"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100328",
+      "canonical_gtin14": "00017800100328",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "44 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.kroger.com/p/purina-dog-chow-complete-adult-dry-dog-food-beef/0001780010032"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800178396",
+      "canonical_gtin14": "00017800178396",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "46 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.ralphs.com/p/purina-dog-chow-complete-adult-with-real-beef-dry-dog-food/0001780017839"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800193429",
+      "canonical_gtin14": "00017800193429",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Beef Flavor Dry Dog Food",
+      "variant": "Beef Flavor",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "48 lb",
+      "ingredients_verbatim": "Whole grain corn, chicken by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, ground rice, egg and chicken flavor, natural flavor, calcium carbonate, salt, potassium chloride, mono and dicalcium phosphate, L-Lysine monohydrochloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3470,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "G412423",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-real-beef-dry-dog-food",
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4124-g412423-dog-chow-complete-adult-beef-flavor-dry-dog-food-dk2-2.pdf",
+        "https://www.kroger.com/p/purina-dog-chow-pet-food-dry/0001780019342"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800193931",
+      "canonical_gtin14": "00017800193931",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Lamb Flavor Dry Dog Food",
+      "variant": "Lamb Flavor",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4.4 lb",
+      "ingredients_verbatim": "Whole Grain Corn, Chicken By-Product Meal, Corn Gluten Meal, Meat and Bone Meal, Beef Fat Preserved with Mixed-Tocopherols, Soybean Meal, Ground Rice, Natural Flavor, Salt, Calcium Carbonate, Potassium Chloride, Lamb Meal, Mono and Dicalcium Phosphate, L-Lysine Monohydrochloride, Choline Chloride, Minerals [Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Sodium Selenite], Vitamins [Vitamin E Supplement, Niacin (Vitamin B-3), Vitamin A Supplement, Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Thiamine Mononitrate (Vitamin B-1), Vitamin D-3 Supplement, Riboflavin Supplement (Vitamin B-2), Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid (Vitamin B-9), Biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3463,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Purina product page + exact-size retail identity source; exact current label-deck PDF not located in this pass.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-lamb-dry-dog-food",
+        "https://www.cub.com/store/cub/products/26488567-purina-lamb-dog-chow-adult-dog-food-4-4-lb"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer page supports the current recipe/size ladder, but no exact current label deck was located; retained needs_physical_label."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800193955",
+      "canonical_gtin14": "00017800193955",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Lamb Flavor Dry Dog Food",
+      "variant": "Lamb Flavor",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "18.5 lb",
+      "ingredients_verbatim": "Whole Grain Corn, Chicken By-Product Meal, Corn Gluten Meal, Meat and Bone Meal, Beef Fat Preserved with Mixed-Tocopherols, Soybean Meal, Ground Rice, Natural Flavor, Salt, Calcium Carbonate, Potassium Chloride, Lamb Meal, Mono and Dicalcium Phosphate, L-Lysine Monohydrochloride, Choline Chloride, Minerals [Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Sodium Selenite], Vitamins [Vitamin E Supplement, Niacin (Vitamin B-3), Vitamin A Supplement, Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Thiamine Mononitrate (Vitamin B-1), Vitamin D-3 Supplement, Riboflavin Supplement (Vitamin B-2), Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid (Vitamin B-9), Biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3463,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Purina product page + exact-size retail identity source; exact current label-deck PDF not located in this pass.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-lamb-dry-dog-food",
+        "https://www.shoprite.com/sm/pickup/rsid/511/product/purina-dog-chow-complete-adult-lamb-flavor-dog-food-185-lb-id-00017800193955"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer page supports the current recipe/size ladder, but no exact current label deck was located; retained needs_physical_label."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100335",
+      "canonical_gtin14": "00017800100335",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Lamb Flavor Dry Dog Food",
+      "variant": "Lamb Flavor",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "44 lb",
+      "ingredients_verbatim": "Whole Grain Corn, Chicken By-Product Meal, Corn Gluten Meal, Meat and Bone Meal, Beef Fat Preserved with Mixed-Tocopherols, Soybean Meal, Ground Rice, Natural Flavor, Salt, Calcium Carbonate, Potassium Chloride, Lamb Meal, Mono and Dicalcium Phosphate, L-Lysine Monohydrochloride, Choline Chloride, Minerals [Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Sodium Selenite], Vitamins [Vitamin E Supplement, Niacin (Vitamin B-3), Vitamin A Supplement, Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Thiamine Mononitrate (Vitamin B-1), Vitamin D-3 Supplement, Riboflavin Supplement (Vitamin B-2), Menadione Sodium Bisulfite Complex (Vitamin K), Folic Acid (Vitamin B-9), Biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3463,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Current Purina product page + exact-size retail identity source; exact current label-deck PDF not located in this pass.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-complete-adult-lamb-dry-dog-food",
+        "https://www.grangecoop.com/purina-adult-lamb-dog-chow-dry-dog-food-44-lb/"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer page supports the current recipe/size ladder, but no exact current label deck was located; retained needs_physical_label."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800110303",
+      "canonical_gtin14": "00017800110303",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Little Bites",
+      "product_name": "Purina Dog Chow Little Bites With Real Chicken and Beef Dry Dog Food",
+      "variant": "With Real Chicken and Beef",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Whole grain corn, corn protein meal, meat and bone meal, soybean meal, animal fat preserved with mixed-tocopherols, poultry by-product meal, whole grain wheat, chicken, beef, poultry and pork digest, ground rice, salt, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3542,
+        "kcal_per_unit": 402,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "M412023",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4120-m412023-dog-chow-little-bites-for-small-dogs-dry-dog-food-lb1-1.pdf",
+        "https://www.cub.com/store/cub/products/77269-purina-dog-chow-small-breed-dry-dog-food-little-bites-with-real-chicken-beef-4-lb"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800100380",
+      "canonical_gtin14": "00017800100380",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Little Bites",
+      "product_name": "Purina Dog Chow Little Bites With Real Chicken and Beef Dry Dog Food",
+      "variant": "With Real Chicken and Beef",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "15 lb",
+      "ingredients_verbatim": "Whole grain corn, corn protein meal, meat and bone meal, soybean meal, animal fat preserved with mixed-tocopherols, poultry by-product meal, whole grain wheat, chicken, beef, poultry and pork digest, ground rice, salt, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3542,
+        "kcal_per_unit": 402,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "M412023",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4120-m412023-dog-chow-little-bites-for-small-dogs-dry-dog-food-lb1-1.pdf",
+        "https://www.harristeeter.com/p/purina-dog-chow-little-bites-for-small-breed-dog-food-dry-recipe-with-real-chicken-and-beef/0001780010038"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800149075",
+      "canonical_gtin14": "00017800149075",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "Little Bites",
+      "product_name": "Purina Dog Chow Little Bites With Real Chicken and Beef Dry Dog Food",
+      "variant": "With Real Chicken and Beef",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "32 lb",
+      "ingredients_verbatim": "Whole grain corn, corn protein meal, meat and bone meal, soybean meal, animal fat preserved with mixed-tocopherols, poultry by-product meal, whole grain wheat, chicken, beef, poultry and pork digest, ground rice, salt, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3542,
+        "kcal_per_unit": 402,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "M412023",
+      "formula_source": "Current Purina label deck + exact-size retail/distributor identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4120-m412023-dog-chow-little-bites-for-small-dogs-dry-dog-food-lb1-1.pdf",
+        "https://www.upcitemdb.com/upc/17800149075"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A check digit validated; exact product/size identity source recorded; UPC not inferred from sequence.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current Purina deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800101844",
+      "canonical_gtin14": "00017800101844",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Real Beef Dry Dog Food",
+      "variant": "With Real Beef",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "13 lb",
+      "ingredients_verbatim": "Whole grain corn, poultry by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, beef, natural flavor, egg and chicken flavor, salt, potassium chloride, fish oil, dried peas, calcium carbonate, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], carrots, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 27,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3668,
+        "kcal_per_unit": 436,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A410624",
+      "formula_source": "Current Purina label evidence A410624 + exact-size retailer identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-high-protein-real-beef-dry-dog-food",
+        "https://www.dollargeneral.com/p/purina-dog-chow-dog-food-high-protein-with-real-beef-lb/17800101844"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact individual bag size; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer evidence supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800101851",
+      "canonical_gtin14": "00017800101851",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Real Beef Dry Dog Food",
+      "variant": "With Real Beef",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "18 lb",
+      "ingredients_verbatim": "Whole grain corn, poultry by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, beef, natural flavor, egg and chicken flavor, salt, potassium chloride, fish oil, dried peas, calcium carbonate, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], carrots, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 27,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3668,
+        "kcal_per_unit": 436,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A410624",
+      "formula_source": "Current Purina label evidence A410624 + exact-size retailer identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-high-protein-real-beef-dry-dog-food",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/57139815-purina-dog-chow-high-protein-with-real-beef-dog-food-18-lbs"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact individual bag size; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer evidence supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800101868",
+      "canonical_gtin14": "00017800101868",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Real Beef Dry Dog Food",
+      "variant": "With Real Beef",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "44 lb",
+      "ingredients_verbatim": "Whole grain corn, poultry by-product meal, corn protein meal, animal fat preserved with mixed-tocopherols, meat and bone meal, soybean meal, beef, natural flavor, egg and chicken flavor, salt, potassium chloride, fish oil, dried peas, calcium carbonate, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), Vitamin A supplement, riboflavin supplement (Vitamin B-2), Vitamin B-12 supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), menadione sodium bisulfite complex (Vitamin K), biotin (Vitamin B-7), Vitamin D-3 supplement], carrots, L-Lysine monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 27,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3668,
+        "kcal_per_unit": 436,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A410624",
+      "formula_source": "Current Purina label evidence A410624 + exact-size retailer identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-high-protein-real-beef-dry-dog-food",
+        "https://www.coastalcountry.com/products/pet/dog/dog-food/dry-dog-food/purina-dog-chow-high-protein-real-beef-dry-dog-food-44-lb-00458179030"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact individual bag size; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer evidence supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800102612",
+      "canonical_gtin14": "00017800102612",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Real Chicken Dry Dog Food",
+      "variant": "With Real Chicken",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "44 lb",
+      "ingredients_verbatim": "Whole Grain Corn, Poultry By-Product Meal, Corn Protein Meal, Animal Fat Preserved With Mixed-Tocopherols, Meat And Bone Meal, Soybean Meal, Egg And Chicken Flavor, Chicken, Natural Flavor, Fish Oil, Salt, Potassium Chloride, Dried Peas, Choline Chloride, Calcium Carbonate, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Vitamin A Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin B-12 Supplement, Pyridoxine Hydrochloride (Vitamin B-6), Folic Acid (Vitamin B-9), Menadione Sodium Bisulfite Complex (Vitamin K), Biotin (Vitamin B-7), Vitamin D-3 Supplement], MINERALS [Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Calcium Iodate, Sodium Selenite], Dried Carrots, L-Lysine Monohydrochloride, Red 40, Yellow 5, Blue 2.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 27,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 4,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3678,
+        "kcal_per_unit": 431,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "A410724",
+      "formula_source": "Current Purina label evidence A410724 + exact-size retailer identity source.",
+      "source_urls": [
+        "https://www.purina.com/dogs/shop/dog-chow-high-protein-real-chicken-dry-dog-food",
+        "https://www.tractorsupply.com/tsc/product/purina-dog-chow-high-protein-real-chicken"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact individual bag size; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer evidence supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183437",
+      "canonical_gtin14": "00017800183437",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Wet Dog Food with Real Chicken in Savory Gravy",
+      "variant": "With Real Chicken in Savory Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 983,
+        "kcal_per_unit": 361,
+        "unit_name": "can"
+      },
+      "label_deck_code": "C412822",
+      "formula_source": "Current Purina label deck C412822 + exact 13 oz retail identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/4128_c412822_dog_chow_high_protein_w_real_chicken_in_savory_gravy_dog_food_du4.pdf",
+        "https://www.shoprite.com/sm/planning/rsid/141/product/purina-dog-chow-high-protein-with-real-chicken-in-savory-gravy-dog-food-13-oz-id-00017800183437"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+        "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183406",
+      "canonical_gtin14": "00017800183406",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Wet Dog Food with Real Beef in Savory Gravy",
+      "variant": "With Real Beef in Savory Gravy",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Beef, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 983,
+        "kcal_per_unit": 361,
+        "unit_name": "can"
+      },
+      "label_deck_code": "C412722",
+      "formula_source": "Current Purina label deck C412722 + exact 13 oz retail identity source.",
+      "source_urls": [
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-10/4127_c412722_dog_chow_high_protein_w_real_beef_in_savory_gravy_dog_food_du2.pdf",
+        "https://www.shoprite.com/sm/pickup/rsid/191/product/purina-dog-chow-high-protein-dog-food-with-real-beef-in-savory-gravy-13-oz-id-00017800183406"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+        "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183468",
+      "canonical_gtin14": "00017800183468",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Wet Dog Food with Real Lamb in Savory Gravy",
+      "variant": "With Real Lamb in Savory Gravy",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water, Chicken, Meat By-Products, Wheat Gluten, Lamb, Soy Flour, Corn Starch-Modified, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 995,
+        "kcal_per_unit": 366,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B412922",
+      "formula_source": "Current Purina label deck B412922 + exact 13 oz retail identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/4129_b412922_dog_chow_high_protein_w_real_lamb_in_savory_gravy_dog_food_du5.pdf",
+        "https://www.cub.com/store/cub/products/20042690-purina-dog-chow-high-protein-gravy-wet-dog-food-high-protein-with-lamb-13-oz"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+        "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183451",
+      "canonical_gtin14": "00017800183451",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Wet Dog Food with Real Turkey in Savory Gravy",
+      "variant": "With Real Turkey in Savory Gravy",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "chunks",
+      "presentation": "in_gravy",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Soy Flour, Corn Starch-Modified, Turkey, Salt, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Tricalcium Phosphate, Choline Chloride, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)].",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 3,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 78,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 982,
+        "kcal_per_unit": 361,
+        "unit_name": "can"
+      },
+      "label_deck_code": "B413022",
+      "formula_source": "Current Purina label deck B413022 + exact 13 oz retail identity source.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-10/4130_b413022_dog_chow_high_protein_w_real_turkey_in_savory_gravy_dog_food_du6.pdf",
+        "https://www.dollargeneral.com/p/purina-dog-chow-high-protein-wet-dog-food-with-real-turkey-in-savory-gravy/17800183451"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [],
+      "verification_notes": [
+        "Current manufacturer label deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+        "Shell pass 2026-09-22: presentation was written as \"gravy\", which is not a value lib/presentation.ts holds. Corrected to \"in_gravy\", the vocabulary term for what the food is suspended in. Nothing about the product changed."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183529",
+      "canonical_gtin14": "00017800183529",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Classic Ground Wet Dog Food With Real Chicken",
+      "variant": "With Real Chicken Classic Ground",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water Sufficient for Processing, Chicken, Meat By-Products, Liver, Soy Flour, Guar Gum, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Added Color, Tricalcium Phosphate, Carrageenan, Calcium Carbonate, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)], Choline Chloride.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 77,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1110,
+        "kcal_per_unit": 408,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A412618",
+      "formula_source": "Purina label deck A412618 + exact 13 oz retail identity source; deck is older products-file path, so not promoted without a current deck witness.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A412618_Purina_Dog_Chow_Brand_Dog_Food_High_Protein_With_Real_Chicken.pdf",
+        "https://westhardware.com/p/high-protein-dog-food-chicken-pate-can-017800183529"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [
+        "Deck A412618 is published on Purina's older products/files path rather than the current dated product-label-deck-file path that the gravy recipes in this same range use. The panel is the maker's own and may be a prior generation. Retained as printed; a current deck or a photographed can settles it."
+      ],
+      "verification_notes": [
+        "Exact manufacturer deck exists but is not on the current dated label-deck path located for the gravy recipes; retained needs_physical_label rather than overstating freshness."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "017800183499",
+      "canonical_gtin14": "00017800183499",
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "product_line": "High Protein",
+      "product_name": "Purina Dog Chow High Protein Classic Ground Wet Dog Food With Real Beef",
+      "variant": "With Real Beef Classic Ground",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "plain",
+      "package_type": "can",
+      "size": "13 oz",
+      "ingredients_verbatim": "Water Sufficient for Processing, Chicken, Meat By-Products, Liver, Soy Flour, Beef, Guar Gum, MINERALS [Potassium Chloride, Zinc Sulfate, Ferrous Sulfate, Copper Sulfate, Manganese Sulfate, Potassium Iodide, Sodium Selenite], Added Color, Tricalcium Phosphate, Carrageenan, Calcium Carbonate, VITAMINS [Vitamin E Supplement, Niacin (Vitamin B-3), Thiamine Mononitrate (Vitamin B-1), Calcium Pantothenate (Vitamin B-5), Pyridoxine Hydrochloride (Vitamin B-6), Vitamin B-12 Supplement, Riboflavin Supplement (Vitamin B-2), Vitamin A Supplement, Folic Acid (Vitamin B-9), Vitamin D-3 Supplement, Biotin (Vitamin B-7)], Choline Chloride.",
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 77,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 1121,
+        "kcal_per_unit": 412,
+        "unit_name": "can"
+      },
+      "label_deck_code": "A412518",
+      "formula_source": "Purina label deck A412518 + exact 13 oz retail identity source; deck is older products-file path, so not promoted without a current deck witness.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/products/files/A412518_Purina_Dog_Chow_Brand_Dog_Food_High_Protein_With_Real_Beef.pdf",
+        "https://www.kroger.com/p/purina-dog-chow-high-protein-with-real-beef-classic-ground-wet-dog-food/0001780018349"
+      ],
+      "source_accessed_at": "2026-09-22",
+      "barcode_notes": "UPC-A validated and bound to exact 13 oz individual can; UPC not inferred.",
+      "conflicts": [
+        "Deck A412518 is published on Purina's older products/files path rather than the current dated product-label-deck-file path that the gravy recipes in this same range use. The panel is the maker's own and may be a prior generation. Retained as printed; a current deck or a photographed can settles it."
+      ],
+      "verification_notes": [
+        "Exact manufacturer deck exists but is not on the current dated label-deck path located for the gravy recipes; retained needs_physical_label rather than overstating freshness."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "ingredients_ordered_normalized": [],
+      "source_accessed_at": "2026-09-22",
+      "conflicts": [],
+      "research_status": "source_verified",
+      "upc": "017800104043",
+      "canonical_gtin14": "00017800104043",
+      "product_line": "Complete Adult",
+      "product_name": "Purina Dog Chow Complete Adult Chicken Flavor Dry Dog Food",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "size": "3.5 lb",
+      "ingredients_verbatim": "Whole grain corn, meat and bone meal, corn protein meal, animal fat preserved with mixed-tocopherols, soybean meal, chicken by-product meal, egg and chicken flavor, whole grain wheat, natural flavor, salt, potassium chloride, calcium carbonate, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, L-Tryptophan, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 21,
+        "crude_fat_min_percent": 10,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Linoleic Acid",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 10000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3469,
+        "kcal_per_unit": 405,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "H410123",
+      "formula_source": "Current Purina label deck H410123 + exact UPC/size Target identity source.",
+      "source_urls": [
+        "https://live.purina.com/sites/default/files/product-label-deck-file/2024-05/4101-h410123-dog-chow-complete-adult-chicken-flavor-dry-dog-food-dn7.pdf",
+        "https://www.target.com/p/-/A-94947678"
+      ],
+      "barcode_notes": "Target explicitly prints UPC 017800104043 for the 3.5 lb bag; not inferred.",
+      "verification_notes": [
+        "Current manufacturer deck supplies formula, guarantees, calories and adult-maintenance adequacy."
+      ]
+    },
+    {
+      "catalog_number": null,
+      "barcode_scope": "individual_unit",
+      "brand": "Purina Dog Chow",
+      "manufacturer": "Nestlé Purina PetCare Company",
+      "species": "dog",
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "ingredients_ordered_normalized": [],
+      "source_accessed_at": "2026-09-22",
+      "conflicts": [],
+      "research_status": "source_verified",
+      "upc": "017800104067",
+      "canonical_gtin14": "00017800104067",
+      "product_line": "Little Bites",
+      "product_name": "Purina Dog Chow Little Bites With Real Chicken And Beef Small Breed Dry Dog Food",
+      "variant": "With Real Chicken and Beef",
+      "recipe": [
+        "chicken",
+        "beef"
+      ],
+      "size": "3.2 lb",
+      "ingredients_verbatim": "Whole grain corn, corn protein meal, meat and bone meal, soybean meal, animal fat preserved with mixed-tocopherols, poultry by-product meal, whole grain wheat, chicken, beef, poultry and pork digest, ground rice, salt, calcium carbonate, potassium chloride, L-Lysine monohydrochloride, choline chloride, mono and dicalcium phosphate, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], Yellow 6, Yellow 5, Red 40, Blue 2, garlic oil.",
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 12,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 0.9,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 12000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3542,
+        "kcal_per_unit": 402,
+        "unit_name": "cup"
+      },
+      "label_deck_code": "M412023",
+      "formula_source": "Current Purina label deck M412023 + independent exact UPC/size sources.",
+      "source_urls": [
+        "https://www.purina.com/sites/default/files/product-label-deck-file/2024-05/4120-m412023-dog-chow-little-bites-for-small-dogs-dry-dog-food-lb1-1.pdf",
+        "https://go-upc.com/search?q=17800104067",
+        "https://corp.commissaries.com/sites/default/files/2026-06/03800_%20DOG%20FOOD-DRY_%2044FT_TIER%203_5.6.26.pdf"
+      ],
+      "barcode_notes": "UPC 017800104067 is independently associated with the 3.2 lb Little Bites bag; not inferred.",
+      "verification_notes": [
+        "Current manufacturer deck supplies formula, guarantees, calories and adult-maintenance adequacy.",
+        "2026 commissary planogram independently shows the Little Bites 3.2 lb shelf item."
+      ]
+    }
+  ]
+}
