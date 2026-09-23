@@ -1,0 +1,982 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "011132171384",
+    "canonical_gtin14": "00011132171384",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Dental Chews",
+    "product_name": "ALPO Dental Chews",
+    "variant": "Small/Medium - 10 Count",
+    "recipe": [
+      "Small/Medium - 10 Count"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "8.75 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171346",
+    "canonical_gtin14": "00011132171346",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Dental Chews",
+    "product_name": "ALPO Dental Chews",
+    "variant": "Small/Medium - 24 Count",
+    "recipe": [
+      "Small/Medium - 24 Count"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "21 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171148",
+    "canonical_gtin14": "00011132171148",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "BBQ Pork Rib-Shaped",
+    "recipe": [
+      "BBQ Pork Rib-Shaped"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132170974",
+    "canonical_gtin14": "00011132170974",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Steak-Shaped",
+    "recipe": [
+      "Porterhouse Steak-Shaped"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171049",
+    "canonical_gtin14": "00011132171049",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Steak-Shaped",
+    "recipe": [
+      "Porterhouse Steak-Shaped"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "45 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132162252",
+    "canonical_gtin14": "00011132162252",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Variety Snaps",
+    "product_name": "ALPO Variety Snaps Dog Treats",
+    "variant": "Variety Snaps",
+    "recipe": [
+      "Variety Snaps"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "box",
+    "size": "60 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132003920",
+    "canonical_gtin14": "00011132003920",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Variety Snaps",
+    "product_name": "ALPO Variety Snaps Little Bites Dog Treats",
+    "variant": "Beef, Chicken, Liver & Lamb",
+    "recipe": [
+      "Beef, Chicken, Liver & Lamb"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "box",
+    "size": "32 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.admc.us/wp-content/uploads/2022/02/2023-North-Complete-Price-List_12.22.23.pdf"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132170929",
+    "canonical_gtin14": "00011132170929",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Filet Mignon Flavor Steak-Shaped",
+    "recipe": [
+      "Filet Mignon Flavor Steak-Shaped"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "10 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-nestle-purina-petcare-company"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171063",
+    "canonical_gtin14": "00011132171063",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Ribeye Flavor",
+    "recipe": [
+      "Ribeye Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "45 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-nestle-purina-petcare-company"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132170998",
+    "canonical_gtin14": "00011132170998",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Original Porterhouse",
+    "recipe": [
+      "Original Porterhouse"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "28 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-nestle-purina-petcare-company"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171360",
+    "canonical_gtin14": "00011132171360",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Dental Chews",
+    "product_name": "ALPO Dental Chew Treats",
+    "variant": "Dental Chews",
+    "recipe": [
+      "Dental Chews"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "45 ct",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-nestle-purina-petcare-company"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132135997",
+    "canonical_gtin14": "00011132135997",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Chop House",
+    "product_name": "ALPO Chop House Wet Dog Food",
+    "variant": "T-Bone Steak Flavor in Gourmet Gravy",
+    "recipe": [
+      "T-Bone Steak Flavor in Gourmet Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "22 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete six-field label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-nestle-purina-petcare-company"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001780001909",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Flavor",
+    "recipe": [
+      "Porterhouse Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "45 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.kroger.com/p/alpo-t-bonz-porterhouse-flavor-dog-snacks/0001780001909"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217091",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Flavor",
+    "recipe": [
+      "Porterhouse Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.frysfood.com/p/alpo-t-bonz-porterhouse-flavor-dog-treats/0001113217091"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217134",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Dental Chews",
+    "product_name": "ALPO Dental Chews Dog Treats",
+    "variant": "Small/Medium",
+    "recipe": [
+      "Small/Medium"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "24 ct",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.kroger.com/p/alpo-small-medium-dog-dental-chews-snacks/0001113217134"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217089",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Ribeye Flavor",
+    "recipe": [
+      "Ribeye Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.frysfood.com/p/alpo-t-bonz-ribeye-flavor-dog-treats/0001113217089"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217090",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Flavor",
+    "recipe": [
+      "Porterhouse Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.kroger.com/p/purina-alpo-t-bonz-porterhouse-flavor-dog-treats/0001113217090"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217104",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Porterhouse Flavor",
+    "recipe": [
+      "Porterhouse Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "45 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.marianos.com/p/alpo-t-bonz-porterhouse-flavor-dog-treats/0001113217104"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217086",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Filet Mignon Flavor",
+    "recipe": [
+      "Filet Mignon Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.smithsfoodanddrug.com/p/purina-alpo-t-bonz-filet-mignon-flavor-dog-treats/0001113217086"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  },
+  {
+    "catalog_number": null,
+    "upc": "0001113217088",
+    "canonical_gtin14": null,
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "Ribeye Flavor",
+    "recipe": [
+      "Ribeye Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "pouch",
+    "size": "4.5 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Rejected retailer identifier; not accepted as UPC-A.",
+    "source_urls": [
+      "https://www.kroger.com/p/purina-alpo-t-bonz-ribeye-flavor-dog-treats/0001113217088"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "Source printed this 13-digit identifier. Per BRIEF Step 1 it is not a valid 12-digit UPC-A and was not repaired.",
+    "conflicts": [],
+    "verification_notes": [
+      "Step 1 stopped: source printed a 13-digit identifier, not a 12-digit UPC-A. It was retained exactly as printed and was NOT repaired, truncated, or reinterpreted."
+    ],
+    "research_status": "rejected"
+  }
+]
