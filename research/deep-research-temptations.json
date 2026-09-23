@@ -5622,9 +5622,10 @@
       "conflicts": [],
       "verification_notes": [
         "Step 1: the page prints \"23100150383\", eleven digits; the dropped leading zero restored, after which the UPC-A check digit validates. No other digit changed.",
-        "A variety pack carries no composition of its own."
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5960,9 +5961,10 @@
       "barcode_notes": "Barcode and size from the maker page itself: each size in its size selector (data-size-id) has a \"Buy Now\" block keyed by the same id whose data-mm-ids carries that size's GTIN.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own."
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -6099,9 +6101,10 @@
       "barcode_notes": "Barcode and size from the maker page itself: each size in its size selector (data-size-id) has a \"Buy Now\" block keyed by the same id whose data-mm-ids carries that size's GTIN.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own."
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {

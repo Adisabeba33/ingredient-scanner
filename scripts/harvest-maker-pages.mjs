@@ -74,7 +74,10 @@ async function fetchViaPage(url, tries = 3) {
 }
 const sitemapRes = await fetchViaPage(new URL("/sitemap.xml", origin).href);
 const sitemap = sitemapRes.body ? sitemapRes.body.toString("utf8") : "";
-let urls = [...sitemap.matchAll(/<loc>([^<]+\/products\/[^<]+)<\/loc>/g)].map((m) => m[1]);
+// ONLY_URLS=<file with one URL per line> re-runs just those pages — for the
+// ones a first pass lost to timeouts, which on these sites is a third or more.
+let urls = process.env.ONLY_URLS ? readFileSync(process.env.ONLY_URLS, "utf8").trim().split("\n") : [];
+if (!urls.length) urls = [...sitemap.matchAll(/<loc>([^<]+\/products\/[^<]+)<\/loc>/g)].map((m) => m[1]);
 console.error(`${urls.length} product URLs in the sitemap`);
 
 // No sitemap (temptationstreats.com started answering 403 for it, and for
@@ -180,6 +183,10 @@ for (const url of urls) {
     rec.error = String(e).slice(0, 200);
   }
   manifest.push(rec);
+  // PACE_MS slows the walk: these sites time out a steady stream of page
+  // loads long before they refuse one (a third of a first pass was lost that
+  // way, and every lost page loaded fine on its own).
+  if (process.env.PACE_MS) await sleep(Number(process.env.PACE_MS));
   writeFileSync(join(out, "manifest.json"), JSON.stringify(manifest, null, 1));
   console.error(rec.status, rec.sku, rec.name);
 }

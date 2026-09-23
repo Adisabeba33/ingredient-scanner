@@ -75,3 +75,22 @@ against 110 printed, 1.3% out, within this campaign's 3% tolerance.
   `filet-mignon-new-york-strip-flavors-12-ct-multipack`.
 - **The next four Mars brands** run the same site build: start with
   `scripts/harvest-maker-pages.mjs` and BRIEF-CESAR §2.
+
+## Batch 044 — re-read size by size
+
+The per-size method found on temptationstreats.com (TEMPTATIONS-HANDOFF §2)
+was run back over cesar.com:
+
+- **10 records upgraded** to source_verified. Their panel images loaded this
+  time, or their page's several sizes each have their own section.
+- **10 new barcodes**: Softies 4 oz, 16 oz and 18 oz, the 5 lb and 12 lb dry
+  bags, and three single packs the first pass never reached. 4 of them are
+  source_verified.
+- **8 records verified in batch 042 were NOT downgraded.** Their images timed
+  out on this pass. A missing image is not new evidence against a reading
+  that two transcribers already agreed on.
+- **22 boxes seeded** into `data/known-multipacks.ts`: every Cesar carton whose
+  name states its count ("24ct Multipack"). 19 variety packs whose name gives
+  no count stay in the ledger.
+
+Cesar now: 66 barcodes, 43 compositions, 22 boxes.

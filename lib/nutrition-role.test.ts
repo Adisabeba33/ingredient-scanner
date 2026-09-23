@@ -51,6 +51,12 @@ describe("detectNutritionRole", () => {
 
   // Cesar sells a complete loaf and a meal complement side by side in the same
   // tray format. Only the range name separates them, and only under Cesar.
+  it("reads Sheba Meaty Tender Sticks as a treat", () => {
+    expect(
+      detectNutritionRole({ parts: ["Sheba", "Meaty Tender Sticks", "Chicken Flavor"] })
+    ).toBe("treat");
+  });
+
   it("reads Temptations dinners as dinner and the treats as treats", () => {
     expect(
       detectNutritionRole({ parts: ["Temptations", "Classic", "Tasty Chicken Flavor"] })

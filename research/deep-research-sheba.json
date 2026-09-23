@@ -1,1 +1,3415 @@
-{"schema_version":2,"purpose":"Staging ledger for source-verified pet-food barcode research before catalog promotion.","repository":"Adisabeba33/ingredient-scanner","brand_scope":["Sheba"],"created_at":"2026-09-07","updated_at":"2026-09-07","rules_source":"research/AGENTS.md","records":[{"catalog_number":null,"upc":"023100110271","canonical_gtin14":"00023100110271","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Paté Chicken & Turkey Variety Pack","variant":"Savory Chicken Entrée & Roasted Turkey Entrée","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"12 x 2.64 oz twin-packs (24 servings)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-17392131","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack (2 x 1.32 oz servings)"},{"catalog_number":null,"upc":"023100110288","canonical_gtin14":"00023100110288","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Paté Salmon & White Fish/Tuna Variety Pack","variant":"Sustainable Salmon Entrée & Tender White Fish and Tuna Entrée","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"12 x 2.64 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-50032423","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100115160","canonical_gtin14":"00023100115160","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy Salmon & Tuna Variety Pack","variant":"Salmon Entrée & Tuna Entrée","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"12 x 2.6 oz twin-packs (24 x 1.32 oz servings)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.cub.com/store/cub/products/16465084-sheba-wet-cat-food-cuts-in-gravy-variety-pack-with-sustainable-tuna-and-gourmet-salmon-entree-31-oz","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.6 oz twin-pack"},{"catalog_number":null,"upc":"023100118338","canonical_gtin14":"00023100118338","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy Chicken & Turkey Variety Pack","variant":"Roasted Chicken Entrée & Tender Turkey Entrée","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"12 x 2.64 oz twin-packs (24 servings)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-51678626","https://www.shoprite.com/product/sheba-perfect-portions-cuts-in-gravy-premium-cat-food-variety-pack-132-oz-24-count-id-00023100118338"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100118840","canonical_gtin14":"00023100118840","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Paté Seafood Variety Pack","variant":"Sustainable Salmon, Signature Seafood & Tender White Fish and Tuna Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"24 x 2.6 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-52093596","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.6 oz twin-pack"},{"catalog_number":null,"upc":"023100123622","canonical_gtin14":"00023100123622","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy Mixed Variety Pack","variant":"Roasted Chicken, Sustainable Salmon & Tender Turkey Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"3.96 lb (24 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-52249458","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100124001","canonical_gtin14":"00023100124001","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Paté Meat Variety Pack","variant":"Savory Chicken, Roasted Turkey & Tender Beef Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"63.4 oz (24 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-82147266","https://shopwoodmans.com/store/woodmans-food-markets/products/17007305-sheba-wet-cat-food-pate-variety-pack-savory-chicken-roasted-turkey-and-tender-beef-entrees-3-lb"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100124018","canonical_gtin14":"00023100124018","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy Seafood Variety Pack","variant":"Sustainable Tuna, Sustainable Salmon & White Fish and Tuna Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"63.4 oz (24 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-82147270","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100132242","canonical_gtin14":"00023100132242","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy 36-Count Variety Pack","variant":"Roasted Chicken, Signature Tuna & Tender Turkey Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"36 x 2.6 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-82147272","https://www.kroger.com/p/sheba-perfect-portions-cuts-in-gravy-wet-cat-food-variety-pack/0002310013224"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":36,"unit_size":"2.6 oz twin-pack"},{"catalog_number":null,"upc":"023100132259","canonical_gtin14":"00023100132259","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Paté 36-Count Variety Pack","variant":"Savory Chicken, Tender Beef & Tender White Fish and Tuna Entrées","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"36 x 2.6 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-82147277","https://www.sheba.com/multipacks"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":36,"unit_size":"2.6 oz twin-pack"},{"catalog_number":null,"upc":"023100144276","canonical_gtin14":"00023100144276","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Kitten","product_name":"SHEBA PERFECT PORTIONS Soft Paté Kitten Variety Pack","variant":"Savory Chicken & Delicate Salmon Entrées","recipe":[],"life_stage":"kitten","food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"31.7 oz (12 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-87406024","https://www.shoprite.com/product/sheba-perfect-portions-soft-pat-premium-kitten-food-variety-pack-132-oz-24-count-id-00023100144276"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100147499","canonical_gtin14":"00023100147499","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Gravy Indulgence","product_name":"SHEBA GRAVY INDULGENCE Beef & Chicken Variety Pack","variant":"Beef Entrée in Extra Gravy & Chicken Entrée in Extra Gravy","recipe":[],"life_stage":"adult","food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"31.7 oz (12 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-94905848","https://www.shoprite.com/product/sheba-perfect-portions-gravy-indulgence-premium-cat-food-variety-pack-132-oz-24-count-id-00023100147499"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100147512","canonical_gtin14":"00023100147512","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Gravy Indulgence","product_name":"SHEBA GRAVY INDULGENCE Salmon & White Fish Variety Pack","variant":"Salmon Entrée in Extra Gravy & White Fish Entrée in Extra Gravy","recipe":[],"life_stage":"adult","food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"31.7 oz (12 x 2.64 oz twin-packs)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-93281953","https://www.sheba.com/gravy-indulgence"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"2.64 oz twin-pack"},{"catalog_number":null,"upc":"023100150468","canonical_gtin14":"00023100150468","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Selections Filets in Broth","product_name":"SHEBA Selections Filets in Broth Variety Pack","variant":"Chicken Recipe & Chicken and Tuna Recipe","recipe":[],"life_stage":null,"food_form":"supplement","texture":null,"presentation":null,"package_type":"box","size":"10.4 oz (8 x 1.3 oz trays)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-93281956","https://www.directionsforme.org/product/300296"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":8,"unit_size":"1.3 oz tray"},{"catalog_number":null,"upc":"023100142951","canonical_gtin14":"00023100142951","barcode_scope":"multipack","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Meaty Tender Sticks","product_name":"SHEBA Meaty Tender Sticks Variety Pack","variant":"Salmon, Tuna & Chicken Flavors","recipe":[],"life_stage":null,"food_form":"treat","texture":null,"presentation":null,"package_type":"other","size":"5.68 oz (40 sticks)","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.target.com/p/-/A-94414983","https://www.sheba.com/all-products"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":40,"unit_size":"individually wrapped stick"},{"catalog_number":null,"upc":"023100150260","canonical_gtin14":"00023100150260","barcode_scope":"case","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Selections Filets in Broth","product_name":"SHEBA Selections Filets in Broth Chicken Recipe Case","variant":"Chicken Recipe","recipe":["chicken"],"life_stage":null,"food_form":"supplement","texture":null,"presentation":null,"package_type":"box","size":"12 x 1.3 oz trays","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.chewy.com/sheba-selections-filets-in-broth/dp/1568718","https://andorra.desertcart.com/products/687975739-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-recipe-1-3-oz-cups-12-count"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"1.3 oz tray"},{"catalog_number":null,"upc":"023100150284","canonical_gtin14":"00023100150284","barcode_scope":"case","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Selections Filets in Broth","product_name":"SHEBA Selections Filets in Broth Chicken & Tuna Recipe Case","variant":"Chicken & Tuna Recipe","recipe":["chicken","tuna"],"life_stage":null,"food_form":"supplement","texture":null,"presentation":null,"package_type":"box","size":"12 x 1.3 oz trays","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.petco.com/product/sheba-selections-filets-in-broth-cat-meal-complement-chicken-and-tuna-recipe","https://www.desertcart.us/products/689019301-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-tuna-recipe-1-3-oz-cups-12-count"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"1.3 oz tray"},{"catalog_number":null,"upc":"023100150307","canonical_gtin14":"00023100150307","barcode_scope":"case","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Selections Filets in Broth","product_name":"SHEBA Selections Filets in Broth Chicken & Shrimp Recipe Case","variant":"Chicken & Shrimp Recipe","recipe":["chicken","shrimp"],"life_stage":null,"food_form":"supplement","texture":null,"presentation":null,"package_type":"box","size":"12 x 1.3 oz trays","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://www.chewy.com/sheba-selections-filets-in-broth/dp/1568710","https://solomon.desertcart.com/products/693742108-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-shrimp-recipe-1-3-oz-cups-12-count"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":12,"unit_size":"1.3 oz tray"},{"catalog_number":null,"upc":"023100114163","canonical_gtin14":"00023100114163","barcode_scope":"case","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS Cuts in Gravy Roasted Chicken Case","variant":"Roasted Chicken Entrée","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"24 x 2.6 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://mastervaluewholesale.com/products/sheba-perfect-portions-cuts-in-gravy-roasted-chicken-flavor-wet-cat-food-260-oz-pack-of-24"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.6 oz twin-pack"},{"catalog_number":null,"upc":"023100114200","canonical_gtin14":"00023100114200","barcode_scope":"case","brand":"Sheba","manufacturer":"Mars Petcare US","species":"cat","product_line":"Perfect Portions","product_name":"SHEBA PERFECT PORTIONS White Fish & Tuna Case","variant":"White Fish & Tuna","recipe":[],"life_stage":null,"food_form":"wet","texture":null,"presentation":null,"package_type":"box","size":"24 x 2.6 oz twin-packs","ingredients_verbatim":null,"ingredients_ordered_normalized":[],"guaranteed_analysis":{"crude_protein_min_percent":null,"crude_fat_min_percent":null,"crude_fiber_max_percent":null,"moisture_max_percent":null,"ash_max_percent":null,"taurine_min_percent":null,"other_printed_guarantees":[]},"calorie_content":{"kcal_per_kg":null,"kcal_per_unit":null,"unit_name":null},"label_deck_code":null,"formula_source":"Outer pack identity only; no member composition stored.","source_urls":["https://mastervaluewholesale.com/collections/household/products/sheba-perfect-portions-whitefish-26-oz-pack-of-24"],"source_accessed_at":"2026-09-07","barcode_notes":"UPC-A check digit valid.","conflicts":[],"verification_notes":["Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."],"research_status":"source_verified","contains":[],"pack_count":24,"unit_size":"2.6 oz twin-pack"}]}
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Sheba"
+  ],
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-23",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "023100110271",
+      "canonical_gtin14": "00023100110271",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Paté Chicken & Turkey Variety Pack",
+      "variant": "Savory Chicken Entrée & Roasted Turkey Entrée",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 2.64 oz twin-packs (24 servings)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-17392131",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack (2 x 1.32 oz servings)"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110288",
+      "canonical_gtin14": "00023100110288",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Paté Salmon & White Fish/Tuna Variety Pack",
+      "variant": "Sustainable Salmon Entrée & Tender White Fish and Tuna Entrée",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 2.64 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-50032423",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100115160",
+      "canonical_gtin14": "00023100115160",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy Salmon & Tuna Variety Pack",
+      "variant": "Salmon Entrée & Tuna Entrée",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 2.6 oz twin-packs (24 x 1.32 oz servings)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.cub.com/store/cub/products/16465084-sheba-wet-cat-food-cuts-in-gravy-variety-pack-with-sustainable-tuna-and-gourmet-salmon-entree-31-oz",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100118338",
+      "canonical_gtin14": "00023100118338",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy Chicken & Turkey Variety Pack",
+      "variant": "Roasted Chicken Entrée & Tender Turkey Entrée",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 2.64 oz twin-packs (24 servings)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-51678626",
+        "https://www.shoprite.com/product/sheba-perfect-portions-cuts-in-gravy-premium-cat-food-variety-pack-132-oz-24-count-id-00023100118338"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100118840",
+      "canonical_gtin14": "00023100118840",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Paté Seafood Variety Pack",
+      "variant": "Sustainable Salmon, Signature Seafood & Tender White Fish and Tuna Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 2.6 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-52093596",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100123622",
+      "canonical_gtin14": "00023100123622",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy Mixed Variety Pack",
+      "variant": "Roasted Chicken, Sustainable Salmon & Tender Turkey Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "3.96 lb (24 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-52249458",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100124001",
+      "canonical_gtin14": "00023100124001",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Paté Meat Variety Pack",
+      "variant": "Savory Chicken, Roasted Turkey & Tender Beef Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "63.4 oz (24 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-82147266",
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/17007305-sheba-wet-cat-food-pate-variety-pack-savory-chicken-roasted-turkey-and-tender-beef-entrees-3-lb"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100124018",
+      "canonical_gtin14": "00023100124018",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy Seafood Variety Pack",
+      "variant": "Sustainable Tuna, Sustainable Salmon & White Fish and Tuna Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "63.4 oz (24 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-82147270",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100132242",
+      "canonical_gtin14": "00023100132242",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy 36-Count Variety Pack",
+      "variant": "Roasted Chicken, Signature Tuna & Tender Turkey Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "36 x 2.6 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-82147272",
+        "https://www.kroger.com/p/sheba-perfect-portions-cuts-in-gravy-wet-cat-food-variety-pack/0002310013224"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 36,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100132259",
+      "canonical_gtin14": "00023100132259",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Paté 36-Count Variety Pack",
+      "variant": "Savory Chicken, Tender Beef & Tender White Fish and Tuna Entrées",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "36 x 2.6 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-82147277",
+        "https://www.sheba.com/multipacks"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 36,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100144276",
+      "canonical_gtin14": "00023100144276",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "SHEBA PERFECT PORTIONS Soft Paté Kitten Variety Pack",
+      "variant": "Savory Chicken & Delicate Salmon Entrées",
+      "recipe": [],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "31.7 oz (12 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-87406024",
+        "https://www.shoprite.com/product/sheba-perfect-portions-soft-pat-premium-kitten-food-variety-pack-132-oz-24-count-id-00023100144276"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100147499",
+      "canonical_gtin14": "00023100147499",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Gravy Indulgence",
+      "product_name": "SHEBA GRAVY INDULGENCE Beef & Chicken Variety Pack",
+      "variant": "Beef Entrée in Extra Gravy & Chicken Entrée in Extra Gravy",
+      "recipe": [],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "31.7 oz (12 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-94905848",
+        "https://www.shoprite.com/product/sheba-perfect-portions-gravy-indulgence-premium-cat-food-variety-pack-132-oz-24-count-id-00023100147499"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100147512",
+      "canonical_gtin14": "00023100147512",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Gravy Indulgence",
+      "product_name": "SHEBA GRAVY INDULGENCE Salmon & White Fish Variety Pack",
+      "variant": "Salmon Entrée in Extra Gravy & White Fish Entrée in Extra Gravy",
+      "recipe": [],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "31.7 oz (12 x 2.64 oz twin-packs)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-93281953",
+        "https://www.sheba.com/gravy-indulgence"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "2.64 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150468",
+      "canonical_gtin14": "00023100150468",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Selections Filets in Broth Variety Pack",
+      "variant": "Chicken Recipe & Chicken and Tuna Recipe",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "10.4 oz (8 x 1.3 oz trays)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-93281956",
+        "https://www.directionsforme.org/product/300296"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 8,
+      "unit_size": "1.3 oz tray"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100142951",
+      "canonical_gtin14": "00023100142951",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Meaty Tender Sticks",
+      "product_name": "SHEBA Meaty Tender Sticks Variety Pack",
+      "variant": "Salmon, Tuna & Chicken Flavors",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "other",
+      "size": "5.68 oz (40 sticks)",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.target.com/p/-/A-94414983",
+        "https://www.sheba.com/all-products"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 40,
+      "unit_size": "individually wrapped stick"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150260",
+      "canonical_gtin14": "00023100150260",
+      "barcode_scope": "case",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Selections Filets in Broth Chicken Recipe Case",
+      "variant": "Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.3 oz trays",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.chewy.com/sheba-selections-filets-in-broth/dp/1568718",
+        "https://andorra.desertcart.com/products/687975739-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-recipe-1-3-oz-cups-12-count"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "1.3 oz tray"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150284",
+      "canonical_gtin14": "00023100150284",
+      "barcode_scope": "case",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Selections Filets in Broth Chicken & Tuna Recipe Case",
+      "variant": "Chicken & Tuna Recipe",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.3 oz trays",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.petco.com/product/sheba-selections-filets-in-broth-cat-meal-complement-chicken-and-tuna-recipe",
+        "https://www.desertcart.us/products/689019301-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-tuna-recipe-1-3-oz-cups-12-count"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "1.3 oz tray"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150307",
+      "canonical_gtin14": "00023100150307",
+      "barcode_scope": "case",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Selections Filets in Broth Chicken & Shrimp Recipe Case",
+      "variant": "Chicken & Shrimp Recipe",
+      "recipe": [
+        "chicken",
+        "shrimp"
+      ],
+      "life_stage": null,
+      "food_form": "supplement",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "12 x 1.3 oz trays",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://www.chewy.com/sheba-selections-filets-in-broth/dp/1568710",
+        "https://solomon.desertcart.com/products/693742108-shebaselections-filets-in-broth-adult-wet-cat-meal-complement-chicken-shrimp-recipe-1-3-oz-cups-12-count"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 12,
+      "unit_size": "1.3 oz tray"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114163",
+      "canonical_gtin14": "00023100114163",
+      "barcode_scope": "case",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS Cuts in Gravy Roasted Chicken Case",
+      "variant": "Roasted Chicken Entrée",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 2.6 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://mastervaluewholesale.com/products/sheba-perfect-portions-cuts-in-gravy-roasted-chicken-flavor-wet-cat-food-260-oz-pack-of-24"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114200",
+      "canonical_gtin14": "00023100114200",
+      "barcode_scope": "case",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA PERFECT PORTIONS White Fish & Tuna Case",
+      "variant": "White Fish & Tuna",
+      "recipe": [],
+      "life_stage": null,
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "24 x 2.6 oz twin-packs",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Outer pack identity only; no member composition stored.",
+      "source_urls": [
+        "https://mastervaluewholesale.com/collections/household/products/sheba-perfect-portions-whitefish-26-oz-pack-of-24"
+      ],
+      "source_accessed_at": "2026-09-07",
+      "barcode_notes": "UPC-A check digit valid.",
+      "conflicts": [],
+      "verification_notes": [
+        "Exact US outer-pack identity/size bound to this valid UPC; no stitched member formula; 023100 family to be registered/confirmed for Mars Petcare US."
+      ],
+      "research_status": "source_verified",
+      "contains": [],
+      "pack_count": 24,
+      "unit_size": "2.6 oz twin-pack"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150277",
+      "canonical_gtin14": "00023100150277",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Sheba Selections Filets in Broth Cat Meal Complement Chicken & Tuna Recipe",
+      "variant": "Cat Meal Complement Chicken & Tuna Recipe",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.3 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-selections-filets-broth-cat-meal-complement-chicken-tuna-recipe"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110233",
+      "canonical_gtin14": "00023100110233",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Gourmet Chicken & Tuna Entrée",
+      "variant": "Premium Paté Gourmet Chicken & Tuna Entrée",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-gourmet-chicken-tuna-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110257",
+      "canonical_gtin14": "00023100110257",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Tender Beef Entrée",
+      "variant": "Premium Paté Tender Beef Entrée",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-tender-beef-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100118345",
+      "canonical_gtin14": "00023100118345",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Roasted Chicken Entrée and Sustainable Tuna Entrée",
+      "variant": "Cuts in Gravy Roasted Chicken Entrée and Sustainable Tuna Entrée",
+      "recipe": [
+        "tuna / chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-roasted-chicken-entree-and-sustainable-tuna-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100122687",
+      "canonical_gtin14": "00023100122687",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Savory Chicken Entrée, Sustainable Salmon Entrée, and Roasted Turkey Entrée",
+      "variant": "Premium Paté Savory Chicken Entrée, Sustainable Salmon Entrée, and Roasted Turkey Entrée",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-savory-chicken-entree-sustainable-salmon-entree-and-roasted-turkey-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100147376",
+      "canonical_gtin14": "00023100147376",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Gravy Indulgence",
+      "product_name": "SHEBA SHEBA GRAVY INDULGENCE White Fish",
+      "variant": "White Fish",
+      "recipe": [
+        "white fish"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-gravy-indulgence-white-fish"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110202",
+      "canonical_gtin14": "00023100110202",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Savory Chicken Entrée",
+      "variant": "Premium Paté Savory Chicken Entrée",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": "Chicken, Poultry By-Products, Water, Chicken Broth, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Calcium Carbonate, Fish Oil, Choline Chloride, Magnesium Sulfate, Tapioca Starch, DL-Methionine, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Iron Oxide Color, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Poultry By-Products",
+        "Water",
+        "Chicken Broth",
+        "Guar Gum",
+        "Potassium Chloride",
+        "Sodium Tripolyphosphate",
+        "Calcium Carbonate",
+        "Fish Oil",
+        "Choline Chloride",
+        "Magnesium Sulfate",
+        "Tapioca Starch",
+        "DL-Methionine",
+        "Taurine",
+        "Salt",
+        "Thiamine Mononitrate",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Iron Oxide Color",
+        "Manganese Sulfate",
+        "Copper Sulfate",
+        "Pyridoxine Hydrochloride",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Menadione Sodium Bisulfite Complex"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 80,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.06,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-savory-chicken-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [
+        "sheba.com shows this panel (the same list, or the same image file) on the page of wet__sheba-perfect-portions-premium-pate-savory-chicken-entree-and-roasted-turkey-entree, wet__sheba-perfect-portions-premium-pate-savory-chicken-entree-and-sustainable-salmon-entree, wet__sheba-perfect-portions-premium-pate-savory-chicken-entree-sustainable-salmon-entree-and-roasted-turkey-entree, wet__sheba-perfect-portions-premium-pate-savory-chicken-entree-tender-beef-entree-and-tender-whitefish-tuna-entree. Kept for whoever photographs the pack; not a claim about this barcode."
+      ],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100144153",
+      "canonical_gtin14": "00023100144153",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "SHEBA Sheba Kitten Paté - Chicken",
+      "variant": "Kitten Paté - Chicken",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.65 oz",
+      "ingredients_verbatim": "Chicken, Water, Poultry By-Product, Pork Broth, Dried Egg Product, Potassium Chloride, Guar Gum, Sodium Tripolyphosphate, Fish Oil, Calcium Carbonate, Choline Chloride, Magnesium Sulfate, Tapioca Starch, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Iron Oxide Color, Vitamin D3 Supplement, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Folic Acid, Menadione Sodium Bisulfite Complex",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Water",
+        "Poultry By-Product",
+        "Pork Broth",
+        "Dried Egg Product",
+        "Potassium Chloride",
+        "Guar Gum",
+        "Sodium Tripolyphosphate",
+        "Fish Oil",
+        "Calcium Carbonate",
+        "Choline Chloride",
+        "Magnesium Sulfate",
+        "Tapioca Starch",
+        "Taurine",
+        "Salt",
+        "Thiamine Mononitrate",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Iron Oxide Color",
+        "Vitamin D3 Supplement",
+        "Manganese Sulfate",
+        "Copper Sulfate",
+        "Pyridoxine Hydrochloride",
+        "Potassium Iodide",
+        "Folic Acid",
+        "Menadione Sodium Bisulfite Complex"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 10,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 80,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.06,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Docosahexaenoic acid",
+            "basis": "min",
+            "value": 0.016,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 80,
+            "unit": "IU/kg"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-kitten-pate-chicken"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100138022",
+      "canonical_gtin14": "00023100138022",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Bistro",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Bistro Salmon in Creamy Sauce Entrée",
+      "variant": "Salmon in Creamy Sauce Entrée",
+      "recipe": [
+        "salmon in creamy sauce"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_sauce",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-bistro-salmon-creamy-sauce-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100117850",
+      "canonical_gtin14": "00023100117850",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Meaty Tender Sticks",
+      "product_name": "SHEBA SHEBA CAT TREATS Meaty Tender Sticks Tuna Flavor",
+      "variant": "Tuna Flavor",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "0.71 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-cat-treats-meaty-tender-sticks-tuna-flavor"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100120348",
+      "canonical_gtin14": "00023100120348",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Savory Chicken Entrée and Sustainable Salmon Entrée",
+      "variant": "Premium Paté Savory Chicken Entrée and Sustainable Salmon Entrée",
+      "recipe": [
+        "whitefish",
+        "tuna",
+        "chicken and salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-savory-chicken-entree-and-sustainable-salmon-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100149349",
+      "canonical_gtin14": "00023100149349",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "SHEBA Sheba Perfect Portions Kitten Wet Cat Food Pate Chicken Entree, Salmon Entree, and Turkey Entrée, 2.6 oz. Twin-Pack Trays, Pack of 24",
+      "variant": "Kitten Wet Cat Food Pate Chicken Entree, Salmon Entree, and Turkey Entrée",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "turkey"
+      ],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.65 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-kitten-wet-cat-food-pate-chicken-entree-salmon-entree-and-turkey-entree-26-oz-twin-pack-trays-pack-24"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114156",
+      "canonical_gtin14": "00023100114156",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Sustainable Tuna Entrée",
+      "variant": "Cuts in Gravy Sustainable Tuna Entrée",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "cuts",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-sustainable-tuna-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100136981",
+      "canonical_gtin14": "00023100136981",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Bistro",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Bistro Chicken in Alfredo Sauce Entrée",
+      "variant": "Chicken in Alfredo Sauce Entrée",
+      "recipe": [
+        "chicken in alfredo sauce"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_sauce",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": "Water, Chicken, Poultry By-Products, Animal Plasma, Tapioca Starch, Sunflower, Oil, Dried Egg Product, Potassium Chloride, Fish Oil, Salt, Glucose, Magnesium Sulfate, Sodium Tripolyphosphate, Choline Chloride, Glycine, Sodium Caseinate, Xanthan Gum, Natural Parmesan and Butter Flavor, Taurine, Ascorbic Acid (preservative), Guar Gum, DL-Methionine, Natural Flavor, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex.",
+      "ingredients_ordered_normalized": [
+        "Water",
+        "Chicken",
+        "Poultry By-Products",
+        "Animal Plasma",
+        "Tapioca Starch",
+        "Sunflower",
+        "Oil",
+        "Dried Egg Product",
+        "Potassium Chloride",
+        "Fish Oil",
+        "Salt",
+        "Glucose",
+        "Magnesium Sulfate",
+        "Sodium Tripolyphosphate",
+        "Choline Chloride",
+        "Glycine",
+        "Sodium Caseinate",
+        "Xanthan Gum",
+        "Natural Parmesan and Butter Flavor",
+        "Taurine",
+        "Ascorbic Acid (preservative)",
+        "Guar Gum",
+        "DL-Methionine",
+        "Natural Flavor",
+        "Thiamine Mononitrate",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Manganese Sulfate",
+        "Copper Sulfate",
+        "Pyridoxine Hydrochloride",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Menadione Sodium Bisulfite Complex"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7,
+        "crude_fat_min_percent": 4.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 84,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.06,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-bistro-chicken-alfredo-sauce-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150291",
+      "canonical_gtin14": "00023100150291",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Sheba Selections Filets in Broth Cat Meal Complement Chicken & Shrimp Recipe",
+      "variant": "Cat Meal Complement Chicken & Shrimp Recipe",
+      "recipe": [
+        "chicken",
+        "shrimp"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.3 oz",
+      "ingredients_verbatim": "Chicken, Chicken Broth, Water, Shrimp, Tuna, Modified Tapioca Starch, Sunflower Oil, Natural Flavor, Glycine, Guar Gum.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Broth",
+        "Water",
+        "Shrimp",
+        "Tuna",
+        "Modified Tapioca Starch",
+        "Sunflower Oil",
+        "Natural Flavor",
+        "Glycine",
+        "Guar Gum"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 13,
+        "crude_fat_min_percent": 1.2,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 84.5,
+        "ash_max_percent": 2,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 754,
+        "kcal_per_unit": 28,
+        "unit_name": "tray"
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-selections-filets-broth-cat-meal-complement-chicken-shrimp-recipe"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 754 kcal/kg × 1.3 oz = 27.8; the panel says 28.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114187",
+      "canonical_gtin14": "00023100114187",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Entree with Sustainable Salmon",
+      "variant": "Cuts in Gravy Entree with Sustainable Salmon",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "cuts",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-entree-sustainable-salmon"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100147352",
+      "canonical_gtin14": "00023100147352",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Gravy Indulgence",
+      "product_name": "SHEBA SHEBA GRAVY INDULGENCE Salmon",
+      "variant": "Salmon",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-gravy-indulgence-salmon"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110196",
+      "canonical_gtin14": "00023100110196",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Signature Seafood Entrée",
+      "variant": "Premium Paté Signature Seafood Entrée",
+      "recipe": [
+        "seafood"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-signature-seafood-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100150253",
+      "canonical_gtin14": "00023100150253",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Filets in Broth",
+      "product_name": "SHEBA Sheba Selections Filets in Broth Cat Meal Complement Chicken Recipe",
+      "variant": "Cat Meal Complement Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_broth",
+      "package_type": "tray",
+      "size": "1.3 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-selections-filets-broth-cat-meal-complement-chicken-recipe"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100146195",
+      "canonical_gtin14": "00023100146195",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Sustainable Salmon, Tender Trout, and Sustainable Tuna Entrée Variety Pack",
+      "variant": "Sustainable Salmon, Tender Trout, and Sustainable Tuna Entrée Variety Pack",
+      "recipe": [
+        "white fish",
+        "chicken and salmon",
+        "chicken",
+        "salmon",
+        "turkey",
+        "chicken / tuna / turkey",
+        "gourmet salmon entrée",
+        "tender trout entrée",
+        "with sustainable tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-sustainable-salmon-tender-trout-and-sustainable-tuna-entree-variety-pack"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110240",
+      "canonical_gtin14": "00023100110240",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Tender Whitefish & Tuna Entrée",
+      "variant": "Premium Paté Tender Whitefish & Tuna Entrée",
+      "recipe": [
+        "whitefish",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": "Chicken, Water, Poultry By-Products, White Fish, Chicken Broth, Tuna, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Choline Chloride, Magnesium Sulfate, Tapioca Starch, DL-Methionine, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Water",
+        "Poultry By-Products",
+        "White Fish",
+        "Chicken Broth",
+        "Tuna",
+        "Guar Gum",
+        "Potassium Chloride",
+        "Sodium Tripolyphosphate",
+        "Fish Oil",
+        "Choline Chloride",
+        "Magnesium Sulfate",
+        "Tapioca Starch",
+        "DL-Methionine",
+        "Taurine",
+        "Salt",
+        "Thiamine Mononitrate",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Manganese Sulfate",
+        "Copper Sulfate",
+        "Pyridoxine Hydrochloride",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Menadione Sodium Bisulfite Complex"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 7,
+        "crude_fat_min_percent": 2.5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 84,
+        "ash_max_percent": 3.5,
+        "taurine_min_percent": 0.06,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-tender-whitefish-tuna-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114224",
+      "canonical_gtin14": "00023100114224",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Tender Trout Entrée",
+      "variant": "Cuts in Gravy Tender Trout Entrée",
+      "recipe": [
+        "trout"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "cuts",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-tender-trout-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110264",
+      "canonical_gtin14": "00023100110264",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Roasted Turkey Entrée",
+      "variant": "Premium Paté Roasted Turkey Entrée",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-roasted-turkey-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100117812",
+      "canonical_gtin14": "00023100117812",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Meaty Tender Sticks",
+      "product_name": "SHEBA SHEBA CAT TREATS Meaty Tender Sticks Chicken Flavor",
+      "variant": "Chicken Flavor",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "0.71 oz",
+      "ingredients_verbatim": "Chicken, Pork, Pork Liver, Turkey, Pork Meal, Sugar, Brewers Dried Yeast, Animal Plasma, Yeast Extract, Salt, Lactic Acid, Calcium Propionate (preservative), Potassium Sorbate (preservative), Ascorbic Acid (preservative), Taurine, Mixed Tocopherols (preservative), Vitamin A Supplement, Vitamin D3 Supplement, Vitamin E Supplement",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Pork",
+        "Pork Liver",
+        "Turkey",
+        "Pork Meal",
+        "Sugar",
+        "Brewers Dried Yeast",
+        "Animal Plasma",
+        "Yeast Extract",
+        "Salt",
+        "Lactic Acid",
+        "Calcium Propionate (preservative)",
+        "Potassium Sorbate (preservative)",
+        "Ascorbic Acid (preservative)",
+        "Taurine",
+        "Mixed Tocopherols (preservative)",
+        "Vitamin A Supplement",
+        "Vitamin D3 Supplement",
+        "Vitamin E Supplement"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 30,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-cat-treats-meaty-tender-sticks-chicken-flavor"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100149196",
+      "canonical_gtin14": "00023100149196",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Kitten",
+      "product_name": "SHEBA Sheba Perfect Portions Kitten Wet Cat Food Pate Turkey Entree, 2.6 oz. Twin-Pack Tray",
+      "variant": "Kitten Wet Cat Food Pate Turkey Entree",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "kitten",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.65 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-kitten-wet-cat-food-pate-turkey-entree-26-oz-twin-pack-tray"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100117829",
+      "canonical_gtin14": "00023100117829",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Meaty Tender Sticks",
+      "product_name": "SHEBA SHEBA CAT TREATS Meaty Tender Sticks Salmon Flavor",
+      "variant": "Salmon Flavor",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "0.71 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-cat-treats-meaty-tender-sticks-salmon-flavor"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110219",
+      "canonical_gtin14": "00023100110219",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Sustainable Salmon Entrée",
+      "variant": "Premium Paté Sustainable Salmon Entrée",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-sustainable-salmon-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114170",
+      "canonical_gtin14": "00023100114170",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Tender Turkey Entrée",
+      "variant": "Cuts in Gravy Tender Turkey Entrée",
+      "recipe": [
+        "turkey"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "cuts",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-tender-turkey-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100110226",
+      "canonical_gtin14": "00023100110226",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Premium Paté Roasted Chicken & Liver Entrée",
+      "variant": "Premium Paté Roasted Chicken & Liver Entrée",
+      "recipe": [
+        "chicken",
+        "liver"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "pate",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "2.6 oz",
+      "ingredients_verbatim": "Chicken, Poultry By-Products, Water, Poultry Broth, Guar Gum, Potassium Chloride, Sodium Tripolyphosphate, Fish Oil, Choline Chloride, Magnesium Sulfate, Calcium Carbonate, Tapioca Starch, DL-Methionine, Taurine, Salt, Thiamine Mononitrate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Iron Oxide Color, Manganese Sulfate, Copper Sulfate, Pyridoxine Hydrochloride, Potassium Iodide, Vitamin D3 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Poultry By-Products",
+        "Water",
+        "Poultry Broth",
+        "Guar Gum",
+        "Potassium Chloride",
+        "Sodium Tripolyphosphate",
+        "Fish Oil",
+        "Choline Chloride",
+        "Magnesium Sulfate",
+        "Calcium Carbonate",
+        "Tapioca Starch",
+        "DL-Methionine",
+        "Taurine",
+        "Salt",
+        "Thiamine Mononitrate",
+        "Vitamin E Supplement",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Iron Oxide Color",
+        "Manganese Sulfate",
+        "Copper Sulfate",
+        "Pyridoxine Hydrochloride",
+        "Potassium Iodide",
+        "Vitamin D3 Supplement",
+        "Folic Acid",
+        "Menadione Sodium Bisulfite Complex"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 5,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 80,
+        "ash_max_percent": 3,
+        "taurine_min_percent": 0.06,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (sheba.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-premium-pate-roasted-chicken-liver-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100114217",
+      "canonical_gtin14": "00023100114217",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA SHEBA PERFECT PORTIONS Cuts in Gravy Savory Mixed Grill Entrée",
+      "variant": "Cuts in Gravy Savory Mixed Grill Entrée",
+      "recipe": [
+        "mixed grill"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": "cuts",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-savory-mixed-grill-entree"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100147338",
+      "canonical_gtin14": "00023100147338",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Gravy Indulgence",
+      "product_name": "SHEBA SHEBA GRAVY INDULGENCE Beef",
+      "variant": "Beef",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-gravy-indulgence-beef"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100149738",
+      "canonical_gtin14": "00023100149738",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA Sheba Perfect Portions Cuts in Gravy 48 Count Variety Pack",
+      "variant": "Cuts in Gravy 48 Count Variety Pack",
+      "recipe": [
+        "roasted chicken; turkey; salmon; tuna"
+      ],
+      "life_stage": "all",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-cuts-gravy-48-count-variety-pack"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152257",
+      "canonical_gtin14": "00023100152257",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "SHEBA Sheba Grilled in Savory Sauce Adult Wet Cat Food Variety Pack, (24) 2.64 oz. Twin-Pack Trays",
+      "variant": "Grilled in Savory Sauce Adult Wet Cat Food Variety Pack, (24)",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-grilled-savory-sauce-adult-wet-cat-food-variety-pack-24-264-oz-twin-pack-trays"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152325",
+      "canonical_gtin14": "00023100152325",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA Sheba Perfect Portions Grilled in Savory Sauce Adult Wet Cat Food with Tender Tuna in Gravy, 2.64 oz. Twin-Pack Trays, 24 Count, 48 Servings",
+      "variant": "Grilled in Savory Sauce Adult Wet Cat Food with Tender Tuna in Gravy",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-grilled-savory-sauce-adult-wet-cat-food-tender-tuna-gravy-264-oz-twin-pack-trays-24-count-48-servings"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152301",
+      "canonical_gtin14": "00023100152301",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Grilled",
+      "product_name": "SHEBA Sheba Grilled in Sauce Adult Wet Cat Food with Flaky Salmon in Gravy, (24) 2.64 oz. Twin-Pack Trays",
+      "variant": "Grilled in Sauce Adult Wet Cat Food with Flaky Salmon in Gravy, (24)",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "in_gravy",
+      "package_type": "tray",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-grilled-sauce-adult-wet-cat-food-flaky-salmon-gravy-24-264-oz-twin-pack-trays"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152127",
+      "canonical_gtin14": "00023100152127",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Bisques",
+      "product_name": "SHEBA Sheba Bisque Savory Cat Treats, Chicken Recipe",
+      "variant": "Bisque Savory Cat Treats, Chicken Recipe",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "tray",
+      "size": "1.4 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-bisque-savory-cat-treats-chicken-recipe"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152288",
+      "canonical_gtin14": "00023100152288",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Perfect Portions",
+      "product_name": "SHEBA Sheba Perfect Portions Grilled in Savory Sauce Adult Wet Cat Food, Marinated Chicken Entree in Gravy, 2.64 oz. Twin-Pack Trays, 24 Count, 48 Servings",
+      "variant": "Grilled in Savory Sauce Adult Wet Cat Food, Marinated Chicken Entree in Gravy",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "2.64 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/wet/sheba-perfect-portions-grilled-savory-sauce-adult-wet-cat-food-marinated-chicken-entree-gravy-264-oz-twin-pack-trays-24-count-48-servings"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100180595",
+      "canonical_gtin14": "00023100180595",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Bisques",
+      "product_name": "SHEBA Sheba Bisque Savory Cat Treats Variety Pack",
+      "variant": "Bisque Savory Cat Treats Variety Pack",
+      "recipe": [
+        "chicken",
+        "tuna",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "1.4 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-bisque-savory-cat-treats-variety-pack"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100152141",
+      "canonical_gtin14": "00023100152141",
+      "barcode_scope": "individual_unit",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Bisques",
+      "product_name": "SHEBA Sheba Bisque Savory Cat Treats, Tuna Recipe",
+      "variant": "Bisque Savory Cat Treats, Tuna Recipe",
+      "recipe": [
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "tray",
+      "size": "1.4 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-bisque-savory-cat-treats-tuna-recipe"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100180571",
+      "canonical_gtin14": "00023100180571",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Selections Bisques",
+      "product_name": "SHEBA Sheba Bisque Savory Cat Treats, Chicken and Tuna Recipes, 8 Count (Pack of 2)",
+      "variant": "Bisque Savory Cat Treats, Chicken and Tuna Recipes, 8 Count (Pack of 2)",
+      "recipe": [
+        "chicken",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "1.4 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-bisque-savory-cat-treats-chicken-and-tuna-recipes-8-count-pack-2"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100180908",
+      "canonical_gtin14": "00023100180908",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Premium Purée",
+      "product_name": "SHEBA Sheba Premium Puree Chicken, Salmon, and Tuna Flavors Cat Treats Lickable",
+      "variant": "Premium Puree Chicken, Salmon, and Tuna Flavors Cat Treats Lickable",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "11.8 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-premium-puree-chicken-salmon-and-tuna-flavors-cat-treats-lickable"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100180885",
+      "canonical_gtin14": "00023100180885",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Premium Purée",
+      "product_name": "SHEBA Sheba Premium Puree Chicken, Salmon, and Tuna Flavors Cat Treats Lickable",
+      "variant": "Premium Puree Chicken, Salmon, and Tuna Flavors Cat Treats Lickable",
+      "recipe": [
+        "chicken",
+        "salmon",
+        "tuna"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "23.7 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-premium-puree-chicken-salmon-and-tuna-flavors-cat-treats-lickable"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own."
+      ],
+      "research_status": "needs_physical_label",
+      "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100180410",
+      "canonical_gtin14": "00023100180410",
+      "barcode_scope": "multipack",
+      "brand": "Sheba",
+      "manufacturer": "Mars Petcare US",
+      "species": "cat",
+      "product_line": "Premium Purée",
+      "product_name": "SHEBA Sheba Premium Puree Roasted Chicken Flavor Cat Treats Lickable, 0.49 oz Tubes, 4 Count",
+      "variant": "Premium Puree Roasted Chicken Flavor Cat Treats Lickable",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "treat",
+      "texture": null,
+      "presentation": null,
+      "package_type": "box",
+      "size": "1.98 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.sheba.com/products/treats/sheba-premium-puree-roasted-chicken-flavor-cat-treats-lickable-049-oz-tubes-4-count"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "A variety pack carries no composition of its own.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
+      ],
+      "research_status": "source_verified",
+      "contains": []
+    }
+  ]
+}

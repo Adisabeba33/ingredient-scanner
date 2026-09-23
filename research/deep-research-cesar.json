@@ -458,9 +458,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -1110,35 +1111,72 @@
       "presentation": "in_sauce",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Beef, Chicken Broth, Water, Chicken Liver, Pork By-Products, Beef Lung, Bacon, Potato, Chicken Heart, Calcium Carbonate, Soy Flour, Added Color, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Dried Yam, Magnesium Proteinate, Xanthan Gum, Guar Gum, dl-Methionine, Salt, Erythorbic Acid (Preservative), Filet Mignon Flavor, Zinc Sulfate, Natural Flavor, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Red #3, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), d-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Chicken Broth",
+        "Water",
+        "Chicken Liver",
+        "Pork By-Products",
+        "Beef Lung",
+        "Bacon",
+        "Potato",
+        "Chicken Heart",
+        "Calcium Carbonate",
+        "Soy Flour",
+        "Added Color",
+        "Sodium Tripolyphosphate",
+        "Carrageenan",
+        "Potassium Chloride",
+        "Dried Yam",
+        "Magnesium Proteinate",
+        "Xanthan Gum",
+        "Guar Gum",
+        "dl-Methionine",
+        "Salt",
+        "Erythorbic Acid (Preservative)",
+        "Filet Mignon Flavor",
+        "Zinc Sulfate",
+        "Natural Flavor",
+        "Vitamin E Supplement",
+        "Monocalcium Phosphate",
+        "Sodium Nitrite (For Color Retention)",
+        "Red #3",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "d-Calcium Pantothenate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 4.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 83,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 877,
+        "kcal_per_unit": 88,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/loaf-topper-sauce-filet-mignon-bacon-potato"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 877 kcal/kg × 3.5 oz = 87.0; the panel says 88.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -1620,35 +1658,67 @@
       "presentation": "in_sauce",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Beef, Pork By-Products, Chicken Liver, Chicken Broth, Water, Beef Lung, Chicken Heart, Calcium Carbonate, Sodium Tripolyphosphate, Added Color, Carrageenan, Potassium Chloride, Xanthan Gum, Magnesium Proteinate, Dried Yam, Natural Flavor, DL-Methionine, Salt, Erythorbic Acid (Preservative), Guar Gum, Zinc Sulfate, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Copper Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Pork By-Products",
+        "Chicken Liver",
+        "Chicken Broth",
+        "Water",
+        "Beef Lung",
+        "Chicken Heart",
+        "Calcium Carbonate",
+        "Sodium Tripolyphosphate",
+        "Added Color",
+        "Carrageenan",
+        "Potassium Chloride",
+        "Xanthan Gum",
+        "Magnesium Proteinate",
+        "Dried Yam",
+        "Natural Flavor",
+        "DL-Methionine",
+        "Salt",
+        "Erythorbic Acid (Preservative)",
+        "Guar Gum",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Monocalcium Phosphate",
+        "Sodium Nitrite (For Color Retention)",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "D-Calcium Pantothenate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 897,
+        "kcal_per_unit": 90,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/classic-loaf-sauce-beef"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 897 kcal/kg × 3.5 oz = 89.0; the panel says 90.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -1849,8 +1919,32 @@
       "presentation": "unknown",
       "package_type": "tray",
       "size": "3 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Chicken, Water, Sweet Potatoes, Green Beans, Soy Oil, Tapioca Starch, Powdered Cellulose, Dried Plain Beet Fiber, Calcium Carbonate, Soy Lecithin, Choline Chloride, Salt, Ascorbic Acid, Minerals [Magnesium Sulfate, Zinc Sulfate, Manganese Sulfate], Xanthan Gum, Vitamins [Alpha-Tocopherol Acetate (Vitamin E), Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate (Vitamin B5), Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Folic Acid], Ferrous Sulfate, Vitamin A Supplement, Beta Carotene, Copper Sulfate, Vitamin D3 Supplement, Potassium Iodide, Sodium Selenite.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Water",
+        "Sweet Potatoes",
+        "Green Beans",
+        "Soy Oil",
+        "Tapioca Starch",
+        "Powdered Cellulose",
+        "Dried Plain Beet Fiber",
+        "Calcium Carbonate",
+        "Soy Lecithin",
+        "Choline Chloride",
+        "Salt",
+        "Ascorbic Acid",
+        "Minerals [Magnesium Sulfate, Zinc Sulfate, Manganese Sulfate]",
+        "Xanthan Gum",
+        "Vitamins [Alpha-Tocopherol Acetate (Vitamin E), Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate (Vitamin B5), Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Folic Acid]",
+        "Ferrous Sulfate",
+        "Vitamin A Supplement",
+        "Beta Carotene",
+        "Copper Sulfate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide",
+        "Sodium Selenite"
+      ],
       "guaranteed_analysis": {
         "crude_protein_min_percent": 11,
         "crude_fat_min_percent": 1,
@@ -1866,18 +1960,20 @@
         "unit_name": "bowl"
       },
       "label_deck_code": null,
-      "formula_source": "Label panel image on the maker's own product page (cesar.com), transcribed twice independently",
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/wholesome-bowls-chicken-sweet-potatoes-green-beans"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "Panel read from the page's \"guaranteed analysis image\" / \"ingredients image\", transcribed by two independent readers. Both readings agree on ingredients, guarantees and calories.",
-        "Step 2 stopped: not captured — ingredients_verbatim."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 907 kcal/kg × 3 oz = 77.1; the panel says 77.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -2215,35 +2311,78 @@
       "presentation": "unknown",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Beef, Chicken Broth, Water, Chicken, Potato, Green Beans, Chicken Liver, Carrots, Animal Plasma, Corn Starch, Chicken Heart, Wheat Gluten, Dried Plain Beet Pulp, Dried Egg Product, Salt, Calcium Carbonate, Potassium Chloride, Choline Chloride, Sodium Tripolyphosphate, Added Color, Natural Flavor, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, Grilled New York Strip Flavor, dl-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, d-Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Chicken Broth",
+        "Water",
+        "Chicken",
+        "Potato",
+        "Green Beans",
+        "Chicken Liver",
+        "Carrots",
+        "Animal Plasma",
+        "Corn Starch",
+        "Chicken Heart",
+        "Wheat Gluten",
+        "Dried Plain Beet Pulp",
+        "Dried Egg Product",
+        "Salt",
+        "Calcium Carbonate",
+        "Potassium Chloride",
+        "Choline Chloride",
+        "Sodium Tripolyphosphate",
+        "Added Color",
+        "Natural Flavor",
+        "Zinc Sulfate",
+        "Magnesium Proteinate",
+        "Xanthan Gum",
+        "Grilled New York Strip Flavor",
+        "dl-Methionine",
+        "Guar Gum",
+        "Manganese Sulfate",
+        "Vitamin E Supplement",
+        "Sodium Carbonate",
+        "d-Calcium Pantothenate",
+        "Biotin",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin B12 Supplement",
+        "Vitamin D3 Supplement"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 7,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 917,
+        "kcal_per_unit": 92,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/home-delights-wet-dog-food-grilled-new-york-strip-dinner"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 917 kcal/kg × 3.5 oz = 91.0; the panel says 92.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -2512,35 +2651,77 @@
       "presentation": "unknown",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Beef, Chicken Broth, Water, Carrots, Chicken, Potato, Chicken Liver, Spinach, Animal Plasma, Corn Starch, Chicken Heart, Wheat Gluten, Dried Plain Beet Pulp, Parsley, Dried Egg Product, Salt, Calcium Carbonate, Potassium Chloride, Choline Chloride, Sodium Tripolyphosphate, Added Color, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, dl-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, d-Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Chicken Broth",
+        "Water",
+        "Carrots",
+        "Chicken",
+        "Potato",
+        "Chicken Liver",
+        "Spinach",
+        "Animal Plasma",
+        "Corn Starch",
+        "Chicken Heart",
+        "Wheat Gluten",
+        "Dried Plain Beet Pulp",
+        "Parsley",
+        "Dried Egg Product",
+        "Salt",
+        "Calcium Carbonate",
+        "Potassium Chloride",
+        "Choline Chloride",
+        "Sodium Tripolyphosphate",
+        "Added Color",
+        "Zinc Sulfate",
+        "Magnesium Proteinate",
+        "Xanthan Gum",
+        "dl-Methionine",
+        "Guar Gum",
+        "Manganese Sulfate",
+        "Vitamin E Supplement",
+        "Sodium Carbonate",
+        "d-Calcium Pantothenate",
+        "Biotin",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin B12 Supplement",
+        "Vitamin D3 Supplement"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 7,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 917,
+        "kcal_per_unit": 92,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/home-delights-pot-roast-spring-vegetables-dinner"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 917 kcal/kg × 3.5 oz = 91.0; the panel says 92.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -3660,35 +3841,76 @@
       "presentation": "unknown",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Chicken, Chicken Broth, Water, Chicken Liver, Potatoes, Carrots, Peas, Animal Plasma, Wheat Gluten, Corn Starch, Chicken Heart, Wheat Flour, Dried Plain Beet Pulp, Salt, Potassium Chloride, Dried Tomato, Calcium Carbonate, Sodium Tripolyphosphate, Choline Chloride, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, DL-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, D- Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Sodium Nitrite (For Color Retention), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Broth",
+        "Water",
+        "Chicken Liver",
+        "Potatoes",
+        "Carrots",
+        "Peas",
+        "Animal Plasma",
+        "Wheat Gluten",
+        "Corn Starch",
+        "Chicken Heart",
+        "Wheat Flour",
+        "Dried Plain Beet Pulp",
+        "Salt",
+        "Potassium Chloride",
+        "Dried Tomato",
+        "Calcium Carbonate",
+        "Sodium Tripolyphosphate",
+        "Choline Chloride",
+        "Zinc Sulfate",
+        "Magnesium Proteinate",
+        "Xanthan Gum",
+        "DL-Methionine",
+        "Guar Gum",
+        "Manganese Sulfate",
+        "Vitamin E Supplement",
+        "Sodium Carbonate",
+        "D- Calcium Pantothenate",
+        "Biotin",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Sodium Nitrite (For Color Retention)",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Vitamin B12 Supplement",
+        "Vitamin D3 Supplement"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 2,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 978,
+        "kcal_per_unit": 98,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/home-delights-slow-cooked-chicken-vegetables"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 978 kcal/kg × 3.5 oz = 97.0; the panel says 98.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -3966,35 +4188,68 @@
       "presentation": "in_sauce",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Beef, Pork By-Products, Chicken Liver, Chicken Broth, Water, Beef Lung, Chicken Heart, Added Color, Calcium Carbonate, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Xanthan Gum, Magnesium Proteinate, Dried Yam, DL-Methionine, Salt, Erythorbic Acid (Preservative), Dry-Aged Ribeye Flavor, Guar Gum, Natural Flavor, Zinc Sulfate, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Copper Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Pork By-Products",
+        "Chicken Liver",
+        "Chicken Broth",
+        "Water",
+        "Beef Lung",
+        "Chicken Heart",
+        "Added Color",
+        "Calcium Carbonate",
+        "Sodium Tripolyphosphate",
+        "Carrageenan",
+        "Potassium Chloride",
+        "Xanthan Gum",
+        "Magnesium Proteinate",
+        "Dried Yam",
+        "DL-Methionine",
+        "Salt",
+        "Erythorbic Acid (Preservative)",
+        "Dry-Aged Ribeye Flavor",
+        "Guar Gum",
+        "Natural Flavor",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Monocalcium Phosphate",
+        "Sodium Nitrite (For Color Retention)",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "D-Calcium Pantothenate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 9,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 82,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 912,
+        "kcal_per_unit": 91,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/classic-loaf-sauce-dry-aged-ribeye"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 912 kcal/kg × 3.5 oz = 90.5; the panel says 91.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -4097,35 +4352,72 @@
       "presentation": "in_sauce",
       "package_type": "tray",
       "size": "3.5 oz",
-      "ingredients_verbatim": null,
-      "ingredients_ordered_normalized": [],
+      "ingredients_verbatim": "Chicken, Chicken Broth, Water, Chicken Liver, Pork By-Products, Beef Lung, Bacon, Cheese, Chicken Heart, Soy Flour, Calcium Carbonate, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Dried Yam, Xanthan Gum, Magnesium Proteinate, Guar Gum, Salt, Erythorbic Acid (Preservative), Added Color, Rotisserie Chicken Flavor, DL-Methionine, Zinc Sulfate, Natural Flavor, Vitamin E Supplement, Monocalcium Phosphate, Red #3, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Sodium Nitrite (For Color Retention), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Broth",
+        "Water",
+        "Chicken Liver",
+        "Pork By-Products",
+        "Beef Lung",
+        "Bacon",
+        "Cheese",
+        "Chicken Heart",
+        "Soy Flour",
+        "Calcium Carbonate",
+        "Sodium Tripolyphosphate",
+        "Carrageenan",
+        "Potassium Chloride",
+        "Dried Yam",
+        "Xanthan Gum",
+        "Magnesium Proteinate",
+        "Guar Gum",
+        "Salt",
+        "Erythorbic Acid (Preservative)",
+        "Added Color",
+        "Rotisserie Chicken Flavor",
+        "DL-Methionine",
+        "Zinc Sulfate",
+        "Natural Flavor",
+        "Vitamin E Supplement",
+        "Monocalcium Phosphate",
+        "Red #3",
+        "Copper Sulfate",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Sodium Nitrite (For Color Retention)",
+        "D-Calcium Pantothenate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide"
+      ],
       "guaranteed_analysis": {
-        "crude_protein_min_percent": null,
-        "crude_fat_min_percent": null,
-        "crude_fiber_max_percent": null,
-        "moisture_max_percent": null,
+        "crude_protein_min_percent": 8,
+        "crude_fat_min_percent": 3.5,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 83,
         "ash_max_percent": null,
         "taurine_min_percent": null,
         "other_printed_guarantees": []
       },
       "calorie_content": {
-        "kcal_per_kg": null,
-        "kcal_per_unit": null,
-        "unit_name": null
+        "kcal_per_kg": 1023,
+        "kcal_per_unit": 102,
+        "unit_name": "tray"
       },
       "label_deck_code": null,
-      "formula_source": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/wet/loaf-topper-sauce-wet-dog-food-rotisserie-chicken"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page's label-panel image could not be read: the image file cesar.com links returns HTTP 403 from cesar.com itself, from inside the rendered page as well as directly.",
-        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Calorie arithmetic: 1023 kcal/kg × 3.5 oz = 101.5; the panel says 102.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -4195,7 +4487,7 @@
       "texture": "unknown",
       "presentation": "plain",
       "package_type": "pouch",
-      "size": null,
+      "size": "6.7 oz",
       "ingredients_verbatim": "Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Caramel Color, Natural Flavor, Potassium Chloride, Salt, Natural Filet Mignon Flavor, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Sodium Tripolyphosphate.",
       "ingredients_ordered_normalized": [
         "Rice Flour",
@@ -4228,19 +4520,19 @@
         "unit_name": "piece"
       },
       "label_deck_code": null,
-      "formula_source": "Label panel image on the maker's own product page (cesar.com), transcribed twice independently",
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/treats/cesar-softies-chewy-soft-dog-treats-filet-mignon"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page offers 6.7 OZ, 18 OZ under one page and one sku; which size this barcode is on is not established by that page.",
-        "Panel read from the page's \"guaranteed analysis image\" / \"ingredients image\", transcribed by two independent readers. Both readings agree on ingredients, guarantees and calories.",
-        "Step 2 stopped: not captured — size."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -4410,7 +4702,7 @@
       "texture": "unknown",
       "presentation": "plain",
       "package_type": "pouch",
-      "size": null,
+      "size": "6 oz",
       "ingredients_verbatim": "Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.",
       "ingredients_ordered_normalized": [
         "Rice Flour",
@@ -4446,19 +4738,19 @@
         "unit_name": "piece"
       },
       "label_deck_code": null,
-      "formula_source": "Label panel image on the maker's own product page (cesar.com), transcribed twice independently",
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
       "source_urls": [
         "https://www.cesar.com/products/treats/cesar-softies-chewy-soft-dog-treats-medley-trio"
       ],
       "source_accessed_at": "2026-09-23",
-      "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
       "conflicts": [],
       "verification_notes": [
-        "The maker page offers 4 OZ, 6.0 OZ, 16 OZ under one page and one sku; which size this barcode is on is not established by that page.",
-        "Panel read from the page's \"guaranteed analysis image\" / \"ingredients image\", transcribed by two independent readers. Both readings agree on ingredients, guarantees and calories.",
-        "Step 2 stopped: not captured — size."
+        "Batch 044 re-read: this size's own section of the maker page, which the batch 042 page-level read could not resolve.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
       ],
-      "research_status": "needs_physical_label"
+      "research_status": "source_verified"
     },
     {
       "catalog_number": null,
@@ -4506,9 +4798,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -4606,9 +4899,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -4657,9 +4951,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -4708,9 +5003,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -4759,9 +5055,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -4863,9 +5160,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5018,9 +5316,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5120,9 +5419,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5170,9 +5470,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5222,9 +5523,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5272,9 +5574,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5322,9 +5625,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5375,9 +5679,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5425,9 +5730,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5527,9 +5833,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5577,9 +5884,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5732,9 +6040,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5782,9 +6091,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -5986,9 +6296,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -6036,9 +6347,10 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
     },
     {
@@ -6139,10 +6451,736 @@
       "barcode_notes": "Barcode from the \"sku\" field of the Product structured data (JSON-LD) on the maker's own product page, cesar.com.",
       "conflicts": [],
       "verification_notes": [
-        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page."
+        "A variety pack carries no composition of its own (AGENTS.md; BRIEF-ALPO §5). Member barcodes are not printed on the maker page.",
+        "A box: source_verified on outer identity alone — its barcode, its unit size and its count, all from the maker's own page (the count from the product name). It carries no composition by design; contains is empty because no member barcode is printed on the page."
       ],
-      "research_status": "needs_physical_label",
+      "research_status": "source_verified",
       "contains": []
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100151304",
+      "canonical_gtin14": "00023100151304",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Wholesome Meals",
+      "product_name": "CESAR Cesar Wholesome Meals Chicken, Carrots, Barley & Green Beans",
+      "variant": "Chicken, Carrots, Barley & Green Beans",
+      "recipe": [],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "unknown",
+      "package_type": "pouch",
+      "size": "17.6 oz",
+      "ingredients_verbatim": "Chicken, Water, Carrots, Barley, Green Beans, Soy Oil, Modified Tapioca Starch, Powdered Cellulose, Dried Plain Beet Fiber, Calcium Carbonate, Soy Lecithin, Choline Chloride, Salt, Ascorbic Acid, Minerals [Magnesium Sulfate, Zinc Sulfate, Manganese Sulfate], Xanthan Gum, Vitamins [Alpha-Tocopherol Acetate (Vitamin E), Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin B12 Supplement, Biotin, Folic Acid], Ferrous Sulfate, Vitamin A Supplement, Beta Carotene, Copper Sulfate, Vitamin D3 Supplement, Potassium Iodide, Sodium Selenite.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Water",
+        "Carrots",
+        "Barley",
+        "Green Beans",
+        "Soy Oil",
+        "Modified Tapioca Starch",
+        "Powdered Cellulose",
+        "Dried Plain Beet Fiber",
+        "Calcium Carbonate",
+        "Soy Lecithin",
+        "Choline Chloride",
+        "Salt",
+        "Ascorbic Acid",
+        "Minerals [Magnesium Sulfate, Zinc Sulfate, Manganese Sulfate]",
+        "Xanthan Gum",
+        "Vitamins [Alpha-Tocopherol Acetate (Vitamin E), Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate (Vitamin B5), Riboflavin (Vitamin B2), Vitamin B12 Supplement, Biotin, Folic Acid]",
+        "Ferrous Sulfate",
+        "Vitamin A Supplement",
+        "Beta Carotene",
+        "Copper Sulfate",
+        "Vitamin D3 Supplement",
+        "Potassium Iodide",
+        "Sodium Selenite"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 11,
+        "crude_fat_min_percent": 1,
+        "crude_fiber_max_percent": 3.5,
+        "moisture_max_percent": 84,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/wet/cesar-wholesome-meals-chicken-carrots-barley-green-beans"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Step 1: the page prints \"23100151304\", eleven digits; the dropped leading zero restored, after which the UPC-A check digit validates. No other digit changed.",
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100014050",
+      "canonical_gtin14": "00023100014050",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Classic Loaf in Sauce",
+      "product_name": "CESAR Classic Loaf in Sauce Chicken & Liver",
+      "variant": "Chicken & Liver",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "loaf",
+      "presentation": "in_sauce",
+      "package_type": "tray",
+      "size": "3.5 oz",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.cesar.com/products/wet/classic-loaf-sauce-chicken-liver"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100122946",
+      "canonical_gtin14": "00023100122946",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Simply Crafted",
+      "product_name": "CESAR Simply Crafted Chicken, Carrots, Potatoes & Peas",
+      "variant": "Chicken, Carrots, Potatoes & Peas",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "wet",
+      "texture": "unknown",
+      "presentation": "unknown",
+      "package_type": "tray",
+      "size": "1.3 oz",
+      "ingredients_verbatim": "Chicken, Carrots, Potatoes, Peas",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Carrots",
+        "Potatoes",
+        "Peas"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 15,
+        "crude_fat_min_percent": 0.2,
+        "crude_fiber_max_percent": 1.5,
+        "moisture_max_percent": 81,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 786,
+        "kcal_per_unit": 29,
+        "unit_name": "serving"
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/wet/simply-crafted-chicken-carrots-potatoes-peas"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100121840",
+      "canonical_gtin14": "00023100121840",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Softies",
+      "product_name": "CESAR Cesar Softies Chewy Soft Dog Treats Filet Mignon",
+      "variant": "Chewy Soft Dog Treats Filet Mignon",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "18 oz",
+      "ingredients_verbatim": "Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Caramel Color, Natural Flavor, Potassium Chloride, Salt, Natural Filet Mignon Flavor, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Sodium Tripolyphosphate.",
+      "ingredients_ordered_normalized": [
+        "Rice Flour",
+        "Wheat Flour",
+        "Glycerin",
+        "Sugar",
+        "Animal Fat (Preserved with BHA)",
+        "Caramel Color",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Salt",
+        "Natural Filet Mignon Flavor",
+        "Calcium Propionate (a Preservative)",
+        "Potassium Sorbate (a Preservative)",
+        "Natural Hickory Smoke Flavor",
+        "Sodium Tripolyphosphate"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 4.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 26,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 2953,
+        "kcal_per_unit": 7,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/treats/cesar-softies-chewy-soft-dog-treats-filet-mignon"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100116280",
+      "canonical_gtin14": "00023100116280",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": null,
+      "product_name": "CESAR Rotisserie Chicken Flavor & Spring Vegetables",
+      "variant": "Rotisserie Chicken Flavor & Spring Vegetables",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "5 lb",
+      "ingredients_verbatim": "Chicken, Ground Wheat, Meat and Bone Meal, Ground Whole Grain Corn, Brewers Rice, Chicken By-product Meal, Animal Fat (Preserved with BHA & Citric Acid), Soybean Meal, Corn Protein Meal, Natural Flavor, Dried Plain Beet Pulp, Chicken Meal, Glycerin, Salt, Sugar, Phosphoric Acid, Potassium Sorbate (Preservative), Potassium Chloride, BHA (Preservative), Citric Acid (Preservative), Choline Chloride, Natural Rotisserie Chicken Flavor, Dried Peas, DL-Methionine, Zinc Sulfate, Vitamin E Supplement, Dried Carrots, L-Tryptophan, Yellow 6, Niacin Supplement, Copper Sulfate, Sodium Selenite, D-Calcium Pantothenate, Red 40, Potassium Iodide, Vitamin A Supplement, Yellow 5, Blue 2, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Ground Wheat",
+        "Meat and Bone Meal",
+        "Ground Whole Grain Corn",
+        "Brewers Rice",
+        "Chicken By-product Meal",
+        "Animal Fat (Preserved with BHA & Citric Acid)",
+        "Soybean Meal",
+        "Corn Protein Meal",
+        "Natural Flavor",
+        "Dried Plain Beet Pulp",
+        "Chicken Meal",
+        "Glycerin",
+        "Salt",
+        "Sugar",
+        "Phosphoric Acid",
+        "Potassium Sorbate (Preservative)",
+        "Potassium Chloride",
+        "BHA (Preservative)",
+        "Citric Acid (Preservative)",
+        "Choline Chloride",
+        "Natural Rotisserie Chicken Flavor",
+        "Dried Peas",
+        "DL-Methionine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Dried Carrots",
+        "L-Tryptophan",
+        "Yellow 6",
+        "Niacin Supplement",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "D-Calcium Pantothenate",
+        "Red 40",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Yellow 5",
+        "Blue 2",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Vitamin B12 Supplement",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Vitamin D3 Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26,
+        "crude_fat_min_percent": 12.5,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/dry/rotisserie-chicken-flavor-spring-vegetables"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [
+        "cesar.com shows this panel (the same list, or the same image file) on the page of dry__filet-mignon-flavor-spring-vegetables, dry__porterhouse-flavor-spring-vegetables. Kept for whoever photographs the pack; not a claim about this barcode."
+      ],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100116310",
+      "canonical_gtin14": "00023100116310",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": null,
+      "product_name": "CESAR Rotisserie Chicken Flavor & Spring Vegetables",
+      "variant": "Rotisserie Chicken Flavor & Spring Vegetables",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": null,
+      "ingredients_ordered_normalized": [],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": null,
+        "crude_fat_min_percent": null,
+        "crude_fiber_max_percent": null,
+        "moisture_max_percent": null,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": null,
+      "source_urls": [
+        "https://www.cesar.com/products/dry/rotisserie-chicken-flavor-spring-vegetables"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "No readable label panel for this size: its section's panel image(s) could not be loaded from the maker's site, or show only a marketing graphic.",
+        "Step 2 stopped: not captured — ingredients_verbatim, crude_protein_min_percent, crude_fat_min_percent, moisture_max_percent, calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100116273",
+      "canonical_gtin14": "00023100116273",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": null,
+      "product_name": "CESAR Filet Mignon Flavor & Spring Vegetables",
+      "variant": "Filet Mignon Flavor & Spring Vegetables",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "5 lb",
+      "ingredients_verbatim": "Beef, Ground Wheat, Meat and Bone Meal, Ground Whole Grain Corn, Brewers Rice, Chicken By-product Meal, Soybean Meal, Animal Fat (Preserved with BHA & Citric Acid), Corn Protein Meal, Natural Flavor, Dried Plain Beet Pulp, Chicken Meal, Glycerin, Salt, Sugar, Phosphoric Acid, Potassium Sorbate (Preservative), Potassium Chloride, BHA (Preservative), Citric Acid (Preservative), Choline Chloride, Natural Filet Mignon Flavor, Dried Peas, DL-Methionine, Zinc Sulfate, Vitamin E Supplement, Dried Carrots, L-Tryptophan, Red 40, Yellow 6, Yellow 5, Blue 2, Niacin Supplement, Copper Sulfate, Sodium Selenite, D-Calcium Pantothenate, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Ground Wheat",
+        "Meat and Bone Meal",
+        "Ground Whole Grain Corn",
+        "Brewers Rice",
+        "Chicken By-product Meal",
+        "Soybean Meal",
+        "Animal Fat (Preserved with BHA & Citric Acid)",
+        "Corn Protein Meal",
+        "Natural Flavor",
+        "Dried Plain Beet Pulp",
+        "Chicken Meal",
+        "Glycerin",
+        "Salt",
+        "Sugar",
+        "Phosphoric Acid",
+        "Potassium Sorbate (Preservative)",
+        "Potassium Chloride",
+        "BHA (Preservative)",
+        "Citric Acid (Preservative)",
+        "Choline Chloride",
+        "Natural Filet Mignon Flavor",
+        "Dried Peas",
+        "DL-Methionine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Dried Carrots",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 6",
+        "Yellow 5",
+        "Blue 2",
+        "Niacin Supplement",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "D-Calcium Pantothenate",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Vitamin B12 Supplement",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Vitamin D3 Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26,
+        "crude_fat_min_percent": 12.5,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/dry/filet-mignon-flavor-spring-vegetables"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [
+        "cesar.com shows this panel (the same list, or the same image file) on the page of dry__porterhouse-flavor-spring-vegetables, dry__rotisserie-chicken-flavor-spring-vegetables. Kept for whoever photographs the pack; not a claim about this barcode."
+      ],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100116303",
+      "canonical_gtin14": "00023100116303",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": null,
+      "product_name": "CESAR Filet Mignon Flavor & Spring Vegetables",
+      "variant": "Filet Mignon Flavor & Spring Vegetables",
+      "recipe": [
+        "beef"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Beef, Ground Wheat, Meat and Bone Meal, Ground Whole Grain Corn, Brewers Rice, Chicken By-product Meal, Soybean Meal, Animal Fat (Preserved with BHA & Citric Acid), Corn Protein Meal, Natural Flavor, Dried Plain Beet Pulp, Chicken Meal, Glycerin, Salt, Sugar, Phosphoric Acid, Potassium Sorbate (Preservative), Potassium Chloride, BHA (Preservative), Citric Acid (Preservative), Choline Chloride, Natural Filet Mignon Flavor, Dried Peas, DL-Methionine, Zinc Sulfate, Vitamin E Supplement, Dried Carrots, L-Tryptophan, Red 40, Yellow 6, Yellow 5, Blue 2, Niacin Supplement, Copper Sulfate, Sodium Selenite, D-Calcium Pantothenate, Potassium Iodide, Vitamin A Supplement, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Thiamine Mononitrate (Vitamin B1), Vitamin D3 Supplement, Pyridoxine Hydrochloride (Vitamin B6), Folic Acid.",
+      "ingredients_ordered_normalized": [
+        "Beef",
+        "Ground Wheat",
+        "Meat and Bone Meal",
+        "Ground Whole Grain Corn",
+        "Brewers Rice",
+        "Chicken By-product Meal",
+        "Soybean Meal",
+        "Animal Fat (Preserved with BHA & Citric Acid)",
+        "Corn Protein Meal",
+        "Natural Flavor",
+        "Dried Plain Beet Pulp",
+        "Chicken Meal",
+        "Glycerin",
+        "Salt",
+        "Sugar",
+        "Phosphoric Acid",
+        "Potassium Sorbate (Preservative)",
+        "Potassium Chloride",
+        "BHA (Preservative)",
+        "Citric Acid (Preservative)",
+        "Choline Chloride",
+        "Natural Filet Mignon Flavor",
+        "Dried Peas",
+        "DL-Methionine",
+        "Zinc Sulfate",
+        "Vitamin E Supplement",
+        "Dried Carrots",
+        "L-Tryptophan",
+        "Red 40",
+        "Yellow 6",
+        "Yellow 5",
+        "Blue 2",
+        "Niacin Supplement",
+        "Copper Sulfate",
+        "Sodium Selenite",
+        "D-Calcium Pantothenate",
+        "Potassium Iodide",
+        "Vitamin A Supplement",
+        "Riboflavin Supplement (Vitamin B2)",
+        "Vitamin B12 Supplement",
+        "Thiamine Mononitrate (Vitamin B1)",
+        "Vitamin D3 Supplement",
+        "Pyridoxine Hydrochloride (Vitamin B6)",
+        "Folic Acid"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26,
+        "crude_fat_min_percent": 12.5,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 12,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/dry/filet-mignon-flavor-spring-vegetables"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [
+        "cesar.com shows this panel (the same list, or the same image file) on the page of dry__porterhouse-flavor-spring-vegetables, dry__rotisserie-chicken-flavor-spring-vegetables. Kept for whoever photographs the pack; not a claim about this barcode."
+      ],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Step 2 stopped: not captured — calories."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100122038",
+      "canonical_gtin14": "00023100122038",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Softies",
+      "product_name": "CESAR Cesar Softies Chewy Soft Dog Treats Medley Trio",
+      "variant": "Chewy Soft Dog Treats Medley Trio",
+      "recipe": [
+        "beef",
+        "chicken",
+        "pork"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "16 oz",
+      "ingredients_verbatim": "Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.",
+      "ingredients_ordered_normalized": [
+        "Rice Flour",
+        "Wheat Flour",
+        "Glycerin",
+        "Sugar",
+        "Animal Fat (Preserved with BHA)",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Natural Porterhouse Steak Flavor",
+        "Salt",
+        "Caramel Color",
+        "Calcium Propionate (a Preservative)",
+        "Potassium Sorbate (a Preservative)",
+        "Natural Hickory Smoke Flavor",
+        "Natural Smoked Bacon Flavor",
+        "Natural Grilled Chicken Flavor",
+        "Sodium Tripolyphosphate",
+        "Red 40"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 4.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 26,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 2953,
+        "kcal_per_unit": 7,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/treats/cesar-softies-chewy-soft-dog-treats-medley-trio"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "023100134581",
+      "canonical_gtin14": "00023100134581",
+      "barcode_scope": "individual_unit",
+      "brand": "Cesar",
+      "manufacturer": "Mars Petcare US",
+      "species": "dog",
+      "product_line": "Softies",
+      "product_name": "CESAR Cesar Softies Chewy Soft Dog Treats Medley Trio",
+      "variant": "Chewy Soft Dog Treats Medley Trio",
+      "recipe": [
+        "beef",
+        "chicken",
+        "pork"
+      ],
+      "life_stage": "all",
+      "food_form": "treat",
+      "texture": "unknown",
+      "presentation": "plain",
+      "package_type": "pouch",
+      "size": "4 oz",
+      "ingredients_verbatim": "Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.",
+      "ingredients_ordered_normalized": [
+        "Rice Flour",
+        "Wheat Flour",
+        "Glycerin",
+        "Sugar",
+        "Animal Fat (Preserved with BHA)",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Natural Porterhouse Steak Flavor",
+        "Salt",
+        "Caramel Color",
+        "Calcium Propionate (a Preservative)",
+        "Potassium Sorbate (a Preservative)",
+        "Natural Hickory Smoke Flavor",
+        "Natural Smoked Bacon Flavor",
+        "Natural Grilled Chicken Flavor",
+        "Sodium Tripolyphosphate",
+        "Red 40"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 4.5,
+        "crude_fat_min_percent": 4,
+        "crude_fiber_max_percent": 1,
+        "moisture_max_percent": 26,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": []
+      },
+      "calorie_content": {
+        "kcal_per_kg": 2953,
+        "kcal_per_unit": 7,
+        "unit_name": "piece"
+      },
+      "label_deck_code": null,
+      "formula_source": "Label panel image(s) in this size's own section of the maker page (cesar.com), transcribed twice independently",
+      "source_urls": [
+        "https://www.cesar.com/products/treats/cesar-softies-chewy-soft-dog-treats-medley-trio"
+      ],
+      "source_accessed_at": "2026-09-23",
+      "barcode_notes": "Barcode and size from the maker page itself: the size's own section (data-pdp-size-id) and its \"Buy Now\" block (data-mm-ids).",
+      "conflicts": [],
+      "verification_notes": [
+        "Panel read from this size's own label image(s), by two independent readers; they agree on ingredients, guarantees and calories.",
+        "Steps 1–3 passed, route A: the maker's own page gives this size's barcode, size and panel."
+      ],
+      "research_status": "source_verified"
     }
   ]
 }

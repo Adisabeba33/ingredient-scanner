@@ -68,3 +68,22 @@ Sheba batch 1
 ## 10. Where this pass stops
 
 Batch 1 stops after 20 new records as required. It intentionally favors high-confidence outer cartons/cases rather than padding the batch with individual wet trays whose calorie basis is not yet proven from a current US label.
+
+## Batch 044 — sheba.com, size by size (a session with web and shell)
+
+Until this batch the catalog held only Sheba **cartons** (20, in
+`data/known-multipacks.ts`) and no single pack. `scripts/harvest-maker-pages.mjs`
+read sheba.com: 54 of 63 pages loaded after three paced passes. The first
+probe of this site had "found no barcode" only because a bare HTTP request is
+refused, not because the pages are different.
+
+- **29 single packs** seeded, 1 with a composition: Selections Filets in Broth
+  Chicken & Shrimp. Most Perfect Portions panel images on the site stop
+  before the calorie line; the rest return 403. Every one is a photograph.
+- **6 more cartons** with a stated count seeded as boxes.
+- **Ranges added** from Mars' own taxonomy: Grilled, Selections Bisques,
+  Premium Purée. "Paté" and "Cuts in Gravy" are formats inside Perfect
+  Portions on this site, not ranges, and are filed that way.
+- **`lib/nutrition-role.ts` now reads Meaty Tender Sticks as a treat**, as §4
+  of the brief asked. Tested.
+- Two Premium Purée bags of three flavours are variety packs, not single packs.

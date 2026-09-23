@@ -170,6 +170,8 @@ const VERIFIED_042 = "2026-09-23";
 // maker page, twice, independently; kept only where the readings agree and no
 // image is shared with a different product's page.
 const VERIFIED_043 = "2026-09-23";
+// Batch 044 — Cesar re-read size by size, and Sheba's first single packs.
+const VERIFIED_044 = "2026-09-23";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11160,5 +11162,83 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewers Rice, Dried Meat By-Products, Natural Flavors, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Natural Salmon Flavor, Red #40, Ferrous Sulfate, Mixed Tocopherols (preservative), Dried Cheese, Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate, D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
     analysis: withCalories(ga(28, 21, 4.5, 10, null, null), 3939, 368, "cup"),
     verifiedAt: VERIFIED_043,
+  },
+  // ── Cesar and Sheba — batch 044 ──────────────────────────────────────────
+  //
+  // Each from the one size's own section of the maker page, read twice.
+  "023100102665": {
+    ingredients: `Beef, Chicken Broth, Water, Chicken Liver, Pork By-Products, Beef Lung, Bacon, Potato, Chicken Heart, Calcium Carbonate, Soy Flour, Added Color, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Dried Yam, Magnesium Proteinate, Xanthan Gum, Guar Gum, dl-Methionine, Salt, Erythorbic Acid (Preservative), Filet Mignon Flavor, Zinc Sulfate, Natural Flavor, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Red #3, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), d-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 4.5, 1, 83, null, null), 877, 88, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100014012": {
+    ingredients: `Beef, Pork By-Products, Chicken Liver, Chicken Broth, Water, Beef Lung, Chicken Heart, Calcium Carbonate, Sodium Tripolyphosphate, Added Color, Carrageenan, Potassium Chloride, Xanthan Gum, Magnesium Proteinate, Dried Yam, Natural Flavor, DL-Methionine, Salt, Erythorbic Acid (Preservative), Guar Gum, Zinc Sulfate, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Copper Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.`,
+    analysis: withCalories(ga(9, 4, 1, 82, null, null), 897, 90, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100137742": {
+    ingredients: `Chicken, Water, Sweet Potatoes, Green Beans, Soy Oil, Tapioca Starch, Powdered Cellulose, Dried Plain Beet Fiber, Calcium Carbonate, Soy Lecithin, Choline Chloride, Salt, Ascorbic Acid, Minerals [Magnesium Sulfate, Zinc Sulfate, Manganese Sulfate], Xanthan Gum, Vitamins [Alpha-Tocopherol Acetate (Vitamin E), Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate (Vitamin B5), Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Folic Acid], Ferrous Sulfate, Vitamin A Supplement, Beta Carotene, Copper Sulfate, Vitamin D3 Supplement, Potassium Iodide, Sodium Selenite.`,
+    analysis: withCalories(ga(11, 1, 3.5, 84, null, null), 907, 77, "bowl"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100115689": {
+    ingredients: `Beef, Chicken Broth, Water, Chicken, Potato, Green Beans, Chicken Liver, Carrots, Animal Plasma, Corn Starch, Chicken Heart, Wheat Gluten, Dried Plain Beet Pulp, Dried Egg Product, Salt, Calcium Carbonate, Potassium Chloride, Choline Chloride, Sodium Tripolyphosphate, Added Color, Natural Flavor, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, Grilled New York Strip Flavor, dl-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, d-Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withCalories(ga(7, 3.5, 1, 82, null, null), 917, 92, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100108360": {
+    ingredients: `Beef, Chicken Broth, Water, Carrots, Chicken, Potato, Chicken Liver, Spinach, Animal Plasma, Corn Starch, Chicken Heart, Wheat Gluten, Dried Plain Beet Pulp, Parsley, Dried Egg Product, Salt, Calcium Carbonate, Potassium Chloride, Choline Chloride, Sodium Tripolyphosphate, Added Color, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, dl-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, d-Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withCalories(ga(7, 3.5, 1, 82, null, null), 917, 92, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100108353": {
+    ingredients: `Chicken, Chicken Broth, Water, Chicken Liver, Potatoes, Carrots, Peas, Animal Plasma, Wheat Gluten, Corn Starch, Chicken Heart, Wheat Flour, Dried Plain Beet Pulp, Salt, Potassium Chloride, Dried Tomato, Calcium Carbonate, Sodium Tripolyphosphate, Choline Chloride, Zinc Sulfate, Magnesium Proteinate, Xanthan Gum, DL-Methionine, Guar Gum, Manganese Sulfate, Vitamin E Supplement, Sodium Carbonate, D- Calcium Pantothenate, Biotin, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Riboflavin Supplement (Vitamin B2), Sodium Nitrite (For Color Retention), Potassium Iodide, Vitamin A Supplement, Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withCalories(ga(8, 2, 1, 82, null, null), 978, 98, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100137636": {
+    ingredients: `Beef, Pork By-Products, Chicken Liver, Chicken Broth, Water, Beef Lung, Chicken Heart, Added Color, Calcium Carbonate, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Xanthan Gum, Magnesium Proteinate, Dried Yam, DL-Methionine, Salt, Erythorbic Acid (Preservative), Dry-Aged Ribeye Flavor, Guar Gum, Natural Flavor, Zinc Sulfate, Vitamin E Supplement, Monocalcium Phosphate, Sodium Nitrite (For Color Retention), Copper Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.`,
+    analysis: withCalories(ga(9, 4, 1, 82, null, null), 912, 91, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100102696": {
+    ingredients: `Chicken, Chicken Broth, Water, Chicken Liver, Pork By-Products, Beef Lung, Bacon, Cheese, Chicken Heart, Soy Flour, Calcium Carbonate, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Dried Yam, Xanthan Gum, Magnesium Proteinate, Guar Gum, Salt, Erythorbic Acid (Preservative), Added Color, Rotisserie Chicken Flavor, DL-Methionine, Zinc Sulfate, Natural Flavor, Vitamin E Supplement, Monocalcium Phosphate, Red #3, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Sodium Nitrite (For Color Retention), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide`,
+    analysis: withCalories(ga(8, 3.5, 1, 83, null, null), 1023, 102, "tray"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100103273": {
+    ingredients: `Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Caramel Color, Natural Flavor, Potassium Chloride, Salt, Natural Filet Mignon Flavor, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Sodium Tripolyphosphate.`,
+    analysis: withCalories(ga(4.5, 4, 1, 26, null, null), 2953, 7, "piece"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100103297": {
+    ingredients: `Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.`,
+    analysis: withCalories(ga(4.5, 4, 1, 26, null, null), 2953, 7, "piece"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100122946": {
+    ingredients: `Chicken, Carrots, Potatoes, Peas`,
+    analysis: withCalories(ga(15, 0.2, 1.5, 81, null, null), 786, 29, "serving"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100121840": {
+    ingredients: `Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Caramel Color, Natural Flavor, Potassium Chloride, Salt, Natural Filet Mignon Flavor, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Sodium Tripolyphosphate.`,
+    analysis: withCalories(ga(4.5, 4, 1, 26, null, null), 2953, 7, "piece"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100122038": {
+    ingredients: `Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.`,
+    analysis: withCalories(ga(4.5, 4, 1, 26, null, null), 2953, 7, "piece"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100134581": {
+    ingredients: `Rice Flour, Wheat Flour, Glycerin, Sugar, Animal Fat (Preserved with BHA), Natural Flavor, Potassium Chloride, Natural Porterhouse Steak Flavor, Salt, Caramel Color, Calcium Propionate (a Preservative), Potassium Sorbate (a Preservative), Natural Hickory Smoke Flavor, Natural Smoked Bacon Flavor, Natural Grilled Chicken Flavor, Sodium Tripolyphosphate, Red 40.`,
+    analysis: withCalories(ga(4.5, 4, 1, 26, null, null), 2953, 7, "piece"),
+    verifiedAt: VERIFIED_044,
+  },
+  "023100150291": {
+    ingredients: `Chicken, Chicken Broth, Water, Shrimp, Tuna, Modified Tapioca Starch, Sunflower Oil, Natural Flavor, Glycine, Guar Gum.`,
+    analysis: withCalories(ga(13, 1.2, 1, 84.5, 2, null), 754, 28, "tray"),
+    verifiedAt: VERIFIED_044,
   },
 };

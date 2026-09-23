@@ -415,6 +415,11 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Kitten",
       "Meaty Tender Sticks",
       "Bistro",
+      // Batch 044, from Mars' own taxonomy on sheba.com. Bisques and Premium
+      // Purée are treats and say so in their names.
+      "Grilled",
+      "Selections Bisques",
+      "Premium Purée",
     ],
   },
   {

@@ -49,11 +49,10 @@ to `main`, because the app reads the seed from `main`.
    `research/TEMPTATIONS-HANDOFF.md`, and read its §2 before any Mars site:
    every size on a page has its own barcode and its own label images.
    Remaining: 20 sizes whose panel images 403 and 44 with no calorie line.
-2. **Sheba.** sheba.com has 63 product pages in its sitemap, but the first
-   page tried showed no barcode and no label-panel image. Find out whether it
-   is a different page build or a block before you brief the brand.
-   `research/BRIEF-SHEBA.md` exists (Perfect Portions twin-tray trap).
-3. **Cesar route B.** Of the 58 individual units in the ledger, 29 are
+2. **Sheba: single packs started, batch 044.** 29 barcodes, 1 composition;
+   most panels on sheba.com stop before the calorie line or 403. Route B or
+   photographs. See SHEBA-HANDOFF, batch 044 section.
+3. **Cesar route B.** Of the 68 individual units in the ledger, 25 are
    `needs_physical_label`, most because cesar.com serves their panel image as
    403. Get two independent retailers agreeing on the ingredient order
    (BRIEF-ALPO §1 step 3). Target opens in Chromium; a second retailer is the

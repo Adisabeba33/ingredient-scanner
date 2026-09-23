@@ -149,6 +149,10 @@ const SUPPLEMENT_PHRASES = [
  */
 const KNOWN_TREAT_LINES = [
   "temptations",
+  // Sheba's stick treats. The name carries no word TREAT_PHRASES holds, so a
+  // 0.71 oz pouch of sticks would be judged as a cat's whole diet. The Sheba
+  // brief flagged it before any was seeded; batch 044 is the first that is.
+  "meaty tender sticks",
   // Beneful's biscuit range — Hugs and Snackers. Neither name contains a word
   // TREAT_PHRASES holds, so without this line the report reads a bag of
   // biscuits as a complete diet and marks it down for not being one. Found by
