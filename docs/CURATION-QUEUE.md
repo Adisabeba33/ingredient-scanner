@@ -127,7 +127,7 @@ once buys the siblings behind it.
 | 1 | **Iams** | both | Mars | **SEEDED** — batch 037: 121 barcodes, 98 compositions. 15 contested panels held back in `research/IAMS-CONTESTED-PANELS.md` | Tier-1 #4, and the cheapest door into the Mars house: five brands on this list are Mars and the app repo has **no Mars manufacturer entry at all**. |
 | 2 | **Purina Cat Chow** | cat | Nestlé Purina | **SEEDED** — batch 038: 26 barcodes, 26 compositions, one campaign. 3 unproven 12 lb UPCs held in `research/PURINA-CAT-CHOW-UPC-LEADS.json` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | **SEEDED** — batch 039: 32 barcodes, 32 compositions, one campaign. `Puppy` left empty for want of a front-of-pack witness | Same shelf, dogs. Ran straight after #2 on the same decks and prefix; `Little Bites` confirmed as a real range. |
-| 4 | **Beneful** | dog | Nestlé Purina | **BRIEFED** — `research/BRIEF-BENEFUL.md` | Tier-1 #10. Seven named ranges and the first of the Purina three where wet is a serious part of the shelf, so texture, presentation and the calorie arithmetic all come back. |
+| 4 | **Beneful** | dog | Nestlé Purina | **SEEDED** — batch 040: 61 barcodes, 35 compositions, after a correction pass that rejected 10 barcodes and demoted 42 statuses | Tier-1 #10. Half wet, and the campaign that taught this repo what over-promotion looks like. |
 | 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
 | 6 | **Cesar** | dog | Mars | QUEUED | Tier-1 #8. Small-dog wet trays bought weekly; the tray/twin-pack scope question is the whole campaign. |
 | 7 | **Temptations** | cat | Mars | QUEUED | Tier-1 #9, highest-volume cat treat in the country. Already in `KNOWN_TREAT_LINES`. |
@@ -167,6 +167,28 @@ Do this for every sibling after the first in a maker family. A brief that
 repeats its sibling is a brief that will disagree with it in six months, and
 the sections most worth keeping identical are exactly the ones an agent is
 most likely to re-derive differently.
+
+---
+
+### Two ways a campaign fails, and they are opposite
+
+Iams captured 114 complete panels and promoted **zero**, because it invented a
+gate stricter than the one this repository uses. Three passes to undo.
+
+Beneful promoted **85 of 89**, of which 42 had no ingredient list, no analysis
+or no calories, and ten had the label deck's URL sitting in the ingredients
+field. One correction pass, ten rejected barcodes, forty-two demoted statuses.
+
+Both came from the same brief section, read in opposite directions — the
+Beneful brief inherited Cat Chow §4, which had been written hard against the
+Iams over-caution. That section now names both failures and says the thing
+that is actually true: **the gate is not a judgement call.** §10 lists what
+must be captured, and a record either has those fields filled from a source
+somebody read, or it does not.
+
+The lesson for writing these: a rule written against the last failure will
+produce its mirror image. Say what the rule IS, not what the last campaign got
+wrong.
 
 ---
 

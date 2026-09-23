@@ -149,6 +149,11 @@ const SUPPLEMENT_PHRASES = [
  */
 const KNOWN_TREAT_LINES = [
   "temptations",
+  // Beneful's biscuit range — Hugs and Snackers. Neither name contains a word
+  // TREAT_PHRASES holds, so without this line the report reads a bag of
+  // biscuits as a complete diet and marks it down for not being one. Found by
+  // the batch-040 campaign and checked against the detector before seeding.
+  "baked delights",
   "greenies",
   "milk bone",
   "milkbone",

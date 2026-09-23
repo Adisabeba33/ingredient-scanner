@@ -2042,3 +2042,68 @@ historical. The other two are not seeded:
 Both stay leads. The `Healthy Weight` range therefore holds nothing, alongside
 `Puppy`, which stays empty for a different and better-evidenced reason — see
 the batch 039 comment in `data/known-products.ts`.
+
+
+## Batch 040 — Beneful
+
+Six of 35 stored compositions carry a conflict, and all six are one finding:
+**Purina has renamed two Beneful wet ranges, and both names are on shelves
+right now under different barcodes.**
+
+```
+Prepared Meals   →  Freshly Prepared Meals
+Chopped Blends   →  Freshly Prepared Blends
+```
+
+The campaign filed the old-name packs under the NEW range, which made two
+records claim one printed identity at one size — five such pairs, and the
+checker refused all five. The pack decides: each record is now filed under the
+range its own printed name carries, and the conflict note on it says the other
+name exists with its own code and that the two must not be merged.
+
+This is the same shape as Weruva's `Wx` / `Wx Phos Focused` and I and love and
+you's `Lovingly Simple` / `Baked & Saucy`, both of which `data/us-pet-brands.ts`
+already carries as pairs for the same reason. Beneful's two pairs are now
+listed there alongside them.
+
+- **017800109710** — Prepared Meals Roasted Chicken, 10 oz. The same recipe at
+  the same size sells as Freshly Prepared Meals under `017800107648`.
+- **017800109734** — Prepared Meals Simmered Beef Entrée, 10 oz; the new name
+  carries `017800109635`.
+- **017800109741** — Prepared Meals Simmered Chicken Medley, 10 oz; the new
+  name carries `017800109642`.
+- **017800154941** — Freshly Prepared Blends Beef, Carrots, Peas & Barley,
+  10 oz, against Chopped Blends `017800154949`. *(This code is rejected for a
+  failed check digit — the rename is recorded on its surviving sibling.)*
+- **017800169624** — Freshly Prepared Blends Salmon, Sweet Potatoes, Brown Rice
+  & Spinach, 10 oz, against Chopped Blends `017800169622`. *(Also rejected for
+  its check digit.)*
+
+### What was corrected before any of this reached the catalog
+
+Recorded here because the numbers in the batch comment need an explanation
+somebody can check.
+
+The campaign staged 89 records and marked 85 `source_verified`. It was right
+for the first thirty — batches 01 and 02 are 29 promotions with 29 complete
+panels — and then the status stopped tracking the evidence. By batch 07 it was
+promoting records with nothing in them at all.
+
+| What was wrong | Records |
+|---|---:|
+| `source_verified` with no ingredient list, analysis or calories captured | 42 |
+| **`ingredients_verbatim` holding the label deck's URL** rather than the list printed on it | 10 |
+| UPC-A check digit fails | 10 |
+| Printed guarantees written as sentences instead of `{nutrient, basis, value, unit}` | 38 |
+| `source_urls` containing a literal `null` | 10 |
+| `package_type: "carton"`, which no vocabulary here holds | 8 |
+| `product_line: "Wet"`, which is a food form | 4 |
+
+The ten URLs are the one worth remembering. The field was a non-empty string,
+so every check passed, and what would have reached a shopper as an ingredient
+list was a link to a PDF nobody read. `scripts/check-ledger.mjs` now refuses an
+`ingredients_verbatim` that starts with a scheme or contains no comma at all.
+
+Ten barcodes are `rejected` rather than repaired: patching a check digit
+invents a barcode. Forty-two records were demoted to `needs_physical_label`,
+which changed nothing about their evidence — only the claim made about it.

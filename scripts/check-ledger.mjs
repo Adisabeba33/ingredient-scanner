@@ -424,6 +424,37 @@ for (const r of records) {
     }
   }
 
+  // An ingredient list has to BE one.
+  //
+  // The Beneful campaign put the label deck's URL into ingredients_verbatim on
+  // ten records and marked five of them source_verified. The field was a
+  // non-empty string, so the check above passed, and the composition that
+  // reached the seeding pass was a link. A deck nobody read is not a formula —
+  // and a URL is the specific shape this goes wrong in, because the agent has
+  // the deck open and the address to hand.
+  //
+  // Cheap tests only, because a real list is unpredictable: it must not start
+  // with a scheme, and a US label separates ingredients with commas, so one
+  // with none is not a list whatever else it is.
+  const ingredients = (r.ingredients_verbatim ?? "").trim();
+  if (ingredients) {
+    if (/^https?:\/\//i.test(ingredients)) {
+      err(
+        upc,
+        "ingredients_verbatim holds a URL, not an ingredient list. Cite the " +
+          "deck in source_urls and read the list off it — a link is not a " +
+          "composition."
+      );
+    } else if (!ingredients.includes(",")) {
+      err(
+        upc,
+        `ingredients_verbatim has no comma in it ("${ingredients.slice(0, 48)}…"). ` +
+          "A US label prints ingredients as a comma-separated list in descending " +
+          "weight order; one without a separator is not that list."
+      );
+    }
+  }
+
   // ── Boxes ───────────────────────────────────────────────────────────
   if (isBox) {
     if ((r.ingredients_verbatim ?? "").trim()) {

@@ -245,14 +245,43 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Nestlé Purina",
     species: "dog",
     aliases: ["purina beneful"],
+    // The first seven were shelf memory. The batch-040 campaign read current
+    // packs and added seven more, every one of them carried by at least two
+    // records with a manufacturer deck behind them.
+    //
+    // Two of the additions are RENAMES caught mid-shelf, and both halves are
+    // listed because both are in shops now under different barcodes — the same
+    // treatment Weruva's "Wx" / "Wx Phos Focused" pair gets above. "Prepared
+    // Meals" is becoming "Freshly Prepared Meals"; "Chopped Blends" is
+    // becoming "Freshly Prepared Blends". Merging either pair would file two
+    // real barcodes as one product.
+    //
+    // "Baked Delights" is a TREAT range, and adding it here is only half the
+    // job: lib/nutrition-role.ts has to recognise it too, or the consumer
+    // report judges a bag of biscuits for not being a balanced diet. It does
+    // now.
+    //
+    // Three more current-looking names — Playful Life, Healthy Fiesta,
+    // Protein Rich — were left OUT deliberately. Each rested on a single
+    // record with no deck and no promotion, and one of the three has no
+    // resolved printed size. A range added on that evidence is shelf memory
+    // wearing a campaign's clothes.
     lines: [
       "Originals",
       "Healthy Weight",
       "IncrediBites",
       "Grain Free",
-      "Prepared Meals",
       "Simple Goodness",
       "Superfood Blend",
+      "Healthy Puppy",
+      "Prepared Meals",
+      "Freshly Prepared Meals",
+      "Chopped Blends",
+      "Freshly Prepared Blends",
+      "Freshly Prepared Classics",
+      "Freshly Prepared Stews",
+      "Kitchen Creations",
+      "Baked Delights",
     ],
   },
   {

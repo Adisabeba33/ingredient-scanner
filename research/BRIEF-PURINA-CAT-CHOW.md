@@ -147,10 +147,22 @@ What still forces `needs_physical_label`:
 - an individual-unit UPC you could not prove;
 - anything illegible.
 
-`candidate` is for a lead you could not finish. **Do not invent a stricter
-gate than this section.** If you think one is warranted, say so in the handoff
-and promote anyway — an over-cautious ledger is indistinguishable from a
-failed campaign, and it costs another whole pass to undo.
+`candidate` is for a lead you could not finish.
+
+**Do not invent a stricter gate than this section — and do not read that as
+licence to promote without the evidence.** They are different failures and
+this repository has now made both. The Iams campaign captured 114 complete
+panels and promoted zero, which cost two extra passes. The Beneful campaign
+promoted 85 of 89 records, 42 of which had no ingredient list, no guaranteed
+analysis or no calories captured at all — and ten of which had the deck's URL
+sitting in the ingredients field. That cost a correction pass and ten rejected
+barcodes.
+
+The gate is not a judgement call. §10 lists what must be **captured**, and a
+record either has those fields filled from a source you read or it does not.
+Promote every record that has them. Leave `needs_physical_label` on every
+record that does not, however good the lead looks. If you think §10 itself is
+wrong, say so in the handoff — do not settle it by moving a status.
 
 ---
 
