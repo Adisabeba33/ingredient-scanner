@@ -376,9 +376,10 @@
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label.",
+      "Independent catalog corroboration binds UPC 017800144469 to Beneful Prepared Meals Hearty Roasters Beef, 10 oz, pack of 8. Outer case identity is now corroborated; the individual tub UPC/formula remains a separate unresolved component field."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Prepared Meals Hearty Roasters Beef",
@@ -434,9 +435,10 @@
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label.",
+      "Independent catalog corroboration binds UPC 017800144506 to Beneful Prepared Meals Hearty Roaster Pork, 10 oz, pack of 8. Outer case identity is now corroborated; the individual tub UPC/formula remains a separate unresolved component field."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Prepared Meals Hearty Roasters Pork",
@@ -492,9 +494,10 @@
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label.",
+      "Independent catalog corroboration binds UPC 017800144537 to Beneful Hearty Roasters Savory Turkey, 8 x 10 oz. Outer case identity is now corroborated; the individual tub UPC/formula remains a separate unresolved component field."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Prepared Meals Hearty Roasters Savory Turkey",
