@@ -288,7 +288,8 @@
     "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
     "source_urls": [
       "https://www.target.com/p/-/A-94891784",
-      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-12/a370425_bf_freshly_prepared_classics_w_lamb.pdf"
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-12/a370425_bf_freshly_prepared_classics_w_lamb.pdf",
+      "https://www.ubuy.com.ly/en/product/T91KRPYJM-purina-beneful-freshly-prepared-classics-wet-dog-food-variety-pack-with-turkey-dinner-with-salmon-or-with-lamb-9-5-oz-carton-pack-of-6"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
@@ -298,9 +299,10 @@
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
       "No shell available in connector pass; do not merge until repository checks succeed.",
       "Multipack retained as first-class record. Current Target listing binds outer UPC 017800103794 to 6 x 9.5 oz and names Chicken, Turkey and Lamb Classics recipes. Pack modeled as 2/2/2; Lamb current Purina deck A370425 is already recovered; Chicken/Turkey component formula decks remain to be independently pinned before final checker/merge.",
-      "Component research extended: Lamb maps to individual UPC 017800103770 / A370425; Turkey maps to existing individual UPC 017800103404; Chicken current component deck tracked as A370625. Outer 6-pack remains distinct."
+      "Component research extended: Lamb maps to individual UPC 017800103770 / A370425; Turkey maps to existing individual UPC 017800103404; Chicken current component deck tracked as A370625. Outer 6-pack remains distinct.",
+      "Outer multipack itself now meets package-evidence gate: current Target establishes UPC 017800103794, quantity 6, 9.5 oz cartons, and Chicken/Turkey/Lamb contents; component links are stored separately. Multipack status no longer depends on every inner carton having a separately proven UPC."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Freshly Prepared Classics Chicken with Carrots, Peas & Pasta",
