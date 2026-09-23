@@ -177,4 +177,9 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // (now J.M. Smucker) through Del Monte. NOT GEPIR-confirmed.
   { prefix: "829274", maker: "Meow Mix (J.M. Smucker, observed, not GEPIR-confirmed)" },
   { prefix: "851599", maker: "Meow Mix (J.M. Smucker, observed on Hairball Control, not GEPIR-confirmed)" },
+  // Nutro, on all 172 sizes nutro.com lists (batch 047): the prefix of the
+  // Nutro Company Mars bought in 2007, kept under Mars like Iams' and
+  // Greenies'. Crave, a Mars brand born inside Mars, is under 023100.
+  // NOT GEPIR-confirmed.
+  { prefix: "079105", maker: "Nutro (Mars Petcare US, observed, not GEPIR-confirmed)" },
 ];

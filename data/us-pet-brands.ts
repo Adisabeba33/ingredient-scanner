@@ -470,6 +470,11 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Limited Ingredient Diet",
       "So Simple",
       "Max",
+      // Batch 047, from Mars' own "Sub brand" taxonomy on nutro.com.
+      "Perfect Portions",
+      "Crunchy Treats",
+      "Hearty Stew",
+      "Premium Loaf",
     ],
   },
   {

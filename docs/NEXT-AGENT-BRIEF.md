@@ -70,6 +70,14 @@ to `main`, because the app reads the seed from `main`.
 6. `docs/SEED-GAP-PETCO.md`: 15 brands missing from `data/us-pet-brands.ts`,
    with five modelling decisions still to make.
 
+## Done since this brief was first written
+
+Meow Mix (batch 046, text on the page — no images), Nutro and Crave (047).
+See their handoffs in research/. Next candidates whose sites load but were
+not yet checked down to a product page: Kibbles 'n Bits (panel as text, no
+barcode in markup), Milk-Bone, Rachael Ray Nutrish, Nature's Recipe, Taste
+of the Wild, Instinct, Tiki Cat, Freshpet.
+
 ## Rules that are not negotiable
 
 - Never repair a barcode. The one allowed normalisation is restoring a
