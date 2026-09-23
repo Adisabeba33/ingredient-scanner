@@ -340,35 +340,52 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "5.5 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water, chicken, wheat gluten, liver, meat by-products, green beans, corn starch-modified, natural and artificial flavors, soy flour, tricalcium phosphate, minerals [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], vitamins [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "water",
+      "chicken",
+      "wheat gluten",
+      "liver",
+      "meat by-products",
+      "green beans",
+      "corn starch-modified",
+      "natural and artificial flavors",
+      "soy flour",
+      "tricalcium phosphate",
+      "minerals",
+      "vitamins",
+      "choline chloride"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 803,
+      "kcal_per_unit": 125,
       "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "label_deck_code": "A372025",
+    "formula_source": "Current Purina manufacturer label deck A372025 plus exact UPC/size retailer binding",
     "source_urls": [
-      "https://www.kroger.com/p/purina-beneful-in-gravy-wet-dog-food-steak-flavor-with-green-beans/0001780010326"
+      "https://www.kroger.com/p/purina-beneful-in-gravy-wet-dog-food-steak-flavor-with-green-beans/0001780010326",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-01/3720_a372025_beneful_steak_flavor_green_beans_in_gravy_wet_dog_food_5cf.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact individual can UPC and printed size established.",
     "conflicts": [],
     "verification_notes": [
       "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass recovered current Purina A372025 complete formula/GA/calories and exact UPC 017800103268 / 5.5 oz retail binding.",
+      "Wet arithmetic: 803 kcal/kg × 0.156 kg ≈ 125 kcal/can, matching printed calories within rounding."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
