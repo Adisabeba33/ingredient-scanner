@@ -192,16 +192,18 @@
     "formula_source": "UPC has multiple retailer bindings; current Purina formula is F406324, but UPC appears legacy alongside current 107648, so retained below promotion gate.",
     "source_urls": [
       "https://www.upcitemdb.com/upc/17800109710",
-      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4063_f406324_beneful_freshly_prepared_meals_roasted_chicken_recipe_wet_dog_food_bc8.pdf"
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4063_f406324_beneful_freshly_prepared_meals_roasted_chicken_recipe_wet_dog_food_bc8.pdf",
+      "https://www.petcarerx.com/beneful-prepared-meals-roasted-chicken-wet-dog-food/31931"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC has multiple retailer bindings; current Purina formula is F406324, but UPC appears legacy alongside current 107648, so retained below promotion gate.",
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second pass: exact legacy UPC 017800109710 binds 10 oz Roasted Chicken; PetCareRx supplies 1009 kcal/kg / 286 kcal/tub and current Purina recipe deck corroborates formula family. Wet arithmetic 1009×0.283≈286."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -296,16 +298,18 @@
     "formula_source": "Case/legacy UPC binding found; current unit UPC in prior batch is 109642, so retain as unresolved legacy/case identity.",
     "source_urls": [
       "https://www.petcarerx.com/beneful-prepared-meals-simmered-chicken-medley-wet-dog-food/32815?sku=50717",
-      "https://www.ubuy.az/en/product/G2RRV40G-purina-beneful-prepared-meals-adult-wet-dog-food-8-10-oz-tubs"
+      "https://www.ubuy.az/en/product/G2RRV40G-purina-beneful-prepared-meals-adult-wet-dog-food-8-10-oz-tubs",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4064_f406424_beneful_freshly_prepared_meals_simmered_chicken_medley_wet_dog_food_bc3_0.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Case/legacy UPC binding found; current unit UPC in prior batch is 109642, so retain as unresolved legacy/case identity.",
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second pass: exact legacy UPC 017800109741 binds 10 oz Simmered Chicken Medley; current Purina deck corroborates complete current recipe evidence."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
