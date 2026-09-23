@@ -354,7 +354,8 @@
     "label_deck_code": null,
     "formula_source": "Exact UPC/product identity and size evidence recovered; full current promotion-grade formula evidence is incomplete unless otherwise noted.",
     "source_urls": [
-      "https://www.kroger.com/p/purina-beneful-natural-lamb-venison-protein-rich-dry-dog-food/0001780018988"
+      "https://www.kroger.com/p/purina-beneful-natural-lamb-venison-protein-rich-dry-dog-food/0001780018988",
+      "https://shop.petlife.com/products/purina-beneful-protein-rich-lamb-and-venison-with-sweet-potato-and-beets-dry-dog-food-12-lbs"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact UPC/product binding recovered.",
@@ -362,9 +363,10 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Meal/product lead staged below promotion gate until complete current formula/GA evidence is established.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass: Kroger binds exact UPC to 12 lb Protein Rich Lamb & Venison; full ingredients, GA 29/13/4/14, adult adequacy and 3593 kcal/kg / 394 kcal/cup corroborated."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
