@@ -219,34 +219,80 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "16 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.",
+    "ingredients_ordered_normalized": [
+      "Ground yellow corn",
+      "meat and bone meal",
+      "soybean meal",
+      "beef fat preserved with mixed-tocopherols",
+      "corn protein meal",
+      "egg and chicken flavor",
+      "natural flavor",
+      "salt",
+      "potassium chloride",
+      "choline chloride",
+      "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+      "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)]",
+      "L-Tryptophan",
+      "L-Lysine monohydrochloride",
+      "Red 40",
+      "Yellow 5",
+      "calcium carbonate",
+      "Blue 2",
+      "garlic oil"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 18,
+      "crude_fat_min_percent": 8.5,
+      "crude_fiber_max_percent": 5.5,
+      "moisture_max_percent": 12,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium (Ca)",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus (P)",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Iron (Fe)",
+          "basis": "min",
+          "value": 80,
+          "unit": "other"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 3393,
+      "kcal_per_unit": 378,
+      "unit_name": "cup"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "label_deck_code": "M502024",
+    "formula_source": "Current Purina manufacturer label-deck PDF M502024.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/5020_m502024_alpo_prime_cuts_dry_dog_food_621.pdf",
       "https://www.townandcountryhardware.com/2842954/Product/alpo-1113214544?bvstate=pg%3A6%2Fct%3Ar"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Retailer exposes nutrients and an alphabetized ingredient field, not a trustworthy AS-PRINTED ingredient order; Step 2 stops."
+      "Steps 1–3 passed. Route A: current Purina label deck M502024 supplies the complete formula panel and calories; cited identity source binds this UPC to the exact printed bag size."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -268,34 +314,80 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "4 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.",
+    "ingredients_ordered_normalized": [
+      "Ground yellow corn",
+      "meat and bone meal",
+      "soybean meal",
+      "beef fat preserved with mixed-tocopherols",
+      "corn protein meal",
+      "egg and chicken flavor",
+      "natural flavor",
+      "salt",
+      "potassium chloride",
+      "choline chloride",
+      "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+      "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)]",
+      "L-Tryptophan",
+      "L-Lysine monohydrochloride",
+      "Red 40",
+      "Yellow 5",
+      "calcium carbonate",
+      "Blue 2",
+      "garlic oil"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 18,
+      "crude_fat_min_percent": 8.5,
+      "crude_fiber_max_percent": 5.5,
+      "moisture_max_percent": 12,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium (Ca)",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus (P)",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Iron (Fe)",
+          "basis": "min",
+          "value": 80,
+          "unit": "other"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 3393,
+      "kcal_per_unit": 378,
+      "unit_name": "cup"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "label_deck_code": "M502024",
+    "formula_source": "Current Purina manufacturer label-deck PDF M502024.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/5020_m502024_alpo_prime_cuts_dry_dog_food_621.pdf",
       "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Identity/size lead only; Step 2 stops."
+      "Steps 1–3 passed. Route A: current Purina label deck M502024 supplies the complete formula panel and calories; cited identity source binds this UPC to the exact printed bag size."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -317,34 +409,80 @@
     "presentation": "plain",
     "package_type": "bag",
     "size": "47 lb",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.",
+    "ingredients_ordered_normalized": [
+      "Ground yellow corn",
+      "meat and bone meal",
+      "soybean meal",
+      "beef fat preserved with mixed-tocopherols",
+      "corn protein meal",
+      "egg and chicken flavor",
+      "natural flavor",
+      "salt",
+      "potassium chloride",
+      "choline chloride",
+      "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+      "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)]",
+      "L-Tryptophan",
+      "L-Lysine monohydrochloride",
+      "Red 40",
+      "Yellow 5",
+      "calcium carbonate",
+      "Blue 2",
+      "garlic oil"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 18,
+      "crude_fat_min_percent": 8.5,
+      "crude_fiber_max_percent": 5.5,
+      "moisture_max_percent": 12,
       "ash_max_percent": null,
       "taurine_min_percent": null,
-      "other_printed_guarantees": []
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium (Ca)",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus (P)",
+          "basis": "min",
+          "value": 0.7,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Iron (Fe)",
+          "basis": "min",
+          "value": 80,
+          "unit": "other"
+        }
+      ]
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 3393,
+      "kcal_per_unit": 378,
+      "unit_name": "cup"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "label_deck_code": "M502024",
+    "formula_source": "Current Purina manufacturer label-deck PDF M502024.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/5020_m502024_alpo_prime_cuts_dry_dog_food_621.pdf",
       "https://www.buycott.com/brand/5127/alpo-upc"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Identity/size lead only; Step 2 stops."
+      "Steps 1–3 passed. Route A: current Purina label deck M502024 supplies the complete formula panel and calories; cited identity source binds this UPC to the exact printed bag size."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
