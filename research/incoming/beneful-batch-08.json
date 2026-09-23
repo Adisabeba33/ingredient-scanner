@@ -246,7 +246,9 @@
     "label_deck_code": null,
     "formula_source": "Exact UPC/product identity and size evidence recovered; full current promotion-grade formula evidence is incomplete unless otherwise noted.",
     "source_urls": [
-      "https://www.kroger.com/p/purina-beneful-simple-goodness-with-farm-raised-beef-adult-dry-dog-food/0001780017897"
+      "https://www.kroger.com/p/purina-beneful-simple-goodness-with-farm-raised-beef-adult-dry-dog-food/0001780017897",
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://ziggypetshop.com/purina-beneful-simple-goodness-farm/"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Outer multipack UPC; do not treat as individual unit barcode.",
@@ -254,9 +256,11 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Meal/product lead staged below promotion gate until complete current formula/GA evidence is established.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass: exact Beef Simple Goodness UPC identity and complete formula/GA/calorie panel corroborated by retail label evidence.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
