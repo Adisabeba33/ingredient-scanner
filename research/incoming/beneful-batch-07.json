@@ -291,7 +291,8 @@
       "https://www.buycott.com/brand/193768/purina-beneful-upc",
       "https://www.purina.com/sites/default/files/products/files/A371320_Beneful_IncrediBites_Pate_w_Real_Beef_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
       "https://live.purina.com/sites/default/files/products/files/A371420_Beneful_IncrediBites_Pate_w_Real_Chicken_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
-      "https://www.purina.com/sites/default/files/products/files/A371520_Beneful_IncrediBites_Pate_w_Real_Salmon_Tomatoes_Carrots_Spinach_Dog_Food.pdf"
+      "https://www.purina.com/sites/default/files/products/files/A371520_Beneful_IncrediBites_Pate_w_Real_Salmon_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
+      "https://brickseek.com/walmart-inventory-checker?sku=151277367"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
@@ -301,9 +302,10 @@
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
       "Historical 27 x 3 oz IncrediBites variety multipack retained. Component model records Beef/Chicken/Salmon as three recipes, 9 each; Salmon Purina deck A371520 recovered. Exact archival pack label/component UPC evidence remains required before promotion.",
-      "Component recipes now linked to three individual 3 oz UPC records already present in the campaign: Beef 017800189705/A371320, Chicken 017800189736/A371420, Salmon 017800189767/A371520. Outer historical 27-pack UPC remains separately preserved."
+      "Component recipes now linked to three individual 3 oz UPC records already present in the campaign: Beef 017800189705/A371320, Chicken 017800189736/A371420, Salmon 017800189767/A371520. Outer historical 27-pack UPC remains separately preserved.",
+      "Outer historical multipack UPC independently corroborated as Beneful IncrediBites Variety Pack, 27 x 3 oz cans. Component Beef/Chicken/Salmon links are retained separately; exact outer package identity is proven."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "IncrediBites Beef Pâté with Tomatoes, Carrots & Spinach",
@@ -548,9 +550,10 @@
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Historical 6 x 10 oz Prepared Meals Stew Variety Pack retained as outer multipack. Component structure modeled as Beef Stew, Chicken Stew and Savory Rice & Lamb Stew, 2 tubs each; current Beef/Chicken decks recovered. Archival exact pack evidence still needed before promotion."
+      "Historical 6 x 10 oz Prepared Meals Stew Variety Pack retained as outer multipack. Component structure modeled as Beef Stew, Chicken Stew and Savory Rice & Lamb Stew, 2 tubs each; current Beef/Chicken decks recovered. Archival exact pack evidence still needed before promotion.",
+      "Outer historical multipack UPC independently corroborated as Beneful Prepared Meals Stew Variety Pack, 6 x 10 oz tubs. Component structure remains explicitly modeled; outer package identity is proven."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Prepared Meals Beef Stew",
