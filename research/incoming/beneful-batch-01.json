@@ -160,9 +160,10 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact UPC binds Originals Beef 6.3 lb; current Purina U409024 provides complete formula, GA, adequacy and calories."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -571,9 +572,10 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact UPC binds Originals Beef 31.1 lb; current Purina U409024 provides complete formula, GA, adequacy and calories."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -894,9 +896,10 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact UPC binds Originals Chicken 31.1 lb and staged formula evidence is complete for the recipe."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
