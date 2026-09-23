@@ -223,35 +223,51 @@
     "presentation": "plain",
     "package_type": "can",
     "size": "3 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, liver, meat by-products, salmon, tomatoes, carrots, spinach, minerals [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], tricalcium phosphate, guar gum, vitamins [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "liver",
+      "meat by-products",
+      "salmon",
+      "tomatoes",
+      "carrots",
+      "spinach",
+      "minerals",
+      "tricalcium phosphate",
+      "guar gum",
+      "vitamins",
+      "choline chloride"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 6,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 1254,
+      "kcal_per_unit": 106,
       "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/size retail evidence; complete current manufacturer formula deck not yet recovered",
+    "label_deck_code": "A371520",
+    "formula_source": "Purina manufacturer label deck A371520 plus exact UPC/size retail binding",
     "source_urls": [
-      "https://www.shoprite.com/sm/pickup/rsid/589/product/purina-beneful-incredibites-dog-food-3-oz-id-00017800189767"
+      "https://www.shoprite.com/sm/pickup/rsid/589/product/purina-beneful-incredibites-dog-food-3-oz-id-00017800189767",
+      "https://www.purina.com/sites/default/files/products/files/A371520_Beneful_IncrediBites_Pate_w_Real_Salmon_Tomatoes_Carrots_Spinach_Dog_Food.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact individual can UPC and printed size established.",
     "conflicts": [],
     "verification_notes": [
       "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass recovered exact 3 oz UPC binding and Purina A371520 complete formula/GA/calories/adequacy evidence.",
+      "Wet arithmetic: 1254 kcal/kg × 0.085 kg ≈ 106.6 kcal/can, consistent with printed 106 kcal/can after label rounding."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
