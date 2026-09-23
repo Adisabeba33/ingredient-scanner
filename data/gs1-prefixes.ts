@@ -65,8 +65,13 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // to reach this file.
   //
   // Purina's SECOND prefix, and the pattern is now established rather than
-  // surprising: Purina ONE and Alpo carry 017800 while Fancy Feast and
-  // Friskies carry 050000, exactly as Blue Buffalo runs 840243 beside 859610.
+  // surprising: Purina ONE carries 017800 while Fancy Feast and Friskies carry
+  // 050000, exactly as Blue Buffalo runs 840243 beside 859610.
+  //
+  // This comment used to say Alpo carries 017800 too. The Alpo campaign
+  // (batch 041) found no Alpo pack under it: the one 017800 code it met was a
+  // Beneful Healthy Smile treat filed under the wrong brand. Alpo is 011132,
+  // below, plus 050000 on the Come & Get It bags.
   { prefix: "017800", maker: "Nestlé Purina" },
   { prefix: "071190", maker: "9Lives (Post)" },
   // 9Lives' OTHER prefix, and the one that shows what a brand changing hands
@@ -150,4 +155,10 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // gepir.gs1.org were unreachable from the research environment, so this is
   // an observation, the same standing as TheraDiet's two entries above.
   { prefix: "019014", maker: "Iams (Mars Petcare US, observed, not GEPIR-confirmed)" },
+  // Alpo — the prefix Alpo Petfoods registered before Purina bought the brand,
+  // still on every can, pouch, treat bag and Prime Cuts bag, the same way
+  // Iams kept 019014 under Mars. Observed on 51 of the 54 Alpo barcodes seeded
+  // in batch 041; the other three are Come & Get It bags under Purina's own
+  // 050000. NOT GEPIR-confirmed.
+  { prefix: "011132", maker: "Alpo (Nestlé Purina, observed, not GEPIR-confirmed)" },
 ];

@@ -156,6 +156,10 @@ const VERIFIED_039 = "2026-09-22";
 // figure can be checked against the printed net weight, where a bag's per-cup
 // number is a volume and cannot be.
 const VERIFIED_040 = "2026-09-23";
+// Batch 041 — Alpo. Every composition here is route A: a Purina label deck
+// for that exact recipe. The wet cans' calorie lines work at 13 oz rather than
+// the 13.2 oz printed on the ledger — see docs/CATALOG-CONFLICTS.md.
+const VERIFIED_041 = "2026-09-23";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -10861,5 +10865,74 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Wheat flour, water, glycerin, whole grain corn, corn protein meal, sugar, chicken by-product meal, animal fat (preserved with BHA and citric acid), beef, whole grain wheat, wheat starch, phosphoric acid, salt, natural and artificial peanut butter flavor, natural and artificial vanilla flavor, potassium sorbate (a preservative), dried apples, dried carrots, dried peas, calcium propionate (a preservative), sorbic acid (a preservative), preserved with mixed tocopherols, Yellow 6, Red 40, Yellow 5, Blue 2.`,
     analysis: withCalories(ga(9, 5, 3, 28, null, null), 3069, 24, "piece"),
     verifiedAt: VERIFIED_040,
+  },
+  // ── Alpo — batch 041 ─────────────────────────────────────────────────────
+  //
+  // 12 compositions under 54 seeded barcodes; the other 42 are identity only.
+  "050000580897": {
+    ingredients: `Ground yellow corn, corn germ meal, beef and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, pork and bone meal, egg and chicken flavor, natural flavor, corn protein meal, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural grill flavor, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, calcium carbonate, Blue 2, Yellow 6, garlic oil.`,
+    analysis: withCalories(ga(18, 8.5, 6, 12, null, null), 3384, 377, "cup"),
+    verifiedAt: VERIFIED_041,
+  },
+  "050000637409": {
+    ingredients: `Ground yellow corn, corn germ meal, beef and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, pork and bone meal, egg and chicken flavor, natural flavor, corn protein meal, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural grill flavor, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, calcium carbonate, Blue 2, Yellow 6, garlic oil.`,
+    analysis: withCalories(ga(18, 8.5, 6, 12, null, null), 3384, 377, "cup"),
+    verifiedAt: VERIFIED_041,
+  },
+  "011132145446": {
+    ingredients: `Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.`,
+    analysis: withCalories(ga(18, 8.5, 5.5, 12, null, null), 3393, 378, "cup"),
+    verifiedAt: VERIFIED_041,
+  },
+  "011132000400": {
+    ingredients: `Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.`,
+    analysis: withCalories(ga(18, 8.5, 5.5, 12, null, null), 3393, 378, "cup"),
+    verifiedAt: VERIFIED_041,
+  },
+  "011132145477": {
+    ingredients: `Ground yellow corn, meat and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, corn protein meal, egg and chicken flavor, natural flavor, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], L-Tryptophan, L-Lysine monohydrochloride, Red 40, Yellow 5, calcium carbonate, Blue 2, garlic oil.`,
+    analysis: withCalories(ga(18, 8.5, 5.5, 12, null, null), 3393, 378, "cup"),
+    verifiedAt: VERIFIED_041,
+  },
+  "011132136062": {
+    ingredients: `Water sufficient for processing, poultry, liver, wheat gluten, soy flour, meat by-products, beef, corn starch-modified, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], added color, natural beef tenderloin flavor, salt, calcium carbonate, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].`,
+    analysis: withCalories(ga(9, 2.5, 1.5, 82, null, null), 826, 304, "can"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Calories do not work at the 13.2 oz this barcode's listings print: 826 kcal/kg \u00d7 13.2 oz is 309 kcal and the deck says 304. At 13 oz the deck's own line works to the kilocalorie. Purina may have cut the can from 13.2 to 13 oz under the same code; a photograph of the can's net weight settles it. Size kept as listed.",
+  },
+  "011132125448": {
+    ingredients: `Water sufficient for processing, chicken, meat by-products, wheat gluten, turkey, soy flour, corn starch-modified, carrots, potatoes, green beans, tricalcium phosphate, potassium chloride, added color, choline chloride, calcium carbonate, MINERALS [zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].`,
+    analysis: withCalories(ga(8, 2.5, 1.5, 82, null, null), 829, 305, "can"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Calories do not work at the 13.2 oz this barcode's listings print: 829 kcal/kg \u00d7 13.2 oz is 310 kcal and the deck says 305. At 13 oz the deck's own line works to the kilocalorie. Purina may have cut the can from 13.2 to 13 oz under the same code; a photograph of the can's net weight settles it. Size kept as listed.",
+  },
+  "011132125615": {
+    ingredients: `Water sufficient for processing, meat by-products, chicken, wheat gluten, beef, soy flour, corn starch-modified, carrots, potatoes, added color, peas, tricalcium phosphate, choline chloride, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].`,
+    analysis: withCalories(ga(8, 2.5, 1.5, 82, null, null), 827, 305, "can"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Calories do not work at the 13.2 oz this barcode's listings print: 827 kcal/kg \u00d7 13.2 oz is 309 kcal and the deck says 305. At 13 oz the deck's own line works to the kilocalorie. Purina may have cut the can from 13.2 to 13 oz under the same code; a photograph of the can's net weight settles it. Size kept as listed.",
+  },
+  "011132125318": {
+    ingredients: `Water sufficient for processing, meat by-products, poultry, wheat gluten, lamb, rice, soy flour, corn starch-modified, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], added color, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].`,
+    analysis: withCalories(ga(8, 2.5, 1.5, 82, null, null), 832, 306, "can"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Calories do not work at the 13.2 oz this barcode's listings print: 832 kcal/kg \u00d7 13.2 oz is 311 kcal and the deck says 306. At 13 oz the deck's own line works to the kilocalorie. Purina may have cut the can from 13.2 to 13 oz under the same code; a photograph of the can's net weight settles it. Size kept as listed.",
+  },
+  "011132135973": {
+    ingredients: `Water sufficient for processing, poultry, liver, wheat gluten, soy flour, meat by-products, beef, corn starch-modified, tricalcium phosphate, added color, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], natural T-bone steak flavor, salt, calcium carbonate, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].`,
+    analysis: withCalories(ga(9, 2.5, 1.5, 82, null, null), 826, 304, "can"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Calories do not work at the 13.2 oz this barcode's listings print: 826 kcal/kg \u00d7 13.2 oz is 309 kcal and the deck says 304. At 13 oz the deck's own line works to the kilocalorie. Purina may have cut the can from 13.2 to 13 oz under the same code; a photograph of the can's net weight settles it. Size kept as listed.",
+  },
+  "011132171049": {
+    ingredients: `Ground wheat, water, wheat flour, corn protein meal, glycerin, ground yellow corn, sugar, beef, poultry by-product meal, liver, soybean meal, animal fat preserved with mixed-tocopherols, corn starch-modified, salt, phosphoric acid, dried whey, gelatin, sorbic acid (a preservative), animal digest, calcium propionate (a preservative), natural flavor, natural smoke flavor, natural porterhouse steak flavor, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(12, 3, 3.5, 28, null, null), 2761, 36, "piece"),
+    verifiedAt: VERIFIED_041,
+  },
+  "011132170998": {
+    ingredients: `Ground wheat, water, wheat flour, corn protein meal, glycerin, ground yellow corn, sugar, beef, poultry by-product meal, liver, soybean meal, animal fat preserved with mixed-tocopherols, corn starch-modified, salt, phosphoric acid, dried whey, gelatin, sorbic acid (a preservative), animal digest, calcium propionate (a preservative), natural flavor, natural smoke flavor, natural porterhouse steak flavor, Red 40, Yellow 5, Blue 2.`,
+    analysis: withCalories(ga(12, 3, 3.5, 28, null, null), 2761, 36, "piece"),
+    verifiedAt: VERIFIED_041,
+    conflict: "Sold as \"T-Bonz Original Porterhouse\" 28 oz; filed with the 45 oz \"Porterhouse Steak-Shaped\" as one product because both rest on deck A386223 and print its list to the letter. If the 28 oz pack prints a different name, it is still this recipe.",
   },
 };

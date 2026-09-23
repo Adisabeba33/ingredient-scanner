@@ -296,7 +296,21 @@ export const US_PET_BRANDS: SeedBrand[] = [
     owner: "Nestlé Purina",
     species: "dog",
     aliases: ["purina alpo"],
-    lines: ["Chop House", "Prime Cuts", "Come & Get It", "Variety Snaps", "T-Bonz"],
+    // The first five were written from shelf memory. The rest were added in
+    // batch 041, each carried by at least two ledger records under the name on
+    // its own pack.
+    lines: [
+      "Chop House",
+      "Prime Cuts",
+      "Come & Get It",
+      "Variety Snaps",
+      "T-Bonz",
+      "Prime Slices",
+      "Gravy Cravers",
+      "Prime Classics",
+      "Hidden Goodness",
+      "Dental Chews",
+    ],
   },
   {
     name: "Merrick",

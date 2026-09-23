@@ -201,7 +201,13 @@ for (const r of records) {
       err(upc, `not a valid barcode — ${upc ? "check digit or length" : "missing"}`);
     }
   } else {
-    if (r.canonical_gtin14 !== upc.padStart(14, "0")) {
+    // A rejected record may carry a code that happens to pass a GTIN-13
+    // check — a Kroger or Fry's item id is 13 digits and one in ten of them
+    // will. Its canonical form was never established, so null is honest.
+    if (
+      r.canonical_gtin14 !== upc.padStart(14, "0") &&
+      !(r.research_status === "rejected" && r.canonical_gtin14 == null)
+    ) {
       err(upc, `canonical_gtin14 should be "${upc.padStart(14, "0")}"`);
     }
     // Collected, not warned per record. A new brand's prefix is unknown by
@@ -497,7 +503,14 @@ for (const r of records) {
   )
     .map(normalise)
     .join(" | ");
-  if (seenIdentity.has(identity)) {
+  // A rejected record claims no identity — it is evidence that a code is NOT
+  // the product. Two retailer item ids rejected for the same pack (Kroger and
+  // Fry's list one T-Bonz under different 13-digit ids) are two pieces of
+  // evidence, not two barcodes claiming one name, and must not block the
+  // ledger or be deleted to get it green.
+  if (r.research_status === "rejected") {
+    // not registered
+  } else if (seenIdentity.has(identity)) {
     err(
       upc,
       `the same printed identity and size as ${seenIdentity.get(identity)}. ` +

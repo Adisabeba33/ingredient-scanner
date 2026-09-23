@@ -2107,3 +2107,57 @@ list was a link to a PDF nobody read. `scripts/check-ledger.mjs` now refuses an
 Ten barcodes are `rejected` rather than repaired: patching a check digit
 invents a barcode. Forty-two records were demoted to `needs_physical_label`,
 which changed nothing about their evidence — only the claim made about it.
+
+## Batch 041 — Alpo
+
+Six of 12 stored compositions carry a conflict. Five are one finding and the
+sixth is a naming decision.
+
+### Five wet cans whose calories work at 13 oz, not 13.2
+
+Every Chop House and Prime Cuts deck in this batch states calories per can,
+and every one of them is short at the 13.2 oz its barcode's listings print —
+by 1.6%, every time, in the same direction:
+
+```
+               kcal/kg   ×13.2 oz   deck says   ×13 oz
+011132136062      826       309        304        304
+011132135973      826       309        304        304
+011132125448      829       310        305        305
+011132125615      827       310        305        305
+011132125318      832       311        306        307
+```
+
+A typo cannot do that five times. The decks are computing for a 13 oz can.
+This ledger also holds `011132152628`, Chop House Beef Tenderloin Flavor, listed
+at **13 oz** — so Purina has most likely cut the can from 13.2 to 13 oz under
+the same barcodes — the same shape as Ocean Favorites Salmon & Shrimp
+(`050000503681`, above), where the calorie line was the witness to a size
+change. The sizes are stored as listed and the note says so; a
+photograph of any one can's net weight settles all five.
+
+- **011132136062** — Chop House Beef Tenderloin Flavor in Gourmet Gravy
+- **011132135973** — Chop House T-Bone Steak Flavor in Gourmet Gravy
+- **011132125448** — Prime Cuts With Chicken & Wholesome Veggie Accents in Gravy
+- **011132125615** — Prime Cuts Beef Stew / Beef & Vegetables
+- **011132125318** — Prime Cuts With Lamb & Rice in Gravy
+
+### T-Bonz Porterhouse: two names, one deck
+
+- **011132170998** — sold as "T-Bonz Original Porterhouse" 28 oz. Deck A386223
+  is also the deck for `011132171049`, "Porterhouse Steak-Shaped" 45 oz, and
+  the two print the same ingredient list to the letter. Filed as one product
+  with two packages rather than as two products sharing a composition, which
+  the test suite would rightly refuse.
+
+### Corrected before any of this reached the catalog
+
+- **017800154727** — rejected. The campaign filed it as Variety Snaps Little
+  Bites 16 oz; upcitemdb.com titles it a **Beneful Healthy Smile** dental treat,
+  7.4 oz. The real Variety Snaps 16 oz code is `011132006815`.
+- **011132125523** — demoted from source_verified and seeded as identity only.
+  Its deck, A524520, is named "Prime Cuts **Extra Gravy** w/ Beef in Gravy";
+  the barcode's own listings call it "**Homestyle** with Beef Prime Cuts in
+  Gravy"; and `011132152727` is a third beef-in-gravy 13.2 oz can. Only a 2019
+  grocery planogram tied this code to that deck. Which can carries A524520 is
+  a photograph.
