@@ -364,9 +364,19 @@
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A retained exactly as printed by cited source; check digit independently validated without alteration.",
-    "conflicts": [],
+    "conflicts": [
+      {
+        "field": "ingredients_verbatim",
+        "reading_a": "Publix/Instacart panel code K505118 begins Wheat Flour, Beef Tallow Preserved with Mixed-Tocopherols, Wheat Gluten, Lecithin, Chicken By-Product Meal, Liver Flavor, Meat Meal (Source of Lamb Flavor), Oat Hulls, ...",
+        "reading_b": "Uber Eats panel code I-5051 begins Wheat Flour, Beef Tallow Preserved With Mixed-Tocopherols, Wheat Gluten, Lecithin, Chicken By-Product Meal, Animal Digest (Source Of Liver Flavor), Lamb Meal, Oat Fiber, ...",
+        "sources": [
+          "https://delivery.publix.com/landing?product_id=152862&retailer_id=57",
+          "https://www.ubereats.com/product/b/7a00c7df-b13c-5a0b-a4e1-b6610c498c2a"
+        ]
+      }
+    ],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Step 3 stops: two distinct historical Variety Snaps label formulas (K505118 vs I-5051) are associated with the 32 oz product family. Do not select one for this UPC without a physical-label/version witness."
     ],
     "research_status": "needs_physical_label"
   },
