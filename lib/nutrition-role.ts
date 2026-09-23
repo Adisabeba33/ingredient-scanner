@@ -312,6 +312,11 @@ const KNOWN_COMPLEMENTARY_LINES = [
  */
 const BRAND_COMPLEMENTARY_LINES: Record<string, string[]> = {
   reveal: ["limited ingredient"],
+  // Cesar's own page calls Simply Crafted "a simple and tasty meal complement"
+  // to "add to any complete and balanced meal as a healthy topper", and the
+  // panels bear it out: 0.1–0.5% fat in a 1.3 oz tray. Scoped to Cesar because
+  // "simply crafted" is ordinary marketing copy anywhere else.
+  cesar: ["simply crafted"],
 };
 
 const KNOWN_TOPPER_LINES = [

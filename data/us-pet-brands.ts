@@ -378,6 +378,9 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Cesar",
     owner: "Mars",
     species: "dog",
+    // The last four were added in batch 042 from Mars' own page taxonomy
+    // ("Sub brand" on every cesar.com product page), which is a stronger
+    // witness than any retailer's name for them.
     lines: [
       "Classic Loaf in Sauce",
       "Loaf & Topper in Sauce",
@@ -385,6 +388,10 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Home Delights",
       "Wholesome Bowls",
       "Simply Crafted",
+      "Warm Bowls",
+      "Wholesome Meals",
+      "Mini-Pouch",
+      "Softies",
     ],
   },
   {

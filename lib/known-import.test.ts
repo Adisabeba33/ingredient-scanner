@@ -254,16 +254,19 @@ describe("data/known-formulas.ts", () => {
   // A composition that can't be fingerprinted can't be compared against a later
   // capture, which is how a duplicate gets in unnoticed.
   it("every composition is long enough to fingerprint", () => {
-    // Treats excepted, and only treats. The fingerprint exists to recognise
-    // one recipe met under a second barcode, and it needs enough words to be
-    // sure; a single dried organ has three ("Beef Weasand (Oesophagus)"), so
-    // the null it returns is the right answer rather than a thin list. What
+    // Treats and meal complements excepted, and only those. The fingerprint
+    // exists to recognise one recipe met under a second barcode, and it needs
+    // enough words to be sure; a single dried organ has three ("Beef Weasand
+    // (Oesophagus)"), so the null it returns is the right answer rather than a
+    // thin list. Cesar Simply Crafted is the same case from the other side: a
+    // 1.3 oz topper tray whose maker prints "Chicken, Carrots & Green Beans"
+    // and nothing else — read off the panel twice and checked by eye. What
     // this still catches, and must, is a DIET whose composition arrived
     // truncated.
+    const NOT_A_DIET = new Set(["treat", "complementary", "topper"]);
     const treatCodes = new Set(
-      KNOWN_PRODUCTS.filter(
-        (p) =>
-          detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat"
+      KNOWN_PRODUCTS.filter((p) =>
+        NOT_A_DIET.has(detectNutritionRole({ parts: [p.brand, p.line, p.variant] }))
       ).flatMap((p) => p.packages.map((pkg) => pkg.upc))
     );
     const thin = Object.entries(KNOWN_FORMULAS)

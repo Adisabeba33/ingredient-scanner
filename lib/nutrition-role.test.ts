@@ -49,6 +49,20 @@ describe("detectNutritionRole", () => {
     ).toBe("unknown");
   });
 
+  // Cesar sells a complete loaf and a meal complement side by side in the same
+  // tray format. Only the range name separates them, and only under Cesar.
+  it("reads Simply Crafted as a complement only under Cesar", () => {
+    expect(
+      detectNutritionRole({ parts: ["Cesar", "Simply Crafted", "Chicken, Carrots & Green Beans"] })
+    ).toBe("complementary");
+    expect(
+      detectNutritionRole({ parts: ["Cesar", "Classic Loaf in Sauce", "Filet Mignon"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Some Brand", "Simply Crafted", "Chicken"] })
+    ).toBe("unknown");
+  });
+
   // Two snack ranges whose names carry no snack word. A bone broth is 95%
   // water: judged as dinner it is the worst food ever measured, about a pouch
   // nobody was ever going to feed as dinner. "Whole Loin" loses the word
