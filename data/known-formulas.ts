@@ -174,6 +174,8 @@ const VERIFIED_043 = "2026-09-23";
 const VERIFIED_044 = "2026-09-23";
 // Batch 045 — Greenies, each from one size's own label image(s), read twice.
 const VERIFIED_045 = "2026-09-23";
+// Batch 046 — Meow Mix, copied as text from the maker's own pages.
+const VERIFIED_046 = "2026-09-23";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11328,5 +11330,180 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Water, Chicken, Tuna, Tapioca Starch, Salmon, Sunflower Oil, Natural Flavors, Glycine, Marine Microalgae Oil (preserved with Mixed Tocopherols), Tricalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, Salt, Calcium Carbonate, Taurine, Magnesium Sulfate, Ferrous Sulfate, Zinc Sulfate, DL-Alpha-Tocopherol Acetate (source of Vitamin E), Thiamine Mononitrate (Vitamin B1), Vitamin A Supplement, Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), D-Calcium Pantothenate (Vitamin B5), Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Menadione Sodium Bisulfite Complex (source of Vitamin K3 Activity), Potassium Iodide, Folic Acid`,
     analysis: withCalories(ga(8, 2, 0.5, 85, null, 0.04), 749, 10, "pouch"),
     verifiedAt: VERIFIED_045,
+  },
+  // ── Meow Mix — batch 046 ─────────────────────────────────────────────────
+  //
+  // Fifteen of these print a per-unit calorie figure that their own kcal/kg
+  // cannot produce ("3404 kcal/kg; 305 kcal/oz"). kcal/kg is kept and the
+  // per-unit figure is not — see docs/CATALOG-CONFLICTS.md, batch 046.
+  "851599000397": {
+    ingredients: `Chicken By-Product Meal, Corn Protein Meal, Ground Corn, Brewers Rice, Ground Soybean Hulls, Beef Tallow (Mixed Tocopherols Used As A Preservative), Powdered Cellulose, Soybean Oil (Bha/BHT Used A Preservative), Natural Flavor, Calcium Carbonate, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Phosphoric Acid, Potassium Chloride, Salt, Sodium Acid Pyrophosphate, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Grain Distillers Dried Yeast, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, Lactic Acid, Yellow 5, Blue 2, Bha (Used As A Preservative), Rosemary Extract`,
+    analysis: { ...ga(31, 11, 7, 12, null, null), kcalPerKg: 3404 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3404kcal/kg; 305kcal/oz\". 3404 kcal/kg is 97 kcal per ounce, so \"305 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "851599000403": {
+    ingredients: `Chicken By-Product Meal, Corn Protein Meal, Ground Corn, Brewers Rice, Ground Soybean Hulls, Beef Tallow (Mixed Tocopherols Used As A Preservative), Powdered Cellulose, Soybean Oil (Bha/BHT Used A Preservative), Natural Flavor, Calcium Carbonate, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Phosphoric Acid, Potassium Chloride, Salt, Sodium Acid Pyrophosphate, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Grain Distillers Dried Yeast, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Red 40, Lactic Acid, Yellow 5, Blue 2, Bha (Used As A Preservative), Rosemary Extract`,
+    analysis: { ...ga(31, 11, 7, 12, null, null), kcalPerKg: 3404 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3404kcal/kg; 305kcal/oz\". 3404 kcal/kg is 97 kcal per ounce, so \"305 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274007030": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Ground Soybean Hulls, Brewers Rice, Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Phosphoric Acid, Calcium Carbonate, Dehydrated Alfalfa Meal, Choline Chloride, Salt, Grain Distillers Dried Yeast, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Dl-Methionine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Lactic Acid, Yellow 6, Red 40, Yellow 5, Blue 2, Rosemary Extract.`,
+    analysis: { ...ga(31, 11, 9, 12, null, null), kcalPerKg: 3460 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3460kcal/kg; 310kcal/oz\". 3460 kcal/kg is 98 kcal per ounce, so \"310 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274007047": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Ground Soybean Hulls, Brewers Rice, Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Phosphoric Acid, Calcium Carbonate, Dehydrated Alfalfa Meal, Choline Chloride, Salt, Grain Distillers Dried Yeast, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Dl-Methionine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Lactic Acid, Yellow 6, Red 40, Yellow 5, Blue 2, Rosemary Extract.`,
+    analysis: { ...ga(31, 11, 9, 12, null, null), kcalPerKg: 3460 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3460kcal/kg; 310kcal/oz\". 3460 kcal/kg is 98 kcal per ounce, so \"310 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274502306": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Ground Soybean Hulls, Brewers Rice, Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Phosphoric Acid, Calcium Carbonate, Dehydrated Alfalfa Meal, Choline Chloride, Salt, Grain Distillers Dried Yeast, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Dl-Methionine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Lactic Acid, Yellow 6, Red 40, Yellow 5, Blue 2, Rosemary Extract.`,
+    analysis: { ...ga(31, 11, 9, 12, null, null), kcalPerKg: 3460 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3460kcal/kg; 310kcal/oz\". 3460 kcal/kg is 98 kcal per ounce, so \"310 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274007108": {
+    ingredients: `Chicken By-Product Meal, Brewers Rice, Corn Protein Meal, Ground Corn, Soybean Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Ocean Fish Meal (Ethoxyquin Used As A Preservative), Natural Flavor, Salmon Meal, Turkey By-Product Meal, Phosphoric Acid, Calcium Carbonate, Potassium Chloride, Choline Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Lactic Acid, Red 40, Yellow 5, Blue 2, Rosemary Extract`,
+    analysis: { ...ga(36, 15, 4.5, 12, null, 0.15), kcalPerKg: 3750 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3750kcal/kg; 348kcal/oz\". 3750 kcal/kg is 106 kcal per ounce, so \"348 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274513753": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Calcium Carbonate, Phosphoric Acid, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Dl-Methionine, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Yellow 6, Red 40, Yellow 5, Lactic Acid, Potassium Chloride, L-Lysine Monohydrochloride, Blue 2, Rosemary Extract`,
+    analysis: withCalories(ga(30, 11, 4, 12, null, null), 3496, 308, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274513760": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Calcium Carbonate, Phosphoric Acid, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Dl-Methionine, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Yellow 6, Red 40, Yellow 5, Lactic Acid, Potassium Chloride, L-Lysine Monohydrochloride, Blue 2, Rosemary Extract`,
+    analysis: withCalories(ga(30, 11, 4, 12, null, null), 3496, 308, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274502252": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Calcium Carbonate, Phosphoric Acid, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Dl-Methionine, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Yellow 6, Red 40, Yellow 5, Lactic Acid, Potassium Chloride, L-Lysine Monohydrochloride, Blue 2, Rosemary Extract`,
+    analysis: withCalories(ga(30, 11, 4, 12, null, null), 3496, 308, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274454186": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Calcium Carbonate, Phosphoric Acid, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Dl-Methionine, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Yellow 6, Red 40, Yellow 5, Lactic Acid, Potassium Chloride, L-Lysine Monohydrochloride, Blue 2, Rosemary Extract`,
+    analysis: withCalories(ga(30, 11, 4, 12, null, null), 3496, 308, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274520348": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Natural Flavor, Turkey By-Product Meal, Salmon Meal, Ocean Fish Meal (Ethoxyquin Used As A Preservative), Calcium Carbonate, Phosphoric Acid, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Dl-Methionine, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Yellow 6, Red 40, Yellow 5, Lactic Acid, Potassium Chloride, L-Lysine Monohydrochloride, Blue 2, Rosemary Extract`,
+    analysis: withCalories(ga(30, 11, 4, 12, null, null), 3496, 308, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274512329": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Corn Protein Meal, Tuna Meal, Brewers Rice, Natural Flavor, Phosphoric Acid, Calcium Carbonate, Choline Chloride, Shrimp Meal, Crab Meal, Trout Meal, Salt, Potassium Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide (Color), Dl-Methionine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Taurine, Yellow 6, Lactic Acid, Red 40, Yellow 5, Blue 2, Rosemary Extract`,
+    analysis: { ...ga(30, 12, 4, 12, null, null), kcalPerKg: 3480 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3480kcal/kg; 320kcal/oz\". 3480 kcal/kg is 99 kcal per ounce, so \"320 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274502290": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Soybean Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Corn Protein Meal, Tuna Meal, Brewers Rice, Natural Flavor, Phosphoric Acid, Calcium Carbonate, Choline Chloride, Shrimp Meal, Crab Meal, Trout Meal, Salt, Potassium Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Titanium Dioxide (Color), Dl-Methionine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Taurine, Yellow 6, Lactic Acid, Red 40, Yellow 5, Blue 2, Rosemary Extract`,
+    analysis: { ...ga(30, 12, 4, 12, null, null), kcalPerKg: 3480 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3480kcal/kg; 320kcal/oz\". 3480 kcal/kg is 99 kcal per ounce, so \"320 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274544061": {
+    ingredients: `Ground Corn, Chicken By-Product Meal, Corn Protein Meal, Soybean Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Whole Wheat, Natural Flavor, Calcium Carbonate, Phosphoric Acid, Salmon Meal, Turkey By-Product Meal, Corn Syrup, Glycerin, Choline Chloride, Salt, Potassium Sorbate (Used As A Preservative), Titanium Dioxide (Color), Calcium Sulfate, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), L-Lysine Monohydrochloride, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Dicalcium Phosphate, Carrageenan, Dl-Methionine, Monoglycerides, Red 40, Lactic Acid, Potassium Chloride, Yellow 5, Blue 2, Natural White Meat Chicken Flavor, Bha (Used As A Preservative), Rosemary Extract`,
+    analysis: { ...ga(31, 11, 4, 12, null, null), kcalPerKg: 3480 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 3480kcal/kg; 325kcal/oz\". 3480 kcal/kg is 99 kcal per ounce, so \"325 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274827386": {
+    ingredients: `Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Whole Wheat, Fish Meal (Ethoxyquin Used As A Preservative), Natural Flavor, Calcium Carbonate, Malt Extract, Phosphoric Acid, Turkey By-Product Meal, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Glycerin, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine , Dl-Methionine, Dried Chicken Bone Broth, Potassium Sorbate (Used As A Preservative), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Potassium Chloride, Yellow 6, Lactic Acid, Yellow 5, L-Lysine Monohydrochloride, Red 40, Blue 2, Water, Red 40 Lake, Yellow 6 Lake, Blue 1 Lake, Rosemary Extract`,
+    analysis: withCalories(ga(28, 11, 4, 12, null, 0.09), 3574, 325, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274408608": {
+    ingredients: `Corn, Chicken By-Product Meal, Soybean Meal, Corn Protein Meal, Beef Tallow (Mixed Tocopherols Used As A Preservative), Whole Wheat, Fish Meal (Ethoxyquin Used As A Preservative), Natural Flavor, Calcium Carbonate, Malt Extract, Phosphoric Acid, Turkey By-Product Meal, Sodium Acid Pyrophosphate, Choline Chloride, Salt, Glycerin, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine , Dl-Methionine, Dried Chicken Bone Broth, Potassium Sorbate (Used As A Preservative), Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Potassium Chloride, Yellow 6, Lactic Acid, Yellow 5, L-Lysine Monohydrochloride, Red 40, Blue 2, Water, Red 40 Lake, Yellow 6 Lake, Blue 1 Lake, Rosemary Extract`,
+    analysis: withCalories(ga(28, 11, 4, 12, null, 0.09), 3574, 325, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274151559": {
+    ingredients: `Corn, Beef Tallow(Mixed Tocopherols Used As A Preservative), Corn Protein Meal, Whole Wheat, Chicken By-Product Meal, Soybean Meal, Malt Extract, Calcium Carbonate, Natural Flavor, Glycerin, Phosphoric Acid, Water, Choline Chloride, Sodium Acid Pyrophosphate, Dried Chicken Bone Broth, Potassium Sorbate (Used As A Preservative), Salt, Potassium Chloride, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Vitamin B12 Supplement, Folic Acid, Biotin, Vitamin D3 Supplement), Taurine , Minerals (Ferrous Sulfate, Zinc Oxide, Manganous Oxide, Copper Sulfate, Sodium Selenite, Calcium Iodate), Dl-Methionine , Lactic Acid, L-Lysine Monohydrochloride, Red 40, Yellow 5, Blue 2, Red 40 Lake, Yellow 6 Lake, Blue 1 Lake, Rosemary Extract.`,
+    analysis: withCalories(ga(26, 14, 4, 12, null, 0.09), 3827, 1.4, "piece"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274527163": {
+    ingredients: `Chicken, Wheat Flour, Animal Digest, Chicken By-product Meal, Pea Protein, Brewers Dried Yeast, Glycerin, Salmon, Dried Egg Product, Water, Animal Fat (bha Used As A Preservative), Fish Protein Concentrate, Fish Meal (preserved With Ethoxyquin), Phosphoric Acid, Dried Cheese, Salt, Potassium Chloride, Sorbic Acid (used As A Preservative), Vegetable Oil, Titanium Dioxide (color), Yellow 6 Lake, Yellow 5 Lake, Lactic Acid, Bha (used As A Preservative).`,
+    analysis: withCalories(ga(24, 8, 1.5, 30, null, null), 2750, 2, "piece"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274529693": {
+    ingredients: `Chicken, Wheat Flour, Animal Digest, Chicken By-product Meal, Pea Protein, Brewers Dried Yeast, Glycerin, Salmon, Dried Egg Product, Water, Animal Fat (bha Used As A Preservative), Fish Protein Concentrate, Fish Meal (preserved With Ethoxyquin), Phosphoric Acid, Dried Cheese, Salt, Potassium Chloride, Sorbic Acid (used As A Preservative), Vegetable Oil, Titanium Dioxide (color), Yellow 6 Lake, Yellow 5 Lake, Lactic Acid, Bha (used As A Preservative).`,
+    analysis: withCalories(ga(24, 8, 1.5, 30, null, null), 2750, 2, "piece"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274527156": {
+    ingredients: `Chicken, Wheat Flour, Animal Digest, Chicken By-product Meal, Pea Protein, Brewers Dried Yeast, Glycerin, Chicken Breast, Dried Egg Product, Water, Animal Fat (bha Used As A Preservative), Fish Protein Concentrate, Fish Meal (preserved With Ethoxyquin), Phosphoric Acid, Dried Cheese, Salt, Potassium Chloride, Sorbic Acid (used As A Preservative), Vegetable Oil, Titanium Dioxide (color), Natural Flavor, Lactic Acid, Bha (used As A Preservative).`,
+    analysis: withCalories(ga(24, 8, 1.5, 30, null, null), 2770, 2, "piece"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274505703": {
+    ingredients: `Fish Broth, Chicken, Sardines, Chicken Breast, Wheat Gluten, Chicken Liver, Modified Tapioca Starch, Sugar, Natural Flavor, Titanium Dioxide (Color), Poultry By-Products, Dried Egg, Salt, Guar Gum, Calcium Sulfate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Potassium Chloride, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper amino Acid complex, Potassium Iodide, Sodium Selenite), Choline Chloride, Carrageenan, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: { ...ga(9, 2, 1.5, 82, 3, 0.05), kcalPerKg: 770 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 770kcal/kg; 61kcal/oz\". 770 kcal/kg is 22 kcal per ounce, so \"61 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274441537": {
+    ingredients: `Fish Broth, Chicken, Wheat Gluten, Tuna, Modified Tapioca Starch, Sardines, Salmon, Chicken Liver, Poultry By-Products, Dried Egg, Sugar, Natural Flavor, Tricalcium Phosphate, Titanium Dioxide (Color), Salt, Sodium Tripolyphosphate, Guar Gum, Potassium Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Taurine, Choline Chloride, Carrageenan, Canthaxanthin (Color), Beta Carotene (Color), Magnesium Sulfate, Sodium Nitrite (To Promote Color Retention), Iron Oxide (Color).`,
+    analysis: withCalories(ga(8, 2.5, 1.5, 82, 3, 0.05), 850, 66, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274773348": {
+    ingredients: `Fish Broth, Chicken, Tuna, Wheat Gluten, Chicken Liver, Modified Tapioca Starch, Crab, Whitefish, Poultry By-Products, Dried Egg, Sugar, Tricalcium Phosphate, Natural Flavor, Titanium Dioxide (Color), Salt, Guar Gum, Sodium Tripolyphosphate, Wheat Starch, Potato Starch, Potassium Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Palm Oil, Soy Protein Isolate, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Choline Chloride, Magnesium Sulfate, Carrageenan, Dried Egg Whites, Sodium Nitrite (To Promote Color Retention), Sodium Phosphate, Carmine (Color), Paprika Oleoresin (Color).`,
+    analysis: withCalories(ga(8, 2, 1.5, 82, 3, 0.05), 902, 72, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274838818": {
+    ingredients: `Chicken, Fish Broth, Tuna, Liver, Beef, Rice Flour, Pea Protein, Calcium Sulfate, Natural Flavor, Guar Gum, Sodium Tripolyphosphate, Caramel Color, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Salt, Soybean Oil, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Potassium Chloride, Carrageenan, Magnesium Sulfate, Choline Chloride, Mixed Tocopherols (Preservative).`,
+    analysis: withCalories(ga(10, 4, 0.7, 80, 3.5, 0.05), 1009, 78, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274795753": {
+    ingredients: `Chicken, Fish Broth, Tuna, Liver, Pea Protein, Rice Flour, Calcium Sulfate, Natural Flavor, Titanium Dioxide (Color), Guar Gum, Sodium Tripolyphosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Salt, Soybean Oil, Taurine, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Potassium Chloride, Carrageenan, Magnesium Sulfate, Choline Chloride, Beta Carotene (Color)`,
+    analysis: withCalories(ga(10, 4, 0.7, 80, 3.5, 0.05), 998, 77, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274163460": {
+    ingredients: `Fish Broth, Chicken, Tuna, Liver, Salmon, Rice Flour, Natural Flavor, Dried Egg Product, Dextrose, Guar Gum, Glycine, Calcium Carbonate, Dicalcium Phosphate, Sodium Tripolyphosphate, Salt, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Taurine, Potassium Chloride, Choline Chloride, Magnesium Sulfate, Iron Oxide (Color), Annatto Extract (Color), Beta Carotene (Color), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: withCalories(ga(10, 4, 0.7, 80, 3.5, 0.05), 1004, 78, "cup"),
+    verifiedAt: VERIFIED_046,
+  },
+  "829274006170": {
+    ingredients: `Chicken Broth, Tuna, Chicken, Sardines, Beef, Modified Tapioca Starch, Wheat Gluten, Chicken By-Products, Natural Flavor, Dextrose, Calcium Sulfate, Guar Gum, Soy Flour, Dried Egg Product, Added Color, Glycine, Salt, Sodium Tripolyphosphate, Potassium Chloride, Dicalcium Phosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Taurine, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: { ...ga(10, 2.5, 1.5, 82, 3, 0.05), kcalPerKg: 835 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 835kcal/kg; 65kcal/oz\". 835 kcal/kg is 24 kcal per ounce, so \"65 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274006187": {
+    ingredients: `Chicken Broth, Tuna, Chicken, Sardines, Chicken Liver, Modified Tapioca Starch, Wheat Gluten, Soy Flour, Dried Egg Product, Natural Flavor, Dextrose, Calcium Sulfate, Guar Gum, Glycine, Salt, Added Color, Sodium Tripolyphosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Potassium Chloride, Taurine, Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Sodium Nitrite (To Promote Color Retention).`,
+    analysis: { ...ga(10, 1.8, 1.5, 82, 3, 0.05), kcalPerKg: 758 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 758kcal/kg; 60kcal/oz\". 758 kcal/kg is 21 kcal per ounce, so \"60 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274006163": {
+    ingredients: `Fish Broth, Chicken, Tuna, Water, Salmon, Crab, Sardines, wheat Gluten, Modified Tapioca Starch, Soybean Oil, Tricalcium Phosphate, Natural Flavor, Guar Gum, Dried Egg, Salt, Calcium Sulfate, Sodium Tripolyphosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Potassium Chloride, Carrageenan, Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Annatto Extract (Color), Canthaxanthin (Color), Sodium Nitrite (To Promote Color Retention), Mixed Tocopherols (Preservative).`,
+    analysis: { ...ga(9, 3.5, 1.5, 82, 3, 0.05), kcalPerKg: 850 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 850kcal/kg; 66kcal/oz\". 850 kcal/kg is 24 kcal per ounce, so \"66 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274006156": {
+    ingredients: `Fish Broth, Chicken, Tuna, Water, Shrimp, Sardines, Mackerel, Wheat Gluten, Modified Tapioca Starch, Soybean Oil, Tricalcium Phosphate, Natural Flavor, Guar Gum, Dried Egg, Salt, Sodium Tripolyphosphate, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Potassium Chloride, Carrageenan, Choline Chloride, Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Calcium Sulfate, Sodium Nitrite (To Promote Color Retention), Canthaxanthin (Color), Mixed Tocopherols (Preservative).`,
+    analysis: { ...ga(10, 4.5, 1.5, 82, 3, 0.05), kcalPerKg: 924 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 924kcal/kg; 72kcal/oz\". 924 kcal/kg is 26 kcal per ounce, so \"72 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
+  },
+  "829274006194": {
+    ingredients: `Fish Broth, Chicken, Tuna, Turkey, Poultry Giblets, Modified Tapioca Starch, Wheat Gluten, Natural Flavor, Soybean Oil, Sugar, Tricalcium Phosphate, Calcium Sulfate, Dried Egg , Guar Gum, Salt, Sodium Tripolyphosphate, Caramel Color, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin A Supplement, Niacin, D-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Menadione Sodium Bisulfite Complex (Source Of Vitamin K Activity), Biotin), Potassium Chloride, Titanium Dioxide (Color), Minerals (Ferrous Sulfate, Zinc Oxide, Manganese Sulfate, Copper Amino Acid Complex, Potassium Iodide, Sodium Selenite), Choline Chloride, Carrageenan, Rosemary Extract, Magnesium Sulfate, Sodium Nitrite (To Promote Color Retention).`,
+    analysis: { ...ga(10, 1.8, 1.5, 82, 3, 0.05), kcalPerKg: 855 },
+    verifiedAt: VERIFIED_046,
+    conflict: "The maker page prints \"Metabolizable Energy (ME) 855kcal/kg; 66kcal/oz\". 855 kcal/kg is 24 kcal per ounce, so \"66 kcal/oz\" cannot be per ounce — it reads like a per-cup figure under the wrong unit. kcal/kg is kept; the per-unit figure is not stored.",
   },
 };

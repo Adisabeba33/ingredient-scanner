@@ -2161,3 +2161,36 @@ photograph of any one can's net weight settles all five.
   Gravy"; and `011132152727` is a third beef-in-gravy 13.2 oz can. Only a 2019
   grocery planogram tied this code to that deck. Which can carries A524520 is
   a photograph.
+
+## Batch 046 — Meow Mix
+
+Fifteen stored compositions carry one conflict, and it is the same one
+fifteen times: **meowmix.com prints a per-unit calorie figure with a unit its
+own kcal/kg cannot produce.**
+
+```
+Hairball Control   3404 kcal/kg; 305 kcal/oz   ->  3404 kcal/kg is 96 kcal per ounce
+Tenders in Sauce    758 kcal/kg;  60 kcal/oz   ->   758 kcal/kg is 21 kcal per ounce
+```
+
+The second figure fits a cup of dry food, or a whole 2.75 oz tub of wet,
+not an ounce. The page's unit is wrong, and changing it would be a guess
+about which unit was meant, so **kcal/kg is stored and the per-unit figure
+is not**. A photograph of any one pack settles it. Pages that print the
+same pair as "/c" or "/pc", where the arithmetic works, are stored in full.
+
+- **851599000397** — Hairball Control Hairball Control, 3.15 lb
+- **851599000403** — Hairball Control Hairball Control, 6.3 lb
+- **829274007030** — Indoor Health Indoor Health, 3.15 lb
+- **829274007047** — Indoor Health Indoor Health, 6.3 lb
+- **829274502306** — Indoor Health Indoor Health, 14.2 lb
+- **829274007108** — Kitten Lil Nibbles Kitten Lil Nibbles, 3.15 lb
+- **829274512329** — Seafood Medley Seafood Medley, 3.15 lb
+- **829274502290** — Seafood Medley Seafood Medley, 14.2 lb
+- **829274544061** — Tender Centers With Vitality Bursts Salmon & Turkey Flavors, 14.2 lb
+- **829274505703** — Chunks in Gravy With Real Chicken Breast, 2.75 oz
+- **829274006170** — Tenders in Sauce With Real Chicken & Beef, 2.75 oz
+- **829274006187** — Tenders in Sauce With Real Chicken & Liver, 2.75 oz
+- **829274006163** — Tenders in Sauce With Real Salmon & Crab, 2.75 oz
+- **829274006156** — Tenders in Sauce With Real Tuna & Whole Shrimp, 2.75 oz
+- **829274006194** — Tenders in Sauce With Real Turkey & Giblets, 2.75 oz

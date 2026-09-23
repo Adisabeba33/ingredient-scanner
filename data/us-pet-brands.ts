@@ -738,6 +738,12 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Indoor Health",
       "Irresistibles",
       "Seafood Medley",
+      // Batch 046, from meowmix.com's own product pages.
+      "Hairball Control",
+      "Kitten Lil Nibbles",
+      "Chunks in Gravy",
+      "Paté in Gravy",
+      "Tenders in Sauce",
     ],
   },
   {

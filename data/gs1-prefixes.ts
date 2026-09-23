@@ -171,4 +171,10 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // prefix of the company Mars bought Greenies from, kept under Mars the way
   // Iams kept 019014. Batch 045. NOT GEPIR-confirmed.
   { prefix: "642863", maker: "Mars Petcare US (Greenies, observed, not GEPIR-confirmed)" },
+  // Meow Mix, on 45 of the 48 single packs meowmix.com lists, batch 046.
+  // Hairball Control carries a second prefix, 851599, and one variety pack
+  // sits in 9Lives' Del Monte-era 079100 block — both brands came to Post
+  // (now J.M. Smucker) through Del Monte. NOT GEPIR-confirmed.
+  { prefix: "829274", maker: "Meow Mix (J.M. Smucker, observed, not GEPIR-confirmed)" },
+  { prefix: "851599", maker: "Meow Mix (J.M. Smucker, observed on Hairball Control, not GEPIR-confirmed)" },
 ];

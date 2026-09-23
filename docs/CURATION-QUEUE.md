@@ -133,7 +133,7 @@ once buys the siblings behind it.
 | 7 | **Temptations** | cat | Mars | **SEEDED** — batch 043 | 99 barcodes, 12 compositions, read size by size from temptationstreats.com (each size has its own barcode and label images). Not only treats: complete dry food and wet trays are dinner in `lib/nutrition-role.ts`. New prefix `058496`. |
 | 8 | **Greenies** | both | Mars | **SEEDED** — batch 045 | 144 barcodes, 17 compositions (cat SmartBites, Pill Pockets, Smart Purees). Dog dental sizes show only marketing images on greenies.com; 20 sizes carry two disagreeing panels. Prefix `642863`. See `research/GREENIES-HANDOFF.md`. |
 | 9 | **Whiskas** | cat | Mars | QUEUED | **`lines: []`** — the brand entry names no ranges at all, so every product lands under "Other" until that is fixed. See prerequisites. |
-| 10 | **Meow Mix** | cat | Post | QUEUED | Post's cat volume. Pairs with 9Lives, which is seeded, so the Post prefix family is partly mapped. |
+| 10 | **Meow Mix** | cat | Post | **SEEDED** — batch 046 | 36 barcodes, 31 compositions, copied as TEXT from meowmix.com (no images). 16 more barcodes wait on a size. See `research/MEOW-MIX-HANDOFF.md`. |
 | 11 | **Kibbles 'n Bits** | dog | Post | QUEUED | Post sibling of #10; run it immediately after while the prefix work is warm. |
 
 ### Wave 2 — store own-brands
