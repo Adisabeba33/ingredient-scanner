@@ -821,9 +821,19 @@
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
-    "conflicts": [],
+    "conflicts": [
+      {
+        "field": "ingredients_verbatim",
+        "reading_a": "Vons/Randalls: Water Sufficient for Processing, Chicken, Liver, Meat By-Products, Beef, Soy Flour, Rice Flour, Added Color, Natural Filet Mignon Flavor, Bacon, Guar Gum, ...",
+        "reading_b": "Instacart variety-pack panel: Water Sufficient For Processing, Chicken, Liver, Meat By-Products, Beef, Soy Flour, Rice Flour, Added Color, Guar Gum, MINERALS [...], Tricalcium Phosphate, Bacon, Natural Filet Mignon Flavor, ...",
+        "sources": [
+          "https://www.vons.com/shop/pd/purina-alpo-chop-house-filet-mignon-and-bacon-flavors-in-can-dog-food-13-2-oz/960173041",
+          "https://www.instacart.com/products/119726-purina-wet-dog-food-variety-pack-chop-house-filet-mignon-bacon-roasted-chicken-top-sirloin-flavor-13-2-oz"
+        ]
+      }
+    ],
     "verification_notes": [
-      "Identity/size lead only; Step 2 stops."
+      "Step 3 stops: retailer panels disagree on ingredient order/formula revision for Filet Mignon & Bacon. Both readings recorded in conflicts; physical label required."
     ],
     "research_status": "needs_physical_label"
   },
