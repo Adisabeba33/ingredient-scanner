@@ -295,9 +295,30 @@
     "verification_notes": [
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
-      "No shell available in connector pass; do not merge until repository checks succeed."
+      "No shell available in connector pass; do not merge until repository checks succeed.",
+      "Multipack retained as first-class record. Current Target listing binds outer UPC 017800103794 to 6 x 9.5 oz and names Chicken, Turkey and Lamb Classics recipes. Pack modeled as 2/2/2; Lamb current Purina deck A370425 is already recovered; Chicken/Turkey component formula decks remain to be independently pinned before final checker/merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Freshly Prepared Classics Chicken with Carrots, Peas & Pasta",
+        "count": 2,
+        "unit_size": "9.5 oz",
+        "formula_code": null
+      },
+      {
+        "name": "Freshly Prepared Classics Turkey with Sweet Potatoes, Brown Rice & Spinach",
+        "count": 2,
+        "unit_size": "9.5 oz",
+        "formula_code": null
+      },
+      {
+        "name": "Freshly Prepared Classics Lamb with Brown Rice, Carrots & Tomatoes",
+        "count": 2,
+        "unit_size": "9.5 oz",
+        "formula_code": "A370425"
+      }
+    ]
   },
   {
     "catalog_number": null,
