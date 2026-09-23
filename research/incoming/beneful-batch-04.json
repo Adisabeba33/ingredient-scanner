@@ -531,9 +531,18 @@
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Outer UPC is intentionally retained as a multipack. Target and distributor evidence bind UPC 017800159494 to 3 x 3 oz; all three cans are the same Chicken/Tomatoes/Carrots/Wild Rice recipe. Complete current ingredient panel is present on Target."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified",
+    "multipack_contents": [
+      {
+        "name": "IncrediBites Chicken, Tomatoes, Carrots & Wild Rice",
+        "count": 3,
+        "unit_size": "3 oz",
+        "formula_code": "D407520"
+      }
+    ]
   },
   {
     "catalog_number": null,
