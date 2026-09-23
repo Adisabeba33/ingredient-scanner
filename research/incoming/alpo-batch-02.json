@@ -19,34 +19,64 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water sufficient for processing, meat by-products, poultry, wheat gluten, soy flour, beef, corn starch-modified, added color, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].",
+    "ingredients_ordered_normalized": [
+      "Water sufficient for processing",
+      "meat by-products",
+      "poultry",
+      "wheat gluten",
+      "soy flour",
+      "beef",
+      "corn starch-modified",
+      "added color",
+      "tricalcium phosphate",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "choline chloride",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 832,
+      "kcal_per_unit": 306,
+      "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current six-field label panel not captured.",
+    "label_deck_code": "A524520",
+    "formula_source": "Official Purina manufacturer label-deck PDF A524520.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A524520_Alpo_Prime_Cuts_Extra_Gravy_w_Beef_In_Gravy_Dog_Food.pdf",
       "https://swgaoil.com/wp-content/uploads/2019/05/CS-Non-Edible-Grocery-4ft-54in-2019.pdf"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Steps 1–3 passed. Route A: official Purina label deck A524520 supplies complete formula panel and calories; existing identity evidence binds this UPC to the exact 13.2 oz formula."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -68,34 +98,68 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water sufficient for processing, chicken, meat by-products, wheat gluten, turkey, soy flour, corn starch-modified, carrots, potatoes, green beans, tricalcium phosphate, potassium chloride, added color, choline chloride, calcium carbonate, MINERALS [zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].",
+    "ingredients_ordered_normalized": [
+      "Water sufficient for processing",
+      "chicken",
+      "meat by-products",
+      "wheat gluten",
+      "turkey",
+      "soy flour",
+      "corn starch-modified",
+      "carrots",
+      "potatoes",
+      "green beans",
+      "tricalcium phosphate",
+      "potassium chloride",
+      "added color",
+      "choline chloride",
+      "calcium carbonate",
+      "MINERALS [zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 829,
+      "kcal_per_unit": 305,
+      "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current six-field label panel not captured.",
+    "label_deck_code": "A524720",
+    "formula_source": "Official Purina manufacturer label-deck PDF A524720.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A524720_Alpo_Prime_Cuts_Extra_Gravy_w_Chicken_Wholesome_Veggie_Accents_In_Gravy_Dog_Food.pdf",
       "https://assets-of-websites.s3.amazonaws.com/media/934593/ea9ec16005b6b01eb3e7307a44dcf275c1361fed/original/7201%20Online%20Inv%201.21.24%20%281%29%20-%207201%20Online%20Inv%201.21.24%20%281%29.csv.pdf"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Steps 1–3 passed. Route A: official Purina label deck A524720 supplies complete formula panel and calories; existing identity evidence binds this UPC to the exact 13.2 oz formula."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -117,34 +181,67 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water sufficient for processing, meat by-products, chicken, wheat gluten, beef, soy flour, corn starch-modified, carrots, potatoes, added color, peas, tricalcium phosphate, choline chloride, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].",
+    "ingredients_ordered_normalized": [
+      "Water sufficient for processing",
+      "meat by-products",
+      "chicken",
+      "wheat gluten",
+      "beef",
+      "soy flour",
+      "corn starch-modified",
+      "carrots",
+      "potatoes",
+      "added color",
+      "peas",
+      "tricalcium phosphate",
+      "choline chloride",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 827,
+      "kcal_per_unit": 305,
+      "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current six-field label panel not captured.",
+    "label_deck_code": "A524620",
+    "formula_source": "Official Purina manufacturer label-deck PDF A524620.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A524620_Alpo_Prime_Cuts_Extra_Gravy_Stew_w_Beef_Vegetables_In_Gravy_Dog_Food.pdf",
       "https://swgaoil.com/wp-content/uploads/2019/05/CS-Non-Edible-Grocery-4ft-54in-2019.pdf"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Steps 1–3 passed. Route A: official Purina label deck A524620 supplies complete formula panel and calories; existing identity evidence binds this UPC to the exact 13.2 oz formula."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -166,34 +263,65 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water sufficient for processing, meat by-products, poultry, wheat gluten, lamb, rice, soy flour, corn starch-modified, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], added color, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].",
+    "ingredients_ordered_normalized": [
+      "Water sufficient for processing",
+      "meat by-products",
+      "poultry",
+      "wheat gluten",
+      "lamb",
+      "rice",
+      "soy flour",
+      "corn starch-modified",
+      "tricalcium phosphate",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "added color",
+      "choline chloride",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 8,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 832,
+      "kcal_per_unit": 306,
+      "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current six-field label panel not captured.",
+    "label_deck_code": "A524820",
+    "formula_source": "Official Purina manufacturer label-deck PDF A524820.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A524820_Alpo_Prime_Cuts_Extra_Gravy_w_Lamb_Rice_In_Gravy_Dog_Food.pdf",
       "https://www.barcodespider.com/011132125318"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Steps 1–3 passed. Route A: official Purina label deck A524820 supplies complete formula panel and calories; existing identity evidence binds this UPC to the exact 13.2 oz formula."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -264,34 +392,68 @@
     "presentation": "in_gravy",
     "package_type": "can",
     "size": "13.2 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Water sufficient for processing, poultry, liver, wheat gluten, soy flour, meat by-products, beef, corn starch-modified, tricalcium phosphate, added color, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], natural T-bone steak flavor, salt, calcium carbonate, choline chloride, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)].",
+    "ingredients_ordered_normalized": [
+      "Water sufficient for processing",
+      "poultry",
+      "liver",
+      "wheat gluten",
+      "soy flour",
+      "meat by-products",
+      "beef",
+      "corn starch-modified",
+      "tricalcium phosphate",
+      "added color",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "natural T-bone steak flavor",
+      "salt",
+      "calcium carbonate",
+      "choline chloride",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 2.5,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 82,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": null
+      "kcal_per_kg": 826,
+      "kcal_per_unit": 304,
+      "unit_name": "can"
     },
-    "label_deck_code": null,
-    "formula_source": "Identity lead only; complete current six-field label panel not captured.",
+    "label_deck_code": "A524220",
+    "formula_source": "Official Purina manufacturer label-deck PDF A524220.",
     "source_urls": [
+      "https://www.purina.com/sites/default/files/products/files/A524220_Alpo_Chop_House_Extra_Gravy_T-Bone_Steak_Flavor_In_Gourmet_Gravy_Dog_Food.pdf",
       "https://internationalpointofsale.com/Database/PDF/Convenient%20Database%20PA.pdf"
     ],
     "source_accessed_at": "2026-09-23",
     "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
     "conflicts": [],
     "verification_notes": [
-      "Step 1 passed: UPC-A check digit checked without alteration. Step 2 stops: complete AS-PRINTED ingredients, required GA values, calories, and exact printed package evidence are not all captured from qualifying formula evidence."
+      "Steps 1–3 passed. Route A: official Purina label deck A524220 supplies complete formula panel and calories; existing identity evidence binds this UPC to the exact 13.2 oz formula."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
