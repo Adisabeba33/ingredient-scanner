@@ -535,11 +535,34 @@
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Outer multipack UPC; not an individual can barcode.",
-    "conflicts": [],
+    "conflicts": [
+      "Duplicate multipack UPC also present in beneful-batch-05.json; canonicalize before ledger merge."
+    ],
     "verification_notes": [
       "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Duplicate outer UPC of the canonical multipack record staged in beneful-batch-05.json. Do not merge this second copy."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Kitchen Creations Beef & Garden Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": "E408225"
+      },
+      {
+        "name": "Kitchen Creations Chicken & Vibrant Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": "E408125"
+      },
+      {
+        "name": "Kitchen Creations Lamb & Harvest Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": null
+      }
+    ]
   }
 ]
