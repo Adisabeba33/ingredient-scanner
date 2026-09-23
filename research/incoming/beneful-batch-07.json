@@ -366,9 +366,18 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Prepared Meals Hearty Roasters Beef",
+        "count": 8,
+        "unit_size": "10 oz",
+        "formula_code": null
+      }
+    ]
   },
   {
     "catalog_number": null,
@@ -415,9 +424,18 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Prepared Meals Hearty Roasters Pork",
+        "count": 8,
+        "unit_size": "10 oz",
+        "formula_code": null
+      }
+    ]
   },
   {
     "catalog_number": null,
@@ -464,9 +482,18 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Historical outer multipack/case UPC retained as first-class package record. All 8 x 10 oz tubs are the same named Hearty Roasters recipe; individual tub UPC/current manufacturer formula deck remains unproven, so status stays needs_physical_label."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Prepared Meals Hearty Roasters Savory Turkey",
+        "count": 8,
+        "unit_size": "10 oz",
+        "formula_code": null
+      }
+    ]
   },
   {
     "catalog_number": null,
