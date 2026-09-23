@@ -514,7 +514,26 @@ export const US_PET_BRANDS: SeedBrand[] = [
     ],
   },
   { name: "Crave", owner: "Mars", species: "both", lines: ["Grain Free", "High Protein"] },
-  { name: "Greenies", owner: "Mars", species: "both", lines: ["Dental Treats", "Pill Pockets", "Feline Dental"] },
+  {
+    name: "Greenies",
+    owner: "Mars",
+    species: "both",
+    // The first three were shelf memory; the rest came in batch 045 from Mars'
+    // own "Sub brand" taxonomy on greenies.com. Smart Topper is a topper and
+    // Supplements are supplements — lib/nutrition-role.ts reads both before it
+    // reaches the brand-wide treat rule.
+    lines: [
+      "Dental Treats",
+      "Pill Pockets",
+      "Feline Dental",
+      "SmartBites",
+      "Smart Purees",
+      "Smart Topper",
+      "Occupy Twists",
+      "Anytime Bites",
+      "Supplements",
+    ],
+  },
   { name: "Whiskas", owner: "Mars", species: "cat" },
   {
     name: "Orijen",

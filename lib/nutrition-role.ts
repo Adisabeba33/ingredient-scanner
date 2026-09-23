@@ -344,6 +344,9 @@ const BRAND_MEAL_LINES: Record<string, string[]> = {
 };
 
 const KNOWN_TOPPER_LINES = [
+  // Greenies' meal topper range, poured over a dog's food and sold as such.
+  // Without this the brand name alone would file it as a treat. Batch 045.
+  "smart topper",
   "meal mixers",
   "bowl boosters",
   "lil soups",

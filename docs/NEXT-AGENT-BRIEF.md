@@ -57,10 +57,12 @@ to `main`, because the app reads the seed from `main`.
    403. Get two independent retailers agreeing on the ingredient order
    (BRIEF-ALPO §1 step 3). Target opens in Chromium; a second retailer is the
    open question. Four pages that never loaded are listed in the handoff.
-4. **Greenies, Pedigree, Whiskas.** Their home pages load but the sitemaps do
-   not, so find the product URLs another way (category pages in Chromium).
-   Whiskas is fully 403 and is retailer-only. `data/us-pet-brands.ts` has
-   `lines: []` for Whiskas, which must be filled before seeding.
+4. **Greenies: done, batch 045** (GREENIES-HANDOFF). Remaining: the dog
+   dental range (no panel on the site) and 16 supplements with no container.
+   **Pedigree and Whiskas** refuse even the browser from this environment:
+   sitemap, catalogue and most product pages return 403. Retailers or
+   photographs only. `data/us-pet-brands.ts` still has `lines: []` for
+   Whiskas.
 5. **Alpo: 42 identity-only barcodes and 38 unseeded ledger records.**
    purina.com is blocked, so these need retailers or photographs. One can
    photo also settles whether the wet cans dropped from 13.2 to 13 oz (see the

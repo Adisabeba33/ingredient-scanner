@@ -167,4 +167,8 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // the size-by-size "Buy Now" blocks of its own pages, batch 043. NOT
   // GEPIR-confirmed.
   { prefix: "058496", maker: "Mars Petcare US (Temptations, observed, not GEPIR-confirmed)" },
+  // Greenies, on all 169 sizes greenies.com lists, dog and cat alike — the
+  // prefix of the company Mars bought Greenies from, kept under Mars the way
+  // Iams kept 019014. Batch 045. NOT GEPIR-confirmed.
+  { prefix: "642863", maker: "Mars Petcare US (Greenies, observed, not GEPIR-confirmed)" },
 ];

@@ -172,6 +172,8 @@ const VERIFIED_042 = "2026-09-23";
 const VERIFIED_043 = "2026-09-23";
 // Batch 044 — Cesar re-read size by size, and Sheba's first single packs.
 const VERIFIED_044 = "2026-09-23";
+// Batch 045 — Greenies, each from one size's own label image(s), read twice.
+const VERIFIED_045 = "2026-09-23";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11240,5 +11242,91 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken Broth, Water, Shrimp, Tuna, Modified Tapioca Starch, Sunflower Oil, Natural Flavor, Glycine, Guar Gum.`,
     analysis: withCalories(ga(13, 1.2, 1, 84.5, 2, null), 754, 28, "tray"),
     verifiedAt: VERIFIED_044,
+  },
+  // ── Greenies — batch 045 ─────────────────────────────────────────────────
+  "642863114571": {
+    ingredients: `Chicken, Glycerin, Wheat Flour, Wheat Gluten, Vegetable Oil, Natural Catnip Flavor, Dried Corn Syrup, Natural Flavor, Citric Acid (preservative), Mixed Tocopherols (preservative), Vinegar, Rosemary Extract.`,
+    analysis: withCalories(ga(12, 9, 1, 29, null, null), 2990, 3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863101397": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3835, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863106583": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3835, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863108945": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3835, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863140051": {
+    ingredients: `Water, Chicken, Tuna, Tapioca Starch, Sunflower Oil, Natural Flavors, Tricalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, Salt, Calcium Carbonate, Taurine, L-Carnitine, Magnesium Sulfate, Ferrous Sulfate, DL-Alpha-Tocopherol Acetate (source of Vitamin E), Thiamine Mononitrate (Vitamin B1), Zinc Sulfate, Vitamin A Supplement, Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), D-Calcium Pantothenate (Vitamin B5), Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Potassium Iodide, Folic Acid.`,
+    analysis: withCalories(ga(8, 1.5, 0.5, 85, null, 0.04), 642, 9, "pouch"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863140549": {
+    ingredients: `Water, Chicken, Tuna, Tapioca Starch, Sunflower Oil, Natural Flavors, Tricalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, Salt, Calcium Carbonate, Taurine, L-Carnitine, Magnesium Sulfate, Ferrous Sulfate, DL-Alpha-Tocopherol Acetate (source of Vitamin E), Thiamine Mononitrate (Vitamin B1), Zinc Sulfate, Vitamin A Supplement, Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), D-Calcium Pantothenate (Vitamin B5), Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Potassium Iodide, Folic Acid.`,
+    analysis: withCalories(ga(8, 1.5, 0.5, 85, null, 0.04), 642, 9, "pouch"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863021428": {
+    ingredients: `Chicken, Glycerin, Wheat Flour, Wheat Gluten, Vegetable Oil, Dried Corn Syrup, Natural Salmon Flavor, Natural Flavor, Caramel Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Vinegar, Rosemary Extract.`,
+    analysis: withCalories(ga(12, 9, 1, 29, null, null), 2990, 3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863109065": {
+    ingredients: `Chicken, Glycerin, Wheat Flour, Wheat Gluten, Vegetable Oil, Dried Corn Syrup, Natural Salmon Flavor, Natural Flavor, Caramel Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Vinegar, Rosemary Extract.`,
+    analysis: withCalories(ga(12, 9, 1, 29, null, null), 2990, 3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863115325": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Wheat Flour, Animal Plasma, Whole Wheat, Natural Flavors, Brewers Dried Yeast, Fish Oil, Potassium Chloride, Choline Chloride, Fruit Juice Color, Magnesium Sulfate, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Turmeric Color, Ferrous Sulfate, Vitamin A Supplement, Copper Sulfate, Mixed Tocopherols (preservative), Niacin Supplement, Vitamin B12 Supplement, Citric Acid (preservative), Riboflavin Supplement (Vitamin B2), Calcium Pantothenate (Vitamin B5), Thiamine Mononitrate (Vitamin B1), Manganese Sulfate, Biotin, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 23, 2, 9, null, 0.22), 4101, 1.7, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863115349": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Wheat Flour, Animal Plasma, Whole Wheat, Natural Flavors, Brewers Dried Yeast, Fish Oil, Potassium Chloride, Choline Chloride, Fruit Juice Color, Magnesium Sulfate, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Turmeric Color, Ferrous Sulfate, Vitamin A Supplement, Copper Sulfate, Mixed Tocopherols (preservative), Niacin Supplement, Vitamin B12 Supplement, Citric Acid (preservative), Riboflavin Supplement (Vitamin B2), Calcium Pantothenate (Vitamin B5), Thiamine Mononitrate (Vitamin B1), Manganese Sulfate, Biotin, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(30, 23, 2, 9, null, 0.22), 4101, 1.7, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863021411": {
+    ingredients: `Chicken, Glycerin, Wheat Flour, Wheat Gluten, Vegetable Oil, Dried Corn Syrup, Natural Flavor, Water, Citric Acid (preservative), Mixed Tocopherols (preservative), Vinegar, Rosemary Extract.`,
+    analysis: withCalories(ga(12, 9, 1, 29, null, null), 2990, 3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863109058": {
+    ingredients: `Chicken, Glycerin, Wheat Flour, Wheat Gluten, Vegetable Oil, Dried Corn Syrup, Natural Flavor, Water, Citric Acid (preservative), Mixed Tocopherols (preservative), Vinegar, Rosemary Extract.`,
+    analysis: withCalories(ga(12, 9, 1, 29, null, null), 2990, 3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863101403": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Natural Tuna Flavor, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3819, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863106590": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Natural Tuna Flavor, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3819, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863108952": {
+    ingredients: `Chicken Meal, Animal Fat (preserved with Mixed Tocopherols), Brewers Rice, Whole Wheat, Wheat Flour, Animal Plasma, Powdered Cellulose, Natural Flavors, Dried Plain Beet Pulp, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Dicalcium Phosphate, Fruit Juice Color, Salt, Taurine, DL-Methionine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Natural Tuna Flavor, Turmeric Color, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), Calcium Pantothenate (Vitamin B5), Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract.`,
+    analysis: withCalories(ga(29, 20, 6, 9, null, null), 3819, 1.3, "piece"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863140037": {
+    ingredients: `Water, Chicken, Tuna, Tapioca Starch, Salmon, Sunflower Oil, Natural Flavors, Glycine, Marine Microalgae Oil (preserved with Mixed Tocopherols), Tricalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, Salt, Calcium Carbonate, Taurine, Magnesium Sulfate, Ferrous Sulfate, Zinc Sulfate, DL-Alpha-Tocopherol Acetate (source of Vitamin E), Thiamine Mononitrate (Vitamin B1), Vitamin A Supplement, Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), D-Calcium Pantothenate (Vitamin B5), Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Menadione Sodium Bisulfite Complex (source of Vitamin K3 Activity), Potassium Iodide, Folic Acid`,
+    analysis: withCalories(ga(8, 2, 0.5, 85, null, 0.04), 749, 10, "pouch"),
+    verifiedAt: VERIFIED_045,
+  },
+  "642863140501": {
+    ingredients: `Water, Chicken, Tuna, Tapioca Starch, Salmon, Sunflower Oil, Natural Flavors, Glycine, Marine Microalgae Oil (preserved with Mixed Tocopherols), Tricalcium Phosphate, Guar Gum, Potassium Chloride, Choline Chloride, Salt, Calcium Carbonate, Taurine, Magnesium Sulfate, Ferrous Sulfate, Zinc Sulfate, DL-Alpha-Tocopherol Acetate (source of Vitamin E), Thiamine Mononitrate (Vitamin B1), Vitamin A Supplement, Niacin Supplement, Pyridoxine Hydrochloride (Vitamin B6), D-Calcium Pantothenate (Vitamin B5), Manganese Sulfate, Copper Sulfate, Riboflavin Supplement (Vitamin B2), Vitamin B12 Supplement, Biotin, Menadione Sodium Bisulfite Complex (source of Vitamin K3 Activity), Potassium Iodide, Folic Acid`,
+    analysis: withCalories(ga(8, 2, 0.5, 85, null, 0.04), 749, 10, "pouch"),
+    verifiedAt: VERIFIED_045,
   },
 };

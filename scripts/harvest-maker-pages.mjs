@@ -147,7 +147,10 @@ for (const url of urls) {
     // own barcode and its own panel images, and a panel is only ever attached
     // to the barcode whose section showed it.
     const sizeById = Object.fromEntries(
-      [...html.matchAll(/data-size-id="(\d+)"\s+data-size-selected="\w+"\s+href="#"\s+title="([^"]+)"/g)].map((m) => [m[1], m[2]])
+      // The attribute order differs between Mars sites (greenies.com puts
+      // href first and has no title), so read the id and then the first
+      // <span> after it, which is what the shopper sees on the button.
+      [...html.matchAll(/data-size-id="(\d+)"[^>]*>[\s\S]{0,300}?<span>\s*([^<]+?)\s*<\/span>/g)].map((m) => [m[1], m[2]])
     );
     const starts = [...html.matchAll(/data-pdp-size-id=(\d+)/g)].map((m) => [m.index, m[1]]);
     rec.sizes = starts.map(([at, id], i) => {

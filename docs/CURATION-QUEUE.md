@@ -131,7 +131,7 @@ once buys the siblings behind it.
 | 5 | **Alpo** | dog | Nestlé Purina | **SEEDED** — batch 041 | 54 barcodes, 12 compositions. The prefix is `011132`, not `017800` as the brief assumed — the one 017800 "Alpo" code was a Beneful treat. 42 identity rows are photographs to take; the five wet cans' calories say the can is now 13 oz. |
 | 6 | **Cesar** | dog | Mars | **SEEDED** — batches 042, 044 | 66 barcodes, 43 compositions, 22 boxes, all from cesar.com read size by size. 25 units wait on route B or a photograph. |
 | 7 | **Temptations** | cat | Mars | **SEEDED** — batch 043 | 99 barcodes, 12 compositions, read size by size from temptationstreats.com (each size has its own barcode and label images). Not only treats: complete dry food and wet trays are dinner in `lib/nutrition-role.ts`. New prefix `058496`. |
-| 8 | **Greenies** | both | Mars | QUEUED | Dental chews in all three chains. Already in `KNOWN_TREAT_LINES`; Pill Pockets is a supplement-shaped edge case. |
+| 8 | **Greenies** | both | Mars | **SEEDED** — batch 045 | 144 barcodes, 17 compositions (cat SmartBites, Pill Pockets, Smart Purees). Dog dental sizes show only marketing images on greenies.com; 20 sizes carry two disagreeing panels. Prefix `642863`. See `research/GREENIES-HANDOFF.md`. |
 | 9 | **Whiskas** | cat | Mars | QUEUED | **`lines: []`** — the brand entry names no ranges at all, so every product lands under "Other" until that is fixed. See prerequisites. |
 | 10 | **Meow Mix** | cat | Post | QUEUED | Post's cat volume. Pairs with 9Lives, which is seeded, so the Post prefix family is partly mapped. |
 | 11 | **Kibbles 'n Bits** | dog | Post | QUEUED | Post sibling of #10; run it immediately after while the prefix work is warm. |
