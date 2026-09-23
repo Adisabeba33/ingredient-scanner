@@ -254,9 +254,10 @@
     ],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second-pass promotion: Exact 10 oz legacy UPC binding plus PetCareRx label data and current Purina Simmered Beef recipe deck establish the recipe; calorie-version conflict is documented as historical packaging change."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
