@@ -128,7 +128,7 @@ once buys the siblings behind it.
 | 2 | **Purina Cat Chow** | cat | Nestlé Purina | **SEEDED** — batch 038: 26 barcodes, 26 compositions, one campaign. 3 unproven 12 lb UPCs held in `research/PURINA-CAT-CHOW-UPC-LEADS.json` | The value bag in every supermarket, and the cheapest campaign available: Purina publishes label-deck PDFs in text, four prefixes are proven and 13 vitamin constants are written. |
 | 3 | **Purina Dog Chow** | dog | Nestlé Purina | **SEEDED** — batch 039: 32 barcodes, 32 compositions, one campaign. `Puppy` left empty for want of a front-of-pack witness | Same shelf, dogs. Ran straight after #2 on the same decks and prefix; `Little Bites` confirmed as a real range. |
 | 4 | **Beneful** | dog | Nestlé Purina | **SEEDED** — batch 040: 61 barcodes, 35 compositions, after a correction pass that rejected 10 barcodes and demoted 42 statuses | Tier-1 #10. Half wet, and the campaign that taught this repo what over-promotion looks like. |
-| 5 | **Alpo** | dog | Nestlé Purina | QUEUED | Prefix `017800` already proven by the Purina ONE campaign. T-Bonz is a treat range — `lib/nutrition-role.ts` already knows it. |
+| 5 | **Alpo** | dog | Nestlé Purina | **BRIEFED** — `research/BRIEF-ALPO.md` | Prefix `017800` already named as Alpo's in `data/gs1-prefixes.ts`; `t bonz` and `variety snaps` already in `lib/nutrition-role.ts`. Mostly wet. |
 | 6 | **Cesar** | dog | Mars | QUEUED | Tier-1 #8. Small-dog wet trays bought weekly; the tray/twin-pack scope question is the whole campaign. |
 | 7 | **Temptations** | cat | Mars | QUEUED | Tier-1 #9, highest-volume cat treat in the country. Already in `KNOWN_TREAT_LINES`. |
 | 8 | **Greenies** | both | Mars | QUEUED | Dental chews in all three chains. Already in `KNOWN_TREAT_LINES`; Pill Pockets is a supplement-shaped edge case. |
@@ -167,6 +167,29 @@ Do this for every sibling after the first in a maker family. A brief that
 repeats its sibling is a brief that will disagree with it in six months, and
 the sections most worth keeping identical are exactly the ones an agent is
 most likely to re-derive differently.
+
+---
+
+### The status is a lookup, not a judgement
+
+Both failures above came from a brief that described the gate in prose and
+expected the agent to weigh it up. `research/BRIEF-ALPO.md` §1 replaces that
+with a decision table the agent walks in order — bad check digit, then six
+named fields, then where the composition came from, and only then the status.
+
+The evidence rule is now stated as two routes and nothing else:
+
+- **A** — the maker's own surface, a `purina.com` deck or product page. One
+  such source is enough.
+- **B** — two INDEPENDENT retailers showing the same panel, agreeing on the
+  ingredient order. Two different companies' own pages; a site republishing
+  Chewy is not a second Chewy.
+
+Neither route, or the two retailers disagree → `needs_physical_label`, and the
+barcode is seeded as identity for somebody to photograph.
+
+Write the next brief this way too. A gate an agent has to interpret will be
+interpreted, and the two interpretations available are the two failures above.
 
 ---
 
