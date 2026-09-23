@@ -20,3 +20,13 @@ Web access: yes. Shell: no. This pass used the supported `research/incoming/` fa
 ## Next action
 
 A shell-enabled pass should fetch the current branch, mechanically re-check all 20 UPCs against every ledger/seed/wrong-barcode source, resolve the fourteen weak unit bindings (or leave them `needs_physical_label`), merge only valid records into `research/deep-research-beneful.json`, regenerate `research/INVENTORY-BENEFUL.md`, run the checker, and delete the incoming file.
+
+
+## Final pass — 2026-09-22
+
+- Campaign staged 89 unique rows after removing duplicate outer UPC 017800190831 from batch 06.
+- Multipacks are first-class records: outer UPC/package identity is retained and `multipack_contents` maps proven internal recipes, quantities, formula codes, and individual UPCs where available.
+- Current Beneful Baked Delights is still an active Purina treat range. Current 2026 manufacturer decks recovered: Snackers `I405025` and Hugs `F405125`.
+- Treat records must remain nutrition-role=treat and must not seed as meal formulas until the Beneful treat range is added to the nutrition-role mapping.
+- Final unresolved research tail is intentionally conservative: UPC 017800172042 has unresolved exact current 14 lb vs 15.5 lb package binding; legacy UPCs 017800144476 (Prepared Meals 10 oz) and 017800141888 (Healthy Fiesta 3.5 lb) lack promotion-grade current/archival formula evidence; UPC 017800165420 has current Snackers formula evidence but exact pouch size is unresolved.
+- No shell was available in this connector session. Therefore no claim is made that `brand-inventory.mjs` or `check-ledger.mjs` exited 0. Run both before ledger merge.
