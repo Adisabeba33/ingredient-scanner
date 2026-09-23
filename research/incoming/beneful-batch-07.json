@@ -36,7 +36,8 @@
     "label_deck_code": null,
     "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
     "source_urls": [
-      "https://www.buycott.com/brand/5377/beneful-upc"
+      "https://www.buycott.com/brand/5377/beneful-upc",
+      "https://www.petcarerx.com/beneful-medleys-tuscan-style-canned-dog-food/33937"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
@@ -44,9 +45,10 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass: PetCareRx binds exact UPC to 3 oz Tuscan Style and supplies complete ingredients, GA 9/2/2/82, adult adequacy and 838 kcal/kg / 71 kcal/can. Wet arithmetic matches ~71 kcal per 85 g can."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -85,7 +87,8 @@
     "label_deck_code": null,
     "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
     "source_urls": [
-      "https://www.buycott.com/brand/5377/beneful-upc"
+      "https://www.buycott.com/brand/5377/beneful-upc",
+      "https://listex.online/product/17800153003-us-purina-beneful-medleys-dog-food-mediterranean-style-3-ct"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
@@ -93,9 +96,10 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass: exact UPC binds Mediterranean Style 3×3 oz and source supplies complete ingredients, GA 9/2/1.5/82, adult adequacy and 849 kcal/kg / 72 kcal/can. Wet arithmetic matches."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -183,7 +187,9 @@
     "label_deck_code": null,
     "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
     "source_urls": [
-      "https://www.buycott.com/brand/5377/beneful-upc"
+      "https://www.buycott.com/brand/5377/beneful-upc",
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.jumbofood.com/shop/pantry/pet/dog/dog_food/beneful_food_for_dogs_playful_life_with_real_beef_egg/p/16607"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
@@ -191,9 +197,10 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second pass: exact UPC binds Playful Life Beef & Egg 3.5 lb; complete recipe/calorie/adequacy evidence corroborated."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
