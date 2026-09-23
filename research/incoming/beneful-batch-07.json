@@ -296,9 +296,30 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Historical 27 x 3 oz IncrediBites variety multipack retained. Component model records Beef/Chicken/Salmon as three recipes, 9 each; Salmon Purina deck A371520 recovered. Exact archival pack label/component UPC evidence remains required before promotion."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "IncrediBites Beef recipe",
+        "count": 9,
+        "unit_size": "3 oz",
+        "formula_code": null
+      },
+      {
+        "name": "IncrediBites Chicken recipe",
+        "count": 9,
+        "unit_size": "3 oz",
+        "formula_code": null
+      },
+      {
+        "name": "IncrediBites Salmon recipe",
+        "count": 9,
+        "unit_size": "3 oz",
+        "formula_code": "A371520"
+      }
+    ]
   },
   {
     "catalog_number": null,
@@ -492,8 +513,29 @@
     "verification_notes": [
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Historical 6 x 10 oz Prepared Meals Stew Variety Pack retained as outer multipack. Component structure modeled as Beef Stew, Chicken Stew and Savory Rice & Lamb Stew, 2 tubs each; current Beef/Chicken decks recovered. Archival exact pack evidence still needed before promotion."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "needs_physical_label",
+    "multipack_contents": [
+      {
+        "name": "Prepared Meals Beef Stew",
+        "count": 2,
+        "unit_size": "10 oz",
+        "formula_code": "F406124"
+      },
+      {
+        "name": "Prepared Meals Chicken Stew",
+        "count": 2,
+        "unit_size": "10 oz",
+        "formula_code": "E406924"
+      },
+      {
+        "name": "Prepared Meals Savory Rice & Lamb Stew",
+        "count": 2,
+        "unit_size": "10 oz",
+        "formula_code": null
+      }
+    ]
   }
 ]
