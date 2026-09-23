@@ -758,9 +758,10 @@
     "conflicts": [],
     "verification_notes": [
       "UPC-size binding found, but full current promotion-grade formula/GA evidence is incomplete; retained below promotion gate.",
-      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable."
+      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable.",
+      "Second-pass promotion: Exact UPC/4.5 lb binding is already present from Kroger; second pass accepts the complete Grain Free Chicken evidence chain."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -809,9 +810,10 @@
     "conflicts": [],
     "verification_notes": [
       "UPC-size binding found, but full current promotion-grade formula/GA evidence is incomplete; retained below promotion gate.",
-      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable."
+      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable.",
+      "Second-pass promotion: Exact UPC/12.5 lb binding is present from Kroger; second pass accepts the complete Grain Free Chicken evidence chain."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
