@@ -417,26 +417,28 @@
     "presentation": "plain",
     "package_type": "pouch",
     "size": "retail package",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Wheat flour, water, glycerin, whole grain corn, corn protein meal, sugar, chicken by-product meal, animal fat (preserved with BHA and citric acid), beef, whole grain wheat, wheat starch, phosphoric acid, salt, natural and artificial peanut butter flavor, natural and artificial vanilla flavor, potassium sorbate (a preservative), dried apples, dried carrots, dried peas, calcium propionate (a preservative), sorbic acid (a preservative), preserved with mixed tocopherols, Yellow 6, Red 40, Yellow 5, Blue 2.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 28,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": "pouch"
+      "kcal_per_kg": 3069,
+      "kcal_per_unit": 24,
+      "unit_name": "treat"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/product identity and size evidence recovered; full current promotion-grade formula evidence is incomplete unless otherwise noted.",
+    "label_deck_code": "I405025",
+    "formula_source": "Current Purina 2026 manufacturer Snackers formula deck; exact UPC retail binding exists but package size remains unresolved",
     "source_urls": [
-      "https://www.hy-vee.com/aisles-online/p/805261/purina-beneful-baked-delights-snackers-dog-snacks"
+      "https://www.hy-vee.com/aisles-online/p/805261/purina-beneful-baked-delights-snackers-dog-snacks",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-02/4050_i405025_beneful_baked_delights_snackers_dog_treats_bs7.pdf",
+      "https://www.purina.com/dogs/shop/beneful-baked-delights-snackers-dog-treats"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact UPC/product binding recovered.",
@@ -444,7 +446,8 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Treat lead only. Per Beneful brief, treats must not be filed as meal records; recommend nutrition-role range addition before seeding.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Final pass recovered the current 2026 Snackers formula (I405025), complete ingredients, GA and calories. UPC 017800165420 remains below promotion because the exact pouch size tied to this UPC was not proven."
     ],
     "research_status": "needs_physical_label"
   },
@@ -468,27 +471,29 @@
     "presentation": "plain",
     "package_type": "pouch",
     "size": "8.5 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Rice, glycerin, whole grain wheat, whole grain corn, wheat flour, poultry by-product meal, corn protein meal, natural flavors, dried whey, wheat starch, beef, dried cheese powder, water, phosphoric acid, sugar, oat fiber, salt, animal fat (preserved with BHA and citric acid), potassium sorbate (a preservative), calcium propionate (a preservative), preserved with mixed tocopherols, Red 40, Blue 2, Yellow 5, Yellow 6.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 10,
+      "crude_fat_min_percent": 3,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 20,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": "pouch"
+      "kcal_per_kg": 3122,
+      "kcal_per_unit": 29,
+      "unit_name": "treat"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/product identity and size evidence recovered; full current promotion-grade formula evidence is incomplete unless otherwise noted.",
+    "label_deck_code": "F405125",
+    "formula_source": "Current Purina 2026 manufacturer label deck plus exact 8.5 oz UPC retailer binding",
     "source_urls": [
       "https://shopwoodmans.com/store/woodmans-food-markets/products/332737-purina-beneful-made-in-usa-facilities-dog-treats-baked-delights-hugs-with-real-beef-cheese-8-5-oz",
-      "https://www.hy-vee.com/aisles-online/p/850665/purina-beneful-baked-delights-hugs-dog-snacks"
+      "https://www.hy-vee.com/aisles-online/p/850665/purina-beneful-baked-delights-hugs-dog-snacks",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-02/4051_f405125_beneful_baked_delights_hugs_dog_treats_2d3.pdf",
+      "https://www.petcarerx.com/beneful-baked-delights-hugs-with-real-beef-cheese-dog-treats/37139?sku=56622"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact UPC/product binding recovered.",
@@ -496,9 +501,10 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Treat lead only. Per Beneful brief, treats must not be filed as meal records; recommend nutrition-role range addition before seeding.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Final pass: exact UPC 017800165402 is bound to the 8.5 oz Hugs pouch, while Purina's current 2026 F405125 deck supplies complete ingredients, GA and calories. Verified as treat, not meal."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -518,26 +524,28 @@
     "presentation": "plain",
     "package_type": "pouch",
     "size": "22 oz",
-    "ingredients_verbatim": null,
+    "ingredients_verbatim": "Wheat flour, water, glycerin, whole grain corn, corn protein meal, sugar, chicken by-product meal, animal fat (preserved with BHA and citric acid), beef, whole grain wheat, wheat starch, phosphoric acid, salt, natural and artificial peanut butter flavor, natural and artificial vanilla flavor, potassium sorbate (a preservative), dried apples, dried carrots, dried peas, calcium propionate (a preservative), sorbic acid (a preservative), preserved with mixed tocopherols, Yellow 6, Red 40, Yellow 5, Blue 2.",
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 9,
+      "crude_fat_min_percent": 5,
+      "crude_fiber_max_percent": 3,
+      "moisture_max_percent": 28,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
-      "unit_name": "pouch"
+      "kcal_per_kg": 3069,
+      "kcal_per_unit": 24,
+      "unit_name": "treat"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/product identity and size evidence recovered; full current promotion-grade formula evidence is incomplete unless otherwise noted.",
+    "label_deck_code": "I405025",
+    "formula_source": "Current Purina 2026 manufacturer label deck plus exact 22 oz UPC retail binding",
     "source_urls": [
-      "https://brickseek.com/walmart-inventory-checker?sku=189136371"
+      "https://brickseek.com/walmart-inventory-checker?sku=189136371",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2026-02/4050_i405025_beneful_baked_delights_snackers_dog_treats_bs7.pdf",
+      "https://www.purina.com/dogs/shop/beneful-baked-delights-snackers-dog-treats"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact UPC/product binding recovered.",
@@ -545,8 +553,9 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Treat lead only. Per Beneful brief, treats must not be filed as meal records; recommend nutrition-role range addition before seeding.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Final pass: BrickSeek binds UPC 017800170338 to the 22 oz Snackers pouch; Purina's current 2026 I405025 deck supplies complete ingredients, GA and calories. Verified as treat, not meal."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   }
 ]
