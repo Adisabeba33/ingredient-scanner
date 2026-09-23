@@ -162,7 +162,8 @@
       "No promotion-grade calorie arithmetic claim made.",
       "Meal/product lead staged below promotion gate until complete current formula/GA evidence is established.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Outer UPC retained as first-class 6 x 9 oz Superfood Blend variety pack. Kroger identity evidence supports the two Superfood recipes; modeled as 3/3. Exact component formula decks/individual UPCs remain to be recovered."
+      "Outer UPC retained as first-class 6 x 9 oz Superfood Blend variety pack. Kroger identity evidence supports the two Superfood recipes; modeled as 3/3. Exact component formula decks/individual UPCs remain to be recovered.",
+      "Component linkage improved: Beef & Salmon recipe maps to existing individual/canonical campaign UPC 017800181890. Chicken/Lamb/Trout individual UPC remains unresolved; do not invent it."
     ],
     "research_status": "needs_physical_label",
     "multipack_contents": [
@@ -170,13 +171,15 @@
         "name": "Superfood Blend with Beef & Salmon, Pumpkin, Spinach & Sorghum in Sauce",
         "count": 3,
         "unit_size": "9 oz",
-        "formula_code": null
+        "formula_code": null,
+        "individual_upc": "017800181890"
       },
       {
         "name": "Superfood Blend with Chicken, Lamb & Trout, Pumpkin, Spinach & Sorghum in Sauce",
         "count": 3,
         "unit_size": "9 oz",
-        "formula_code": null
+        "formula_code": null,
+        "individual_upc": null
       }
     ]
   },
