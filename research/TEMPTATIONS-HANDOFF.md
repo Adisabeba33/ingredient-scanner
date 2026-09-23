@@ -1,65 +1,98 @@
-# Temptations campaign handoff — partial, evidence-preserving
+# Temptations — handoff (batch 043)
 
-Date: 2026-09-23
+Supersedes the partial handoff an earlier agent wrote from a runtime with no
+shell and no browser: it found the brand's shape correctly (multi-size pages,
+complete foods as well as treats) but could not collect a barcode. Its 17
+leads in `TEMPTATIONS-CANDIDATES.json` are all covered by the ledger now.
 
-## Capabilities
+## 1. Capabilities
 
-GitHub read/write and public web search were available. A local shell exists, but this runtime cannot resolve github.com, so the repository could not be cloned and the repository scripts, checker, typecheck, lint, tests and build could not truthfully be run here. The public search surface can read current Temptations maker pages, but it does not expose the Product JSON-LD `sku` needed for barcode harvesting.
+Web through Chromium, and a shell, in one session. Every checker result below
+comes from a real run.
 
-## Work completed
+## 2. How the pages were read, and the thing that changed the method
 
-- Added `research/BRIEF-TEMPTATIONS.md` carrying forward the binding four-step status table and Mars route-A rules.
-- Added `research/INVENTORY-TEMPTATIONS.md`.
-- Added `research/TEMPTATIONS-CANDIDATES.json` with maker-page leads only; no UPC was invented.
-- Confirmed direct maker pages for Classic, MixUps, JUMBO Stuff, Lickable Puree, Lickable Spoons, dry food and seasonal products.
-- Confirmed that Temptations is not exclusively treats: current maker pages include complete-and-balanced dry and wet foods. Only actual treat products should receive `food_form: "treat"`.
-- Confirmed live seasonal/direct URLs that justify continuing beyond the visible current-index count.
+temptationstreats.com is the same Mars build as cesar.com, with one difference
+that matters. **Every size on a page is its own section** (`data-pdp-size-id`),
+with its own barcode in the "Buy Now" block (`data-mm-ids`) and **its own label
+images**. Those images differ between sizes. The Tasty Chicken page has 8 sizes,
+8 guaranteed-analysis images and 3 different ingredient images. So:
 
-## Current decision tally
+- barcode ↔ size comes from the page itself, per section. Multi-size pages are
+  no longer a dead end: 122 sizes on 47 pages, each with its own barcode;
+- a composition is attached only to the size whose section showed it. It is
+  never spread across the page.
 
-No ledger record has been promoted yet.
+`scripts/harvest-maker-pages.mjs` now works this way (`sizes[]` per page, one
+download per distinct image file). The sitemap and `/products` returned 403 on
+this site, so the script falls back to crawling product pages ("pets may also
+like" links) from seeds.
 
-- rejected at step 1: 0
-- stopped at step 2: 0 ledger records (maker-page leads are intentionally not ledger rows yet)
-- stopped at step 3: 0
-- source_verified: 0
-- candidate maker-page leads captured: 17
+## 3. Tally
 
-This is deliberately conservative: the current tool surface does not expose exact structured-data SKUs, and the shell cannot run the harvester. Creating UPCs from search snippets would violate step 1.
+112 records from 47 pages:
 
-## Findings that matter for the next executable pass
+| Status | Count | Why |
+|---|---:|---|
+| source_verified | 12 | route A, both readings agree, no shared image, one recipe per product |
+| needs_physical_label | 97 | see below |
+| candidate | 2 | a second barcode listed as "16 OZ" on the same page as another 16 OZ; not seeded |
+| rejected | 1 | `02310018010`: 11 digits that already start with 0, so not a dropped leading zero |
 
-1. **Multi-size pages are common.** Classic Tasty Chicken currently shows 1, 1.7, 3, 6.3, 16, 16, 30 and 48 oz. A page-level sku cannot be assigned to every displayed size without proving the selected variant.
-2. **JUMBO Stuff has package-copy inconsistencies.** Savory Salmon's selector shows 2.47 oz while benefit copy says 2.5 oz; Tempting Tuna shows 5.29 oz while copy says 5.3 oz. Preserve these as source conflicts/rounding evidence rather than silently choosing.
-3. **Seasonal pages remain directly reachable.** Tasty Human and the holiday 3.15-lb dry bag are examples.
-4. **Variety packs must remain identity-only at carton level.** Lickable Puree Beef Liver/Cheese and Lickable Spoons MVMP are confirmed variety-pack surfaces; do not attach one member's composition to the carton.
-5. **Marketing calorie claims are not silently substituted for a missing exact label field.** Classic pages say under 2 calories/treat and JUMBO pages say 2 calories/treat. Use the exact printed panel/calorie evidence required by the campaign before promotion.
+Why the 87 individual units stopped (the other 10 records are variety packs):
 
-## Blocker to completing the full campaign in this runtime
+- 44 — the panel prints no calorie line. Classic and MixUps panels only say
+  "less than 2 kcal per treat" on a marketing graphic, which is not the label.
+- 26 — no readable panel: 20 sizes' images return 403 from the maker's own
+  site, and the rest show only marketing graphics.
+- 5 — guarantees and calories are shown but no ingredient list.
+- 9 — the same ingredient image file, byte for byte, is shown on different
+  products' pages. **One image listing "Natural Tuna Flavor" appears on the
+  Tasty Chicken, Tempting Tuna and Savory Salmon pages.** The Creamy Puree and
+  Lickable Puree pages share images, and so do Jumbo Stuff Tasty Chicken and
+  Classic Enticing Trout.
+- 2 — Classic Blissful Catnip 3 oz prints "Dried Cheese" and 16 oz prints
+  "Dried Cheddar Cheese": two label generations under one name, so neither is
+  stored.
+- 1 — the two readings disagreed.
 
-The binding next-agent brief says to run:
+## 4. Route
 
-```bash
-node scripts/harvest-maker-pages.mjs https://www.temptationstreats.com <dir>
-node scripts/check-ledger.mjs research/deep-research-temptations.json
-npm run typecheck
-npm run lint
-npm test
-npm run build
-```
+All 12 are route A.
 
-The local runtime currently fails DNS resolution for `github.com`, so it cannot clone the branch and execute those repository scripts. GitHub connector access can write files but cannot execute repository code. The public web search result also omits the JSON-LD `sku`, so a compliant barcode ledger cannot be fabricated from it.
+## 5. Prefixes
 
-When an executable checkout/browser environment is available, resume with the harvester rather than repeating discovery. Then:
-- capture all structured-data SKUs;
-- normalize only a dropped leading zero when UPC-A validates;
-- bind each SKU to an exact size;
-- perform two genuinely independent panel transcriptions or use route B;
-- build `research/deep-research-temptations.json`;
-- run checker and all four repo gates;
-- seed verified/identity rows according to `docs/SEEDING-A-BATCH.md`;
-- update this handoff with final counts.
+`023100` (Mars) on 103 records; **`058496`** on 8. The latter is new and is added
+to `data/gs1-prefixes.ts` as observed, on the 3 oz and 6.3 oz Classic pouches.
 
-## Database reminder
+## 6. Ranges and food roles
 
-After a successful seed deploy, the operator must still press **Write N to the catalog**. Nothing reaches the database before that action.
+Mars' "Sub brand" values. Added: Lickable Puree, Lickable Spoons, Kitten,
+Indoor Care, Paté in Gravy, Bites in Gravy. The dry bags carry no range.
+
+**Temptations is no longer only treats.** `lib/nutrition-role.ts` read the brand
+name alone as a treat, which would have waved the complete dry food and wet
+trays through every everyday standard. Paté in Gravy, Bites in Gravy and the
+dry bags now read as dinner under Temptations. Tested both ways.
+
+## 7. Checker
+
+`node scripts/check-ledger.mjs research/deep-research-temptations.json`:
+0 errors before seeding. After seeding it reports "99 barcodes are already in
+the catalog", which is expected. The warnings are:
+
+- Lickable Puree calories are per tube, and the carton's size is the whole
+  carton;
+- the shared-list families above.
+
+The checker now also skips identity collisions for `candidate` records, as it
+already did for `rejected`. Neither is ever seeded.
+
+## 8. Next
+
+- 20 sizes whose panel image the site cannot serve, and 44 with no calorie
+  line: route B or a photograph.
+- The 30 OZ and 48 OZ sizes of Classic almost all have their panels 403.
+- **Cesar can be revisited with this method.** Its dry bags and two Softies
+  stopped at step 2 for "several sizes under one sku", which the per-size
+  sections now resolve.

@@ -51,6 +51,18 @@ describe("detectNutritionRole", () => {
 
   // Cesar sells a complete loaf and a meal complement side by side in the same
   // tray format. Only the range name separates them, and only under Cesar.
+  it("reads Temptations dinners as dinner and the treats as treats", () => {
+    expect(
+      detectNutritionRole({ parts: ["Temptations", "Classic", "Tasty Chicken Flavor"] })
+    ).toBe("treat");
+    expect(
+      detectNutritionRole({ parts: ["Temptations", "Paté in Gravy", "Tasty Chicken Flavor"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Temptations", null, "Seafood Medley Flavor Dry Cat Food"] })
+    ).toBe("unknown");
+  });
+
   it("reads Simply Crafted as a complement only under Cesar", () => {
     expect(
       detectNutritionRole({ parts: ["Cesar", "Simply Crafted", "Chicken, Carrots & Green Beans"] })

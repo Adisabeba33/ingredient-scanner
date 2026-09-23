@@ -166,6 +166,10 @@ const VERIFIED_041 = "2026-09-23";
 // Trays state calories per tray, so every row here carries the arithmetic
 // witness except Simply Crafted, which states them per 1.3 oz serving.
 const VERIFIED_042 = "2026-09-23";
+// Batch 043 — Temptations. Read from each SIZE's own label images on the
+// maker page, twice, independently; kept only where the readings agree and no
+// image is shared with a different product's page.
+const VERIFIED_043 = "2026-09-23";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11091,5 +11095,70 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Turkey, Chicken Liver, Beef Lung, Chicken Broth, Water, Pork By-Products, Chicken Heart, Calcium Carbonate, Sodium Tripolyphosphate, Carrageenan, Potassium Chloride, Xanthan Gum, Magnesium Proteinate, Dried Yam, DL-Methionine, Salt, Erythorbic Acid (Preservative), Turkey Flavor, Guar Gum, Natural Flavor, Zinc Sulfate, Vitamin E Supplement, Monocalcium Phosphate, Copper Sulfate, Thiamine Mononitrate (Vitamin B1), Sodium Nitrite (For Color Retention), D-Calcium Pantothenate, Vitamin D3 Supplement, Potassium Iodide.`,
     analysis: withCalories(ga(8.5, 4, 1, 82, null, null), 900, 90, "tray"),
     verifiedAt: VERIFIED_042,
+  },
+  // ── Temptations — batch 043 ──────────────────────────────────────────────
+  //
+  // 14 compositions under 99 seeded barcodes. Copied as printed. Classic
+  // treats state calories per cup, so none of these carries the arithmetic
+  // witness; the Lickable Puree cartons state them per tube.
+  "023100141121": {
+    ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewer Rice, Dried Meat By-Products, Natural Flavors (source of Liver Flavor), Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Caramel Color, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Natural Beef Flavor, Red #40, Dried Cheese, Mixed Tocopherols (preservative), Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate, D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 4.5, 10, null, null), 3939, 368, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100144818": {
+    ingredients: `Water, Dried Milk, Dried Cheese Powder, Dried Milk Protein, Corn Starch, Coconut Oil, Guar Gum, Xanthan Gum, Glycine, Methionine, Taurine`,
+    analysis: withCalories(ga(1, 6, 2, 89, null, null), 1206, 14, "pouch"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100144771": {
+    ingredients: `Water, Dried Milk, Dried Cheese Powder, Dried Milk Protein, Corn Starch, Coconut Oil, Guar Gum, Xanthan Gum, Glycine, Methionine, Taurine`,
+    analysis: withCalories(ga(1, 6, 2, 89, null, null), 1206, 14, "pouch"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100144795": {
+    ingredients: `Water, Chicken by-Product, Chicken Liver, Beef Liver, Chicken, Pork Liver, Vegetable Oil, Glycine, Tapioca Starch, Dried Milk Protein, Xanthan Gum, Sodium Carboxymethylcellulose, Guar Gum, Cysteine, Taurine`,
+    analysis: withCalories(ga(3, 3, 2, 89, null, null), 993, 12, "pouch"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100144757": {
+    ingredients: `Water, Chicken by-Product, Chicken Liver, Beef Liver, Chicken, Pork Liver, Vegetable Oil, Glycine, Tapioca Starch, Dried Milk Protein, Xanthan Gum, Sodium Carboxymethylcellulose, Guar Gum, Cysteine, Taurine`,
+    analysis: withCalories(ga(3, 3, 2, 89, null, null), 993, 12, "pouch"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100141411": {
+    ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewers Rice, Dried Meat By-Products, Natural Flavors, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Fish Oil (preserved with Mixed Tocopherols), Dried Skim Milk, Magnesium Sulfate, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Ferrous Sulfate, Mixed Tocopherols (preservative), Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(30, 21, 4.5, 10, null, null), 4105, 427, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100150819": {
+    ingredients: `Water, Chicken Liver, Salmon, Shrimp, Chicken by-Products, Chicken, Pork Liver, Pork by-Products, Vegetable Oil, Glycine, Tapioca Starch, Dried Milk Protein, Xanthan Gum, Sodium Carboxymethylcellulose, Guar Gum, Cysteine, Taurine`,
+    analysis: withCalories(ga(3, 2, 0.5, 89.5, null, null), 578, 7, "pouch"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100085418": {
+    ingredients: `Chicken By-Product Meal, Animal Fat (preserved with Mixed Tocopherols), Ground Corn, Wheat Flour, Brewers Rice, Dried Meat By-Product, Powdered Cellulose, Natural Flavors, Dried Beet Pulp, Corn Protein Meal, Potassium Chloride, Choline Chloride, Salt, DL-Methionine, Taurine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 6, 10, null, null), 3803, 355, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100107769": {
+    ingredients: `Chicken By-Product Meal, Animal Fat (preserved with Mixed Tocopherols), Ground Corn, Wheat Flour, Brewers Rice, Dried Meat By-Product, Powdered Cellulose, Natural Flavors, Dried Beet Pulp, Corn Protein Meal, Potassium Chloride, Choline Chloride, Salt, DL-Methionine, Taurine, Calcium Carbonate, Zinc Sulfate, Vitamin E Supplement, Citric Acid (preservative), Mixed Tocopherols (preservative), Ferrous Sulfate, Copper Sulfate, Vitamin A Supplement, Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement (Vitamin B2), Manganese Sulfate, Thiamine Mononitrate (Vitamin B1), D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 6, 10, null, null), 3803, 355, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "058496701239": {
+    ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewers Rice, Dried Meat By-Products, Natural Flavors, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Salt, Caramel Color, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Natural Turkey Flavor, Ferrous Sulfate, Dried Cheese, Mixed Tocopherols (preservative), Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate, D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 4.5, 10, null, null), 3939, 368, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "023100001586": {
+    ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewers Rice, Dried Meat By-Products, Natural Flavors, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Natural Tuna Shrimp & Salmon Flavor, Red #40, Ferrous Sulfate, Dried Cheese, Mixed Tocopherols (preservative), Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate, D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 4.5, 10, null, null), 3939, 368, "cup"),
+    verifiedAt: VERIFIED_043,
+  },
+  "058496723019": {
+    ingredients: `Chicken By-Product Meal, Ground Corn, Animal Fat (preserved with Mixed Tocopherols), Wheat Flour, Brewers Rice, Dried Meat By-Products, Natural Flavors, Brewers Dried Yeast, Potassium Chloride, Choline Chloride, Salt, DL-Methionine, Taurine, Calcium Carbonate, Vitamin E Supplement, Zinc Sulfate, Natural Salmon Flavor, Red #40, Ferrous Sulfate, Mixed Tocopherols (preservative), Dried Cheese, Copper Sulfate, Vitamin A Supplement, Citric Acid (preservative), Niacin Supplement, Vitamin B12 Supplement, Riboflavin Supplement, Manganese Sulfate, Thiamine Mononitrate, D-Calcium Pantothenate, Pyridoxine Hydrochloride (Vitamin B6), Vitamin D3 Supplement, Biotin, Potassium Iodide, Folic Acid, Rosemary Extract`,
+    analysis: withCalories(ga(28, 21, 4.5, 10, null, null), 3939, 368, "cup"),
+    verifiedAt: VERIFIED_043,
   },
 };

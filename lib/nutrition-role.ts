@@ -319,6 +319,26 @@ const BRAND_COMPLEMENTARY_LINES: Record<string, string[]> = {
   cesar: ["simply crafted"],
 };
 
+/**
+ * A brand listed in KNOWN_TREAT_LINES that also sells real dinners.
+ *
+ * "temptations" is a treat word on its own, and for twenty years was right:
+ * the brand WAS the treat. Mars now sells complete-and-balanced Temptations
+ * dry food and wet trays ("Paté in Gravy", "Bites in Gravy"), and read by the
+ * brand alone those would be excused from every everyday standard — a real
+ * food waved through, the error this module exists to prevent. These ranges,
+ * under this brand, are dinner. Found by the batch 043 campaign.
+ */
+const BRAND_MEAL_LINES: Record<string, string[]> = {
+  temptations: [
+    "pate in gravy",
+    "bites in gravy",
+    "dry cat food",
+    "dry kitten food",
+    "wet cat food",
+  ],
+};
+
 const KNOWN_TOPPER_LINES = [
   "meal mixers",
   "bowl boosters",
@@ -392,6 +412,9 @@ export function detectNutritionRole(input: {
   if (anyPhrase(all, SUPPLEMENT_PHRASES)) return "supplement";
   if (anyPhrase(names, KNOWN_TOPPER_LINES) || anyPhrase(all, TOPPER_PHRASES)) {
     return "topper";
+  }
+  for (const [brand, lines] of Object.entries(BRAND_MEAL_LINES)) {
+    if (hasPhrase(names, brand) && anyPhrase(names, lines)) return "unknown";
   }
   if (anyPhrase(names, KNOWN_TREAT_LINES) || anyPhrase(all, TREAT_PHRASES)) {
     return "treat";

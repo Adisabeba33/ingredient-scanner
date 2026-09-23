@@ -111,7 +111,7 @@ answer**, and none of it is where a text scrape looks:
 |---|---|
 | **Barcode** | the `sku` of the Product JSON-LD. Sixteen pages print 11 digits: a number-typed field dropped the leading `0` of `023100`. Restore that zero **only if the UPC-A check digit then validates**, and write that you did. No other digit is ever touched. |
 | **Range** | the `dataLayer` taxonomy's **"Sub brand"** — the maker's own word for it |
-| **Size** | the page's size selector (`pdp-hero__size-list`). Where it lists several sizes under one sku, the size of THIS barcode is not established: step 2 stops. |
+| **Size** | the page's size selector (`pdp-hero__size-list`). **Each size is its own section** (`data-pdp-size-id`) with its own barcode (`data-mm-ids` in its Buy Now block) and its own label images, which can differ between sizes. Read every size's section separately and never spread one size's panel across the page. Found on temptationstreats.com, batch 043; see TEMPTATIONS-HANDOFF §2. |
 | **Package** | the taxonomy's **"Format"** — Flexible Tray, Pouch, Bag |
 | **Composition** | an **image**: `<img alt="… guaranteed analysis image">`, sometimes `"… ingredients image"`. The panel is in one of the two; the other is often a marketing graphic, and the alt text does not reliably say which. |
 
@@ -137,6 +137,9 @@ which is also the evidence that the two are separate images.
 Route A trusts the maker's page, so it has to catch the maker's page being
 wrong:
 
+0. **The same image FILE on two products' pages** (compare the bytes, not the
+   transcriptions) stops both. That catches a reused panel even when the two
+   readings differ by a space.
 1. **A panel shown on a different flavour's page is not about this barcode.**
    cesar.com shows the Wood-Grilled Chicken Mini-Pouch panel, byte for byte,
    on the Filet Mignon & Chicken Mini-Pouch page. If two products' ingredient

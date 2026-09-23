@@ -490,7 +490,23 @@ export const US_PET_BRANDS: SeedBrand[] = [
     name: "Temptations",
     owner: "Mars",
     species: "cat",
-    lines: ["Classic", "MixUps", "Creamy Puree", "Jumbo Stuff", "Snacky Mouse"],
+    // The last seven were added in batch 043 from Mars' own "Sub brand"
+    // taxonomy on temptationstreats.com. Paté in Gravy, Bites in Gravy and the
+    // unranged dry bags are complete foods, not treats — lib/nutrition-role.ts
+    // says so under this brand.
+    lines: [
+      "Classic",
+      "MixUps",
+      "Creamy Puree",
+      "Jumbo Stuff",
+      "Snacky Mouse",
+      "Lickable Puree",
+      "Lickable Spoons",
+      "Kitten",
+      "Indoor Care",
+      "Paté in Gravy",
+      "Bites in Gravy",
+    ],
   },
   { name: "Crave", owner: "Mars", species: "both", lines: ["Grain Free", "High Protein"] },
   { name: "Greenies", owner: "Mars", species: "both", lines: ["Dental Treats", "Pill Pockets", "Feline Dental"] },

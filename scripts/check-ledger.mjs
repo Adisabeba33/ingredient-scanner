@@ -507,8 +507,10 @@ for (const r of records) {
   // the product. Two retailer item ids rejected for the same pack (Kroger and
   // Fry's list one T-Bonz under different 13-digit ids) are two pieces of
   // evidence, not two barcodes claiming one name, and must not block the
-  // ledger or be deleted to get it green.
-  if (r.research_status === "rejected") {
+  // ledger or be deleted to get it green. A candidate is never seeded either:
+  // temptationstreats.com lists two different barcodes both as "16 OZ" on one
+  // page, and the second is kept as a lead rather than guessed a name.
+  if (r.research_status === "rejected" || r.research_status === "candidate") {
     // not registered
   } else if (seenIdentity.has(identity)) {
     err(

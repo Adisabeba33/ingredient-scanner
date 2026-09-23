@@ -161,4 +161,10 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // in batch 041; the other three are Come & Get It bags under Purina's own
   // 050000. NOT GEPIR-confirmed.
   { prefix: "011132", maker: "Alpo (Nestlé Purina, observed, not GEPIR-confirmed)" },
+  // Temptations' second prefix beside Mars' 023100. temptationstreats.com
+  // prints it for eight Classic sizes (3 oz and 6.3 oz pouches of Tasty
+  // Chicken, Savory Salmon, Hearty Beef, Tantalizing Turkey, Creamy Dairy) in
+  // the size-by-size "Buy Now" blocks of its own pages, batch 043. NOT
+  // GEPIR-confirmed.
+  { prefix: "058496", maker: "Mars Petcare US (Temptations, observed, not GEPIR-confirmed)" },
 ];

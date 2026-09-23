@@ -33,18 +33,22 @@ to `main`, because the app reads the seed from `main`.
 - Blocked: purina.com and petco.com (403), chewy.com (429), whiskas.com and
   iams.com (403). The sitemaps of greenies.com and pedigree.com also return
   403.
+- If Chromium starts failing with `ERR_CERT_AUTHORITY_INVALID` while `curl`
+  works, the agent proxy has rotated its CA since `~/.pki/nssdb` was written
+  (it happened mid-session on 2026-09-23). Import the CCR certificates from
+  `/root/.ccr/ca-bundle.crt` with `certutil` (`apt-get install libnss3-tools`).
+  Never switch TLS verification off instead.
+- temptationstreats.com started refusing its sitemap and `/products` (403)
+  while product pages kept loading; the harvester crawls instead.
 - A 403 on a single image is often **the maker's own broken link**, not a
   block. Check it from inside the rendered page before you retry for an hour.
 
 ## To do, in order
 
-1. **Temptations (queue #7).** Its site has the same structure as cesar.com:
-   85 product pages, each with the barcode in its structured data, the
-   label-panel image and Mars' taxonomy. Run `scripts/harvest-maker-pages.mjs
-   https://www.temptationstreats.com <dir>` and follow BRIEF-CESAR §2: two
-   independent transcriptions per panel, `source_verified` only where they
-   match. They are treats, so write `food_form: "treat"`, and check that
-   `lib/nutrition-role.ts` resolves them.
+1. **Temptations (queue #7): done, batch 043.** See
+   `research/TEMPTATIONS-HANDOFF.md`, and read its §2 before any Mars site:
+   every size on a page has its own barcode and its own label images.
+   Remaining: 20 sizes whose panel images 403 and 44 with no calorie line.
 2. **Sheba.** sheba.com has 63 product pages in its sitemap, but the first
    page tried showed no barcode and no label-panel image. Find out whether it
    is a different page build or a block before you brief the brand.
