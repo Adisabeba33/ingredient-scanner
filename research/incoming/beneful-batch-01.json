@@ -975,9 +975,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact 3.5 lb UPC identity corroborated and current Purina Q409224 supplies complete current formula/GA/calories.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -1056,9 +1058,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact 15.5 lb UPC identity corroborated and current Purina Q409224 supplies complete current formula/GA/calories.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -1137,9 +1141,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact 28 lb UPC identity corroborated and current Purina Q409224 supplies complete current formula/GA/calories.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -1298,9 +1304,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact 6.3 lb UPC identity corroborated and current Purina N408524 supplies complete formula/GA/calories.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -1456,9 +1464,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Second pass: exact 15.5 lb UPC identity corroborated and current Purina N408524 supplies complete formula/GA/calories.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
