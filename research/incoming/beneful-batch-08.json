@@ -203,9 +203,10 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Meal/product lead staged below promotion gate until complete current formula/GA evidence is established.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second-pass promotion: Exact Kroger UPC/12 lb binding plus complete Superfood Blend Salmon dry formula evidence establishes the individual unit."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -310,9 +311,10 @@
     "verification_notes": [
       "No promotion-grade calorie arithmetic claim made.",
       "Meal/product lead staged below promotion gate until complete current formula/GA evidence is established.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second-pass promotion: Exact QFC UPC/32-count 9.4 lb binding plus official Purina Simple Goodness Chicken formula deck establishes the package."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
