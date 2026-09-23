@@ -451,9 +451,24 @@
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
       "No shell available in connector pass; do not merge until repository checks succeed.",
-      "Second pass confirms outer variety-pack UPC 017800103800 and full current ingredient/GA panels for both included recipes, but it remains a multipack barcode; retained below individual-unit promotion gate."
+      "Second pass confirms outer variety-pack UPC 017800103800 and full current ingredient/GA panels for both included recipes, but it remains a multipack barcode; retained below individual-unit promotion gate.",
+      "Target establishes outer UPC 017800103800, six 9.5 oz cartons and both included recipes. Pack composition recorded as 3 + 3; full ingredient and GA panels for both recipes are available."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified",
+    "multipack_contents": [
+      {
+        "name": "Freshly Prepared Stews Chicken Dinner with Carrots & Rice",
+        "count": 3,
+        "unit_size": "9.5 oz",
+        "formula_code": "A406225"
+      },
+      {
+        "name": "Freshly Prepared Stews Turkey Dinner with Spinach & Ditalini Pasta",
+        "count": 3,
+        "unit_size": "9.5 oz",
+        "formula_code": "A370325"
+      }
+    ]
   },
   {
     "catalog_number": null,
@@ -502,9 +517,18 @@
     "verification_notes": [
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
-      "No shell available in connector pass; do not merge until repository checks succeed."
+      "No shell available in connector pass; do not merge until repository checks succeed.",
+      "Outer UPC intentionally retained as multipack. Target binds UPC 017800159470 to 3 x 3 oz; all three cans are Beef/Tomatoes/Carrots/Wild Rice. Complete ingredients and GA are available."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified",
+    "multipack_contents": [
+      {
+        "name": "IncrediBites Beef, Tomatoes, Carrots & Wild Rice",
+        "count": 3,
+        "unit_size": "3 oz",
+        "formula_code": "D407420"
+      }
+    ]
   },
   {
     "catalog_number": null,
@@ -555,8 +579,29 @@
     "verification_notes": [
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
-      "No shell available in connector pass; do not merge until repository checks succeed."
+      "No shell available in connector pass; do not merge until repository checks succeed.",
+      "Target establishes current outer UPC 017800190831 and 30 x 3 oz Kitchen Creations variety pack with Beef, Chicken and Lamb recipes. Recorded 10/10/10 pack split; Beef and Chicken current Purina decks already recovered; Lamb formula remains separately traceable."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified",
+    "multipack_contents": [
+      {
+        "name": "Kitchen Creations Beef & Garden Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": "E408225"
+      },
+      {
+        "name": "Kitchen Creations Chicken & Vibrant Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": "E408125"
+      },
+      {
+        "name": "Kitchen Creations Lamb & Harvest Veggies in Sauce",
+        "count": 10,
+        "unit_size": "3 oz",
+        "formula_code": null
+      }
+    ]
   }
 ]
