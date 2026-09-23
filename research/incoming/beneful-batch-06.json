@@ -433,9 +433,10 @@
     "conflicts": [],
     "verification_notes": [
       "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
-      "No shell available in connector pass; merge only after repository checker exits 0."
+      "No shell available in connector pass; merge only after repository checker exits 0.",
+      "Second-pass promotion: Exact Kroger UPC/5.5 oz binding plus complete Beef & Peas loaf formula evidence establishes the individual unit."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
