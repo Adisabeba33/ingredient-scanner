@@ -133,8 +133,8 @@ cannot store.
 
 `barcode_scope`: `individual_unit` `multipack` `case` `tray` `unknown`
 
-`research_status`: `candidate` `source_verified` `needs_physical_label`
-`rejected` `promoted_to_seed`
+`research_status`: `candidate` `source_verified` `composition_verified`
+`needs_physical_label` `rejected` `promoted_to_seed`
 
 `texture` — **what it is cut or shaped into**, or `null`:
 `pate` `loaf` `mousse` `minced` `ground` `chopped_ground` `flaked` `shredded`

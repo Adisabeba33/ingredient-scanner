@@ -259,7 +259,7 @@ Every object in `records` must follow this contract:
   "barcode_notes": "string or null",
   "conflicts": ["material source disagreement"],
   "verification_notes": ["check-digit, arithmetic, identity, and label checks"],
-  "research_status": "candidate | source_verified | needs_physical_label | rejected | promoted_to_seed"
+  "research_status": "candidate | source_verified | composition_verified | needs_physical_label | rejected | promoted_to_seed"
 }
 ```
 
@@ -306,7 +306,7 @@ Use JSON `null` for a permitted missing value, never the string `"null"`. Do not
 
 ## 10. Status gates
 
-Use `source_verified` only when all of the following pass:
+There are two verified statuses. Use `source_verified` only when all of the following pass:
 
 - exact brand, product, variant, form, size, and unit identity are established;
 - the individual-unit barcode is proven and its check digit is valid;
@@ -316,6 +316,39 @@ Use `source_verified` only when all of the following pass:
 - life stage/adequacy and label/deck identity are captured when printed;
 - direct sources and access date are recorded;
 - conflicts are resolved or precisely documented without undermining identity.
+
+### `composition_verified` — what the catalog can actually serve
+
+Use `composition_verified` when the **ingredient list is settled** and the printed panel is not:
+
+- exact brand, product, variant, form, size and unit identity are established;
+- the individual-unit barcode is proven and its check digit is valid;
+- the barcode is absent from every exclusion source and the current batch;
+- the current complete ingredient order is captured;
+- direct sources and access date are recorded;
+- **the guaranteed analysis or the calorie statement is missing, and that is the only thing missing.**
+
+This status exists because one gate was doing two jobs. The consumer app serves
+a row on its composition alone — `lib/barcode-serve.ts` in `Ingredients.help`
+asks for a source and text that reads like an ingredient list, and asks for
+nothing else — while `source_verified` also demands protein, fat, moisture and
+calories. So a record whose ingredient list was settled, read off the pack, and
+ready to answer a scan could sit outside the catalog for want of a kcal figure
+the app never displays. Sixty-one records were in exactly that position when
+this status was added.
+
+A `composition_verified` record is **seedable**. It is not a lesser answer; it
+is a complete answer to the question the product asks, and an incomplete one to
+a question the contract asks.
+
+**It is not a way round a disagreement.** If two sources print different
+ingredient lists under one barcode, the composition is exactly what is NOT
+settled, and the record is `needs_physical_label` — that is most of the
+sixty-one, and none of them become seedable by relabelling. The checker warns
+when a record carries the whole panel anyway, because a status that understates
+what was established is a record somebody researches twice.
+
+### The rest
 
 Use `candidate` when a lead is promising but incomplete. Use `needs_physical_label` when a package image is required to settle barcode scope, current formula, cropped data, or a source conflict. Use `rejected` for a duplicate, wrong product, invalid code, or unsuitable case/multipack substitution. `promoted_to_seed` is used only after the record has actually been copied into production seed files.
 
