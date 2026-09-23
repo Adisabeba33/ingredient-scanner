@@ -1,0 +1,1084 @@
+[
+  {
+    "catalog_number": null,
+    "upc": "050000580897",
+    "canonical_gtin14": "00050000580897",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Come & Get It",
+    "product_name": "ALPO Come & Get It! Cookout Classics",
+    "variant": "Beef, Pork & Chicken",
+    "recipe": [
+      "Beef, Pork & Chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "14 lb",
+    "ingredients_verbatim": "Ground yellow corn, corn germ meal, beef and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, pork and bone meal, egg and chicken flavor, natural flavor, corn protein meal, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural grill flavor, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, calcium carbonate, Blue 2, Yellow 6, garlic oil.",
+    "ingredients_ordered_normalized": [
+      "Ground yellow corn",
+      "corn germ meal",
+      "beef and bone meal",
+      "soybean meal",
+      "beef fat preserved with mixed-tocopherols",
+      "pork and bone meal",
+      "egg and chicken flavor",
+      "natural flavor",
+      "corn protein meal",
+      "salt",
+      "potassium chloride",
+      "choline chloride",
+      "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+      "natural grill flavor",
+      "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)]",
+      "DL-Methionine",
+      "L-Lysine monohydrochloride",
+      "L-Tryptophan",
+      "Red 40",
+      "Yellow 5",
+      "calcium carbonate",
+      "Blue 2",
+      "Yellow 6",
+      "garlic oil"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 18,
+      "crude_fat_min_percent": 8.5,
+      "crude_fiber_max_percent": 6,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium (Ca)",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus (P)",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Iron (Fe)",
+          "basis": "min",
+          "value": 80,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3384,
+      "kcal_per_unit": 377,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "L502324",
+    "formula_source": "Current Purina manufacturer label-deck PDF L502324.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/5023_l502324_alpo_come_and_get_it_dry_dog_food_894.pdf",
+      "https://www.cub.com/store/cub/products/16994897-purina-come-get-it-cookout-classics-adult-dry-dog-food-14-lb"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Steps 1–3 passed. Route A: current Purina deck supplies formula; Cub binds UPC to exact 14 lb bag."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "050000637409",
+    "canonical_gtin14": "00050000637409",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Come & Get It",
+    "product_name": "ALPO Come & Get It! Cookout Classics",
+    "variant": "Beef, Pork & Chicken",
+    "recipe": [
+      "Beef, Pork & Chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "45 lb",
+    "ingredients_verbatim": "Ground yellow corn, corn germ meal, beef and bone meal, soybean meal, beef fat preserved with mixed-tocopherols, pork and bone meal, egg and chicken flavor, natural flavor, corn protein meal, salt, potassium chloride, choline chloride, MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite], natural grill flavor, VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)], DL-Methionine, L-Lysine monohydrochloride, L-Tryptophan, Red 40, Yellow 5, calcium carbonate, Blue 2, Yellow 6, garlic oil.",
+    "ingredients_ordered_normalized": [
+      "Ground yellow corn",
+      "corn germ meal",
+      "beef and bone meal",
+      "soybean meal",
+      "beef fat preserved with mixed-tocopherols",
+      "pork and bone meal",
+      "egg and chicken flavor",
+      "natural flavor",
+      "corn protein meal",
+      "salt",
+      "potassium chloride",
+      "choline chloride",
+      "MINERALS [zinc sulfate, ferrous sulfate, manganese sulfate, copper sulfate, calcium iodate, sodium selenite]",
+      "natural grill flavor",
+      "VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), Vitamin A supplement, calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, thiamine mononitrate (Vitamin B-1), Vitamin D-3 supplement, riboflavin supplement (Vitamin B-2), menadione sodium bisulfite complex (Vitamin K), folic acid (Vitamin B-9), biotin (Vitamin B-7)]",
+      "DL-Methionine",
+      "L-Lysine monohydrochloride",
+      "L-Tryptophan",
+      "Red 40",
+      "Yellow 5",
+      "calcium carbonate",
+      "Blue 2",
+      "Yellow 6",
+      "garlic oil"
+    ],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": 18,
+      "crude_fat_min_percent": 8.5,
+      "crude_fiber_max_percent": 6,
+      "moisture_max_percent": 12,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": [
+        {
+          "nutrient": "Linoleic Acid",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Calcium (Ca)",
+          "basis": "min",
+          "value": 1,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Phosphorus (P)",
+          "basis": "min",
+          "value": 0.8,
+          "unit": "percent"
+        },
+        {
+          "nutrient": "Iron (Fe)",
+          "basis": "min",
+          "value": 80,
+          "unit": "other"
+        }
+      ]
+    },
+    "calorie_content": {
+      "kcal_per_kg": 3384,
+      "kcal_per_unit": 377,
+      "unit_name": "cup"
+    },
+    "label_deck_code": "L502324",
+    "formula_source": "Current Purina manufacturer label-deck PDF L502324.",
+    "source_urls": [
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/5023_l502324_alpo_come_and_get_it_dry_dog_food_894.pdf",
+      "https://www.farmandhomesupply.com/alpo-come-and-get-it-cookout-classics-dry-dog-food-45lbs.html"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Steps 1–3 passed. Route A: current Purina deck supplies formula; Farm & Home Supply binds UPC to exact 45 lb bag."
+    ],
+    "research_status": "source_verified"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132145446",
+    "canonical_gtin14": "00011132145446",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Dry Dog Food",
+    "variant": "Savory Beef Flavor",
+    "recipe": [
+      "Savory Beef Flavor"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.townandcountryhardware.com/2842954/Product/alpo-1113214544?bvstate=pg%3A6%2Fct%3Ar"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Retailer exposes nutrients and an alphabetized ingredient field, not a trustworthy AS-PRINTED ingredient order; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132000400",
+    "canonical_gtin14": "00011132000400",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Dry Dog Food",
+    "variant": "Savory Beef Flavor",
+    "recipe": [
+      "Savory Beef Flavor"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "4 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132145477",
+    "canonical_gtin14": "00011132145477",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Dry Dog Food",
+    "variant": "Savory Beef Flavor",
+    "recipe": [
+      "Savory Beef Flavor"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "47 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5127/alpo-upc"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "050000580903",
+    "canonical_gtin14": "00050000580903",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Come & Get It",
+    "product_name": "ALPO Come 'N Get It Dry Dog Food",
+    "variant": "Cookout Classics",
+    "recipe": [
+      "Cookout Classics"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5127/alpo-upc"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Legacy identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "050000103942",
+    "canonical_gtin14": "00050000103942",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Come & Get It",
+    "product_name": "ALPO Come 'N Get It Dry Dog Food",
+    "variant": "Cookout Classics",
+    "recipe": [
+      "Cookout Classics"
+    ],
+    "life_stage": "adult",
+    "food_form": "dry",
+    "texture": "kibble",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "15 lb",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.buycott.com/brand/5127/alpo-upc"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Legacy identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "017800154727",
+    "canonical_gtin14": "00017800154727",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Variety Snaps",
+    "product_name": "ALPO Variety Snaps Dog Treats",
+    "variant": "Little Bites — Beef, Chicken, Liver & Lamb Flavors",
+    "recipe": [
+      "Little Bites — Beef, Chicken, Liver & Lamb Flavors"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "biscuit",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina_treats"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "017800 prefix observed on identity lead, but complete label panel absent; Step 2 stops. Not claimed as physical-pack confirmation."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132006815",
+    "canonical_gtin14": "00011132006815",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Variety Snaps",
+    "product_name": "ALPO Variety Snaps Dog Treats",
+    "variant": "Little Bites — Beef, Chicken, Liver & Lamb Flavors",
+    "recipe": [
+      "Little Bites — Beef, Chicken, Liver & Lamb Flavors"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "biscuit",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": "16 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://simaro.co/purina-alpo-variedad-encaje-poco-mordeduras-de-perro-trata-de-la-carne-de-vaca-el-pollo-el-higado-y-el-cordero-el-16-0-oz"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "GA/calories present but complete AS-PRINTED ingredient list absent; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132171889",
+    "canonical_gtin14": "00011132171889",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "T-Bonz",
+    "product_name": "ALPO T-Bonz Dog Treats",
+    "variant": "BBQ Pork Flavor",
+    "recipe": [
+      "BBQ Pork Flavor"
+    ],
+    "life_stage": null,
+    "food_form": "treat",
+    "texture": "unknown",
+    "presentation": "plain",
+    "package_type": "bag",
+    "size": null,
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://listex.online/product/11132171889-us-purina-alpo-t-bonz-dog-treats-bbq-pork-flavor"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "GA/calories present but exact printed net size and complete AS-PRINTED ingredients absent; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132108601",
+    "canonical_gtin14": "00011132108601",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Chop House",
+    "product_name": "ALPO Chop House Wet Dog Food",
+    "variant": "Roasted Chicken & Top Sirloin Flavors",
+    "recipe": [
+      "Roasted Chicken & Top Sirloin Flavors"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/upc/11132108601"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132108403",
+    "canonical_gtin14": "00011132108403",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Chop House",
+    "product_name": "ALPO Chop House Wet Dog Food",
+    "variant": "Filet Mignon & Bacon Flavors",
+    "recipe": [
+      "Filet Mignon & Bacon Flavors"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132136062",
+    "canonical_gtin14": "00011132136062",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Chop House",
+    "product_name": "ALPO Chop House Wet Dog Food",
+    "variant": "Beef Tenderloin Flavor in Gourmet Gravy",
+    "recipe": [
+      "Beef Tenderloin Flavor in Gourmet Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132152628",
+    "canonical_gtin14": "00011132152628",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Chop House",
+    "product_name": "ALPO Chop House Wet Dog Food",
+    "variant": "Beef Tenderloin Flavor",
+    "recipe": [
+      "Beef Tenderloin Flavor"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132125554",
+    "canonical_gtin14": "00011132125554",
+    "barcode_scope": "multipack",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Wet Dog Food Variety Pack",
+    "variant": "With Beef & With Lamb & Rice in Gravy",
+    "recipe": [
+      "With Beef & With Lamb & Rice in Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "unknown",
+    "presentation": "unknown",
+    "package_type": "box",
+    "size": "12 ct / 13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://brickseek.com/walmart-inventory-checker?sku=10448743"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Multipack identity; carton has no composition of its own; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132152727",
+    "canonical_gtin14": "00011132152727",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Adult Wet Dog Food",
+    "variant": "With Beef in Gravy",
+    "recipe": [
+      "With Beef in Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132125417",
+    "canonical_gtin14": "00011132125417",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Wet Dog Food",
+    "variant": "With Turkey & Bacon in Gravy",
+    "recipe": [
+      "With Turkey & Bacon in Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132125165",
+    "canonical_gtin14": "00011132125165",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Wet Dog Food",
+    "variant": "With Beef, Bacon & Cheese in Gravy",
+    "recipe": [
+      "With Beef, Bacon & Cheese in Gravy"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132152703",
+    "canonical_gtin14": "00011132152703",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Wet Dog Food",
+    "variant": "With Chicken",
+    "recipe": [
+      "With Chicken"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "unknown",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  },
+  {
+    "catalog_number": null,
+    "upc": "011132125349",
+    "canonical_gtin14": "00011132125349",
+    "barcode_scope": "individual_unit",
+    "brand": "Alpo",
+    "manufacturer": "Nestlé Purina PetCare Company",
+    "species": "dog",
+    "product_line": "Prime Cuts",
+    "product_name": "ALPO Prime Cuts Wet Dog Food",
+    "variant": "London Grill",
+    "recipe": [
+      "London Grill"
+    ],
+    "life_stage": "adult",
+    "food_form": "wet",
+    "texture": "cuts",
+    "presentation": "in_gravy",
+    "package_type": "can",
+    "size": "13.2 oz",
+    "ingredients_verbatim": null,
+    "ingredients_ordered_normalized": [],
+    "guaranteed_analysis": {
+      "crude_protein_min_percent": null,
+      "crude_fat_min_percent": null,
+      "crude_fiber_max_percent": null,
+      "moisture_max_percent": null,
+      "ash_max_percent": null,
+      "taurine_min_percent": null,
+      "other_printed_guarantees": []
+    },
+    "calorie_content": {
+      "kcal_per_kg": null,
+      "kcal_per_unit": null,
+      "unit_name": null
+    },
+    "label_deck_code": null,
+    "formula_source": "Identity lead only; complete current label panel not captured.",
+    "source_urls": [
+      "https://www.upcitemdb.com/info-purina-alpo-brand-dog-food"
+    ],
+    "source_accessed_at": "2026-09-23",
+    "barcode_notes": "UPC-A check digit independently validated; code retained exactly as printed by cited source.",
+    "conflicts": [],
+    "verification_notes": [
+      "Identity/size lead only; Step 2 stops."
+    ],
+    "research_status": "needs_physical_label"
+  }
+]
