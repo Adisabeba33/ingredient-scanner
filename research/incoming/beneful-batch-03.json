@@ -853,15 +853,18 @@
     "formula_source": "Formula evidence found; full current label fields still need promotion-grade verification",
     "source_urls": [
       "https://www.purina.com/sites/default/files/products/files/409819B_Beneful_Dog_Food_Simple_Goodness_w_Farm-Raised_Chicken.pdf",
-      "https://www.kroger.com/p/beneful-simple-goodness-with-farm-raised-chicken-adult-dry-dog-food/0001780017894"
+      "https://www.kroger.com/p/beneful-simple-goodness-with-farm-raised-chicken-adult-dry-dog-food/0001780017894",
+      "https://www.upcitemdb.com/info-purina-beneful_dry"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact retailer/product page binds this UPC to the stated unit size.",
     "conflicts": [],
     "verification_notes": [
       "UPC-size binding found, but full current promotion-grade formula/GA evidence is incomplete; retained below promotion gate.",
-      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable."
+      "Dry calories are per cup/pouch; package-weight arithmetic witness is not applicable.",
+      "Second pass: exact 12-count Chicken UPC identity plus official Purina 409819B full formula/GA/adequacy evidence.",
+      "Second-pass promotion completed; shell duplicate/checker validation remains required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   }
 ]
