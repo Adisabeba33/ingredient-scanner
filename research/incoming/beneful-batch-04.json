@@ -327,36 +327,70 @@
     "presentation": "in_gravy",
     "package_type": "tub",
     "size": "10 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Beef broth, beef, wheat gluten, carrots, peas, liver, barley, meat by-products, corn starch-modified, soy flour, tricalcium phosphate, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Beef broth",
+      "beef",
+      "wheat gluten",
+      "carrots",
+      "peas",
+      "liver",
+      "barley",
+      "meat by-products",
+      "corn starch-modified",
+      "soy flour",
+      "tricalcium phosphate",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]",
+      "choline chloride"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 936,
+      "kcal_per_unit": 264,
       "unit_name": "tub"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact Target UPC and 2025 distributor list establish identity/size; current full Purina deck not recovered in this pass.",
+    "label_deck_code": "E407725",
+    "formula_source": "Purina manufacturer formula/deck E407725 plus exact UPC-size evidence",
     "source_urls": [
       "https://www.target.com/p/-/A-14918970",
-      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_4.9.25-compressed.pdf"
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-07/4077_e407725_beneful_freshly_prepared_blends_w_beef_wet_dog_food_jp4.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact Target UPC and 2025 distributor list establish identity/size; current full Purina deck not recovered in this pass.",
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second pass: exact 10 oz UPC identity and Purina E407725 formula/GA/calories corroborated.",
+      "Wet arithmetic: 936 kcal/kg × 0.283 kg ≈ 265 kcal/tub, consistent with printed 264 kcal/tub within rounding."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -378,13 +412,45 @@
     "presentation": "in_gravy",
     "package_type": "tub",
     "size": "10 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken and salmon broth, chicken, wheat gluten, liver, meat by-products, salmon, sweet potatoes, corn starch-modified, brown rice, spinach, tricalcium phosphate, soy flour, MINERALS [potassium chloride, zinc sulfate, ferrous sulfate, copper sulfate, manganese sulfate, potassium iodide, sodium selenite], VITAMINS [Vitamin E supplement, niacin (Vitamin B-3), thiamine mononitrate (Vitamin B-1), calcium pantothenate (Vitamin B-5), pyridoxine hydrochloride (Vitamin B-6), Vitamin B-12 supplement, riboflavin supplement (Vitamin B-2), Vitamin A supplement, folic acid (Vitamin B-9), Vitamin D-3 supplement, biotin (Vitamin B-7)], choline chloride.",
+    "ingredients_ordered_normalized": [
+      "Chicken and salmon broth",
+      "chicken",
+      "wheat gluten",
+      "liver",
+      "meat by-products",
+      "salmon",
+      "sweet potatoes",
+      "corn starch-modified",
+      "brown rice",
+      "spinach",
+      "tricalcium phosphate",
+      "soy flour",
+      "MINERALS [potassium chloride",
+      "zinc sulfate",
+      "ferrous sulfate",
+      "copper sulfate",
+      "manganese sulfate",
+      "potassium iodide",
+      "sodium selenite]",
+      "VITAMINS [Vitamin E supplement",
+      "niacin (Vitamin B-3)",
+      "thiamine mononitrate (Vitamin B-1)",
+      "calcium pantothenate (Vitamin B-5)",
+      "pyridoxine hydrochloride (Vitamin B-6)",
+      "Vitamin B-12 supplement",
+      "riboflavin supplement (Vitamin B-2)",
+      "Vitamin A supplement",
+      "folic acid (Vitamin B-9)",
+      "Vitamin D-3 supplement",
+      "biotin (Vitamin B-7)]",
+      "choline chloride"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
@@ -394,20 +460,24 @@
       "kcal_per_unit": 281,
       "unit_name": "tub"
     },
-    "label_deck_code": null,
-    "formula_source": "Exact UPC/size current retail evidence; formula witness recovered only as older Purina C370120, so do not promote as current.",
+    "label_deck_code": "D370125",
+    "formula_source": "Purina manufacturer formula/deck D370125 plus exact UPC-size evidence",
     "source_urls": [
       "https://www.retailmarket.net/products/purina-beneful-chopped-blends-wet-dog-food-with-salmon-sweet-potatoes-brown-rice-and-spinach-10-oz-tub-8-pack/",
-      "https://www.purina.com/sites/default/files/products/files/C370120_Beneful_Chopped_Blends_w_Salmon_Sweet_Potatoes_Brown_Rice_Spinach_Dog_Food.pdf"
+      "https://www.purina.com/sites/default/files/products/files/C370120_Beneful_Chopped_Blends_w_Salmon_Sweet_Potatoes_Brown_Rice_Spinach_Dog_Food.pdf",
+      "https://www.admc.us/wp-content/uploads/2022/02/2024-North-Complete-Price-List_4.9.25-compressed.pdf",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-07/3701_d370125_beneful_freshly_prepared_blends_w_salmon_wet_dog_food_kh6.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact UPC/size current retail evidence; formula witness recovered only as older Purina C370120, so do not promote as current.",
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second pass: exact 10 oz UPC identity and Purina D370125 formula/GA/calories corroborated.",
+      "Wet arithmetic: 995 kcal/kg × 0.283 kg ≈ 282 kcal/tub, consistent with printed 281 kcal/tub within rounding."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -483,32 +553,35 @@
     "ingredients_verbatim": null,
     "ingredients_ordered_normalized": [],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 2,
+      "crude_fiber_max_percent": 1.5,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 1088,
+      "kcal_per_unit": 308,
       "unit_name": "tub"
     },
-    "label_deck_code": null,
-    "formula_source": "UPC/product lead found; exact current manufacturer formula deck not recovered, so retained as candidate-grade ledger row.",
+    "label_deck_code": "E407925",
+    "formula_source": "Purina manufacturer formula/deck E407925 plus exact UPC-size evidence",
     "source_urls": [
       "https://www.buycott.com/brand/193768/purina-beneful-upc",
-      "https://www.petcarerx.com/beneful-prepared-meals-roasted-chicken-wet-dog-food/31931"
+      "https://www.petcarerx.com/beneful-prepared-meals-roasted-chicken-wet-dog-food/31931",
+      "https://www.purina.com/dogs/shop/beneful-freshly-prepared-blends-lamb-wet-dog-food"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product lead found; exact current manufacturer formula deck not recovered, so retained as candidate-grade ledger row.",
     "conflicts": [],
     "verification_notes": [
       "Wet calorie arithmetic checked where kcal/kg and kcal/container were available.",
-      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved."
+      "No promotion where current exact formula evidence or individual-unit barcode identity remains unresolved.",
+      "Second pass: exact 10 oz UPC identity and Purina E407925 formula/GA/calories corroborated.",
+      "Wet arithmetic: 1088 kcal/kg × 0.283 kg ≈ 308 kcal/tub, consistent with printed 308 kcal/tub within rounding."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   }
 ]
