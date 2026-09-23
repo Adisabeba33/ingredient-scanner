@@ -68,7 +68,8 @@
     "formula_source": "Current Purina manufacturer label deck",
     "source_urls": [
       "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4090_u409024_beneful_originals_w_farm-raised_beef_natural_dry_dog_food_su5_1.pdf",
-      "https://www.upcitemdb.com/info-purina-beneful_dry"
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.target.com/p/-/A-52685739"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC lead is check-digit-valid but exact current unit identity needs shell-enabled re-verification; retained below promotion gate.",
@@ -76,9 +77,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Target currently binds UPC 017800134835 to the 3.5 lb individual bag and prints formula code U409024, matching the current Purina manufacturer deck.",
+      "Second-pass promotion: exact UPC/unit identity and formula evidence now satisfy the Beneful promotion gate; repository shell duplicate/checker validation is still required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -230,7 +233,8 @@
     "formula_source": "Current Purina manufacturer label deck",
     "source_urls": [
       "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4090_u409024_beneful_originals_w_farm-raised_beef_natural_dry_dog_food_su5_1.pdf",
-      "https://www.upcitemdb.com/info-purina-beneful_dry"
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.upcitemdb.com/upc/17800184397"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC lead is check-digit-valid but exact current unit identity needs shell-enabled re-verification; retained below promotion gate.",
@@ -238,9 +242,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "12 lb individual UPC is independently bound to Originals Farm-Raised Beef; current formula is U409024.",
+      "Second-pass promotion: exact UPC/unit identity and formula evidence now satisfy the Beneful promotion gate; repository shell duplicate/checker validation is still required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -392,7 +398,8 @@
     "formula_source": "Current Purina manufacturer label deck",
     "source_urls": [
       "https://www.purina.com/sites/default/files/product-label-deck-file/2025-05/4090_u409024_beneful_originals_w_farm-raised_beef_natural_dry_dog_food_su5_1.pdf",
-      "https://www.upcitemdb.com/info-purina-beneful_dry"
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.dkhardware.com/beneful-1780018440-1780013476-dog-food-dry-155-lb-bag-product-6575071.html"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC lead is check-digit-valid but exact current unit identity needs shell-enabled re-verification; retained below promotion gate.",
@@ -400,9 +407,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Current retailer/distributor page binds UPC to 15.5 lb individual bag; current Beef formula deck U409024 supplies formula/GA/calories.",
+      "Second-pass promotion: exact UPC/unit identity and formula evidence now satisfy the Beneful promotion gate; repository shell duplicate/checker validation is still required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -795,7 +804,8 @@
     "formula_source": "Current retailer transcription; manufacturer product page confirms current product",
     "source_urls": [
       "https://www.chewy.com/purina-beneful-originals-farm-raised/dp/200457",
-      "https://www.upcitemdb.com/info-purina-beneful_dry"
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.target.com/p/-/A-14775537"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC lead is check-digit-valid but exact current unit identity needs shell-enabled re-verification; retained below promotion gate.",
@@ -803,9 +813,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Target currently binds UPC 017800184502 to 14 lb Originals Farm-Raised Chicken and identifies adult life stage. Formula evidence in staged record remains L409524; exact current UPC-size binding is now strong.",
+      "Second-pass promotion: exact UPC/unit identity and formula evidence now satisfy the Beneful promotion gate; repository shell duplicate/checker validation is still required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -1196,7 +1208,8 @@
     "formula_source": "Current Purina manufacturer label deck",
     "source_urls": [
       "https://www.purina.com/sites/default/files/product-label-deck-file/2025-03/4085_n408524_beneful_incredibites_w_farm-raised_beef_dry_dog_food_su3.pdf",
-      "https://www.upcitemdb.com/info-purina-beneful_dry"
+      "https://www.upcitemdb.com/info-purina-beneful_dry",
+      "https://www.target.com/p/-/A-52688928"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC lead is check-digit-valid but exact current unit identity needs shell-enabled re-verification; retained below promotion gate.",
@@ -1204,9 +1217,11 @@
     "verification_notes": [
       "UPC-A check digit validated during research.",
       "Dry calories are per cup; no package-weight arithmetic witness is available.",
-      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0."
+      "This connector-only pass cannot run repository shell checks; merge only after check-ledger exits 0.",
+      "Target binds UPC 017800136402 to 3.5 lb IncrediBites Farm-Raised Beef and prints formula code N408524, matching current Purina deck.",
+      "Second-pass promotion: exact UPC/unit identity and formula evidence now satisfy the Beneful promotion gate; repository shell duplicate/checker validation is still required before ledger merge."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
