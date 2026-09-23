@@ -288,7 +288,10 @@
     "label_deck_code": null,
     "formula_source": "Historical UPC/product identity lead only; current exact formula deck not yet recovered.",
     "source_urls": [
-      "https://www.buycott.com/brand/193768/purina-beneful-upc"
+      "https://www.buycott.com/brand/193768/purina-beneful-upc",
+      "https://www.purina.com/sites/default/files/products/files/A371320_Beneful_IncrediBites_Pate_w_Real_Beef_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
+      "https://live.purina.com/sites/default/files/products/files/A371420_Beneful_IncrediBites_Pate_w_Real_Chicken_Tomatoes_Carrots_Spinach_Dog_Food.pdf",
+      "https://www.purina.com/sites/default/files/products/files/A371520_Beneful_IncrediBites_Pate_w_Real_Salmon_Tomatoes_Carrots_Spinach_Dog_Food.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "UPC/product identity lead recovered. Do not promote until exact package/formula evidence is established.",
@@ -297,27 +300,31 @@
       "Kept below promotion gate: current complete manufacturer formula/GA/calorie evidence is not yet established.",
       "Historical/discontinued identity may differ from current Beneful naming; requires package-label or authoritative archival corroboration.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Historical 27 x 3 oz IncrediBites variety multipack retained. Component model records Beef/Chicken/Salmon as three recipes, 9 each; Salmon Purina deck A371520 recovered. Exact archival pack label/component UPC evidence remains required before promotion."
+      "Historical 27 x 3 oz IncrediBites variety multipack retained. Component model records Beef/Chicken/Salmon as three recipes, 9 each; Salmon Purina deck A371520 recovered. Exact archival pack label/component UPC evidence remains required before promotion.",
+      "Component recipes now linked to three individual 3 oz UPC records already present in the campaign: Beef 017800189705/A371320, Chicken 017800189736/A371420, Salmon 017800189767/A371520. Outer historical 27-pack UPC remains separately preserved."
     ],
     "research_status": "needs_physical_label",
     "multipack_contents": [
       {
-        "name": "IncrediBites Beef recipe",
+        "name": "IncrediBites Beef Pâté with Tomatoes, Carrots & Spinach",
         "count": 9,
         "unit_size": "3 oz",
-        "formula_code": null
+        "formula_code": "A371320",
+        "individual_upc": "017800189705"
       },
       {
-        "name": "IncrediBites Chicken recipe",
+        "name": "IncrediBites Chicken Pâté with Tomatoes, Carrots & Spinach",
         "count": 9,
         "unit_size": "3 oz",
-        "formula_code": null
+        "formula_code": "A371420",
+        "individual_upc": "017800189736"
       },
       {
-        "name": "IncrediBites Salmon recipe",
+        "name": "IncrediBites Salmon Pâté with Tomatoes, Carrots & Spinach",
         "count": 9,
         "unit_size": "3 oz",
-        "formula_code": "A371520"
+        "formula_code": "A371520",
+        "individual_upc": "017800189767"
       }
     ]
   },
