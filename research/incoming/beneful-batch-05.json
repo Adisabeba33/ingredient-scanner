@@ -172,26 +172,44 @@
     "presentation": "plain",
     "package_type": "carton",
     "size": "9.5 oz",
-    "ingredients_verbatim": null,
-    "ingredients_ordered_normalized": [],
+    "ingredients_verbatim": "Chicken, chicken broth, liver, lamb, kale, carrots, potato starch, flaxseed, fish oil, agar agar, vitamins [riboflavin (Vitamin B-2), Vitamin E supplement, niacin (Vitamin B-3), calcium pantothenate (Vitamin B-5), thiamine mononitrate (Vitamin B-1), Vitamin A supplement, pyridoxine hydrochloride (Vitamin B-6), folic acid (Vitamin B-9), biotin (Vitamin B-7), Vitamin B-12 supplement, Vitamin D-3 supplement], potassium chloride, minerals [zinc proteinate, ferrous glycine complex, copper proteinate, manganese proteinate, calcium iodate, selenium yeast], salt, choline chloride, magnesium sulfate.",
+    "ingredients_ordered_normalized": [
+      "chicken",
+      "chicken broth",
+      "liver",
+      "lamb",
+      "kale",
+      "carrots",
+      "potato starch",
+      "flaxseed",
+      "fish oil",
+      "agar agar",
+      "vitamins",
+      "potassium chloride",
+      "minerals",
+      "salt",
+      "choline chloride",
+      "magnesium sulfate"
+    ],
     "guaranteed_analysis": {
-      "crude_protein_min_percent": null,
-      "crude_fat_min_percent": null,
-      "crude_fiber_max_percent": null,
-      "moisture_max_percent": null,
+      "crude_protein_min_percent": 11,
+      "crude_fat_min_percent": 4,
+      "crude_fiber_max_percent": 1,
+      "moisture_max_percent": 78,
       "ash_max_percent": null,
       "taurine_min_percent": null,
       "other_printed_guarantees": []
     },
     "calorie_content": {
-      "kcal_per_kg": null,
-      "kcal_per_unit": null,
+      "kcal_per_kg": 1143,
+      "kcal_per_unit": 307,
       "unit_name": "carton"
     },
-    "label_deck_code": null,
-    "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
+    "label_deck_code": "A370425",
+    "formula_source": "Current Purina manufacturer label deck A370425 plus current Target exact UPC/size listing",
     "source_urls": [
-      "https://www.target.com/p/-/A-94891797"
+      "https://www.target.com/p/-/A-94891797",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-12/a370425_bf_freshly_prepared_classics_w_lamb.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact current UPC and unit size confirmed.",
@@ -199,9 +217,11 @@
     "verification_notes": [
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
-      "No shell available in connector pass; do not merge until repository checks succeed."
+      "No shell available in connector pass; do not merge until repository checks succeed.",
+      "Second pass: current Target binds UPC 017800103770 to the 9.5 oz Lamb carton and prints formula A370425; current Purina A370425 supplies complete ingredients, GA, adult-maintenance adequacy and 1143 kcal/kg / 307 kcal/container.",
+      "Wet arithmetic: 1143 kcal/kg × 0.269 kg ≈ 307 kcal/container."
     ],
-    "research_status": "needs_physical_label"
+    "research_status": "source_verified"
   },
   {
     "catalog_number": null,
@@ -398,7 +418,8 @@
     "label_deck_code": null,
     "formula_source": "Current retailer label/product evidence; manufacturer deck still required where status remains below promotion gate.",
     "source_urls": [
-      "https://www.target.com/p/-/A-94891795"
+      "https://www.target.com/p/-/A-94891795",
+      "https://www.purina.com/sites/default/files/product-label-deck-file/2025-12/a370325_bf_freshly_prepared_stews_turkey_dinner.pdf"
     ],
     "source_accessed_at": "2026-09-22",
     "barcode_notes": "Exact current multipack UPC and pack size confirmed; not an individual-unit barcode.",
@@ -406,7 +427,8 @@
     "verification_notes": [
       "Current 2026 retail listing establishes Beneful product identity, size, form, and UPC.",
       "Kept below promotion gate until complete current manufacturer formula/calorie evidence is recovered.",
-      "No shell available in connector pass; do not merge until repository checks succeed."
+      "No shell available in connector pass; do not merge until repository checks succeed.",
+      "Second pass confirms outer variety-pack UPC 017800103800 and full current ingredient/GA panels for both included recipes, but it remains a multipack barcode; retained below individual-unit promotion gate."
     ],
     "research_status": "needs_physical_label"
   },
