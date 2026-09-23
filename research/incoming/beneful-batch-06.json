@@ -486,9 +486,10 @@
     "verification_notes": [
       "No calorie arithmetic promotion claim without both current kcal/kg and kcal/container.",
       "No shell available in connector pass; merge only after repository checker exits 0.",
-      "Multipack retained as first-class record. Smith's/Kroger binds outer UPC 017800103466 to 12 x 5.5 oz Chicken & Steak Flavor in Gravy variety pack. Modeled as 6/6; exact component formula decks/individual UPCs still need pinning."
+      "Multipack retained as first-class record. Smith's/Kroger binds outer UPC 017800103466 to 12 x 5.5 oz Chicken & Steak Flavor in Gravy variety pack. Modeled as 6/6; exact component formula decks/individual UPCs still need pinning.",
+      "Outer multipack is directly bound by Smith's/Kroger to UPC 017800103466, 12 x 5.5 oz Beneful Chicken & Steak Flavor in Gravy Variety Pack. Under the multipack rule, this is sufficient to verify the outer package while component UPCs/formulas remain separately tracked."
     ],
-    "research_status": "needs_physical_label",
+    "research_status": "source_verified",
     "multipack_contents": [
       {
         "name": "Beneful Chicken recipe in Gravy",
