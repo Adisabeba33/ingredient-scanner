@@ -1,0 +1,234 @@
+{
+  "checked_on": "2026-10-07",
+  "primary_markets": [
+    "US",
+    "CA"
+  ],
+  "sources": [
+    {
+      "id": "opff",
+      "priority": 1,
+      "kind": "open_bulk_dump",
+      "verification": "downloaded_and_audited",
+      "url": "https://world.openpetfoodfacts.org/data",
+      "download_url": "https://static.openpetfoodfacts.org/data/openpetfoodfacts-products.jsonl.gz",
+      "fields_confirmed": [
+        "code",
+        "product_name",
+        "brands",
+        "quantity",
+        "countries_tags",
+        "categories_tags",
+        "ingredients_text",
+        "images"
+      ],
+      "access": "Public gzip JSONL / TSV; ODbL 1.0 and DbCL 1.0. Photos have separate CC BY-SA licensing.",
+      "limitation": "Incomplete classification, ingredients and market data; candidate observations, not verified retail catalog."
+    },
+    {
+      "id": "wsda",
+      "priority": 1,
+      "kind": "registration_discovery",
+      "verification": "live_public_query_319_rows_for_Fromm",
+      "url": "https://agr.wa.gov/departments/animals-livestock-and-pets/animal-feed/product-look-up",
+      "sample_url": "https://agr.wa.gov/LookupTypes/GetPetFoodList?productName=&companyName=Fromm",
+      "fields_confirmed": [
+        "ProductName",
+        "ProductId",
+        "ForCompany",
+        "ProductStatus",
+        "Cycle",
+        "CycleBeginDate",
+        "CycleEndDate"
+      ],
+      "access": "Public search and spreadsheet option; full export should be requested from agency.",
+      "limitation": "No UPC or ingredients in tested response; registration is not evidence of present shelf availability; duplicate product names possible."
+    },
+    {
+      "id": "nc_feed",
+      "priority": 1,
+      "kind": "agency_bulk_request",
+      "verification": "current_official_registration_instructions_checked_no_export_obtained",
+      "url": "https://www.ncagr.gov/fdfr-existing-firm-new-product-registration-instructions/download?attachment=",
+      "contact": "ncfeed.registration@ncagr.gov",
+      "fields_documented": [
+        "product_name",
+        "class",
+        "composition_type",
+        "optional_manufacturer_id",
+        "optional_multiple_upc_codes",
+        "label_copies"
+      ],
+      "access": "Request releasable product-register export and publicly disclosable label copies.",
+      "limitation": "UPC submission is optional; actual coverage, disclosure rights, bulk availability, fees and timing are unconfirmed."
+    },
+    {
+      "id": "petwholesaleusa",
+      "priority": 1,
+      "kind": "approved_distributor_bulk",
+      "verification": "official_feed_schema_checked_not_received",
+      "url": "https://www.petwholesaleusa.com/pages/product-data.html",
+      "fields_documented": [
+        "UPC",
+        "GTIN",
+        "brand",
+        "title",
+        "size",
+        "count",
+        "description",
+        "image_urls",
+        "product_url"
+      ],
+      "access": "Approved active customer; monthly product workbook and weekday inventory workbook.",
+      "limitation": "Food SKU coverage and separate ingredient/GA fields are unconfirmed; a scanner data licence is not implied by retailer-account eligibility."
+    },
+    {
+      "id": "wholesalepet",
+      "priority": 1,
+      "kind": "approved_distributor_bulk",
+      "verification": "official_export_policy_checked_not_received",
+      "url": "https://wholesalepetcom.zendesk.com/hc/en-us/articles/39144589990419-Can-I-Download-Product-Data-and-Price-Lists-on-WholesalePet-com",
+      "contact": "service@wholesalepet.com",
+      "fields_documented": [
+        "SKU",
+        "UPC",
+        "description",
+        "vendor_data"
+      ],
+      "access": "Per-product downloads; customized bulk exports for selected vendors/categories by request.",
+      "limitation": "No single self-service spreadsheet for all vendors; food coverage and reuse terms need confirmation."
+    },
+    {
+      "id": "petcurean",
+      "priority": 2,
+      "kind": "manufacturer_resources",
+      "verification": "official_partner_resource_link_checked_attributes_not_downloaded",
+      "url": "https://petcurean.com/en-us/north-american-retailers",
+      "resource_url": "https://ecatalogs.plytix.com/6511f8b8d866e117e5dac95d/file_overview",
+      "access": "Partner resource hub and published brand sites.",
+      "limitation": "Plytix product fields and bulk export not verified in this audit; request item-master + label library."
+    },
+    {
+      "id": "fromm",
+      "priority": 2,
+      "kind": "manufacturer_formula_resources",
+      "verification": "official_download_landing_pages_checked",
+      "url": "https://pos.frommfamily.com/learn/articles/products/nutrition-guide",
+      "catalog_url": "https://shop.frommfamily.com/products/fromm-family-pet-food-catalog-fall-2026",
+      "access": "Public nutrition-guide and catalog links.",
+      "limitation": "Do not infer that a consumer catalog includes every retail barcode or a complete ingredient statement."
+    },
+    {
+      "id": "shoprite",
+      "priority": 2,
+      "kind": "retailer_exact_product",
+      "verification": "public_exact_product_page_checked",
+      "url": "https://www.shoprite.com/sm/pickup/rsid/106/product/freshpet-homestyle-creations-grilled-chicken-bites-freshly-crafted-meals-dog-food-1-lb-id-00627975013387",
+      "fields_confirmed": [
+        "product_name",
+        "UPC",
+        "printed_size",
+        "ingredients",
+        "adequacy_statement"
+      ],
+      "access": "Public pages; systematic collection needs site-specific permitted access and rate policy.",
+      "limitation": "One tested product is not a complete feed; ingredient currency and exact pack scope still require review."
+    },
+    {
+      "id": "kibblelab",
+      "priority": 2,
+      "kind": "paid_pet_food_dataset",
+      "verification": "provider_claims_checked_no_paid_sample_obtained",
+      "url": "https://kibblelab.com/data",
+      "provider_claimed_products": 7986,
+      "provider_claimed_brands": 251,
+      "fields_documented": [
+        "ingredients",
+        "guaranteed_analysis",
+        "AAFCO_adequacy",
+        "formulation_history",
+        "brands",
+        "companies"
+      ],
+      "access": "Commercial REST API or JSON/CSV export; quoted licensing, API described as low hundreds USD monthly.",
+      "limitation": "UPC coverage per pack size is not established on the public page; demand sample and unique-GTIN count before purchase."
+    },
+    {
+      "id": "niq_brandbank",
+      "priority": 2,
+      "kind": "enterprise_content_licence",
+      "verification": "official_licensing_and_pet_food_schema_checked",
+      "url": "https://nielseniq.com/global/en/products/content-licensing/",
+      "pet_schema_url": "https://nielsenbrandbank.freshdesk.com/en/support/solutions/articles/75000118705-label-insight-view-audiences-pet-food",
+      "access": "Licensed API/content delivery with pet-food coverage requested explicitly.",
+      "limitation": "No pet-food GTIN count, price or sample verified; do not use all-industry headline counts as pet-food counts."
+    },
+    {
+      "id": "syndigo",
+      "priority": 2,
+      "kind": "enterprise_content_licence",
+      "verification": "official_marketplace_search_api_docs_checked",
+      "url": "https://docx.syndigo.com/developers/docs/4-implementing-a-product-search-request",
+      "access": "Marketplace access licence and API credentials; product records and attribute-based queries.",
+      "limitation": "Publishing supplier data is different from a licence to retrieve all marketplace products; pet-food coverage must be quoted."
+    },
+    {
+      "id": "barcodelookup",
+      "priority": 3,
+      "kind": "subscription_discovery_api",
+      "verification": "official_api_price_and_retention_terms_checked",
+      "url": "https://www.barcodelookup.com/api",
+      "docs_url": "https://www.barcodelookup.com/api-documentation",
+      "terms_url": "https://www.barcodelookup.com/terms-and-conditions",
+      "fields_documented": [
+        "barcode",
+        "brand",
+        "size",
+        "multipack",
+        "ingredients",
+        "nutrition_facts",
+        "images",
+        "stores"
+      ],
+      "access": "API search by brand/category; entry plan displayed as USD 99/month for 5000 calls.",
+      "limitation": "Terms section 4 requires deleting supplied data on termination; perpetual retention needs separately agreed rights. Fields can be absent. geo filters stores, not guaranteed product market."
+    },
+    {
+      "id": "go_upc",
+      "priority": 3,
+      "kind": "paid_lookup_enrichment",
+      "verification": "official_bulk_workflow_and_ingredients_support_checked",
+      "url": "https://go-upc.com/",
+      "ingredients_url": "https://go-upc.com/blog/ingredients-are-live",
+      "access": "API or submit existing barcode list for bulk enrichment.",
+      "limitation": "Confirmed bulk workflow starts with known codes; no confirmed category-wide export in this audit. Pet-food ingredients available only when held."
+    },
+    {
+      "id": "gs1",
+      "priority": 3,
+      "kind": "identity_verification",
+      "verification": "official_scope_checked",
+      "url": "https://support.gs1.org/support/solutions/articles/43000734119-what-information-is-available-in-verified-by-gs1-",
+      "access": "Public Verified by GS1 and separately arranged enterprise services.",
+      "limitation": "Basic identifier/company/product verification, not a full pet-food formula dump; no ingredient coverage established."
+    },
+    {
+      "id": "admc",
+      "priority": 4,
+      "kind": "historical_discovery_catalog",
+      "verification": "official_staleness_warning_checked",
+      "url": "https://www.admc.us/products/product-catalogs/",
+      "access": "Public category PDFs and request current price book.",
+      "limitation": "Landing page says catalogs dated 2023-06-16 and UPC information may be inaccurate; do not use as sole current proof."
+    },
+    {
+      "id": "deca",
+      "priority": 3,
+      "kind": "retailer_planogram_discovery",
+      "verification": "official_2026_pdf_text_checked",
+      "url": "https://corp.commissaries.com/media/9774",
+      "access": "Public shelf-plan PDFs with product identity, brand, size and UPC-labelled identifiers.",
+      "limitation": "Identifiers may omit check digits or use retailer conventions. Keep raw identifier; establish mapping from another exact-pack source before deriving a GTIN."
+    }
+  ]
+}

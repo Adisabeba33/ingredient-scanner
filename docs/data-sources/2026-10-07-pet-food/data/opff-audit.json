@@ -1,0 +1,103 @@
+{
+  "audited_at_utc": "2026-10-07T21:30:39.317272+00:00",
+  "source": {
+    "url": "https://static.openpetfoodfacts.org/data/openpetfoodfacts-products.jsonl.gz",
+    "last_modified": "Wed, 07 Oct 2026 00:15:57 GMT",
+    "sha256": "cbfda4eaa686476c7254545e1fa0768873153569d7154bcfc15bbd02dbe55c4c",
+    "compressed_bytes": 18603821
+  },
+  "groups": {
+    "global_all_species": {
+      "records": 15477,
+      "valid_gtin_check_digit": 15127,
+      "named_default_language": 12452,
+      "with_brand": 7249,
+      "with_ingredients_text_any_language": 2834,
+      "with_any_photo_metadata": 14301,
+      "with_selected_ingredients_photo": 4301,
+      "with_selected_nutrition_photo": 2723,
+      "with_nonempty_nutriments_field": 3,
+      "name_brand_ingredients_and_valid_gtin": 2197
+    },
+    "us_all_species": {
+      "records": 1014,
+      "valid_gtin_check_digit": 1000,
+      "named_default_language": 789,
+      "with_brand": 374,
+      "with_ingredients_text_any_language": 160,
+      "with_any_photo_metadata": 958,
+      "with_selected_ingredients_photo": 332,
+      "with_selected_nutrition_photo": 226,
+      "with_nonempty_nutriments_field": 0,
+      "name_brand_ingredients_and_valid_gtin": 118
+    },
+    "canada_all_species": {
+      "records": 274,
+      "valid_gtin_check_digit": 269,
+      "named_default_language": 215,
+      "with_brand": 122,
+      "with_ingredients_text_any_language": 51,
+      "with_any_photo_metadata": 260,
+      "with_selected_ingredients_photo": 118,
+      "with_selected_nutrition_photo": 83,
+      "with_nonempty_nutriments_field": 0,
+      "name_brand_ingredients_and_valid_gtin": 43
+    },
+    "us_or_canada_all_species": {
+      "records": 1284,
+      "valid_gtin_check_digit": 1265,
+      "named_default_language": 1000,
+      "with_brand": 492,
+      "with_ingredients_text_any_language": 207,
+      "with_any_photo_metadata": 1214,
+      "with_selected_ingredients_photo": 448,
+      "with_selected_nutrition_photo": 306,
+      "with_nonempty_nutriments_field": 0,
+      "name_brand_ingredients_and_valid_gtin": 157
+    },
+    "global_cat_dog_tagged": {
+      "records": 2640,
+      "valid_gtin_check_digit": 2593,
+      "named_default_language": 2357,
+      "with_brand": 1954,
+      "with_ingredients_text_any_language": 964,
+      "with_any_photo_metadata": 2578,
+      "with_selected_ingredients_photo": 1381,
+      "with_selected_nutrition_photo": 882,
+      "with_nonempty_nutriments_field": 0,
+      "name_brand_ingredients_and_valid_gtin": 866
+    },
+    "us_or_canada_cat_dog_tagged": {
+      "records": 236,
+      "valid_gtin_check_digit": 234,
+      "named_default_language": 202,
+      "with_brand": 182,
+      "with_ingredients_text_any_language": 86,
+      "with_any_photo_metadata": 228,
+      "with_selected_ingredients_photo": 122,
+      "with_selected_nutrition_photo": 85,
+      "with_nonempty_nutriments_field": 0,
+      "name_brand_ingredients_and_valid_gtin": 78
+    }
+  },
+  "unique_source_codes": 15477,
+  "repeated_source_codes": 0,
+  "exports": {
+    "global_cat_dog_observations": 2593,
+    "global_unique_canonical_gtin14": 2593,
+    "us_or_canada_cat_dog_observations": 234,
+    "invalid_cat_dog_codes_excluded": 47
+  },
+  "method": {
+    "cat_dog_filter": [
+      "en:cat-food",
+      "en:dog-and-cat-food",
+      "en:dog-food"
+    ],
+    "north_america_filter": [
+      "en:canada",
+      "en:united-states"
+    ],
+    "warning": "Categories and markets are contributor labels, not verified availability. The restrictive category filter misses uncategorized cat/dog products. Nonempty ingredients are not necessarily complete or current. An empty nutriments field does not rule out nutrition in photos. A valid check digit is not proof of a registered or correctly assigned GTIN. Eight-digit codes are provisionally treated as GTIN-8; UPC-E is not expanded. Exports have not been deduplicated against the user project."
+  }
+}
