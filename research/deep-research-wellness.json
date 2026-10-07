@@ -1,0 +1,2033 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Wellness"
+  ],
+  "created_at": "2026-10-07",
+  "updated_at": "2026-10-07",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "076344884569",
+      "canonical_gtin14": "00076344884569",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Large Breed Puppy Chicken Recipe",
+      "variant": "Grain Free Large Breed Puppy Chicken & Turkey",
+      "recipe": [
+        "chicken",
+        "turkey",
+        "salmon"
+      ],
+      "life_stage": "puppy",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "24 lb",
+      "ingredients_verbatim": "Deboned Chicken, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Peas, Turkey Meal, Lentils, Dried Ground Potatoes, Dried Plain Beet Pulp, Chicken Fat, Flaxseed, Salmon Oil, Natural Flavor, Salt, Dried Chicory Root, Potassium Chloride, Taurine, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols (added to preserve freshness), Niacin, Zinc Proteinate, Zinc Sulfate, Ferrous Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, Copper Sulfate, d-Calcium Pantothenate, Copper Proteinate, Sodium Selenite, Pyridoxine Hydrochloride, Manganese Sulfate, Riboflavin, Manganese Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Calcium Iodate, Folic Acid, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Chicken",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Peas",
+        "Turkey Meal",
+        "Lentils",
+        "Dried Ground Potatoes",
+        "Dried Plain Beet Pulp",
+        "Chicken Fat",
+        "Flaxseed",
+        "Salmon Oil",
+        "Natural Flavor",
+        "Salt",
+        "Dried Chicory Root",
+        "Potassium Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols (added to preserve freshness)",
+        "Niacin",
+        "Zinc Proteinate",
+        "Zinc Sulfate",
+        "Ferrous Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "Copper Sulfate",
+        "d-Calcium Pantothenate",
+        "Copper Proteinate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Calcium Iodate",
+        "Folic Acid",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 13,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "EPA + DHA",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 800,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3505,
+        "kcal_per_unit": 417,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "maker page https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/ (img alt (second reading: pdf image, read by eye)); guaranteed analysis https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/, https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf; calories https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf",
+      "source_urls": [
+        "https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (24 Pound RGB Bag)",
+      "conflicts": [
+        "Calcium guarantee: the maker page text prints 'Not Less Than 1.30%', the sheet image prints 'Not More Than 1.30%'; recorded as min from the page text. Ingredient statement: page img alt and sheet agree word for word (second reading by eye)."
+      ],
+      "verification_notes": [
+        "check digit: 076344884569: 3×odd 28 ×3 + even 27 = 111 → check digit 9 ✓; GTIN-14 00076344884569 = UPC zero-padded",
+        "size binding: ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (24 Pound RGB Bag) — https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/ (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3505 kcal/kg and 417 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl)",
+        "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/ (maker page, read 2026-10-07, browser) via img alt (second reading: pdf image, read by eye), second reading https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl): agrees",
+        "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-large-breed-puppy-chicken-recipe/ (maker page, read 2026-10-07, browser); https://images.salsify.com/image/upload/s--_kGj14Ft--/w_500/usdjq164cumrwk0mtd7f.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); printed as: Crude Protein Not Less Than 34.0% Crude Fat Not Less Than 13.0% Crude Fiber Not More Than 5.00% Moisture Not More Than 10.0% Eicosapentaenoic acid (EPA) + Docosahexaenoic acid (DHA) Not Less Than 0.10% Calcium Not Less Than 1.30% Phosphorus Not Less Than 1.00% Zinc Not Less Than 100 mg/kg Vitamin A Not Less Than 25,000 IU/kg Vitamin E Not Less Than 400 IU/kg Biotin* Not Less Than 0.10 mg/kg Taurine* Not Less Than 0.20% Omega-6 Fatty Acids* Not Less Than 3.00% Omega-3 Fatty Acids* Not Less Than 1.50% Glucosamine* Not Less Than 1,200 mg/kg Chondroitin Sulfate* Not Less Than 800 mg/kg Total Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis)",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy sentence on the maker page or the sheet (the sheet's 'Scientifically Proven' paragraph mentions AAFCO-recognized feeding trials only in general). No PetSmart page found for this product. life_stage 'puppy' from the sheet heading 'for Puppies'.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: the two readings of the guaranteed analysis disagree on Calcium (page 'Not Less Than 1.30%', sheet 'Not More Than 1.30%'); the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884859",
+      "canonical_gtin14": "00076344884859",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Wholesome Grains Ocean Whitefish",
+      "variant": "Wholesome Grains Ocean Whitefish & Herring",
+      "recipe": [
+        "whitefish",
+        "herring"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "22 lb",
+      "ingredients_verbatim": "Whitefish, Herring Meal (source of Glucosamine and Chondroitin Sulfate), Oatmeal, Barley, Whitefish Meal, Canola Oil, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Dried Chicory Root, Choline Chloride, Potassium Chloride, Taurine, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Whitefish",
+        "Herring Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Oatmeal",
+        "Barley",
+        "Whitefish Meal",
+        "Canola Oil",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Choline Chloride",
+        "Potassium Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4.25,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.6,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 2.75,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 2.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 600,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3636,
+        "kcal_per_unit": 393,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "maker page https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/ (img alt (second reading: pdf image, read by eye)); guaranteed analysis https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/, https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf; calories https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf",
+      "source_urls": [
+        "https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (22 Pound RGB Bag)",
+      "conflicts": [],
+      "verification_notes": [
+        "check digit: 076344884859: 3×odd 27 ×3 + even 30 = 111 → check digit 9 ✓; GTIN-14 00076344884859 = UPC zero-padded",
+        "size binding: ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (22 Pound RGB Bag) — https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/ (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3636 kcal/kg and 393 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl)",
+        "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/ (maker page, read 2026-10-07, browser) via img alt (second reading: pdf image, read by eye), second reading https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl): agrees",
+        "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/ (maker page, read 2026-10-07, browser); https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); printed as: Crude Protein Not Less Than 34.0% Crude Fat Not Less Than 15.0% Crude Fiber Not More Than 4.25% Moisture Not More Than 10.0% Calcium Not Less Than 1.60% Phosphorus Not Less Than 1.20% Zinc Not Less Than 100mg/kg Vitamin A Not Less Than 25,000 IU/kg Vitamin E Not Less Than 400 IU/kg Biotin* Not Less Than 0.10 mg/kg Taurine* Not Less Than 0.20% Omega-6 Fatty Acids* Not Less Than 2.75% Omega-3 Fatty Acids* Not Less Than 2.25% Glucosamine* Not Less Than 600 mg/kg Chondroitin Sulfate* Not Less Than 200 mg/kg Total Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence found: not in the product page text, not on the Nutrient Profile sheet (which says only 'for Adult Dogs'); the pack back panel image (500 px) is not legible. Life stage 'adult' is from the sheet heading 'for Adult Dogs'.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884828",
+      "canonical_gtin14": "00076344884828",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Wholesome Grains Original Turkey Chicken",
+      "variant": "Wholesome Grains Original Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "24 lb",
+      "ingredients_verbatim": "Deboned Turkey, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Oatmeal, Turkey Meal, Barley, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Turkey Liver, Turkey Hearts, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Choline Chloride, Potassium Chloride, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Oatmeal",
+        "Turkey Meal",
+        "Barley",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Turkey Liver",
+        "Turkey Hearts",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Salmon Oil",
+        "Taurine",
+        "Choline Chloride",
+        "Potassium Chloride",
+        "Vitamin E Supplement",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Vitamin B3 (Niacin)",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Vitamin B1 (Thiamine Mononitrate)",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Vitamin B2 (Riboflavin)",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Vitamin C (Ascorbic Acid)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 35,
+        "crude_fat_min_percent": 16,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Thiamine (mg/kg)",
+            "basis": "min",
+            "value": 5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Riboflavin (mg/kg)",
+            "basis": "min",
+            "value": 7.5,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 4.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 1.25,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 100000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3742,
+        "kcal_per_unit": 427,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "maker page https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/ (img alt (second reading: pdf image, read by eye)); guaranteed analysis https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/, https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf; calories https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf, https://www.1800petmeds.com/dog/food/product/wellness-core-natural-wholesome-grains-original-recipe/prod63688.html",
+      "source_urls": [
+        "https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf",
+        "https://www.1800petmeds.com/dog/food/product/wellness-core-natural-wholesome-grains-original-recipe/prod63688.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (24 Pound RGB Bag)",
+      "conflicts": [
+        "Maker page img-alt ingredients (… Turkey Meal, Barley, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Turkey Liver, Turkey Hearts, Natural Flavor … Vitamin B3 (Niacin) … Vitamin B1 … Vitamin B2 … Vitamin C (Ascorbic Acid)) and guaranteed analysis (protein 35.0%, omega-3 1.25%, thiamine/riboflavin/niacin, 100,000,000 CFU/lb) differ from the maker's Nutrient Profile sheet (no Turkey Liver / Turkey Hearts, plain 'Niacin', protein 34.0%, omega-3 1.25% / omega-6 4.50%, 80,000,000 CFU/lb, no B-vitamin guarantees). 1800petmeds page text (2026-10-07) agrees with the maker page. The page + retailer look like the newer generation and the sheet like the older one, but no dated deck settles it; the calorie figures (3,742 kcal/kg, 427 kcal/cup) are on the sheet and the retailer page and may belong to either generation."
+      ],
+      "verification_notes": [
+        "check digit: 076344884828: 3×odd 24 ×3 + even 30 = 102 → check digit 8 ✓; GTIN-14 00076344884828 = UPC zero-padded",
+        "size binding: ps-sku on the maker's product page; the page's 'Available Sizes' lists one size (24 Pound RGB Bag) — https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/ (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3742 kcal/kg and 427 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); https://www.1800petmeds.com/dog/food/product/wellness-core-natural-wholesome-grains-original-recipe/prod63688.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/ (maker page, read 2026-10-07, browser) via img alt (second reading: pdf image, read by eye), second reading https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); https://www.1800petmeds.com/dog/food/product/wellness-core-natural-wholesome-grains-original-recipe/prod63688.html (retailer page, read 2026-10-07, browser): DISAGREES — see conflicts",
+        "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-original-turkey-chicken/ (maker page, read 2026-10-07, browser); https://images.salsify.com/image/upload/s--qB2rwq9N--/w_500/eiokyy0rd6cm4xrtxstu.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); printed as: Crude Protein Not Less Than 35.0% Crude Fat Not Less Than 16.0% Crude Fiber Not More Than 4.50% Moisture Not More Than 10.0% Calcium Not Less Than 1.50% Phosphorus Not Less Than 1.00% Zinc Not Less Than 100 mg/kg Vitamin A Not Less Than 25,000 IU/kg Vitamin E Not Less Than 400 IU/kg Thiamine Not Less Than 5.00 mg/kg Riboflavin Not Less Than 7.50 mg/kg Niacin Not Less Than 50.0 mg/kg Biotin* Not Less Than 0.10 mg/kg Taurine* Not Less Than 0.20% Omega-6 Fatty Acids* Not Less Than 4.50% Omega-3 Fatty Acids* Not Less Than 1.25% Glucosamine* Not Less Than 1,200 mg/kg Chondroitin Sulfate* Not Less Than 700 mg/kg Total Microorganisms* Not Less Than 100,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence found: not in the product page text, not on the Nutrient Profile sheet (which says only 'for Adult Dogs'); the pack back panel image (500 px) is not legible. Life stage 'adult' is from the sheet heading 'for Adult Dogs'.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: two maker sources print different formulas (page/1800petmeds vs Nutrient Profile sheet); AGENTS.md §10: a source conflict about the current formula needs a package image; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884088",
+      "canonical_gtin14": "00076344884088",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Original Turkey & Chicken",
+      "variant": "Grain Free Original Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Salmon Oil",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5171472, whose size selector reads 4 Lb; PetSmart gtin13 0076344884088; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+      "conflicts": [
+        "Ingredient statement: the PetSmart pages (4, 12, 24 lb; 35 lb with punctuation differences only) read '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat ...' with no yeast; the maker page img alt reads '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Dried Yeast, Dried Ground Potatoes, Peas, Chicken Fat ...'. Dried Yeast is on the maker alt text only and Lentils sits elsewhere. Guaranteed analysis and calories agree between PetSmart and the maker page. Cannot tell which generation is current (no date on either): the assembler files needs_physical_label for the grain-free Original."
+      ],
+      "verification_notes": [
+        "check digit: 076344884088: 3×odd 30 ×3 + even 22 = 112 → check digit 8 ✓; GTIN-14 00076344884088 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5171472, whose size selector reads 4 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser) via page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser): DISAGREES — see conflicts",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 4.50 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.50 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart gtin13 0076344884088; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: ingredient statement: PetSmart and the maker page img alt differ (Dried Yeast, Lentils position); which generation is current cannot be told; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884026",
+      "canonical_gtin14": "00076344884026",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Original Turkey & Chicken",
+      "variant": "Grain Free Original Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Salmon Oil",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5171500, whose size selector reads 12 Lb; PetSmart gtin13 0076344884026; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+      "conflicts": [
+        "Ingredient statement: the PetSmart pages (4, 12, 24 lb; 35 lb with punctuation differences only) read '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat ...' with no yeast; the maker page img alt reads '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Dried Yeast, Dried Ground Potatoes, Peas, Chicken Fat ...'. Dried Yeast is on the maker alt text only and Lentils sits elsewhere. Guaranteed analysis and calories agree between PetSmart and the maker page. Cannot tell which generation is current (no date on either): the assembler files needs_physical_label for the grain-free Original."
+      ],
+      "verification_notes": [
+        "check digit: 076344884026: 3×odd 24 ×3 + even 22 = 94 → check digit 6 ✓; GTIN-14 00076344884026 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5171500, whose size selector reads 12 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (read 2026-10-07, browser); corroboration: the maker's product page ps-sku is this same code (that page lists several sizes, so it binds none by itself) — https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser) via page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser): DISAGREES — see conflicts",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 4.50 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.50 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart gtin13 0076344884026; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: ingredient statement: PetSmart and the maker page img alt differ (Dried Yeast, Lentils position); which generation is current cannot be told; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884354",
+      "canonical_gtin14": "00076344884354",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Original Turkey & Chicken",
+      "variant": "Grain Free Original Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "24 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Salmon Oil",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5249049, whose size selector reads 24 Lb; PetSmart gtin13 0076344884354; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+      "conflicts": [
+        "Ingredient statement: the PetSmart pages (4, 12, 24 lb; 35 lb with punctuation differences only) read '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat ...' with no yeast; the maker page img alt reads '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Dried Yeast, Dried Ground Potatoes, Peas, Chicken Fat ...'. Dried Yeast is on the maker alt text only and Lentils sits elsewhere. Guaranteed analysis and calories agree between PetSmart and the maker page. Cannot tell which generation is current (no date on either): the assembler files needs_physical_label for the grain-free Original."
+      ],
+      "verification_notes": [
+        "check digit: 076344884354: 3×odd 27 ×3 + even 25 = 106 → check digit 4 ✓; GTIN-14 00076344884354 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5249049, whose size selector reads 24 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser) via page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser): DISAGREES — see conflicts",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 4.50 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.50 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart gtin13 0076344884354; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: ingredient statement: PetSmart and the maker page img alt differ (Dried Yeast, Lentils position); which generation is current cannot be told; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884453",
+      "canonical_gtin14": "00076344884453",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Original Turkey & Chicken",
+      "variant": "Grain Free Original Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "35 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Salmon Oil",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 4.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5376551, whose size selector reads 35 Lb; PetSmart gtin13 0076344884453; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+      "conflicts": [
+        "Ingredient statement: the PetSmart pages (4, 12, 24 lb; 35 lb with punctuation differences only) read '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat ...' with no yeast; the maker page img alt reads '... Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Dried Yeast, Dried Ground Potatoes, Peas, Chicken Fat ...'. Dried Yeast is on the maker alt text only and Lentils sits elsewhere. Guaranteed analysis and calories agree between PetSmart and the maker page. Cannot tell which generation is current (no date on either): the assembler files needs_physical_label for the grain-free Original."
+      ],
+      "verification_notes": [
+        "check digit: 076344884453: 3×odd 27 ×3 + even 26 = 107 → check digit 3 ✓; GTIN-14 00076344884453 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5376551, whose size selector reads 35 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser) via page text (PetSmart, 24 lb page; the 4 and 12 lb pages are identical; 35 lb differs only in punctuation), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser): DISAGREES — see conflicts",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5249049.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171472.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5171500.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-original-formula-5376551.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-original-turkey-chicken/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 4.50 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.50 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart gtin13 0076344884453; leading zero dropped to the 12-digit UPC-A, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: ingredient statement: PetSmart and the maker page img alt differ (Dried Yeast, Lentils position); which generation is current cannot be told; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884156",
+      "canonical_gtin14": "00076344884156",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Ocean Whitefish, Herring & Salmon",
+      "variant": "Grain Free Ocean Whitefish, Herring & Salmon",
+      "recipe": [
+        "whitefish",
+        "herring",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Whitefish, Herring Meal, Whitefish Meal (source of Glucosamine and Chondroitin Sulfate), Peas, Lentils, Canola Oil, Dried Ground Potatoes, Dried Plain Beet Pulp, Flaxseed, Salmon Meal, Pea Fiber, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Whitefish",
+        "Herring Meal",
+        "Whitefish Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Peas",
+        "Lentils",
+        "Canola Oil",
+        "Dried Ground Potatoes",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Salmon Meal",
+        "Pea Fiber",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 6,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 600,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3635,
+        "kcal_per_unit": 422,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (page text (PetSmart; second reading: maker page img alt, same words)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5171499, whose size selector reads 4 Lb; PetSmart names it 'Ocean Formula'; matched to the maker's Grain Free Ocean Whitefish, Herring & Salmon by brand, line, fish recipe and the 4 and 22 lb sizes. PetSmart gtin13 0076344884156; leading zero dropped, check digit validates.",
+      "conflicts": [],
+      "verification_notes": [
+        "check digit: 076344884156: 3×odd 27 ×3 + even 23 = 104 → check digit 6 ✓; GTIN-14 00076344884156 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5171499, whose size selector reads 4 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3635 kcal/kg and 422 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser) via page text (PetSmart; second reading: maker page img alt, same words), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/ (maker page, read 2026-10-07, browser): agrees",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0%, Crude Fat Not Less Than 14.0%, Crude Fiber Not More Than 6.00%, Moisture Not More Than 10.0%, Calcium Not Less Than 1.70%, Phosphorus Not Less Than 1.20%, Zinc Not Less Than 100 mg/kg, Vitamin A Not Less Than 25,000 IU/kg, Vitamin E Not Less Than 400 IU/kg, Biotin* Not Less Than 0.10 mg/kg, Taurine* Not Less Than 0.20%, Omega–6 Fatty Acids* Not Less Than 3.00%, Omega–3 Fatty Acids* Not Less Than 2.00%, Glucosamine* Not Less Than 600 mg/kg, Chondroitin Sulfate* Not Less Than 200 mg/kg, Total Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis). *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles. Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart names it 'Ocean Formula'; matched to the maker's Grain Free Ocean Whitefish, Herring & Salmon by brand, line, fish recipe and the 4 and 22 lb sizes. PetSmart gtin13 0076344884156; leading zero dropped, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884378",
+      "canonical_gtin14": "00076344884378",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Grain Free Ocean Whitefish, Herring & Salmon",
+      "variant": "Grain Free Ocean Whitefish, Herring & Salmon",
+      "recipe": [
+        "whitefish",
+        "herring",
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "22 lb",
+      "ingredients_verbatim": "Whitefish, Herring Meal, Whitefish Meal (source of Glucosamine and Chondroitin Sulfate), Peas, Lentils, Canola Oil, Dried Ground Potatoes, Dried Plain Beet Pulp, Flaxseed, Salmon Meal, Pea Fiber, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Whitefish",
+        "Herring Meal",
+        "Whitefish Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Peas",
+        "Lentils",
+        "Canola Oil",
+        "Dried Ground Potatoes",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Salmon Meal",
+        "Pea Fiber",
+        "Natural Flavor",
+        "Dried Chicory Root",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Choline Chloride",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 34,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 6,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.7,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1.2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 2,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 600,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3635,
+        "kcal_per_unit": 422,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (page text (PetSmart; second reading: maker page img alt, same words)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html, https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5249047, whose size selector reads 22 Lb; Same matching note as the 4 lb. PetSmart gtin13 0076344884378; leading zero dropped, check digit validates.",
+      "conflicts": [],
+      "verification_notes": [
+        "check digit: 076344884378: 3×odd 29 ×3 + even 25 = 112 → check digit 8 ✓; GTIN-14 00076344884378 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5249047, whose size selector reads 22 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3635 kcal/kg and 422 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser) via page text (PetSmart; second reading: maker page img alt, same words), second reading https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/ (maker page, read 2026-10-07, browser): agrees",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5249047.html (retailer page, read 2026-10-07, browser); https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-ocean-formula-5171499.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-ocean-whitefish-herring-salmon/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 34.0%, Crude Fat Not Less Than 14.0%, Crude Fiber Not More Than 6.00%, Moisture Not More Than 10.0%, Calcium Not Less Than 1.70%, Phosphorus Not Less Than 1.20%, Zinc Not Less Than 100 mg/kg, Vitamin A Not Less Than 25,000 IU/kg, Vitamin E Not Less Than 400 IU/kg, Biotin* Not Less Than 0.10 mg/kg, Taurine* Not Less Than 0.20%, Omega–6 Fatty Acids* Not Less Than 3.00%, Omega–3 Fatty Acids* Not Less Than 2.00%, Glucosamine* Not Less Than 600 mg/kg, Chondroitin Sulfate* Not Less Than 200 mg/kg, Total Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis). *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles. Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: Same matching note as the 4 lb. PetSmart gtin13 0076344884378; leading zero dropped, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+      ],
+      "research_status": "candidate"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884170",
+      "canonical_gtin14": "00076344884170",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Small Breed Grain Free Turkey & Chicken",
+      "variant": "Small Breed Grain Free Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Salmon Oil, Dried Chicory Root, Choline Chloride, Taurine, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Spearmint, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Salmon Oil",
+        "Dried Chicory Root",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Spearmint",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (page text (PetSmart item 5180168, 12 lb; second reading: maker page img alt, same words)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html, https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180168.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5180158, whose size selector reads 4 (lb); PetSmart calls it Small Breed Original Formula; the equal code on the maker's Small Breed Turkey & Chicken Recipe page ties the two. PetSmart gtin13 0076344884170; leading zero dropped, check digit validates.",
+      "conflicts": [
+        "PetSmart's page at ...-5180158.html shows 'Item Number: 5180168' and 'Weight: 12 Pound': it carries the label data for the 12 lb pack only. The 4 lb pack's own label was not found on any page; the 4 lb record rests on the maker page listing one recipe in 4 and 12 lb. The ...-5180168.html URL returned a stripped page (marketing text, 'Weight: 12 lb', no statements).",
+        "Binding: barcode.json binds 076344884170 to 4 lb via the size selector on https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html; formula.json read that page as Item Number 5180168, Weight 12 Pound. The maker page's ps-sku is the same code but lists 4 and 12 lb."
+      ],
+      "verification_notes": [
+        "check digit: 076344884170: 3×odd 29 ×3 + even 23 = 110 → check digit 0 ✓; GTIN-14 00076344884170 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5180158, whose size selector reads 4 (lb) — https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (read 2026-10-07, browser); corroboration: the maker's product page ps-sku is this same code (that page lists 4 and 12 lb, so it binds none by itself) — https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser) via page text (PetSmart item 5180168, 12 lb; second reading: maker page img alt, same words), second reading https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/ (maker page, read 2026-10-07, browser): agrees",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 36.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 5.00 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.00 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: PetSmart calls it Small Breed Original Formula; the equal code on the maker's Small Breed Turkey & Chicken Recipe page ties the two. PetSmart gtin13 0076344884170; leading zero dropped, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status needs_physical_label: the size binding is contested: barcode.json reads the PetSmart page …-5180158.html's size selector as 4 lb, formula.json reads the same page as 'Item Number: 5180168', 'Weight: 12 Pound'; and no page carries the 4 lb pack's own label; the adequacy statement is also missing"
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "076344884217",
+      "canonical_gtin14": "00076344884217",
+      "barcode_scope": "individual_unit",
+      "brand": "Wellness",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "CORE",
+      "product_name": "CORE Small Breed Grain Free Turkey & Chicken",
+      "variant": "Small Breed Grain Free Turkey & Chicken",
+      "recipe": [
+        "turkey",
+        "chicken"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "12 lb",
+      "ingredients_verbatim": "Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Salmon Oil, Dried Chicory Root, Choline Chloride, Taurine, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Spearmint, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.",
+      "ingredients_ordered_normalized": [
+        "Deboned Turkey",
+        "Turkey Meal",
+        "Chicken Meal (source of Glucosamine and Chondroitin Sulfate)",
+        "Dried Ground Potatoes",
+        "Lentils",
+        "Peas",
+        "Chicken Fat",
+        "Dried Plain Beet Pulp",
+        "Flaxseed",
+        "Natural Flavor",
+        "Salmon Oil",
+        "Dried Chicory Root",
+        "Choline Chloride",
+        "Taurine",
+        "Vitamin E Supplement",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Parsley",
+        "Apples",
+        "Blueberries",
+        "Kale",
+        "Spearmint",
+        "Mixed Tocopherols added to preserve freshness",
+        "Niacin",
+        "Zinc Proteinate",
+        "Ferrous Sulfate",
+        "Zinc Sulfate",
+        "Iron Proteinate",
+        "Vitamin A Supplement",
+        "Thiamine Mononitrate",
+        "d-Calcium Pantothenate",
+        "Sodium Selenite",
+        "Pyridoxine Hydrochloride",
+        "Copper Sulfate",
+        "Manganese Sulfate",
+        "Riboflavin",
+        "Manganese Proteinate",
+        "Copper Proteinate",
+        "Biotin",
+        "Vitamin D3 Supplement",
+        "Yucca Schidigera Extract",
+        "Vitamin B12 Supplement",
+        "Folic Acid",
+        "Calcium Iodate",
+        "Ascorbic Acid (Vitamin C)",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Bacillus licheniformis Fermentation Product",
+        "Dried Bacillus subtilis Fermentation Product",
+        "Rosemary Extract",
+        "Green Tea Extract",
+        "Spearmint Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 36,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.2,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Calcium",
+            "basis": "min",
+            "value": 1.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Phosphorus",
+            "basis": "min",
+            "value": 1,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Zinc (mg/kg)",
+            "basis": "min",
+            "value": 100,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 25000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 400,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Biotin (mg/kg)",
+            "basis": "min",
+            "value": 0.1,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Omega-6 Fatty Acids",
+            "basis": "min",
+            "value": 3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega-3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Glucosamine (mg/kg)",
+            "basis": "min",
+            "value": 1200,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Chondroitin Sulfate (mg/kg)",
+            "basis": "min",
+            "value": 700,
+            "unit": "other"
+          },
+          {
+            "nutrient": "Total Microorganisms (CFU/lb)",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3682,
+        "kcal_per_unit": 409,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "retailer page https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (page text (PetSmart item 5180168, 12 lb; second reading: maker page img alt, same words)); guaranteed analysis https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html, https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/; calories https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html",
+      "source_urls": [
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html",
+        "https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180168.html",
+        "https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; JSON-LD gtin13 on the PetSmart page for Item # 5180168, whose size selector reads 12 Lb; Same matching note as the 4 lb. PetSmart gtin13 0076344884217; leading zero dropped, check digit validates.",
+      "conflicts": [
+        "PetSmart's page at ...-5180158.html shows 'Item Number: 5180168' and 'Weight: 12 Pound': it carries the label data for the 12 lb pack only. The 4 lb pack's own label was not found on any page; the 4 lb record rests on the maker page listing one recipe in 4 and 12 lb. The ...-5180168.html URL returned a stripped page (marketing text, 'Weight: 12 lb', no statements)."
+      ],
+      "verification_notes": [
+        "check digit: 076344884217: 3×odd 23 ×3 + even 24 = 93 → check digit 7 ✓; GTIN-14 00076344884217 = UPC zero-padded",
+        "size binding: JSON-LD gtin13 on the PetSmart page for Item # 5180168, whose size selector reads 12 Lb — https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180168.html (read 2026-10-07, browser)",
+        "calorie cross-check: the label prints 3682 kcal/kg and 409 kcal/cup; no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a printed unit figure. Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser)",
+        "ingredients copied word for word from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser) via page text (PetSmart item 5180168, 12 lb; second reading: maker page img alt, same words), second reading https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/ (maker page, read 2026-10-07, browser): agrees",
+        "guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-small-breed-adult-dry-dog-food---natural-grain-free-original-formula-5180158.html (retailer page, read 2026-10-07, browser); https://www.wellnesspetfood.com/product-catalog/wellness-core-grain-free-small-breed-turkey-recipe/ (maker page, read 2026-10-07, browser); printed as: Crude Protein Not Less Than 36.0 %Crude Fat Not Less Than 15.0 %Crude Fiber Not More Than 5.00 %Moisture Not More Than 10.0 %Calcium Not Less Than 1.50 %Phosphorus Not Less Than 1.00 %Zinc Not Less Than 100 mg/kgVitamin A Not Less Than 25,000 IU/kgVitamin E Not Less Than 400 IU/kgBiotin* Not Less Than 0.10 mg/kgTaurine* Not Less Than 0.20 %Omega–6 Fatty Acids* Not Less Than 3.00 %Omega–3 Fatty Acids* Not Less Than 0.50 %Glucosamine* Not Less Than 1,200 mg/kgChondroitin Sulfate* Not Less Than 700 mg/kgTotal Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
+        "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
+        "barcode notes: Same matching note as the 4 lb. PetSmart gtin13 0076344884217; leading zero dropped, check digit validates.",
+        "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+      ],
+      "research_status": "candidate"
+    }
+  ]
+}
