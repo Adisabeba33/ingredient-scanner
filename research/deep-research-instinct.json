@@ -1,0 +1,1041 @@
+{
+  "schema_version": 2,
+  "purpose": "Staging ledger for source-verified pet-food barcode research before catalog promotion.",
+  "repository": "Adisabeba33/ingredient-scanner",
+  "brand_scope": [
+    "Instinct"
+  ],
+  "created_at": "2026-10-07",
+  "updated_at": "2026-10-07",
+  "rules_source": "research/AGENTS.md",
+  "records": [
+    {
+      "catalog_number": null,
+      "upc": "769949652823",
+      "canonical_gtin14": "00769949652823",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Chicken & Brown Rice Recipe",
+      "variant": "Chicken & Brown Rice",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "25 lb.",
+      "ingredients_verbatim": "Chicken, Chicken Meal, Barley, Sorghum, Oatmeal, Brown Rice, Chicken Fat (preseved with Mixed Tocopherols), Turkey Meal, Ground Flaxseed, Fish Meal, Natural Flavor, Salt, Carrots, Potassium Chloride, Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Apples, Blueberries, Cranberries, Choline Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide), L-Threonine, Dried Yeast, Freeze-Dried Pollock, Taurine, Yeast Culture, Pumpkin Seeds, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Meal",
+        "Barley",
+        "Sorghum",
+        "Oatmeal",
+        "Brown Rice",
+        "Chicken Fat (preseved with Mixed Tocopherols)",
+        "Turkey Meal",
+        "Ground Flaxseed",
+        "Fish Meal",
+        "Natural Flavor",
+        "Salt",
+        "Carrots",
+        "Potassium Chloride",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Choline Chloride",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide)",
+        "L-Threonine",
+        "Dried Yeast",
+        "Freeze-Dried Pollock",
+        "Taurine",
+        "Yeast Culture",
+        "Pumpkin Seeds",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 9000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (Lactobacillus acidophilus & Enterococcus faecium)",
+            "basis": "min",
+            "value": 60000000,
+            "unit": "other",
+            "unit_text": "CFU/lb"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-chicken (page text: ingredients, guaranteed analysis, sizes)",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-chicken",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---chicken-and-brown-rice-5279982.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949652823 on PetSmart sku 5279982; the page's variantToSkuMap ties sku 5279982 to size 25 Lb; single-unit bag page",
+      "conflicts": [
+        "PetSmart page (https://www.petsmart.com/5363533.html) prints a different ingredient list and analysis from the maker current page — an older formula generation; maker page controls (AGENTS.md §6). Retailer calories (3763 kcal/kg, 428 kcal/cup) belong to that older formula and are not used.",
+        "Status needs_physical_label: the only second reading (retailer) prints a different formula generation from the maker page, and the barcode is bound on that retailer page — a package photo must settle which formula this UPC carries; calories and adequacy statement not captured.",
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949652823: 3×(7+9+4+6+2+2) + (6+9+9+5+8) = 127 → check digit 3 = last digit 3 ✓; GTIN-14 00769949652823 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949652823 on PetSmart sku 5279982; the page's variantToSkuMap ties sku 5279982 to size 25 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---chicken-and-brown-rice-5279982.html, read 2026-10-07, browser). Joined to the maker's printed size \"25 lb.\" (barcode file \"25 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-chicken (page text, curl, read 2026-10-07); no second reading that agrees (see conflicts).",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calorie statement and adequacy statement: not printed on the maker page and not found on a source of the same formula generation — left null, not guessed.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949652823 (leading zero); the 12-digit UPC 769949652823 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949652809",
+      "canonical_gtin14": "00769949652809",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Chicken & Brown Rice Recipe",
+      "variant": "Chicken & Brown Rice",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4.5 lb.",
+      "ingredients_verbatim": "Chicken, Chicken Meal, Barley, Sorghum, Oatmeal, Brown Rice, Chicken Fat (preseved with Mixed Tocopherols), Turkey Meal, Ground Flaxseed, Fish Meal, Natural Flavor, Salt, Carrots, Potassium Chloride, Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Apples, Blueberries, Cranberries, Choline Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide), L-Threonine, Dried Yeast, Freeze-Dried Pollock, Taurine, Yeast Culture, Pumpkin Seeds, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Meal",
+        "Barley",
+        "Sorghum",
+        "Oatmeal",
+        "Brown Rice",
+        "Chicken Fat (preseved with Mixed Tocopherols)",
+        "Turkey Meal",
+        "Ground Flaxseed",
+        "Fish Meal",
+        "Natural Flavor",
+        "Salt",
+        "Carrots",
+        "Potassium Chloride",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Choline Chloride",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide)",
+        "L-Threonine",
+        "Dried Yeast",
+        "Freeze-Dried Pollock",
+        "Taurine",
+        "Yeast Culture",
+        "Pumpkin Seeds",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 14,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin A",
+            "basis": "min",
+            "value": 9000,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Total Microorganisms (Lactobacillus acidophilus & Enterococcus faecium)",
+            "basis": "min",
+            "value": 60000000,
+            "unit": "other",
+            "unit_text": "CFU/lb"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-chicken (page text: ingredients, guaranteed analysis, sizes)",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-chicken",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---chicken-and-brown-rice-5279982.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949652809 on PetSmart sku 5363533; the page's variantToSkuMap ties sku 5363533 to size 4.5 Lb; single-unit bag page",
+      "conflicts": [
+        "PetSmart page (https://www.petsmart.com/5363533.html) prints a different ingredient list and analysis from the maker current page — an older formula generation; maker page controls (AGENTS.md §6). Retailer calories (3763 kcal/kg, 428 kcal/cup) belong to that older formula and are not used.",
+        "Status needs_physical_label: the only second reading (retailer) prints a different formula generation from the maker page, and the barcode is bound on that retailer page — a package photo must settle which formula this UPC carries; calories and adequacy statement not captured.",
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949652809: 3×(7+9+4+6+2+0) + (6+9+9+5+8) = 121 → check digit 9 = last digit 9 ✓; GTIN-14 00769949652809 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949652809 on PetSmart sku 5363533; the page's variantToSkuMap ties sku 5363533 to size 4.5 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---chicken-and-brown-rice-5279982.html, read 2026-10-07, browser). Joined to the maker's printed size \"4.5 lb.\" (barcode file \"4.5 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-chicken (page text, curl, read 2026-10-07); no second reading that agrees (see conflicts).",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calorie statement and adequacy statement: not printed on the maker page and not found on a source of the same formula generation — left null, not guessed.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949652809 (leading zero); the 12-digit UPC 769949652809 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949652731",
+      "canonical_gtin14": "00769949652731",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Salmon & Brown Rice Recipe",
+      "variant": "Salmon & Brown Rice",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "24 lb.",
+      "ingredients_verbatim": "Salmon, Chicken Meal, Oatmeal, Barley, Brown Rice, Chicken Fat (preserved with Mixed Tocopherols), Fish Meal, Sorghum, Salmon Oil (preserved with Mixed Tocopherols), Natural Flavor, Carrots, Salt, Potassium Chloride, Dried Yeast, Apples, Blueberries, Cranberries, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Choline Chloride, Freeze-Dried Pollock, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Pumpkin Seeds, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Salmon",
+        "Chicken Meal",
+        "Oatmeal",
+        "Barley",
+        "Brown Rice",
+        "Chicken Fat (preserved with Mixed Tocopherols)",
+        "Fish Meal",
+        "Sorghum",
+        "Salmon Oil (preserved with Mixed Tocopherols)",
+        "Natural Flavor",
+        "Carrots",
+        "Salt",
+        "Potassium Chloride",
+        "Dried Yeast",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide)",
+        "Choline Chloride",
+        "Freeze-Dried Pollock",
+        "Yeast Culture",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Pumpkin Seeds",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.3,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3595,
+        "kcal_per_unit": 396,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-salmon (page text: ingredients, guaranteed analysis, sizes); calories and adequacy statement from retailer page https://www.petsmart.com/5363581.html",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-salmon",
+        "https://www.petsmart.com/5363581.html",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural-all-life-stages-dry-dog-food---salmon-and-brown-rice-88034.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949652731 on PetSmart sku 5363581; the page's variantToSkuMap ties sku 5363581 to size 24 Lb; single-unit bag page",
+      "conflicts": [
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949652731: 3×(7+9+4+6+2+3) + (6+9+9+5+7) = 129 → check digit 1 = last digit 1 ✓; GTIN-14 00769949652731 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949652731 on PetSmart sku 5363581; the page's variantToSkuMap ties sku 5363581 to size 24 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural-all-life-stages-dry-dog-food---salmon-and-brown-rice-88034.html, read 2026-10-07, browser). Joined to the maker's printed size \"24 lb.\" (barcode file \"24 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-salmon (page text, curl, read 2026-10-07); second reading https://www.petsmart.com/5363581.html (browser, read 2026-10-07): agrees.",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calories 3595 kcal/kg, 396 kcal/cup and the adequacy statement from https://www.petsmart.com/5363581.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 110 g (plausible for kibble).",
+        "Adequacy statement as printed (copied word for word; §9 has no field for it): Complete and Balanced Statement: Instinct Be Natural Real Salmon & Brown Rice is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949652731 (leading zero); the 12-digit UPC 769949652731 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949653134",
+      "canonical_gtin14": "00769949653134",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Salmon & Brown Rice Recipe",
+      "variant": "Salmon & Brown Rice",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4.5 lb.",
+      "ingredients_verbatim": "Salmon, Chicken Meal, Oatmeal, Barley, Brown Rice, Chicken Fat (preserved with Mixed Tocopherols), Fish Meal, Sorghum, Salmon Oil (preserved with Mixed Tocopherols), Natural Flavor, Carrots, Salt, Potassium Chloride, Dried Yeast, Apples, Blueberries, Cranberries, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Choline Chloride, Freeze-Dried Pollock, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Pumpkin Seeds, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Salmon",
+        "Chicken Meal",
+        "Oatmeal",
+        "Barley",
+        "Brown Rice",
+        "Chicken Fat (preserved with Mixed Tocopherols)",
+        "Fish Meal",
+        "Sorghum",
+        "Salmon Oil (preserved with Mixed Tocopherols)",
+        "Natural Flavor",
+        "Carrots",
+        "Salt",
+        "Potassium Chloride",
+        "Dried Yeast",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide)",
+        "Choline Chloride",
+        "Freeze-Dried Pollock",
+        "Yeast Culture",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Pumpkin Seeds",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 25,
+        "crude_fat_min_percent": 15,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.4,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.3,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 3595,
+        "kcal_per_unit": 396,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-salmon (page text: ingredients, guaranteed analysis, sizes); calories and adequacy statement from retailer page https://www.petsmart.com/5363581.html",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-salmon",
+        "https://www.petsmart.com/5363581.html",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural-all-life-stages-dry-dog-food---salmon-and-brown-rice-88034.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949653134 on PetSmart sku 5363530; the page's variantToSkuMap ties sku 5363530 to size 4.5 Lb; single-unit bag page",
+      "conflicts": [
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949653134: 3×(7+9+4+6+3+3) + (6+9+9+5+1) = 126 → check digit 4 = last digit 4 ✓; GTIN-14 00769949653134 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949653134 on PetSmart sku 5363530; the page's variantToSkuMap ties sku 5363530 to size 4.5 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural-all-life-stages-dry-dog-food---salmon-and-brown-rice-88034.html, read 2026-10-07, browser). Joined to the maker's printed size \"4.5 lb.\" (barcode file \"4.5 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-salmon (page text, curl, read 2026-10-07); second reading https://www.petsmart.com/5363581.html (browser, read 2026-10-07): agrees.",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calories 3595 kcal/kg, 396 kcal/cup and the adequacy statement from https://www.petsmart.com/5363581.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 110 g (plausible for kibble).",
+        "Adequacy statement as printed (copied word for word; §9 has no field for it): Complete and Balanced Statement: Instinct Be Natural Real Salmon & Brown Rice is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949653134 (leading zero); the 12-digit UPC 769949653134 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949652885",
+      "canonical_gtin14": "00769949652885",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Lamb & Oatmeal Recipe",
+      "variant": "Lamb & Oatmeal",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "24 lb.",
+      "ingredients_verbatim": "Lamb, Chicken Meal, Oatmeal, Barley, Sorghum, Brown Rice, Turkey Meal, Chicken Fat (preserved with Mixed Tocopherols), Millet, Fish Meal, Ground Flaxseed, Natural Flavor, Salt, Carrots, Montmorillonite Clay, Potassium Chloride, Apples, Blueberries, Cranberries,  Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Choline Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide), L-Threonine, Dried Yeast, DL-Methionine, Freeze-Dried Pollock, Taurine, Pumpkin Seeds, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Chicken Meal",
+        "Oatmeal",
+        "Barley",
+        "Sorghum",
+        "Brown Rice",
+        "Turkey Meal",
+        "Chicken Fat (preserved with Mixed Tocopherols)",
+        "Millet",
+        "Fish Meal",
+        "Ground Flaxseed",
+        "Natural Flavor",
+        "Salt",
+        "Carrots",
+        "Montmorillonite Clay",
+        "Potassium Chloride",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Choline Chloride",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide)",
+        "L-Threonine",
+        "Dried Yeast",
+        "DL-Methionine",
+        "Freeze-Dried Pollock",
+        "Taurine",
+        "Pumpkin Seeds",
+        "Yeast Culture",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26,
+        "crude_fat_min_percent": 15.5,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.4,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-lamb (page text: ingredients, guaranteed analysis, sizes)",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-lamb",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---lamb-and-oatmeal-49204.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949652885 on PetSmart sku 5279997; the page's variantToSkuMap ties sku 5279997 to size 24 Lb; single-unit bag page",
+      "conflicts": [
+        "PetSmart page (https://www.petsmart.com/5279997.html) prints a different ingredient list and analysis from the maker current page — an older formula generation; maker page controls (AGENTS.md §6). Retailer calories (3675 kcal/kg, 418 kcal/cup) belong to that older formula and are not used.",
+        "Status needs_physical_label: the only second reading (retailer) prints a different formula generation from the maker page, and the barcode is bound on that retailer page — a package photo must settle which formula this UPC carries; calories and adequacy statement not captured.",
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949652885: 3×(7+9+4+6+2+8) + (6+9+9+5+8) = 145 → check digit 5 = last digit 5 ✓; GTIN-14 00769949652885 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949652885 on PetSmart sku 5279997; the page's variantToSkuMap ties sku 5279997 to size 24 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---lamb-and-oatmeal-49204.html, read 2026-10-07, browser). Joined to the maker's printed size \"24 lb.\" (barcode file \"24 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-lamb (page text, curl, read 2026-10-07); no second reading that agrees (see conflicts).",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calorie statement and adequacy statement: not printed on the maker page and not found on a source of the same formula generation — left null, not guessed.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949652885 (leading zero); the 12-digit UPC 769949652885 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949652861",
+      "canonical_gtin14": "00769949652861",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Be Natural",
+      "product_name": "BeNatural Kibble Real Lamb & Oatmeal Recipe",
+      "variant": "Lamb & Oatmeal",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "4.5 lb.",
+      "ingredients_verbatim": "Lamb, Chicken Meal, Oatmeal, Barley, Sorghum, Brown Rice, Turkey Meal, Chicken Fat (preserved with Mixed Tocopherols), Millet, Fish Meal, Ground Flaxseed, Natural Flavor, Salt, Carrots, Montmorillonite Clay, Potassium Chloride, Apples, Blueberries, Cranberries,  Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Choline Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide), L-Threonine, Dried Yeast, DL-Methionine, Freeze-Dried Pollock, Taurine, Pumpkin Seeds, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Lamb",
+        "Chicken Meal",
+        "Oatmeal",
+        "Barley",
+        "Sorghum",
+        "Brown Rice",
+        "Turkey Meal",
+        "Chicken Fat (preserved with Mixed Tocopherols)",
+        "Millet",
+        "Fish Meal",
+        "Ground Flaxseed",
+        "Natural Flavor",
+        "Salt",
+        "Carrots",
+        "Montmorillonite Clay",
+        "Potassium Chloride",
+        "Apples",
+        "Blueberries",
+        "Cranberries",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Choline Chloride",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide)",
+        "L-Threonine",
+        "Dried Yeast",
+        "DL-Methionine",
+        "Freeze-Dried Pollock",
+        "Taurine",
+        "Pumpkin Seeds",
+        "Yeast Culture",
+        "Dried Lactobacillus acidophilus Fermentation Product",
+        "Dried Enterococcus faecium Fermentation Product",
+        "Dried Aspergillus oryzae Fermentation Extract",
+        "Dried Trichoderma longibrachiatum Fermentation Extract",
+        "Dried Bacillus subtilis Fermentation Extract",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 26,
+        "crude_fat_min_percent": 15.5,
+        "crude_fiber_max_percent": 5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.5,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.4,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": null,
+        "kcal_per_unit": null,
+        "unit_name": null
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/benatural-kibble-lamb (page text: ingredients, guaranteed analysis, sizes)",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/benatural-kibble-lamb",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---lamb-and-oatmeal-49204.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949652861 on PetSmart sku 5363532; the page's variantToSkuMap ties sku 5363532 to size 4.5 Lb; single-unit bag page",
+      "conflicts": [
+        "PetSmart page (https://www.petsmart.com/5279997.html) prints a different ingredient list and analysis from the maker current page — an older formula generation; maker page controls (AGENTS.md §6). Retailer calories (3675 kcal/kg, 418 kcal/cup) belong to that older formula and are not used.",
+        "Status needs_physical_label: the only second reading (retailer) prints a different formula generation from the maker page, and the barcode is bound on that retailer page — a package photo must settle which formula this UPC carries; calories and adequacy statement not captured.",
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949652861: 3×(7+9+4+6+2+6) + (6+9+9+5+8) = 139 → check digit 1 = last digit 1 ✓; GTIN-14 00769949652861 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949652861 on PetSmart sku 5363532; the page's variantToSkuMap ties sku 5363532 to size 4.5 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-be-natural--all-life-stages-dry-dog-food---lamb-and-oatmeal-49204.html, read 2026-10-07, browser). Joined to the maker's printed size \"4.5 lb.\" (barcode file \"4.5 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/benatural-kibble-lamb (page text, curl, read 2026-10-07); no second reading that agrees (see conflicts).",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calorie statement and adequacy statement: not printed on the maker page and not found on a source of the same formula generation — left null, not guessed.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949652861 (leading zero); the 12-digit UPC 769949652861 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "needs_physical_label"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949657255",
+      "canonical_gtin14": "00769949657255",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Original",
+      "product_name": "Original Kibble Real Chicken Recipe",
+      "variant": "Chicken",
+      "recipe": [
+        "chicken"
+      ],
+      "life_stage": "all",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "22.5 lb.",
+      "ingredients_verbatim": "Chicken, Chicken Meal, Peas, Chicken Fat (preserved with Mixed Tocopherols and Citric Acid), Tapioca, Herring Meal, Menhaden Fish Meal, Natural Flavor, Dried Tomato Pomace, Salt, Vitamins (Vitamin E Supplement, Vitamin A Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Carrots, Apples, Cranberries, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Potassium Chloride, Montmorillonite Clay, Taurine, Choline Chloride, Freeze Dried Chicken, Freeze Dried Chicken Liver, Pumpkinseeds, Freeze Dried Chicken Heart, Dried Bacillus coagulans Fermentation Product, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Chicken",
+        "Chicken Meal",
+        "Peas",
+        "Chicken Fat (preserved with Mixed Tocopherols and Citric Acid)",
+        "Tapioca",
+        "Herring Meal",
+        "Menhaden Fish Meal",
+        "Natural Flavor",
+        "Dried Tomato Pomace",
+        "Salt",
+        "Vitamins (Vitamin E Supplement, Vitamin A Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Carrots",
+        "Apples",
+        "Cranberries",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide)",
+        "Potassium Chloride",
+        "Montmorillonite Clay",
+        "Taurine",
+        "Choline Chloride",
+        "Freeze Dried Chicken",
+        "Freeze Dried Chicken Liver",
+        "Pumpkinseeds",
+        "Freeze Dried Chicken Heart",
+        "Dried Bacillus coagulans Fermentation Product",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 37,
+        "crude_fat_min_percent": 20,
+        "crude_fiber_max_percent": 2.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": 0.1,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 85,
+            "unit": "other",
+            "unit_text": "mg/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Bacillus coagulans",
+            "basis": "min",
+            "value": 80000000,
+            "unit": "other",
+            "unit_text": "CFU/lb"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4430,
+        "kcal_per_unit": 520,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/original-kibble-for-dogs-chicken (page text: ingredients, guaranteed analysis, sizes); calories and adequacy statement from retailer page https://www.petsmart.com/5248197.html",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/original-kibble-for-dogs-chicken",
+        "https://www.petsmart.com/5248197.html",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-original-all-life-stages-dry-dog-food---grain-free-chicken-21612.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949657255 on PetSmart sku 5248197; the page's variantToSkuMap ties sku 5248197 to size 22.5 Lb; single-unit bag page",
+      "conflicts": [
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949657255: 3×(7+9+4+6+7+5) + (6+9+9+5+2) = 145 → check digit 5 = last digit 5 ✓; GTIN-14 00769949657255 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949657255 on PetSmart sku 5248197; the page's variantToSkuMap ties sku 5248197 to size 22.5 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-original-all-life-stages-dry-dog-food---grain-free-chicken-21612.html, read 2026-10-07, browser). Joined to the maker's printed size \"22.5 lb.\" (barcode file \"22.5 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/original-kibble-for-dogs-chicken (page text, curl, read 2026-10-07); second reading https://www.petsmart.com/5248197.html (browser, read 2026-10-07): agrees.",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calories 4430 kcal/kg, 520 kcal/cup and the adequacy statement from https://www.petsmart.com/5248197.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 117 g (plausible for kibble).",
+        "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Original Grain-Free Recipe with Real Chicken is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949657255 (leading zero); the 12-digit UPC 769949657255 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949658450",
+      "canonical_gtin14": "00769949658450",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Limited Ingredient Diet",
+      "product_name": "Limited Ingredient Diet Kibble Real Lamb Recipe",
+      "variant": "Lamb",
+      "recipe": [
+        "lamb"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "20 lb.",
+      "ingredients_verbatim": "Lamb Meal, Lamb, Tapioca, Peas, Canola Oil (preserved with Mixed Tocopherols and Citric Acid), Pea Protein, Montmorillonite Clay, Natural Flavor, Salt, Potassium Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), DL-Methionine, Coconut Oil, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Choline Chloride, Freeze Dried Lamb, Pumpkinseeds, Freeze Dried Lamb Liver, Freeze Dried Lamb Spleen, Freeze Dried Lamb Heart, Freeze Dried Lamb Kidney, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Lamb Meal",
+        "Lamb",
+        "Tapioca",
+        "Peas",
+        "Canola Oil (preserved with Mixed Tocopherols and Citric Acid)",
+        "Pea Protein",
+        "Montmorillonite Clay",
+        "Natural Flavor",
+        "Salt",
+        "Potassium Chloride",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide)",
+        "DL-Methionine",
+        "Coconut Oil",
+        "Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Choline Chloride",
+        "Freeze Dried Lamb",
+        "Pumpkinseeds",
+        "Freeze Dried Lamb Liver",
+        "Freeze Dried Lamb Spleen",
+        "Freeze Dried Lamb Heart",
+        "Freeze Dried Lamb Kidney",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 24,
+        "crude_fat_min_percent": 21.5,
+        "crude_fiber_max_percent": 3.5,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 85,
+            "unit": "other",
+            "unit_text": "mg/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 0.8,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.1,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4315,
+        "kcal_per_unit": 495,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-lamb (page text: ingredients, guaranteed analysis, sizes); calories and adequacy statement from retailer page https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-5266163.html",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-lamb",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-5266163.html",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-43576.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949658450 on PetSmart sku 5266163; the page's variantToSkuMap ties sku 5266163 to size 20 Lb; single-unit bag page",
+      "conflicts": [
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949658450: 3×(7+9+4+6+8+5) + (6+9+9+5+4) = 150 → check digit 0 = last digit 0 ✓; GTIN-14 00769949658450 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949658450 on PetSmart sku 5266163; the page's variantToSkuMap ties sku 5266163 to size 20 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-43576.html, read 2026-10-07, browser). Joined to the maker's printed size \"20 lb.\" (barcode file \"20 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-lamb (page text, curl, read 2026-10-07); second reading https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-5266163.html (browser, read 2026-10-07): agrees.",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calories 4315 kcal/kg, 495 kcal/cup and the adequacy statement from https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-5266163.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 115 g (plausible for kibble).",
+        "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Limited Ingredient Diet Grain-Free Recipe with Real Lamb is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949658450 (leading zero); the 12-digit UPC 769949658450 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "source_verified"
+    },
+    {
+      "catalog_number": null,
+      "upc": "769949658801",
+      "canonical_gtin14": "00769949658801",
+      "barcode_scope": "individual_unit",
+      "brand": "Instinct",
+      "manufacturer": null,
+      "species": "dog",
+      "product_line": "Limited Ingredient Diet",
+      "product_name": "Limited Ingredient Diet Kibble Real Salmon Recipe",
+      "variant": "Salmon",
+      "recipe": [
+        "salmon"
+      ],
+      "life_stage": "adult",
+      "food_form": "dry",
+      "texture": "kibble",
+      "presentation": "plain",
+      "package_type": "bag",
+      "size": "20 lb.",
+      "ingredients_verbatim": "Salmon Meal, Salmon, Peas, Tapioca, Canola Oil (preserved with Mixed Tocopherols and Citric Acid), Montmorillonite Clay, Natural Flavor, Potassium Chloride, Salt, Choline Chloride, Coconut Oil, Vitamins (L-Ascorbyl-2-Polyphosphate, Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Freeze Dried Cod, Rosemary Extract.",
+      "ingredients_ordered_normalized": [
+        "Salmon Meal",
+        "Salmon",
+        "Peas",
+        "Tapioca",
+        "Canola Oil (preserved with Mixed Tocopherols and Citric Acid)",
+        "Montmorillonite Clay",
+        "Natural Flavor",
+        "Potassium Chloride",
+        "Salt",
+        "Choline Chloride",
+        "Coconut Oil",
+        "Vitamins (L-Ascorbyl-2-Polyphosphate, Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin)",
+        "Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide)",
+        "Freeze Dried Cod",
+        "Rosemary Extract"
+      ],
+      "guaranteed_analysis": {
+        "crude_protein_min_percent": 28,
+        "crude_fat_min_percent": 18,
+        "crude_fiber_max_percent": 3,
+        "moisture_max_percent": 10,
+        "ash_max_percent": null,
+        "taurine_min_percent": null,
+        "other_printed_guarantees": [
+          {
+            "nutrient": "Vitamin E",
+            "basis": "min",
+            "value": 100,
+            "unit": "IU/kg"
+          },
+          {
+            "nutrient": "Ascorbic Acid (Vitamin C)",
+            "basis": "min",
+            "value": 85,
+            "unit": "other",
+            "unit_text": "mg/kg"
+          },
+          {
+            "nutrient": "Omega 3 Fatty Acids",
+            "basis": "min",
+            "value": 1.3,
+            "unit": "percent"
+          },
+          {
+            "nutrient": "Omega 6 Fatty Acids",
+            "basis": "min",
+            "value": 2.4,
+            "unit": "percent"
+          }
+        ]
+      },
+      "calorie_content": {
+        "kcal_per_kg": 4335,
+        "kcal_per_unit": 493,
+        "unit_name": "cup"
+      },
+      "label_deck_code": null,
+      "formula_source": "Maker product page https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-salmon (page text: ingredients, guaranteed analysis, sizes); calories and adequacy statement from retailer page https://www.petsmart.com/5266235.html",
+      "source_urls": [
+        "https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-salmon",
+        "https://www.petsmart.com/5266235.html",
+        "https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dog-food----grain-free-raw-salmon-43577.html"
+      ],
+      "source_accessed_at": "2026-10-07",
+      "barcode_notes": "individual_unit; proof: JSON-LD gtin13 0769949658801 on PetSmart sku 5266235; the page's variantToSkuMap ties sku 5266235 to size 20 Lb; single-unit bag page",
+      "conflicts": [
+        "food_form: raw-coated kibble (kibble tumbled in freeze-dried raw) has no FoodForm value; filed dry/kibble — see handoff (BRIEF-INSTINCT §3)."
+      ],
+      "verification_notes": [
+        "UPC-A 769949658801: 3×(7+9+4+6+8+0) + (6+9+9+5+8) = 139 → check digit 1 = last digit 1 ✓; GTIN-14 00769949658801 (12-digit UPC zero-padded).",
+        "Size binding: JSON-LD gtin13 0769949658801 on PetSmart sku 5266235; the page's variantToSkuMap ties sku 5266235 to size 20 Lb; single-unit bag page (https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dog-food----grain-free-raw-salmon-43577.html, read 2026-10-07, browser). Joined to the maker's printed size \"20 lb.\" (barcode file \"20 lb\"; case and the abbreviation's full stop normalised only).",
+        "Ingredient statement, guaranteed analysis and sizes copied word for word from https://www.instinctpetfood.com/products/limited-ingredient-diet-kibble-for-dogs-salmon (page text, curl, read 2026-10-07); second reading https://www.petsmart.com/5266235.html (browser, read 2026-10-07): agrees.",
+        "What the pack is: kibble tumbled in freeze-dried raw, per the maker page text — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
+        "Calories 4335 kcal/kg, 493 kcal/cup and the adequacy statement from https://www.petsmart.com/5266235.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 114 g (plausible for kibble).",
+        "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Limited Ingredient Diet Grain-Free Recipe with Real Salmon is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.",
+        "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
+        "Barcode: PetSmart gives gtin13 0769949658801 (leading zero); the 12-digit UPC 769949658801 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+      ],
+      "research_status": "source_verified"
+    }
+  ]
+}
