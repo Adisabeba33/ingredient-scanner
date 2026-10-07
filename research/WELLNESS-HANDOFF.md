@@ -231,3 +231,25 @@ pack question.
 - The `076344` prefix stays a lead. Whether Old Mother Hubbard, Eagle Pack,
   Holistic Select or Whimzees share it decides whether it proves the maker or
   the brand, and that needs barcodes nobody here can read.
+
+## 15. The ledger exists — landed from research-data-center task #108, 2026-10-07
+
+§12–§14 ended with no `research/deep-research-wellness.json`. It now holds 11
+records, all CORE dry dog food, researched outside this repository (task #108,
+merged as PR #117) and copied in unchanged. `check-ledger` is clean on them.
+Counts: candidate 4, needs_physical_label 7; individual_unit 11. Each record
+carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
+"Batch 049 — Wellness". In short:
+
+- Seeded as identity only (batch 049): 076344884828, 076344884088,
+  076344884026, 076344884354, 076344884453, 076344884569.
+- Not seeded: the four candidates, whose only gap is the AAFCO adequacy
+  sentence, which no page read prints; and 076344884170, whose 4 lb size
+  binding is contested.
+- `076344` is now registered in `data/gs1-prefixes.ts` under the brand,
+  observed. Its owner and whether the siblings share it are still open, as §14
+  says.
+- Not yet researched, by the task's own handoff: CORE Digestive Health and
+  CORE+ codes (their label data exist in that task's research), the multi-size
+  ranges whose maker pages carry one code for several sizes, and every non-CORE
+  range. `CORE+` is a range the brand entry lacks.

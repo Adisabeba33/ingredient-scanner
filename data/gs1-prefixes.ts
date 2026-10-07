@@ -192,4 +192,15 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // Prairie) was not checked. Observed on packs only — the TheraDiet standing
   // above. NOT GEPIR-confirmed; when the owner is established, name it here.
   { prefix: "769949", maker: "Instinct (observed on bound Instinct packs; owning company not established, not GEPIR-confirmed)" },
+  // Wellness, batch 049 (research-data-center task #108): on all eleven CORE
+  // dry dog codes that research met, each bound on a PetSmart page or the
+  // maker's own one-size product page. A 2025 UNFI catalog shows it on other
+  // Wellness items too (research/WELLNESS-HANDOFF.md §12). Named for the BRAND
+  // and not for a company, as Instinct above: the brand entry records the
+  // owner as "WellPet" (now trading as Wellness Pet Company, per
+  // research/BRIEF-WELLNESS.md §3), but no source ties this GS1 block to
+  // either name, and no code from the sibling brands — Old Mother Hubbard,
+  // Eagle Pack, Holistic Select, Whimzees — has been read, so it may prove the
+  // maker rather than the brand (§6). NOT GEPIR-confirmed.
+  { prefix: "076344", maker: "Wellness (observed on bound Wellness CORE packs; owning company not established, not GEPIR-confirmed)" },
 ];

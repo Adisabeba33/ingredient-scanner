@@ -2243,3 +2243,68 @@ they are seeded.
 under the BRAND, because no source in this research names the company GS1
 assigned it to, and whether a sibling brand shares it was not checked. Not
 GEPIR-confirmed — the TheraDiet standing.
+
+## Batch 049 — Wellness
+
+Eleven CORE dry dog barcodes from research-data-center task #108 (PR #117),
+ledger `research/deep-research-wellness.json` — the brand's first. **No
+composition is stored.** Six barcodes are seeded as identity; five stay in the
+ledger.
+
+### Six seeded as identity only — the sources disagree
+
+Each is `needs_physical_label` in the ledger, so each goes in as a barcode to
+photograph (`docs/CURATION-QUEUE.md`, "The status is a lookup"):
+
+- **076344884828** — Wholesome Grains Original Turkey & Chicken, 24 lb. Two
+  maker sources print two formulas. The product page (and 1800petmeds) lists
+  Turkey Liver and Turkey Hearts and guarantees 35.0% protein, three B
+  vitamins and 100,000,000 CFU/lb. The maker's Nutrient Profile sheet has
+  neither organ, 34.0% protein, no B-vitamin guarantees and 80,000,000 CFU/lb.
+  Nothing dates either one.
+- **076344884088**, **076344884026**, **076344884354**, **076344884453** —
+  Grain Free Original Turkey & Chicken, 4, 12, 24 and 35 lb. PetSmart, whose
+  pages bind the four codes, prints "Dried Ground Potatoes, Lentils, Peas"
+  with no yeast. The maker's page prints "Lentils, Dried Yeast, Dried Ground
+  Potatoes, Peas". The panel and the calories (3,682 kcal/kg, 409 kcal/cup)
+  agree. On an American label two orders are two foods, and nothing says
+  which one is current.
+- **076344884569** — Grain Free Large Breed Puppy, 24 lb. The maker's page
+  prints Calcium "Not Less Than 1.30%" and its Nutrient Profile sheet prints
+  "Not More Than 1.30%". The ingredient statement agrees.
+
+None of the six carries a `lifeStage` except the puppy bag. No AAFCO adequacy
+sentence was read for any of them, and the ledger's `adult` comes from a
+retailer's "Life Stage" field or a sheet heading. "Puppy" is printed in the
+product's own name.
+
+### Five left in the ledger
+
+- **Four `candidate` records, not seeded at all** (`research/BRIEF-ALPO.md`
+  §1: a candidate is a lead, never seeded):
+  `076344884859` Wholesome Grains Ocean Whitefish 22 lb;
+  `076344884156` and `076344884378` Grain Free Ocean Whitefish, Herring &
+  Salmon 4 lb and 22 lb; `076344884217` Small Breed Grain Free Turkey &
+  Chicken 12 lb. Each has a bound code, an ingredient statement read twice
+  and agreeing, a complete panel and calories. The one gap is the AAFCO
+  adequacy sentence, which neither the maker's page nor PetSmart prints, and
+  `research/AGENTS.md` §10 asks for it. Whether a sentence no web page prints
+  must be read off a pack before a composition goes in is an open question
+  for the owner. Until it is answered they wait.
+- **076344884170** — Small Breed Grain Free Turkey & Chicken, filed at 4 lb,
+  and **not seeded even as identity**, because the size its code is on is the
+  thing in dispute. The barcode research read it off the 4 lb size selector of
+  PetSmart's page …-5180158.html. The formula research read the same page as
+  "Item Number: 5180168", "Weight: 12 Pound". The maker's page carries the
+  same code and lists both 4 and 12 lb, and `076344884217` is already bound to
+  the 12 lb. A row would have to print a size, and either size would be a
+  guess (`research/AGENTS.md` §11: one code pointing at two sizes is recorded
+  rather than resolved). A photograph of the 4 lb bag's barcode settles it.
+
+### The prefix is registered by observation
+
+`076344` is on all eleven codes and is registered in `data/gs1-prefixes.ts`
+under the BRAND. The brand entry's owner, "WellPet", is not tied to the GS1
+block by any source. No sibling brand's code (Old Mother Hubbard, Eagle Pack,
+Holistic Select, Whimzees) has been read, so the block may prove the maker
+rather than the brand. Not GEPIR-confirmed.
