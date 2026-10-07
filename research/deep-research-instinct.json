@@ -364,9 +364,10 @@
         "Calories 3595 kcal/kg, 396 kcal/cup and the adequacy statement from https://www.petsmart.com/5363581.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 110 g (plausible for kibble).",
         "Adequacy statement as printed (copied word for word; §9 has no field for it): Complete and Balanced Statement: Instinct Be Natural Real Salmon & Brown Rice is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
         "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
-        "Barcode: PetSmart gives gtin13 0769949652731 (leading zero); the 12-digit UPC 769949652731 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+        "Barcode: PetSmart gives gtin13 0769949652731 (leading zero); the 12-digit UPC 769949652731 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC).",
+        "Promoted to seed 2026-10-07, batch 048 (branch seed/instinct-rdc-109): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -473,9 +474,10 @@
         "Calories 3595 kcal/kg, 396 kcal/cup and the adequacy statement from https://www.petsmart.com/5363581.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 110 g (plausible for kibble).",
         "Adequacy statement as printed (copied word for word; §9 has no field for it): Complete and Balanced Statement: Instinct Be Natural Real Salmon & Brown Rice is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
         "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
-        "Barcode: PetSmart gives gtin13 0769949653134 (leading zero); the 12-digit UPC 769949653134 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+        "Barcode: PetSmart gives gtin13 0769949653134 (leading zero); the 12-digit UPC 769949653134 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC).",
+        "Promoted to seed 2026-10-07, batch 048 (branch seed/instinct-rdc-109): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -822,9 +824,10 @@
         "Calories 4430 kcal/kg, 520 kcal/cup and the adequacy statement from https://www.petsmart.com/5248197.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 117 g (plausible for kibble).",
         "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Original Grain-Free Recipe with Real Chicken is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for all life stages except for growth of large size dogs (70 lbs or more as an adult).",
         "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
-        "Barcode: PetSmart gives gtin13 0769949657255 (leading zero); the 12-digit UPC 769949657255 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+        "Barcode: PetSmart gives gtin13 0769949657255 (leading zero); the 12-digit UPC 769949657255 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC).",
+        "Promoted to seed 2026-10-07, batch 048 (branch seed/instinct-rdc-109): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -931,9 +934,10 @@
         "Calories 4315 kcal/kg, 495 kcal/cup and the adequacy statement from https://www.petsmart.com/dog/food/dry-food/instinct-limited-ingredient-diet-adult-dry-dog-food---grain-free-lamb-5266163.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 115 g (plausible for kibble).",
         "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Limited Ingredient Diet Grain-Free Recipe with Real Lamb is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.",
         "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
-        "Barcode: PetSmart gives gtin13 0769949658450 (leading zero); the 12-digit UPC 769949658450 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+        "Barcode: PetSmart gives gtin13 0769949658450 (leading zero); the 12-digit UPC 769949658450 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC).",
+        "Promoted to seed 2026-10-07, batch 048 (branch seed/instinct-rdc-109): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -1033,9 +1037,10 @@
         "Calories 4335 kcal/kg, 493 kcal/cup and the adequacy statement from https://www.petsmart.com/5266235.html (browser, read 2026-10-07); the maker page prints neither. Calorie cross-check: no per-package calorie figure is printed, so kcal_per_kg × package kg cannot be checked against a unit figure; implied cup weight 114 g (plausible for kibble).",
         "Adequacy statement as printed (copied word for word; §9 has no field for it): Instinct Limited Ingredient Diet Grain-Free Recipe with Real Salmon is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.",
         "GS1 prefix 769949 (UPC 0 769949…): seen on every Instinct code in this batch; not in data/gs1-prefixes.ts; the prefix owner is not established here (no GS1 lookup made) — the seeding pass names it (BRIEF-INSTINCT §6, §8).",
-        "Barcode: PetSmart gives gtin13 0769949658801 (leading zero); the 12-digit UPC 769949658801 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC)."
+        "Barcode: PetSmart gives gtin13 0769949658801 (leading zero); the 12-digit UPC 769949658801 validates, so the leading zero is a standard EAN-13 padding. Maker page lists sizes but no barcode (Shopify sku/mpn only, not a UPC).",
+        "Promoted to seed 2026-10-07, batch 048 (branch seed/instinct-rdc-109): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     }
   ]
 }

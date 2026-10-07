@@ -182,4 +182,14 @@ export const GS1_PREFIXES: Gs1Prefix[] = [
   // Greenies'. Crave, a Mars brand born inside Mars, is under 023100.
   // NOT GEPIR-confirmed.
   { prefix: "079105", maker: "Nutro (Mars Petcare US, observed, not GEPIR-confirmed)" },
+  // Instinct, batch 048 (research-data-center task #109): on all nine Instinct
+  // dry dog codes that research bound to a bag size, each on a PetSmart
+  // single-bag page, and on no other brand's code met so far. Named for the
+  // BRAND on those packs and not for a company, because no source in that
+  // research names who GS1 assigned the block to: the brand entry's owner,
+  // "Nature's Variety", is the company's old name (research/BRIEF-INSTINCT.md
+  // §5), and whether any sibling brand shares the block (§6 asks about
+  // Prairie) was not checked. Observed on packs only — the TheraDiet standing
+  // above. NOT GEPIR-confirmed; when the owner is established, name it here.
+  { prefix: "769949", maker: "Instinct (observed on bound Instinct packs; owning company not established, not GEPIR-confirmed)" },
 ];

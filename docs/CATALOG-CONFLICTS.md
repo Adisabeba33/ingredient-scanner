@@ -2194,3 +2194,52 @@ same pair as "/c" or "/pc", where the arithmetic works, are stored in full.
 - **829274006163** — Tenders in Sauce With Real Salmon & Crab, 2.75 oz
 - **829274006156** — Tenders in Sauce With Real Tuna & Whole Shrimp, 2.75 oz
 - **829274006194** — Tenders in Sauce With Real Turkey & Giblets, 2.75 oz
+
+## Batch 048 — Instinct
+
+Nine dry dog barcodes from research-data-center task #109 (PR #116), ledger
+`research/deep-research-instinct.json`. Five carry a composition and none of
+the five carries a conflict note: the maker's page and the PetSmart page that
+binds each bag size print the same ingredient list word for word, and the
+calorie and AAFCO statements come from that PetSmart page.
+
+### Four barcodes seeded as identity only — two formula generations
+
+For two recipes the only page binding the barcodes to a bag size is PetSmart,
+and PetSmart prints a different ingredient list and analysis from the maker's
+current page — an older formula. The maker's page controls the current formula
+(`research/AGENTS.md` §6), but it prints no calorie or adequacy statement, and
+nothing says which formula a bag under these codes carries. So no list is
+stored: the barcodes are seeded as identity, a thing to photograph
+(`docs/CURATION-QUEUE.md`, "The status is a lookup"), and the ledger keeps
+them at `needs_physical_label`.
+
+- **769949652809** — Be Natural Chicken & Brown Rice, 4.5 lb
+- **769949652823** — Be Natural Chicken & Brown Rice, 25 lb — PetSmart's
+  3763 kcal/kg, 428 kcal/cup belongs to the older formula and is not used.
+- **769949652861** — Be Natural Lamb & Oatmeal, 4.5 lb
+- **769949652885** — Be Natural Lamb & Oatmeal, 24 lb — PetSmart's
+  3675 kcal/kg, 418 kcal/cup, older formula, not used.
+
+These four rows carry no `lifeStage`. The ledger says `all`, but no adequacy
+statement was read for the current formula, and the field records what a
+statement said, never what a listing suggests.
+
+### Raw-coated kibble, filed as dry
+
+Every one of the nine is kibble tumbled in freeze-dried raw, by the maker's
+page, and every one guarantees 10% moisture max — so its list reads as a dry
+food's and it is filed `dry` / `kibble`. The catalog has no value for the
+coating, and none was added: the coating is in the list ("Freeze-Dried
+Pollock", "Freeze Dried Chicken Liver"), and a value would predict nothing
+about how the list reads that `dry` does not. Counts for
+`research/BRIEF-INSTINCT.md` §3: frozen raw 0, freeze-dried 0, raw-coated
+kibble 9. The frozen and freeze-dried ranges still need a form decision before
+they are seeded.
+
+### The prefix is registered by observation
+
+`769949` is on all nine codes and is registered in `data/gs1-prefixes.ts`
+under the BRAND, because no source in this research names the company GS1
+assigned it to, and whether a sibling brand shares it was not checked. Not
+GEPIR-confirmed — the TheraDiet standing.
