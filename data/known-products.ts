@@ -4900,6 +4900,164 @@ const NUTRO_CRAVE_BATCH_047: KnownProduct[] = [
   },
 ];
 
+// Batch 048 — Instinct, the first of the brand: nine dry dog barcodes from
+// research-data-center task #109 (PR #116), ledger research/deep-research-instinct.json.
+// Every pack is kibble tumbled in freeze-dried raw (the maker's page) at 10%
+// moisture max, so it reads as dry food and is filed dry / kibble; the catalog
+// has no value for a raw coating (research/BRIEF-INSTINCT.md §3).
+//
+// Five barcodes carry a composition: instinctpetfood.com's ingredient statement
+// and panel, with calories and the AAFCO statement from the PetSmart page that
+// binds the bag size. The last two products are identity only — a barcode to go
+// and find: PetSmart, the one source binding their codes, prints an older
+// formula than the maker's page, so which list the bag carries is a photograph
+// (needs_physical_label; docs/CURATION-QUEUE.md, "The status is a lookup").
+// They carry no lifeStage because no adequacy statement was read for the
+// current formula. Sizes drop the maker's trailing full stop ("4.5 lb.").
+const INSTINCT_BATCH_048: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Be Natural",
+    variant: "Salmon & Brown Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949653134", scope: UNIT },
+      { size: "24 lb", container: BAG, upc: "769949652731", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Chicken",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "22.5 lb", container: BAG, upc: "769949657255", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Lamb",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    lifeStage: "adult",
+    packages: [
+      { size: "20 lb", container: BAG, upc: "769949658450", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Salmon",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "20 lb", container: BAG, upc: "769949658801", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Be Natural",
+    variant: "Chicken & Brown Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949652809", scope: UNIT },
+      { size: "25 lb", container: BAG, upc: "769949652823", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Be Natural",
+    variant: "Lamb & Oatmeal",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949652861", scope: UNIT },
+      { size: "24 lb", container: BAG, upc: "769949652885", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 049 — Wellness, the first of the brand: CORE dry dog food from
+// research-data-center task #108 (PR #117), ledger research/deep-research-wellness.json.
+// Identity only — six barcodes, no composition. Every one is needs_physical_label
+// in the ledger: the Original recipes each show two formula generations, and the
+// Large Breed Puppy panel prints Calcium as a minimum on one maker source and a
+// maximum on the other, so which list a bag carries is a photograph
+// (docs/CURATION-QUEUE.md, "The status is a lookup"). No AAFCO adequacy sentence
+// was read for any of them, so lifeStage is set only where the printed name says
+// "Puppy". Not here: the four `candidate` records (never seeded) and the Small
+// Breed 4 lb code, whose size binding is contested — see docs/CATALOG-CONFLICTS.md.
+const WELLNESS_BATCH_049: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Grain Free Large Breed Puppy Chicken & Turkey",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey", "salmon"],
+    lifeStage: "puppy",
+    packages: [
+      { size: "24 lb", container: BAG, upc: "076344884569", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Wholesome Grains Original Turkey & Chicken",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "24 lb", container: BAG, upc: "076344884828", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Grain Free Original Turkey & Chicken",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken", "salmon"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884088", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "076344884026", scope: UNIT },
+      { size: "24 lb", container: BAG, upc: "076344884354", scope: UNIT },
+      { size: "35 lb", container: BAG, upc: "076344884453", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -20831,4 +20989,6 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...GREENIES_BATCH_045,
   ...MEOW_MIX_BATCH_046,
   ...NUTRO_CRAVE_BATCH_047,
+  ...INSTINCT_BATCH_048,
+  ...WELLNESS_BATCH_049,
 ];

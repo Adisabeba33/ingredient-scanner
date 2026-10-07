@@ -179,6 +179,12 @@ const VERIFIED_046 = "2026-09-23";
 // Batch 047 — Nutro and Crave, each from one size's own label image(s),
 // read twice.
 const VERIFIED_047 = "2026-09-23";
+// Batch 048 — Instinct, from research-data-center task #109 (PR #116): five dry
+// dog bags whose list and panel are instinctpetfood.com's page text, with the
+// calorie and AAFCO statements from the PetSmart page that binds each bag
+// size; that page's list agrees with the maker's word for word. Calories are
+// per cup, so the arithmetic witness is unavailable (SEEDING-A-BATCH.md §2.4).
+const VERIFIED_048 = "2026-10-07";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11674,5 +11680,30 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Pea Protein, Split Peas, Chicken Fat (preserved with Mixed Tocopherols), Tapioca Starch, Fish Meal, Dried Plain Beet Pulp, Potato Protein, Natural Flavor, Dehydrated Alfalfa Meal, Choline Chloride, Potassium Chloride, Taurine, Mixed Tocopherols and Citric Acid (preservatives), Salt, DL-Methionine, Vitamin E Supplement, Zinc Oxide, Calcium Carbonate, Manganese Sulfate, Ferrous Sulfate, Niacin Supplement, Ascorbic Acid (Vitamin C), Copper Sulfate, D-Calcium Pantothenate, Vitamin A Supplement, Biotin, Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Vitamin B12 Supplement, Sodium Selenite, Vitamin D3 Supplement, Riboflavin Supplement (Vitamin B2), Folic Acid, Potassium Iodide, Rosemary Extract.`,
     analysis: withCalories(ga(40, 18, 4, 10, null, 0.16), 3788, 402, "cup"),
     verifiedAt: VERIFIED_047,
+  },
+  "769949653134": {
+    ingredients: `Salmon, Chicken Meal, Oatmeal, Barley, Brown Rice, Chicken Fat (preserved with Mixed Tocopherols), Fish Meal, Sorghum, Salmon Oil (preserved with Mixed Tocopherols), Natural Flavor, Carrots, Salt, Potassium Chloride, Dried Yeast, Apples, Blueberries, Cranberries, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Choline Chloride, Freeze-Dried Pollock, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Pumpkin Seeds, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(25, 15, 5, 10, null, null), 3595, 396, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.4, "%"], "Omega 6 Fatty Acids": ["min", 2.3, "%"] }),
+    verifiedAt: VERIFIED_048,
+  },
+  "769949652731": {
+    ingredients: `Salmon, Chicken Meal, Oatmeal, Barley, Brown Rice, Chicken Fat (preserved with Mixed Tocopherols), Fish Meal, Sorghum, Salmon Oil (preserved with Mixed Tocopherols), Natural Flavor, Carrots, Salt, Potassium Chloride, Dried Yeast, Apples, Blueberries, Cranberries, Vitamins (Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Choline Chloride, Freeze-Dried Pollock, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract, Pumpkin Seeds, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(25, 15, 5, 10, null, null), 3595, 396, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Omega 3 Fatty Acids": ["min", 0.4, "%"], "Omega 6 Fatty Acids": ["min", 2.3, "%"] }),
+    verifiedAt: VERIFIED_048,
+  },
+  "769949657255": {
+    ingredients: `Chicken, Chicken Meal, Peas, Chicken Fat (preserved with Mixed Tocopherols and Citric Acid), Tapioca, Herring Meal, Menhaden Fish Meal, Natural Flavor, Dried Tomato Pomace, Salt, Vitamins (Vitamin E Supplement, Vitamin A Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Carrots, Apples, Cranberries, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Potassium Chloride, Montmorillonite Clay, Taurine, Choline Chloride, Freeze Dried Chicken, Freeze Dried Chicken Liver, Pumpkinseeds, Freeze Dried Chicken Heart, Dried Bacillus coagulans Fermentation Product, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(37, 20, 2.5, 10, null, 0.1), 4430, 520, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "mg/kg"], "Omega 3 Fatty Acids": ["min", 0.3, "%"], "Omega 6 Fatty Acids": ["min", 2.8, "%"], "Bacillus coagulans": ["min", 80000000, "CFU/lb"] }),
+    verifiedAt: VERIFIED_048,
+  },
+  "769949658450": {
+    ingredients: `Lamb Meal, Lamb, Tapioca, Peas, Canola Oil (preserved with Mixed Tocopherols and Citric Acid), Pea Protein, Montmorillonite Clay, Natural Flavor, Salt, Potassium Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), DL-Methionine, Coconut Oil, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Choline Chloride, Freeze Dried Lamb, Pumpkinseeds, Freeze Dried Lamb Liver, Freeze Dried Lamb Spleen, Freeze Dried Lamb Heart, Freeze Dried Lamb Kidney, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(24, 21.5, 3.5, 10, null, null), 4315, 495, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "mg/kg"], "Omega 3 Fatty Acids": ["min", 0.8, "%"], "Omega 6 Fatty Acids": ["min", 2.1, "%"] }),
+    verifiedAt: VERIFIED_048,
+  },
+  "769949658801": {
+    ingredients: `Salmon Meal, Salmon, Peas, Tapioca, Canola Oil (preserved with Mixed Tocopherols and Citric Acid), Montmorillonite Clay, Natural Flavor, Potassium Chloride, Salt, Choline Chloride, Coconut Oil, Vitamins (L-Ascorbyl-2-Polyphosphate, Vitamin E Supplement, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Freeze Dried Cod, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(28, 18, 3, 10, null, null), 4335, 493, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Ascorbic Acid (Vitamin C)": ["min", 85, "mg/kg"], "Omega 3 Fatty Acids": ["min", 1.3, "%"], "Omega 6 Fatty Acids": ["min", 2.4, "%"] }),
+    verifiedAt: VERIFIED_048,
   },
 };
