@@ -368,9 +368,11 @@
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-core-wholesome-grains-ocean-whitefish/ (maker page, read 2026-10-07, browser); https://images.salsify.com/image/upload/s--cDOCUWvc--/w_500/isqgiq3xawhlmaonuv4i.pdf (maker Nutrient Profile sheet, read 2026-10-07, curl); printed as: Crude Protein Not Less Than 34.0% Crude Fat Not Less Than 15.0% Crude Fiber Not More Than 4.25% Moisture Not More Than 10.0% Calcium Not Less Than 1.60% Phosphorus Not Less Than 1.20% Zinc Not Less Than 100mg/kg Vitamin A Not Less Than 25,000 IU/kg Vitamin E Not Less Than 400 IU/kg Biotin* Not Less Than 0.10 mg/kg Taurine* Not Less Than 0.20% Omega-6 Fatty Acids* Not Less Than 2.75% Omega-3 Fatty Acids* Not Less Than 2.25% Glucosamine* Not Less Than 600 mg/kg Chondroitin Sulfate* Not Less Than 200 mg/kg Total Microorganisms* Not Less Than 80,000,000 CFU/lb (Enterococcus faecium, Bacillus licheniformis, Bacillus subtilis) *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles Contains a source of live (viable) naturally occurring microorganisms",
         "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence found: not in the product page text, not on the Nutrient Profile sheet (which says only 'for Adult Dogs'); the pack back panel image (500 px) is not legible. Life stage 'adult' is from the sheet heading 'for Adult Dogs'.",
         "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
-        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)",
+        "Adequacy statement printed on no source page read; owner ruling 2026-10-07: not required when unprinted (AGENTS.md §10 'when printed')",
+        "Promoted to seed 2026-10-07, batch 050 (branch seed/wellness-aafco-ruling): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "candidate"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -1479,9 +1481,11 @@
         "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
         "barcode notes: PetSmart names it 'Ocean Formula'; matched to the maker's Grain Free Ocean Whitefish, Herring & Salmon by brand, line, fish recipe and the 4 and 22 lb sizes. PetSmart gtin13 0076344884156; leading zero dropped, check digit validates.",
         "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
-        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)",
+        "Adequacy statement printed on no source page read; owner ruling 2026-10-07: not required when unprinted (AGENTS.md §10 'when printed')",
+        "Promoted to seed 2026-10-07, batch 050 (branch seed/wellness-aafco-ruling): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "candidate"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -1660,9 +1664,11 @@
         "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
         "barcode notes: Same matching note as the 4 lb. PetSmart gtin13 0076344884378; leading zero dropped, check digit validates.",
         "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
-        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)",
+        "Adequacy statement printed on no source page read; owner ruling 2026-10-07: not required when unprinted (AGENTS.md §10 'when printed')",
+        "Promoted to seed 2026-10-07, batch 050 (branch seed/wellness-aafco-ruling): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "candidate"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2025,9 +2031,11 @@
         "adequacy statement: no AAFCO adequacy sentence printed on any page read (formula.json notes); life_stage from: No AAFCO adequacy / life-stage sentence printed: the PetSmart page carries only the marketing words 'complete and balanced' and the guaranteed-analysis footnote naming the AAFCO profiles; the maker page carries none either. life_stage 'adult' from the retailer's 'Life Stage: Adult' field.",
         "barcode notes: Same matching note as the 4 lb. PetSmart gtin13 0076344884217; leading zero dropped, check digit validates.",
         "GS1 prefix 076344: new to the scanner's checker; its owner is not established by this task",
-        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)"
+        "status candidate: identity, a bound unit code, the statement read twice and agreeing, the complete guaranteed analysis and calories are present, but the AAFCO adequacy statement was not found on any page read (AGENTS.md §10)",
+        "Adequacy statement printed on no source page read; owner ruling 2026-10-07: not required when unprinted (AGENTS.md §10 'when printed')",
+        "Promoted to seed 2026-10-07, batch 050 (branch seed/wellness-aafco-ruling): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "candidate"
+      "research_status": "promoted_to_seed"
     }
   ]
 }

@@ -253,3 +253,7 @@ carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
   CORE+ codes (their label data exist in that task's research), the multi-size
   ranges whose maker pages carry one code for several sizes, and every non-CORE
   range. `CORE+` is a range the brand entry lacks.
+- Update, batch 050 (same day): the four candidates are promoted with their
+  compositions under the owner's ruling that the AAFCO sentence is not required
+  when no source page prints it (AGENTS.md §10, "when printed"). The ledger now
+  reads promoted_to_seed 4, needs_physical_label 7.
