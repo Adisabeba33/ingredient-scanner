@@ -2347,20 +2347,19 @@ eight pass the arithmetic in `scripts/check-batch.mjs`.
   "L-Abscorbyl-2-Polyphosphate". Stored as the maker's page spells it, not
   corrected (`docs/SEEDING-A-BATCH.md` §4: copy, do not tidy).
 
-### Healthy Cravings: a topper the role detector does not know yet
+### Healthy Cravings: a topper the role detector had to be taught
 
 **769949610007**, **769949610014**, **769949610229**, **769949610205** each
 print "… is intended for intermittent or supplemental feeding only. This is a
 complementary food and should be fed along with a complete and balanced
 diet." The seed carries no claims, and `lib/nutrition-role.ts` reads the role
 from brand, range and variant; "Healthy Cravings" is in none of its lists, so
-these import as `unknown` and are judged as dinner. The module is not changed
-here — no test or guide step requires it, and `research/BRIEF-INSTINCT.md` §4
-leaves the range names as a recommendation. The change that would fit the
-module is a brand-scoped entry, `instinct: ["healthy cravings"]` in
-`BRAND_COMPLEMENTARY_LINES`, the route Reveal's Limited Ingredient tins and
-Cesar Simply Crafted take to `complementary`. It is the owner's to decide,
-before these barcodes are written to the catalog.
+on their own they would import as `unknown` and be judged as dinner. Settled
+before import, after batch 053, by a brand-scoped entry in
+`BRAND_COMPLEMENTARY_LINES` — `instinct: ["healthy cravings", "limited
+ingredient diet toppers"]` — the route Reveal's Limited Ingredient tins and
+Cesar Simply Crafted take to `complementary`. All four resolve to
+`complementary`; the Original cans stay `unknown`, judged as dinner.
 
 No `lifeStage` on the four: the supplemental sentence names none, and the
 ledger's `all` is not in it. The range is new to `data/us-pet-brands.ts`.
@@ -2449,16 +2448,15 @@ check-ledger WARN is answered in each record. The RawBoost+ Shakers do the same
 Digestive Health with **769949620259** dog Gut Health — answered in the
 records, not seeded.
 
-### Toppers the role detector does not know yet
+### Toppers, read as complements
 
 All six print "… is intended for intermittent or supplemental feeding only",
-so none carries a `lifeStage`, and all six import as `unknown`, as batch 051's
-dog pouches do. The owner's change proposed there would reach these too if it
-also names the Limited Ingredient Diet topper:
+so none carries a `lifeStage`. All six resolve to `complementary` through
 `instinct: ["healthy cravings", "limited ingredient diet toppers"]` in
-`BRAND_COMPLEMENTARY_LINES`. The second phrase meets the topper's range and
-variant ("Limited Ingredient Diet" + "Toppers Rabbit") and not the Limited
-Ingredient Diet kibble, which is complete and must stay judged as dinner.
+`BRAND_COMPLEMENTARY_LINES` (see batch 051). The second phrase meets the
+topper's range and variant ("Limited Ingredient Diet" + "Toppers Rabbit") and
+not the Limited Ingredient Diet kibble, which is complete and stays `unknown`,
+judged as dinner.
 
 **769949618188** is filed with the variant "Toppers Rabbit", not the ledger's
 "Rabbit": that is the Limited Ingredient Diet Rabbit kibble's (batch 052), a

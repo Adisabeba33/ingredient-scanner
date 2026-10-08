@@ -321,6 +321,14 @@ const BRAND_COMPLEMENTARY_LINES: Record<string, string[]> = {
   // panels bear it out: 0.1–0.5% fat in a 1.3 oz tray. Scoped to Cesar because
   // "simply crafted" is ordinary marketing copy anywhere else.
   cesar: ["simply crafted"],
+  // Instinct's wet topper pouches, dog and cat. Every Healthy Cravings pack and
+  // the Limited Ingredient Diet topper print "… is intended for intermittent or
+  // supplemental feeding only" (research-data-center tasks #123 and #125,
+  // batches 051 and 053). Scoped to Instinct: "healthy cravings" is ordinary
+  // copy elsewhere, and the topper's phrase must not reach the Limited
+  // Ingredient Diet kibble beside it, which is complete — "Toppers" is in the
+  // topper's variant only.
+  instinct: ["healthy cravings", "limited ingredient diet toppers"],
 };
 
 /**

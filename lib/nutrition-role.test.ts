@@ -90,6 +90,27 @@ describe("detectNutritionRole", () => {
     ).toBe("unknown");
   });
 
+  // Instinct's topper pouches print the supplemental-feeding sentence; its
+  // Limited Ingredient Diet kibble and Original cans are complete, and the
+  // topper's range is the kibble's range plus "Toppers" in the variant.
+  it("reads Instinct's toppers as complements and its dinners as dinners", () => {
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "Healthy Cravings", "Real Beef"] })
+    ).toBe("complementary");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "Limited Ingredient Diet", "Toppers Rabbit"] })
+    ).toBe("complementary");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "Limited Ingredient Diet", "Rabbit"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "Original", "Real Chicken"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Some Brand", "Healthy Cravings", "Chicken"] })
+    ).toBe("unknown");
+  });
+
   // Two snack ranges whose names carry no snack word. A bone broth is 95%
   // water: judged as dinner it is the worst food ever measured, about a pouch
   // nobody was ever going to feed as dinner. "Whole Loin" loses the word
