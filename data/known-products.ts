@@ -5474,6 +5474,512 @@ const INSTINCT_BATCH_053: KnownProduct[] = [
   },
 ];
 
+// Batch 054 — Instinct dry dog food: 31 bags from research-data-center task #120
+// (PR #171), ledger research/deep-research-instinct.json. Every one is kibble
+// with freeze-dried raw (PeakBoost+, RawBoost+) at 9–10% moisture max, filed
+// dry / kibble / plain as batch 048 filed raw-coated kibble.
+//
+// The three PeakBoost+ recipes carry a composition. The twelve RawBoost+
+// products are identity only: the PetSmart page that binds each code prints a
+// different list from the maker's current page, so which formula a bag carries
+// is a photograph (needs_physical_label). Among those only the Whole Grain
+// puppy bags carry a lifeStage, "puppy", from "for Puppies" in the printed name
+// (batch 052's kitten rule), and their variant names the puppies as batch
+// 052's kitten bag does ("Chicken Recipe for Puppies"; the ledger has "Chicken
+// Recipe"). Ranges are the maker's names.
+const INSTINCT_BATCH_054: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "PeakBoost+ Kibble",
+    variant: "Real Beef Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949657927", scope: UNIT },
+      { size: "17 lb", container: BAG, upc: "769949657934", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "PeakBoost+ Kibble",
+    variant: "Real Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949657903", scope: UNIT },
+      { size: "17 lb", container: BAG, upc: "769949657910", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "PeakBoost+ Kibble",
+    variant: "Real Salmon Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949657941", scope: UNIT },
+      { size: "17 lb", container: BAG, upc: "769949657958", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble",
+    variant: "Gut Health Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656388", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "769949659013", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble",
+    variant: "Real Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656340", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658238", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949656326", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble",
+    variant: "Real Beef Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656357", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949658207", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble",
+    variant: "Real Salmon Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656371", scope: UNIT },
+      { size: "19 lb", container: BAG, upc: "769949656302", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble for Small Breed Dogs",
+    variant: "Real Beef Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656364", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658306", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Kibble for Small Breed Dogs",
+    variant: "Real Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949656333", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949652557", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Real Lamb & Oatmeal Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949652762", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949652977", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Real Chicken & Brown Rice Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949652755", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949652847", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Real Beef & Barley Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949653011", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949653028", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Real Salmon & Brown Rice Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949652779", scope: UNIT },
+      { size: "19 lb", container: BAG, upc: "769949652748", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Gut Health Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949653059", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "769949653066", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Whole Grain Kibble",
+    variant: "Chicken Recipe for Puppies",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "puppy",
+    packages: [
+      { size: "3.5 lb", container: BAG, upc: "769949653042", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "769949653035", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 055 — Instinct wet cat food: 23 codes from research-data-center task
+// #122 (PR #172), ledger research/deep-research-instinct.json. Ordinary wet
+// food at 78–83% moisture max: pâté and flaked-in-gravy cans, pâté and
+// minced-in-gravy cups (filed "tub", the word the container field has).
+//
+// The three Minced Cups carry a composition. The other sixteen products are
+// identity only: for every can and Split Cup the retailer page that binds the
+// code prints a different list from the maker's current page, so which formula
+// the pack carries is a photograph (needs_physical_label). Among those only the
+// kitten can carries a lifeStage, "kitten", from "for Kittens" in its printed
+// name (batch 052's rule). Four candidate records — Original Real Duck 3 oz,
+// Original for Kittens Chicken 5.5 oz, Limited Ingredient Diet Real Rabbit
+// 3 oz, Split Cups Paté Duck Entrée — stay in the ledger. Variants are the
+// ledger's with the range taken out where they repeated it ("Minced Cups
+// Chicken" -> "Chicken", "Flaked Salmon Entrée" -> "Salmon", "Split Cups Paté
+// Chicken Entrée" -> "Paté Chicken Entrée"), and the kitten can is "Real
+// Chicken for Kittens", the words of its AAFCO sentence, in batch 052's order.
+const INSTINCT_BATCH_055: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Chicken",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610281", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610311", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Tuna",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610298", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Salmon",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618218", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Duck",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618225", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618232", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Tuna",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618201", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Chicken",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618195", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Salmon",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949605928", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949605935", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Lamb",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617266", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617013", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949607014", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Rabbit",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617464", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949607465", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Real Turkey",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949605751", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949605768", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken for Kittens",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949610380", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Split Cups",
+    variant: "Paté Chicken Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "2.64 oz", container: TUB, upc: "769949610120", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Split Cups",
+    variant: "Paté Salmon Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "2.64 oz", container: TUB, upc: "769949610144", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Venison",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["venison"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607564", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Duck",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607366", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Real Rabbit",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607533", scope: UNIT },
+    ],
+  },
+];
+
 // Batch 057 — Wellness CORE dry dog food, from research-data-center task #143
 // (PR #178), ledger research/deep-research-wellness.json: CORE, CORE+ and CORE
 // Digestive Health. CORE+ is kibble with freeze-dried pieces, filed dry/kibble
@@ -22585,6 +23091,8 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_051,
   ...INSTINCT_BATCH_052,
   ...INSTINCT_BATCH_053,
+  ...INSTINCT_BATCH_054,
+  ...INSTINCT_BATCH_055,
   ...WELLNESS_BATCH_057,
   ...WELLNESS_BATCH_058,
   ...WELLNESS_BATCH_059,

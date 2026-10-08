@@ -904,6 +904,20 @@ export const US_PET_BRANDS: SeedBrand[] = [
       // "Healthy Cravings" on instinctpetfood.com and PetSmart alike
       // (research-data-center tasks #123 and #125).
       "Healthy Cravings",
+      // Batch 054: the dry dog ranges as instinctpetfood.com names them
+      // (research-data-center task #120). PetSmart prints "PeakBoost" and
+      // "Raw Boost"; the cat bags of batch 052 are "Raw Boost Kibble" on the
+      // maker's own pages and stay under "Raw Boost".
+      "PeakBoost+ Kibble",
+      "RawBoost+ Kibble",
+      "RawBoost+ Kibble for Small Breed Dogs",
+      "RawBoost+ Whole Grain Kibble",
+      // Batch 055: the wet cat ranges as instinctpetfood.com names them
+      // (research-data-center task #122). Original and Limited Ingredient
+      // Diet cans file under the ranges above.
+      "Minced Cups",
+      "Flaked Entrées",
+      "Split Cups",
     ],
   },
   {

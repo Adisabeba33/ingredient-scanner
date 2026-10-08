@@ -2521,6 +2521,210 @@ names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
 "RawBoost+ Frozen Mixers", none of which is in the brand entry or in
 `lib/nutrition-role.ts`.
 
+## Batch 054 — Instinct dry dog food
+
+Thirty-one bags from research-data-center task #120 (PR #171), appended to
+`research/deep-research-instinct.json`. Six are stored with their compositions
+— the three PeakBoost+ Kibble recipes, Real Beef, Real Chicken and Real Salmon,
+each in 3.5 and 17 lb — and twenty-five RawBoost+ bags as identity. No conflict
+note on any of the six: the list and panel are the text of the PetSmart page
+that binds each size, and the maker's page prints the same statement word for
+word. Calories (per cup) and the AAFCO sentence ("… for maintenance") are from
+that PetSmart page; the maker's page prints neither. Per cup, so there is no
+arithmetic witness.
+
+### Twenty-five RawBoost+ bags seeded as identity only — two formula generations
+
+For every RawBoost+ code the PetSmart page that binds it prints a different
+ingredient statement and guaranteed analysis from the maker's current page —
+order, ingredients and guarantees all differ (RawBoost+ Kibble Real Chicken:
+crude fibre 3.0% max at PetSmart, 4.5% on the maker's page). So which formula
+a bag carries is a photograph (`needs_physical_label`; `docs/CURATION-QUEUE.md`,
+"The status is a lookup"), and PetSmart's calories, which belong to its own
+list, are not used. No size binding is in doubt: each code is PetSmart's
+JSON-LD `gtin13` on a one-bag variant page that names the weight.
+
+- **RawBoost+ Kibble** — Real Chicken Recipe 769949656340 (3.5 lb),
+  769949658238 (10 lb), 769949656326 (20 lb); Real Beef Recipe 769949656357,
+  769949658207; Real Salmon Recipe 769949656371, 769949656302; Gut Health
+  Recipe 769949656388, 769949659013.
+- **RawBoost+ Kibble for Small Breed Dogs** — Real Beef Recipe 769949656364,
+  769949658306; Real Chicken Recipe 769949656333, 769949652557.
+- **RawBoost+ Whole Grain Kibble** — Real Lamb & Oatmeal Recipe 769949652762,
+  769949652977; Real Chicken & Brown Rice Recipe 769949652755, 769949652847;
+  Real Beef & Barley Recipe 769949653011, 769949653028; Real Salmon & Brown
+  Rice Recipe 769949652779, 769949652748; Gut Health Recipe 769949653059,
+  769949653066; for Puppies Chicken Recipe 769949653042, 769949653035.
+
+None carries a `lifeStage` from an AAFCO sentence: those were read on the pages
+printing the other list (batch 048's rule). The puppy bags carry `puppy`, from
+"for Puppies" in the printed name on both the maker's and PetSmart's pages, as
+batch 052 filed its kitten bag, and their variant names them the same way:
+"Chicken Recipe for Puppies" (ledger "Chicken Recipe"; the maker prints "for
+Puppies Chicken Recipe"), noted in both records. The ledger's `all` is
+PetSmart's sentence ("… for all life stages, including growth of large size
+dogs"), which belongs to PetSmart's list.
+
+### The ranges, as the maker names them
+
+`PeakBoost+ Kibble`, `RawBoost+ Kibble`, `RawBoost+ Kibble for Small Breed
+Dogs` and `RawBoost+ Whole Grain Kibble` are new to `data/us-pet-brands.ts`.
+PetSmart prints "PeakBoost" and "Raw Boost". The cat bags of batch 052 stay
+under `Raw Boost`: the maker's own pages call them "Raw Boost Kibble", without
+the plus. The small-breed bags are a range of their own because their recipe
+names are the standard bags' ("Real Beef Recipe"), and one brand, range,
+variant and species is one product.
+
+### Raw-coated kibble, filed as dry
+
+All thirty-one are kibble with freeze-dried raw at 9–10% moisture max, so the
+list reads as a dry food's and they are filed `dry` / `kibble` as batch 048
+decided. Counts for `research/BRIEF-INSTINCT.md` §3: frozen raw 0,
+freeze-dried 0, raw-coated kibble 31. Every one prints a complete-diet
+sentence, and every range resolves to `unknown` in `lib/nutrition-role.ts`,
+judged as dinner.
+
+The PeakBoost+ panels guarantee "Total Microorganisms (Lactobacillus
+acidophilus & Enterococcus faecium)" at 80 million CFU/lb, stored with the unit
+`CFU/lb` as batch 048 stored its Bacillus coagulans figure.
+
+## Batch 055 — Instinct wet cat food
+
+Twenty-seven records from research-data-center task #122 (PR #172), appended
+to `research/deep-research-instinct.json`. Three are stored with their
+compositions — the 3.5 oz Minced Cups Chicken, Rabbit and Tuna — twenty as
+identity, and four stay in the ledger. No conflict note on the three: the list,
+panel and AAFCO sentence ("… for maintenance") are the maker's page text, read
+a second time on PetSmart (chicken, rabbit) or petgoods.com (tuna), which agree
+word for word apart from letter case; calories are from that second page.
+
+### Calories per cup, and the cup is the pack
+
+The Minced Cups state "kcal/3.5 oz cup": the cup is the sealed container, not
+a measure, so unlike a kibble's cup the arithmetic applies. 971 kcal/kg × 3.5
+oz is 96.3 kcal against a printed 97; tuna 76.4 against 77; rabbit 74.6
+against 75. All three pass `scripts/check-batch.mjs`. The two that round up
+equal kcal/kg × 100 g, which the research notes and does not assume.
+
+**769949610298** — Minced Cups Tuna prints "Calcium Carbonate,  Sodium
+Phosphate" with two spaces; stored as delivered (copy, do not tidy).
+
+### Twenty seeded as identity only — two formula generations
+
+For every can and Split Cup the retailer page that binds the code (PetSmart,
+thatpetplace.com, southernagriculture.com, poudrefeed.com) prints a different
+ingredient statement from the maker's current page — Montmorillonite Clay,
+Artichokes, Cabbage and L-Ascorbyl-2-Polyphosphate among the differences, and
+on Original Salmon 3 oz a crude fat of 6.0% against the maker's 7.0%. So which
+formula a can carries is a photograph (`needs_physical_label`;
+`docs/CURATION-QUEUE.md`, "The status is a lookup"), and the retailers'
+calories, which belong to their own lists, are not used. No size binding is in
+doubt: each code is on a single-unit page that names the size.
+
+- **Original** — Real Salmon 769949605928 (3 oz), 769949605935 (5.5 oz);
+  Real Lamb 769949617266; Real Chicken 769949617013, 769949607014; Real
+  Rabbit 769949617464, 769949607465; Real Venison 769949607564; Real Duck
+  769949607366 (5.5 oz); for Kittens Chicken 769949610380 (3 oz).
+- **Limited Ingredient Diet** — Real Turkey 769949605751, 769949605768;
+  Real Rabbit 769949607533 (5.5 oz).
+- **Flaked Entrées** — Flaked Salmon, Duck, Rabbit, Tuna and Chicken
+  Entrée, 769949618218, 769949618225, 769949618232, 769949618201,
+  769949618195 (3 oz).
+- **Split Cups** — Paté Chicken Entrée 769949610120, Paté Salmon Entrée
+  769949610144 (2.64 oz). PetSmart's Split Cups page carries label blocks for
+  two flavours, the one marked Salmon beginning with Duck; the research used
+  it for the code and size only, never as a formula.
+
+Only the kitten can carries a `lifeStage`, "kitten", from "for Kittens" in its
+printed name (batch 052's rule). The others carry none, although the ledger
+says `all` or `adult`: the sentence read is on the maker's page, whose list
+the can may not carry.
+
+Variants are the ledger's, except where the ledger's repeated the range: the
+Minced Cups are filed "Chicken", "Rabbit" and "Tuna" (ledger "Minced Cups
+Chicken" …), the Flaked Entrées "Salmon", "Duck", "Rabbit", "Tuna" and
+"Chicken" (ledger "Flaked Salmon Entrée" …), and the Split Cups "Paté Chicken
+Entrée" and "Paté Salmon Entrée" — "Paté" kept, because the range also sells
+flaked cups of the same flavours. The kitten can is "Real Chicken for Kittens"
+(ledger "for Kittens Chicken"), the words of its AAFCO sentence in batch 052's
+order. The wet Original "Real Chicken" and "Real Chicken for Kittens" sit
+beside batch 052's dry Original "Chicken" and "Chicken for Kittens" —
+different products, kept apart by the printed "Real" and by food form. Each
+renamed record says so in its `verification_notes`; the ledger keeps the
+delivered variant.
+
+### Four candidates left in the ledger
+
+**769949617365** Original Real Duck 3 oz, **769949610397** Original for
+Kittens Chicken 5.5 oz, **769949607540** Limited Ingredient Diet Real Rabbit
+3 oz and **769949610137** Split Cups Paté Duck Entrée: no page read prints a
+calorie statement for the current formula, so they are `candidate` and not
+seeded. Their siblings above are in the catalog as identity.
+
+### Ranges and role
+
+`Minced Cups`, `Flaked Entrées` and `Split Cups` are new to
+`data/us-pet-brands.ts`. Every range here is a complete diet and resolves to
+`unknown` in `lib/nutrition-role.ts`, judged as dinner. Food form: wet, 78–83%
+moisture max; nothing here needs a new value.
+
+## Instinct FreshRaw and FreshDried — task #126, all 31 held in the ledger
+
+Thirty-one records from research-data-center task #126 (PR #173), appended to
+`research/deep-research-instinct.json`. **Nothing is seeded**, so no batch
+number is spent. Every one is a complete raw diet in a form
+`data/known-products.ts` cannot store yet, the decision batch 048 left open
+(`research/BRIEF-INSTINCT.md` §3); the ledger files them all
+`food_form: "unknown"`.
+
+- **Frozen raw, 17** (70–75% moisture max; the list reads like a wet food's) —
+  FreshRaw Meals Cage-Free Chicken 769949641018, 769949641056; Cage-Free
+  Turkey 769949641025, 769949641063; Grass-Fed Beef 769949641001,
+  769949641049; Grass-Fed Lamb 769949641032, 769949641070 (8 and 16 oz, all
+  `source_verified`); FreshRaw Bites Wild-Caught Pollock 769949630340;
+  Grass-Fed Beef 769949630029, 769949630036; Cage-Free Chicken 769949630081,
+  769949630098; Grass-Fed Lamb 769949630296, 769949630302; FreshRaw Patties
+  Cage-Free Chicken 769949630111 and Grass-Fed Beef 769949630050 (all nine
+  `needs_physical_label`).
+- **Freeze-dried raw, 14** (6.0% moisture max; reads like a dry food's) —
+  FreshDried Raw Meals for cats, Cage-Free Chicken 769949614074,
+  769949614265 and Wild-Caught Pollock 769949614296 (`source_verified`); for
+  dogs, Wild-Caught Pollock 769949614289, Grass-Fed Beef 769949614524,
+  769949614531, 769949614050, Cage-Free Chicken 769949614500, 769949614517,
+  769949614029, Grass-Fed Lamb 769949614555, 769949614234, and for Puppies
+  Chicken 769949614593, 769949614173 (`needs_physical_label`).
+
+Eleven are `source_verified` — the eight FreshRaw Meals and the three cat
+FreshDried bags — and would go in with their compositions once the form is
+decided. The twenty `needs_physical_label` records would go in as identity
+only: the PetSmart page binding each code prints a different list from the
+maker's current page (the dog FreshDried Chicken also a different panel).
+
+One of them would not go in even as identity. **769949630050**, FreshRaw
+Patties Grass-Fed Beef 6 lb: PetSmart's variant page binds the code by its
+Flavor field, title and sku, but every line of its own text — ingredients,
+panel, 1596 kcal/kg and 181 kcal a patty, the adequacy sentence — is the
+chicken patty's. The record uses none of it and has no calories. Which
+product the code is on is itself in question, so it stays in the ledger
+whatever the form decision.
+
+The two check-ledger WARNs this task adds — FreshRaw Bites and Patties of
+Grass-Fed Beef, and of Cage-Free Chicken, sharing one list — are answered in
+the records: the maker prints the same statement on the Bites and the Patties
+page of each recipe, one food in two shapes.
+
+Every pack here prints a complete-diet sentence (none was readable for the beef
+patty). Range names, if these are ever seeded: `FreshRaw` and `FreshDried`, as
+the maker prints them now — neither is in the brand entry, which still names
+the older "Raw Meals". PetSmart still lists them as "Raw Bites", "Raw Patties"
+and "Raw Meals Freeze-Dried".
+
+With task #124 and batch 053's held toppers, the ledger now holds **19 frozen
+raw** records (8 `source_verified`) and **42 freeze-dried** (14
+`source_verified`), all waiting on the same decision. The research's
+recommendation is two values — frozen raw and freeze-dried — because one value
+would hide the 70% against 6% moisture that decides how the list is read.
+
 ## Batch 057 — Wellness CORE dry dog food
 
 Thirty-six records from research-data-center task #143 (PR #178), appended to
