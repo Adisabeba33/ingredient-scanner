@@ -2425,3 +2425,61 @@ max, so they are filed `dry` / `kibble` as batch 048 filed the dog bags; the
 other nine are plain kibble that also lists freeze-dried ingredients. Counts
 for `research/BRIEF-INSTINCT.md` §3: frozen raw 0, freeze-dried 0, raw-coated
 kibble 5, kibble 9.
+
+## Batch 053 — Instinct wet cat toppers
+
+Fifteen records from research-data-center task #125 (PR #168). Six 3 oz
+pouches are stored with their compositions — Healthy Cravings Chicken, Duck,
+Rabbit, Salmon and Tuna, and the Limited Ingredient Diet topper — and the nine
+freeze-dried RawBoost+ records stay in the ledger. No conflict note on any of
+the six: maker's page text and the PetSmart page that binds the size agree,
+and every calorie statement passes the arithmetic.
+
+### One recipe sold for two species
+
+**769949610021** (cat, Chicken) prints the same list and the same panel as
+**769949610014** (dog, Real Chicken, batch 051) — 855 kcal/kg, 73 kcal a
+pouch — and **769949610328** (cat, Salmon) the same as **769949610205** (dog,
+Real Salmon) — 851 kcal/kg, 72 kcal. Each pack was read off its own maker page
+and its own PetSmart page. That is one recipe under a dog label and a cat
+label, not a list pasted twice, so the two pairs are named in
+`no two products share a composition` (`lib/known-import.test.ts`), and the
+check-ledger WARN is answered in each record. The RawBoost+ Shakers do the same
+— **769949620235** cat Chicken with **769949620228** dog, **769949620266** cat
+Digestive Health with **769949620259** dog Gut Health — answered in the
+records, not seeded.
+
+### Toppers the role detector does not know yet
+
+All six print "… is intended for intermittent or supplemental feeding only",
+so none carries a `lifeStage`, and all six import as `unknown`, as batch 051's
+dog pouches do. The owner's change proposed there would reach these too if it
+also names the Limited Ingredient Diet topper:
+`instinct: ["healthy cravings", "limited ingredient diet toppers"]` in
+`BRAND_COMPLEMENTARY_LINES`. The second phrase meets the topper's range and
+variant ("Limited Ingredient Diet" + "Toppers Rabbit") and not the Limited
+Ingredient Diet kibble, which is complete and must stay judged as dinner.
+
+**769949618188** is filed with the variant "Toppers Rabbit", not the ledger's
+"Rabbit": that is the Limited Ingredient Diet Rabbit kibble's (batch 052), a
+complete food, and the pack's own name is "Limited Ingredient Diet Toppers
+Rabbit Recipe".
+
+### Nine freeze-dried toppers left in the ledger
+
+**769949602149** Mixers Chicken 6 oz (`needs_physical_label`: PetSmart's 244
+kcal a "tablespoon" beside 4352 kcal/kg is a cup's worth); Mixers Digestive
+Health **769949601098** 5.5 oz and **769949601081** 0.75 oz; Multivitamin
+**769949600671** and **769949600664**; Skin & Coat Health **769949601111** and
+**769949601104**; Shakers Chicken **769949620235** and Digestive Health
+**769949620266**, 5.5 oz. All are freeze-dried raw at 6.0% moisture max, filed
+`food_form: "unknown"` / `freeze_dried` in the ledger. Batch 048 left Instinct's
+freeze-dried ranges waiting for a form decision (`research/BRIEF-INSTINCT.md`
+§3), and that decision is the owner's. The seed's own precedent is section L:
+Weruva's Freeze Dried bags and Reveal's freeze-dried treats are filed `dry` /
+`freeze_dried`, read off the moisture. Two further gaps: calories are per
+tablespoon, a serving name the seed has not used, and the Multivitamin
+records' extras hold one malformed entry, "Choline (min): 4,000 mg/kg;
+*Taurine" at 0.45%, two guarantees run together, to be split from the source
+before either is seeded. The Multivitamin recipe prints a complete sentence
+("… for maintenance") although it is sold as a mixer.

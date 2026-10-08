@@ -204,6 +204,12 @@ const VERIFIED_051 = "2026-10-08";
 // (per cup) and the AAFCO sentence from that page. Per cup, so no arithmetic
 // witness (SEEDING-A-BATCH.md §2.4).
 const VERIFIED_052 = "2026-10-08";
+// Batch 053 — Instinct wet cat toppers, from research-data-center task #125
+// (PR #168): five Healthy Cravings pouches and the Limited Ingredient Diet
+// topper. List and panel are instinctpetfood.com's page text, read again on the
+// PetSmart page that binds the size; calories and the AAFCO sentence are from
+// that page. Per pouch, so every one has the arithmetic witness.
+const VERIFIED_053 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11829,5 +11835,35 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Rabbit Meal, Peas, Tapioca, Canola Oil (preserved with Mixed Tocopherols and Citric Acid), Rabbit, Natural Flavor, Coconut Oil, Montmorillonite Clay, Taurine, Choline Chloride, Potassium Chloride, Vitamins (Vitamin E Supplement, L-Ascorbyl-2-Polyphosphate, Niacin Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), DL-Methionine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydriodide), Freeze Dried Rabbit, Salt, Pumpkinseeds, Rosemary Extract.`,
     analysis: withExtras(withCalories(ga(35, 19, 5.5, 9, null, null), 3890, 457, "cup"), { "Vitamin E": ["min", 100, "IU/kg"], "Ascorbic Acid (Vitamin C) (mg/kg)": ["min", 85, "other"], "Omega 3 Fatty Acids": ["min", 0.7, "%"], "Omega 6 Fatty Acids": ["min", 3.4, "%"] }),
     verifiedAt: VERIFIED_052,
+  },
+  "769949610021": {
+    ingredients: `Chicken Broth, Chicken, Chicken Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine`,
+    analysis: withCalories(ga(8, 2, 1.5, 82, null, null), 855, 73, "pouch"),
+    verifiedAt: VERIFIED_053,
+  },
+  "769949610335": {
+    ingredients: `Turkey Broth, Duck, Turkey, Turkey Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine`,
+    analysis: withCalories(ga(8.5, 4, 1.5, 82, null, null), 873, 74, "pouch"),
+    verifiedAt: VERIFIED_053,
+  },
+  "769949610342": {
+    ingredients: `Pork Broth, Rabbit, Pork, Pork Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine`,
+    analysis: withCalories(ga(9, 1.5, 1.5, 84, null, null), 677, 58, "pouch"),
+    verifiedAt: VERIFIED_053,
+  },
+  "769949610328": {
+    ingredients: `Salmon Broth, Salmon, Chicken, Chicken Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine`,
+    analysis: withCalories(ga(8.5, 3.5, 1.5, 82, null, null), 851, 72, "pouch"),
+    verifiedAt: VERIFIED_053,
+  },
+  "769949610038": {
+    ingredients: `Fish Broth, Tuna, Chicken, Chicken Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine`,
+    analysis: withCalories(ga(9, 2, 1.5, 82, null, null), 822, 70, "pouch"),
+    verifiedAt: VERIFIED_053,
+  },
+  "769949618188": {
+    ingredients: `Water, Rabbit, Rabbit Liver, Ground Dried Chickpeas, Guar Gum, Natural Flavor, Sodium Phosphate, Salt, Sodium Carbonate`,
+    analysis: withCalories(ga(7, 2.5, 2, 82, null, null), 800, 68, "pouch"),
+    verifiedAt: VERIFIED_053,
   },
 };

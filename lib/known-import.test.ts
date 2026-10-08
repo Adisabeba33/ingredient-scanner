@@ -467,6 +467,19 @@ describe("data/known-formulas.ts", () => {
       // here. See section M of docs/CATALOG-CONFLICTS.md.
       "Iams ProActive Health Healthy Senior / Iams ProActive Health Healthy Senior with Chicken",
       "Iams Advanced Health Skin & Coat / Iams Advanced Health Skin & Coat Chicken & Salmon",
+      // One recipe sold for two species. Instinct's Healthy Cravings topper
+      // pouches come in a dog pack and a cat pack under different barcodes,
+      // and for Chicken and Salmon the two packs print the same list and the
+      // same panel to the digit (855 kcal/kg, 73 kcal a pouch; 851 and 72) —
+      // each read off its own maker page (…-wet-dog-food-toppers-… and
+      // …-wet-cat-food-toppers-…) and its own PetSmart page. Both declare
+      // "intermittent or supplemental feeding only", so neither claims a
+      // species' nutrient profile. Not a paste, by the test above: one flavour
+      // under two species' labels, not one list on two flavours. The ledger's
+      // variants differ by a word ("Real Chicken" on the dog pack, "Chicken"
+      // on the cat). See batch 053 of docs/CATALOG-CONFLICTS.md.
+      "Instinct Healthy Cravings Chicken / Instinct Healthy Cravings Real Chicken",
+      "Instinct Healthy Cravings Real Salmon / Instinct Healthy Cravings Salmon",
     ]);
     // Keyed by the product's POSITION, not its printed name. Two entries can
     // carry an identical `brand line variant` and still be two products — that

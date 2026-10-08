@@ -3783,9 +3783,10 @@
         "Adequacy statement as printed: \"Instinct Healthy Cravings Real Chicken Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 82.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 855 kcal/kg, 73 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 855 kcal/kg, 73 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Shares its ingredient list and panel to the letter with the dog pack 769949610014 (task #123; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3854,9 +3855,10 @@
         "Adequacy statement as printed: \"Instinct Healthy Cravings Real Duck Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 82.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 873 kcal/kg, 74 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 873 kcal/kg, 74 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3925,9 +3927,10 @@
         "Adequacy statement as printed: \"Instinct Healthy Cravings Real Rabbit Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 84.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 677 kcal/kg, 58 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 677 kcal/kg, 58 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3996,9 +3999,10 @@
         "Adequacy statement as printed: \"Instinct Healthy Cravings Real Salmon Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 82.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 851 kcal/kg, 72 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 851 kcal/kg, 72 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Shares its ingredient list and panel to the letter with the dog pack 769949610205 (task #123; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -4067,9 +4071,10 @@
         "Adequacy statement as printed: \"Instinct Healthy Cravings Real Tuna Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 82.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 822 kcal/kg, 70 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 822 kcal/kg, 70 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -4135,9 +4140,10 @@
         "Adequacy statement as printed: \"Instinct Limited Ingredient Diet Real Rabbit Recipe in Savory Gravy is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): wet topper pouch — cuts in gravy; moisture 82.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 800 kcal/kg, 68 kcal/3 oz pouch)"
+        "Calories: the maker's page prints none; calories are from PetSmart (3 oz: 800 kcal/kg, 68 kcal/3 oz pouch)",
+        "Promoted to seed 2026-10-08, batch 053 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5105,7 +5111,8 @@
         "Adequacy statement as printed: \"Instinct Raw Boost Shakers Cage-Free Chicken Recipe is intended for intermittent or supplemental feeding only.\"",
         "What the pack is (BRIEF-INSTINCT §3): freeze-dried raw topper in a shaker container; moisture 6.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4353 kcal/kg, 21 kcal/tbsp)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4353 kcal/kg, 21 kcal/tbsp)",
+        "Shares its ingredient list and panel to the letter with the dog pack 769949620228 (task #124; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
       "research_status": "source_verified"
     },
@@ -5188,7 +5195,8 @@
         "What the pack is (BRIEF-INSTINCT §3): freeze-dried raw topper in a shaker container; moisture 6.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
         "Printed footnote: Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles.",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 23 kcal/tbsp)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 23 kcal/tbsp)",
+        "Shares its ingredient list and panel to the letter with the dog pack 769949620259 (task #124; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
       "research_status": "source_verified"
     },

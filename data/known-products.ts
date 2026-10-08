@@ -5385,6 +5385,95 @@ const INSTINCT_BATCH_052: KnownProduct[] = [
   },
 ];
 
+// Batch 053 — Instinct wet cat toppers: six 3 oz pouches from research-data-center
+// task #125 (PR #168), ledger research/deep-research-instinct.json. Every one
+// prints "intended for intermittent or supplemental feeding only", which names
+// no life stage, so none is filed. The Limited Ingredient Diet topper keeps
+// "Toppers" in its variant: the pack's name carries it, and "Rabbit" alone is
+// already the Limited Ingredient Diet kibble. The nine RawBoost+ Mixers and
+// Shakers records stay in the ledger — freeze-dried raw, a form this file
+// cannot store yet (research/BRIEF-INSTINCT.md §3).
+const INSTINCT_BATCH_053: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Chicken",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610021", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Duck",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610335", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610342", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Salmon",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610328", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Tuna",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610038", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Toppers Rabbit",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949618188", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21321,4 +21410,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_050,
   ...INSTINCT_BATCH_051,
   ...INSTINCT_BATCH_052,
+  ...INSTINCT_BATCH_053,
 ];
