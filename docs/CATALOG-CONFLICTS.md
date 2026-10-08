@@ -2520,3 +2520,77 @@ only". Mixers Multivitamin prints a maintenance sentence for adult dogs. Range
 names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
 "RawBoost+ Frozen Mixers", none of which is in the brand entry or in
 `lib/nutrition-role.ts`.
+
+## Batch 057 — Wellness CORE dry dog food
+
+Thirty-six records from research-data-center task #143 (PR #178), appended to
+`research/deep-research-wellness.json`. Fourteen bags are stored with their
+compositions, eight as identity, and fourteen candidates stay in the ledger.
+No conflict note on any of the fourteen: each list, panel and calorie
+statement is the PetSmart page that binds the size, read a second time in the
+maker's label-image text, and the two agree. Calories are per cup, so there is
+no arithmetic witness. CORE+ is kibble with freeze-dried pieces at 10%
+moisture max and is filed `dry` / `kibble`, as Instinct's Raw Boost is
+(batches 048 and 052).
+
+### Copied as printed
+
+PetSmart's text is the one stored, and in three places it runs together what
+the maker's label text keeps apart: "CopperSulfate" on **076344884392** (CORE
+Wild Game 22 lb), "Green TeaExtract" on **076344884941** (CORE+ Beef & Barley
+4 lb), and "Sulfate),Peas" with no space on **076344182108** and
+**076344182122** (CORE+ Whitefish, Herring & Salmon 4 and 18 lb). The
+research judged them whitespace and kept PetSmart's text, which is the page
+its check compares word for word; they are stored as delivered (copy, do not
+tidy). Batch 052 met the same kind of slip and stored the maker's text,
+because that research had kept the maker's; here the record kept PetSmart's.
+Every ingredient and its order is otherwise identical in both readings.
+
+### Eight seeded as identity only
+
+Each is `needs_physical_label` in the ledger, a barcode to photograph
+(`docs/CURATION-QUEUE.md`, "The status is a lookup"). Every code is bound to
+its size by a PetSmart variant page; no binding is contested.
+
+- **076344884439**, **076344884446** — CORE Small Breed Healthy Weight Turkey
+  & Chicken, 4 and 12 lb. Two formulas: the maker's label adds L-Carnitine and
+  prints Potatoes where PetSmart prints Dried Ground Potatoes, and the panels
+  differ (maker 36.0% protein, 11.0% fat; PetSmart 34.0%, 13.0%).
+- **076344884958** — CORE+ Beef & Barley, 18 lb. PetSmart's 18 lb page prints
+  a different list from its 4 lb page; the 4 lb, **076344884941**, carries the
+  composition, its PetSmart page and the maker agreeing.
+- **076344884965** — CORE+ Large Breed Chicken & Turkey, 20 lb. Crude fat
+  13.0% min on the maker's page, 16.0% on PetSmart's; the list was read once
+  and no calories were found.
+- **076344884231** — CORE Puppy Chicken & Turkey, 12 lb. PetSmart's 12 lb page
+  prints a different list from its 4 lb page; the 4 lb, **076344884194**,
+  carries the composition.
+- **076344182177**, **076344182184** — CORE+ Sensitive Skin & Stomach Salmon
+  & Rice, 4 and 18 lb. PetSmart glosses five vitamins ("Vitamin B5
+  (d-Calcium Pantothenate)") and ends "Spearmint Extract"; the maker prints
+  them bare and ends "Spearmint".
+- **076344898085** — CORE Digestive Health Whitefish & Brown Rice, 22 lb.
+  PetSmart's 22 lb page prints a different list from its 4 lb page
+  (**076344898061**, a candidate).
+
+### lifeStage
+
+Set on two products only: CORE Puppy Chicken & Turkey (`puppy`, "Puppy" in the
+printed name) and CORE+ Small Breed Original Turkey & Chicken Recipe —
+Wholesome Grains (`adult`, from its printed sentence "… formulated to meet the
+nutritional levels established by the AAFCO Dog Food Nutrient Profiles for
+maintenance"). Every other row carries none: the ledger's `adult` and
+`senior` come from retailer fields, and "Age Advantage" prints no age.
+
+### Fourteen candidates left in the ledger
+
+Not seeded (a candidate is a lead): the statement was read once, or no
+calories were captured — CORE Digestive Health Small Breed 076344898030,
+Whitefish 4 lb 076344898061 and Large Breed 076344898160; CORE+ Wild Game
+076344181057, 076344181064, 076344181071; CORE+ Original Wholesome Grains
+20 lb 076344182023; CORE+ Puppy 076344181156, 076344181163; CORE+ Small Breed
+Original Grain Free 076344181033, 076344181040; CORE Large Breed
+076344884545; CORE Healthy Weight 076344884361, 076344884095. Three of them
+print the same calories as a sibling with a different list (CORE+ Wild Game =
+CORE Wild Game, CORE+ Puppy = CORE Puppy, CORE+ Small Breed Grain Free = CORE+
+Original), which a label should settle before any is promoted.

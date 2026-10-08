@@ -257,3 +257,14 @@ carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
   compositions under the owner's ruling that the AAFCO sentence is not required
   when no source page prints it (AGENTS.md §10, "when printed"). The ledger now
   reads promoted_to_seed 4, needs_physical_label 7.
+
+## 16. Six more tasks landed — research-data-center #143–#147 and #150, 2026-10-08
+
+The ledger gained 163 records (tasks #143 CORE dry dog, #144 Complete Health
+and Simple dry dog, #145 wet dog, #146 dog toppers and treats, #147 dry cat,
+#150 cat toppers and treats), copied in unchanged and seeded one batch per
+task under the status lookup. Decisions per batch are in
+docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
+
+- Batch 057 (task #143): 14 compositions, 8 identity only, 14 candidates
+  held. `CORE+` added to the brand entry.

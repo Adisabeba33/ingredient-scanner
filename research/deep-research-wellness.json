@@ -2206,9 +2206,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dog-food---natural-grain-free-lamb-5279672.html (page text). formula.json flags maker-vs-retailer analysis as not agreeing; the assembler compared every printed value with the maker page on 2026-10-08: all values agree (the flag is formatting, e.g. '35.0 %' vs '35.0%').",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dog-food---natural-grain-free-lamb-5279672.html (page text): 3637 kcal/kg, 404 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3637 = 6,599 kcal; no package total is printed, so the check is per cup: 404/3637 kg = 111 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2380,9 +2381,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dog-food---natural-grain-free-lamb-5279672.html (page text). formula.json flags maker-vs-retailer analysis as not agreeing; the assembler compared every printed value with the maker page on 2026-10-08: all values agree (the flag is formatting, e.g. '35.0 %' vs '35.0%').",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dog-food---natural-grain-free-lamb-5279672.html (page text): 3637 kcal/kg, 404 kcal/cup. Cross-check: the bag holds 22 lb = 9.98 kg × 3637 = 36,294 kcal; no package total is printed, so the check is per cup: 404/3637 kg = 111 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2579,9 +2581,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---grain-free-ocean-5298444.html (page text). formula.json flags maker-vs-retailer analysis as not agreeing; the assembler compared every printed value with the maker page on 2026-10-08: all values agree (the flag is formatting, e.g. '35.0 %' vs '35.0%').",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---grain-free-ocean-5298444.html (page text): 3635 kcal/kg, 422 kcal/cup. Cross-check: the bag holds 18 lb = 8.16 kg × 3635 = 29,679 kcal; no package total is printed, so the check is per cup: 422/3635 kg = 116 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2779,9 +2782,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---grain-free-ocean-5298444.html (page text). formula.json flags maker-vs-retailer analysis as not agreeing; the assembler compared every printed value with the maker page on 2026-10-08: all values agree (the flag is formatting, e.g. '35.0 %' vs '35.0%').",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---grain-free-ocean-5298444.html (page text): 3635 kcal/kg, 422 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3635 = 6,595 kcal; no package total is printed, so the check is per cup: 422/3635 kg = 116 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2962,9 +2966,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-wild-game-formula-5249048.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-adult-dry-dog-food---natural-grain-free-wild-game-formula-5249048.html (page text): 3705 kcal/kg, 389 kcal/cup. Cross-check: the bag holds 22 lb = 9.98 kg × 3705 = 36,972 kcal; no package total is printed, so the check is per cup: 389/3705 kg = 105 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3141,9 +3146,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-digestive-health-adult-dry-dog-food---with-grain-chicken-and-brown-rice-5306047.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-digestive-health-adult-dry-dog-food---with-grain-chicken-and-brown-rice-5306047.html (page text): 3664 kcal/kg, 399 kcal/cup. Cross-check: the bag holds 24 lb = 10.89 kg × 3664 = 39,887 kcal; no package total is printed, so the check is per cup: 399/3664 kg = 109 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -4508,9 +4514,10 @@
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-high-protein-kibble--savory-freeze-dried-pieces---beef-and-barley-wholesome-grains-5350434.html (page text): 3681 kcal/kg, 398 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3681 = 6,679 kcal; no package total is printed, so the check is per cup: 398/3681 kg = 108 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
         "The 18 lb page prints another list; this record's 4 lb page is the one the statement was copied from.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5108,9 +5115,10 @@
         "Adequacy statement cut by code from the formula file's captured passage, which began with the end of the analysis table; the sentence as printed on https://www.petsmart.com/dog/food/dry-food/wellness-core-high-protein-with-grain-small-breed-adult-dry-dog-food---turkey-5298489.html.",
         "variant carries \"Wholesome Grains\" (from the maker URL and the printed adequacy sentence) because another CORE+ product prints the same name.",
         "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
-        "Adequacy statement as printed: Wellness CORE+ Wholesome Grains Small Breed Original Deboned Turkey, Turkey Meal & Chicken Meal Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance."
+        "Adequacy statement as printed: Wellness CORE+ Wholesome Grains Small Breed Original Deboned Turkey, Turkey Meal & Chicken Meal Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5306,9 +5314,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text): 3682 kcal/kg, 409 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3682 = 6,681 kcal; no package total is printed, so the check is per cup: 409/3682 kg = 111 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5505,9 +5514,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text): 3682 kcal/kg, 409 kcal/cup. Cross-check: the bag holds 10 lb = 4.54 kg × 3682 = 16,701 kcal; no package total is printed, so the check is per cup: 409/3682 kg = 111 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5704,9 +5714,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-kibble--freeze-dried-pieces-adult-dry-dog-food---grain-free-turkey-5264792.html (page text): 3682 kcal/kg, 409 kcal/cup. Cross-check: the bag holds 20 lb = 9.07 kg × 3682 = 33,403 kcal; no package total is printed, so the check is per cup: 409/3682 kg = 111 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -6679,9 +6690,10 @@
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-puppy-dry-dog-food---natural-grain-free-5180155.html (page text): 3678 kcal/kg, 471 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3678 = 6,673 kcal; no package total is printed, so the check is per cup: 471/3678 kg = 128 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
         "The 12 lb page prints another list; this record's 4 lb page is the one the statement was copied from.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -7460,9 +7472,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-senior-dry-dog-food---natural-grain-free-5279671.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-senior-dry-dog-food---natural-grain-free-5279671.html (page text): 3573 kcal/kg, 375 kcal/cup. Cross-check: the bag holds 4 lb = 1.81 kg × 3573 = 6,483 kcal; no package total is printed, so the check is per cup: 375/3573 kg = 105 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"senior\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -7640,9 +7653,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/dry-food/wellness-core-senior-dry-dog-food---natural-grain-free-5279671.html (page text).",
         "Calories from https://www.petsmart.com/dog/food/dry-food/wellness-core-senior-dry-dog-food---natural-grain-free-5279671.html (page text): 3573 kcal/kg, 375 kcal/cup. Cross-check: the bag holds 24 lb = 10.89 kg × 3573 = 38,896 kcal; no package total is printed, so the check is per cup: 375/3573 kg = 105 g per cup, in the usual range for kibble.",
         "Adequacy: no page read prints the AAFCO statement as text (maker: label image only; PetSmart: not on page) — null; the task says this does not block source_verified.",
-        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources."
+        "Status source_verified: identity, unit code (proved, check digit valid, not in any exclusion list), statement read twice and agreeing, complete analysis and calories, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 057 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"senior\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

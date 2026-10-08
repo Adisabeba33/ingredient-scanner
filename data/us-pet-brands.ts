@@ -869,6 +869,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Divine Duos",
       "Petite Entrees",
       "Soft Puppy Bites",
+      "CORE+",
     ],
   },
   { name: "Old Mother Hubbard", owner: "WellPet", species: "dog" },

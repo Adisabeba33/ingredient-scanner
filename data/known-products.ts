@@ -5474,6 +5474,198 @@ const INSTINCT_BATCH_053: KnownProduct[] = [
   },
 ];
 
+// Batch 057 — Wellness CORE dry dog food, from research-data-center task #143
+// (PR #178), ledger research/deep-research-wellness.json: CORE, CORE+ and CORE
+// Digestive Health. CORE+ is kibble with freeze-dried pieces, filed dry/kibble
+// as Instinct's Raw Boost is. Fourteen bags carry a composition; eight
+// needs_physical_label bags are identity only — the PetSmart page that binds the
+// code and the maker's label text print two formulas, or PetSmart's size pages
+// print different lists. Fourteen candidates stay in the ledger. lifeStage only
+// where the printed name says Puppy or a printed AAFCO sentence says
+// maintenance — see docs/CATALOG-CONFLICTS.md, batch 057.
+const WELLNESS_BATCH_057: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Adult Dog Food - Natural, Grain Free, Lamb",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884576", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "076344884590", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Whitefish, Herring & Salmon Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["whitefish", "herring", "salmon"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344182108", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "076344182122", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Wild Game Duck, Lamb, Wild Boar & Rabbit Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["duck", "lamb", "boar", "rabbit"],
+    packages: [
+      { size: "22 lb", container: BAG, upc: "076344884392", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE Digestive Health",
+    variant: "Chicken & Brown Rice Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "24 lb", container: BAG, upc: "076344898023", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Small Breed Healthy Weight Turkey & Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884439", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "076344884446", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "High Protein Kibble + Savory Freeze-Dried Pieces - Beef & Barley, Wholesome Grains",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884941", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "076344884958", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Small Breed Original Turkey & Chicken Recipe — Wholesome Grains",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344182054", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Original Turkey & Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344181002", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "076344181019", scope: UNIT },
+      { size: "20 lb", container: BAG, upc: "076344181026", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Large Breed Chicken & Turkey Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    packages: [
+      { size: "20 lb", container: BAG, upc: "076344884965", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Puppy Chicken & Turkey Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "puppy",
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884194", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "076344884231", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Age Advantage Turkey & Chicken Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884507", scope: UNIT },
+      { size: "24 lb", container: BAG, upc: "076344884538", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Sensitive Skin & Stomach Salmon & Rice Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344182177", scope: UNIT },
+      { size: "18 lb", container: BAG, upc: "076344182184", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE Digestive Health",
+    variant: "Whitefish & Brown Rice Recipe",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["whitefish"],
+    packages: [
+      { size: "22 lb", container: BAG, upc: "076344898085", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21411,4 +21603,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_051,
   ...INSTINCT_BATCH_052,
   ...INSTINCT_BATCH_053,
+  ...WELLNESS_BATCH_057,
 ];
