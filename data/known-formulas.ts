@@ -229,6 +229,11 @@ const VERIFIED_058 = "2026-10-08";
 // pass the arithmetic in scripts/check-batch.mjs. "cup" is the 3 oz Petite
 // Entrées container, the maker's own word for it ("3 Ounce Cup").
 const VERIFIED_059 = "2026-10-08";
+// Batch 060 — Wellness Bowl Boosters Simply Shreds, from research-data-center
+// task #146 (PR #176): four 2.8 oz pouches, the statement read on the maker's
+// page and again on PetSmart's, agreeing; PetSmart's calories per pouch, and
+// all four pass the arithmetic. Moisture 90.0% max as printed on all four.
+const VERIFIED_060 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -12019,5 +12024,25 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Potato Starch, Chicken Liver, Egg, Tapioca Starch,  Natural Flavor, Salt, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
     analysis: withCalories(ga(8, 3, 1, 82, null, null), 1083, 92, "pouch"),
     verifiedAt: VERIFIED_059,
+  },
+  "076344012399": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Beef, Carrots.`,
+    analysis: withCalories(ga(11, 0.5, 1, 90, null, null), 490, 39, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012412": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Chicken Liver, Broccoli.`,
+    analysis: withCalories(ga(10, 0.5, 1, 90, null, null), 510, 40, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012450": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient For Processing, Beef, Carrots.`,
+    analysis: withCalories(ga(10, 0.2, 1, 90, null, null), 450, 36, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012436": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Salmon, Pumpkin.`,
+    analysis: withCalories(ga(8, 0.5, 1, 90, null, null), 530, 42, "pouch"),
+    verifiedAt: VERIFIED_060,
   },
 };

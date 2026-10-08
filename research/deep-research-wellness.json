@@ -20219,9 +20219,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Checker WARN (protein 11.0% min against moisture 90% max): copied as printed by code; all four Simply Shreds pages print moisture 90.0% max, so it is the range's loose maximum, not a slip. The calories agree with a wet shred of roughly 87-89% moisture (490 kcal/kg; protein 11.0% × 3.5 kcal/g alone is 385 kcal/kg), so the minimum, not the maximum, is the tight figure.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 060 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -20285,9 +20286,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Checker WARN (protein 10.0% min against moisture 90% max): copied as printed by code; all four Simply Shreds pages print moisture 90.0% max, so it is the range's loose maximum, not a slip. The calories agree with a wet shred of roughly 87-89% moisture (510 kcal/kg; protein 10.0% × 3.5 kcal/g alone is 350 kcal/kg), so the minimum, not the maximum, is the tight figure.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 060 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -20352,9 +20354,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Checker WARN (protein 10.0% min against moisture 90% max): copied as printed by code; all four Simply Shreds pages print moisture 90.0% max, so it is the range's loose maximum, not a slip. The calories agree with a wet shred of roughly 87-89% moisture (450 kcal/kg; protein 10.0% × 3.5 kcal/g alone is 350 kcal/kg), so the minimum, not the maximum, is the tight figure.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 060 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -20419,9 +20422,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Checker WARN (protein 8.0% min against moisture 90% max): copied as printed by code; all four Simply Shreds pages print moisture 90.0% max, so it is the range's loose maximum, not a slip. The calories agree with a wet shred of roughly 87-89% moisture (530 kcal/kg; protein 8.0% × 3.5 kcal/g alone is 280 kcal/kg), so the minimum, not the maximum, is the tight figure.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 060 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

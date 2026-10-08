@@ -6237,6 +6237,113 @@ const WELLNESS_BATCH_059: KnownProduct[] = [
   },
 ];
 
+// Batch 060 — Wellness dog toppers and treats, from research-data-center task
+// #146 (PR #176). Four Bowl Boosters Simply Shreds pouches carry a composition;
+// each pack prints "This is a complementary food intended to be fed with a
+// complete and balanced dog food diet." Tender Toppers and Soft Puppy Bites
+// ("… intended for intermittent or supplemental feeding only") are identity
+// only — two formula generations. None imports as a dinner: Bowl Boosters reads
+// `topper` and Wellness Puppy Bites `treat` in lib/nutrition-role.ts. The seven
+// freeze-dried Bowl Boosters (BARE, Functional) stay in the ledger, the form
+// decision batch 053 left with the owner; seven candidates stay too. See
+// docs/CATALOG-CONFLICTS.md, batch 060.
+const WELLNESS_BATCH_060: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Simply Shreds",
+    variant: "Chicken, Beef & Carrots",
+    species: "dog",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken", "beef"],
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "076344012399", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Simply Shreds",
+    variant: "Chicken Liver & Broccoli",
+    species: "dog",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "076344012412", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Simply Shreds",
+    variant: "Tuna, Beef & Carrots",
+    species: "dog",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["tuna", "beef"],
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "076344012450", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Simply Shreds",
+    variant: "Wild Salmon & Pumpkin",
+    species: "dog",
+    texture: "shredded",
+    presentation: "in_broth",
+    foodForm: "wet",
+    proteins: ["chicken", "salmon"],
+    packages: [
+      { size: "2.8 oz", container: POUCH, upc: "076344012436", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Tender Toppers",
+    variant: "Lamb & Salmon",
+    species: "dog",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb", "salmon"],
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "076344885399", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Tender Toppers",
+    variant: "Turkey & Chicken",
+    species: "dog",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "076344885375", scope: UNIT },
+      { size: "2 lb", container: POUCH, upc: "076344885382", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Puppy Bites",
+    variant: "Soft Lamb & Salmon",
+    species: "dog",
+    texture: "bits",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb", "salmon"],
+    lifeStage: "puppy",
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "076344896142", scope: UNIT },
+      { size: "8 oz", container: POUCH, upc: "076344890171", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -22177,4 +22284,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_057,
   ...WELLNESS_BATCH_058,
   ...WELLNESS_BATCH_059,
+  ...WELLNESS_BATCH_060,
 ];

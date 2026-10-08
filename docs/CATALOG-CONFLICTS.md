@@ -2728,3 +2728,77 @@ One reading, or no calories: CORE Paté Whitefish, Salmon & Herring
 076344090342; Stews Turkey & Duck 076344017356, Venison & Salmon
 076344017455; CORE Digestive Health Lamb 076344087052; Simple Limited
 Ingredient Diet Turkey & Potato 076344894094.
+
+## Batch 060 — Wellness dog toppers and treats
+
+Twenty-two records from research-data-center task #146 (PR #176). Four are
+stored with their compositions, five as identity; six freeze-dried toppers
+and seven candidates stay in the ledger.
+
+### Simply Shreds, stored, and read as toppers
+
+**076344012399**, **076344012412**, **076344012450**, **076344012436** —
+Bowl Boosters Simply Shreds, 2.8 oz pouches. Each statement was read on the
+maker's page and again on PetSmart's, and they agree; PetSmart's calories are
+per pouch and all four pass the arithmetic. No conflict note. Every pack
+guarantees moisture 90.0% max beside 8–11% protein, which check-ledger
+questions; it is the range's loose maximum, printed alike on all four, and
+the calories (450–530 kcal/kg) fit a shred of 87–89% water. Stored as printed.
+
+Each prints "This is a complementary food intended to be fed with a complete
+and balanced dog food diet." The seed carries no claims, and
+`lib/nutrition-role.ts` reads the range "Bowl Boosters Simply Shreds" as
+`topper` through its existing "bowl boosters" entry, so nothing was added to
+the module; a test pins the reading ("reads the seeded Wellness toppers and
+treats as not dinner …"). No `lifeStage`: the sentence names none.
+
+### Five seeded as identity only
+
+`needs_physical_label`, two formula generations — the maker's label text and
+the PetSmart page that binds the code print different lists:
+
+- **076344885399** Tender Toppers Lamb & Salmon 8 oz (the guarantees differ
+  too); **076344885375**, **076344885382** Tender Toppers Turkey & Chicken,
+  8 oz and 2 lb. They print "This product is intended for intermittent or
+  supplemental feeding only" and read `topper` through "bowl boosters".
+- **076344890171**, **076344896142** — Puppy Bites Soft Lamb & Salmon, 8 and
+  3 oz; PetSmart's list adds Chickpeas and Garlic Powder. They read `treat`:
+  brand and range together are "Wellness Puppy Bites", the maker's printed
+  name, which `KNOWN_TREAT_LINES` holds. `lifeStage: "puppy"` from the printed
+  name. The range is new to the brand entry as "Puppy Bites", the maker's
+  current spelling for soft and crunchy alike; the older "Soft Puppy Bites"
+  stays in the entry.
+
+Tender Toppers and Puppy Bites are 25–30% moisture and are filed `dry`, the
+semi-moist treat shelf the panel check already allows for.
+
+### Six freeze-dried toppers left in the ledger
+
+**076344885252** BARE Nutrient-Rich Beef and **076344885245** BARE Turkey
+Hearts, 4 oz (`source_verified`: list read twice, 8.0% moisture max, calories
+per cup — 5192 and 4400 kcal/kg); Functional Freeze Dried **076344885306**
+Digestive Health, **076344885269** Joint Health, **076344885276** Skin &
+Coat, **076344885290** Heart Health, 4 oz (`needs_physical_label`, two
+formula generations; calories per tablespoon). All are freeze-dried raw,
+filed `dry` / `freeze_dried` in the ledger. They are held for the decision
+batch 053 left with the owner for Instinct's freeze-dried toppers: whether
+freeze-dried is filed `dry`, as section L filed Weruva's and Reveal's, or
+waits for a form of its own. If `dry`, the two BARE pouches can go in with
+their compositions as they stand; the Functional four need a "tablespoon"
+serving name, which the seed has not used, and a pack photo.
+
+### Candidates and what was not filed
+
+Seven candidates, not seeded: Functional Immune Health **076344885337**
+(its maker panel, 2.00% protein min against 20.0% moisture max, looks wrong
+for a freeze-dried food); Hearty Toppers 5.5 oz cartons **076344016014**,
+**076344016038**, **076344016045** (one reading, no calories, texture
+`unknown`); CORE Brainiac Puppy **076344882183** and CORE Tiny Trainers
+**076344882169** (one reading; Tiny Trainers prints no feeding sentence); and
+Puppy Bites Crunchy Chicken & Carrots **076344890164**. Their ranges — CORE
+Brainiac Puppy, CORE Tiny Trainers — are not added to the brand entry until
+something is seeded under them.
+
+The Simply Shreds Variety Pack, **076344012467** (12 × 2.8 oz), was bound
+only as the 12-count; it is not in the ledger and is not added to
+`data/known-multipacks.ts`, because no source names its members.

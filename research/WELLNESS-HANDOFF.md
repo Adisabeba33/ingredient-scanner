@@ -274,3 +274,8 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
   held. Ranges added: `Complete Health Petite Entrées`, `CORE Hearty Cuts`,
   `CORE Mini Meals`, `CORE 95%`. The seed's older `Mini Meals` and `Petite
   Entrees` stay in the entry, empty. CORE 95%'s role is an open question.
+- Batch 060 (task #146): 4 compositions (Simply Shreds), 5 identity only
+  (Tender Toppers, Soft Puppy Bites); 6 freeze-dried Bowl Boosters held for
+  the owner's form decision; 7 candidates held. Ranges added: `Bowl Boosters
+  Simply Shreds`, `Bowl Boosters Tender Toppers`, `Puppy Bites`. Roles come
+  from lib/nutrition-role.ts as it stands (topper, treat); a test pins them.
