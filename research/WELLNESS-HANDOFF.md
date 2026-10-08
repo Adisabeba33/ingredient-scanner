@@ -258,12 +258,12 @@ carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
   when no source page prints it (AGENTS.md §10, "when printed"). The ledger now
   reads promoted_to_seed 4, needs_physical_label 7.
 
-## 16. Seven more tasks landed — research-data-center #143–#148 and #150, 2026-10-08
+## 16. Eight more tasks landed — research-data-center #143–#150, 2026-10-08
 
-The ledger gained 200 records (tasks #143 CORE dry dog, #144 Complete Health
+The ledger gained 228 records (tasks #143 CORE dry dog, #144 Complete Health
 and Simple dry dog, #145 wet dog, #146 dog toppers and treats, #147 dry cat,
-#150 cat toppers and treats, then #148 wet cat under CORE), copied in
-unchanged and seeded one batch per task under the status lookup. Decisions per batch are in
+#150 cat toppers and treats, #148 wet cat under CORE, then #149 wet cat
+outside CORE), copied in unchanged and seeded one batch per task under the status lookup. Decisions per batch are in
 docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
 
 - Batch 057 (task #143): 14 compositions, 8 identity only, 14 candidates
@@ -290,10 +290,19 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
   `CORE Signature Selects`, and the CORE+ Indoor pâté under `CORE+` — the
   ranges the packs print, where the research folded them into `CORE`.
 
-Totals after batch 067: the ledger holds 211 records; the catalog holds 111
-Wellness products under 147 barcodes, 55 with a composition — see
-INVENTORY-WELLNESS.md. Still open for the owner: the freeze-dried form
-(BARE, Functional), CORE 95%'s role, whether CORE+ Digestive Health is a
-range of its own, the slug-shaped Complete Health variants, and the empty
-older ranges in the brand entry (`Mini Meals`, `Petite Entrees`, `Soft Puppy
-Bites`).
+- Batch 066 (task #146's six freeze-dried Bowl Boosters, PR #29, landed
+  with the freeze-dried food form): 2 compositions, 4 identity only. Ranges
+  `Bowl Boosters BARE`, `Bowl Boosters Functional`.
+- Batch 068 (task #149, PR #182, wet cat outside CORE): 27 compositions, 1
+  identity only (Chicken & Lobster Pâté 5.5 oz, whose list differs from its
+  3 oz size's by one dash glyph), no candidate. Ranges added: `Appetizing
+  Entrées`, `Complete Health Purrfect Duos`. No life stage (no AAFCO sentence
+  printed); every product reads as dinner.
+
+Totals after batch 068: the ledger holds 239 records; the catalog holds 143
+Wellness products under 181 barcodes, 84 with a composition — see
+INVENTORY-WELLNESS.md. Still open for the owner: CORE 95%'s role, whether
+CORE+ Digestive Health is a range of its own, the slug-shaped Complete Health
+variants, the Chicken & Lobster Pâté hyphen, Healthy Indulgence's role (none
+of it is filed yet), and the empty older ranges in the brand entry (`Mini
+Meals`, `Petite Entrees`, `Soft Puppy Bites`, `Divine Duos`).

@@ -3365,3 +3365,95 @@ Simply Shreds and Tender Toppers; the variant is the rest of the ledger's name.
 Every one prints "This is a complementary food intended to be fed with a
 complete and balanced dog food diet" and reads `topper` through "bowl
 boosters", as Simply Shreds does. No life stage.
+
+## Batch 068 — Wellness wet cat food outside CORE
+
+Twenty-eight records from research-data-center task #149 (PR #182), all
+`source_verified`. Twenty-seven are stored with their compositions and one as
+identity; no candidate. No conflict note on the twenty-seven: each statement
+is the text of the PetSmart page that binds the code, read a second time in
+the maker's label-image text, with the same words in the same order (nine
+differ only by a dash or space glyph, and PetSmart's text is the one stored).
+For five the maker lists the code on no page, so the second reading is the
+maker's page for the same recipe in another size: **076344028468**,
+**076344028475** (the maker's page lists only a 1.4 oz pouch),
+**076344027669**, **076344089346**, **076344088653**. Calories are PetSmart's,
+per pouch, can or serving, and all pass the arithmetic in
+`scripts/check-batch.mjs`.
+
+- Appetizing Entrées, 2.8 oz pouches: **076344028482**, **076344028468**,
+  **076344028475**.
+- Complete Health: Gravies Salmon Entree **076344027560** (3 oz) and
+  **076344027669** (5.5 oz), one list, one panel and one kcal/kg; Grilled
+  **076344091912**, **076344091936**, **076344091950**, **076344091974**;
+  Minced **076344036593**, **076344036692**, **076344036814**; Morsels
+  **076344036845**; Sliced **076344036906**; pâtés **076344088639**,
+  **076344089346**, **076344088615**.
+- Complete Health Purrfect Duos, 2.64 oz tubs: **076344037019**,
+  **076344037033**, **076344037057**, **076344037071**, **076344037118**,
+  **076344037132**, **076344037156**, **076344037170**, **076344037194**,
+  **076344037095**.
+
+### Ranges, sizes and the Purrfect Duos serving
+
+Ranges and variants are as delivered. "Appetizing Entrées" and "Complete
+Health Purrfect Duos" are new to the brand entry; the older, empty "Divine
+Duos" stays in it. The Complete Health texture names — Gravies, Grilled,
+Minced, Morsels, Sliced — stay at the head of the variant, where the research
+put them; nothing has to be told apart by moving them.
+
+A Purrfect Duos tub is 2.64 oz in two halves, and PetSmart prints its
+calories per "serving", half the tub. They are stored per "serving", and the
+arithmetic runs at 1.32 oz (1032 kcal/kg × 1.32 oz = 38.6 against a printed
+39, and so on). Six Purrfect Duos "Cuts" name no gravy or sauce and are
+delivered with presentation `unknown`; they are stored so.
+
+### Copied as printed
+
+The panels name their guarantees as PetSmart prints them, and they are stored
+so: "Omega-6 Fatty Acids*" and "Omega-3 Fatty Acids*" carry the asterisk of
+the page's footnote, and "Zinc (mg/kg)" and "Biotin (mg/kg)" carry their units
+in the name. Five stored lists (076344028482, 076344028468, 076344028475,
+076344036692, 076344036906) print "d–Calcium Pantothenate" with an en dash,
+as delivered. `scripts/match-vitamins.mjs` on the seven bracketed Vitamins groups
+finds no constant (nearest `V_FLAKED_FISH`, 10 of 11 different), and the
+Minerals groups are not vitamin blocks; all are inline.
+
+### lifeStage
+
+None. No page read prints an AAFCO sentence, and the ledger's `adult` and
+`kitten` come from PetSmart's "Life Stage" field. **076344088615**, Complete
+Health Chicken Pâté 3 oz, is `kitten` in the ledger and both its PetSmart and
+maker page addresses say kitten, but its printed name as delivered does not;
+a pack settles it.
+
+### One seeded as identity only
+
+**076344088653**, Complete Health Chicken & Lobster Pâté 5.5 oz, is
+`source_verified` and is stored as identity only. Its statement, copied from
+PetSmart's 5.5 oz page, prints "d–Calcium Pantothenate" with an en dash; the
+3 oz of the same product, **076344088639**, prints "d-Calcium Pantothenate"
+with a hyphen, and so does the maker's label-image text read for both. Panels
+and kcal/kg agree (1256; 1256 × 5.5 oz = 195.8 against 196). One product
+cannot carry two strings (`lib/known-import.test.ts`, "every bag of one
+product carries the same composition", whose allowlist must not grow), and
+the string is copied, not tidied. So the 3 oz carries the composition and the
+5.5 oz the identity; the ledger record stays `source_verified` with a note.
+The owner may rule the hyphen in, which would let the 5.5 oz share the 3 oz
+statement.
+
+### Roles
+
+Every product reads `unknown`, judged as dinner. Appetizing Entrées and
+Purrfect Duos print no feeding statement on the pages read, and
+`lib/nutrition-role.ts` is unchanged. Over the whole seed no barcode changes
+role. Healthy Indulgence is not in this task: PetSmart's nine variants print
+no complete label data, so its role stays open.
+
+### Not filed
+
+Fifty-three codes are bound to a flavour and size by a PetSmart page but have
+no label data (1.4 oz pouches, 3, 5.5 and 12.5 oz cans, Healthy
+Indulgence); they are listed in research-data-center's task-149.md and are not
+in the ledger. The twelve Signature Selects codes the research also read are
+in the catalog from batch 067 and were left out of the delivered file.
