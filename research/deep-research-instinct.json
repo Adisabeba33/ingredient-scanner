@@ -2490,9 +2490,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949656319; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2628,9 +2629,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658702; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -2760,9 +2762,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658696; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3158,9 +3161,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658764; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3272,9 +3276,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658849; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3386,9 +3391,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658559; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3500,9 +3506,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658566; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3601,9 +3608,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949655091; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -3704,9 +3712,10 @@
         "GA footnote printed: *Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles. (maker page).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code in this batch; data/gs1-prefixes.ts lists it as Instinct (owner not GEPIR-confirmed).",
         "Barcode: The page prints the 13-digit gtin13 0769949658719; the UPC-A is its last 12 digits (leading zero of a GTIN-13 is the standard UPC-A prefix), check digit validated above. Maker page lists the size but carries no barcode. Code is new: pf-check.py known finds it in no catalog file, multipack list, wrong-barcode list or ledger.",
-        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2)."
+        "Identity: an Instinct product (instinctpetfood.com and a PetSmart page titled Instinct) — not Purina ONE True Instinct or Royal Canin (BRIEF-INSTINCT §2).",
+        "Promoted to seed 2026-10-08, batch 052 (branch seed/instinct-rdc-121-125): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

@@ -2374,3 +2374,54 @@ research read names the pack (`package_type: "other"`, texture and
 presentation `unknown`), and `KnownPackage.container` has no value for a pack
 nobody has named; choosing tub, tray or box would be inventing it. A
 photograph of one pack settles the container. They stay `source_verified`.
+
+## Batch 052 — Instinct dry cat food
+
+Fourteen bags from research-data-center task #121 (PR #167). Nine are stored
+with their compositions — Original Chicken (5 and 11 lb) and Salmon (4.5 and
+10 lb), Raw Boost Salmon and the two Indoor Health bags, Limited Ingredient
+Diet Salmon and Rabbit — and five as identity. No conflict note on any of the
+nine: the maker's page text and the PetSmart page that binds each size agree.
+Calories are per cup, so there is no arithmetic witness.
+
+### Five seeded as identity only — two formula generations
+
+For each, the PetSmart page that binds the code prints a different list from
+the maker's current page, so which formula the bag carries is a photograph
+(`needs_physical_label`; `docs/CURATION-QUEUE.md`, "The status is a lookup").
+PetSmart's calories belong to its own list and are not used.
+
+- **769949658757** — Original Chicken for Kittens, 4.5 lb. The maker lists
+  Freeze Dried Pollock; PetSmart lists freeze-dried chicken, liver and heart.
+  PetSmart's 4456 kcal/kg, 557 kcal/cup not used.
+- **769949658511**, **769949658528** — Ultimate Protein Chicken, 4 and 10 lb.
+  The same Pollock-against-chicken difference. 4470 kcal/kg, 491 kcal/cup not
+  used.
+- **769949658627**, **769949658634** — Raw Boost Chicken, 5 and 10 lb.
+  Citric Acid in the fat's preservative, and Pollock on the maker's list only.
+  4327 kcal/kg, 496 kcal/cup not used.
+
+Only the kitten bag carries a `lifeStage`, from "for Kittens" in its printed
+name. The other four carry none: the sentences read sit on the pages that
+print the other list (batch 048's rule).
+
+The kitten bag's variant is "Chicken for Kittens", not the ledger's
+"Chicken": that is the adult Original bag's variant, and one brand, range,
+variant and species is one product. The words are the pack's own — "Original
+Kibble for Kittens Chicken Recipe" on the maker's page, "… with Real Chicken
+for Kittens" in its AAFCO sentence.
+
+### A retailer's missing space, judged as one formula
+
+**769949656319** — Raw Boost Salmon, 4.5 lb. PetSmart prints "FreezeDried Beef
+Liver" where the maker prints "Freeze Dried Beef Liver", and no final full
+stop; every ingredient and its order are otherwise identical. The research
+judged it a retailer typo and the maker's text is stored. No conflict note.
+
+### Raw Boost, filed as dry
+
+The five Raw Boost bags are kibble with freeze-dried raw pieces at 9% moisture
+max, so they are filed `dry` / `kibble` as batch 048 filed the dog bags; the
+other nine are plain kibble that also lists freeze-dried ingredients. Counts
+for `research/BRIEF-INSTINCT.md` §3: frozen raw 0, freeze-dried 0, raw-coated
+kibble 5, kibble 9.

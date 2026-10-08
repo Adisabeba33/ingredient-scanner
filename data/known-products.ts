@@ -5228,6 +5228,163 @@ const INSTINCT_BATCH_051: KnownProduct[] = [
   },
 ];
 
+// Batch 052 — Instinct dry cat food: fourteen barcodes from research-data-center
+// task #121 (PR #167), ledger research/deep-research-instinct.json. All kibble
+// at 9–10% moisture max, filed dry / kibble / plain; Raw Boost is kibble with
+// freeze-dried raw pieces, filed dry as batch 048 filed the dog bags.
+//
+// Nine carry a composition. The last three products are identity only: the
+// PetSmart page that binds their codes prints a different list from the
+// maker's page, so which formula the bag carries is a photograph
+// (needs_physical_label). Only the kitten bag carries a lifeStage among them,
+// from "for Kittens" in its printed name; its variant names the kittens because
+// "Chicken" alone is already the adult Original bag. Sizes drop the trailing
+// full stop ("4.5 lb.").
+const INSTINCT_BATCH_052: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658559", scope: UNIT },
+      { size: "11 lb", container: BAG, upc: "769949658566", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658764", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658849", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949656319", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Indoor Health - Rabbit",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["rabbit"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658702", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Indoor Health - Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658696", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949655091", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["rabbit"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658719", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Chicken for Kittens",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658757", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Ultimate Protein",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "769949658511", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658528", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658627", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658634", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21163,4 +21320,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_049,
   ...WELLNESS_BATCH_050,
   ...INSTINCT_BATCH_051,
+  ...INSTINCT_BATCH_052,
 ];
