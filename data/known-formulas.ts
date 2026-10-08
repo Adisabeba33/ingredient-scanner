@@ -191,6 +191,13 @@ const VERIFIED_048 = "2026-10-07";
 // sentence on any page read; the owner's ruling of 2026-10-07 lets that pass.
 // Calories are per cup, so there is no arithmetic witness.
 const VERIFIED_050 = "2026-10-07";
+// Batch 051 — Instinct wet dog food and dog toppers, from research-data-center
+// task #123 (PR #142): four Original cans and four Healthy Cravings pouches.
+// List and panel are instinctpetfood.com's page text, read a second time on the
+// PetSmart page that binds the size; calories and the AAFCO sentence are from
+// that PetSmart page. Calories per can and per pouch, so every one of the eight
+// has the arithmetic witness (SEEDING-A-BATCH.md §2.1).
+const VERIFIED_051 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11731,5 +11738,45 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Salmon Oil, Dried Chicory Root, Choline Chloride, Taurine, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Spearmint, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
     analysis: withExtras(withCalories(ga(36, 15, 5, 10, null, 0.2), 3682, 409, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
     verifiedAt: VERIFIED_050,
+  },
+  "769949607106": {
+    ingredients: `Chicken, Turkey, Chicken Broth, Chicken Liver, Ground Flaxseed, Montmorillonite Clay, Dicalcium Phosphate, Egg Product, Peas, Potassium Chloride, Carrots, Salt, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Cobalt Proteinate, Potassium Iodide), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Choline Chloride, L-Ascorbyl-2-Polyphosphate, Menhaden Fish Oil (preserved with Mixed Tocopherols), Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(9.5, 8.5, 3, 78, null, null), 1342, 502), { "Omega 3 Fatty Acids": ["min", 0.2, "%"], "Omega 6 Fatty Acids": ["min", 1, "%"] }),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949607205": {
+    ingredients: `Beef, Beef Broth, Beef Liver, Ground Flaxseed, Montmorillonite Clay, Menhaden Fish Oil (Preserved With Mixed Tocopherols), Dried Egg Product, Peas, Carrots, Potassium Chloride, Salt, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Cobalt Proteinate, Potassium Iodide), Tricalcium Phosphate, Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), L-Abscorbyl-2-Polyphosphate, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(11.5, 10, 3, 78, null, null), 1441, 539), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.45, "%"] }),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949618010": {
+    ingredients: `Chicken, Chicken Broth, Chicken Liver, Cod, Peas, Eggs, Pea Fiber, Ground Flaxseed, Montmorillonite Clay, Guar Gum, Salt, Potassium Chloride, Dried Kelp, Cassia Gum, Xanthan Gum, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Cobalt Proteinate, Potassium Iodide), Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin A Supplement, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid), Choline Chloride, L-Ascorbyl-2-Polyphosphate, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(8.5, 4.5, 3, 78, null, null), 1033, 161), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.7, "%"] }),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949610274": {
+    ingredients: `Beef, Beef Broth, Beef Liver, Ground Dried Peas, Cod, Pea Fiber, Tricalcium Phosphate, Montmorillonite Clay, Ground Flaxseed, Guar Gum, Sunflower Oil, Dried Kelp, Potassium Chloride, Salt, Cassia Gum, Xanthan Gum, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Cobalt Proteinate, Potassium Iodide), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid), Choline Chloride, L-Ascorbyl-2-Polyphosphate, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(8.5, 4.5, 2, 78, null, null), 1013, 158), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.45, "%"] }),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949610007": {
+    ingredients: `Beef Broth, Beef, Chicken, Beef Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine.`,
+    analysis: withCalories(ga(9, 2, 1.5, 82, null, null), 860, 73, "pouch"),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949610014": {
+    ingredients: `Chicken Broth, Chicken, Chicken Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine.`,
+    analysis: withCalories(ga(8, 2, 1.5, 82, null, null), 855, 73, "pouch"),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949610229": {
+    ingredients: `Lamb Broth, Lamb, Beef, Beef Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine.`,
+    analysis: withCalories(ga(8.5, 5, 1.5, 82, null, null), 1004, 85, "pouch"),
+    verifiedAt: VERIFIED_051,
+  },
+  "769949610205": {
+    ingredients: `Salmon Broth, Salmon, Chicken, Chicken Liver, Eggs, Ground Dried Peas, Natural Flavor, Sodium Phosphate, Guar Gum, Salt, Sodium Carbonate, DL-Methionine.`,
+    analysis: withCalories(ga(8.5, 3.5, 1.5, 82, null, null), 851, 72, "pouch"),
+    verifiedAt: VERIFIED_051,
   },
 };

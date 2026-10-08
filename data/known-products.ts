@@ -5108,6 +5108,126 @@ const WELLNESS_BATCH_050: KnownProduct[] = [
   },
 ];
 
+// Batch 051 — Instinct wet dog food and dog toppers: eight barcodes from
+// research-data-center task #123 (PR #142), ledger research/deep-research-instinct.json.
+// Original cans are complete ("all life stages except for growth of large size
+// dogs" — filed `all`, as batch 048). Healthy Cravings pouches print "intended
+// for intermittent or supplemental feeding only": a topper, and that sentence
+// gives no life stage, so none is filed. lib/nutrition-role.ts does not yet
+// know the range — see docs/CATALOG-CONFLICTS.md, batch 051.
+// The three Freshly Crafted Meals records stay in the ledger: no source names
+// the pack, and a container is not something to guess.
+const INSTINCT_BATCH_051: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "all",
+    packages: [
+      { size: "13.2 oz", container: CAN, upc: "769949607106", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Beef",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "all",
+    packages: [
+      { size: "13.2 oz", container: CAN, upc: "769949607205", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken (Small Breed)",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949618010", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Beef (Small Breed)",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "all",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949610274", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Beef",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610007", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Chicken",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610014", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Lamb",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610229", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Salmon",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610205", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21042,4 +21162,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_048,
   ...WELLNESS_BATCH_049,
   ...WELLNESS_BATCH_050,
+  ...INSTINCT_BATCH_051,
 ];

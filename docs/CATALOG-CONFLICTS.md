@@ -2327,3 +2327,50 @@ None carries a conflict note, and none carries a `lifeStage`, because no
 sentence was read. The Small Breed 4 lb code, `076344884170`, is unaffected
 by the ruling and stays out: its size binding is the dispute (batch 049
 above).
+
+## Batch 051 — Instinct wet dog food and dog toppers
+
+Eleven records from research-data-center task #123 (PR #142), appended to
+`research/deep-research-instinct.json`. Eight are stored with their
+compositions — four Original cans and four Healthy Cravings pouches — and
+three stay in the ledger. No conflict note on any of the eight: each list and
+panel is the maker's page text, read a second time on the PetSmart page that
+binds the size, and the two agree. Calories are per can and per pouch, and all
+eight pass the arithmetic in `scripts/check-batch.mjs`.
+
+### Copied as printed
+
+- **769949607106** — Original Real Chicken, 13.2 oz. The research notes that
+  PetSmart prints the statement with a spacing and punctuation difference
+  only; the maker's text is stored.
+- **769949607205** — Original Real Beef, 13.2 oz, prints
+  "L-Abscorbyl-2-Polyphosphate". Stored as the maker's page spells it, not
+  corrected (`docs/SEEDING-A-BATCH.md` §4: copy, do not tidy).
+
+### Healthy Cravings: a topper the role detector does not know yet
+
+**769949610007**, **769949610014**, **769949610229**, **769949610205** each
+print "… is intended for intermittent or supplemental feeding only. This is a
+complementary food and should be fed along with a complete and balanced
+diet." The seed carries no claims, and `lib/nutrition-role.ts` reads the role
+from brand, range and variant; "Healthy Cravings" is in none of its lists, so
+these import as `unknown` and are judged as dinner. The module is not changed
+here — no test or guide step requires it, and `research/BRIEF-INSTINCT.md` §4
+leaves the range names as a recommendation. The change that would fit the
+module is a brand-scoped entry, `instinct: ["healthy cravings"]` in
+`BRAND_COMPLEMENTARY_LINES`, the route Reveal's Limited Ingredient tins and
+Cesar Simply Crafted take to `complementary`. It is the owner's to decide,
+before these barcodes are written to the catalog.
+
+No `lifeStage` on the four: the supplemental sentence names none, and the
+ledger's `all` is not in it. The range is new to `data/us-pet-brands.ts`.
+
+### Freshly Crafted Meals — three records left in the ledger
+
+**769949609612**, **769949609605**, **769949609629** — Cage-Free Chicken,
+Grass-Fed Beef, Pork & Wild-Caught Salmon, 11 oz. `source_verified`, complete
+for maintenance, with list, panel and calories per cup. Not seeded: no page the
+research read names the pack (`package_type: "other"`, texture and
+presentation `unknown`), and `KnownPackage.container` has no value for a pack
+nobody has named; choosing tub, tray or box would be inventing it. A
+photograph of one pack settles the container. They stay `source_verified`.
