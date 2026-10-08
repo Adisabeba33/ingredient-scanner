@@ -2,7 +2,12 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { Check, Loader2, Download, AlertTriangle, RefreshCw } from "lucide-react";
-import { verdictLabel, type ImportVerdict } from "@/lib/known-import";
+import {
+  identityLabel,
+  verdictLabel,
+  type IdentityVerdict,
+  type ImportVerdict,
+} from "@/lib/known-import";
 import { seedButtonLabel } from "@/lib/seed-button-label";
 
 /**
@@ -53,6 +58,24 @@ interface BoxCounts {
   error?: string;
 }
 
+/**
+ * The identity-only rows, counted apart from the compositions.
+ *
+ * A seeded package with no formula goes into the catalog as "known product,
+ * composition pending": the app names it when scanned and asks for a photo of
+ * the label. That is a smaller claim than a composition, so it gets its own
+ * numbers rather than being folded into "write N".
+ */
+type IdentityCounts = Partial<Record<IdentityVerdict, number>> & {
+  total?: number;
+  /** After a press: new rows inserted, empty rows filled in, rows left alone. */
+  written?: number;
+  replaced?: number;
+  skipped?: number;
+  failed?: number;
+  error?: string | null;
+};
+
 interface Preview {
   /** Products the import can act on — the ones that have a formula. */
   total: number;
@@ -61,6 +84,7 @@ interface Preview {
   counts: Record<ImportVerdict, number>;
   products?: PreviewProduct[];
   boxes?: BoxCounts;
+  identity?: IdentityCounts;
   error?: string;
   message?: string;
 }
@@ -71,6 +95,7 @@ interface Result {
   reportsCleared?: number;
   counts?: Record<ImportVerdict, number>;
   boxes?: BoxCounts;
+  identity?: IdentityCounts;
   /** Photographed rows that took the seeded guaranteed analysis and nothing else. */
   panelsFilled?: number;
   /** Rows the update did not reach — errored, or matched nothing. */
@@ -315,7 +340,13 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
   // same reason as the boxes: it is work this press will do, and a button that
   // says "Nothing to write" while sixteen reports stay thin is lying.
   const panelsToFill = preview?.counts?.["panel-only"] ?? 0;
-  const anythingToDo = toWrite + boxesToMark + panelsToFill;
+  // Identity-only rows this press will write: new codes, and codes holding an
+  // empty lookup row. Both are writes of the same row; the panel below keeps
+  // them apart.
+  const identitiesToWrite = preview?.identity?.error
+    ? 0
+    : (preview?.identity?.write ?? 0) + (preview?.identity?.replace ?? 0);
+  const anythingToDo = toWrite + boxesToMark + panelsToFill + identitiesToWrite;
   const ours = (preview?.products ?? []).filter(
     (p) => p.verdict === "ours-is-better"
   );
@@ -331,15 +362,14 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
           Compositions from manufacturer records. Filed as community readings —
           a photograph of the real pack still wins.
         </p>
-        {/* Not every seeded product has a composition. The ones without appear
-            on the coverage page with a barcode to look for, and stay out of the
-            catalog until a real ingredient list arrives — an entry there
-            without one would read to the consumer app as a recent miss. */}
+        {/* Not every seeded product has a composition. The ones without go
+            in as identity-only rows — see the panel below — and stay on the
+            coverage page as barcodes to find until a real list arrives. */}
         {preview?.seeded && preview.seeded > preview.total ? (
           <p className="mt-1 text-[11px] leading-snug text-faint">
             {preview.total} of {preview.seeded} seeded products have a
-            composition. The other {preview.seeded - preview.total} are on the
-            coverage page as barcodes to find.
+            composition. The other {preview.seeded - preview.total} are
+            identity only.
           </p>
         ) : null}
       </div>
@@ -417,6 +447,34 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
           ) : null}
         </div>
       ) : null}
+      {/* The identity-only rows, said separately because they are a smaller
+          claim than a composition: "this barcode is this product, and nobody
+          has confirmed what is in it". Shown even when there is nothing to
+          write, for the same reason as the boxes. */}
+      {preview?.identity && !preview.identity.error && (preview.identity.total ?? 0) > 0 ? (
+        <div className="rounded-input bg-surfaceSoft px-3 py-2.5">
+          <p className="text-[12px] font-semibold text-ink">
+            {preview.identity.total} identity-only — composition pending
+          </p>
+          <p className="mt-0.5 text-[11px] leading-snug text-muted">
+            {(["write", "replace", "identical", "held"] as IdentityVerdict[])
+              .filter((v) => (preview.identity?.[v] ?? 0) > 0)
+              .map((v) => `${preview.identity?.[v]} ${identityLabel(v)}`)
+              .join(", ")}
+            . The app names the product when it is scanned, says its
+            composition is still being confirmed, and asks for a photo of the
+            label. Nothing is scored. A seeded formula, our own photograph or a
+            shopper&apos;s label replaces the row; it never replaces one of
+            them. The codes stay on the coverage page as barcodes to find.
+          </p>
+        </div>
+      ) : null}
+      {preview?.identity?.error ? (
+        <p className="text-[11.5px] leading-snug text-amber">
+          Couldn&apos;t check the identity-only rows: {preview.identity.error}.
+        </p>
+      ) : null}
+
       {preview?.boxes?.error ? (
         <p className="text-[11.5px] leading-snug text-amber">
           Couldn&apos;t check the variety packs: {preview.boxes.error}. If this
@@ -437,7 +495,10 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         <div className="rounded-input bg-sage-50 px-3 py-2.5">
           <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-sage-700">
             <Check size={14} strokeWidth={2.5} aria-hidden="true" />
-            {result.written} written
+            {result.written} compositions written
+            {result.identity?.written || result.identity?.replaced
+              ? `, ${(result.identity.written ?? 0) + (result.identity.replaced ?? 0)} identity-only written`
+              : ""}
             {result.panelsFilled ? `, ${result.panelsFilled} panels filled in` : ""}
             {result.boxes?.written ? `, ${result.boxes.written} boxes marked` : ""}
             {result.reportsCleared ? `, ${result.reportsCleared} stale reports cleared` : ""}
@@ -447,6 +508,23 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
               The variety packs were not marked: {result.boxes.error}
             </p>
           )}
+          {/* A row that changed between the read and the write is left alone
+              on purpose — somebody's label may have just arrived. Said, so the
+              shortfall is not mistaken for a failure; failures are said too. */}
+          {result.identity?.skipped ? (
+            <p className="mt-1 text-[11px] leading-snug text-muted">
+              {result.identity.skipped} identity-only row
+              {result.identity.skipped === 1 ? " was" : "s were"} left alone:
+              something arrived under the code after it was checked.
+            </p>
+          ) : null}
+          {result.identity?.failed || (result.identity?.error && !result.identity?.total) ? (
+            <p className="mt-1 text-[11px] leading-snug text-amber">
+              Identity-only rows not written
+              {result.identity.failed ? ` (${result.identity.failed})` : ""}
+              {result.identity.error ? `: ${result.identity.error}` : ""}
+            </p>
+          ) : null}
           {/* Said out loud, because a panel that did not get written looks
               exactly like one that did until the next press offers it again. */}
           {result.panelsFailed ? (
@@ -573,7 +651,7 @@ export function SeedImport({ adminToken }: { adminToken: string }) {
         ) : (
           <Download size={16} strokeWidth={1.8} aria-hidden="true" />
         )}
-        {seedButtonLabel({ toWrite, boxesToMark, panelsToFill })}
+        {seedButtonLabel({ toWrite, boxesToMark, panelsToFill, identitiesToWrite })}
       </button>
 
       {/* Separate from the write, because it is a separate decision: the

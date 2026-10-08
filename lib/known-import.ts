@@ -246,3 +246,164 @@ export function verdictLabel(verdict: ImportVerdict): string {
   if (verdict === "panel-only") return "our photo kept, panel filled in";
   return "conflict — left alone";
 }
+
+/**
+ * ── Identity-only packages ───────────────────────────────────────────────
+ *
+ * A seeded package with NO formula: we know the barcode, the brand, the range
+ * and the flavour, and nothing about what is in the tin. The owner decided on
+ * 8 October 2026 that these go into the catalog too, so the consumer app can
+ * name the product when it is scanned, say its composition is still being
+ * confirmed, and ask for a photograph of the label.
+ *
+ * ── Why `found: false` ────────────────────────────────────────────────────
+ *
+ * Because that is what the shared table already says about a code it can name
+ * and cannot read. `reason = 'no-ingredients'` is a MISS reason (migration
+ * 0005: "not-found | no-ingredients (miss only)"), and the consumer app's
+ * lookup writes exactly this shape when an open database has a name and no
+ * list. Everything downstream gates on `found`: the app's `isServableRow`, its
+ * `holdsReading` (so a contribution OPENS the code rather than replacing a
+ * reading — and still earns the discovery), its product page, pet catalog and
+ * brand pages, and this tool's coverage page, which keeps the code on the list
+ * of barcodes to go and find instead of calling it "photographed". A
+ * `found: true` row with no list would be the one shape every one of those has
+ * to special-case.
+ *
+ * What makes the row ours rather than a lookup miss is `source: 'community'` —
+ * no other writer puts a source on a `found: false` row — and that is what the
+ * consumer app reads to keep it from being overwritten by a poorer miss.
+ */
+export type IdentityVerdict =
+  /** Nothing under the code. Inserted, and only if still nothing is there. */
+  | "write"
+  /**
+   * A row that holds nothing anybody read: a lookup miss (perhaps with an
+   * open database's name for the product), or our own earlier identity row
+   * that the seed has since corrected. Updated in place, guarded so it can
+   * only land on a row that is still empty.
+   */
+  | "replace"
+  /** Our identity row, saying exactly what the seed says. Nothing to do. */
+  | "identical"
+  /**
+   * Anything else — a reading, a product row of any source, a box, our own
+   * photograph. An identity row asserts LESS than any of them, so it never
+   * replaces one. The seed keeps the code on the coverage page either way.
+   */
+  | "held";
+
+/** The columns `identityVerdict` needs from the stored row. */
+export interface ExistingIdentityRow {
+  found: boolean | null;
+  source: string | null;
+  reason: string | null;
+  ingredients_text: string | null;
+  mode?: string | null;
+  product_name?: string | null;
+  brands?: string | null;
+  species?: string | null;
+  food_form?: string | null;
+}
+
+/** What the seed knows about one identity-only package. */
+export interface IdentityFields {
+  productName: string;
+  brands: string;
+  species: string;
+  /** The seed's own value, passed through untouched — see lib/food-form.ts. */
+  foodForm: string;
+}
+
+/**
+ * Is this one of OUR identity rows — a code we name and cannot yet read?
+ *
+ * `found` is optional so a caller that already filtered on it (the misses
+ * list selects `found = false`) need not select it again; only an explicit
+ * `true` disqualifies.
+ */
+export function isIdentityRow(row: {
+  found?: boolean | null;
+  source?: string | null;
+  reason?: string | null;
+  ingredients_text?: string | null;
+} | null | undefined): boolean {
+  if (!row || row.found === true) return false;
+  if (row.reason !== "no-ingredients") return false;
+  if ((row.ingredients_text ?? "").trim()) return false;
+  return sourceRank(row.source) >= sourceRank(INCOMING_SOURCE);
+}
+
+/**
+ * Decide, for one identity-only package.
+ *
+ * Narrower than `importVerdict` on purpose: a formula may replace a worse
+ * READING, because it is a better one. An identity row is not a reading at
+ * all, so the only things it may land on are rows that hold none.
+ */
+export function identityVerdict(
+  existing: ExistingIdentityRow | null | undefined,
+  incoming: IdentityFields
+): IdentityVerdict {
+  if (!existing) return "write";
+  // A box. Its row is a decision somebody made about the code; see
+  // multipackVerdict. (No seeded package shares a box's code — a test says
+  // so — but the rule should not depend on that.)
+  if (existing.reason === "multipack") return "held";
+  // A product row, whoever wrote it — including our own photograph of a pack
+  // whose list is still to be typed, which is found and verified.
+  if (existing.found === true) return "held";
+  // Any text at all under the code is somebody's, even on a miss row.
+  if ((existing.ingredients_text ?? "").trim()) return "held";
+
+  const rank = sourceRank(existing.source);
+  // Our own photograph, or anything else ranked above us.
+  if (rank > sourceRank(INCOMING_SOURCE)) return "held";
+  if (rank === sourceRank(INCOMING_SOURCE)) {
+    // A community row that is not an identity row is not ours to reshape.
+    if (!isIdentityRow(existing)) return "held";
+    return sameIdentity(existing, incoming) ? "identical" : "replace";
+  }
+  // A lookup miss: no reader, nothing read. Naming it is strictly more.
+  return "replace";
+}
+
+function sameIdentity(existing: ExistingIdentityRow, incoming: IdentityFields): boolean {
+  return (
+    existing.mode === "pet" &&
+    (existing.product_name ?? "") === incoming.productName &&
+    (existing.brands ?? "") === incoming.brands &&
+    (existing.species ?? "") === incoming.species &&
+    (existing.food_form ?? "") === incoming.foodForm
+  );
+}
+
+/** Human wording for the identity summary the operator reads. */
+export function identityLabel(verdict: IdentityVerdict): string {
+  if (verdict === "write") return "new";
+  if (verdict === "replace") return "over an empty lookup row";
+  if (verdict === "identical") return "already written";
+  return "left alone — a reading or a product is there";
+}
+
+/**
+ * An identity row nobody has scanned yet — not a miss anybody suffered.
+ *
+ * The misses list reads every `found = false` row as "somebody looked for this
+ * and went away with nothing". An identity row written by the import is
+ * `found = false` too, and hundreds of them nobody has ever reached for would
+ * bury the ones people did. The consumer app stamps `last_hit_at` each time it
+ * answers a scan from one, so a row with that stamp is a real, wanted product
+ * whose label is still to read — exactly what the list is for — and a row
+ * without it is only the seed, which the coverage page already shows.
+ *
+ * `hitColumns` is false on a catalog too old to have `last_hit_at`; then there
+ * is no way to tell, and the identity rows are left to the coverage page.
+ */
+export function isUnscannedIdentityRow(
+  row: Parameters<typeof isIdentityRow>[0] & { last_hit_at?: string | null },
+  hitColumns: boolean
+): boolean {
+  if (!isIdentityRow(row)) return false;
+  return !hitColumns || !row?.last_hit_at;
+}

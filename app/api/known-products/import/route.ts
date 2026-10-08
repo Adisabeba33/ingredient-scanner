@@ -9,13 +9,22 @@ import { deleteIn, selectIn } from "@/lib/chunked-in";
 import { isVeterinaryDiet } from "@/lib/vet-diet";
 import { detectNutritionRole } from "@/lib/nutrition-role";
 import {
+  identityVerdict,
   importVerdict,
   multipackVerdict,
   needsADecision,
   type ExistingBoxRow,
+  type ExistingIdentityRow,
   type ExistingRow,
+  type IdentityVerdict,
   type ImportVerdict,
 } from "@/lib/known-import";
+import {
+  identityCandidates,
+  identityRow,
+  seededProductName,
+  type IdentityCandidate,
+} from "@/lib/known-identity";
 import { KNOWN_PRODUCTS, type KnownProduct } from "@/data/known-products";
 import { KNOWN_FORMULAS } from "@/data/known-formulas";
 import { KNOWN_MULTIPACKS } from "@/data/known-multipacks";
@@ -49,6 +58,19 @@ import { KNOWN_MULTIPACKS } from "@/data/known-multipacks";
  * & Tuna has gone 11% protein to 9% under one UPC — and walking over the older
  * one destroys the only evidence that happened. The rule lives in
  * lib/known-import.ts, where it can be read and tested.
+ *
+ * ── Identity-only packages ─────────────────────────────────────────────────
+ *
+ * Seeded packages with no formula used to be skipped here, for the reason
+ * above: an empty row shadowed the open databases. The owner decided on
+ * 8 October 2026 that they go in anyway, as rows that say "known product,
+ * composition pending" — so the consumer app can name the tin, say its list is
+ * still being confirmed, and ask for a photo of the label. The shadowing is
+ * answered on the app's side: it recognises these rows (`found: false`,
+ * `reason: 'no-ingredients'`, `source: 'community'`), still asks the open
+ * databases about them, and only falls back to the name when they have no
+ * list either. The rules for when such a row may be written are
+ * `identityVerdict` in lib/known-import.ts; the row is lib/known-identity.ts.
  *
  * GET previews. POST writes. Both gated by ADMIN_TOKEN.
  */
@@ -103,8 +125,9 @@ function analysisFor(upc: string) {
 /**
  * Every seeded product that has a formula, flattened to a row-shaped thing.
  *
- * A product without a formula is skipped rather than written empty — an empty
- * row is the miss-shadowing problem this whole route exists to avoid.
+ * A product without a formula is not a candidate HERE: it is written by
+ * `writeIdentities` below as an identity-only row, under rules of its own that
+ * never let it land on anything somebody read.
  */
 function candidates(): Candidate[] {
   const out: Candidate[] = [];
@@ -115,11 +138,9 @@ function candidates(): Candidate[] {
       // Range, name and flavour joined the way the catalog stores them, so a
       // later capture of the same tin produces the same string.
       // `line` is null where the pack prints no range, so the name is built
-      // from the parts that exist rather than around a hole.
-      const productName = [product.line, product.variant]
-        .filter(Boolean)
-        .join(" ")
-        .trim();
+      // from the parts that exist rather than around a hole. Shared with the
+      // identity rows, which a formula may later replace.
+      const productName = seededProductName(product);
       out.push({
         code: canonicalBarcode(pkg.upc),
         printed: pkg.upc,
@@ -430,6 +451,165 @@ async function writeBoxes(
 }
 
 /**
+ * The identity-only packages, decided against what the catalog holds.
+ *
+ * Read with the same chunked `.in()` as everything else here, for the same
+ * reason: a row the server silently dropped would read as "nothing there",
+ * and "nothing there" is the one verdict that inserts.
+ */
+async function decideIdentities(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>
+) {
+  const list = identityCandidates(KNOWN_PRODUCTS, (upc) => !!KNOWN_FORMULAS[upc]);
+  if (list.length === 0) return { error: null, decided: [] as DecidedIdentity[] };
+
+  const { rows, error } = await selectIn<ExistingIdentityRow & { code: string }>(
+    admin,
+    "barcode_cache",
+    "code, found, source, reason, ingredients_text, mode, product_name, brands, species, food_form",
+    "code",
+    list.map((c) => c.code)
+  );
+  if (error) return { error, decided: [] as DecidedIdentity[] };
+
+  const existing = new Map<string, ExistingIdentityRow>();
+  for (const row of rows) existing.set(row.code, row);
+  return {
+    error: null,
+    decided: list.map((c) => ({
+      ...c,
+      verdict: identityVerdict(existing.get(c.code), c),
+    })),
+  };
+}
+
+type DecidedIdentity = IdentityCandidate & { verdict: IdentityVerdict };
+
+function summariseIdentities(decided: { verdict: IdentityVerdict }[]) {
+  const counts: Record<IdentityVerdict, number> & { total: number } = {
+    total: decided.length,
+    write: 0,
+    replace: 0,
+    identical: 0,
+    held: 0,
+  };
+  for (const d of decided) counts[d.verdict] += 1;
+  return counts;
+}
+
+/** How many guarded updates run at once. Small: these are single-row writes. */
+const IDENTITY_UPDATE_CONCURRENCY = 8;
+
+/**
+ * Write the identity-only rows: "known product, composition pending".
+ *
+ * ── Two kinds of write, both unable to land on a reading ──────────────────
+ *
+ * A code with no row is INSERTED with `ON CONFLICT DO NOTHING`. If somebody
+ * contributed a label between the read at the top of this request and now,
+ * their row is there and this does nothing to it — the insert simply comes
+ * back one row short, and that is reported.
+ *
+ * A code holding an empty lookup row (or our own older identity row) is
+ * UPDATED, one row at a time, with the emptiness repeated as the filter:
+ * `found = false`, no ingredient text, a miss reason, not our photograph. A
+ * row that has become anything else since it was read matches nothing and is
+ * counted as skipped. An upsert could not promise that — it writes whatever
+ * it finds.
+ *
+ * Neither sends `guaranteed_analysis`, `nutrition`, `image_url`, `hits` or
+ * `created_at` (see lib/known-identity.ts), so a panel a shopper deposited
+ * under the code, and how many people looked for it, survive the write.
+ *
+ * ── Replaced later ───────────────────────────────────────────────────────
+ *
+ * By a seeded formula: `importVerdict` reads an identity row as "a name and
+ * no ingredients" and writes over it, which is the point. By a shopper's
+ * label: the consumer app treats it as an empty shelf (`found: false`). By our
+ * own capture: verified outranks community.
+ */
+async function writeIdentities(
+  admin: NonNullable<ReturnType<typeof createSupabaseAdminClient>>
+) {
+  const { error, decided } = await decideIdentities(admin);
+  if (error) return { error, written: 0, replaced: 0 };
+
+  const counts = summariseIdentities(decided);
+  let written = 0;
+  let replaced = 0;
+  let skipped = 0;
+  let failed = 0;
+  let firstError: string | null = null;
+
+  const fresh = decided.filter((d) => d.verdict === "write");
+  if (fresh.length > 0) {
+    const rows = fresh.map(identityRow);
+    const insert = (payload: Record<string, unknown>[]) =>
+      admin
+        .from("barcode_cache")
+        .upsert(payload, { onConflict: "code", ignoreDuplicates: true })
+        .select("code");
+    let { data, error: insertError } = await insert(rows);
+    if (insertError && isUndefinedColumn(insertError)) {
+      const retry = await insert(withoutColumns(rows, NEW_COLUMNS));
+      data = retry.data;
+      insertError = retry.error;
+    }
+    if (insertError) {
+      failed += fresh.length;
+      firstError ??= insertError.message;
+    } else {
+      // Only rows the database says it inserted. The rest found a row there
+      // already and were left alone, which is the guard working.
+      written = (data ?? []).length;
+      skipped += fresh.length - written;
+    }
+  }
+
+  const stale = decided.filter((d) => d.verdict === "replace");
+  const update = async (c: DecidedIdentity, dropNew: boolean) => {
+    // The key is the filter, not part of the change.
+    const full: Record<string, unknown> = { ...identityRow(c) };
+    delete full.code;
+    const patch = dropNew ? withoutColumns([full], NEW_COLUMNS)[0] : full;
+    return admin
+      .from("barcode_cache")
+      .update(patch)
+      .eq("code", c.code)
+      .eq("found", false)
+      .is("ingredients_text", null)
+      .in("reason", ["not-found", "no-ingredients"])
+      .or("source.is.null,source.neq.verified")
+      .select("code");
+  };
+  for (let i = 0; i < stale.length; i += IDENTITY_UPDATE_CONCURRENCY) {
+    const slice = stale.slice(i, i + IDENTITY_UPDATE_CONCURRENCY);
+    const results = await Promise.all(
+      slice.map(async (c) => {
+        let result = await update(c, false);
+        if (result.error && isUndefinedColumn(result.error)) {
+          result = await update(c, true);
+        }
+        return result;
+      })
+    );
+    for (const { data, error: updateError } of results) {
+      if (updateError) {
+        failed += 1;
+        firstError ??= updateError.message;
+      } else if ((data ?? []).length > 0) {
+        replaced += 1;
+      } else {
+        // The row stopped being empty after it was read. Left alone.
+        skipped += 1;
+      }
+    }
+  }
+
+  return { ...counts, written, replaced, skipped, failed, error: firstError };
+}
+
+/**
  * Retire every stored report for these codes, in every mode.
  *
  * Any report written before the row had a composition — or, for a panel fill,
@@ -471,6 +651,7 @@ export async function GET(req: Request) {
     return Response.json({ error: "lookup_failed", message: error }, { status: 500 });
   }
   const boxResult = await decideBoxes(admin);
+  const identityResult = await decideIdentities(admin);
   return Response.json({
     total: decided.length,
     // Separate from `counts` on purpose: a box is not a formula waiting to be
@@ -479,10 +660,16 @@ export async function GET(req: Request) {
     boxes: boxResult.error
       ? { error: boxResult.error }
       : summariseBoxes(boxResult.decided),
-    // Seeded products WITHOUT a formula are not in `decided` at all — the
-    // import has nothing to write for them. Said out loud so "27 of 40" reads
-    // as a known state rather than as thirteen products having gone missing.
+    // Seeded products WITHOUT a formula are not in `decided`: they are the
+    // identity-only rows below. Said out loud so "27 of 40" reads as a known
+    // state rather than as thirteen products having gone missing.
     seeded: KNOWN_PRODUCTS.reduce((n, p) => n + p.packages.length, 0),
+    // Separate from `counts` for the same reason as the boxes: "known product,
+    // composition pending" is a different claim from a composition, and one
+    // tally holding both would make "write 92" mean two things at once.
+    identity: identityResult.error
+      ? { error: identityResult.error }
+      : summariseIdentities(identityResult.decided),
     counts: summarise(decided),
     products: decided.map((d) => ({
       code: d.printed,
@@ -659,6 +846,12 @@ export async function POST(req: Request) {
   // to write is no reason to leave sixteen photographs without a panel.
   const panels = await writePanels(admin, decided);
 
+  // Independent too: a code the seed can only name is no reason to hold back
+  // a formula, and a batch with no formulas left is no reason to leave the
+  // app unable to name a tin it has a barcode for. Disjoint from `decided` by
+  // construction — a package has a formula or it does not.
+  const identity = await writeIdentities(admin);
+
   const toWrite = decided.filter((d) => d.verdict === "write");
   if (toWrite.length === 0) {
     return Response.json({
@@ -669,6 +862,7 @@ export async function POST(req: Request) {
       panelError: panels.error,
       reportsCleared: await clearReports(admin, panels.codes),
       boxes,
+      identity,
       counts: summarise(decided),
       conflicts: decided
         .filter((d) => d.verdict === "conflict")
@@ -740,7 +934,9 @@ export async function POST(req: Request) {
   }
   if (writeError) {
     return Response.json(
-      { error: "write_failed", message: writeError.message },
+      // The identity rows went in before this write and are not undone by
+      // its failure, so they are reported rather than lost from the answer.
+      { error: "write_failed", message: writeError.message, identity },
       { status: 500 }
     );
   }
@@ -760,6 +956,7 @@ export async function POST(req: Request) {
     panelError: panels.error,
     reportsCleared,
     boxes,
+    identity,
     counts: summarise(decided),
     conflicts: decided
       .filter((d) => d.verdict === "conflict")

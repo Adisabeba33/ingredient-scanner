@@ -1,6 +1,7 @@
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { adminRefusal, checkAdmin } from "@/lib/admin-auth";
 import { classifyMiss, MISS_ORDER, printedForm, type MissVerdict } from "@/lib/miss-verdict";
+import { isUnscannedIdentityRow } from "@/lib/known-import";
 
 /**
  * What shoppers looked for and did not get.
@@ -47,6 +48,8 @@ interface MissRow {
   code: string;
   hits: number | null;
   reason: string | null;
+  /** Null on a lookup miss; `community` on an identity row the import wrote. */
+  source?: string | null;
   product_name: string | null;
   brands: string | null;
   created_at: string | null;
@@ -62,26 +65,36 @@ export async function GET(req: Request) {
   }
 
   const FULL =
-    "code, hits, reason, product_name, brands, created_at, last_hit_at";
+    "code, hits, reason, source, product_name, brands, created_at, last_hit_at";
   // `last_hit_at` and `hits` arrived with later migrations, and asking for one
   // missing column fails the WHOLE select — the same trap /api/coverage
   // documents. Come back with less rather than reporting nothing.
-  const BASE = "code, reason, product_name, brands, created_at";
+  const BASE = "code, reason, source, product_name, brands, created_at";
 
   let rows: MissRow[] = [];
   let thin = false;
-  const read = async (columns: string, order: string) =>
-    admin
+  // Identity rows nobody has scanned are dropped in the query as well as
+  // below, because the cap applies first: six hundred of them, all at zero
+  // hits, would otherwise take the 400 slots from misses people actually hit.
+  // Every lookup miss has no source, so `source is null` keeps all of those.
+  const read = async (columns: string, order: string, hitColumns: boolean) => {
+    const query = admin
       .from("barcode_cache")
       .select(columns)
       .eq("found", false)
-      .or(PET_ONLY)
+      .or(PET_ONLY);
+    return (
+      hitColumns
+        ? query.or("source.is.null,last_hit_at.not.is.null")
+        : query.is("source", null)
+    )
       .order(order, { ascending: false })
       .limit(CAP);
+  };
 
-  let { data, error } = await read(FULL, "hits");
+  let { data, error } = await read(FULL, "hits", true);
   if (error) {
-    const retry = await read(BASE, "created_at");
+    const retry = await read(BASE, "created_at", false);
     data = retry.data;
     error = retry.error;
     thin = !error;
@@ -95,7 +108,13 @@ export async function GET(req: Request) {
   // app answered "that's the case, scan a tin inside", which is the right
   // answer. Counting it here would put our own correct behaviour at the top of
   // a queue of things to fix.
-  const misses = rows.filter((r) => r.reason !== "multipack");
+  //
+  // Nor is an identity row nobody has scanned: the import wrote it, and the
+  // coverage page already lists it as a barcode to find. One a shopper DID
+  // scan stays — see isUnscannedIdentityRow.
+  const misses = rows.filter(
+    (r) => r.reason !== "multipack" && !isUnscannedIdentityRow(r, !thin)
+  );
 
   const classified = misses.map((r) => ({
     code: r.code,

@@ -51,6 +51,19 @@ const KEY_CHUNK = 200;
  */
 const OURS = ["verified", "community"];
 
+/*
+ * Every listing and count below also asks `found = true`.
+ *
+ * Until the identity-only rows (app/api/known-products/import) no row of ours
+ * was ever `found = false`, so this changed nothing that was already here. Those
+ * rows are `community` and hold a name and a barcode — the seed, written so the
+ * consumer app can name a tin it cannot yet read. Six hundred of them at the
+ * top of this list, and in "no ingredients" and "no report", would bury the
+ * captures this screen is for. They are listed where they belong: the
+ * coverage page, as barcodes to go and find. An exact barcode still finds one
+ * (`lookupAnySource`).
+ */
+
 /** The three shelves the catalog holds, once one has been chosen. */
 type Shelf = "pet" | "human" | "cosmetics";
 
@@ -156,7 +169,8 @@ export async function POST(req: Request) {
     let query = admin
       .from("barcode_cache")
       .select("code, mode, ingredients_text, product_name")
-      .in("source", OURS);
+      .in("source", OURS)
+      .eq("found", true);
     if (modeFilter) query = onShelf(query, modeFilter);
     const { data } = await query
       .order("created_at", { ascending: false })
@@ -173,7 +187,8 @@ export async function POST(req: Request) {
     let query = admin
       .from("barcode_cache")
       .select("code", { count: "exact", head: true })
-      .in("source", OURS);
+      .in("source", OURS)
+      .eq("found", true);
     if (modeFilter) query = onShelf(query, modeFilter);
     const { count } = await query;
     return count ?? 0;
@@ -186,7 +201,8 @@ export async function POST(req: Request) {
       const base = admin
         .from("barcode_cache")
         .select("code", { count: "exact", head: true })
-        .in("source", OURS);
+        .in("source", OURS)
+        .eq("found", true);
       // A row written before the mode column existed is pet — the same
       // convention /api/coverage follows, and the tool was pet-only then.
       const { count } =
@@ -275,6 +291,7 @@ export async function POST(req: Request) {
       .from("barcode_cache")
       .select(columns)
       .in("source", OURS)
+      .eq("found", true)
       .order("created_at", { ascending: false })
       .limit(LIMIT);
 
