@@ -2493,6 +2493,9 @@ records' extras hold one malformed entry, "Choline (min): 4,000 mg/kg;
 before either is seeded. The Multivitamin recipe prints a complete sentence
 ("… for maintenance") although it is sold as a mixer.
 
+**Landed 8 October 2026** with the owner's freeze-dried form: batch 063 (four
+compositions, three identity; the two Shakers held for their container).
+
 ## Instinct RawBoost+ dog toppers — task #124, all 21 held in the ledger
 
 Twenty-one records from research-data-center task #124 (PR #169), appended to
@@ -2531,6 +2534,9 @@ only". Mixers Multivitamin prints a maintenance sentence for adult dogs. Range
 names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
 "RawBoost+ Frozen Mixers", none of which is in the brand entry or in
 `lib/nutrition-role.ts`.
+
+**Landed 8 October 2026** with the owner's two forms: batch 064 (sixteen
+Mixers as identity; the Shakers and Frozen Mixers held for their container).
 
 ## Batch 054 — Instinct dry dog food
 
@@ -2735,6 +2741,8 @@ raw** records (8 `source_verified`) and **42 freeze-dried** (14
 `source_verified`), all waiting on the same decision. The research's
 recommendation is two values — frozen raw and freeze-dried — because one value
 would hide the 70% against 6% moisture that decides how the list is read.
+
+**Landed 8 October 2026**, when the owner chose those two values: batch 065.
 
 ## Batch 057 — Wellness CORE dry dog food
 
@@ -3217,3 +3225,119 @@ second reading on re-check. Signature Selects Kitten Flaked Tuna & Salmon
 waits to be confirmed. Thirteen product sizes have no bound code, and
 PetSmart's 076344060505 (a 5.3 oz shredded variant with no flavour printed)
 and 076344060536 ("Tuna", no maker page) were not filed.
+
+## Batch 063 — Instinct RawBoost+ Mixers for cats, freeze-dried
+
+The nine freeze-dried toppers batch 053 left in the ledger (research-data-center
+task #125, PR #168), landed under the owner's food-form decision of 8 October
+2026: `foodForm: "freeze-dried"`, read on a dry basis (`lib/food-form.ts`,
+`analysisBasis`). Four stored with their compositions, three as identity, two
+left in the ledger.
+
+### Four compositions, calories per tablespoon
+
+**769949601098**, **769949601081** — Mixers Digestive Health, 5.5 and 0.75
+oz; **769949601111**, **769949601104** — Mixers Skin & Coat Health, 5.5 and
+0.75 oz. List and panel are the maker's page text; PetSmart's agrees, except
+that it drops the space in "Dried Pumpkin,Sweet Potato" (Digestive Health) —
+judged a retailer typo, as batch 052's missing space was, and the maker's text
+is stored. No conflict note. Calories are PetSmart's, per tablespoon (18 and
+19 kcal; the maker prints none): stored with `servingName: "tablespoon"`, the
+first in the seed. There is no arithmetic witness for a spoon, so
+`lib/known-import.test.ts` holds every per-tablespoon figure to 2–10 g of food
+(these are about 4 g). The Bacillus coagulans figure is printed "(CFU/lb)" without
+min or max; stored as the research filed it, a minimum in CFU/lb, as batch 054
+stored its microorganism count.
+
+### Three identity only
+
+- **769949602149** Mixers Chicken 6 oz (`needs_physical_label`): PetSmart's 244
+  kcal a "tablespoon" beside 4352 kcal/kg is 56 g — a cup's worth. The test
+  above would refuse it.
+- **769949600671**, **769949600664** Mixers Multivitamin 5.5 and 0.75 oz
+  (`source_verified`): one extra guarantee reached the ledger as "Choline (min):
+  4,000 mg/kg; *Taurine" at 0.45% — two guarantees run together. Nothing is
+  fixed here; the composition waits for the guarantee to be split from the
+  source, and the records stay `source_verified`.
+
+### Role: complementary, except Multivitamin
+
+Every Mixers and Shakers pack prints "… is intended for intermittent or
+supplemental feeding only", and resolves to `complementary` through the
+Instinct entries in `BRAND_COMPLEMENTARY_LINES`, listed by recipe. Mixers
+Multivitamin prints "… formulated to meet the nutritional levels established
+by the AAFCO Cat Food Nutrient Profiles for maintenance" although it is sold
+as a mixer; the maker's printed statement decides, so it is left out of that
+list, stays `unknown` (judged as the complete food the pack declares) and
+carries `lifeStage: "adult"` from that sentence. No life stage on the others.
+
+### Two Shakers left in the ledger
+
+**769949620235** Shakers Chicken and **769949620266** Shakers Digestive Health,
+5.5 oz (`source_verified`): the research files `package_type: "other"`, and
+`KnownPackage.container` has no value for a pack no source names — the
+Freshly Crafted reason (batch 051). A photograph of one shaker, or a container
+value for it, lets them in with their compositions.
+
+## Batch 064 — Instinct RawBoost+ Mixers for dogs, freeze-dried
+
+Task #124 (PR #169). Sixteen Mixers codes seeded as identity only, seven
+products: Grass-Fed Beef 1, 6 and 14 oz; Cage-Free Chicken 1 and 14 oz; Gut
+Health 0.75, 5.5, 12.5 and 23 oz; Multivitamin 0.75 and 5.5 oz; Skin & Coat
+Health 0.75, 5.5 and 12.5 oz; Tranquility and Mobility Support 5.5 oz. All are
+`needs_physical_label` — the PetSmart page that binds each code prints a
+different list from the maker's current page — and no size binding is
+contested. Sizes without the trailing full stop, as batch 054.
+
+**769949601234**, Skin & Coat Health 12.5 oz: its PetSmart page prints the Gut
+Health label. The code is bound by that page's title and size selector, and
+Gut Health 12.5 oz has its own code (769949601227) on its own page, so the
+research's reading — a retailer paste error, not a wrong barcode — stands and it
+is seeded as identity. Its sibling case, 769949630050 (batch 065), is held
+because there even the page's own item number is the other product's.
+
+No `lifeStage` on any: every adequacy sentence sits on the PetSmart page
+printing the other list (batch 048's rule). Role as batch 063; Multivitamin
+prints the AAFCO maintenance sentence for adult dogs and is left `unknown`.
+
+**Five left in the ledger**: Shakers Grass-Fed Beef **769949620242**, Cage-Free
+Chicken **769949620228**, Gut Health **769949620259** (`source_verified`) and
+Frozen Mixers Gut Health **769949632009**, Skin & Coat Health **769949632016**
+(`needs_physical_label`, frozen raw, 62.0% moisture max). All file
+`package_type: "other"` and no source names the container (batch 051's
+reason). The Frozen Mixers would be the first `frozen-raw` toppers.
+
+## Batch 065 — Instinct FreshRaw and FreshDried
+
+Task #126 (PR #173), thirty-one records: thirty seeded, one held.
+
+- **Frozen raw** (`foodForm: "frozen-raw"`, texture `raw`, 70–75% moisture
+  max, read on a wet basis): FreshRaw Meals Cage-Free Chicken, Cage-Free
+  Turkey, Grass-Fed Beef, Grass-Fed Lamb — 8 and 16 oz pouches, eight
+  compositions; FreshRaw Bites (Wild-Caught Pollock, Grass-Fed Beef, Cage-Free
+  Chicken, Grass-Fed Lamb) and FreshRaw Patties Cage-Free Chicken — eight
+  codes, identity only.
+- **Freeze-dried** (`foodForm: "freeze-dried"`, about 6% moisture, read on a
+  dry basis): FreshDried Raw Meals for cats, Cage-Free Chicken 9.5 and 25 oz and
+  Wild-Caught Pollock 9 oz — three compositions; the eleven dog bags (Pollock,
+  Beef, Chicken, Lamb, Chicken for Puppies) identity only.
+
+The compositions are the maker's page text, read again on the PetSmart page
+that binds the size, word for word; calories per cup and the AAFCO maintenance
+sentence from that page. Per cup, so no arithmetic witness. Vitamin blocks
+match no constant (match-vitamins) and are stored inline. `lifeStage: "adult"`
+on the compositions from that sentence; on the identity rows only the puppy
+bags carry one, `puppy`, from "for Puppies" in the printed name — the others'
+sentences sit on the pages printing the other list. All complete diets, so
+the role stays `unknown`, judged as dinner.
+
+The ranges are `FreshRaw` and `FreshDried`, as the maker prints them now, with
+the shape or meal in the variant ("Bites Grass-Fed Beef Recipe"); both added to
+the brand entry. FreshRaw Bites and Patties of one recipe share a list on the
+maker's pages (the two check-ledger WARNs, answered in the records); the
+Patties are identity only, so nothing seeded shares a composition.
+
+**769949630050**, FreshRaw Patties Grass-Fed Beef 6 lb, stays in the ledger:
+the PetSmart page that binds it by Flavor, title and sku prints the chicken
+patty's every line, its own item number included. Which product the code is on
+is in question.

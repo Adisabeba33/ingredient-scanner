@@ -919,6 +919,15 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Minced Cups",
       "Flaked Entrées",
       "Split Cups",
+      // Batches 063–065: the freeze-dried and frozen raw ranges the owner's
+      // food-form decision of 8 October 2026 let in (research-data-center
+      // tasks #124, #125, #126), named as instinctpetfood.com names them now.
+      // PetSmart still lists the last two as "Raw Bites", "Raw Patties" and
+      // "Raw Meals Freeze-Dried". "RawBoost+ Shakers" and "RawBoost+ Frozen
+      // Mixers" wait until something is seeded under them.
+      "RawBoost+ Mixers",
+      "FreshRaw",
+      "FreshDried",
     ],
   },
   {

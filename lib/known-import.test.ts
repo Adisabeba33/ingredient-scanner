@@ -1156,6 +1156,24 @@ describe("data/known-formulas.ts", () => {
     }
   });
 
+  // Freeze-dried toppers state calories per TABLESPOON (batch 063): a scoop
+  // of light pieces, a few grams. PetSmart's Mixers Chicken 6 oz prints 244
+  // kcal a "tablespoon" beside 4352 kcal/kg — 56 g, a cup's worth — and is
+  // held as identity for exactly that reason. Whatever is stored per
+  // tablespoon must weigh what a tablespoon of dry pieces can.
+  it("keeps a tablespoon calorie statement to a tablespoon's weight", () => {
+    const perSpoon = Object.entries(KNOWN_FORMULAS).filter(
+      ([, f]) => f.analysis.servingName === "tablespoon"
+    );
+    expect(perSpoon.map(([upc]) => upc).sort()).toEqual(
+      ["769949601081", "769949601098", "769949601104", "769949601111"]
+    );
+    for (const [upc, f] of perSpoon) {
+      const grams = ((f.analysis.kcalPerServing ?? 0) / (f.analysis.kcalPerKg ?? 1)) * 1000;
+      expect({ upc, ok: grams >= 2 && grams <= 10 }).toEqual({ upc, ok: true });
+    }
+  });
+
   // Batch 006 arrived written as "KCl" and "B3 niacin". Neither is label text —
   // a US label names ingredients by their AAFCO definitions — so the shorthand
   // was expanded back on the way in. If it ever leaks through, the composition
