@@ -2657,3 +2657,74 @@ Salmon & Oatmeal 076344891468, 076344089612, 076344088943; Large Breed Chicken
 & Rice 38 lb 076344891222; Grain Free Large Breed Chicken 076344891536; Small
 Breed Puppy 076344891161; Large Breed Puppy 076344891154; and the four Simple
 bags 076344893295, 076344893264, 076344893141, 076344893059.
+
+## Batch 059 — Wellness wet dog food
+
+Thirty-seven records from research-data-center task #145 (PR #175). Nine are
+stored with their compositions, eighteen as identity, and ten candidates stay
+in the ledger. No conflict note on the nine — Petite Entrées Shredded Medley
+**076344190653**, **076344190646**, **076344190608**; CORE Hearty Cuts Chicken
+& Turkey **076344080275**; CORE Mini Meals **076344166030**,
+**076344166054**, **076344166023**, **076344166009**, **076344166047**: each
+statement was read on the maker's page and again on PetSmart's, and the two
+agree. Calories are PetSmart's, per cup, can or pouch, and all nine pass the
+arithmetic in `scripts/check-batch.mjs` (1020 kcal/kg × 3 oz = 86.7 against a
+printed 87, and so on).
+
+### Sizes, cups and the calorie serving
+
+The ledger prints sizes as the maker's selector does — "12.5 Ounce Can",
+"3 Ounce Cup", "3 Ounce Retort Pouch", "13 Ounce Can" — and the seed writes
+them "12.5 oz", "3 oz", "13 oz", the catalog's form; the container goes in
+`container`. The Petite Entrées cup is filed `tub`, as the ledger files it,
+and its calories, which the ledger's `unit_name` calls "other", are stored
+per "cup": that is the maker's own word for the container, and the figure is
+the whole 3 oz (1020 × 0.085 kg = 86.7 against 87). Some statements carry a
+double space or a non-breaking space as delivered; they are copied as they
+are.
+
+### Eighteen seeded as identity only — two lists under one code
+
+Each is `needs_physical_label`. The maker's page and the PetSmart page carry
+the same code and print different ingredient statements; eight also differ on
+the crude-fat minimum (maker against PetSmart: Paté Age Advantage 3.0 / 4.0%,
+Paté Lamb 7.5 / 7.0, Paté Turkey 5.0 / 6.0, Stews Chicken 3.5 / 4.0, Stews
+Turkey 3.0 / 3.5, CORE 95% Chicken & Broccoli 8.0 / 9.0, CORE Paté Turkey &
+Chicken Liver 7.0 / 8.0, CORE Digestive Health Chicken 5.0 / 6.0). Petite
+Entrées Chicken & Turkey's maker text is cut off after 100 characters. A pack
+photograph settles each; every code is bound by the maker's one-size page.
+
+- Complete Health Paté **076344089186** (Age Advantage), **076344089155**,
+  **076344089162**, **076344088875**; Petite Entrées **076344190615**; Stews
+  **076344017158**, **076344017059**, **076344017554**, **076344017257**;
+  CORE 95% **076344179962**, **076344179948**, **076344179955**; CORE
+  Digestive Health **076344087038** (Beef), **076344087014** (Chicken); CORE
+  Hearty Cuts **076344080213**; CORE Mini Meals **076344166016**; CORE Paté
+  **076344079187**, **076344079118**.
+
+### CORE 95%, filed as a dinner
+
+The research filed CORE 95% Beef & Carrots, Chicken & Broccoli and Turkey &
+Spinach as complete diets, and left Complete Health 95% out because the maker
+calls it usable "as a mixer or topper". No page read prints either range's
+AAFCO sentence. The three are identity only, and `lib/nutrition-role.ts`
+reads "CORE 95%" as `unknown`, judged as dinner — the module's safe default.
+If the pack says "intermittent or supplemental feeding", the range belongs in
+`BRAND_COMPLEMENTARY_LINES` before any of its compositions is stored.
+
+### Not filed
+
+`076344087120`, CORE Digestive Health Chicken & Beef, is a 6 × 13 oz carton
+(the maker sells that recipe only as the carton). It is not in the ledger and
+is not added to `data/known-multipacks.ts`: no unit code for its member is
+known.
+
+### Ten candidates left in the ledger
+
+One reading, or no calories: CORE Paté Whitefish, Salmon & Herring
+076344079125 and Weight Management 076344079163; Complete Health Paté Puppy
+076344088851; Petite Entrées Casserole 076344090373 (texture `unknown`,
+"casserole" is not in the vocabulary), Mini Fillets 076344090335,
+076344090342; Stews Turkey & Duck 076344017356, Venison & Salmon
+076344017455; CORE Digestive Health Lamb 076344087052; Simple Limited
+Ingredient Diet Turkey & Potato 076344894094.

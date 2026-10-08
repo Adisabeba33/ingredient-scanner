@@ -270,3 +270,7 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
   held. `CORE+` added to the brand entry.
 - Batch 058 (task #144): 4 compositions, 22 identity only (two formula
   generations), 11 candidates held, the four Simple bags among them.
+- Batch 059 (task #145): 9 compositions, 18 identity only, 10 candidates
+  held. Ranges added: `Complete Health Petite Entrées`, `CORE Hearty Cuts`,
+  `CORE Mini Meals`, `CORE 95%`. The seed's older `Mini Meals` and `Petite
+  Entrees` stay in the entry, empty. CORE 95%'s role is an open question.

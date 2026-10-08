@@ -16093,9 +16093,10 @@
         "Guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-petite-entrees-shredded-medley-braised-lamb-venison-white-sweet-potatoes-carrots/; calories from https://www.petsmart.com/dog/food/canned-food/wellness-petite-entrees-small-dog-wet-food---grain-free-shredded-medley-lamb-and-venison-5247398.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "life_stage 'adult' from the PetSmart page (Life Stage attribute); the maker page prints no AAFCO statement",
-        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed."
+        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed.",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Cup\"; the calorie serving named \"cup\" where the record says \"other\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16189,9 +16190,10 @@
         "Guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-petite-entrees-shredded-medley-roasted-chicken-beef-green-beans-red-peppers/; calories from https://www.petsmart.com/dog/food/canned-food/wellness-petite-entrees-small-dog-wet-food---grain-free-shredded-medley-chicken-and-beef-5247397.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "life_stage 'adult' from the PetSmart page (Life Stage attribute); the maker page prints no AAFCO statement",
-        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed."
+        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed.",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Cup\"; the calorie serving named \"cup\" where the record says \"other\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16285,9 +16287,10 @@
         "Guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-petite-entrees-shredded-medley-roasted-chicken-duck-peas-carrots/; calories from https://www.petsmart.com/dog/food/canned-food/wellness-petite-entrees-small-dog-wet-food---grain-free-shredded-medley-chicken-and-duck-5247354.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "life_stage 'adult' from the PetSmart page (Life Stage attribute); the maker page prints no AAFCO statement",
-        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed."
+        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed.",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Cup\"; the calorie serving named \"cup\" where the record says \"other\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -17935,9 +17938,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-hearty-cuts-wet-dog-food---grain-free-chicken-and-turkey-5247404.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-hearty-cuts-wet-dog-food---grain-free-chicken-and-turkey-5247404.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "The maker's ingredient image alt is cut at 100 characters with an ellipsis; the rest is the page's hidden accessibility text for the same image (698 characters), joined without a gap; the join was confirmed on this product by an exact match with the retailer's statement",
-        "life_stage 'adult' from the PetSmart page (Life Stage attribute); the maker page prints no AAFCO statement"
+        "life_stage 'adult' from the PetSmart page (Life Stage attribute); the maker page prints no AAFCO statement",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"12.5 oz\" for the record's \"12.5 Ounce Can\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -18124,9 +18128,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-shredded-all-life-stage-wet-dog-food---natural-grain-free-5280373.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-shredded-all-life-stage-wet-dog-food---natural-grain-free-5280373.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement",
-        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed."
+        "texture 'shredded', presentation 'unknown': the pages name no cut/suspension the vocabulary can store with confidence; filed unknown rather than guessed.",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Retort Pouch\"; lifeStage null where the record says \"all\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -18217,9 +18222,10 @@
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-chunky-all-life-stage-wet-dog-food---natural-grain-free-5280385.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-chunky-all-life-stage-wet-dog-food---natural-grain-free-5280385.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
         "The maker's ingredient image alt is cut at 100 characters with an ellipsis; the rest is the page's hidden accessibility text for the same image (508 characters), joined without a gap; the join was confirmed on this product by an exact match with the retailer's statement",
-        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement"
+        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Retort Pouch\"; lifeStage null where the record says \"all\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -18309,9 +18315,10 @@
         "Ingredient statement copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-mini-meals-chicken-turkey/ (img alt, browser, read 2026-10-08), second reading https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-shredded-all-life-stage-wet-dog-food---natural-grain-free-5280371.html (page text): agrees.",
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-shredded-all-life-stage-wet-dog-food---natural-grain-free-5280371.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-shredded-all-life-stage-wet-dog-food---natural-grain-free-5280371.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
-        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement"
+        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Retort Pouch\"; lifeStage null where the record says \"all\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -18399,9 +18406,10 @@
         "Ingredient statement copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-mini-meals-chicken/ (img alt, browser, read 2026-10-08), second reading https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-pate-all-life-stage-wet-dog-food---natural-grain-free-5280369.html (page text): agrees.",
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-pate-all-life-stage-wet-dog-food---natural-grain-free-5280369.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-pate-all-life-stage-wet-dog-food---natural-grain-free-5280369.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
-        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement"
+        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Retort Pouch\"; lifeStage null where the record says \"all\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -18489,9 +18497,10 @@
         "Ingredient statement copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-core-mini-meals-chunky-chicken/ (img alt, browser, read 2026-10-08), second reading https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-chunky-all-life-stage-wet-dog-food---natural-grain-free-5280374.html (page text): agrees.",
         "Guaranteed analysis from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-chunky-all-life-stage-wet-dog-food---natural-grain-free-5280374.html; calories from https://www.petsmart.com/dog/food/canned-food/wellness-core-mini-meals-chunky-all-life-stage-wet-dog-food---natural-grain-free-5280374.html.",
         "Adequacy statement: no AAFCO nutritional-adequacy statement is printed as text on the maker page or the PetSmart page read; adequacy_statement null (task #145: useful, not required — does not block source_verified).",
-        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement"
+        "life_stage 'all' from the PetSmart page (title \"All Life Stage\"); the maker page prints no AAFCO statement",
+        "Promoted to seed 2026-10-08, batch 059 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"3 oz\" for the record's \"3 Ounce Retort Pouch\"; lifeStage null where the record says \"all\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
