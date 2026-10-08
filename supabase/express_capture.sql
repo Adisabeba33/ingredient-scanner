@@ -52,7 +52,7 @@ create table if not exists public.express_capture (
   -- different products on a shelf. It also predicts the composition: a gravy
   -- is thickened, nearly always with carrageenan, guar or xanthan.
   presentation text,
-  food_form text,                     -- dry | wet | semi-moist, derived
+  food_form text,                     -- dry | wet | semi-moist | frozen-raw | freeze-dried, derived
   -- Is it dinner? complete | complementary | topper | treat | supplement |
   -- unknown, from the AAFCO feeding statement the pack is required to carry.
   --

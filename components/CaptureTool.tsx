@@ -30,6 +30,7 @@ import { TestScanner } from "@/components/TestScanner";
 import { PackSizeReview } from "@/components/PackSizeReview";
 import { MultipackMark } from "@/components/MultipackMark";
 import { canonicalBarcode } from "@/lib/barcode";
+import { isFoodForm, type FoodForm } from "@/lib/food-form";
 import { lookupKnown } from "@/lib/known-products";
 import {
   presentationLabel,
@@ -201,6 +202,15 @@ function SpeciesTag({ species }: { species: string }) {
   );
 }
 
+/** The chip's word for each settled form. */
+const FORM_TEXT: Record<Exclude<FoodForm, "unknown">, string> = {
+  dry: "Dry",
+  wet: "Wet",
+  "semi-moist": "Semi-moist",
+  "frozen-raw": "Frozen raw",
+  "freeze-dried": "Freeze-dried",
+};
+
 /**
  * Dry or wet, and whether both readings agreed on it. Amber when they didn't:
  * the same ingredient list means opposite things in a tin and in a bag, so an
@@ -213,14 +223,8 @@ function FormTag({
   form: string;
   confirmed: boolean | null;
 }) {
-  const known = form === "dry" || form === "wet" || form === "semi-moist";
-  const text = known
-    ? form === "dry"
-      ? "Dry"
-      : form === "wet"
-        ? "Wet"
-        : "Semi-moist"
-    : "Dry/wet?";
+  const known = isFoodForm(form) && form !== "unknown";
+  const text = known ? FORM_TEXT[form] : "Dry/wet?";
   const settled = known && confirmed !== false;
   return (
     <span

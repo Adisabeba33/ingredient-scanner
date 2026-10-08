@@ -4312,9 +4312,10 @@
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
         "Bacillus Coagulans is printed '(CFU/lb)' without min/max; filed as min (CFU/lb)",
         "Printed footnote: Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles.",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 18 kcal/tablespoon, 0.75 oz: 4555 kcal/kg, 18 kcal/tablespoon)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 18 kcal/tablespoon, 0.75 oz: 4555 kcal/kg, 18 kcal/tablespoon)",
+        "Promoted to seed 2026-10-08, batch 063 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -4400,9 +4401,10 @@
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
         "Bacillus Coagulans is printed '(CFU/lb)' without min/max; filed as min (CFU/lb)",
         "Printed footnote: Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles.",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 18 kcal/tablespoon, 0.75 oz: 4555 kcal/kg, 18 kcal/tablespoon)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4555 kcal/kg, 18 kcal/tablespoon, 0.75 oz: 4555 kcal/kg, 18 kcal/tablespoon)",
+        "Promoted to seed 2026-10-08, batch 063 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -4938,9 +4940,10 @@
         "What the pack is (BRIEF-INSTINCT §3): freeze-dried raw pieces in a bag, spooned over food; moisture 6.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
         "Printed footnote: Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles.",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4705 kcal/kg, 19 kcal/tablespoon, 0.75 oz: 4705 kcal/kg, 19 kcal/tablespoon)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4705 kcal/kg, 19 kcal/tablespoon, 0.75 oz: 4705 kcal/kg, 19 kcal/tablespoon)",
+        "Promoted to seed 2026-10-08, batch 063 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -5030,9 +5033,10 @@
         "What the pack is (BRIEF-INSTINCT §3): freeze-dried raw pieces in a bag, spooned over food; moisture 6.0% max.",
         "Role: complement / topper per BRIEF-INSTINCT §4; the pack prints 'intended for intermittent or supplemental feeding only'",
         "Printed footnote: Not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles.",
-        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4705 kcal/kg, 19 kcal/tablespoon, 0.75 oz: 4705 kcal/kg, 19 kcal/tablespoon)"
+        "Calories: the maker's page prints none; calories are from PetSmart (5.5 oz: 4705 kcal/kg, 19 kcal/tablespoon, 0.75 oz: 4705 kcal/kg, 19 kcal/tablespoon)",
+        "Promoted to seed 2026-10-08, batch 063 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -14581,9 +14585,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/cat/food-and-treats/freeze-dried-food/instinct-raw-meals-freeze-dried-adult-cat-food---grain-free-chicken-5298943.html: \"Instinct Raw Freeze-Dried Meal Cage-Free Chicken Recipe is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance.\"",
         "What the pack is: freeze-dried raw (maker and retailer page text), a complete diet. Moisture guarantee: 6.0% max. Filed food_form 'unknown', texture 'freeze_dried' — the catalog's FoodForm has no value for freeze-dried raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -14665,9 +14670,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/cat/food-and-treats/freeze-dried-food/instinct-raw-meals-freeze-dried-adult-cat-food---grain-free-chicken-5298943.html: \"Instinct Raw Freeze-Dried Meal Cage-Free Chicken Recipe is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance.\"",
         "What the pack is: freeze-dried raw (maker and retailer page text), a complete diet. Moisture guarantee: 6.0% max. Filed food_form 'unknown', texture 'freeze_dried' — the catalog's FoodForm has no value for freeze-dried raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -14762,9 +14768,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/cat/food-and-treats/freeze-dried-food/instinct-raw-meals-freeze-dried-adult-cat-food---grain-free-pollock-5338208.html: \"Instinct Raw Freeze-Dried Meals Wild-Caught Alaskan Pollock Recipe is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance.\"",
         "What the pack is: freeze-dried raw (maker and retailer page text), a complete diet. Moisture guarantee: 6.0% max. Filed food_form 'unknown', texture 'freeze_dried' — the catalog's FoodForm has no value for freeze-dried raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16640,9 +16647,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---cage-free-chicken-5368611.html: \"Instinct® FreshRaw Meals Cage–Free Chicken Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 75.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16722,9 +16730,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---cage-free-chicken-5368611.html: \"Instinct® FreshRaw Meals Cage–Free Chicken Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 75.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16804,9 +16813,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---cage-free-turkey-5368612.html: \"Instinct® FreshRaw Meals Cage–Free Turkey Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 72.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16887,9 +16897,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---cage-free-turkey-5368612.html: \"Instinct® FreshRaw Meals Cage–Free Turkey Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 72.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -16966,9 +16977,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---grass-fed-beef-5368610.html: \"Instinct® FreshRaw Meals Grass–Fed Beef Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 72.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -17046,9 +17058,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---grass-fed-beef-5368610.html: \"Instinct® FreshRaw Meals Grass–Fed Beef Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 72.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -17125,9 +17138,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---grass-fed-lamb-5368613.html: \"Instinct® FreshRaw Meals Grass–Fed Lamb Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 73.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -17205,9 +17219,10 @@
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/fresh-and-frozen-food/instinct-freshraw-meals-adult-frozen-dog-food---grass-fed-lamb-5368613.html: \"Instinct® FreshRaw Meals Grass–Fed Lamb Recipe is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for maintenance.\"",
         "What the pack is: frozen raw (maker and retailer page text), a complete diet. Moisture guarantee: 73.0% max. Filed food_form 'unknown', texture 'raw' — the catalog's FoodForm has no value for frozen raw (BRIEF-INSTINCT §3).",
         "GS1 prefix 769949 (UPC 0 769949…): as on every Instinct code; already in data/gs1-prefixes.ts as 'observed on bound Instinct packs', owner not GEPIR-confirmed.",
-        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's."
+        "Name: the maker's current name is used (FreshRaw / FreshDried); PetSmart files the item under the older 'Raw …' naming — old listing used only as package-identity evidence binding this UPC to this size (BRIEF-INSTINCT §5). Not Purina ONE 'True Instinct' or Royal Canin (BRIEF-INSTINCT §2): maker URL and GS1 prefix 769949 are Instinct's.",
+        "Promoted to seed 2026-10-08, batch 065 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"frozen-raw\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     }
   ]
 }

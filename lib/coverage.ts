@@ -131,7 +131,7 @@ export interface CoverageItem {
 }
 
 /** Wet, dry, or we were never told. */
-export type CoverageForm = "wet" | "dry" | "unknown";
+export type CoverageForm = "wet" | "dry" | "frozen-raw" | "freeze-dried" | "unknown";
 
 /** One range within a brand. */
 export interface CoverageLine {
@@ -228,11 +228,16 @@ function bySize(a: CoveragePack, b: CoveragePack): number {
   return aw - bw || a.printed.localeCompare(b.printed);
 }
 
-const FORM_ORDER: CoverageForm[] = ["wet", "dry", "unknown"];
+// Frozen raw and freeze-dried are named for what they are (lib/food-form.ts):
+// a FreshRaw range badged "wet" would tell the shelf-walker to look among the
+// cans. Semi-moist stays folded into unknown, as it always has here.
+const FORM_ORDER: CoverageForm[] = ["wet", "dry", "frozen-raw", "freeze-dried", "unknown"];
 
 function asForm(value: string | null | undefined): CoverageForm {
   const text = (value ?? "").trim().toLowerCase();
-  return text === "wet" || text === "dry" ? text : "unknown";
+  return text === "wet" || text === "dry" || text === "frozen-raw" || text === "freeze-dried"
+    ? text
+    : "unknown";
 }
 
 /** The catch-all range, for a product whose name matched nothing seeded. */

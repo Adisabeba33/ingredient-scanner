@@ -117,6 +117,12 @@ near-miss.
 
 ## 3. The food form this catalog cannot express yet
 
+> **Resolved, 8 October 2026.** The owner decided on two values, as the
+> research recommended: `frozen_raw` and `freeze_dried` in the ledger,
+> `"frozen-raw"` and `"freeze-dried"` in `lib/food-form.ts` and the seed. Frozen
+> raw is read as wet food and freeze-dried as dry (`analysisBasis`). See
+> `research/AGENTS.md` §9. The text below is the brief as it was written.
+
 Instinct's core business is **frozen raw** — Raw Bites, Raw Medallions, Raw
 Patties, Raw Meals — and **freeze-dried raw**. Neither is dry food and neither
 is wet food.

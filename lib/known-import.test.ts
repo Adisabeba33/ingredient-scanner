@@ -14,6 +14,7 @@ import { US_PET_BRANDS } from "../data/us-pet-brands";
 import { GS1_PREFIXES } from "../data/gs1-prefixes";
 import { KNOWN_MULTIPACKS } from "../data/known-multipacks";
 import { hasAnyFigure } from "./guaranteed-analysis";
+import { analysisBasis, isFoodForm } from "./food-form";
 
 function row(over: Partial<ExistingRow> = {}): ExistingRow {
   return {
@@ -720,18 +721,35 @@ describe("data/known-formulas.ts", () => {
     const isTreat =
       detectNutritionRole({ parts: [p.brand, p.line, p.variant] }) === "treat";
     const isBroth = BROTH_LINES.test(`${p.line} ${p.variant}`.toLowerCase());
+    // Asked of the BASIS: a frozen raw patty is held to a can's window and a
+    // freeze-dried one to a bag's, which is what their water makes them.
+    const basis = analysisBasis(p.foodForm) === "wet" ? "wet" : "dry";
     const moisture = isBroth
       ? MOISTURE.broth
-      : p.foodForm === "wet"
+      : basis === "wet"
         ? MOISTURE.wet
         : isTreat
           ? MOISTURE.dryTreat
           : MOISTURE.dry;
-    const protein = PROTEIN[p.foodForm];
+    const protein = PROTEIN[basis];
     const dryCeiling = isTreat ? DRY_MATTER_PROTEIN.treat : DRY_MATTER_PROTEIN.food;
     for (const pkg of p.packages)
       shelfOf.set(pkg.upc, { moisture, protein, dryCeiling, treat: isTreat });
   }
+
+  // The consumer app reads `food_form` through `isFoodForm`; a value it does
+  // not know is re-guessed from the name, which is how a frozen raw food would
+  // quietly become "unknown". Semi-moist is a real form but nothing seeded is
+  // one, and "unknown" is never seeded — the import writes the form as settled.
+  it("files every seeded product under a form the consumer app reads", () => {
+    // Widened to string: the type already rules these out, and this is the
+    // check that the data still agrees once it has been through a script.
+    const odd = KNOWN_PRODUCTS.filter((p) => {
+      const form: string = p.foodForm;
+      return !isFoodForm(form) || form === "unknown" || form === "semi-moist";
+    }).map((p) => `${p.brand} ${p.line} ${p.variant}: ${p.foodForm}`);
+    expect(odd).toEqual([]);
+  });
 
   it("reads as an as-fed panel, not a dry-matter one", () => {
     for (const [upc, f] of Object.entries(KNOWN_FORMULAS)) {
@@ -1135,6 +1153,24 @@ describe("data/known-formulas.ts", () => {
         upc,
         close: true,
       });
+    }
+  });
+
+  // Freeze-dried toppers state calories per TABLESPOON (batch 063): a scoop
+  // of light pieces, a few grams. PetSmart's Mixers Chicken 6 oz prints 244
+  // kcal a "tablespoon" beside 4352 kcal/kg — 56 g, a cup's worth — and is
+  // held as identity for exactly that reason. Whatever is stored per
+  // tablespoon must weigh what a tablespoon of dry pieces can.
+  it("keeps a tablespoon calorie statement to a tablespoon's weight", () => {
+    const perSpoon = Object.entries(KNOWN_FORMULAS).filter(
+      ([, f]) => f.analysis.servingName === "tablespoon"
+    );
+    expect(perSpoon.map(([upc]) => upc).sort()).toEqual(
+      ["769949601081", "769949601098", "769949601104", "769949601111"]
+    );
+    for (const [upc, f] of perSpoon) {
+      const grams = ((f.analysis.kcalPerServing ?? 0) / (f.analysis.kcalPerKg ?? 1)) * 1000;
+      expect({ upc, ok: grams >= 2 && grams <= 10 }).toEqual({ upc, ok: true });
     }
   });
 

@@ -224,7 +224,7 @@ Every object in `records` must follow this contract:
   "variant": "string",
   "recipe": ["string"],
   "life_stage": "adult | senior | kitten | puppy | all | null",
-  "food_form": "wet | dry | treat | supplement | unknown",
+  "food_form": "wet | dry | frozen_raw | freeze_dried | treat | supplement | unknown",
   "texture": "one of the values below, or null",
   "presentation": "one of the values below, or null",
   "package_type": "can | pouch | tub | tray | bag | box | other",
@@ -262,6 +262,25 @@ Every object in `records` must follow this contract:
   "research_status": "candidate | source_verified | needs_physical_label | rejected | promoted_to_seed"
 }
 ```
+
+### `food_form`: frozen raw and freeze-dried
+
+Added by the owner's decision of 8 October 2026. File what the pack IS:
+
+- `frozen_raw` — sold frozen and uncooked: raw patties, bites, medallions,
+  frozen meals and mixers. Around 70–75% moisture; its list is read like a
+  wet food's.
+- `freeze_dried` — raw ingredients freeze-dried: freeze-dried meals, mixers,
+  toppers. Around 6–8% moisture; its list is read like a dry food's.
+- Kibble coated or tumbled with freeze-dried raw is still `dry` (texture
+  `kibble`); say what it is in `verification_notes`.
+- A freeze-dried TREAT is `treat`, as every treat is (the seed stores the form
+  and `lib/nutrition-role.ts` says it is a treat).
+
+The seed stores these as `lib/food-form.ts` spells them — `frozen-raw` and
+`freeze-dried` — and `scripts/check-ledger.mjs` holds each to the panel its
+water puts it on: frozen raw to a wet panel, freeze-dried to a dry one. Record
+the moisture guarantee in every case; it is the figure that settles the form.
 
 ### The two controlled vocabularies, written out
 

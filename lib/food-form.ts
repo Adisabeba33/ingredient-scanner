@@ -19,14 +19,41 @@
  * So the form is read once, at capture, and stored — and it's read from two
  * independent places (the pack, and the composition) so a single bad reading
  * can't decide it on its own. See `reconcileFoodForm`.
+ *
+ * ── Frozen raw and freeze-dried (the owner, 8 October 2026) ─────────────
+ *
+ * Neither is dry food and neither is wet food, and the catalog had nowhere to
+ * say so: Instinct's frozen raw and freeze-dried ranges sat in the research
+ * ledger for want of a value. A frozen raw patty is 70–75% water as packed and
+ * its list reads like a wet food's; a freeze-dried one is about 6% and reads
+ * like a dry food's. One value for both would misread one of them, so there
+ * are two — and each says what the product IS, while `analysisBasis` says how
+ * its list is READ. Anything that depends on wet against dry asks the basis;
+ * anything that names the product, or matches it against something else
+ * (a recall of canned food is not a recall of frozen raw), asks the form.
+ *
+ * Neither is ever guessed. The readers below answer only dry, wet,
+ * semi-moist or unknown, exactly as they did before these values existed: a
+ * pack saying "freeze-dried" is as often a kibble with freeze-dried pieces as
+ * a freeze-dried food, and a moisture figure cannot tell frozen raw from a
+ * can. The two raw values come from a seeded record whose pack was read, or
+ * from a person setting the form by hand.
  */
-export type FoodForm = "dry" | "wet" | "semi-moist" | "unknown";
+export type FoodForm =
+  | "dry"
+  | "wet"
+  | "semi-moist"
+  | "frozen-raw"
+  | "freeze-dried"
+  | "unknown";
 
 export function isFoodForm(value: unknown): value is FoodForm {
   return (
     value === "dry" ||
     value === "wet" ||
     value === "semi-moist" ||
+    value === "frozen-raw" ||
+    value === "freeze-dried" ||
     value === "unknown"
   );
 }
@@ -36,7 +63,27 @@ export function formLabel(form: FoodForm): string {
   if (form === "dry") return "dry food";
   if (form === "wet") return "wet food";
   if (form === "semi-moist") return "semi-moist food";
+  if (form === "frozen-raw") return "frozen raw food";
+  if (form === "freeze-dried") return "freeze-dried food";
   return "pet food";
+}
+
+/** The forms an ingredient list is read as. Every FoodForm but the two raw ones. */
+export type AnalysisBasis = "dry" | "wet" | "semi-moist" | "unknown";
+
+/**
+ * How a form's ingredient list and panel are READ — the one question every
+ * wet-against-dry rule is really asking.
+ *
+ * Frozen raw is read as wet food: ordered by weight as packed, water included,
+ * and around three-quarters water on the panel. Freeze-dried is read as dry
+ * food: the water is gone, so the order is the composition directly. Every
+ * other form is its own basis, unchanged.
+ */
+export function analysisBasis(form: FoodForm): AnalysisBasis {
+  if (form === "frozen-raw") return "wet";
+  if (form === "freeze-dried") return "dry";
+  return form;
 }
 
 function normalize(text: string): string {

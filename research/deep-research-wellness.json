@@ -19227,9 +19227,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Freeze-dried topper: the contract has no freeze-dried food_form; filed dry + texture freeze_dried.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 066 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -19294,9 +19295,10 @@
         "Role from the printed sentence: not a complete diet (complementary / supplemental).",
         "Freeze-dried topper: the contract has no freeze-dried food_form; filed dry + texture freeze_dried.",
         "Barcode: PetSmart gives the 13-digit form with a leading zero; the 12-digit UPC validates, so it is standard EAN-13 padding.",
-        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources."
+        "Status source_verified: every §10 gate passes: unit code bound to the size on its proof page, check digit valid, not in the catalog or any ledger, ingredient statement read twice and agreeing, complete guaranteed analysis and calories, adequacy sentence, dated direct sources.",
+        "Promoted to seed 2026-10-08, batch 066 (branch feat/raw-food-forms): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. Seeded as foodForm \"freeze-dried\" under the owner's food-form decision of 8 October 2026 (research/AGENTS.md §9); this record's food_form stays as delivered. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

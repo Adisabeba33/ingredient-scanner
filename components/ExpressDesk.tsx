@@ -56,6 +56,8 @@ const FORM_CHOICES: { value: FoodForm; label: string }[] = [
   { value: "dry", label: "Dry" },
   { value: "wet", label: "Wet" },
   { value: "semi-moist", label: "Semi" },
+  { value: "frozen-raw", label: "Frozen raw" },
+  { value: "freeze-dried", label: "Freeze-dried" },
   { value: "unknown", label: "Not sure" },
 ];
 
