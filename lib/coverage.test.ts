@@ -489,6 +489,47 @@ describe("buildCoverage — packages and food form", () => {
     expect(kitten.forms).toEqual(["wet", "dry"]);
   });
 
+  // Frozen raw and freeze-dried (the owner, 8 October 2026) are badged as
+  // themselves: a freeze-dried range marked "dry" would send somebody to the
+  // kibble aisle. Semi-moist stays unbadged here, as it always has.
+  it("names the raw forms, and still folds semi-moist into unknown", () => {
+    const freezeDried: KnownItem = {
+      ...dryItem,
+      brand: "Weruva",
+      line: "Freeze Dried",
+      variant: "Mideast Feast",
+      texture: "freeze_dried",
+      foodForm: "freeze-dried",
+      codes: ["0020"],
+      printedCodes: ["20"],
+      sizes: ["1 oz"],
+    };
+    const b = only(
+      [
+        source({
+          code: "0021",
+          brands: "Weruva",
+          // A row set by hand on the desk: only the grouping is under test.
+          productName: "Freeze Dried Row One",
+          foodForm: "frozen-raw",
+        }),
+        source({
+          code: "0022",
+          brands: "Weruva",
+          productName: "Freeze Dried Row Two",
+          foodForm: "semi-moist",
+        }),
+      ],
+      [freezeDried],
+      "Weruva"
+    );
+    expect(b.ranges.find((r) => r.name === "Freeze Dried")!.forms).toEqual([
+      "frozen-raw",
+      "freeze-dried",
+      "unknown",
+    ]);
+  });
+
   // A code nobody seeded has no size anywhere, and the pill falls back to the
   // barcode rather than showing a blank that would read as a small pack.
   it("leaves the size null for a code the seed never named", () => {

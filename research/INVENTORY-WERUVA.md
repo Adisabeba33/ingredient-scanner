@@ -119,10 +119,10 @@ the code. Anything listed here is DONE; do not research it again.
 
 | barcode | variant | size | species | form | life stage | composition |
 |---|---|---|---|---|---|---|
-| `810028245297` | Mideast Feast | 1 oz | cat | dry | — | yes |
-| `810028245310` | Mideast Feast | 7 oz | cat | dry | — | yes |
-| `810028242944` | Paw Lickin' Chicken | 1 oz | cat | dry | adult | yes |
-| `810028242951` | Paw Lickin' Chicken | 7 oz | cat | dry | adult | yes |
+| `810028245297` | Mideast Feast | 1 oz | cat | freeze-dried | — | yes |
+| `810028245310` | Mideast Feast | 7 oz | cat | freeze-dried | — | yes |
+| `810028242944` | Paw Lickin' Chicken | 1 oz | cat | freeze-dried | adult | yes |
+| `810028242951` | Paw Lickin' Chicken | 7 oz | cat | freeze-dried | adult | yes |
 
 ### Senior — 4 products, 8 barcodes
 

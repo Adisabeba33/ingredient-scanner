@@ -328,7 +328,29 @@ const BRAND_COMPLEMENTARY_LINES: Record<string, string[]> = {
   // copy elsewhere, and the topper's phrase must not reach the Limited
   // Ingredient Diet kibble beside it, which is complete — "Toppers" is in the
   // topper's variant only.
-  instinct: ["healthy cravings", "limited ingredient diet toppers"],
+  //
+  // And the RawBoost+ toppers (batches 063–064, research-data-center tasks #124
+  // and #125): every Mixers, Shakers and Frozen Mixers pack prints the same
+  // "intermittent or supplemental" sentence — every one but Mixers
+  // Multivitamin, which prints "formulated to meet … AAFCO … for maintenance"
+  // for adult cats and for adult dogs although it is sold as a mixer. The
+  // maker's printed statement decides, so the Mixers are listed by recipe and
+  // Multivitamin is left out: it stays "unknown" and is judged as the complete
+  // food its pack declares. "rawboost" is how "RawBoost+" folds.
+  instinct: [
+    "healthy cravings",
+    "limited ingredient diet toppers",
+    "rawboost mixers chicken",
+    "rawboost mixers cage free chicken",
+    "rawboost mixers grass fed beef",
+    "rawboost mixers digestive health",
+    "rawboost mixers gut health",
+    "rawboost mixers skin coat health",
+    "rawboost mixers tranquility",
+    "rawboost mixers mobility support",
+    "rawboost shakers",
+    "rawboost frozen mixers",
+  ],
 };
 
 /**

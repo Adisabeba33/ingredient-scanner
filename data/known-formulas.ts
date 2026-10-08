@@ -258,6 +258,26 @@ const VERIFIED_062 = "2026-10-08";
 // from that PetSmart page, per pouch or can, and all eighteen pass the
 // arithmetic in scripts/check-batch.mjs.
 const VERIFIED_067 = "2026-10-08";
+// Batch 063 — Instinct RawBoost+ Mixers for cats, from research-data-center
+// task #125 (PR #168): Digestive Health and Skin & Coat Health, 5.5 and 0.75 oz,
+// freeze-dried. List and panel are instinctpetfood.com's page text, read a second
+// time on the PetSmart page that binds each size and agreeing (PetSmart drops
+// one space after a comma in Digestive Health; the maker's text is stored).
+// Calories per tablespoon from that PetSmart page — the maker's prints none — so
+// there is no arithmetic witness; a test holds the tablespoon to a few grams.
+const VERIFIED_063 = "2026-10-08";
+// Batch 065 — Instinct FreshRaw Meals (frozen raw, 8 and 16 oz) and cat
+// FreshDried Raw Meals (freeze-dried), from research-data-center task #126
+// (PR #173). List and panel are instinctpetfood.com's page text, read a second
+// time on the PetSmart page that binds the size, word for word; calories (per
+// cup) and the AAFCO sentence from that PetSmart page. Per cup, so no
+// arithmetic witness (SEEDING-A-BATCH.md §2.4).
+const VERIFIED_065 = "2026-10-08";
+// Batch 066 — Wellness Bowl Boosters BARE, from research-data-center task #146
+// (PR #176): two freeze-dried 4 oz pouches whose list is the maker's label-image
+// text, read again on PetSmart's page and agreeing but for spacing; panel from
+// the maker's page, calories per cup from PetSmart. No arithmetic witness.
+const VERIFIED_066 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -12213,5 +12233,90 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken Liver, Chicken Broth, Turkey Broth, Turkey, Chicken Hearts, Pea Protein, Dried Ground Peas, Natural Flavor, Pea Fiber, Fish Oil (Preserved With Mixed Tocopherols), Ground Flaxseed, Guar Gum, Dried Chicory Root, Tricalcium Phosphate, Potassium Chloride, Taurine, Cranberries, Sunflower Oil, Salt, Choline Chloride, Dried Kelp, Yucca Schidigera Extract, Cassia Gum, Xanthan Gum, Vitamin E Supplement, Zinc Proteinate, Iron Proteinate, Niacin Supplement, Thiamine Mononitrate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Vitamin A Supplement, d-Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Biotin, Folic Acid, Potassium Iodide, Vitamin D3 Supplement.`,
     analysis: withExtras(withCalories(ga(11, 4, 2, 78, null, 0.1), 1130, 176, "can"), { "Calcium": ["min", 0.25, "%"], "Phosphorus": ["min", 0.2, "%"], "Zinc": ["min", 35, "other"], "Vitamin E": ["min", 100, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.55, "%"], "Omega-3 Fatty Acids": ["min", 0.1, "%"] }),
     verifiedAt: VERIFIED_067,
+  },
+  "769949601098": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Pumpkinseeds, Chicken Heart, Dried Pumpkin, Sweet Potato, Dried Chicory Root, Annatto Extract (color), Apple Cider Vinegar, Mixed Tocopherols (for freshness), Rosemary Extract, Dried Bacillus coagulans Fermentation Product`,
+    analysis: withExtras(withCalories(ga(36, 30, 15, 6, null, null), 4555, 18, "tablespoon"), { "Bacillus Coagulans": ["min", 200000000, "CFU/lb"] }),
+    verifiedAt: VERIFIED_063,
+  },
+  "769949601081": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Pumpkinseeds, Chicken Heart, Dried Pumpkin, Sweet Potato, Dried Chicory Root, Annatto Extract (color), Apple Cider Vinegar, Mixed Tocopherols (for freshness), Rosemary Extract, Dried Bacillus coagulans Fermentation Product`,
+    analysis: withExtras(withCalories(ga(36, 30, 15, 6, null, null), 4555, 18, "tablespoon"), { "Bacillus Coagulans": ["min", 200000000, "CFU/lb"] }),
+    verifiedAt: VERIFIED_063,
+  },
+  "769949601111": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Pumpkinseeds, Chicken Heart, Cod, Ground Flaxseed, Beet Juice (color), Salmon Oil, Ground Chia Seed, Cranberries, Dried Kelp, Mixed Tocopherols (for freshness), Rosemary Extract`,
+    analysis: withExtras(withCalories(ga(36, 30, 15, 6, null, null), 4705, 19, "tablespoon"), { "Omega 3 Fatty Acids": ["min", 1.5, "%"], "Omega 6 Fatty Acids": ["min", 4, "%"] }),
+    verifiedAt: VERIFIED_063,
+  },
+  "769949601104": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Pumpkinseeds, Chicken Heart, Cod, Ground Flaxseed, Beet Juice (color), Salmon Oil, Ground Chia Seed, Cranberries, Dried Kelp, Mixed Tocopherols (for freshness), Rosemary Extract`,
+    analysis: withExtras(withCalories(ga(36, 30, 15, 6, null, null), 4705, 19, "tablespoon"), { "Omega 3 Fatty Acids": ["min", 1.5, "%"], "Omega 6 Fatty Acids": ["min", 4, "%"] }),
+    verifiedAt: VERIFIED_063,
+  },
+  "769949614074": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Chicken Heart, Pumpkinseeds, Ground Flaxseed, Montmorillonite Clay, Salmon Oil, Carrots, Apples, Butternut Squash, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Potassium Chloride, Tricalcium Phosphate, Choline Chloride, Taurine, Yeast Culture, Salt, Minerals (Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Calcium Iodate), DL-Methionine, Mixed Tocopherols (for freshness), Blueberries, Spinach, Rosemary Extract.`,
+    analysis: withCalories(ga(38, 34, 3, 6, null, 0.3), 4782, 197, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949614265": {
+    ingredients: `Chicken (including Ground Chicken Bone), Chicken Liver, Chicken Heart, Pumpkinseeds, Ground Flaxseed, Montmorillonite Clay, Salmon Oil, Carrots, Apples, Butternut Squash, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Potassium Chloride, Tricalcium Phosphate, Choline Chloride, Taurine, Yeast Culture, Salt, Minerals (Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Calcium Iodate), DL-Methionine, Mixed Tocopherols (for freshness), Blueberries, Spinach, Rosemary Extract.`,
+    analysis: withCalories(ga(38, 34, 3, 6, null, 0.3), 4782, 197, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949614296": {
+    ingredients: `Pollock, Beef, Beef Spleen, Beef Liver, Beef Kidney, Ground Flaxseed, Montmorillonite Clay, Ground Miscanthus Grass, Yeast Culture, Salmon Oil, Carrots, Apples, Butternut Squash, Tricalcium Phosphate, Potassium Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Salt, Choline Chloride, Minerals (Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Calcium Iodate), Taurine, Mixed Tocopherols (for freshness), Blueberries, Spinach, Rosemary Extract.`,
+    analysis: withExtras(withCalories(ga(44, 32, 3, 6, null, 0.3), 4754, 274, "cup"), { "Omega 3 Fatty Acids": ["min", 1.1, "%"], "Omega 6 Fatty Acids": ["min", 1.2, "%"] }),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641018": {
+    ingredients: `Chicken, Chicken Gizzards, Chicken Livers, Chicken Hearts, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Salmon Oil, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Dried Kelp, Potassium Chloride, Choline Chloride, Zinc Proteinate, Manganese Proteinate, Copper Proteinate.`,
+    analysis: withCalories(ga(10, 6, 3, 75, null, null), 1234, 277, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641056": {
+    ingredients: `Chicken, Chicken Gizzards, Chicken Livers, Chicken Hearts, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Salmon Oil, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Dried Kelp, Potassium Chloride, Choline Chloride, Zinc Proteinate, Manganese Proteinate, Copper Proteinate.`,
+    analysis: withCalories(ga(10, 6, 3, 75, null, null), 1234, 277, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641025": {
+    ingredients: `Turkey, Turkey Gizzards, Turkey Livers, Turkey Hearts, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Dried Kelp, Potassium Chloride, Choline Chloride, Zinc Proteinate, Manganese Proteinate, Copper Proteinate.`,
+    analysis: withCalories(ga(11, 7, 3, 72, null, null), 1316, 286, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641063": {
+    ingredients: `Turkey, Turkey Gizzards, Turkey Livers, Turkey Hearts, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Dried Kelp, Potassium Chloride, Choline Chloride, Zinc Proteinate, Manganese Proteinate, Copper Proteinate.`,
+    analysis: withCalories(ga(11, 7, 3, 72, null, null), 1316, 286, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641001": {
+    ingredients: `Beef, Beef Liver, Beef Kidney, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Zinc Proteinate, Potassium Chloride, Manganese Proteinate.`,
+    analysis: withCalories(ga(11, 9, 3, 72, null, null), 1480, 352, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641049": {
+    ingredients: `Beef, Beef Liver, Beef Kidney, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Zinc Proteinate, Potassium Chloride, Manganese Proteinate.`,
+    analysis: withCalories(ga(11, 9, 3, 72, null, null), 1480, 352, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641032": {
+    ingredients: `Lamb, Beef Liver, Beef Heart, Beef Kidney, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Zinc Proteinate, Manganese Proteinate.`,
+    analysis: withCalories(ga(11, 8, 3, 73, null, null), 1368, 328, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "769949641070": {
+    ingredients: `Lamb, Beef Liver, Beef Heart, Beef Kidney, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Zinc Proteinate, Manganese Proteinate.`,
+    analysis: withCalories(ga(11, 8, 3, 73, null, null), 1368, 328, "cup"),
+    verifiedAt: VERIFIED_065,
+  },
+  "076344885252": {
+    ingredients: `Beef, Mixed Tocopherols added to preserve freshness, Rosemary Extract, Green Tea Extract.`,
+    analysis: withCalories(ga(45, 35, 5.5, 8, null, null), 5192, 239, "cup"),
+    verifiedAt: VERIFIED_066,
+  },
+  "076344885245": {
+    ingredients: `Turkey Hearts, Mixed Tocopherols added to preserve freshness, Rosemary Extract, Green Tea Extract.`,
+    analysis: withCalories(ga(60, 20, 1.5, 8, null, null), 4400, 202, "cup"),
+    verifiedAt: VERIFIED_066,
   },
 };
