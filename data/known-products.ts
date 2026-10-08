@@ -108,7 +108,18 @@ export interface KnownProduct {
   texture: Texture;
   /** What it is suspended in. Never a texture. See lib/presentation.ts. */
   presentation: Presentation;
-  foodForm: "wet" | "dry";
+  /**
+   * How the pack is sold, in lib/food-form.ts's values.
+   *
+   * "frozen-raw" and "freeze-dried" arrived with the owner's decision of
+   * 8 October 2026, for Instinct's FreshRaw and FreshDried ranges (batch 065)
+   * and the freeze-dried toppers before them. The ledger spells them
+   * `frozen_raw` / `freeze_dried` (research/AGENTS.md §9); the seed uses the
+   * catalog's spelling. Frozen raw is READ as wet food and freeze-dried as dry
+   * (`analysisBasis`), so every panel bound in lib/known-import.test.ts asks
+   * the basis, while the value says what the product is.
+   */
+  foodForm: "wet" | "dry" | "frozen-raw" | "freeze-dried";
   /** The named protein(s), normalised: what the pack sells itself on. */
   proteins: string[];
   /**
