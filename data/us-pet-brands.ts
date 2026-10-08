@@ -890,6 +890,10 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Ultimate Protein",
       "Raw Longevity",
       "Raw Meals",
+      // Batch 051: the maker's wet topper pouches, dog and cat, printed
+      // "Healthy Cravings" on instinctpetfood.com and PetSmart alike
+      // (research-data-center tasks #123 and #125).
+      "Healthy Cravings",
     ],
   },
   {

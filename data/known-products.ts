@@ -5108,6 +5108,372 @@ const WELLNESS_BATCH_050: KnownProduct[] = [
   },
 ];
 
+// Batch 051 — Instinct wet dog food and dog toppers: eight barcodes from
+// research-data-center task #123 (PR #142), ledger research/deep-research-instinct.json.
+// Original cans are complete ("all life stages except for growth of large size
+// dogs" — filed `all`, as batch 048). Healthy Cravings pouches print "intended
+// for intermittent or supplemental feeding only": a topper, and that sentence
+// gives no life stage, so none is filed. lib/nutrition-role.ts does not yet
+// know the range — see docs/CATALOG-CONFLICTS.md, batch 051.
+// The three Freshly Crafted Meals records stay in the ledger: no source names
+// the pack, and a container is not something to guess.
+const INSTINCT_BATCH_051: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "all",
+    packages: [
+      { size: "13.2 oz", container: CAN, upc: "769949607106", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Beef",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "all",
+    packages: [
+      { size: "13.2 oz", container: CAN, upc: "769949607205", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken (Small Breed)",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949618010", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Beef (Small Breed)",
+    species: "dog",
+    texture: "loaf",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["beef"],
+    lifeStage: "all",
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949610274", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Beef",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["beef"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610007", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Chicken",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610014", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Lamb",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610229", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Real Salmon",
+    species: "dog",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610205", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 052 — Instinct dry cat food: fourteen barcodes from research-data-center
+// task #121 (PR #167), ledger research/deep-research-instinct.json. All kibble
+// at 9–10% moisture max, filed dry / kibble / plain; Raw Boost is kibble with
+// freeze-dried raw pieces, filed dry as batch 048 filed the dog bags.
+//
+// Nine carry a composition. The last three products are identity only: the
+// PetSmart page that binds their codes prints a different list from the
+// maker's page, so which formula the bag carries is a photograph
+// (needs_physical_label). Only the kitten bag carries a lifeStage among them,
+// from "for Kittens" in its printed name; its variant names the kittens because
+// "Chicken" alone is already the adult Original bag. Sizes drop the trailing
+// full stop ("4.5 lb.").
+const INSTINCT_BATCH_052: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658559", scope: UNIT },
+      { size: "11 lb", container: BAG, upc: "769949658566", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658764", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658849", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949656319", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Indoor Health - Rabbit",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["rabbit"],
+    lifeStage: "all",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658702", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Indoor Health - Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "all",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658696", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Salmon",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949655091", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["rabbit"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658719", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Chicken for Kittens",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "4.5 lb", container: BAG, upc: "769949658757", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Ultimate Protein",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "769949658511", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658528", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Raw Boost",
+    variant: "Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "769949658627", scope: UNIT },
+      { size: "10 lb", container: BAG, upc: "769949658634", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 053 — Instinct wet cat toppers: six 3 oz pouches from research-data-center
+// task #125 (PR #168), ledger research/deep-research-instinct.json. Every one
+// prints "intended for intermittent or supplemental feeding only", which names
+// no life stage, so none is filed. The Limited Ingredient Diet topper keeps
+// "Toppers" in its variant: the pack's name carries it, and "Rabbit" alone is
+// already the Limited Ingredient Diet kibble. The nine RawBoost+ Mixers and
+// Shakers records stay in the ledger — freeze-dried raw, a form this file
+// cannot store yet (research/BRIEF-INSTINCT.md §3).
+const INSTINCT_BATCH_053: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Chicken",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610021", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Duck",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610335", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Rabbit",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610342", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Salmon",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610328", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Healthy Cravings",
+    variant: "Tuna",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949610038", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Toppers Rabbit",
+    species: "cat",
+    texture: "cuts",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: POUCH, upc: "769949618188", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21042,4 +21408,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_048,
   ...WELLNESS_BATCH_049,
   ...WELLNESS_BATCH_050,
+  ...INSTINCT_BATCH_051,
+  ...INSTINCT_BATCH_052,
+  ...INSTINCT_BATCH_053,
 ];

@@ -2327,3 +2327,196 @@ None carries a conflict note, and none carries a `lifeStage`, because no
 sentence was read. The Small Breed 4 lb code, `076344884170`, is unaffected
 by the ruling and stays out: its size binding is the dispute (batch 049
 above).
+
+## Batch 051 — Instinct wet dog food and dog toppers
+
+Eleven records from research-data-center task #123 (PR #142), appended to
+`research/deep-research-instinct.json`. Eight are stored with their
+compositions — four Original cans and four Healthy Cravings pouches — and
+three stay in the ledger. No conflict note on any of the eight: each list and
+panel is the maker's page text, read a second time on the PetSmart page that
+binds the size, and the two agree. Calories are per can and per pouch, and all
+eight pass the arithmetic in `scripts/check-batch.mjs`.
+
+### Copied as printed
+
+- **769949607106** — Original Real Chicken, 13.2 oz. The research notes that
+  PetSmart prints the statement with a spacing and punctuation difference
+  only; the maker's text is stored.
+- **769949607205** — Original Real Beef, 13.2 oz, prints
+  "L-Abscorbyl-2-Polyphosphate". Stored as the maker's page spells it, not
+  corrected (`docs/SEEDING-A-BATCH.md` §4: copy, do not tidy).
+
+### Healthy Cravings: a topper the role detector had to be taught
+
+**769949610007**, **769949610014**, **769949610229**, **769949610205** each
+print "… is intended for intermittent or supplemental feeding only. This is a
+complementary food and should be fed along with a complete and balanced
+diet." The seed carries no claims, and `lib/nutrition-role.ts` reads the role
+from brand, range and variant; "Healthy Cravings" is in none of its lists, so
+on their own they would import as `unknown` and be judged as dinner. Settled
+before import, after batch 053, by a brand-scoped entry in
+`BRAND_COMPLEMENTARY_LINES` — `instinct: ["healthy cravings", "limited
+ingredient diet toppers"]` — the route Reveal's Limited Ingredient tins and
+Cesar Simply Crafted take to `complementary`. All four resolve to
+`complementary`; the Original cans stay `unknown`, judged as dinner.
+
+No `lifeStage` on the four: the supplemental sentence names none, and the
+ledger's `all` is not in it. The range is new to `data/us-pet-brands.ts`.
+
+### Freshly Crafted Meals — three records left in the ledger
+
+**769949609612**, **769949609605**, **769949609629** — Cage-Free Chicken,
+Grass-Fed Beef, Pork & Wild-Caught Salmon, 11 oz. `source_verified`, complete
+for maintenance, with list, panel and calories per cup. Not seeded: no page the
+research read names the pack (`package_type: "other"`, texture and
+presentation `unknown`), and `KnownPackage.container` has no value for a pack
+nobody has named; choosing tub, tray or box would be inventing it. A
+photograph of one pack settles the container. They stay `source_verified`.
+
+## Batch 052 — Instinct dry cat food
+
+Fourteen bags from research-data-center task #121 (PR #167). Nine are stored
+with their compositions — Original Chicken (5 and 11 lb) and Salmon (4.5 and
+10 lb), Raw Boost Salmon and the two Indoor Health bags, Limited Ingredient
+Diet Salmon and Rabbit — and five as identity. No conflict note on any of the
+nine: the maker's page text and the PetSmart page that binds each size agree.
+Calories are per cup, so there is no arithmetic witness.
+
+### Five seeded as identity only — two formula generations
+
+For each, the PetSmart page that binds the code prints a different list from
+the maker's current page, so which formula the bag carries is a photograph
+(`needs_physical_label`; `docs/CURATION-QUEUE.md`, "The status is a lookup").
+PetSmart's calories belong to its own list and are not used.
+
+- **769949658757** — Original Chicken for Kittens, 4.5 lb. The maker lists
+  Freeze Dried Pollock; PetSmart lists freeze-dried chicken, liver and heart.
+  PetSmart's 4456 kcal/kg, 557 kcal/cup not used.
+- **769949658511**, **769949658528** — Ultimate Protein Chicken, 4 and 10 lb.
+  The same Pollock-against-chicken difference. 4470 kcal/kg, 491 kcal/cup not
+  used.
+- **769949658627**, **769949658634** — Raw Boost Chicken, 5 and 10 lb.
+  Citric Acid in the fat's preservative, and Pollock on the maker's list only.
+  4327 kcal/kg, 496 kcal/cup not used.
+
+Only the kitten bag carries a `lifeStage`, from "for Kittens" in its printed
+name. The other four carry none: the sentences read sit on the pages that
+print the other list (batch 048's rule).
+
+The kitten bag's variant is "Chicken for Kittens", not the ledger's
+"Chicken": that is the adult Original bag's variant, and one brand, range,
+variant and species is one product. The words are the pack's own — "Original
+Kibble for Kittens Chicken Recipe" on the maker's page, "… with Real Chicken
+for Kittens" in its AAFCO sentence.
+
+### A retailer's missing space, judged as one formula
+
+**769949656319** — Raw Boost Salmon, 4.5 lb. PetSmart prints "FreezeDried Beef
+Liver" where the maker prints "Freeze Dried Beef Liver", and no final full
+stop; every ingredient and its order are otherwise identical. The research
+judged it a retailer typo and the maker's text is stored. No conflict note.
+
+### Raw Boost, filed as dry
+
+The five Raw Boost bags are kibble with freeze-dried raw pieces at 9% moisture
+max, so they are filed `dry` / `kibble` as batch 048 filed the dog bags; the
+other nine are plain kibble that also lists freeze-dried ingredients. Counts
+for `research/BRIEF-INSTINCT.md` §3: frozen raw 0, freeze-dried 0, raw-coated
+kibble 5, kibble 9.
+
+## Batch 053 — Instinct wet cat toppers
+
+Fifteen records from research-data-center task #125 (PR #168). Six 3 oz
+pouches are stored with their compositions — Healthy Cravings Chicken, Duck,
+Rabbit, Salmon and Tuna, and the Limited Ingredient Diet topper — and the nine
+freeze-dried RawBoost+ records stay in the ledger. No conflict note on any of
+the six: maker's page text and the PetSmart page that binds the size agree,
+and every calorie statement passes the arithmetic.
+
+### One recipe sold for two species
+
+**769949610021** (cat, Chicken) prints the same list and the same panel as
+**769949610014** (dog, Real Chicken, batch 051) — 855 kcal/kg, 73 kcal a
+pouch — and **769949610328** (cat, Salmon) the same as **769949610205** (dog,
+Real Salmon) — 851 kcal/kg, 72 kcal. Each pack was read off its own maker page
+and its own PetSmart page. That is one recipe under a dog label and a cat
+label, not a list pasted twice, so the two pairs are named in
+`no two products share a composition` (`lib/known-import.test.ts`), and the
+check-ledger WARN is answered in each record. The RawBoost+ Shakers do the same
+— **769949620235** cat Chicken with **769949620228** dog, **769949620266** cat
+Digestive Health with **769949620259** dog Gut Health — answered in the
+records, not seeded.
+
+### Toppers, read as complements
+
+All six print "… is intended for intermittent or supplemental feeding only",
+so none carries a `lifeStage`. All six resolve to `complementary` through
+`instinct: ["healthy cravings", "limited ingredient diet toppers"]` in
+`BRAND_COMPLEMENTARY_LINES` (see batch 051). The second phrase meets the
+topper's range and variant ("Limited Ingredient Diet" + "Toppers Rabbit") and
+not the Limited Ingredient Diet kibble, which is complete and stays `unknown`,
+judged as dinner.
+
+**769949618188** is filed with the variant "Toppers Rabbit", not the ledger's
+"Rabbit": that is the Limited Ingredient Diet Rabbit kibble's (batch 052), a
+complete food, and the pack's own name is "Limited Ingredient Diet Toppers
+Rabbit Recipe".
+
+### Nine freeze-dried toppers left in the ledger
+
+**769949602149** Mixers Chicken 6 oz (`needs_physical_label`: PetSmart's 244
+kcal a "tablespoon" beside 4352 kcal/kg is a cup's worth); Mixers Digestive
+Health **769949601098** 5.5 oz and **769949601081** 0.75 oz; Multivitamin
+**769949600671** and **769949600664**; Skin & Coat Health **769949601111** and
+**769949601104**; Shakers Chicken **769949620235** and Digestive Health
+**769949620266**, 5.5 oz. All are freeze-dried raw at 6.0% moisture max, filed
+`food_form: "unknown"` / `freeze_dried` in the ledger. Batch 048 left Instinct's
+freeze-dried ranges waiting for a form decision (`research/BRIEF-INSTINCT.md`
+§3), and that decision is the owner's. The seed's own precedent is section L:
+Weruva's Freeze Dried bags and Reveal's freeze-dried treats are filed `dry` /
+`freeze_dried`, read off the moisture. Two further gaps: calories are per
+tablespoon, a serving name the seed has not used, and the Multivitamin
+records' extras hold one malformed entry, "Choline (min): 4,000 mg/kg;
+*Taurine" at 0.45%, two guarantees run together, to be split from the source
+before either is seeded. The Multivitamin recipe prints a complete sentence
+("… for maintenance") although it is sold as a mixer.
+
+## Instinct RawBoost+ dog toppers — task #124, all 21 held in the ledger
+
+Twenty-one records from research-data-center task #124 (PR #169), appended to
+`research/deep-research-instinct.json`. **Nothing is seeded**, so no batch
+number is spent. Every one is a form `data/known-products.ts` cannot store
+yet, the decision batch 048 left open (`research/BRIEF-INSTINCT.md` §3):
+
+- **Freeze-dried raw, 19** (6.0% moisture max) — RawBoost+ Mixers Grass-Fed
+  Beef 769949602064, 769949602057, 769949602040; Cage-Free Chicken
+  769949602033, 769949602019; Gut Health 769949601296, 769949601227,
+  769949601173, 769949601166; Multivitamin 769949600640, 769949600633; Skin &
+  Coat Health 769949601135, 769949601234, 769949601128; Tranquility
+  769949600541; Mobility Support 769949601326; and RawBoost+ Shakers Grass-Fed
+  Beef 769949620242, Cage-Free Chicken 769949620228, Gut Health 769949620259.
+- **Frozen raw, 2** (62.0% moisture max) — RawBoost+ Frozen Mixers Gut Health
+  769949632009 and Skin & Coat Health 769949632016, 1.25 lb.
+
+Only the three Shakers are `source_verified`. The eighteen Mixers and Frozen
+Mixers are `needs_physical_label`: the PetSmart page binding each code prints
+a different list from the maker's current page, so even after a form decision
+they would go in as identity only, with no calories. One of those pages —
+PetSmart's for 769949601234, Skin & Coat Health 12.5 oz — carries the Gut
+Health label, a retailer's error noted in the record rather than a wrong
+barcode. A Grass-Fed Beef 25 oz code, 769949600794, was seen only in a search
+snippet from a host that refuses the research, and was not filed.
+
+The Shakers repeat the cat Shakers' recipes (batch 053), and the Mixers and
+Frozen Mixers of Gut Health and of Skin & Coat Health share one list in two
+forms, 6.0% against 62.0% moisture; both check-ledger WARNs are answered in the
+records. One food-form value for both would misread one of them, which is the
+§3 warning in its plainest form: a frozen patty reads like wet food, a
+freeze-dried one like dry.
+
+Every pack but one prints "intended for intermittent or supplemental feeding
+only". Mixers Multivitamin prints a maintenance sentence for adult dogs. Range
+names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
+"RawBoost+ Frozen Mixers", none of which is in the brand entry or in
+`lib/nutrition-role.ts`.
