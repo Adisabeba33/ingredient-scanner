@@ -69,7 +69,11 @@ Inside the scanner:
 | `data/wrong-barcodes.ts` | Codes that belong to a case, a multipack, or a different product. Read by the test AND by the checker. |
 
 A product may have no formula. It then shows on the coverage page as a barcode
-to go and find, and the import steps over it. Right now all 282 have one.
+to go and find, and the import writes it as an identity-only row ("known
+product, composition pending": `found: false`, `reason: 'no-ingredients'`,
+`source: 'community'`, name, brand, species and food form, no ingredients), so
+the consumer app can name it when scanned and ask for a photo of the label.
+Such a row never lands on a reading, and a formula seeded later replaces it.
 
 ---
 
