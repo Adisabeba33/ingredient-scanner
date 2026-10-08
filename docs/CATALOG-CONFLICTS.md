@@ -2520,3 +2520,68 @@ only". Mixers Multivitamin prints a maintenance sentence for adult dogs. Range
 names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
 "RawBoost+ Frozen Mixers", none of which is in the brand entry or in
 `lib/nutrition-role.ts`.
+
+## Batch 054 — Instinct dry dog food
+
+Thirty-one bags from research-data-center task #120 (PR #171), appended to
+`research/deep-research-instinct.json`. Six are stored with their compositions
+— the three PeakBoost+ Kibble recipes, Real Beef, Real Chicken and Real Salmon,
+each in 3.5 and 17 lb — and twenty-five RawBoost+ bags as identity. No conflict
+note on any of the six: the list and panel are the text of the PetSmart page
+that binds each size, and the maker's page prints the same statement word for
+word. Calories (per cup) and the AAFCO sentence ("… for maintenance") are from
+that PetSmart page; the maker's page prints neither. Per cup, so there is no
+arithmetic witness.
+
+### Twenty-five RawBoost+ bags seeded as identity only — two formula generations
+
+For every RawBoost+ code the PetSmart page that binds it prints a different
+ingredient statement and guaranteed analysis from the maker's current page —
+order, ingredients and guarantees all differ (RawBoost+ Kibble Real Chicken:
+crude fibre 3.0% max at PetSmart, 4.5% on the maker's page). So which formula
+a bag carries is a photograph (`needs_physical_label`; `docs/CURATION-QUEUE.md`,
+"The status is a lookup"), and PetSmart's calories, which belong to its own
+list, are not used. No size binding is in doubt: each code is PetSmart's
+JSON-LD `gtin13` on a one-bag variant page that names the weight.
+
+- **RawBoost+ Kibble** — Real Chicken Recipe 769949656340 (3.5 lb),
+  769949658238 (10 lb), 769949656326 (20 lb); Real Beef Recipe 769949656357,
+  769949658207; Real Salmon Recipe 769949656371, 769949656302; Gut Health
+  Recipe 769949656388, 769949659013.
+- **RawBoost+ Kibble for Small Breed Dogs** — Real Beef Recipe 769949656364,
+  769949658306; Real Chicken Recipe 769949656333, 769949652557.
+- **RawBoost+ Whole Grain Kibble** — Real Lamb & Oatmeal Recipe 769949652762,
+  769949652977; Real Chicken & Brown Rice Recipe 769949652755, 769949652847;
+  Real Beef & Barley Recipe 769949653011, 769949653028; Real Salmon & Brown
+  Rice Recipe 769949652779, 769949652748; Gut Health Recipe 769949653059,
+  769949653066; for Puppies Chicken Recipe 769949653042, 769949653035.
+
+None carries a `lifeStage` from an AAFCO sentence: those were read on the pages
+printing the other list (batch 048's rule). The puppy bags carry `puppy`, from
+"for Puppies" in the printed name on both the maker's and PetSmart's pages, as
+batch 052 filed its kitten bag. The ledger's `all` is PetSmart's sentence ("…
+for all life stages, including growth of large size dogs"), which belongs to
+PetSmart's list.
+
+### The ranges, as the maker names them
+
+`PeakBoost+ Kibble`, `RawBoost+ Kibble`, `RawBoost+ Kibble for Small Breed
+Dogs` and `RawBoost+ Whole Grain Kibble` are new to `data/us-pet-brands.ts`.
+PetSmart prints "PeakBoost" and "Raw Boost". The cat bags of batch 052 stay
+under `Raw Boost`: the maker's own pages call them "Raw Boost Kibble", without
+the plus. The small-breed bags are a range of their own because their recipe
+names are the standard bags' ("Real Beef Recipe"), and one brand, range,
+variant and species is one product.
+
+### Raw-coated kibble, filed as dry
+
+All thirty-one are kibble with freeze-dried raw at 9–10% moisture max, so the
+list reads as a dry food's and they are filed `dry` / `kibble` as batch 048
+decided. Counts for `research/BRIEF-INSTINCT.md` §3: frozen raw 0,
+freeze-dried 0, raw-coated kibble 31. Every one prints a complete-diet
+sentence, and every range resolves to `unknown` in `lib/nutrition-role.ts`,
+judged as dinner.
+
+The PeakBoost+ panels guarantee "Total Microorganisms (Lactobacillus
+acidophilus & Enterococcus faecium)" at 80 million CFU/lb, stored with the unit
+`CFU/lb` as batch 048 stored its Bacillus coagulans figure.
