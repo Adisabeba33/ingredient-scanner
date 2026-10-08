@@ -16,7 +16,7 @@ import {
   type ExistingRow,
   type ImportVerdict,
 } from "@/lib/known-import";
-import { KNOWN_PRODUCTS } from "@/data/known-products";
+import { KNOWN_PRODUCTS, type KnownProduct } from "@/data/known-products";
 import { KNOWN_FORMULAS } from "@/data/known-formulas";
 import { KNOWN_MULTIPACKS } from "@/data/known-multipacks";
 
@@ -64,7 +64,13 @@ interface Candidate {
   productName: string;
   brands: string;
   species: string;
-  foodForm: string;
+  /**
+   * The seed's own value, written to `food_form` as it stands: "wet", "dry",
+   * and since 8 October 2026 "frozen-raw" and "freeze-dried" — all values
+   * lib/food-form.ts's `isFoodForm` accepts, which is what the consumer app
+   * checks on read.
+   */
+  foodForm: KnownProduct["foodForm"];
   ingredients: string;
   analysis: ReturnType<typeof analysisFor>;
   compositionKey: string | null;

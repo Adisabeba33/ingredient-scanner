@@ -94,7 +94,13 @@ function otherLedgers(selfPath) {
 
 const SCOPES = ["individual_unit", "multipack", "case", "tray", "unknown"];
 const SPECIES = ["cat", "dog"];
-const FORMS = ["wet", "dry", "treat", "supplement", "unknown"];
+// `frozen_raw` and `freeze_dried` since the owner's decision of 8 October
+// 2026. Underscored like the texture vocabulary; the seed stores them as
+// lib/food-form.ts spells them, "frozen-raw" and "freeze-dried". Frozen raw is
+// read as wet food (70–75% water as packed), freeze-dried as dry (about 6%).
+const FORMS = ["wet", "dry", "frozen_raw", "freeze_dried", "treat", "supplement", "unknown"];
+/** Which side of the water line a declared form puts the panel on, or null. */
+const FORM_BASIS = { wet: "wet", frozen_raw: "wet", dry: "dry", freeze_dried: "dry" };
 const PACKAGES = ["can", "pouch", "tub", "tray", "bag", "box", "canister", "other"];
 // The five the SEED can store. `mature` is not one of them — Blue Buffalo
 // prints it and it means senior; say so in `conflicts` rather than inventing a
@@ -362,8 +368,13 @@ for (const r of records) {
       // its own panel. One Weruva freeze-dried record is filed `wet` beside 8%
       // moisture, and the seed reads the form off the moisture — so the two
       // would silently part company.
-      const declaredWet = r.food_form === "wet";
-      if (r.food_form === "wet" || r.food_form === "dry") {
+      //
+      // Asked of the basis, so frozen raw is held to a wet panel and
+      // freeze-dried to a dry one — the exact error that one value for both
+      // would have made silently.
+      const basis = FORM_BASIS[r.food_form] ?? null;
+      const declaredWet = basis === "wet";
+      if (basis) {
         if (declaredWet !== wet) {
           warn(
             upc,

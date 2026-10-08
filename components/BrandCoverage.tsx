@@ -534,7 +534,12 @@ function Progress({ filled, photo }: { filled: number; photo: number }) {
 const FORM_STYLE: Record<string, { label: string; className: string }> = {
   wet: { label: "wet", className: "bg-sky-50 text-sky-700" },
   dry: { label: "dry", className: "bg-orange-50 text-orange-700" },
+  "frozen-raw": { label: "frozen raw", className: "bg-cyan-50 text-cyan-700" },
+  "freeze-dried": { label: "freeze-dried", className: "bg-amber-50 text-amber-700" },
 };
+
+/** The forms the brand header counts packages under, in the order shown. */
+const COUNTED_FORMS = ["wet", "dry", "frozen-raw", "freeze-dried"] as const;
 
 function FormBadge({ form, title }: { form: string; title?: string }) {
   const style = FORM_STYLE[form];
@@ -638,7 +643,9 @@ function BrandDetail({
     .flatMap((r) => r.items)
     .reduce(
       (acc, item) => {
-        const form = item.foodForm === "wet" || item.foodForm === "dry" ? item.foodForm : null;
+        const form = (COUNTED_FORMS as readonly string[]).includes(item.foodForm ?? "")
+          ? (item.foodForm as string)
+          : null;
         for (const pack of item.packs) {
           if (form) acc[form] = (acc[form] ?? 0) + 1;
           if (pack.scanned) acc.done += 1;
@@ -646,7 +653,10 @@ function BrandDetail({
         }
         return acc;
       },
-      { wet: 0, dry: 0, done: 0, total: 0 } as Record<string, number>
+      { wet: 0, dry: 0, "frozen-raw": 0, "freeze-dried": 0, done: 0, total: 0 } as Record<
+        string,
+        number
+      >
     );
 
   return (
@@ -666,20 +676,14 @@ function BrandDetail({
           {brand.filled} done
           {brand.photo > 0 ? ` · ${brand.photo} awaiting ingredients` : ""}
         </p>
-        {(packTotals.wet > 0 || packTotals.dry > 0) && (
+        {COUNTED_FORMS.some((f) => packTotals[f] > 0) && (
           <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11.5px] text-faint">
-            {packTotals.wet > 0 && (
-              <span className="inline-flex items-center gap-1">
-                <FormBadge form="wet" />
-                {packTotals.wet}
+            {COUNTED_FORMS.filter((f) => packTotals[f] > 0).map((f) => (
+              <span key={f} className="inline-flex items-center gap-1">
+                <FormBadge form={f} />
+                {packTotals[f]}
               </span>
-            )}
-            {packTotals.dry > 0 && (
-              <span className="inline-flex items-center gap-1">
-                <FormBadge form="dry" />
-                {packTotals.dry}
-              </span>
-            )}
+            ))}
             {/* Packages, spelt out, because the number is bigger than the
                 product count above it and the difference is the whole point of
                 the size pills below. */}

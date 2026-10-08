@@ -111,6 +111,47 @@ describe("detectNutritionRole", () => {
     ).toBe("unknown");
   });
 
+  // RawBoost+ Mixers print "intended for intermittent or supplemental feeding
+  // only" — all but Multivitamin, which prints an AAFCO maintenance sentence
+  // although it is sold as a mixer. The printed statement decides.
+  it("reads Instinct's RawBoost+ toppers as complements, and Multivitamin as its pack declares", () => {
+    for (const variant of [
+      "Digestive Health",
+      "Skin & Coat Health",
+      "Chicken",
+      "Cage-Free Chicken",
+      "Grass-Fed Beef",
+      "Gut Health",
+      "Tranquility",
+      "Mobility Support",
+    ]) {
+      expect({
+        variant,
+        role: detectNutritionRole({ parts: ["Instinct", "RawBoost+ Mixers", variant] }),
+      }).toEqual({ variant, role: "complementary" });
+    }
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "RawBoost+ Shakers", "Gut Health"] })
+    ).toBe("complementary");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "RawBoost+ Frozen Mixers", "Skin & Coat Health"] })
+    ).toBe("complementary");
+    // Complete for adult maintenance by its own pack: judged as dinner.
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "RawBoost+ Mixers", "Multivitamin"] })
+    ).toBe("unknown");
+    // The complete raw ranges and the RawBoost+ kibble stay dinner.
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "FreshRaw", "Meals Cage-Free Chicken Recipe"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "FreshDried", "Raw Meals Cage-Free Chicken Recipe"] })
+    ).toBe("unknown");
+    expect(
+      detectNutritionRole({ parts: ["Instinct", "RawBoost+ Kibble", "Real Chicken"] })
+    ).toBe("unknown");
+  });
+
   // Two snack ranges whose names carry no snack word. A bone broth is 95%
   // water: judged as dinner it is the worst food ever measured, about a pouch
   // nobody was ever going to feed as dinner. "Whole Loin" loses the word

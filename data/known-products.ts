@@ -108,7 +108,18 @@ export interface KnownProduct {
   texture: Texture;
   /** What it is suspended in. Never a texture. See lib/presentation.ts. */
   presentation: Presentation;
-  foodForm: "wet" | "dry";
+  /**
+   * How the pack is sold, in lib/food-form.ts's values.
+   *
+   * "frozen-raw" and "freeze-dried" arrived with the owner's decision of
+   * 8 October 2026, for Instinct's FreshRaw and FreshDried ranges (batch 065)
+   * and the freeze-dried toppers before them. The ledger spells them
+   * `frozen_raw` / `freeze_dried` (research/AGENTS.md §9); the seed uses the
+   * catalog's spelling. Frozen raw is READ as wet food and freeze-dried as dry
+   * (`analysisBasis`), so every panel bound in lib/known-import.test.ts asks
+   * the basis, while the value says what the product is.
+   */
+  foodForm: "wet" | "dry" | "frozen-raw" | "freeze-dried";
   /** The named protein(s), normalised: what the pack sells itself on. */
   proteins: string[];
   /**
@@ -7477,6 +7488,516 @@ const WELLNESS_BATCH_067: KnownProduct[] = [
     proteins: ["chicken", "liver"],
     packages: [
       { size: "5.5 oz", container: CAN, upc: "076344079033", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 063 — Instinct RawBoost+ Mixers for cats: the freeze-dried toppers
+// batch 053 left in the ledger (research-data-center task #125, PR #168), filed
+// "freeze-dried" under the owner's decision of 8 October 2026 (lib/food-form.ts).
+// Digestive Health and Skin & Coat Health, 5.5 and 0.75 oz, carry their
+// compositions. Chicken 6 oz is identity only (needs_physical_label: PetSmart's
+// "tablespoon" is a cup's worth). Multivitamin is identity only although
+// source_verified: one printed guarantee reached the ledger run together with
+// another ("Choline (min): 4,000 mg/kg; *Taurine"), and it is held until that is
+// split at the source. Multivitamin prints an AAFCO adult-maintenance sentence,
+// so it carries lifeStage "adult" and is not read as a complement; the others
+// print "intended for intermittent or supplemental feeding only" and read as
+// complementary (lib/nutrition-role.ts). The two cat Shakers stay in the ledger:
+// no source names their container. See docs/CATALOG-CONFLICTS.md, batch 063.
+const INSTINCT_BATCH_063: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Chicken",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "6 oz", container: BAG, upc: "769949602149", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Digestive Health",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949601081", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949601098", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Multivitamin",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949600664", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949600671", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Skin & Coat Health",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken", "cod"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949601104", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949601111", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 064 — Instinct RawBoost+ Mixers for dogs (research-data-center task
+// #124, PR #169), freeze-dried, all identity only: the PetSmart page that binds
+// each code prints a different list from the maker's current page
+// (needs_physical_label). No lifeStage: every sentence sits on a page printing
+// the other list (batch 048's rule). The three Shakers and two Frozen Mixers
+// stay in the ledger: no source names their container, as with Freshly Crafted
+// (batch 051). See docs/CATALOG-CONFLICTS.md, batch 064.
+const INSTINCT_BATCH_064: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Grass-Fed Beef",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "1 oz", container: BAG, upc: "769949602040", scope: UNIT },
+      { size: "6 oz", container: BAG, upc: "769949602057", scope: UNIT },
+      { size: "14 oz", container: BAG, upc: "769949602064", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Cage-Free Chicken",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "1 oz", container: BAG, upc: "769949602019", scope: UNIT },
+      { size: "14 oz", container: BAG, upc: "769949602033", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Gut Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949601173", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949601296", scope: UNIT },
+      { size: "12.5 oz", container: BAG, upc: "769949601227", scope: UNIT },
+      { size: "23 oz", container: BAG, upc: "769949601166", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Multivitamin",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949600633", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949600640", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Skin & Coat Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken", "cod"],
+    packages: [
+      { size: "0.75 oz", container: BAG, upc: "769949601128", scope: UNIT },
+      { size: "5.5 oz", container: BAG, upc: "769949601135", scope: UNIT },
+      { size: "12.5 oz", container: BAG, upc: "769949601234", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Tranquility",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["turkey"],
+    packages: [
+      { size: "5.5 oz", container: BAG, upc: "769949600541", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "RawBoost+ Mixers",
+    variant: "Mobility Support",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5.5 oz", container: BAG, upc: "769949601326", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 065 — Instinct FreshRaw (frozen raw) and FreshDried (freeze-dried),
+// research-data-center task #126 (PR #173). The eight FreshRaw Meals pouches
+// and the three cat FreshDried bags carry compositions and lifeStage "adult"
+// from their AAFCO maintenance sentence. FreshRaw Bites and Patties and the dog
+// FreshDried bags are identity only (needs_physical_label), with a lifeStage
+// only where the printed name says "for Puppies". 769949630050, FreshRaw
+// Patties Grass-Fed Beef 6 lb, stays in the ledger: the page that binds it
+// prints the chicken patty's text. See docs/CATALOG-CONFLICTS.md, batch 065.
+const INSTINCT_BATCH_065: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Cage-Free Chicken Recipe",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "9.5 oz", container: BAG, upc: "769949614074", scope: UNIT },
+      { size: "25 oz", container: BAG, upc: "769949614265", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Wild-Caught Pollock Recipe",
+    species: "cat",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["pollock"],
+    lifeStage: "adult",
+    packages: [
+      { size: "9 oz", container: BAG, upc: "769949614296", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Wild-Caught Pollock Recipe",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["pollock"],
+    packages: [
+      { size: "24 oz", container: BAG, upc: "769949614289", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Grass-Fed Beef Recipe",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "3 oz", container: BAG, upc: "769949614524", scope: UNIT },
+      { size: "14 oz", container: BAG, upc: "769949614531", scope: UNIT },
+      { size: "25 oz", container: BAG, upc: "769949614050", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Cage-Free Chicken Recipe",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: BAG, upc: "769949614500", scope: UNIT },
+      { size: "14 oz", container: BAG, upc: "769949614517", scope: UNIT },
+      { size: "25 oz", container: BAG, upc: "769949614029", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals Grass-Fed Lamb Recipe",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["lamb"],
+    packages: [
+      { size: "14 oz", container: BAG, upc: "769949614555", scope: UNIT },
+      { size: "24 oz", container: BAG, upc: "769949614234", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshDried",
+    variant: "Raw Meals for Puppies Chicken Recipe",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    lifeStage: "puppy",
+    packages: [
+      { size: "14 oz", container: BAG, upc: "769949614593", scope: UNIT },
+      { size: "25 oz", container: BAG, upc: "769949614173", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Bites Wild-Caught Pollock Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["pollock"],
+    packages: [
+      { size: "5.4 lb", container: BAG, upc: "769949630340", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Bites Grass-Fed Beef Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["beef"],
+    packages: [
+      { size: "3 lb", container: BAG, upc: "769949630029", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "769949630036", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Bites Cage-Free Chicken Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 lb", container: BAG, upc: "769949630081", scope: UNIT },
+      { size: "6 lb", container: BAG, upc: "769949630098", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Bites Grass-Fed Lamb Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["lamb"],
+    packages: [
+      { size: "2.7 lb", container: BAG, upc: "769949630296", scope: UNIT },
+      { size: "5.4 lb", container: BAG, upc: "769949630302", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Patties Cage-Free Chicken Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["chicken"],
+    packages: [
+      { size: "6 lb", container: BAG, upc: "769949630111", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Meals Cage-Free Chicken Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "769949641018", scope: UNIT },
+      { size: "16 oz", container: POUCH, upc: "769949641056", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Meals Cage-Free Turkey Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["turkey"],
+    lifeStage: "adult",
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "769949641025", scope: UNIT },
+      { size: "16 oz", container: POUCH, upc: "769949641063", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Meals Grass-Fed Beef Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["beef"],
+    lifeStage: "adult",
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "769949641001", scope: UNIT },
+      { size: "16 oz", container: POUCH, upc: "769949641049", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "FreshRaw",
+    variant: "Meals Grass-Fed Lamb Recipe",
+    species: "dog",
+    texture: "raw",
+    presentation: "plain",
+    foodForm: "frozen-raw",
+    proteins: ["lamb"],
+    lifeStage: "adult",
+    packages: [
+      { size: "8 oz", container: POUCH, upc: "769949641032", scope: UNIT },
+      { size: "16 oz", container: POUCH, upc: "769949641070", scope: UNIT },
+    ],
+  },
+];
+
+// Batch 066 — Wellness Bowl Boosters freeze-dried toppers: the six batch 060
+// left in the ledger (research-data-center task #146, PR #176), filed
+// "freeze-dried". BARE Nutrient-Rich Beef and Turkey Hearts carry compositions
+// (calories per cup); the four Functional toppers are identity only
+// (needs_physical_label, two formula generations). All print "This is a
+// complementary food intended to be fed with a complete and balanced dog food
+// diet" and read as toppers through "bowl boosters"; no lifeStage. See
+// docs/CATALOG-CONFLICTS.md, batch 066.
+const WELLNESS_BATCH_066: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters BARE",
+    variant: "Nutrient-Rich Beef",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885252", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters BARE",
+    variant: "Nutrient-Rich Turkey Hearts",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["turkey"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885245", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Digestive Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885306", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Joint Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885269", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Skin & Coat",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885276", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Heart Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885290", scope: UNIT },
     ],
   },
 ];
@@ -18888,6 +19409,10 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   },
 
   // ── Weruva · Freeze Dried (cat) ──────────────────────────────────────
+  //
+  // Filed `dry` from batch 027 until 8 October 2026, when the owner added
+  // the freeze-dried form; re-filed "freeze-dried", which is read on the same
+  // dry basis (lib/food-form.ts, analysisBasis). See CATALOG-CONFLICTS.
   {
     brand: "Weruva",
     line: "Freeze Dried",
@@ -18895,7 +19420,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "freeze_dried",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["tuna", "salmon", "tilapia"],
     packages: [
       { size: "1 oz", container: BAG, upc: "810028245297", scope: UNIT },
@@ -18909,7 +19434,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "unknown",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["chicken"],
     lifeStage: "adult",
     packages: [
@@ -19514,7 +20039,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "freeze_dried",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["tuna"],
     packages: [
       { size: "0.88 oz", container: BAG, upc: "886817008848", scope: UNIT },
@@ -23427,4 +23952,8 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_061,
   ...WELLNESS_BATCH_062,
   ...WELLNESS_BATCH_067,
+  ...INSTINCT_BATCH_063,
+  ...INSTINCT_BATCH_064,
+  ...INSTINCT_BATCH_065,
+  ...WELLNESS_BATCH_066,
 ];

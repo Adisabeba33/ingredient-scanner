@@ -72,6 +72,15 @@ function SpeciesChip({ species }: { species: string | null }) {
   );
 }
 
+/** The chip's word for each settled form. */
+const FORM_TEXT: Record<Exclude<FoodForm, "unknown">, string> = {
+  dry: "Dry",
+  wet: "Wet",
+  "semi-moist": "Semi-moist",
+  "frozen-raw": "Frozen raw",
+  "freeze-dried": "Freeze-dried",
+};
+
 /**
  * Dry or wet. Amber when it isn't settled — either nothing said, or the pack
  * and the ingredients disagreed, and both leave the report reading the
@@ -85,13 +94,7 @@ function FormChip({
   confirmed: boolean | null;
 }) {
   const known = isFoodForm(form) && form !== "unknown";
-  const text = known
-    ? form === "dry"
-      ? "Dry"
-      : form === "wet"
-        ? "Wet"
-        : "Semi-moist"
-    : "Dry/wet?";
+  const text = known ? FORM_TEXT[form] : "Dry/wet?";
   // A form only one signal vouched for is shown, but marked — it's a lead, not
   // a fact, and it's the row worth a second look.
   const settled = known && confirmed !== false;
@@ -126,6 +129,8 @@ const FORM_CHOICES: { value: FoodForm; label: string }[] = [
   { value: "dry", label: "Dry" },
   { value: "wet", label: "Wet" },
   { value: "semi-moist", label: "Semi" },
+  { value: "frozen-raw", label: "Frozen raw" },
+  { value: "freeze-dried", label: "Freeze-dried" },
   { value: "unknown", label: "Not sure" },
 ];
 

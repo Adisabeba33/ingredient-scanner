@@ -142,6 +142,11 @@ places where "a canned dinner" had been written down as if it meant "a product".
 2. **The panel bounds are per food form.** Wet is moisture 60–90%, protein
    ≤20%. Dry is moisture 5–20%, protein ≤50%. Those are as-fed figures in both
    cases; a bag really is 34% protein. Do not "fix" data to fit a bound.
+   Frozen raw and freeze-dried (the owner, 8 October 2026) are bounded on
+   the basis `analysisBasis` gives them — frozen raw as wet, freeze-dried as
+   dry — and stored as `foodForm: "frozen-raw"` / `"freeze-dried"`, mapped
+   from the ledger's `frozen_raw` / `freeze_dried`. Raw-coated kibble stays
+   `dry`.
 3. **Calories are per CUP or per PIECE**, not per package, so rule 4 is
    unavailable — a cup is a volume and there is nothing for the arithmetic to
    check. Leave the kcal columns as `-` in the checker input rather than
