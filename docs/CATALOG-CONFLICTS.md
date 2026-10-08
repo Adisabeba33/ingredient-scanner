@@ -2483,3 +2483,42 @@ records' extras hold one malformed entry, "Choline (min): 4,000 mg/kg;
 *Taurine" at 0.45%, two guarantees run together, to be split from the source
 before either is seeded. The Multivitamin recipe prints a complete sentence
 ("… for maintenance") although it is sold as a mixer.
+
+## Instinct RawBoost+ dog toppers — task #124, all 21 held in the ledger
+
+Twenty-one records from research-data-center task #124 (PR #169), appended to
+`research/deep-research-instinct.json`. **Nothing is seeded**, so no batch
+number is spent. Every one is a form `data/known-products.ts` cannot store
+yet, the decision batch 048 left open (`research/BRIEF-INSTINCT.md` §3):
+
+- **Freeze-dried raw, 19** (6.0% moisture max) — RawBoost+ Mixers Grass-Fed
+  Beef 769949602064, 769949602057, 769949602040; Cage-Free Chicken
+  769949602033, 769949602019; Gut Health 769949601296, 769949601227,
+  769949601173, 769949601166; Multivitamin 769949600640, 769949600633; Skin &
+  Coat Health 769949601135, 769949601234, 769949601128; Tranquility
+  769949600541; Mobility Support 769949601326; and RawBoost+ Shakers Grass-Fed
+  Beef 769949620242, Cage-Free Chicken 769949620228, Gut Health 769949620259.
+- **Frozen raw, 2** (62.0% moisture max) — RawBoost+ Frozen Mixers Gut Health
+  769949632009 and Skin & Coat Health 769949632016, 1.25 lb.
+
+Only the three Shakers are `source_verified`. The eighteen Mixers and Frozen
+Mixers are `needs_physical_label`: the PetSmart page binding each code prints
+a different list from the maker's current page, so even after a form decision
+they would go in as identity only, with no calories. One of those pages —
+PetSmart's for 769949601234, Skin & Coat Health 12.5 oz — carries the Gut
+Health label, a retailer's error noted in the record rather than a wrong
+barcode. A Grass-Fed Beef 25 oz code, 769949600794, was seen only in a search
+snippet from a host that refuses the research, and was not filed.
+
+The Shakers repeat the cat Shakers' recipes (batch 053), and the Mixers and
+Frozen Mixers of Gut Health and of Skin & Coat Health share one list in two
+forms, 6.0% against 62.0% moisture; both check-ledger WARNs are answered in the
+records. One food-form value for both would misread one of them, which is the
+§3 warning in its plainest form: a frozen patty reads like wet food, a
+freeze-dried one like dry.
+
+Every pack but one prints "intended for intermittent or supplemental feeding
+only". Mixers Multivitamin prints a maintenance sentence for adult dogs. Range
+names, if these are ever seeded: "RawBoost+ Mixers", "RawBoost+ Shakers",
+"RawBoost+ Frozen Mixers", none of which is in the brand entry or in
+`lib/nutrition-role.ts`.

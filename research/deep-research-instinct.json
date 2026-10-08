@@ -7026,7 +7026,8 @@
         "Calories 4353 kcal/kg, 21 kcal/tbsp from https://www.petsmart.com/dog/food/food-toppers/instinct-rawboost-shakers-dog-food-topper---freeze-dried-raw-grain-free-55-oz-5350932.html (page text, embedded product description; the maker's page prints none). Cross-check: 4353 × 0.1559 kg (5.5 oz.) = 679 kcal per bag; the label prints no per-package total, only per tbsp, so there is nothing to compare the bag total against; implied tbsp weight 4.8 g. unit_name 'other' = tablespoon as printed (\"kcal/tbsp\").",
         "Adequacy statement as printed on https://www.petsmart.com/dog/food/food-toppers/instinct-rawboost-shakers-dog-food-topper---freeze-dried-raw-grain-free-55-oz-5350932.html (retailer page text; the maker's page prints none): \"This product is intended for intermittent or supplemental feeding only.\" — a single reading (the maker's page prints no adequacy statement).",
         "What the pack is: freeze-dried raw pieces (\"RawBoost+ Shakers\"), a topper / complement by its own adequacy sentence (\"intermittent or supplemental feeding only\"); moisture (max) 6.0% — the list reads like a dry food's. Filed food_form 'unknown' (no FoodForm value fits; BRIEF-INSTINCT §3).",
-        "Brand check (BRIEF-INSTINCT §2): the maker page is instinctpetfood.com and the PetSmart title reads \"Instinct …\" — not Purina ONE True Instinct, Royal Canin or Prairie."
+        "Brand check (BRIEF-INSTINCT §2): the maker page is instinctpetfood.com and the PetSmart title reads \"Instinct …\" — not Purina ONE True Instinct, Royal Canin or Prairie.",
+        "Shares its ingredient list and panel to the letter with the cat pack 769949620235 (task #125; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
       "research_status": "source_verified"
     },
@@ -7107,7 +7108,8 @@
         "What the pack is: freeze-dried raw pieces (\"RawBoost+ Shakers\"), a topper / complement by its own adequacy sentence (\"intermittent or supplemental feeding only\"); moisture (max) 6.0% — the list reads like a dry food's. Filed food_form 'unknown' (no FoodForm value fits; BRIEF-INSTINCT §3).",
         "Brand check (BRIEF-INSTINCT §2): the maker page is instinctpetfood.com and the PetSmart title reads \"Instinct …\" — not Purina ONE True Instinct, Royal Canin or Prairie.",
         "Footnote printed with the analysis: *Not recognized as an essential nutrient by the AAFCO Dog Food Nutrient Profiles..",
-        "Shared ingredient list (check-ledger WARN): RawBoost+ Mixers Gut Health (freeze-dried) and RawBoost+ Frozen Mixers Gut Health (frozen) print the same ingredient list on the maker's pages — not a paste: the two are the same recipe in two forms, and their guaranteed analyses differ (moisture max 6.0% freeze-dried vs 62.0% frozen)."
+        "Shared ingredient list (check-ledger WARN): RawBoost+ Mixers Gut Health (freeze-dried) and RawBoost+ Frozen Mixers Gut Health (frozen) print the same ingredient list on the maker's pages — not a paste: the two are the same recipe in two forms, and their guaranteed analyses differ (moisture max 6.0% freeze-dried vs 62.0% frozen).",
+        "Shares its ingredient list and panel to the letter with the cat pack 769949620266 (task #125; check-ledger WARN): one recipe sold under a dog label and a cat label, each read off its own maker page and its own PetSmart page — not a paste."
       ],
       "research_status": "source_verified"
     },
