@@ -880,6 +880,10 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Kittles",
       "Lickable Treats",
       "CORE Signature Selects",
+      // Batch 066: the freeze-dried Bowl Boosters, as the maker's names
+      // split them ("Wellness Bowl Boosters BARE …", "… Functional …").
+      "Bowl Boosters BARE",
+      "Bowl Boosters Functional",
     ],
   },
   { name: "Old Mother Hubbard", owner: "WellPet", species: "dog" },

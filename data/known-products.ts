@@ -7913,6 +7913,95 @@ const INSTINCT_BATCH_065: KnownProduct[] = [
   },
 ];
 
+// Batch 066 — Wellness Bowl Boosters freeze-dried toppers: the six batch 060
+// left in the ledger (research-data-center task #146, PR #176), filed
+// "freeze-dried". BARE Nutrient-Rich Beef and Turkey Hearts carry compositions
+// (calories per cup); the four Functional toppers are identity only
+// (needs_physical_label, two formula generations). All print "This is a
+// complementary food intended to be fed with a complete and balanced dog food
+// diet" and read as toppers through "bowl boosters"; no lifeStage. See
+// docs/CATALOG-CONFLICTS.md, batch 066.
+const WELLNESS_BATCH_066: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters BARE",
+    variant: "Nutrient-Rich Beef",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["beef"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885252", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters BARE",
+    variant: "Nutrient-Rich Turkey Hearts",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["turkey"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885245", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Digestive Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885306", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Joint Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885269", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Skin & Coat",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885276", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Bowl Boosters Functional",
+    variant: "Freeze Dried Heart Health",
+    species: "dog",
+    texture: "freeze_dried",
+    presentation: "plain",
+    foodForm: "freeze-dried",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4 oz", container: POUCH, upc: "076344885290", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -23866,4 +23955,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_063,
   ...INSTINCT_BATCH_064,
   ...INSTINCT_BATCH_065,
+  ...WELLNESS_BATCH_066,
 ];

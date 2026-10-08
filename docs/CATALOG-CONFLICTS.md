@@ -3010,6 +3010,8 @@ waits for a form of its own. If `dry`, the two BARE pouches can go in with
 their compositions as they stand; the Functional four need a "tablespoon"
 serving name, which the seed has not used, and a pack photo.
 
+**Landed 8 October 2026** as `freeze-dried`: batch 066.
+
 ### Candidates and what was not filed
 
 Seven candidates, not seeded: Functional Immune Health **076344885337**
@@ -3341,3 +3343,25 @@ Patties are identity only, so nothing seeded shares a composition.
 the PetSmart page that binds it by Flavor, title and sku prints the chicken
 patty's every line, its own item number included. Which product the code is on
 is in question.
+
+## Batch 066 — Wellness Bowl Boosters, freeze-dried
+
+The six freeze-dried toppers batch 060 left in the ledger (task #146, PR #176),
+`foodForm: "freeze-dried"`:
+
+- **076344885252** BARE Nutrient-Rich Beef and **076344885245** BARE
+  Nutrient-Rich Turkey Hearts, 4 oz — compositions. The maker's label-image
+  text, read again on PetSmart's page and agreeing but for spacing; panel from
+  the maker's page; calories per cup from PetSmart (5192 and 4400 kcal/kg).
+- **076344885306** Digestive Health, **076344885269** Joint Health,
+  **076344885276** Skin & Coat, **076344885290** Heart Health — Functional,
+  4 oz, identity only (`needs_physical_label`, two formula generations; their
+  calories, per tablespoon, are not stored). Heart Health's maker page sits at
+  a "hearty-topper-beef" address; its code is bound there and again by
+  PetSmart's own Heart Health page, so the binding stands.
+
+Ranges `Bowl Boosters BARE` and `Bowl Boosters Functional`, as batch 060 split
+Simply Shreds and Tender Toppers; the variant is the rest of the ledger's name.
+Every one prints "This is a complementary food intended to be fed with a
+complete and balanced dog food diet" and reads `topper` through "bowl
+boosters", as Simply Shreds does. No life stage.

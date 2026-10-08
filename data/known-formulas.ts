@@ -273,6 +273,11 @@ const VERIFIED_063 = "2026-10-08";
 // cup) and the AAFCO sentence from that PetSmart page. Per cup, so no
 // arithmetic witness (SEEDING-A-BATCH.md §2.4).
 const VERIFIED_065 = "2026-10-08";
+// Batch 066 — Wellness Bowl Boosters BARE, from research-data-center task #146
+// (PR #176): two freeze-dried 4 oz pouches whose list is the maker's label-image
+// text, read again on PetSmart's page and agreeing but for spacing; panel from
+// the maker's page, calories per cup from PetSmart. No arithmetic witness.
+const VERIFIED_066 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -12303,5 +12308,15 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Lamb, Beef Liver, Beef Heart, Beef Kidney, Carrots, Spinach, Blueberries, Apples, Sweet Potatoes, Butternut Squash, Ground Flaxseed, Ground Miscanthus Grass, Montmorillonite Clay, Tricalcium Phosphate, Salmon Oil, Dried Kelp, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Vitamin D3 Supplement), Zinc Proteinate, Manganese Proteinate.`,
     analysis: withCalories(ga(11, 8, 3, 73, null, null), 1368, 328, "cup"),
     verifiedAt: VERIFIED_065,
+  },
+  "076344885252": {
+    ingredients: `Beef, Mixed Tocopherols added to preserve freshness, Rosemary Extract, Green Tea Extract.`,
+    analysis: withCalories(ga(45, 35, 5.5, 8, null, null), 5192, 239, "cup"),
+    verifiedAt: VERIFIED_066,
+  },
+  "076344885245": {
+    ingredients: `Turkey Hearts, Mixed Tocopherols added to preserve freshness, Rosemary Extract, Green Tea Extract.`,
+    analysis: withCalories(ga(60, 20, 1.5, 8, null, null), 4400, 202, "cup"),
+    verifiedAt: VERIFIED_066,
   },
 };
