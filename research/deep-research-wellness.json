@@ -30639,9 +30639,10 @@
         "Calorie cross-check: 796 kcal/kg × 2.8 oz (0.0794 kg) = 63.2 vs printed 63 kcal/pouch (diff 0.3%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -30775,9 +30776,10 @@
         "Calorie cross-check: 679 kcal/kg × 2.8 oz (0.0794 kg) = 53.9 vs printed 54 kcal/pouch (diff 0.2%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -30913,9 +30915,10 @@
         "Calorie cross-check: 782 kcal/kg × 2.8 oz (0.0794 kg) = 62.1 vs printed 62 kcal/pouch (diff 0.1%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31039,9 +31042,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---grain-free-gravies-3-oz-5263643.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 866 kcal/kg × 3 oz (0.0850 kg) = 73.7 vs printed 74 kcal/can (diff 0.5%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31166,9 +31170,10 @@
         "Maker page used for the second reading is the sibling product page for the same recipe (https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-gravies-salmon-entree/); the code 076344027669 was not listed by its ps-sku. Its 'Available Sizes' reads: 3 Ounce, 5.5 Ounce Can.",
         "Calorie cross-check: 866 kcal/kg × 5.5 oz (0.1559 kg) = 135.0 vs printed 135 kcal/can (diff 0.0%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31313,9 +31318,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-grilled-3-oz-5369065.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 888 kcal/kg × 3 oz (0.0850 kg) = 75.5 vs printed 75 kcal/can (diff 0.7%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31457,9 +31463,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-grilled-3-oz-5369066.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 950 kcal/kg × 3 oz (0.0850 kg) = 80.8 vs printed 81 kcal/can (diff 0.3%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31599,9 +31606,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-grilled-3-oz-5369067.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1013 kcal/kg × 3 oz (0.0850 kg) = 86.2 vs printed 86 kcal/can (diff 0.2%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31742,9 +31750,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-grilled-3-oz-5369068.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1030 kcal/kg × 3 oz (0.0850 kg) = 87.6 vs printed 88 kcal/can (diff 0.5%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31867,9 +31876,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-minced-3-oz-5163666.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 791 kcal/kg × 3 oz (0.0850 kg) = 67.3 vs printed 67 kcal/can (diff 0.4%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -31993,9 +32003,10 @@
         "Calorie cross-check: 925 kcal/kg × 3 oz (0.0850 kg) = 78.7 vs printed 79 kcal/can (diff 0.4%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32118,9 +32129,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-minced-55-oz-5281645.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 892 kcal/kg × 5.5 oz (0.1559 kg) = 139.1 vs printed 139 kcal/can (diff 0.1%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32234,9 +32246,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-morsels-3-oz-5280670.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 933 kcal/kg × 5.5 oz (0.1559 kg) = 145.5 vs printed 146 kcal/can (diff 0.4%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32374,9 +32387,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-adult-cat-wet-food---natural-grain-free-pate-3-oz-5153751.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1256 kcal/kg × 3 oz (0.0850 kg) = 106.8 vs printed 107 kcal/can (diff 0.2%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32515,9 +32529,10 @@
         "Maker page used for the second reading is the sibling product page for the same recipe (https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-pate-beef-chicken-dinner-pate/); the code 076344089346 was not listed by its ps-sku. Its 'Available Sizes' reads: 12.5 Ounce, 5.5 Ounce, 3 Ounce Can.",
         "Calorie cross-check: 1245 kcal/kg × 5.5 oz (0.1559 kg) = 194.1 vs printed 194 kcal/can (diff 0.1%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32659,7 +32674,8 @@
         "Calorie cross-check: 1256 kcal/kg × 5.5 oz (0.1559 kg) = 195.8 vs printed 196 kcal/can (diff 0.1%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Seeded 2026-10-08, batch 068 (branch seed/wellness-rdc-149), as identity only in data/known-products.ts, although the record is source_verified: its ingredient statement (PetSmart's 5.5 oz page) prints \"d–Calcium Pantothenate\" with an en dash where the 3 oz of the same product, 076344088639, prints \"d-Calcium Pantothenate\" with a hyphen, as does the maker's label-image text read for both; one product cannot carry two strings (lib/known-import.test.ts, every bag of one product carries the same composition), the string is copied as delivered and not tidied, so the 3 oz carries the composition and this size the identity until the owner or a pack decides (docs/CATALOG-CONFLICTS.md, batch 068). research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "source_verified"
     },
@@ -32786,9 +32802,10 @@
         "Calorie cross-check: 976 kcal/kg × 5.5 oz (0.1559 kg) = 152.2 vs printed 152 kcal/can (diff 0.1%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
         "Omega-6 / Omega-3 guarantee names restored from the retailer page (rework, read 2026-10-08).",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -32925,9 +32942,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-complete-health-kitten-wet-food---natural-grain-free-pate-3-oz-5153753.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1361 kcal/kg × 3 oz (0.0850 kg) = 115.8 vs printed 116 kcal/can (diff 0.2%)",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"kitten\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33063,9 +33081,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---grain-free-pate-264-oz-5368944.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1032 kcal/kg × 2.64 oz (0.0748 kg) = 77.2 kcal per whole container; the label's unit is a 'serving' of 39 kcal (container ÷ serving = 1.98), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33202,9 +33221,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---grain-free-pate-264-oz-5369085.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1285 kcal/kg × 2.64 oz (0.0748 kg) = 96.2 kcal per whole container; the label's unit is a 'serving' of 48 kcal (container ÷ serving = 2.00), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33339,9 +33359,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---grain-free-pate-264-oz-5369087.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 1280 kcal/kg × 2.64 oz (0.0748 kg) = 95.8 kcal per whole container; the label's unit is a 'serving' of 48 kcal (container ÷ serving = 2.00), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33480,9 +33501,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369088.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 920 kcal/kg × 2.64 oz (0.0748 kg) = 68.9 kcal per whole container; the label's unit is a 'serving' of 34 kcal (container ÷ serving = 2.03), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33622,9 +33644,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369089.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 807 kcal/kg × 2.64 oz (0.0748 kg) = 60.4 kcal per whole container; the label's unit is a 'serving' of 30 kcal (container ÷ serving = 2.01), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33764,9 +33787,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369090.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 915 kcal/kg × 2.64 oz (0.0748 kg) = 68.5 kcal per whole container; the label's unit is a 'serving' of 34 kcal (container ÷ serving = 2.01), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -33905,9 +33929,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369091.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 980 kcal/kg × 2.64 oz (0.0748 kg) = 73.3 kcal per whole container; the label's unit is a 'serving' of 37 kcal (container ÷ serving = 1.98), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -34047,9 +34072,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369092.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 938 kcal/kg × 2.64 oz (0.0748 kg) = 70.2 kcal per whole container; the label's unit is a 'serving' of 35 kcal (container ÷ serving = 2.01), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -34190,9 +34216,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369093.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 961 kcal/kg × 2.64 oz (0.0748 kg) = 71.9 kcal per whole container; the label's unit is a 'serving' of 36 kcal (container ÷ serving = 2.00), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -34331,9 +34358,10 @@
         "guaranteed analysis and calories from https://www.petsmart.com/cat/food-and-treats/wet-food/wellness-purrfect-duos-adult-cat-wet-food---natural-grain-free-cuts-264-oz-5369147.html (retailer page, read 2026-10-08, browser) (page text)",
         "Calorie cross-check: 922 kcal/kg × 2.64 oz (0.0748 kg) = 69.0 kcal per whole container; the label's unit is a 'serving' of 34 kcal (container ÷ serving = 2.03), so the serving is not the whole container",
         "No AAFCO adequacy sentence printed as text on the retailer page or the maker page (the maker's marketing copy and the footnote about nutrients not recognised by the AAFCO profiles are not the statement); life stage taken from the retailer's 'Life Stage' field.",
-        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)"
+        "status source_verified: every gate passes (adequacy statement not printed on any page read — owner: does not block)",
+        "Promoted to seed 2026-10-08, batch 068 (branch seed/wellness-rdc-149): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     }
   ]
 }

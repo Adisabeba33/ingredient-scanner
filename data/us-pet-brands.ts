@@ -884,6 +884,8 @@ export const US_PET_BRANDS: SeedBrand[] = [
       // split them ("Wellness Bowl Boosters BARE …", "… Functional …").
       "Bowl Boosters BARE",
       "Bowl Boosters Functional",
+      "Appetizing Entrées",
+      "Complete Health Purrfect Duos",
     ],
   },
   { name: "Old Mother Hubbard", owner: "WellPet", species: "dog" },
