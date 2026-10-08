@@ -282,3 +282,13 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
 - Batch 061 (task #147): no composition; 21 identity only (two formula
   generations, no current calories), 1 candidate held. Two variants carry the
   pack's "Wholesome Grains" / "Grain Free" to keep two recipes apart.
+- Batch 062 (task #150): 2 compositions (Lickable Treats), 4 identity only
+  (Lickable Duck, Kittles x3), 3 cat Bowl Boosters candidates held. Ranges
+  added: `Kittles`, `Lickable Treats`; both read `treat`.
+
+Totals after batch 062: the ledger holds 174 records; the catalog holds 88
+Wellness products under 121 barcodes, 37 with a composition — see
+INVENTORY-WELLNESS.md. Still open for the owner: the freeze-dried form
+(BARE, Functional), CORE 95%'s role, the slug-shaped Complete Health
+variants, and the empty older ranges in the brand entry (`Mini Meals`,
+`Petite Entrees`, `Soft Puppy Bites`).

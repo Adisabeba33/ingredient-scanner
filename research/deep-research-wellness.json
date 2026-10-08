@@ -25916,9 +25916,10 @@
         "research note: unit_name 'other' = one tube; life stage 'adult' is PetSmart's attribute (Life Stage: Adult).",
         "barcode note: One pouch holds six tubes (6 Ct, 2.53 oz; about 12 g per tube from the calorie figures), so this is one retail unit, not a multipack of pouches.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, unit barcode (maker page, one size), complete ingredient statement read twice and agreeing, complete printed guaranteed analysis, calories (kcal/kg and per tube), dated direct sources; no adequacy statement is printed (not required, per the task)"
+        "status source_verified: identity, unit barcode (maker page, one size), complete ingredient statement read twice and agreeing, complete printed guaranteed analysis, calories (kcal/kg and per tube), dated direct sources; no adequacy statement is printed (not required, per the task)",
+        "Promoted to seed 2026-10-08, batch 062 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"2.5 oz\" for the record's \"2.5 Ounce\"; the calorie serving named \"tube\" where the record says \"other\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26026,9 +26027,10 @@
         "research note: unit_name 'other' = one tube; life stage 'adult' is PetSmart's attribute (Life Stage: Adult).",
         "barcode note: One pouch holds six tubes (6 Ct, 2.53 oz; about 12 g per tube from the calorie figures), so this is one retail unit, not a multipack of pouches.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, unit barcode (maker page, one size), complete ingredient statement read twice and agreeing, complete printed guaranteed analysis, calories (kcal/kg and per tube), dated direct sources; no adequacy statement is printed (not required, per the task)"
+        "status source_verified: identity, unit barcode (maker page, one size), complete ingredient statement read twice and agreeing, complete printed guaranteed analysis, calories (kcal/kg and per tube), dated direct sources; no adequacy statement is printed (not required, per the task)",
+        "Promoted to seed 2026-10-08, batch 062 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with size \"2.5 oz\" for the record's \"2.5 Ounce\"; the calorie serving named \"tube\" where the record says \"other\"; lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

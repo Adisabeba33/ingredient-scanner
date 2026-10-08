@@ -6559,6 +6559,95 @@ const WELLNESS_BATCH_061: KnownProduct[] = [
   },
 ];
 
+// Batch 062 — Wellness cat treats, from research-data-center task #150
+// (PR #180). Two Lickable Treats pouches (six tubes each) carry a composition;
+// the Duck pouch and three Kittles bags are identity only. Both ranges read
+// `treat` in lib/nutrition-role.ts ("treats" in the name; "kittles" in
+// KNOWN_TREAT_LINES), so neither imports as a dinner. Lickable Treats are a
+// purée at 85% moisture — `wet`, texture `unknown`; calories per tube, as
+// printed. Three cat Bowl Boosters candidates stay in the ledger. See
+// docs/CATALOG-CONFLICTS.md, batch 062.
+const WELLNESS_BATCH_062: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "Kittles",
+    variant: "Chicken & Cranberry",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "2 oz", container: POUCH, upc: "076344900344", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Kittles",
+    variant: "Salmon & Cranberry",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "2 oz", container: POUCH, upc: "076344900337", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Kittles",
+    variant: "Tuna & Cranberry",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["tuna"],
+    packages: [
+      { size: "2 oz", container: POUCH, upc: "076344900351", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Lickable Treats",
+    variant: "Chicken",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "2.5 oz", container: POUCH, upc: "076344144007", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Lickable Treats",
+    variant: "Tuna",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [
+      { size: "2.5 oz", container: POUCH, upc: "076344144014", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Lickable Treats",
+    variant: "Duck",
+    species: "cat",
+    texture: "unknown",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["duck", "chicken"],
+    packages: [
+      { size: "2.5 oz", container: POUCH, upc: "076344144038", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -22501,4 +22590,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_059,
   ...WELLNESS_BATCH_060,
   ...WELLNESS_BATCH_061,
+  ...WELLNESS_BATCH_062,
 ];

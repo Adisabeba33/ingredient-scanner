@@ -2863,3 +2863,53 @@ maker codes, **076344088394**, **076344088592**, **076344898214** and
 **076344898245** (CORE Original, CORE Turkey & Duck, CORE Digestive Health
 Chicken and Salmon), sit on pages that list a 5 and an 11 lb bag under one
 code, so no page binds them to a size and none was filed.
+
+## Batch 062 — Wellness cat treats
+
+Nine records from research-data-center task #150 (PR #180). Two are stored
+with their compositions, four as identity, and three candidates stay in the
+ledger.
+
+### Lickable Treats, stored, and read as treats
+
+**076344144007** Chicken and **076344144014** Tuna — 2.5 oz pouches of six
+tubes, one retail unit. Each statement was read on the maker's page and again
+on PetSmart's, and they agree. Calories are printed per tube, 9 and 8 kcal,
+and stored per "tube"; at a sixth of 2.5 oz (720 kcal/kg × 11.8 g = 8.5) each
+passes the arithmetic. No conflict note. A purée at 85% moisture max, filed
+`wet` with texture `unknown` — the vocabulary has no purée, and I and love and
+you's Treat Meow is the same shelf. Neither page prints an AAFCO sentence:
+PetSmart's marketing copy says "complete & balanced for adult cats" while
+filing the item as a treat, and the maker's feeding note is three tubes a day
+beside the regular diet. The range name carries "Treats", so
+`lib/nutrition-role.ts` reads `treat`; no `lifeStage` (the ledger's `adult`
+is PetSmart's attribute).
+
+### Four seeded as identity only
+
+- **076344144038** — Lickable Treats Duck. The maker and PetSmart alike print
+  "Crude Fiber Not Less Than 1.50%" and "Moisture Not Less Than 85.0%" where
+  the Chicken and Tuna packs print "Not More Than" — a probable label slip,
+  and with no moisture maximum the panel cannot be stored. Filed `wet` with
+  its siblings.
+- **076344900344** Chicken, **076344900337** Salmon and **076344900351** Tuna
+  & Cranberry — Kittles, 2 oz. PetSmart's Canadian site prints another list
+  under the same codes (whitefish meal and blueberries, about 3,520–3,540
+  kcal/kg, 1.1 kcal a treat); the maker's US list is the one in the ledger, and
+  a pack settles which is on the shelf. The Chicken code is bound by the
+  maker's one-size page; Salmon's 2 oz by a US retailer's page and Tuna's by
+  the Canadian page only, because the maker lists 2 and 6 oz under one code.
+  Nothing binds either to the 6 oz, so neither binding is contested; it is
+  the weakest binding in this landing. Crunchy treats at 10% moisture, filed
+  `dry`, texture `unknown`. `kittles` is already in `KNOWN_TREAT_LINES`.
+
+Both ranges, "Kittles" and "Lickable Treats", are new to the brand entry.
+
+### Three candidates left in the ledger
+
+Bowl Boosters Simply Shreds for cats, 1.75 oz — **076344012177** Flaked
+Wild Salmon & Tuna, **076344012191** Flaked Tuna & Shrimp, **076344012214**
+Shredded Boneless Chicken: no calorie statement on any readable page, and the
+Chicken statement was read once. The code `076344089957`, shown beside every
+Kittles and Lickables product on the maker's pages, is a carousel item —
+Complete Health Indoor Wholesome Grains, batch 061 — not these products.

@@ -234,6 +234,11 @@ const VERIFIED_059 = "2026-10-08";
 // page and again on PetSmart's, agreeing; PetSmart's calories per pouch, and
 // all four pass the arithmetic. Moisture 90.0% max as printed on all four.
 const VERIFIED_060 = "2026-10-08";
+// Batch 062 — Wellness Lickable Treats, from research-data-center task #150
+// (PR #180): two 2.5 oz pouches of six tubes, the statement read on the maker's
+// page and again on PetSmart's, agreeing. Calories are printed per tube (9 and
+// 8 kcal); at a sixth of 2.5 oz each passes the arithmetic. No AAFCO sentence.
+const VERIFIED_062 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -12044,5 +12049,15 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Salmon, Pumpkin.`,
     analysis: withCalories(ga(8, 0.5, 1, 90, null, null), 530, 42, "pouch"),
     verifiedAt: VERIFIED_060,
+  },
+  "076344144007": {
+    ingredients: `Chicken, Fish Broth, Water Sufficient for Processing, Chicken Liver, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Marine Microalgae Oil (preserved with mixed tocopherols), Dried Chicory Root, Guar Gum, Potassium Chloride, Salt, Taurine, Magnesium Sulfate, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Thiamine Mononitrate, Niacin, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Sodium Selenite, Folic Acid, Potassium Iodide, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8.5, 1.35, 1.5, 85, null, 0.05), 720, 9, "tube"), { "Zinc (mg/kg)": ["min", 15, "other"], "Vitamin E": ["min", 15, "IU/kg"] }),
+    verifiedAt: VERIFIED_062,
+  },
+  "076344144014": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient for Processing, Tapioca Starch, Sunflower Oil, Dried Chicory Root, Tricalcium Phosphate, Guar Gum, Potassium Chloride, Marine Microalgae Oil (preserved with mixed tocopherols), Salt, Taurine, Magnesium Sulfate, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Thiamine Mononitrate, Iron Proteinate, Niacin, Copper Proteinate,  Manganese Proteinate, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Sodium Selenite, Riboflavin Supplement, Folic Acid, Potassium Iodide, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8.5, 1.35, 1.5, 85, null, 0.05), 660, 8, "tube"), { "Biotin (mg/kg)": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.25, "%"] }),
+    verifiedAt: VERIFIED_062,
   },
 };

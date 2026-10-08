@@ -877,6 +877,8 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Bowl Boosters Simply Shreds",
       "Bowl Boosters Tender Toppers",
       "Puppy Bites",
+      "Kittles",
+      "Lickable Treats",
     ],
   },
   { name: "Old Mother Hubbard", owner: "WellPet", species: "dog" },
