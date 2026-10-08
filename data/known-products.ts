@@ -5484,8 +5484,9 @@ const INSTINCT_BATCH_053: KnownProduct[] = [
 // different list from the maker's current page, so which formula a bag carries
 // is a photograph (needs_physical_label). Among those only the Whole Grain
 // puppy bags carry a lifeStage, "puppy", from "for Puppies" in the printed name
-// (batch 052's kitten rule). Ranges are the maker's names; sizes drop the
-// trailing full stop.
+// (batch 052's kitten rule), and their variant names the puppies as batch
+// 052's kitten bag does ("Chicken Recipe for Puppies"; the ledger has "Chicken
+// Recipe"). Ranges are the maker's names.
 const INSTINCT_BATCH_054: KnownProduct[] = [
   {
     brand: "Instinct",
@@ -5690,7 +5691,7 @@ const INSTINCT_BATCH_054: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "RawBoost+ Whole Grain Kibble",
-    variant: "Chicken Recipe",
+    variant: "Chicken Recipe for Puppies",
     species: "dog",
     texture: "kibble",
     presentation: "plain",
@@ -5717,12 +5718,15 @@ const INSTINCT_BATCH_054: KnownProduct[] = [
 // name (batch 052's rule). Four candidate records — Original Real Duck 3 oz,
 // Original for Kittens Chicken 5.5 oz, Limited Ingredient Diet Real Rabbit
 // 3 oz, Split Cups Paté Duck Entrée — stay in the ledger. Variants are the
-// ledger's.
+// ledger's with the range taken out where they repeated it ("Minced Cups
+// Chicken" -> "Chicken", "Flaked Salmon Entrée" -> "Salmon", "Split Cups Paté
+// Chicken Entrée" -> "Paté Chicken Entrée"), and the kitten can is "Real
+// Chicken for Kittens", the words of its AAFCO sentence, in batch 052's order.
 const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Minced Cups",
-    variant: "Minced Cups Chicken",
+    variant: "Chicken",
     species: "cat",
     texture: "minced",
     presentation: "in_gravy",
@@ -5736,7 +5740,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Minced Cups",
-    variant: "Minced Cups Rabbit",
+    variant: "Rabbit",
     species: "cat",
     texture: "minced",
     presentation: "in_gravy",
@@ -5750,7 +5754,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Minced Cups",
-    variant: "Minced Cups Tuna",
+    variant: "Tuna",
     species: "cat",
     texture: "minced",
     presentation: "in_gravy",
@@ -5764,7 +5768,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Flaked Entrées",
-    variant: "Flaked Salmon Entrée",
+    variant: "Salmon",
     species: "cat",
     texture: "flaked",
     presentation: "in_gravy",
@@ -5777,7 +5781,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Flaked Entrées",
-    variant: "Flaked Duck Entrée",
+    variant: "Duck",
     species: "cat",
     texture: "flaked",
     presentation: "in_gravy",
@@ -5790,7 +5794,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Flaked Entrées",
-    variant: "Flaked Rabbit Entrée",
+    variant: "Rabbit",
     species: "cat",
     texture: "flaked",
     presentation: "in_gravy",
@@ -5803,7 +5807,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Flaked Entrées",
-    variant: "Flaked Tuna Entrée",
+    variant: "Tuna",
     species: "cat",
     texture: "flaked",
     presentation: "in_gravy",
@@ -5816,7 +5820,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Flaked Entrées",
-    variant: "Flaked Chicken Entrée",
+    variant: "Chicken",
     species: "cat",
     texture: "flaked",
     presentation: "in_gravy",
@@ -5898,7 +5902,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Original",
-    variant: "for Kittens Chicken",
+    variant: "Real Chicken for Kittens",
     species: "cat",
     texture: "pate",
     presentation: "plain",
@@ -5912,7 +5916,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Split Cups",
-    variant: "Split Cups Paté Chicken Entrée",
+    variant: "Paté Chicken Entrée",
     species: "cat",
     texture: "pate",
     presentation: "plain",
@@ -5925,7 +5929,7 @@ const INSTINCT_BATCH_055: KnownProduct[] = [
   {
     brand: "Instinct",
     line: "Split Cups",
-    variant: "Split Cups Paté Salmon Entrée",
+    variant: "Paté Salmon Entrée",
     species: "cat",
     texture: "pate",
     presentation: "plain",

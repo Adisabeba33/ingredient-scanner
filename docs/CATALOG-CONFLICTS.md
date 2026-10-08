@@ -2559,9 +2559,11 @@ JSON-LD `gtin13` on a one-bag variant page that names the weight.
 None carries a `lifeStage` from an AAFCO sentence: those were read on the pages
 printing the other list (batch 048's rule). The puppy bags carry `puppy`, from
 "for Puppies" in the printed name on both the maker's and PetSmart's pages, as
-batch 052 filed its kitten bag. The ledger's `all` is PetSmart's sentence ("…
-for all life stages, including growth of large size dogs"), which belongs to
-PetSmart's list.
+batch 052 filed its kitten bag, and their variant names them the same way:
+"Chicken Recipe for Puppies" (ledger "Chicken Recipe"; the maker prints "for
+Puppies Chicken Recipe"), noted in both records. The ledger's `all` is
+PetSmart's sentence ("… for all life stages, including growth of large size
+dogs"), which belongs to PetSmart's list.
 
 ### The ranges, as the maker names them
 
@@ -2638,10 +2640,18 @@ printed name (batch 052's rule). The others carry none, although the ledger
 says `all` or `adult`: the sentence read is on the maker's page, whose list
 the can may not carry.
 
-Variants are the ledger's. The wet Original "Real Chicken" and "for Kittens
-Chicken" sit beside batch 052's dry Original "Chicken" and "Chicken for
-Kittens" — different products, kept apart by their printed words and by food
-form.
+Variants are the ledger's, except where the ledger's repeated the range: the
+Minced Cups are filed "Chicken", "Rabbit" and "Tuna" (ledger "Minced Cups
+Chicken" …), the Flaked Entrées "Salmon", "Duck", "Rabbit", "Tuna" and
+"Chicken" (ledger "Flaked Salmon Entrée" …), and the Split Cups "Paté Chicken
+Entrée" and "Paté Salmon Entrée" — "Paté" kept, because the range also sells
+flaked cups of the same flavours. The kitten can is "Real Chicken for Kittens"
+(ledger "for Kittens Chicken"), the words of its AAFCO sentence in batch 052's
+order. The wet Original "Real Chicken" and "Real Chicken for Kittens" sit
+beside batch 052's dry Original "Chicken" and "Chicken for Kittens" —
+different products, kept apart by the printed "Real" and by food form. Each
+renamed record says so in its `verification_notes`; the ledger keeps the
+delivered variant.
 
 ### Four candidates left in the ledger
 

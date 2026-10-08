@@ -11660,7 +11660,8 @@
         "What the pack is: kibble coated/tumbled with freeze-dried raw (PeakBoost+ / RawBoost+ family) — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
         "GS1 prefix 769949 (UPC 0 769949…): the same prefix as every Instinct code in task #109 and batch 048; prefix owner not established here (no GS1 lookup) — BRIEF-INSTINCT §6, §8.",
         "The maker's page prints no calorie statement and no adequacy statement (only the retailer's text carries them); no barcode on the maker's page.",
-        "Sold for puppies; the printed adequacy statement says all life stages, so life_stage is all."
+        "Sold for puppies; the printed adequacy statement says all life stages, so life_stage is all.",
+        "Seed identity 2026-10-08, batch 054 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Chicken Recipe for Puppies\" under product_line \"RawBoost+ Whole Grain Kibble\" — normalised from the delivered variant \"Chicken Recipe\" because the life stage named in the variant as batch 052 named its kitten bag, from the printed words (\"for Puppies Chicken Recipe\" on the maker's page). The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11810,7 +11811,8 @@
         "What the pack is: kibble coated/tumbled with freeze-dried raw (PeakBoost+ / RawBoost+ family) — filed as food_form dry / texture kibble; the catalog has no value for raw-coated kibble (BRIEF-INSTINCT §3). Moisture guarantee: 10.0% max.",
         "GS1 prefix 769949 (UPC 0 769949…): the same prefix as every Instinct code in task #109 and batch 048; prefix owner not established here (no GS1 lookup) — BRIEF-INSTINCT §6, §8.",
         "The maker's page prints no calorie statement and no adequacy statement (only the retailer's text carries them); no barcode on the maker's page.",
-        "Sold for puppies; the printed adequacy statement says all life stages, so life_stage is all."
+        "Sold for puppies; the printed adequacy statement says all life stages, so life_stage is all.",
+        "Seed identity 2026-10-08, batch 054 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Chicken Recipe for Puppies\" under product_line \"RawBoost+ Whole Grain Kibble\" — normalised from the delivered variant \"Chicken Recipe\" because the life stage named in the variant as batch 052 named its kitten bag, from the printed words (\"for Puppies Chicken Recipe\" on the maker's page). The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -11916,7 +11918,8 @@
         "adequacy: no AAFCO adequacy sentence on any page read for this item (owner, 7 Oct 2026: useful, not required)",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949618218 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Salmon\" under product_line \"Flaked Entrées\" — normalised from the delivered variant \"Flaked Salmon Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12022,7 +12025,8 @@
         "adequacy: no AAFCO adequacy sentence on any page read for this item (owner, 7 Oct 2026: useful, not required)",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949618225 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Duck\" under product_line \"Flaked Entrées\" — normalised from the delivered variant \"Flaked Duck Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12128,7 +12132,8 @@
         "adequacy: no AAFCO adequacy sentence on any page read for this item (owner, 7 Oct 2026: useful, not required)",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949618232 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Rabbit\" under product_line \"Flaked Entrées\" — normalised from the delivered variant \"Flaked Rabbit Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12234,7 +12239,8 @@
         "adequacy: no AAFCO adequacy sentence on any page read for this item (owner, 7 Oct 2026: useful, not required)",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949618201 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Tuna\" under product_line \"Flaked Entrées\" — normalised from the delivered variant \"Flaked Tuna Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -12339,7 +12345,8 @@
         "adequacy: no AAFCO adequacy sentence on any page read for this item (owner, 7 Oct 2026: useful, not required)",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949618195 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Chicken\" under product_line \"Flaked Entrées\" — normalised from the delivered variant \"Flaked Chicken Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13207,7 +13214,8 @@
         "instinct-grain-free-minced-cat-food---natural-chicken-5265783.html: the PetSmart ingredient statement for Chicken equals the maker's word for word (case aside); its calorie line is '971 kcal/kg, 97 kcal/3.5 oz cup'.",
         "barcode: PetSmart prints the GTIN-13 0769949610281 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
         "research_status source_verified: every AGENTS.md §10 gate passes",
-        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed.",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Chicken\" under product_line \"Minced Cups\" — normalised from the delivered variant \"Minced Cups Chicken\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "promoted_to_seed"
     },
@@ -13312,7 +13320,8 @@
         "instinct-grain-free-minced-cat-food---natural-rabbit-5265786.html: the PetSmart ingredient statement for Rabbit equals the maker's word for word (case aside); its calorie line is '752 kcal/kg, 75 kcal/3.5 oz cup'.",
         "barcode: PetSmart prints the GTIN-13 0769949610311 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
         "research_status source_verified: every AGENTS.md §10 gate passes",
-        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed.",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Rabbit\" under product_line \"Minced Cups\" — normalised from the delivered variant \"Minced Cups Rabbit\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "promoted_to_seed"
     },
@@ -13418,7 +13427,8 @@
         "instinct-grain-free-kitten-food---natural-chicken-5265778.html: the PetSmart page embeds no label block for flavour Chicken, so it gives no ingredient statement to compare for 5.5 oz.",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949610380 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Real Chicken for Kittens\" under product_line \"Original\" — normalised from the delivered variant \"for Kittens Chicken\" because the life stage named in the variant as batch 052 named its kitten bag, from the printed words (\"Instinct Original Real Chicken Recipe for Kittens\"), and \"Chicken for Kittens\" alone is already the dry kitten bag. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13621,7 +13631,8 @@
         "PetSmart's split-cup page embeds label blocks for only two flavours, Chicken and one labelled 'Salmon' whose ingredients begin with Duck; the embedded blocks are unreliable and are not used as the code's formula.",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949610120 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Paté Chicken Entrée\" under product_line \"Split Cups\" — normalised from the delivered variant \"Split Cups Paté Chicken Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -13721,7 +13732,8 @@
         "PetSmart's split-cup page embeds label blocks for only two flavours, Chicken and one labelled 'Salmon' whose ingredients begin with Duck; the embedded blocks are unreliable and are not used as the code's formula.",
         "No calorie statement for the maker's current formula: the maker's page prints none (its page text has no kcal line) and no retailer page with the matching formula was found; calorie_content is null, not zero. The retailer calorie lines of the other generation are in conflicts.",
         "barcode: PetSmart prints the GTIN-13 0769949610144 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries"
+        "research_status needs_physical_label: the page that binds or corroborates this code prints another formula generation than the maker's current page; only a current pack settles which formula this UPC carries",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Paté Salmon Entrée\" under product_line \"Split Cups\" — normalised from the delivered variant \"Split Cups Paté Salmon Entrée\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -14485,7 +14497,8 @@
         "petgoods.com: ingredient statement equals the maker's word for word (case aside).",
         "petgoods.com prints Caloric Content/kg 770 and Caloric Content 77 with unit kcal/3.5 oz cup; its guaranteed analysis equals the maker's.",
         "research_status source_verified: every AGENTS.md §10 gate passes",
-        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed.",
+        "Seed identity 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): data/known-products.ts files this pack with variant \"Tuna\" under product_line \"Minced Cups\" — normalised from the delivered variant \"Minced Cups Tuna\" because the ledger variant repeats the range name. The ledger keeps the delivered variant; nothing else in the record changed."
       ],
       "research_status": "promoted_to_seed"
     },

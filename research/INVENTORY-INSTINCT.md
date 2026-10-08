@@ -36,11 +36,11 @@ the code. Anything listed here is DONE; do not research it again.
 
 | barcode | variant | size | species | form | life stage | composition |
 |---|---|---|---|---|---|---|
-| `769949618195` | Flaked Chicken Entrée | 3 oz | cat | wet | — | **no — identity only** |
-| `769949618225` | Flaked Duck Entrée | 3 oz | cat | wet | — | **no — identity only** |
-| `769949618232` | Flaked Rabbit Entrée | 3 oz | cat | wet | — | **no — identity only** |
-| `769949618218` | Flaked Salmon Entrée | 3 oz | cat | wet | — | **no — identity only** |
-| `769949618201` | Flaked Tuna Entrée | 3 oz | cat | wet | — | **no — identity only** |
+| `769949618195` | Chicken | 3 oz | cat | wet | — | **no — identity only** |
+| `769949618225` | Duck | 3 oz | cat | wet | — | **no — identity only** |
+| `769949618232` | Rabbit | 3 oz | cat | wet | — | **no — identity only** |
+| `769949618218` | Salmon | 3 oz | cat | wet | — | **no — identity only** |
+| `769949618201` | Tuna | 3 oz | cat | wet | — | **no — identity only** |
 
 ### Healthy Cravings — 9 products, 9 barcodes
 
@@ -73,9 +73,9 @@ the code. Anything listed here is DONE; do not research it again.
 
 | barcode | variant | size | species | form | life stage | composition |
 |---|---|---|---|---|---|---|
-| `769949610281` | Minced Cups Chicken | 3.5 oz | cat | wet | adult | yes |
-| `769949610311` | Minced Cups Rabbit | 3.5 oz | cat | wet | adult | yes |
-| `769949610298` | Minced Cups Tuna | 3.5 oz | cat | wet | adult | yes |
+| `769949610281` | Chicken | 3.5 oz | cat | wet | adult | yes |
+| `769949610311` | Rabbit | 3.5 oz | cat | wet | adult | yes |
+| `769949610298` | Tuna | 3.5 oz | cat | wet | adult | yes |
 
 ### Original — 15 products, 20 barcodes
 
@@ -85,13 +85,13 @@ the code. Anything listed here is DONE; do not research it again.
 | `769949658559` | Chicken | 5 lb | cat | dry | all | yes |
 | `769949658566` | Chicken | 11 lb | cat | dry | all | yes |
 | `769949658757` | Chicken for Kittens | 4.5 lb | cat | dry | kitten | **no — identity only** |
-| `769949610380` | for Kittens Chicken | 3 oz | cat | wet | kitten | **no — identity only** |
 | `769949607205` | Real Beef | 13.2 oz | dog | wet | all | yes |
 | `769949610274` | Real Beef (Small Breed) | 5.5 oz | dog | wet | all | yes |
 | `769949607106` | Real Chicken | 13.2 oz | dog | wet | all | yes |
 | `769949617013` | Real Chicken | 3 oz | cat | wet | — | **no — identity only** |
 | `769949607014` | Real Chicken | 5.5 oz | cat | wet | — | **no — identity only** |
 | `769949618010` | Real Chicken (Small Breed) | 5.5 oz | dog | wet | all | yes |
+| `769949610380` | Real Chicken for Kittens | 3 oz | cat | wet | kitten | **no — identity only** |
 | `769949607366` | Real Duck | 5.5 oz | cat | wet | — | **no — identity only** |
 | `769949617266` | Real Lamb | 3 oz | cat | wet | — | **no — identity only** |
 | `769949617464` | Real Rabbit | 3 oz | cat | wet | — | **no — identity only** |
@@ -150,8 +150,8 @@ the code. Anything listed here is DONE; do not research it again.
 
 | barcode | variant | size | species | form | life stage | composition |
 |---|---|---|---|---|---|---|
-| `769949653042` | Chicken Recipe | 3.5 lb | dog | dry | puppy | **no — identity only** |
-| `769949653035` | Chicken Recipe | 20 lb | dog | dry | puppy | **no — identity only** |
+| `769949653042` | Chicken Recipe for Puppies | 3.5 lb | dog | dry | puppy | **no — identity only** |
+| `769949653035` | Chicken Recipe for Puppies | 20 lb | dog | dry | puppy | **no — identity only** |
 | `769949653059` | Gut Health Recipe | 3.5 lb | dog | dry | — | **no — identity only** |
 | `769949653066` | Gut Health Recipe | 18 lb | dog | dry | — | **no — identity only** |
 | `769949653011` | Real Beef & Barley Recipe | 3.5 lb | dog | dry | — | **no — identity only** |
@@ -167,8 +167,8 @@ the code. Anything listed here is DONE; do not research it again.
 
 | barcode | variant | size | species | form | life stage | composition |
 |---|---|---|---|---|---|---|
-| `769949610120` | Split Cups Paté Chicken Entrée | 2.64 oz | cat | wet | — | **no — identity only** |
-| `769949610144` | Split Cups Paté Salmon Entrée | 2.64 oz | cat | wet | — | **no — identity only** |
+| `769949610120` | Paté Chicken Entrée | 2.64 oz | cat | wet | — | **no — identity only** |
+| `769949610144` | Paté Salmon Entrée | 2.64 oz | cat | wet | — | **no — identity only** |
 
 ### Ultimate Protein — 1 product, 2 barcodes
 
