@@ -23013,7 +23013,8 @@
         "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grained-kitten-deboned-chicken-chicken-meal-rice/ (maker, read 2026-10-08, browser) via img alt; second reading https://www.petsmart.com/cat/food-and-treats/dry-food/wellness-complete-health-kitten-dry-food---natural-with-grain-chicken-5322808.html (retailer, read 2026-10-08, browser): disagrees — an older formula generation (see conflicts); neither list picked, so the record needs a current physical label",
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grained-kitten-deboned-chicken-chicken-meal-rice/ (maker, read 2026-10-08, browser) (page text)",
         "adequacy statement: no page read prints the AAFCO sentence as text (the maker's 'Nutrient Profiles' tab is an image) — useful, not required by the task",
-        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing"
+        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing",
+        "Seeded 2026-10-08, batch 061 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, with the variant \"Kitten Deboned Chicken & Chicken Meal Wholesome Grains\", the words its printed name carries, because the record's \"Kitten Deboned Chicken & Chicken Meal\" is also another product's. research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -23365,7 +23366,8 @@
         "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grained-indoor-chicken-recipe/ (maker, read 2026-10-08, browser) via img alt; second reading https://www.petsmart.com/cat/food-and-treats/dry-food/wellness-complete-health-indoor-adult-cat-dry-food---natural-chicken-5309914.html (retailer, read 2026-10-08, browser): disagrees — an older formula generation (see conflicts); neither list picked, so the record needs a current physical label",
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grained-indoor-chicken-recipe/ (maker, read 2026-10-08, browser) (page text)",
         "adequacy statement: no page read prints the AAFCO sentence as text (the maker's 'Nutrient Profiles' tab is an image) — useful, not required by the task",
-        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing"
+        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing",
+        "Seeded 2026-10-08, batch 061 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, with the variant \"Indoor Deboned Chicken & Chicken Meal Wholesome Grains\", the words its printed name carries, because the record's \"Indoor Deboned Chicken & Chicken Meal\" is also another product's. research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -24052,7 +24054,8 @@
         "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-kitten-deboned-chicken-chicken-meal/ (maker, read 2026-10-08, browser) via img alt; second reading https://www.petsmart.com/cat/food-and-treats/dry-food/wellness-complete-health-kitten-food---natural-grain-free-chicken-and-chicken-meal-5263722.html (retailer, read 2026-10-08, browser): disagrees — an older formula generation (see conflicts); neither list picked, so the record needs a current physical label",
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-kitten-deboned-chicken-chicken-meal/ (maker, read 2026-10-08, browser) (page text)",
         "adequacy statement: no page read prints the AAFCO sentence as text (the maker's 'Nutrient Profiles' tab is an image) — useful, not required by the task",
-        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing"
+        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing",
+        "Seeded 2026-10-08, batch 061 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, with the variant \"Kitten Deboned Chicken & Chicken Meal Grain Free\", the words its printed name carries, because the record's \"Kitten Deboned Chicken & Chicken Meal\" is also another product's. research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -24602,7 +24605,8 @@
         "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-indoor-deboned-chicken/ (maker, read 2026-10-08, browser) via img alt; second reading https://www.petsmart.com/cat/food-and-treats/dry-food/wellness-complete-health-indoor-adult-cat-food---natural-grain-free-chicken-and-chicken-meal-5280618.html (retailer, read 2026-10-08, browser): disagrees — an older formula generation (see conflicts); neither list picked, so the record needs a current physical label",
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-indoor-deboned-chicken/ (maker, read 2026-10-08, browser) (page text)",
         "adequacy statement: no page read prints the AAFCO sentence as text (the maker's 'Nutrient Profiles' tab is an image) — useful, not required by the task",
-        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing"
+        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing",
+        "Seeded 2026-10-08, batch 061 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, with the variant \"Indoor Deboned Chicken & Chicken Meal Grain Free\", the words its printed name carries, because the record's \"Indoor Deboned Chicken & Chicken Meal\" is also another product's. research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -24784,7 +24788,8 @@
         "ingredients copied word for word from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-indoor-deboned-chicken/ (maker, read 2026-10-08, browser) via img alt; second reading https://www.petsmart.com/cat/food-and-treats/dry-food/wellness-complete-health-indoor-adult-cat-food---natural-grain-free-chicken-and-chicken-meal-5280619.html (retailer, read 2026-10-08, browser): disagrees — an older formula generation (see conflicts); neither list picked, so the record needs a current physical label",
         "guaranteed analysis from https://www.wellnesspetfood.com/product-catalog/wellness-complete-health-grain-free-indoor-deboned-chicken/ (maker, read 2026-10-08, browser) (page text)",
         "adequacy statement: no page read prints the AAFCO sentence as text (the maker's 'Nutrient Profiles' tab is an image) — useful, not required by the task",
-        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing"
+        "status needs_physical_label: the two readings of the ingredient statement disagree (two formula generations) and calories are missing",
+        "Seeded 2026-10-08, batch 061 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, with the variant \"Indoor Deboned Chicken & Chicken Meal Grain Free\", the words its printed name carries, because the record's \"Indoor Deboned Chicken & Chicken Meal\" is also another product's. research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
