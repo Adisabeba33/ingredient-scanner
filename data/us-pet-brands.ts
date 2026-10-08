@@ -879,6 +879,7 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "Puppy Bites",
       "Kittles",
       "Lickable Treats",
+      "CORE Signature Selects",
     ],
   },
   { name: "Old Mother Hubbard", owner: "WellPet", species: "dog" },

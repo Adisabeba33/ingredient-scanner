@@ -258,12 +258,12 @@ carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
   when no source page prints it (AGENTS.md §10, "when printed"). The ledger now
   reads promoted_to_seed 4, needs_physical_label 7.
 
-## 16. Six more tasks landed — research-data-center #143–#147 and #150, 2026-10-08
+## 16. Seven more tasks landed — research-data-center #143–#148 and #150, 2026-10-08
 
-The ledger gained 163 records (tasks #143 CORE dry dog, #144 Complete Health
+The ledger gained 200 records (tasks #143 CORE dry dog, #144 Complete Health
 and Simple dry dog, #145 wet dog, #146 dog toppers and treats, #147 dry cat,
-#150 cat toppers and treats), copied in unchanged and seeded one batch per
-task under the status lookup. Decisions per batch are in
+#150 cat toppers and treats, then #148 wet cat under CORE), copied in
+unchanged and seeded one batch per task under the status lookup. Decisions per batch are in
 docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
 
 - Batch 057 (task #143): 14 compositions, 8 identity only, 14 candidates
@@ -285,10 +285,15 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
 - Batch 062 (task #150): 2 compositions (Lickable Treats), 4 identity only
   (Lickable Duck, Kittles x3), 3 cat Bowl Boosters candidates held. Ranges
   added: `Kittles`, `Lickable Treats`; both read `treat`.
+- Batch 067 (task #148, PR #181, wet cat under CORE): 18 compositions, 8
+  identity only, 11 candidates held. Signature Selects filed under a new range,
+  `CORE Signature Selects`, and the CORE+ Indoor pâté under `CORE+` — the
+  ranges the packs print, where the research folded them into `CORE`.
 
-Totals after batch 062: the ledger holds 174 records; the catalog holds 88
-Wellness products under 121 barcodes, 37 with a composition — see
+Totals after batch 067: the ledger holds 211 records; the catalog holds 111
+Wellness products under 147 barcodes, 55 with a composition — see
 INVENTORY-WELLNESS.md. Still open for the owner: the freeze-dried form
-(BARE, Functional), CORE 95%'s role, the slug-shaped Complete Health
-variants, and the empty older ranges in the brand entry (`Mini Meals`,
-`Petite Entrees`, `Soft Puppy Bites`).
+(BARE, Functional), CORE 95%'s role, whether CORE+ Digestive Health is a
+range of its own, the slug-shaped Complete Health variants, and the empty
+older ranges in the brand entry (`Mini Meals`, `Petite Entrees`, `Soft Puppy
+Bites`).

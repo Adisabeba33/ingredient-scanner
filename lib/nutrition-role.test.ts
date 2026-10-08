@@ -166,8 +166,8 @@ describe("detectNutritionRole", () => {
     }
   });
 
-  // The Wellness ranges as the seed now stores them (batches 057–062, from
-  // research-data-center tasks #143–#147 and #150), brand, range and variant
+  // The Wellness ranges as the seed now stores them (batches 057–062 and 067,
+  // from research-data-center tasks #143–#148 and #150), brand, range and variant
   // exactly as the import route passes them. No entry in this module was added
   // for them: the Bowl Boosters ranges print "a complementary food intended to
   // be fed with a complete and balanced dog food diet" or "intermittent or
@@ -190,6 +190,8 @@ describe("detectNutritionRole", () => {
       [["Wellness", "CORE 95%", "Chicken & Broccoli"], "unknown"],
       [["Wellness", "CORE+", "Original Turkey & Chicken Recipe"], "unknown"],
       [["Wellness", "Complete Health", "Grained Senior Chicken Barley"], "unknown"],
+      [["Wellness", "CORE Tiny Tasters", "Chicken Recipe"], "unknown"],
+      [["Wellness", "CORE Signature Selects", "Shredded Chicken & Turkey in Sauce"], "unknown"],
     ] as const) {
       expect({ parts, role: detectNutritionRole({ parts: [...parts] }) }).toEqual({ parts, role });
     }

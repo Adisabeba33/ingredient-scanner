@@ -26238,9 +26238,10 @@
         "research note: calorie statement as printed on PetSmart (1.75 oz): This food contains 1,406 kcal⁄kg or 70 kcal⁄pouch ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26416,9 +26417,10 @@
         "research note: calorie statement as printed on PetSmart (1.75 oz): This food contains 1,341 kcal⁄kg or 67 kcal⁄pouch ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26504,9 +26506,10 @@
         "research note: calorie statement as printed on PetSmart (1.75 oz): This food contains 1,268 kcal⁄kg or 63 kcal⁄pouch ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26591,9 +26594,10 @@
         "research note: calorie statement as printed on PetSmart (1.75 oz): This food contains 1,110 kcal/kg or 55 kcal/pouch ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26680,9 +26684,10 @@
         "research note: calorie statement as printed on PetSmart (1.75 oz): This food contains 1,043 kcal⁄kg or 52 kcal⁄pouch ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -26773,9 +26778,10 @@
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
         "variant: formula.json gives 'Chicken Recipe in Sauce'; 'Kitten' added at assembly from the printed product name, so the scanner's identity (line + variant + size) tells it from the adult recipe",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -27906,9 +27912,10 @@
         "research note: calorie statement as printed on PetSmart (2.8 oz): This food contains 856 kcal⁄kg or 68 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28010,9 +28017,10 @@
         "research note: calorie statement as printed on PetSmart (2.8 oz): This food contains 842 kcal⁄kg or 66 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28115,9 +28123,10 @@
         "research note: calorie statement as printed on PetSmart (2.8 oz): This food contains 851 kcal⁄kg or 67 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28219,9 +28228,10 @@
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
         "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
-        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)"
+        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28324,7 +28334,8 @@
         "research note: calorie statement as printed on PetSmart (2.8 oz): This food contains 884 kcal⁄kg or 7 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status needs_physical_label: the calorie statement as printed is internally inconsistent (884 kcal/kg vs 7 kcal per 2.8 oz can; the 5.3 oz page of the same recipe prints 884 kcal/kg and 133 kcal/can, which agree); only the package can settle the 2.8 oz label"
+        "status needs_physical_label: the calorie statement as printed is internally inconsistent (884 kcal/kg vs 7 kcal per 2.8 oz can; the 5.3 oz page of the same recipe prints 884 kcal/kg and 133 kcal/can, which agree); only the package can settle the 2.8 oz label",
+        "Seeded 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150), as identity only in data/known-products.ts, under the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5). research_status unchanged; nothing else in the record changed."
       ],
       "research_status": "needs_physical_label"
     },
@@ -28462,9 +28473,10 @@
         "research note: no source page read prints the AAFCO adequacy statement; the PetSmart page carries only the footnote on nutrients 'not recognized as an essential nutrient by the AAFCO Cat Food Nutrient Profiles'",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5); lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28601,9 +28613,10 @@
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "research note: maker title names no medium (gravy, sauce, broth); presentation left null.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5); presentation \"unknown\" where the record has null (the seed's field takes no null); lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28749,9 +28762,10 @@
         "research note: maker title names no medium (gravy, sauce, broth); presentation left null.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
         "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
-        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)"
+        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5); presentation \"unknown\" where the record has null (the seed's field takes no null); lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -28896,9 +28910,10 @@
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "research note: maker title names no medium (gravy, sauce, broth); presentation left null.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5); presentation \"unknown\" where the record has null (the seed's field takes no null); lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -29146,9 +29161,10 @@
         "research note: calorie statement as printed on PetSmart (5.3 oz): This food contains 884 kcal⁄kg or 133 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -29249,9 +29265,10 @@
         "research note: calorie statement as printed on PetSmart (5.3 oz): This food contains 842 kcal⁄kg or 126 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -29353,9 +29370,10 @@
         "research note: calorie statement as printed on PetSmart (5.3 oz): This food contains 851 kcal⁄kg or 127 kcal⁄can ME (metabolizable energy) on an as fed basis.",
         "research note: guaranteed analysis read twice: maker page text and PetSmart agree on every figure.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
-        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present"
+        "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE Signature Selects\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -30481,9 +30499,10 @@
         "research note: maker's range is CORE+; product_line kept as 'CORE' / 'CORE Digestive Health' per scanner lines; the product name carries 'CORE+'.",
         "GS1 prefix 076344: Wellness in the scanner's gs1-prefixes.ts (owner not GEPIR-confirmed)",
         "status source_verified: identity, the unit barcode (proved, check digit valid, not in the scanner's exclusions), the ingredient statement read twice, the complete guaranteed analysis, calories and dated direct sources are present; no adequacy statement is printed on any page read (the task: not required)",
-        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)"
+        "the two readings differ only in typography (a space after a comma or the dash character); words and order agree, and the maker's spelling is the one copied; review-pf.py flags it as not word for word, and with all whitespace removed the file's statement is found on the PetSmart page (checked at assembly, 2026-10-08)",
+        "Promoted to seed 2026-10-08, batch 067 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with the range \"CORE+\", which the pack prints, where the record files \"CORE\" for want of the line (SEEDING-A-BATCH.md §2.4.5); lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     }
   ]
 }

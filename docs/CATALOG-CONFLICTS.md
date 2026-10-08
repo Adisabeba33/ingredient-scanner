@@ -3117,3 +3117,92 @@ Shredded Boneless Chicken: no calorie statement on any readable page, and the
 Chicken statement was read once. The code `076344089957`, shown beside every
 Kittles and Lickables product on the maker's pages, is a carousel item —
 Complete Health Indoor Wholesome Grains, batch 061 — not these products.
+
+## Batch 067 — Wellness wet cat food under CORE
+
+Thirty-seven records from research-data-center task #148 (PR #181). Eighteen
+are stored with their compositions, eight as identity, and eleven candidates
+stay in the ledger. No conflict note on the eighteen: each statement is the
+maker's label-image text, read a second time on the PetSmart page that binds
+the code, and the two agree; calories are PetSmart's, per pouch or can, and
+all eighteen pass the arithmetic in `scripts/check-batch.mjs`.
+
+- CORE Tiny Tasters 1.75 oz pâtés **076344161011**, **076344161059**,
+  **076344161073**, **076344161097**, **076344161110**, and Kitten Chicken in
+  Sauce **076344161158**.
+- CORE Signature Selects, 2.8 oz unless noted: **076344060000**,
+  **076344060017** and its 5.3 oz **076344060512**, **076344060024** and its
+  5.3 oz **076344060529**, **076344060031**, **076344060543** (5.3 oz),
+  **076344050179**, **076344050223**, **076344050209**, **076344050216**. The
+  two 2.8 / 5.3 oz pairs print one list, one panel and one kcal/kg, as one
+  product's sizes should.
+- CORE+ Indoor Pâté Chicken & Chicken Liver, 5.5 oz, **076344079033**.
+
+### Ranges as the packs print them
+
+The research filed Signature Selects and the CORE+ pâtés under "CORE", saying
+why: the brand entry had no such lines. The packs print "Wellness® CORE®
+Signature Selects®" and "CORE+", and a range folded into its parent is the
+failure `docs/SEEDING-A-BATCH.md` §2.4.5 warns about — the coverage page loses
+the shelf. So the twelve Signature Selects rows are filed under a new range,
+"CORE Signature Selects", and the Indoor pâté under "CORE+", the range batch
+057 added and batch 061 uses for the CORE+ Indoor kibble. Each record carries
+a note saying so; the ledger's `product_line` is unchanged. The two CORE+
+Digestive Health cans stay under "CORE Digestive Health", as delivered and as
+batch 059 filed the dog cans of the same name; whether "CORE+ Digestive
+Health" should be a range of its own is left for the owner.
+
+Three Signature Selects rows — **076344050223**, **076344050209**,
+**076344050216** — have no presentation in the ledger (`null`); the seed's
+field takes no null, so they read `unknown`, the choice batch 033 made over
+guessing "plain".
+
+### Copied as printed
+
+The stored text runs together "Oil,Natural" on **076344060031** and
+"TurkeyLiver" on **076344050209**. The research found PetSmart and the maker
+differing only by such spaces, judged them one reading, and kept the maker's
+text; it is stored as delivered.
+
+### lifeStage
+
+`adult` where PetSmart prints the sentence "… is formulated to meet the
+nutritional levels established by the AAFCO Cat Food Nutrient Profiles for
+maintenance": the five adult Tiny Tasters pâtés and the Signature Selects
+shredded and flaked lines in sauce or broth. `kitten` on the two Tiny Tasters
+Kitten pouches, from the printed name. None on the rest; the ledger's
+`adult` there is the research's default.
+
+### Eight seeded as identity only
+
+All `needs_physical_label`; every code is bound by the maker's one-size page
+or a PetSmart variant page.
+
+- **076344161035** Tiny Tasters Chicken & Beef and **076344060048** Signature
+  Selects Flaked Skipjack Tuna & Wild Salmon 2.8 oz: the calorie statement
+  contradicts itself as printed (131 kcal/kg against 65 kcal a pouch; 884
+  kcal/kg against 7 kcal a can). The 5.3 oz of the second, **076344060543**,
+  carries the composition.
+- **076344161172**, **076344161196**, **076344161257** (Tiny Tasters Minced
+  Chicken, Minced Chicken & Beef, Kitten Minced Chicken) and
+  **076344161219** (Flaked Tuna & Salmon): the printed calories are 1.7 to
+  2.1 times what their own panels (moisture 90% max) can carry. Both readings
+  agree, so the slip is on the sources; a pack settles it.
+- **076344061212**, **076344061274** — CORE+ Digestive Health Chicken and
+  Salmon, 3 oz: the PetSmart page that binds the code prints another list and
+  panel than the maker.
+
+### Eleven candidates, and what was not filed
+
+One reading and no calories (the maker prints them as an image; PetSmart's
+pages redirect): CORE+ Digestive Health Turkey **076344061236** and Whitefish
+**076344061250**; Signature Selects Kitten Chicken & Liver **076344050186**,
+Chicken & Lamb **076344050193**, Chunky Chicken & Turkey 5.3 oz
+**076344060550**; CORE Kitten Chicken & Salmon **076344062097**; CORE+
+Healthy Weight **076344062011**, Skin & Coat **076344062134**, Hairball
+**076344062158**. Tiny Tasters Flaked Tuna & Shrimp **076344161233**: no
+second reading on re-check. Signature Selects Kitten Flaked Tuna & Salmon
+**076344050162**: complete, but its life stage was corrected at assembly and
+waits to be confirmed. Thirteen product sizes have no bound code, and
+PetSmart's 076344060505 (a 5.3 oz shredded variant with no flavour printed)
+and 076344060536 ("Tuna", no maker page) were not filed.
