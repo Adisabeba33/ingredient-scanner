@@ -5058,6 +5058,56 @@ const WELLNESS_BATCH_049: KnownProduct[] = [
   },
 ];
 
+// Batch 050 — Wellness: the four CORE dry dog records batch 049 left as
+// `candidate`, re-statused source_verified under the owner's ruling of
+// 2026-10-07 — the AAFCO adequacy sentence is not required when no source page
+// prints it (research/AGENTS.md §10, "when printed"). Everything else §10 asks
+// for was already in each record. No lifeStage: no adequacy sentence was read
+// and no printed name carries one. The Small Breed 4 lb code stays out (its
+// size binding is contested) — see docs/CATALOG-CONFLICTS.md, batches 049–050.
+const WELLNESS_BATCH_050: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Wholesome Grains Ocean Whitefish & Herring",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["whitefish", "herring"],
+    packages: [
+      { size: "22 lb", container: BAG, upc: "076344884859", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Grain Free Ocean Whitefish, Herring & Salmon",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["whitefish", "herring", "salmon"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344884156", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "076344884378", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Small Breed Grain Free Turkey & Chicken",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey", "chicken"],
+    packages: [
+      { size: "12 lb", container: BAG, upc: "076344884217", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -20991,4 +21041,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...NUTRO_CRAVE_BATCH_047,
   ...INSTINCT_BATCH_048,
   ...WELLNESS_BATCH_049,
+  ...WELLNESS_BATCH_050,
 ];

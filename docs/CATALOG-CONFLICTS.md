@@ -2308,3 +2308,22 @@ under the BRAND. The brand entry's owner, "WellPet", is not tied to the GS1
 block by any source. No sibling brand's code (Old Mother Hubbard, Eagle Pack,
 Holistic Select, Whimzees) has been read, so the block may prove the maker
 rather than the brand. Not GEPIR-confirmed.
+
+## Batch 050 — Wellness, the four candidates promoted
+
+The four `candidate` records batch 049 left in the ledger — `076344884859`,
+`076344884156`, `076344884378` and `076344884217` — are now stored with their
+compositions. The one thing they lacked was the AAFCO adequacy sentence, and
+no source page prints it. The owner ruled on 2026-10-07 that the sentence is
+useful but not required when it is unprinted, which is what
+`research/AGENTS.md` §10 already says ("captured when printed"). Each record
+was checked again against the rest of §10 before it was re-statused:
+- a unit code with a valid check digit, bound to an exact size;
+- a statement read twice and agreeing word for word;
+- a complete panel and calories;
+- dated direct sources.
+
+None carries a conflict note, and none carries a `lifeStage`, because no
+sentence was read. The Small Breed 4 lb code, `076344884170`, is unaffected
+by the ruling and stays out: its size binding is the dispute (batch 049
+above).
