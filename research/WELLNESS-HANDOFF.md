@@ -268,3 +268,5 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
 
 - Batch 057 (task #143): 14 compositions, 8 identity only, 14 candidates
   held. `CORE+` added to the brand entry.
+- Batch 058 (task #144): 4 compositions, 22 identity only (two formula
+  generations), 11 candidates held, the four Simple bags among them.

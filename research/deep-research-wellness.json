@@ -10310,9 +10310,10 @@
         "adequacy statement: not printed on any page read (useful, not required by the task; not blocking)",
         "research note: After the ingredient list the retailer page prints: This is a naturally preserved product Manufactured in a facility that also processes grains",
         "research note: maker img alt and retailer agree word for word except punctuation/dash characters",
-        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources"
+        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources",
+        "Promoted to seed 2026-10-08, batch 058 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -10475,9 +10476,10 @@
         "calories: 3509 kcal/kg and 390 kcal/cup as printed (Calorie Content (Calculated): This food contains 3,509 kcal⁄kg or 390 kcal⁄cup ME (metabolizable energy).); 3509 × 9.979 kg (22 lb) = 35,016 kcal per bag, but no per-bag figure is printed and the cup weight is not printed, so the arithmetic has nothing to be checked against",
         "adequacy statement: not printed on any page read (useful, not required by the task; not blocking)",
         "research note: After the ingredient list the retailer page prints: This is a naturally preserved product Manufactured in a facility that also processes grains",
-        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources"
+        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources",
+        "Promoted to seed 2026-10-08, batch 058 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -13285,9 +13287,10 @@
         "adequacy statement: not printed on any page read (useful, not required by the task; not blocking)",
         "research note: After the ingredient list the retailer page prints: This is a naturally preserved product Manufactured in a facility that also processes grains",
         "research note: maker img alt and retailer agree word for word except punctuation/dash characters",
-        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources"
+        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources",
+        "Promoted to seed 2026-10-08, batch 058 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -13450,9 +13453,10 @@
         "adequacy statement: not printed on any page read (useful, not required by the task; not blocking)",
         "research note: After the ingredient list the retailer page prints: This is a naturally preserved product Manufactured in a facility that also processes grains",
         "research note: maker img alt and retailer agree word for word except punctuation/dash characters",
-        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources"
+        "status source_verified: identity, bound unit code, two agreeing readings, complete analysis and calories, dated direct sources",
+        "Promoted to seed 2026-10-08, batch 058 (branch seed/wellness-rdc-143-150): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed. Seeded with lifeStage null where the record says \"adult\" (no printed AAFCO sentence or printed name states one)."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

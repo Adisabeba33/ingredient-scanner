@@ -2594,3 +2594,66 @@ Original Grain Free 076344181033, 076344181040; CORE Large Breed
 print the same calories as a sibling with a different list (CORE+ Wild Game =
 CORE Wild Game, CORE+ Puppy = CORE Puppy, CORE+ Small Breed Grain Free = CORE+
 Original), which a label should settle before any is promoted.
+
+## Batch 058 — Wellness Complete Health dry dog food
+
+Thirty-seven records from research-data-center task #144 (PR #177). Four bags
+are stored with their compositions, twenty-two as identity, and eleven
+candidates stay in the ledger. No conflict note on the four — Grain Free
+Deboned Chicken & Chicken Meal **076344891314** (12 lb) and **076344891574**
+(22 lb), Grain Free Small Breed **076344891512** (4 lb) and **076344891529**
+(11 lb): the PetSmart page that binds each size and the maker's label-image
+text give the same words in the same order, once PetSmart's "INGREDIENTS: "
+heading and its en dashes are set aside. PetSmart's text is stored. Calories
+are per cup, so there is no arithmetic witness.
+
+### Twenty-two seeded as identity only — two formula generations
+
+Each is `needs_physical_label`, bound to its size by a PetSmart variant page,
+and the two readings are two formulas: the maker's label lists add Sorghum,
+Dried Yeast and Dried Kelp and write "Mixed Tocopherols (added to preserve
+freshness)", "Vitamin C (Ascorbic Acid)" and "Spearmint", where PetSmart
+prints the older order and "Spearmint Extract". For Beef & Barley, Chicken &
+Oatmeal, Whitefish & Sweet Potato and Senior Chicken & Barley the panels
+differ too — Beef & Barley guarantees Calcium 1.20% on the maker's label and
+0.90% on PetSmart, and its meal is Pork Meal on one and Chicken Meal on the
+other. Within one product PetSmart's own size pages disagree: Chicken &
+Oatmeal 38 lb prints 3,495 kcal/kg, 416 kcal/cup against 3,584 and 427 on the
+5, 15 and 26 lb pages, and Sensitive Skin & Stomach 38 lb prints 3,413 kcal/kg
+against 3,438. A pack photograph settles each.
+
+- Beef & Barley **076344891550**, **076344891567**; Chicken & Oatmeal
+  **076344891420**, **076344089049**, **076344088936**, **076344088950**; Lamb
+  & Barley **076344088905**; Whitefish & Sweet Potato **076344089063**,
+  **076344088912**; Healthy Weight Chicken & Peas **076344891048**; Small Breed
+  Healthy Weight Turkey & Rice **076344891185**, **076344891192**; Large Breed
+  Chicken & Rice **076344891130**; Toy Breed Chicken & Rice **076344891215**;
+  Senior Chicken & Barley **076344891451**, **076344088929**; Sensitive Skin
+  & Stomach Salmon & Rice **076344893363**, **076344893370**,
+  **076344893387**; Small Breed Turkey & Oatmeal **076344891109**,
+  **076344891116**; Small Breed Senior Turkey & Peas **076344891208**.
+
+### lifeStage and variants
+
+Lamb & Barley and Toy Breed print "… formulated to meet the nutritional levels
+established by the AAFCO Dog Food Nutrient Profiles for maintenance" and carry
+`adult`. The two senior products carry `senior`: their printed names end
+"for Dogs 7+" and "for Small Senior Dogs 7+", and the age is what the field
+records (the "Senior 7+" rule in `lib/known-import.test.ts`), although the one
+sentence read says maintenance. Every other row carries none; the ledger's
+values come from retailer fields.
+
+The variants are the ledger's own and are slug-shaped as delivered — "Grained
+Beef Barley", "Grain Free Deboned Chicken Chicken Meal" — because the
+research took them from the maker's URLs; the handoff says so. They are not
+rewritten here: nothing has to be told apart, and the printed names in the
+records are PetSmart titles as uneven as the slugs. A rename is a decision for
+when a pack is at hand.
+
+### Eleven candidates left in the ledger
+
+One reading (the maker's label text) and no calories as text: Puppy Chicken,
+Salmon & Oatmeal 076344891468, 076344089612, 076344088943; Large Breed Chicken
+& Rice 38 lb 076344891222; Grain Free Large Breed Chicken 076344891536; Small
+Breed Puppy 076344891161; Large Breed Puppy 076344891154; and the four Simple
+bags 076344893295, 076344893264, 076344893141, 076344893059.

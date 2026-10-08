@@ -5666,6 +5666,215 @@ const WELLNESS_BATCH_057: KnownProduct[] = [
   },
 ];
 
+// Batch 058 — Wellness Complete Health dry dog food, from research-data-center
+// task #144 (PR #177). Four bags carry a composition (Grain Free Deboned
+// Chicken & Chicken Meal, Grain Free Small Breed). Twenty-two are identity only:
+// the maker's label text and the PetSmart page that binds each code print two
+// formula generations. Eleven candidates, the four Simple bags among them, stay
+// in the ledger. Variants are the ledger's own, slug-shaped as delivered.
+// lifeStage only where a printed AAFCO sentence says maintenance or the printed
+// name prints an age ("for Dogs 7+") — see docs/CATALOG-CONFLICTS.md, batch 058.
+const WELLNESS_BATCH_058: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Beef Barley",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["beef"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344891550", scope: UNIT },
+      { size: "26 lb", container: BAG, upc: "076344891567", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Chicken Oatmeal",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344891420", scope: UNIT },
+      { size: "15 lb", container: BAG, upc: "076344089049", scope: UNIT },
+      { size: "26 lb", container: BAG, upc: "076344088936", scope: UNIT },
+      { size: "38 lb", container: BAG, upc: "076344088950", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Lamb Barley",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["lamb"],
+    lifeStage: "adult",
+    packages: [
+      { size: "26 lb", container: BAG, upc: "076344088905", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grain Free Deboned Chicken Chicken Meal",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "12 lb", container: BAG, upc: "076344891314", scope: UNIT },
+      { size: "22 lb", container: BAG, upc: "076344891574", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Whitefish Sweet Potato",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["whitefish"],
+    packages: [
+      { size: "15 lb", container: BAG, upc: "076344089063", scope: UNIT },
+      { size: "26 lb", container: BAG, upc: "076344088912", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Healthy Weight Chicken Peas",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "24 lb", container: BAG, upc: "076344891048", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Small Breed Healthy Weight Turkey Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344891185", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "076344891192", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Large Breed Chicken Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "30 lb", container: BAG, upc: "076344891130", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Toy Breed Chicken Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344891215", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Senior Chicken Barley",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "senior",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344891451", scope: UNIT },
+      { size: "26 lb", container: BAG, upc: "076344088929", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grain Sensitive Skin Stomach Salmon Rice",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344893363", scope: UNIT },
+      { size: "24 lb", container: BAG, upc: "076344893370", scope: UNIT },
+      { size: "38 lb", container: BAG, upc: "076344893387", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grain Free Small Breed Turkey Chicken Salmon",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey", "salmon"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344891512", scope: UNIT },
+      { size: "11 lb", container: BAG, upc: "076344891529", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Small Breed Turkey Oatmeal",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey"],
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344891109", scope: UNIT },
+      { size: "12 lb", container: BAG, upc: "076344891116", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Grained Small Breed Senior Turkey Peas",
+    species: "dog",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["turkey"],
+    lifeStage: "senior",
+    packages: [
+      { size: "4 lb", container: BAG, upc: "076344891208", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21604,4 +21813,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_052,
   ...INSTINCT_BATCH_053,
   ...WELLNESS_BATCH_057,
+  ...WELLNESS_BATCH_058,
 ];
