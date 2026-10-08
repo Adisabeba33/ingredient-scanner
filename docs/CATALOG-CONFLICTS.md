@@ -2657,3 +2657,60 @@ seeded. Their siblings above are in the catalog as identity.
 `data/us-pet-brands.ts`. Every range here is a complete diet and resolves to
 `unknown` in `lib/nutrition-role.ts`, judged as dinner. Food form: wet, 78–83%
 moisture max; nothing here needs a new value.
+
+## Instinct FreshRaw and FreshDried — task #126, all 31 held in the ledger
+
+Thirty-one records from research-data-center task #126 (PR #173), appended to
+`research/deep-research-instinct.json`. **Nothing is seeded**, so no batch
+number is spent. Every one is a complete raw diet in a form
+`data/known-products.ts` cannot store yet, the decision batch 048 left open
+(`research/BRIEF-INSTINCT.md` §3); the ledger files them all
+`food_form: "unknown"`.
+
+- **Frozen raw, 17** (70–75% moisture max; the list reads like a wet food's) —
+  FreshRaw Meals Cage-Free Chicken 769949641018, 769949641056; Cage-Free
+  Turkey 769949641025, 769949641063; Grass-Fed Beef 769949641001,
+  769949641049; Grass-Fed Lamb 769949641032, 769949641070 (8 and 16 oz, all
+  `source_verified`); FreshRaw Bites Wild-Caught Pollock 769949630340;
+  Grass-Fed Beef 769949630029, 769949630036; Cage-Free Chicken 769949630081,
+  769949630098; Grass-Fed Lamb 769949630296, 769949630302; FreshRaw Patties
+  Cage-Free Chicken 769949630111 and Grass-Fed Beef 769949630050 (all nine
+  `needs_physical_label`).
+- **Freeze-dried raw, 14** (6.0% moisture max; reads like a dry food's) —
+  FreshDried Raw Meals for cats, Cage-Free Chicken 769949614074,
+  769949614265 and Wild-Caught Pollock 769949614296 (`source_verified`); for
+  dogs, Wild-Caught Pollock 769949614289, Grass-Fed Beef 769949614524,
+  769949614531, 769949614050, Cage-Free Chicken 769949614500, 769949614517,
+  769949614029, Grass-Fed Lamb 769949614555, 769949614234, and for Puppies
+  Chicken 769949614593, 769949614173 (`needs_physical_label`).
+
+Eleven are `source_verified` — the eight FreshRaw Meals and the three cat
+FreshDried bags — and would go in with their compositions once the form is
+decided. The twenty `needs_physical_label` records would go in as identity
+only: the PetSmart page binding each code prints a different list from the
+maker's current page (the dog FreshDried Chicken also a different panel).
+
+One of them would not go in even as identity. **769949630050**, FreshRaw
+Patties Grass-Fed Beef 6 lb: PetSmart's variant page binds the code by its
+Flavor field, title and sku, but every line of its own text — ingredients,
+panel, 1596 kcal/kg and 181 kcal a patty, the adequacy sentence — is the
+chicken patty's. The record uses none of it and has no calories. Which
+product the code is on is itself in question, so it stays in the ledger
+whatever the form decision.
+
+The two check-ledger WARNs this task adds — FreshRaw Bites and Patties of
+Grass-Fed Beef, and of Cage-Free Chicken, sharing one list — are answered in
+the records: the maker prints the same statement on the Bites and the Patties
+page of each recipe, one food in two shapes.
+
+Every pack here prints a complete-diet sentence (none was readable for the beef
+patty). Range names, if these are ever seeded: `FreshRaw` and `FreshDried`, as
+the maker prints them now — neither is in the brand entry, which still names
+the older "Raw Meals". PetSmart still lists them as "Raw Bites", "Raw Patties"
+and "Raw Meals Freeze-Dried".
+
+With task #124 and batch 053's held toppers, the ledger now holds **19 frozen
+raw** records (8 `source_verified`) and **42 freeze-dried** (14
+`source_verified`), all waiting on the same decision. The research's
+recommendation is two values — frozen raw and freeze-dried — because one value
+would hide the 70% against 6% moisture that decides how the list is read.
