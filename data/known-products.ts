@@ -18899,6 +18899,10 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   },
 
   // ── Weruva · Freeze Dried (cat) ──────────────────────────────────────
+  //
+  // Filed `dry` from batch 027 until 8 October 2026, when the owner added
+  // the freeze-dried form; re-filed "freeze-dried", which is read on the same
+  // dry basis (lib/food-form.ts, analysisBasis). See CATALOG-CONFLICTS.
   {
     brand: "Weruva",
     line: "Freeze Dried",
@@ -18906,7 +18910,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "freeze_dried",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["tuna", "salmon", "tilapia"],
     packages: [
       { size: "1 oz", container: BAG, upc: "810028245297", scope: UNIT },
@@ -18920,7 +18924,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "unknown",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["chicken"],
     lifeStage: "adult",
     packages: [
@@ -19525,7 +19529,7 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
     species: "cat",
     texture: "freeze_dried",
     presentation: "plain",
-    foodForm: "dry",
+    foodForm: "freeze-dried",
     proteins: ["tuna"],
     packages: [
       { size: "0.88 oz", container: BAG, upc: "886817008848", scope: UNIT },

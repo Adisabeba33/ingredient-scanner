@@ -1319,6 +1319,17 @@ because the water is exactly what differed. A freeze-dried raw lands in the
 sixties, kibble in the thirties, and a dry-matter panel pasted into an as-fed
 row still reads near 100%.
 
+**Re-filed 8 October 2026.** With the owner's freeze-dried form in place, the
+Freeze Dried range — Mideast Feast `810028245297`, `810028245310` and Paw
+Lickin' Chicken `810028242944`, `810028242951` — and Reveal's Freeze Dried
+Treats Tuna Bites `886817008848` are `foodForm: "freeze-dried"` in the seed,
+so the app can say what they are. The form is read on the same dry basis, so
+every panel bound above is unchanged. Rows already in the catalog keep `dry`:
+the import leaves an identical composition alone, forced or not
+(`importVerdict`), so the app reads them exactly as before. A row that was
+never written goes in as "freeze-dried"; an existing one changes only if
+somebody sets the form by hand in Catalog.
+
 
 ## Batch 028 — TheraDiet (Rayne Nutrition)
 
