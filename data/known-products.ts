@@ -6344,6 +6344,221 @@ const WELLNESS_BATCH_060: KnownProduct[] = [
   },
 ];
 
+// Batch 061 — Wellness dry cat food, from research-data-center task #147
+// (PR #179): CORE, CORE+ and Complete Health. Identity only — twenty-one bags,
+// every one needs_physical_label: the maker's current list and the PetSmart page
+// that binds the code are two formula generations, and the current calories are
+// printed nowhere as text. One candidate stays in the ledger. Two variants gain
+// the pack's "Wholesome Grains" / "Grain Free", because each name is printed on
+// two different products. lifeStage only where the printed name says Kitten —
+// see docs/CATALOG-CONFLICTS.md, batch 061.
+const WELLNESS_BATCH_061: KnownProduct[] = [
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Indoor Salmon & Herring",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "herring"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344083269", scope: UNIT },
+      { size: "11 lb", container: BAG, upc: "076344083276", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Hairball Chicken & Chicken Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "4.75 lb", container: BAG, upc: "076344084020", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Original Deboned Turkey, Turkey Meal & Chicken Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    packages: [
+      { size: "11 lb", container: BAG, upc: "076344088400", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE",
+    variant: "Kitten Deboned Turkey, Turkey Meal & Deboned Chicken",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344088424", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "CORE+",
+    variant: "Indoor Deboned Chicken, Turkey Meal & Chicken Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344088523", scope: UNIT },
+      { size: "11 lb", container: BAG, upc: "076344088530", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Kitten Deboned Chicken & Chicken Meal Wholesome Grains",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344884934", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Deboned Chicken, Chicken Meal & Rice",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344089940", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Indoor Deboned Chicken & Chicken Meal Wholesome Grains",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344089957", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Salmon & Salmon Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon"],
+    packages: [
+      { size: "5 lb", container: BAG, upc: "076344089933", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Deboned Chicken & Chicken Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092018", scope: UNIT },
+      { size: "11.5 lb", container: BAG, upc: "076344092025", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Kitten Deboned Chicken & Chicken Meal Grain Free",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092049", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Indoor Salmon & Herring",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["salmon", "herring"],
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092063", scope: UNIT },
+      { size: "11.5 lb", container: BAG, upc: "076344092070", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Indoor Deboned Chicken & Chicken Meal Grain Free",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092100", scope: UNIT },
+      { size: "11.5 lb", container: BAG, upc: "076344092117", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Indoor Healthy Weight Deboned Chicken & Turkey Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken", "turkey"],
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092155", scope: UNIT },
+      { size: "11.5 lb", container: BAG, upc: "076344092162", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Wellness",
+    line: "Complete Health",
+    variant: "Age Advantage Deboned Chicken & Chicken Meal",
+    species: "cat",
+    texture: "kibble",
+    presentation: "plain",
+    foodForm: "dry",
+    proteins: ["chicken"],
+    packages: [
+      { size: "5.5 lb", container: BAG, upc: "076344092278", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -22285,4 +22500,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...WELLNESS_BATCH_058,
   ...WELLNESS_BATCH_059,
   ...WELLNESS_BATCH_060,
+  ...WELLNESS_BATCH_061,
 ];

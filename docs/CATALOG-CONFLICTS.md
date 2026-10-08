@@ -2802,3 +2802,64 @@ something is seeded under them.
 The Simply Shreds Variety Pack, **076344012467** (12 × 2.8 oz), was bound
 only as the 12-count; it is not in the ledger and is not added to
 `data/known-multipacks.ts`, because no source names its members.
+
+## Batch 061 — Wellness dry cat food
+
+Twenty-two records from research-data-center task #147 (PR #179). **No
+composition is stored.** Twenty-one bags are seeded as identity and one
+candidate stays in the ledger.
+
+### Twenty-one seeded as identity only
+
+Every one is `needs_physical_label`. For fifteen products the maker's current
+ingredient statement and the PetSmart page that binds the code disagree —
+PetSmart carries an older deck — and the maker prints its calories only in an
+image, so the current formula has no calorie statement either. Each code is
+bound to its size by a PetSmart variant page or by the maker's one-size page;
+none is contested.
+
+- CORE+ Indoor Salmon & Herring **076344083269**, **076344083276**; CORE+
+  Hairball **076344084020**; CORE+ Indoor Deboned Chicken **076344088523**,
+  **076344088530**; CORE Original **076344088400**; CORE Kitten
+  **076344088424**.
+- Complete Health Kitten Wholesome Grains **076344884934**; Deboned Chicken,
+  Chicken Meal & Rice **076344089940**; Indoor Wholesome Grains
+  **076344089957**; Salmon & Salmon Meal **076344089933**; Deboned Chicken &
+  Chicken Meal **076344092018**, **076344092025**; Kitten Grain Free
+  **076344092049**; Indoor Salmon & Herring **076344092063**,
+  **076344092070**; Indoor Grain Free **076344092100**, **076344092117**;
+  Indoor Healthy Weight **076344092155**, **076344092162**; Age Advantage
+  **076344092278**.
+
+### Two names printed on two products each
+
+The ledger gives "Kitten Deboned Chicken & Chicken Meal" to **076344884934**
+(5 lb) and **076344092049** (5.5 lb), and "Indoor Deboned Chicken & Chicken
+Meal" to **076344089957** (5 lb) and to **076344092100** / **076344092117**
+(5.5 / 11.5 lb). The printed names end "… Wholesome Grains" on the first of
+each pair and "… Grain Free" on the second: two recipes, which the catalog
+would have merged into one product with mismatched bags. Each variant is
+filed with that ending, the pack's own words.
+
+### Two shared lists, both identity only
+
+check-ledger finds one ingredient list under CORE Original and CORE Kitten
+(**076344088400**, **076344088424**, identical panels too) and one under
+Complete Health Grain Free Deboned Chicken adult and Kitten (**076344092018**,
+**076344092025**, **076344092049**, different panels). Whether the maker
+shares a formula or its pages repeat a deck is not decidable from the pages;
+the records say so. No list is stored, so nothing is asserted either way.
+
+### lifeStage
+
+`kitten` on the three Kitten products, from the printed name. None elsewhere:
+no AAFCO sentence is printed as text, the ledger's `adult` is a retailer
+field, and "Age Advantage" prints no age.
+
+### One candidate, and the unbound sizes
+
+**076344084006**, CORE+ Healthy Weight 4.75 lb — the maker's page only. Four
+maker codes, **076344088394**, **076344088592**, **076344898214** and
+**076344898245** (CORE Original, CORE Turkey & Duck, CORE Digestive Health
+Chicken and Salmon), sit on pages that list a 5 and an 11 lb bag under one
+code, so no page binds them to a size and none was filed.

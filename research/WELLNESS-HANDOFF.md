@@ -279,3 +279,6 @@ docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
   the owner's form decision; 7 candidates held. Ranges added: `Bowl Boosters
   Simply Shreds`, `Bowl Boosters Tender Toppers`, `Puppy Bites`. Roles come
   from lib/nutrition-role.ts as it stands (topper, treat); a test pins them.
+- Batch 061 (task #147): no composition; 21 identity only (two formula
+  generations, no current calories), 1 candidate held. Two variants carry the
+  pack's "Wholesome Grains" / "Grain Free" to keep two recipes apart.
