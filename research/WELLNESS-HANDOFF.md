@@ -257,3 +257,43 @@ carries its sources and reasons. The decisions are in docs/CATALOG-CONFLICTS.md,
   compositions under the owner's ruling that the AAFCO sentence is not required
   when no source page prints it (AGENTS.md §10, "when printed"). The ledger now
   reads promoted_to_seed 4, needs_physical_label 7.
+
+## 16. Seven more tasks landed — research-data-center #143–#148 and #150, 2026-10-08
+
+The ledger gained 200 records (tasks #143 CORE dry dog, #144 Complete Health
+and Simple dry dog, #145 wet dog, #146 dog toppers and treats, #147 dry cat,
+#150 cat toppers and treats, then #148 wet cat under CORE), copied in
+unchanged and seeded one batch per task under the status lookup. Decisions per batch are in
+docs/CATALOG-CONFLICTS.md, "Batch 057" onwards.
+
+- Batch 057 (task #143): 14 compositions, 8 identity only, 14 candidates
+  held. `CORE+` added to the brand entry.
+- Batch 058 (task #144): 4 compositions, 22 identity only (two formula
+  generations), 11 candidates held, the four Simple bags among them.
+- Batch 059 (task #145): 9 compositions, 18 identity only, 10 candidates
+  held. Ranges added: `Complete Health Petite Entrées`, `CORE Hearty Cuts`,
+  `CORE Mini Meals`, `CORE 95%`. The seed's older `Mini Meals` and `Petite
+  Entrees` stay in the entry, empty. CORE 95%'s role is an open question.
+- Batch 060 (task #146): 4 compositions (Simply Shreds), 5 identity only
+  (Tender Toppers, Soft Puppy Bites); 6 freeze-dried Bowl Boosters held for
+  the owner's form decision; 7 candidates held. Ranges added: `Bowl Boosters
+  Simply Shreds`, `Bowl Boosters Tender Toppers`, `Puppy Bites`. Roles come
+  from lib/nutrition-role.ts as it stands (topper, treat); a test pins them.
+- Batch 061 (task #147): no composition; 21 identity only (two formula
+  generations, no current calories), 1 candidate held. Two variants carry the
+  pack's "Wholesome Grains" / "Grain Free" to keep two recipes apart.
+- Batch 062 (task #150): 2 compositions (Lickable Treats), 4 identity only
+  (Lickable Duck, Kittles x3), 3 cat Bowl Boosters candidates held. Ranges
+  added: `Kittles`, `Lickable Treats`; both read `treat`.
+- Batch 067 (task #148, PR #181, wet cat under CORE): 18 compositions, 8
+  identity only, 11 candidates held. Signature Selects filed under a new range,
+  `CORE Signature Selects`, and the CORE+ Indoor pâté under `CORE+` — the
+  ranges the packs print, where the research folded them into `CORE`.
+
+Totals after batch 067: the ledger holds 211 records; the catalog holds 111
+Wellness products under 147 barcodes, 55 with a composition — see
+INVENTORY-WELLNESS.md. Still open for the owner: the freeze-dried form
+(BARE, Functional), CORE 95%'s role, whether CORE+ Digestive Health is a
+range of its own, the slug-shaped Complete Health variants, and the empty
+older ranges in the brand entry (`Mini Meals`, `Petite Entrees`, `Soft Puppy
+Bites`).

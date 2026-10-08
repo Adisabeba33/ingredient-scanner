@@ -166,6 +166,37 @@ describe("detectNutritionRole", () => {
     }
   });
 
+  // The Wellness ranges as the seed now stores them (batches 057–062 and 067,
+  // from research-data-center tasks #143–#148 and #150), brand, range and variant
+  // exactly as the import route passes them. No entry in this module was added
+  // for them: the Bowl Boosters ranges print "a complementary food intended to
+  // be fed with a complete and balanced dog food diet" or "intermittent or
+  // supplemental feeding only" and read `topper` through "bowl boosters";
+  // Puppy Bites reads `treat` only because the brand comes first — "Wellness" +
+  // "Puppy Bites" is the printed "Wellness Puppy Bites" the list holds, and bare
+  // "puppy bites" is deliberately not in it; Kittles is in KNOWN_TREAT_LINES
+  // and Lickable Treats carries the word. Pinned so that no route can quietly
+  // stop working, and so the dinners beside them stay dinners.
+  it("reads the seeded Wellness toppers and treats as not dinner, and its dinners as dinners", () => {
+    for (const [parts, role] of [
+      [["Wellness", "Bowl Boosters Simply Shreds", "Chicken, Beef & Carrots"], "topper"],
+      [["Wellness", "Bowl Boosters Tender Toppers", "Turkey & Chicken"], "topper"],
+      [["Wellness", "Puppy Bites", "Soft Lamb & Salmon"], "treat"],
+      [["Wellness", "Kittles", "Tuna & Cranberry"], "treat"],
+      [["Wellness", "Lickable Treats", "Chicken"], "treat"],
+      [["Wellness", "CORE Mini Meals", "Chunky Chicken"], "unknown"],
+      [["Wellness", "Complete Health Petite Entrées", "Shredded Medley Roasted Chicken, Duck, Peas & Carrots"], "unknown"],
+      [["Wellness", "CORE Hearty Cuts", "Chicken & Turkey"], "unknown"],
+      [["Wellness", "CORE 95%", "Chicken & Broccoli"], "unknown"],
+      [["Wellness", "CORE+", "Original Turkey & Chicken Recipe"], "unknown"],
+      [["Wellness", "Complete Health", "Grained Senior Chicken Barley"], "unknown"],
+      [["Wellness", "CORE Tiny Tasters", "Chicken Recipe"], "unknown"],
+      [["Wellness", "CORE Signature Selects", "Shredded Chicken & Turkey in Sauce"], "unknown"],
+    ] as const) {
+      expect({ parts, role: detectNutritionRole({ parts: [...parts] }) }).toEqual({ parts, role });
+    }
+  });
+
   // And the guess this list refuses to make. "Bites" is a word complete foods
   // use — Hill's sells Puppy Small Bites — so only the maker's two printed
   // spellings are listed, never bare "puppy bites".

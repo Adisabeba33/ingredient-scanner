@@ -2724,3 +2724,485 @@ raw** records (8 `source_verified`) and **42 freeze-dried** (14
 `source_verified`), all waiting on the same decision. The research's
 recommendation is two values — frozen raw and freeze-dried — because one value
 would hide the 70% against 6% moisture that decides how the list is read.
+
+## Batch 057 — Wellness CORE dry dog food
+
+Thirty-six records from research-data-center task #143 (PR #178), appended to
+`research/deep-research-wellness.json`. Fourteen bags are stored with their
+compositions, eight as identity, and fourteen candidates stay in the ledger.
+No conflict note on any of the fourteen: each list, panel and calorie
+statement is the PetSmart page that binds the size, read a second time in the
+maker's label-image text, and the two agree. Calories are per cup, so there is
+no arithmetic witness. CORE+ is kibble with freeze-dried pieces at 10%
+moisture max and is filed `dry` / `kibble`, as Instinct's Raw Boost is
+(batches 048 and 052).
+
+### Copied as printed
+
+PetSmart's text is the one stored, and in three places it runs together what
+the maker's label text keeps apart: "CopperSulfate" on **076344884392** (CORE
+Wild Game 22 lb), "Green TeaExtract" on **076344884941** (CORE+ Beef & Barley
+4 lb), and "Sulfate),Peas" with no space on **076344182108** and
+**076344182122** (CORE+ Whitefish, Herring & Salmon 4 and 18 lb). The
+research judged them whitespace and kept PetSmart's text, which is the page
+its check compares word for word; they are stored as delivered (copy, do not
+tidy). Batch 052 met the same kind of slip and stored the maker's text,
+because that research had kept the maker's; here the record kept PetSmart's.
+Every ingredient and its order is otherwise identical in both readings.
+
+### Eight seeded as identity only
+
+Each is `needs_physical_label` in the ledger, a barcode to photograph
+(`docs/CURATION-QUEUE.md`, "The status is a lookup"). Every code is bound to
+its size by a PetSmart variant page; no binding is contested.
+
+- **076344884439**, **076344884446** — CORE Small Breed Healthy Weight Turkey
+  & Chicken, 4 and 12 lb. Two formulas: the maker's label adds L-Carnitine and
+  prints Potatoes where PetSmart prints Dried Ground Potatoes, and the panels
+  differ (maker 36.0% protein, 11.0% fat; PetSmart 34.0%, 13.0%).
+- **076344884958** — CORE+ Beef & Barley, 18 lb. PetSmart's 18 lb page prints
+  a different list from its 4 lb page; the 4 lb, **076344884941**, carries the
+  composition, its PetSmart page and the maker agreeing.
+- **076344884965** — CORE+ Large Breed Chicken & Turkey, 20 lb. Crude fat
+  13.0% min on the maker's page, 16.0% on PetSmart's; the list was read once
+  and no calories were found.
+- **076344884231** — CORE Puppy Chicken & Turkey, 12 lb. PetSmart's 12 lb page
+  prints a different list from its 4 lb page; the 4 lb, **076344884194**,
+  carries the composition.
+- **076344182177**, **076344182184** — CORE+ Sensitive Skin & Stomach Salmon
+  & Rice, 4 and 18 lb. PetSmart glosses five vitamins ("Vitamin B5
+  (d-Calcium Pantothenate)") and ends "Spearmint Extract"; the maker prints
+  them bare and ends "Spearmint".
+- **076344898085** — CORE Digestive Health Whitefish & Brown Rice, 22 lb.
+  PetSmart's 22 lb page prints a different list from its 4 lb page
+  (**076344898061**, a candidate).
+
+### lifeStage
+
+Set on two products only: CORE Puppy Chicken & Turkey (`puppy`, "Puppy" in the
+printed name) and CORE+ Small Breed Original Turkey & Chicken Recipe —
+Wholesome Grains (`adult`, from its printed sentence "… formulated to meet the
+nutritional levels established by the AAFCO Dog Food Nutrient Profiles for
+maintenance"). Every other row carries none: the ledger's `adult` and
+`senior` come from retailer fields, and "Age Advantage" prints no age.
+
+### Fourteen candidates left in the ledger
+
+Not seeded (a candidate is a lead): the statement was read once, or no
+calories were captured — CORE Digestive Health Small Breed 076344898030,
+Whitefish 4 lb 076344898061 and Large Breed 076344898160; CORE+ Wild Game
+076344181057, 076344181064, 076344181071; CORE+ Original Wholesome Grains
+20 lb 076344182023; CORE+ Puppy 076344181156, 076344181163; CORE+ Small Breed
+Original Grain Free 076344181033, 076344181040; CORE Large Breed
+076344884545; CORE Healthy Weight 076344884361, 076344884095. Three of them
+print the same calories as a sibling with a different list (CORE+ Wild Game =
+CORE Wild Game, CORE+ Puppy = CORE Puppy, CORE+ Small Breed Grain Free = CORE+
+Original), which a label should settle before any is promoted.
+
+## Batch 058 — Wellness Complete Health dry dog food
+
+Thirty-seven records from research-data-center task #144 (PR #177). Four bags
+are stored with their compositions, twenty-two as identity, and eleven
+candidates stay in the ledger. No conflict note on the four — Grain Free
+Deboned Chicken & Chicken Meal **076344891314** (12 lb) and **076344891574**
+(22 lb), Grain Free Small Breed **076344891512** (4 lb) and **076344891529**
+(11 lb): the PetSmart page that binds each size and the maker's label-image
+text give the same words in the same order, once PetSmart's "INGREDIENTS: "
+heading and its en dashes are set aside. PetSmart's text is stored. Calories
+are per cup, so there is no arithmetic witness.
+
+### Twenty-two seeded as identity only — two formula generations
+
+Each is `needs_physical_label`, bound to its size by a PetSmart variant page,
+and the two readings are two formulas: the maker's label lists add Sorghum,
+Dried Yeast and Dried Kelp and write "Mixed Tocopherols (added to preserve
+freshness)", "Vitamin C (Ascorbic Acid)" and "Spearmint", where PetSmart
+prints the older order and "Spearmint Extract". For Beef & Barley, Chicken &
+Oatmeal, Whitefish & Sweet Potato and Senior Chicken & Barley the panels
+differ too — Beef & Barley guarantees Calcium 1.20% on the maker's label and
+0.90% on PetSmart, and its meal is Pork Meal on one and Chicken Meal on the
+other. Within one product PetSmart's own size pages disagree: Chicken &
+Oatmeal 38 lb prints 3,495 kcal/kg, 416 kcal/cup against 3,584 and 427 on the
+5, 15 and 26 lb pages, and Sensitive Skin & Stomach 38 lb prints 3,413 kcal/kg
+against 3,438. A pack photograph settles each.
+
+- Beef & Barley **076344891550**, **076344891567**; Chicken & Oatmeal
+  **076344891420**, **076344089049**, **076344088936**, **076344088950**; Lamb
+  & Barley **076344088905**; Whitefish & Sweet Potato **076344089063**,
+  **076344088912**; Healthy Weight Chicken & Peas **076344891048**; Small Breed
+  Healthy Weight Turkey & Rice **076344891185**, **076344891192**; Large Breed
+  Chicken & Rice **076344891130**; Toy Breed Chicken & Rice **076344891215**;
+  Senior Chicken & Barley **076344891451**, **076344088929**; Sensitive Skin
+  & Stomach Salmon & Rice **076344893363**, **076344893370**,
+  **076344893387**; Small Breed Turkey & Oatmeal **076344891109**,
+  **076344891116**; Small Breed Senior Turkey & Peas **076344891208**.
+
+### lifeStage and variants
+
+Lamb & Barley and Toy Breed print "… formulated to meet the nutritional levels
+established by the AAFCO Dog Food Nutrient Profiles for maintenance" and carry
+`adult`. The two senior products carry `senior`: their printed names end
+"for Dogs 7+" and "for Small Senior Dogs 7+", and the age is what the field
+records (the "Senior 7+" rule in `lib/known-import.test.ts`), although the one
+sentence read says maintenance. Every other row carries none; the ledger's
+values come from retailer fields.
+
+The variants are the ledger's own and are slug-shaped as delivered — "Grained
+Beef Barley", "Grain Free Deboned Chicken Chicken Meal" — because the
+research took them from the maker's URLs; the handoff says so. They are not
+rewritten here: nothing has to be told apart, and the printed names in the
+records are PetSmart titles as uneven as the slugs. A rename is a decision for
+when a pack is at hand.
+
+### Eleven candidates left in the ledger
+
+One reading (the maker's label text) and no calories as text: Puppy Chicken,
+Salmon & Oatmeal 076344891468, 076344089612, 076344088943; Large Breed Chicken
+& Rice 38 lb 076344891222; Grain Free Large Breed Chicken 076344891536; Small
+Breed Puppy 076344891161; Large Breed Puppy 076344891154; and the four Simple
+bags 076344893295, 076344893264, 076344893141, 076344893059.
+
+## Batch 059 — Wellness wet dog food
+
+Thirty-seven records from research-data-center task #145 (PR #175). Nine are
+stored with their compositions, eighteen as identity, and ten candidates stay
+in the ledger. No conflict note on the nine — Petite Entrées Shredded Medley
+**076344190653**, **076344190646**, **076344190608**; CORE Hearty Cuts Chicken
+& Turkey **076344080275**; CORE Mini Meals **076344166030**,
+**076344166054**, **076344166023**, **076344166009**, **076344166047**: each
+statement was read on the maker's page and again on PetSmart's, and the two
+agree. Calories are PetSmart's, per cup, can or pouch, and all nine pass the
+arithmetic in `scripts/check-batch.mjs` (1020 kcal/kg × 3 oz = 86.7 against a
+printed 87, and so on).
+
+### Sizes, cups and the calorie serving
+
+The ledger prints sizes as the maker's selector does — "12.5 Ounce Can",
+"3 Ounce Cup", "3 Ounce Retort Pouch", "13 Ounce Can" — and the seed writes
+them "12.5 oz", "3 oz", "13 oz", the catalog's form; the container goes in
+`container`. The Petite Entrées cup is filed `tub`, as the ledger files it,
+and its calories, which the ledger's `unit_name` calls "other", are stored
+per "cup": that is the maker's own word for the container, and the figure is
+the whole 3 oz (1020 × 0.085 kg = 86.7 against 87). Some statements carry a
+double space or a non-breaking space as delivered; they are copied as they
+are.
+
+### Eighteen seeded as identity only — two lists under one code
+
+Each is `needs_physical_label`. The maker's page and the PetSmart page carry
+the same code and print different ingredient statements; eight also differ on
+the crude-fat minimum (maker against PetSmart: Paté Age Advantage 3.0 / 4.0%,
+Paté Lamb 7.5 / 7.0, Paté Turkey 5.0 / 6.0, Stews Chicken 3.5 / 4.0, Stews
+Turkey 3.0 / 3.5, CORE 95% Chicken & Broccoli 8.0 / 9.0, CORE Paté Turkey &
+Chicken Liver 7.0 / 8.0, CORE Digestive Health Chicken 5.0 / 6.0). Petite
+Entrées Chicken & Turkey's maker text is cut off after 100 characters. A pack
+photograph settles each; every code is bound by the maker's one-size page.
+
+- Complete Health Paté **076344089186** (Age Advantage), **076344089155**,
+  **076344089162**, **076344088875**; Petite Entrées **076344190615**; Stews
+  **076344017158**, **076344017059**, **076344017554**, **076344017257**;
+  CORE 95% **076344179962**, **076344179948**, **076344179955**; CORE
+  Digestive Health **076344087038** (Beef), **076344087014** (Chicken); CORE
+  Hearty Cuts **076344080213**; CORE Mini Meals **076344166016**; CORE Paté
+  **076344079187**, **076344079118**.
+
+### CORE 95%, filed as a dinner
+
+The research filed CORE 95% Beef & Carrots, Chicken & Broccoli and Turkey &
+Spinach as complete diets, and left Complete Health 95% out because the maker
+calls it usable "as a mixer or topper". No page read prints either range's
+AAFCO sentence. The three are identity only, and `lib/nutrition-role.ts`
+reads "CORE 95%" as `unknown`, judged as dinner — the module's safe default.
+If the pack says "intermittent or supplemental feeding", the range belongs in
+`BRAND_COMPLEMENTARY_LINES` before any of its compositions is stored.
+
+### Not filed
+
+`076344087120`, CORE Digestive Health Chicken & Beef, is a 6 × 13 oz carton
+(the maker sells that recipe only as the carton). It is not in the ledger and
+is not added to `data/known-multipacks.ts`: no unit code for its member is
+known.
+
+### Ten candidates left in the ledger
+
+One reading, or no calories: CORE Paté Whitefish, Salmon & Herring
+076344079125 and Weight Management 076344079163; Complete Health Paté Puppy
+076344088851; Petite Entrées Casserole 076344090373 (texture `unknown`,
+"casserole" is not in the vocabulary), Mini Fillets 076344090335,
+076344090342; Stews Turkey & Duck 076344017356, Venison & Salmon
+076344017455; CORE Digestive Health Lamb 076344087052; Simple Limited
+Ingredient Diet Turkey & Potato 076344894094.
+
+## Batch 060 — Wellness dog toppers and treats
+
+Twenty-two records from research-data-center task #146 (PR #176). Four are
+stored with their compositions, five as identity; six freeze-dried toppers
+and seven candidates stay in the ledger.
+
+### Simply Shreds, stored, and read as toppers
+
+**076344012399**, **076344012412**, **076344012450**, **076344012436** —
+Bowl Boosters Simply Shreds, 2.8 oz pouches. Each statement was read on the
+maker's page and again on PetSmart's, and they agree; PetSmart's calories are
+per pouch and all four pass the arithmetic. No conflict note. Every pack
+guarantees moisture 90.0% max beside 8–11% protein, which check-ledger
+questions; it is the range's loose maximum, printed alike on all four, and
+the calories (450–530 kcal/kg) fit a shred of 87–89% water. Stored as printed.
+
+Each prints "This is a complementary food intended to be fed with a complete
+and balanced dog food diet." The seed carries no claims, and
+`lib/nutrition-role.ts` reads the range "Bowl Boosters Simply Shreds" as
+`topper` through its existing "bowl boosters" entry, so nothing was added to
+the module; a test pins the reading ("reads the seeded Wellness toppers and
+treats as not dinner …"). No `lifeStage`: the sentence names none.
+
+### Five seeded as identity only
+
+`needs_physical_label`, two formula generations — the maker's label text and
+the PetSmart page that binds the code print different lists:
+
+- **076344885399** Tender Toppers Lamb & Salmon 8 oz (the guarantees differ
+  too); **076344885375**, **076344885382** Tender Toppers Turkey & Chicken,
+  8 oz and 2 lb. They print "This product is intended for intermittent or
+  supplemental feeding only" and read `topper` through "bowl boosters".
+- **076344890171**, **076344896142** — Puppy Bites Soft Lamb & Salmon, 8 and
+  3 oz; PetSmart's list adds Chickpeas and Garlic Powder. They read `treat`:
+  brand and range together are "Wellness Puppy Bites", the maker's printed
+  name, which `KNOWN_TREAT_LINES` holds. `lifeStage: "puppy"` from the printed
+  name. The range is new to the brand entry as "Puppy Bites", the maker's
+  current spelling for soft and crunchy alike; the older "Soft Puppy Bites"
+  stays in the entry.
+
+Tender Toppers and Puppy Bites are 25–30% moisture and are filed `dry`, the
+semi-moist treat shelf the panel check already allows for.
+
+### Six freeze-dried toppers left in the ledger
+
+**076344885252** BARE Nutrient-Rich Beef and **076344885245** BARE Turkey
+Hearts, 4 oz (`source_verified`: list read twice, 8.0% moisture max, calories
+per cup — 5192 and 4400 kcal/kg); Functional Freeze Dried **076344885306**
+Digestive Health, **076344885269** Joint Health, **076344885276** Skin &
+Coat, **076344885290** Heart Health, 4 oz (`needs_physical_label`, two
+formula generations; calories per tablespoon). All are freeze-dried raw,
+filed `dry` / `freeze_dried` in the ledger. They are held for the decision
+batch 053 left with the owner for Instinct's freeze-dried toppers: whether
+freeze-dried is filed `dry`, as section L filed Weruva's and Reveal's, or
+waits for a form of its own. If `dry`, the two BARE pouches can go in with
+their compositions as they stand; the Functional four need a "tablespoon"
+serving name, which the seed has not used, and a pack photo.
+
+### Candidates and what was not filed
+
+Seven candidates, not seeded: Functional Immune Health **076344885337**
+(its maker panel, 2.00% protein min against 20.0% moisture max, looks wrong
+for a freeze-dried food); Hearty Toppers 5.5 oz cartons **076344016014**,
+**076344016038**, **076344016045** (one reading, no calories, texture
+`unknown`); CORE Brainiac Puppy **076344882183** and CORE Tiny Trainers
+**076344882169** (one reading; Tiny Trainers prints no feeding sentence); and
+Puppy Bites Crunchy Chicken & Carrots **076344890164**. Their ranges — CORE
+Brainiac Puppy, CORE Tiny Trainers — are not added to the brand entry until
+something is seeded under them.
+
+The Simply Shreds Variety Pack, **076344012467** (12 × 2.8 oz), was bound
+only as the 12-count; it is not in the ledger and is not added to
+`data/known-multipacks.ts`, because no source names its members.
+
+## Batch 061 — Wellness dry cat food
+
+Twenty-two records from research-data-center task #147 (PR #179). **No
+composition is stored.** Twenty-one bags are seeded as identity and one
+candidate stays in the ledger.
+
+### Twenty-one seeded as identity only
+
+Every one is `needs_physical_label`. For fifteen products the maker's current
+ingredient statement and the PetSmart page that binds the code disagree —
+PetSmart carries an older deck — and the maker prints its calories only in an
+image, so the current formula has no calorie statement either. Each code is
+bound to its size by a PetSmart variant page or by the maker's one-size page;
+none is contested.
+
+- CORE+ Indoor Salmon & Herring **076344083269**, **076344083276**; CORE+
+  Hairball **076344084020**; CORE+ Indoor Deboned Chicken **076344088523**,
+  **076344088530**; CORE Original **076344088400**; CORE Kitten
+  **076344088424**.
+- Complete Health Kitten Wholesome Grains **076344884934**; Deboned Chicken,
+  Chicken Meal & Rice **076344089940**; Indoor Wholesome Grains
+  **076344089957**; Salmon & Salmon Meal **076344089933**; Deboned Chicken &
+  Chicken Meal **076344092018**, **076344092025**; Kitten Grain Free
+  **076344092049**; Indoor Salmon & Herring **076344092063**,
+  **076344092070**; Indoor Grain Free **076344092100**, **076344092117**;
+  Indoor Healthy Weight **076344092155**, **076344092162**; Age Advantage
+  **076344092278**.
+
+### Two names printed on two products each
+
+The ledger gives "Kitten Deboned Chicken & Chicken Meal" to **076344884934**
+(5 lb) and **076344092049** (5.5 lb), and "Indoor Deboned Chicken & Chicken
+Meal" to **076344089957** (5 lb) and to **076344092100** / **076344092117**
+(5.5 / 11.5 lb). The printed names end "… Wholesome Grains" on the first of
+each pair and "… Grain Free" on the second: two recipes, which the catalog
+would have merged into one product with mismatched bags. Each variant is
+filed with that ending, the pack's own words.
+
+### Two shared lists, both identity only
+
+check-ledger finds one ingredient list under CORE Original and CORE Kitten
+(**076344088400**, **076344088424**, identical panels too) and one under
+Complete Health Grain Free Deboned Chicken adult and Kitten (**076344092018**,
+**076344092025**, **076344092049**, different panels). Whether the maker
+shares a formula or its pages repeat a deck is not decidable from the pages;
+the records say so. No list is stored, so nothing is asserted either way.
+
+### lifeStage
+
+`kitten` on the three Kitten products, from the printed name. None elsewhere:
+no AAFCO sentence is printed as text, the ledger's `adult` is a retailer
+field, and "Age Advantage" prints no age.
+
+### One candidate, and the unbound sizes
+
+**076344084006**, CORE+ Healthy Weight 4.75 lb — the maker's page only. Four
+maker codes, **076344088394**, **076344088592**, **076344898214** and
+**076344898245** (CORE Original, CORE Turkey & Duck, CORE Digestive Health
+Chicken and Salmon), sit on pages that list a 5 and an 11 lb bag under one
+code, so no page binds them to a size and none was filed.
+
+## Batch 062 — Wellness cat treats
+
+Nine records from research-data-center task #150 (PR #180). Two are stored
+with their compositions, four as identity, and three candidates stay in the
+ledger.
+
+### Lickable Treats, stored, and read as treats
+
+**076344144007** Chicken and **076344144014** Tuna — 2.5 oz pouches of six
+tubes, one retail unit. Each statement was read on the maker's page and again
+on PetSmart's, and they agree. Calories are printed per tube, 9 and 8 kcal,
+and stored per "tube"; at a sixth of 2.5 oz (720 kcal/kg × 11.8 g = 8.5) each
+passes the arithmetic. No conflict note. A purée at 85% moisture max, filed
+`wet` with texture `unknown` — the vocabulary has no purée, and I and love and
+you's Treat Meow is the same shelf. Neither page prints an AAFCO sentence:
+PetSmart's marketing copy says "complete & balanced for adult cats" while
+filing the item as a treat, and the maker's feeding note is three tubes a day
+beside the regular diet. The range name carries "Treats", so
+`lib/nutrition-role.ts` reads `treat`; no `lifeStage` (the ledger's `adult`
+is PetSmart's attribute).
+
+### Four seeded as identity only
+
+- **076344144038** — Lickable Treats Duck. The maker and PetSmart alike print
+  "Crude Fiber Not Less Than 1.50%" and "Moisture Not Less Than 85.0%" where
+  the Chicken and Tuna packs print "Not More Than" — a probable label slip,
+  and with no moisture maximum the panel cannot be stored. Filed `wet` with
+  its siblings.
+- **076344900344** Chicken, **076344900337** Salmon and **076344900351** Tuna
+  & Cranberry — Kittles, 2 oz. PetSmart's Canadian site prints another list
+  under the same codes (whitefish meal and blueberries, about 3,520–3,540
+  kcal/kg, 1.1 kcal a treat); the maker's US list is the one in the ledger, and
+  a pack settles which is on the shelf. The Chicken code is bound by the
+  maker's one-size page; Salmon's 2 oz by a US retailer's page and Tuna's by
+  the Canadian page only, because the maker lists 2 and 6 oz under one code.
+  Nothing binds either to the 6 oz, so neither binding is contested; it is
+  the weakest binding in this landing. Crunchy treats at 10% moisture, filed
+  `dry`, texture `unknown`. `kittles` is already in `KNOWN_TREAT_LINES`.
+
+Both ranges, "Kittles" and "Lickable Treats", are new to the brand entry.
+
+### Three candidates left in the ledger
+
+Bowl Boosters Simply Shreds for cats, 1.75 oz — **076344012177** Flaked
+Wild Salmon & Tuna, **076344012191** Flaked Tuna & Shrimp, **076344012214**
+Shredded Boneless Chicken: no calorie statement on any readable page, and the
+Chicken statement was read once. The code `076344089957`, shown beside every
+Kittles and Lickables product on the maker's pages, is a carousel item —
+Complete Health Indoor Wholesome Grains, batch 061 — not these products.
+
+## Batch 067 — Wellness wet cat food under CORE
+
+Thirty-seven records from research-data-center task #148 (PR #181). Eighteen
+are stored with their compositions, eight as identity, and eleven candidates
+stay in the ledger. No conflict note on the eighteen: each statement is the
+maker's label-image text, read a second time on the PetSmart page that binds
+the code, and the two agree; calories are PetSmart's, per pouch or can, and
+all eighteen pass the arithmetic in `scripts/check-batch.mjs`.
+
+- CORE Tiny Tasters 1.75 oz pâtés **076344161011**, **076344161059**,
+  **076344161073**, **076344161097**, **076344161110**, and Kitten Chicken in
+  Sauce **076344161158**.
+- CORE Signature Selects, 2.8 oz unless noted: **076344060000**,
+  **076344060017** and its 5.3 oz **076344060512**, **076344060024** and its
+  5.3 oz **076344060529**, **076344060031**, **076344060543** (5.3 oz),
+  **076344050179**, **076344050223**, **076344050209**, **076344050216**. The
+  two 2.8 / 5.3 oz pairs print one list, one panel and one kcal/kg, as one
+  product's sizes should.
+- CORE+ Indoor Pâté Chicken & Chicken Liver, 5.5 oz, **076344079033**.
+
+### Ranges as the packs print them
+
+The research filed Signature Selects and the CORE+ pâtés under "CORE", saying
+why: the brand entry had no such lines. The packs print "Wellness® CORE®
+Signature Selects®" and "CORE+", and a range folded into its parent is the
+failure `docs/SEEDING-A-BATCH.md` §2.4.5 warns about — the coverage page loses
+the shelf. So the twelve Signature Selects rows are filed under a new range,
+"CORE Signature Selects", and the Indoor pâté under "CORE+", the range batch
+057 added and batch 061 uses for the CORE+ Indoor kibble. Each record carries
+a note saying so; the ledger's `product_line` is unchanged. The two CORE+
+Digestive Health cans stay under "CORE Digestive Health", as delivered and as
+batch 059 filed the dog cans of the same name; whether "CORE+ Digestive
+Health" should be a range of its own is left for the owner.
+
+Three Signature Selects rows — **076344050223**, **076344050209**,
+**076344050216** — have no presentation in the ledger (`null`); the seed's
+field takes no null, so they read `unknown`, the choice batch 033 made over
+guessing "plain".
+
+### Copied as printed
+
+The stored text runs together "Oil,Natural" on **076344060031** and
+"TurkeyLiver" on **076344050209**. The research found PetSmart and the maker
+differing only by such spaces, judged them one reading, and kept the maker's
+text; it is stored as delivered.
+
+### lifeStage
+
+`adult` where PetSmart prints the sentence "… is formulated to meet the
+nutritional levels established by the AAFCO Cat Food Nutrient Profiles for
+maintenance": the five adult Tiny Tasters pâtés and the Signature Selects
+shredded and flaked lines in sauce or broth. `kitten` on the two Tiny Tasters
+Kitten pouches, from the printed name. None on the rest; the ledger's
+`adult` there is the research's default.
+
+### Eight seeded as identity only
+
+All `needs_physical_label`; every code is bound by the maker's one-size page
+or a PetSmart variant page.
+
+- **076344161035** Tiny Tasters Chicken & Beef and **076344060048** Signature
+  Selects Flaked Skipjack Tuna & Wild Salmon 2.8 oz: the calorie statement
+  contradicts itself as printed (131 kcal/kg against 65 kcal a pouch; 884
+  kcal/kg against 7 kcal a can). The 5.3 oz of the second, **076344060543**,
+  carries the composition.
+- **076344161172**, **076344161196**, **076344161257** (Tiny Tasters Minced
+  Chicken, Minced Chicken & Beef, Kitten Minced Chicken) and
+  **076344161219** (Flaked Tuna & Salmon): the printed calories are 1.7 to
+  2.1 times what their own panels (moisture 90% max) can carry. Both readings
+  agree, so the slip is on the sources; a pack settles it.
+- **076344061212**, **076344061274** — CORE+ Digestive Health Chicken and
+  Salmon, 3 oz: the PetSmart page that binds the code prints another list and
+  panel than the maker.
+
+### Eleven candidates, and what was not filed
+
+One reading and no calories (the maker prints them as an image; PetSmart's
+pages redirect): CORE+ Digestive Health Turkey **076344061236** and Whitefish
+**076344061250**; Signature Selects Kitten Chicken & Liver **076344050186**,
+Chicken & Lamb **076344050193**, Chunky Chicken & Turkey 5.3 oz
+**076344060550**; CORE Kitten Chicken & Salmon **076344062097**; CORE+
+Healthy Weight **076344062011**, Skin & Coat **076344062134**, Hairball
+**076344062158**. Tiny Tasters Flaked Tuna & Shrimp **076344161233**: no
+second reading on re-check. Signature Selects Kitten Flaked Tuna & Salmon
+**076344050162**: complete, but its life stage was corrected at assembly and
+waits to be confirmed. Thirteen product sizes have no bound code, and
+PetSmart's 076344060505 (a 5.3 oz shredded variant with no flavour printed)
+and 076344060536 ("Tuna", no maker page) were not filed.

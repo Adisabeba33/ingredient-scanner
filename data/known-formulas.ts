@@ -223,6 +223,41 @@ const VERIFIED_054 = "2026-10-08";
 // rabbit) or petgoods.com (tuna), which agree; calories per cup — the cup the
 // food comes in — from that second page, so each has the arithmetic witness.
 const VERIFIED_055 = "2026-10-08";
+// Batch 057 — Wellness CORE, CORE+ and CORE Digestive Health dry dog, from
+// research-data-center task #143 (PR #178): fourteen bags whose list, panel and
+// calories are the PetSmart page that binds the size, read a second time in the
+// maker's label-image text and agreeing (whitespace aside — PetSmart's text is
+// stored as printed). Calories per cup, so no arithmetic witness. One AAFCO
+// sentence is printed; the owner's ruling of 2026-10-07 lets the rest pass.
+const VERIFIED_057 = "2026-10-08";
+// Batch 058 — Wellness Complete Health dry dog, from research-data-center task
+// #144 (PR #177): four bags whose list, panel and calories are the PetSmart page
+// that binds the size, read a second time in the maker's label-image text and
+// agreeing but for the heading and dash glyphs. Calories per cup, so no
+// arithmetic witness. No AAFCO sentence printed for these four.
+const VERIFIED_058 = "2026-10-08";
+// Batch 059 — Wellness wet dog, from research-data-center task #145 (PR #175):
+// nine whose statement was read on the maker's page and again on PetSmart's,
+// agreeing, with PetSmart's calorie line. Per cup, can or pouch, and all nine
+// pass the arithmetic in scripts/check-batch.mjs. "cup" is the 3 oz Petite
+// Entrées container, the maker's own word for it ("3 Ounce Cup").
+const VERIFIED_059 = "2026-10-08";
+// Batch 060 — Wellness Bowl Boosters Simply Shreds, from research-data-center
+// task #146 (PR #176): four 2.8 oz pouches, the statement read on the maker's
+// page and again on PetSmart's, agreeing; PetSmart's calories per pouch, and
+// all four pass the arithmetic. Moisture 90.0% max as printed on all four.
+const VERIFIED_060 = "2026-10-08";
+// Batch 062 — Wellness Lickable Treats, from research-data-center task #150
+// (PR #180): two 2.5 oz pouches of six tubes, the statement read on the maker's
+// page and again on PetSmart's, agreeing. Calories are printed per tube (9 and
+// 8 kcal); at a sixth of 2.5 oz each passes the arithmetic. No AAFCO sentence.
+const VERIFIED_062 = "2026-10-08";
+// Batch 067 — Wellness wet cat under CORE, from research-data-center task #148
+// (PR #181): eighteen whose statement is the maker's label-image text, read a
+// second time on the PetSmart page that binds the code and agreeing; calories
+// from that PetSmart page, per pouch or can, and all eighteen pass the
+// arithmetic in scripts/check-batch.mjs.
+const VERIFIED_067 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11923,5 +11958,260 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Fish Broth, Tuna, Pork Liver, Natural Flavor, Egg Product, Pork, Dried Ground Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Montmorillonite Clay, Sunflower Oil, Calcium Carbonate,  Sodium Phosphate, Salt, Potassium Chloride, Dried Kelp, Minerals (Iron Proteinate, Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide), Choline Chloride, Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin A Supplement, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid), Taurine, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
     analysis: withExtras(withCalories(ga(10, 2, 1, 82, null, null), 770, 77, "cup"), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.3, "%"] }),
     verifiedAt: VERIFIED_055,
+  },
+  "076344884576": {
+    ingredients: `Lamb, Lamb Meal (source of Glucosamine and Chondroitin Sulfate), Pea Protein, Peas, Chickpeas, Dried Plain Beet Pulp, Canola Oil, Flaxseed, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(33, 14, 6, 10, null, 0.2), 3637, 404, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 2.5, "%"], "Omega-3 Fatty Acids": ["min", 1.5, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 300, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884590": {
+    ingredients: `Lamb, Lamb Meal (source of Glucosamine and Chondroitin Sulfate), Pea Protein, Peas, Chickpeas, Dried Plain Beet Pulp, Canola Oil, Flaxseed, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(33, 14, 6, 10, null, 0.2), 3637, 404, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 2.5, "%"], "Omega-3 Fatty Acids": ["min", 1.5, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 300, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344182122": {
+    ingredients: `Whitefish, Herring Meal, Whitefish Meal (source of Glucosamine and Chondroitin Sulfate),Peas, Lentils, Canola Oil, Dried Ground Potatoes, Dried Plain Beet Pulp, Flaxseed, Salmon Meal, Pea Fiber, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(35, 14, 6, 10, null, 0.2), 3635, 422, "cup"), { "Calcium": ["min", 1.7, "%"], "Phosphorus": ["min", 1.2, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 2, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 200, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344182108": {
+    ingredients: `Whitefish, Herring Meal, Whitefish Meal (source of Glucosamine and Chondroitin Sulfate),Peas, Lentils, Canola Oil, Dried Ground Potatoes, Dried Plain Beet Pulp, Flaxseed, Salmon Meal, Pea Fiber, Natural Flavor, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(35, 14, 6, 10, null, 0.2), 3635, 422, "cup"), { "Calcium": ["min", 1.7, "%"], "Phosphorus": ["min", 1.2, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 2, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 200, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884392": {
+    ingredients: `Duck, Lamb Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Peas, Chickpeas, Lentils, Pea Protein, Chicken Fat, Dried Plain Beet Pulp, Wild Boar, Rabbit, Flaxseed, Natural Flavor, Dried Chicory Root, Taurine, Choline Chloride, Potassium Chloride, Vitamin E Supplement, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, CopperSulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(34, 15, 6, 10, null, 0.2), 3705, 389, "cup"), { "Calcium": ["min", 1.6, "%"], "Phosphorus": ["min", 1.1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 4, "%"], "Omega-3 Fatty Acids": ["min", 1, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344898023": {
+    ingredients: `Deboned Chicken, Turkey Meal (source of Chondroitin Sulfate), Chicken Meal (source of Glucosamine), Brown Rice, Barley, Oatmeal, Dried Plain Beet Pulp, Chicken Fat, Flaxseed, Pumpkin, Cranberries, Natural Flavor, Salmon Oil, Apples, Inulin, Potassium Chloride, Hydrolyzed Yeast, Taurine, Choline Chloride, Vitamin E Supplement, Papayas, Blueberries, Pomegranates, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Yucca Schidigera Extract, Vitamin A Supplement, Thiamine Mononitrate, Ground Cinnamon, Ground Fennel, Ground Peppermint, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(30, 12, 4, 10, null, 0.2), 3664, 399, "cup"), { "Calcium": ["min", 1.2, "%"], "Phosphorus": ["min", 0.9, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 1.5, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884941": {
+    ingredients: `Deboned Beef, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Turkey Meal, Brown Rice, Oatmeal, Barley, Brewers Dried Yeast, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Natural Flavor, Salmon Oil, Potassium Chloride, Taurine, Dried Chicory Root, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin (Vitamin B3), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate (Vitamin B1), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin (Vitamin B2), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green TeaExtract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(33, 16, 4, 10, null, 0.2), 3681, 398, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 2.7, "%"], "Omega-3 Fatty Acids": ["min", 0.9, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344182054": {
+    ingredients: `Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Oatmeal, Barley, Dried Plain Beet Pulp, Flaxseed, Chicken Fat, Turkey Liver, Turkey Hearts, Salmon Oil, Natural Flavor, Dried Chicory Root, Choline Chloride, Potassium Chloride, Vitamin E Supplement, Taurine, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(37, 15, 4, 10, null, 0.2), 3692, 473, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1.1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 4.25, "%"], "Omega-3 Fatty Acids": ["min", 1, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344181002": {
+    ingredients: `Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Turkey Liver, Turkey Hearts, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(35, 15, 4.5, 10, null, 0.2), 3682, 409, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344181019": {
+    ingredients: `Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Turkey Liver, Turkey Hearts, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(35, 15, 4.5, 10, null, 0.2), 3682, 409, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344181026": {
+    ingredients: `Deboned Turkey, Turkey Meal, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Turkey Liver, Turkey Hearts, Natural Flavor, Dried Chicory Root, Salmon Oil, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Vitamin B3 (Niacin), Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Vitamin B1 (Thiamine Mononitrate), d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Vitamin B2 (Riboflavin), Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Vitamin C (Ascorbic Acid), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(35, 15, 4.5, 10, null, 0.2), 3682, 409, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Thiamine (mg/kg)": ["min", 5, "other"], "Riboflavin (mg/kg)": ["min", 7.5, "other"], "Niacin (mg/kg)": ["min", 50, "other"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 0.5, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 100000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884194": {
+    ingredients: `Deboned Chicken, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Turkey Meal, Potatoes, Lentils, Peas, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Salmon Oil, Natural Flavor, Salt, Dried Chicory Root, Potassium Chloride, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Zinc Sulfate, Ferrous Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, Copper Sulfate, d-Calcium Pantothenate, Copper Proteinate, Sodium Selenite, Pyridoxine Hydrochloride, Manganese Sulfate, Riboflavin, Manganese Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Calcium Iodate, Folic Acid, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(36, 16, 5.5, 10, null, 0.2), 3678, 471, "cup"), { "Calcium": ["min", 1.5, "%"], "Phosphorus": ["min", 1, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 1, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 700, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884507": {
+    ingredients: `Deboned Turkey, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Peas, Dried Ground Potatoes, Turkey Meal, Chickpeas, Dried Plain Beet Pulp, Flaxseed, Chicken Fat, Natural Flavor, Salmon Oil, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(32, 12, 5, 10, null, 0.2), 3573, 375, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.8, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.25, "%"], "Omega-3 Fatty Acids": ["min", 1.25, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 900, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344884538": {
+    ingredients: `Deboned Turkey, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Lentils, Peas, Dried Ground Potatoes, Turkey Meal, Chickpeas, Dried Plain Beet Pulp, Flaxseed, Chicken Fat, Natural Flavor, Salmon Oil, Dried Chicory Root, Taurine, Vitamin E Supplement, Choline Chloride, Spinach, Broccoli, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Iron Proteinate, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Ascorbic Acid (Vitamin C), Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(32, 12, 5, 10, null, 0.2), 3573, 375, "cup"), { "Calcium": ["min", 1, "%"], "Phosphorus": ["min", 0.8, "%"], "Zinc (mg/kg)": ["min", 100, "other"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 400, "IU/kg"], "Biotin (mg/kg)": ["min", 0.1, "other"], "Omega-6 Fatty Acids": ["min", 3.25, "%"], "Omega-3 Fatty Acids": ["min", 1.25, "%"], "Glucosamine (mg/kg)": ["min", 1200, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 900, "other"], "Total Microorganisms (CFU/lb)": ["min", 80000000, "other"] }),
+    verifiedAt: VERIFIED_057,
+  },
+  "076344891314": {
+    ingredients: `Deboned Chicken, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Chickpeas, Peas, Dried Plain Beet Pulp, Chicken Fat, Flaxseed, Natural Flavor, Dried Chicory Root, Taurine, Potassium Chloride, Choline Chloride, Spinach, Broccoli, Vitamin E Supplement, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Vitamin A Supplement, Iron Proteinate, Ascorbic Acid (Vitamin C), Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(26, 11, 5, 10, null, 0.09), 3509, 390, "cup"), { "Calcium": ["min", 0.8, "%"], "Phosphorus": ["min", 0.6, "%"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 0.75, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 600, "other"], "Total Microorganisms (CFU/lb)": ["min", 20000000, "other"] }),
+    verifiedAt: VERIFIED_058,
+  },
+  "076344891574": {
+    ingredients: `Deboned Chicken, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Dried Ground Potatoes, Chickpeas, Peas, Dried Plain Beet Pulp, Chicken Fat, Flaxseed, Natural Flavor, Dried Chicory Root, Taurine, Potassium Chloride, Choline Chloride, Spinach, Broccoli, Vitamin E Supplement, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Vitamin A Supplement, Iron Proteinate, Ascorbic Acid (Vitamin C), Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(26, 11, 5, 10, null, 0.09), 3509, 390, "cup"), { "Calcium": ["min", 0.8, "%"], "Phosphorus": ["min", 0.6, "%"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega-6 Fatty Acids": ["min", 3, "%"], "Omega-3 Fatty Acids": ["min", 0.75, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 600, "other"], "Total Microorganisms (CFU/lb)": ["min", 20000000, "other"] }),
+    verifiedAt: VERIFIED_058,
+  },
+  "076344891512": {
+    ingredients: `Deboned Turkey, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Ground Potatoes, Lentils, Peas, Salmon Meal, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Salmon Oil, Natural Flavor, Dried Chicory Root, Taurine, Spinach, Broccoli, Vitamin E Supplement, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Vitamin A Supplement, Iron Proteinate, Ascorbic Acid (Vitamin C), Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(32, 16, 5, 10, null, 0.09), 3716, 505, "cup"), { "Calcium": ["min", 1.4, "%"], "Phosphorus": ["min", 1, "%"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 1, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 600, "other"], "Total Microorganisms (CFU/lb)": ["min", 20000000, "other"] }),
+    verifiedAt: VERIFIED_058,
+  },
+  "076344891529": {
+    ingredients: `Deboned Turkey, Chicken Meal (source of Glucosamine and Chondroitin Sulfate), Ground Potatoes, Lentils, Peas, Salmon Meal, Chicken Fat, Dried Plain Beet Pulp, Flaxseed, Salmon Oil, Natural Flavor, Dried Chicory Root, Taurine, Spinach, Broccoli, Vitamin E Supplement, Carrots, Parsley, Apples, Blueberries, Kale, Mixed Tocopherols added to preserve freshness, Niacin, Zinc Proteinate, Ferrous Sulfate, Zinc Sulfate, Vitamin A Supplement, Iron Proteinate, Ascorbic Acid (Vitamin C), Thiamine Mononitrate, d–Calcium Pantothenate, Sodium Selenite, Pyridoxine Hydrochloride, Copper Sulfate, Manganese Sulfate, Riboflavin, Manganese Proteinate, Copper Proteinate, Biotin, Vitamin D3 Supplement, Yucca Schidigera Extract, Vitamin B12 Supplement, Folic Acid, Calcium Iodate, Dried Enterococcus faecium Fermentation Product, Dried Bacillus licheniformis Fermentation Product, Dried Bacillus subtilis Fermentation Product, Rosemary Extract, Green Tea Extract, Spearmint Extract.`,
+    analysis: withExtras(withCalories(ga(32, 16, 5, 10, null, 0.09), 3716, 505, "cup"), { "Calcium": ["min", 1.4, "%"], "Phosphorus": ["min", 1, "%"], "Vitamin A": ["min", 25000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega-6 Fatty Acids": ["min", 3.5, "%"], "Omega-3 Fatty Acids": ["min", 1, "%"], "Glucosamine (mg/kg)": ["min", 600, "other"], "Chondroitin Sulfate (mg/kg)": ["min", 600, "other"], "Total Microorganisms (CFU/lb)": ["min", 20000000, "other"] }),
+    verifiedAt: VERIFIED_058,
+  },
+  "076344190653": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Lamb, Venison, White Sweet Potatoes, Carrots, Potato Starch, Chicken Liver, Egg, Natural Flavor, Potassium Chloride, Salt, Locust Bean Gum, Sodium Carbonate, Tricalcium Phosphate, Xanthan Gum, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Choline Chloride, Minerals [Zinc Amino Acid Chelate, Ferrous Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite]`,
+    analysis: withCalories(ga(6, 5, 0.5, 85, null, null), 1020, 87, "cup"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344190646": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Beef, Green Beans, Red Peppers, Potato Starch, Chicken Liver, Egg, Natural Flavor, Potassium Chloride, Salt, Locust Bean Gum, Sodium Carbonate, Tricalcium Phosphate, Xanthan Gum, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Choline Chloride, Minerals [Zinc Amino Acid Chelate, Ferrous Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withCalories(ga(6, 4, 0.5, 85, null, null), 830, 71, "cup"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344190608": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Duck, Peas, Carrots, Potato Starch, Chicken Liver, Egg, Natural Flavor, Potassium Chloride, Salt, Locust Bean Gum, Sodium Carbonate, Tricalcium Phosphate, Xanthan Gum, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, D-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Choline Chloride, Minerals [Zinc Amino Acid Chelate, Ferrous Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withCalories(ga(6.5, 5, 0.5, 85, null, null), 950, 81, "cup"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344080275": {
+    ingredients: `Chicken, Chicken Broth, Turkey Broth,  Chicken Liver, Turkey, Natural Flavor, Potato Starch, Sweet Potatoes, Dried Egg Product, Green Beans, Chicken Heart, Guar Gum, Carrots, Apples, Blueberries, Broccoli, Kale, Parsley, Spinach, Salt, Sodium Phosphate, Ground Flaxseed, Potassium Chloride, Dried Chicory Root, Yucca Schidigera Extract, Dried Kelp, Choline Chloride, Salmon Oil (Preserved With Mixed Tocopherols), Zinc Proteinate, Iron Proteinate, Canola Oil, Calcium Carbonate, Vitamin E Supplement, Copper Proteinate, Cobalt Proteinate, Manganese Proteinate, Sodium Selenite, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Supplement, Riboflavin Supplement, Biotin, Vitamin B12 Supplement, Potassium Iodide, Pyridoxine Hydrochloride, Vitamin D3 Supplement, Folic Acid.`,
+    analysis: withCalories(ga(9, 3.5, 1, 82, null, null), 967, 342, "can"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344166030": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Potato Starch, Lamb, Chicken Liver, Tapioca Starch, Egg, Natural Flavor, Salt, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Magnesium Sulfate,  Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 3, 1, 82, null, null), 1020, 87, "pouch"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344166054": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Potato Starch, Tuna, Chicken Liver, Egg, Tapioca Starch, Natural Flavor, Salt, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 2, 1, 82, null, null), 918, 78, "pouch"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344166023": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Potato Starch,  Turkey, Chicken Liver, Egg, Tapioca Starch, Natural Flavor, Salt, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement],  Potassium Chloride, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 3, 1, 82, null, null), 1052, 90, "pouch"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344166009": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Natural Flavor, Potato Starch, Tapioca Starch, Tricalcium Phosphate, Potassium Chloride, Guar Gum, Salt, Locust Bean Gum, Sodium Carbonate, Xanthan Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 4, 1, 78, null, null), 1201, 102, "pouch"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344166047": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Potato Starch, Chicken Liver, Egg, Tapioca Starch,  Natural Flavor, Salt, Tricalcium Phosphate, Sunflower Oil, Guar Gum, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(8, 3, 1, 82, null, null), 1083, 92, "pouch"),
+    verifiedAt: VERIFIED_059,
+  },
+  "076344012399": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Beef, Carrots.`,
+    analysis: withCalories(ga(11, 0.5, 1, 90, null, null), 490, 39, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012412": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Chicken Liver, Broccoli.`,
+    analysis: withCalories(ga(10, 0.5, 1, 90, null, null), 510, 40, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012450": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient For Processing, Beef, Carrots.`,
+    analysis: withCalories(ga(10, 0.2, 1, 90, null, null), 450, 36, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344012436": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient For Processing, Salmon, Pumpkin.`,
+    analysis: withCalories(ga(8, 0.5, 1, 90, null, null), 530, 42, "pouch"),
+    verifiedAt: VERIFIED_060,
+  },
+  "076344144007": {
+    ingredients: `Chicken, Fish Broth, Water Sufficient for Processing, Chicken Liver, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Marine Microalgae Oil (preserved with mixed tocopherols), Dried Chicory Root, Guar Gum, Potassium Chloride, Salt, Taurine, Magnesium Sulfate, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Thiamine Mononitrate, Niacin, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Sodium Selenite, Folic Acid, Potassium Iodide, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8.5, 1.35, 1.5, 85, null, 0.05), 720, 9, "tube"), { "Zinc (mg/kg)": ["min", 15, "other"], "Vitamin E": ["min", 15, "IU/kg"] }),
+    verifiedAt: VERIFIED_062,
+  },
+  "076344144014": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient for Processing, Tapioca Starch, Sunflower Oil, Dried Chicory Root, Tricalcium Phosphate, Guar Gum, Potassium Chloride, Marine Microalgae Oil (preserved with mixed tocopherols), Salt, Taurine, Magnesium Sulfate, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Thiamine Mononitrate, Iron Proteinate, Niacin, Copper Proteinate,  Manganese Proteinate, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Sodium Selenite, Riboflavin Supplement, Folic Acid, Potassium Iodide, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8.5, 1.35, 1.5, 85, null, 0.05), 660, 8, "tube"), { "Biotin (mg/kg)": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.25, "%"] }),
+    verifiedAt: VERIFIED_062,
+  },
+  "076344161011": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Natural Flavors, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(10, 8, 1, 78, null, 0.1), 1406, 70, "pouch"),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344161059": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Turkey, Natural Flavors, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(10, 7, 1, 78, null, 0.1), 1341, 67, "pouch"),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344161073": {
+    ingredients: `Tuna, Chicken, Fish Broth, Water Sufficient for Processing, Sunflower Oil, Tapioca Starch, Natural Flavors, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Menadione Sodium Bisulfite Complex (Vitamin K), Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(11, 6, 1, 78, null, 0.1), 1268, 63, "pouch"),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344161097": {
+    ingredients: `Duck, Chicken, Chicken Broth, Water Sufficient for Processing, Natural Flavors, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(10.5, 7.5, 1, 78, null, 0.1), 1110, 55, "pouch"),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344161110": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient for Processing, Salmon, Sunflower Oil, Tapioca Starch, Natural Flavors, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Sulfate, Choline Chloride, Zinc Amino Acid Chelate, Menadione Sodium Bisulfite Complex (Vitamin K), Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide.`,
+    analysis: withCalories(ga(12, 3.5, 1, 78, null, 0.1), 1043, 52, "pouch"),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344161158": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Tuna, Duck, Natural Flavors, Tapioca Starch, Sunflower Oil, Tricalcium Phosphate, Locust Bean Gum, Potassium Chloride, Marine Microalgae Oil (preserved with mixed tocopherols), Guar Gum, Salt, Sodium Carbonate, Taurine, Xanthan Gum, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement), Magnesium Amino Acid Chelate, Choline Chloride, Minerals (Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Copper Amino Acid Chelate, Manganese Amino Acid Chelate, Sodium Selenite, Potassium Iodide).`,
+    analysis: withExtras(withCalories(ga(9.5, 7, 1, 80, null, 0.1), 1400, 70, "pouch"), { "Eicosapentaenoic acid (EPA) & Docosahexaenoic acid (DHA)": ["min", 0.04, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060000": {
+    ingredients: `Boneless Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Potato Starch, Chicken Liver, Eggs, Turkey, Natural Flavor, Salt, Sunflower Oil, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Guar Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withExtras(withCalories(ga(8, 2, 1.5, 85, 3, 0.05), 856, 68, "can"), { "Magnesium": ["max", 0.03, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060017": {
+    ingredients: `Boneless Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Potato Starch, Chicken Liver, Eggs, Natural Flavor, Salt, Sunflower Oil, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Guar Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withExtras(withCalories(ga(8, 2, 1.5, 85, 3, 0.05), 842, 66, "can"), { "Magnesium": ["max", 0.03, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060024": {
+    ingredients: `Boneless Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Potato Starch, Chicken Liver, Eggs, Beef, Natural Flavor, Salt, Sunflower Oil, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Guar Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withExtras(withCalories(ga(8, 2, 1.5, 85, 3, 0.05), 851, 67, "can"), { "Magnesium": ["max", 0.03, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060031": {
+    ingredients: `Tuna, Tuna Broth, Water Sufficient for Processing, Mackerel, Shrimp, Tapioca Starch, Sunflower Oil,Natural Flavor, Guar Gum, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite], Menadione Sodium Bisulfite Complex (Vitamin K).`,
+    analysis: withExtras(withCalories(ga(10, 3, 1, 85, 2, 0.05), 867, 68, "can"), { "Magnesium": ["max", 0.025, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344050179": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient for Processing, Mackerel, Sunflower Oil, Marine Microalgae Oil (Preserved with Mixed Tocopherols), Taurine, Tricalcium Phosphate, Guar Gum, Salt, Potassium Chloride, Dried Chicory Root, Magnesium Sulfate, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Iron Proteinate, Menadione Sodium Bisulfite Complex (Vitamin K), Vitamin A Supplement, Manganese Proteinate, Copper Proteinate, Thiamine Mononitrate, Niacin, Riboflavin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Potassium Iodide, Folic Acid, Biotin, Vitamin B12 Supplement.`,
+    analysis: withExtras(withCalories(ga(14, 3, 1, 78, null, 0.1), 906, 72, "can"), { "Calcium": ["min", 0.2, "%"], "Phosphorus": ["min", 0.15, "%"], "Zinc": ["min", 30, "other"], "Vitamin E": ["min", 75, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.5, "%"], "Omega-3 Fatty Acids": ["min", 0.15, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344050223": {
+    ingredients: `Tuna, Fish Broth, Water Sufficient for Processing, Tilapia, Sunflower Oil, Marine Microalgae Oil (Preserved with Mixed Tocopherols), Taurine, Tricalcium Phosphate, Guar Gum, Salt, Dried Chicory Root, Magnesium Sulfate, Potassium Chloride, Choline Chloride, Vitamin E Supplement, Zinc Proteinate, Iron Proteinate, Menadione Sodium Bisulfite Complex (Vitamin K), Manganese Proteinate, Copper Proteinate, Vitamin A Supplement, Thiamine Mononitrate, Niacin, Riboflavin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Potassium Iodide, Folic Acid, Biotin, Vitamin B12 Supplement.`,
+    analysis: withExtras(withCalories(ga(15, 3, 1, 78, null, 0.1), 921, 73, "can"), { "Calcium": ["min", 0.2, "%"], "Phosphorus": ["min", 0.15, "%"], "Zinc": ["min", 30, "other"], "Vitamin E": ["min", 75, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.5, "%"], "Omega-3 Fatty Acids": ["min", 0.15, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344050209": {
+    ingredients: `Duck, Chicken Broth, Water Sufficient for Processing, Chicken, Tapioca Starch, Potato Starch, TurkeyLiver, Eggs, Natural Flavor, Marine Microalgae Oil (Preserved with Mixed Tocopherols), Salt, Tricalcium Phosphate, Potassium Chloride, Dried Chicory Root, Sodium Tripolyphosphate, Magnesium Sulfate, Taurine, Guar Gum, Choline Chloride, Pea Fiber, Zinc Proteinate, Iron Proteinate, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Manganese Proteinate, Vitamin A Supplement, Copper Proteinate, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Sodium Selenite, Potassium Iodide, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8, 3, 1, 78, null, 0.1), 968, 77, "can"), { "Calcium": ["min", 0.2, "%"], "Phosphorus": ["min", 0.15, "%"], "Zinc": ["min", 30, "other"], "Vitamin E": ["min", 75, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.4, "%"], "Omega-3 Fatty Acids": ["min", 0.1, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344050216": {
+    ingredients: `Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Quail Egg, Potato Starch, Chicken Liver, Eggs, Natural Flavor, Salt, Tricalcium Phosphate, Marine Microalgae Oil (Preserved with Mixed Tocopherols), Potassium Chloride, Dried Chicory Root, Sodium Tripolyphosphate, Magnesium Sulfate, Taurine, Guar Gum, Choline Chloride, Pea Fiber, Zinc Proteinate, Iron Proteinate, Vitamin E Supplement, Thiamine Mononitrate, Niacin, Manganese Proteinate, Copper Proteinate, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Potassium Iodide, Sodium Selenite, Biotin, Vitamin B12 Supplement, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(8, 3, 1, 78, null, 0.1), 991, 79, "can"), { "Calcium": ["min", 0.2, "%"], "Phosphorus": ["min", 0.15, "%"], "Zinc": ["min", 30, "other"], "Vitamin E": ["min", 75, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.4, "%"], "Omega-3 Fatty Acids": ["min", 0.1, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060543": {
+    ingredients: `Tuna, Tuna Broth, Water Sufficient for Processing, Mackerel, Salmon, Tapioca Starch, Sunflower Oil, Natural Flavor, Guar Gum, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite], Menadione Sodium Bisulfite Complex (Vitamin K).`,
+    analysis: withExtras(withCalories(ga(10, 3.5, 1, 85, 2, 0.05), 884, 133, "can"), { "Magnesium": ["max", 0.025, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060512": {
+    ingredients: `Boneless Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Potato Starch, Chicken Liver, Eggs, Natural Flavor, Salt, Sunflower Oil, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Guar Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withExtras(withCalories(ga(8, 2, 1.5, 85, 3, 0.05), 842, 126, "can"), { "Magnesium": ["max", 0.03, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344060529": {
+    ingredients: `Boneless Chicken, Chicken Broth, Water Sufficient for Processing, Tapioca Starch, Potato Starch, Chicken Liver, Eggs, Beef, Natural Flavor, Salt, Sunflower Oil, Tricalcium Phosphate, Taurine, Magnesium Sulfate, Guar Gum, Vitamins [Vitamin E Supplement, Thiamine Hydrochloride, Niacin, Vitamin A Supplement, Pyridoxine Hydrochloride, d-Calcium Pantothenate, Riboflavin Supplement, Folic Acid, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Potassium Chloride, Choline Chloride, Minerals [Zinc Amino Acid Chelate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Copper Amino Acid Chelate, Potassium Iodide, Sodium Selenite].`,
+    analysis: withExtras(withCalories(ga(8, 2, 1.5, 85, 3, 0.05), 851, 127, "can"), { "Magnesium": ["max", 0.03, "%"] }),
+    verifiedAt: VERIFIED_067,
+  },
+  "076344079033": {
+    ingredients: `Chicken, Chicken Liver, Chicken Broth, Turkey Broth, Turkey, Chicken Hearts, Pea Protein, Dried Ground Peas, Natural Flavor, Pea Fiber, Fish Oil (Preserved With Mixed Tocopherols), Ground Flaxseed, Guar Gum, Dried Chicory Root, Tricalcium Phosphate, Potassium Chloride, Taurine, Cranberries, Sunflower Oil, Salt, Choline Chloride, Dried Kelp, Yucca Schidigera Extract, Cassia Gum, Xanthan Gum, Vitamin E Supplement, Zinc Proteinate, Iron Proteinate, Niacin Supplement, Thiamine Mononitrate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Vitamin A Supplement, d-Calcium Pantothenate, Vitamin B12 Supplement, Riboflavin Supplement, Pyridoxine Hydrochloride, Biotin, Folic Acid, Potassium Iodide, Vitamin D3 Supplement.`,
+    analysis: withExtras(withCalories(ga(11, 4, 2, 78, null, 0.1), 1130, 176, "can"), { "Calcium": ["min", 0.25, "%"], "Phosphorus": ["min", 0.2, "%"], "Zinc": ["min", 35, "other"], "Vitamin E": ["min", 100, "IU/kg"], "Biotin": ["min", 0.02, "other"], "Omega-6 Fatty Acids": ["min", 0.55, "%"], "Omega-3 Fatty Acids": ["min", 0.1, "%"] }),
+    verifiedAt: VERIFIED_067,
   },
 };
