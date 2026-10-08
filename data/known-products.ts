@@ -5704,6 +5704,278 @@ const INSTINCT_BATCH_054: KnownProduct[] = [
   },
 ];
 
+// Batch 055 — Instinct wet cat food: 23 codes from research-data-center task
+// #122 (PR #172), ledger research/deep-research-instinct.json. Ordinary wet
+// food at 78–83% moisture max: pâté and flaked-in-gravy cans, pâté and
+// minced-in-gravy cups (filed "tub", the word the container field has).
+//
+// The three Minced Cups carry a composition. The other sixteen products are
+// identity only: for every can and Split Cup the retailer page that binds the
+// code prints a different list from the maker's current page, so which formula
+// the pack carries is a photograph (needs_physical_label). Among those only the
+// kitten can carries a lifeStage, "kitten", from "for Kittens" in its printed
+// name (batch 052's rule). Four candidate records — Original Real Duck 3 oz,
+// Original for Kittens Chicken 5.5 oz, Limited Ingredient Diet Real Rabbit
+// 3 oz, Split Cups Paté Duck Entrée — stay in the ledger. Variants are the
+// ledger's.
+const INSTINCT_BATCH_055: KnownProduct[] = [
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Minced Cups Chicken",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610281", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Minced Cups Rabbit",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610311", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Minced Cups",
+    variant: "Minced Cups Tuna",
+    species: "cat",
+    texture: "minced",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    lifeStage: "adult",
+    packages: [
+      { size: "3.5 oz", container: TUB, upc: "769949610298", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Flaked Salmon Entrée",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618218", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Flaked Duck Entrée",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618225", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Flaked Rabbit Entrée",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618232", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Flaked Tuna Entrée",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["tuna"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618201", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Flaked Entrées",
+    variant: "Flaked Chicken Entrée",
+    species: "cat",
+    texture: "flaked",
+    presentation: "in_gravy",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949618195", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Salmon",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949605928", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949605935", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Lamb",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["lamb"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617266", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617013", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949607014", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Rabbit",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949617464", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949607465", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Real Turkey",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["turkey"],
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949605751", scope: UNIT },
+      { size: "5.5 oz", container: CAN, upc: "769949605768", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "for Kittens Chicken",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    lifeStage: "kitten",
+    packages: [
+      { size: "3 oz", container: CAN, upc: "769949610380", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Split Cups",
+    variant: "Split Cups Paté Chicken Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["chicken"],
+    packages: [
+      { size: "2.64 oz", container: TUB, upc: "769949610120", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Split Cups",
+    variant: "Split Cups Paté Salmon Entrée",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["salmon"],
+    packages: [
+      { size: "2.64 oz", container: TUB, upc: "769949610144", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Venison",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["venison"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607564", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Original",
+    variant: "Real Duck",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["duck"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607366", scope: UNIT },
+    ],
+  },
+  {
+    brand: "Instinct",
+    line: "Limited Ingredient Diet",
+    variant: "Real Rabbit",
+    species: "cat",
+    texture: "pate",
+    presentation: "plain",
+    foodForm: "wet",
+    proteins: ["rabbit"],
+    packages: [
+      { size: "5.5 oz", container: CAN, upc: "769949607533", scope: UNIT },
+    ],
+  },
+];
+
 export const KNOWN_PRODUCTS: KnownProduct[] = [
   // ── Fancy Feast · Classic Pâté ─────────────────────────────────────────
   {
@@ -21642,4 +21914,5 @@ export const KNOWN_PRODUCTS: KnownProduct[] = [
   ...INSTINCT_BATCH_052,
   ...INSTINCT_BATCH_053,
   ...INSTINCT_BATCH_054,
+  ...INSTINCT_BATCH_055,
 ];

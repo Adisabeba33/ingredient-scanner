@@ -13206,9 +13206,10 @@
         "adequacy: printed on https://www.instinctpetfood.com/products/minced-cups-chicken — \"Instinct Minced Chicken Recipe in Savory Gravy is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance.\"",
         "instinct-grain-free-minced-cat-food---natural-chicken-5265783.html: the PetSmart ingredient statement for Chicken equals the maker's word for word (case aside); its calorie line is '971 kcal/kg, 97 kcal/3.5 oz cup'.",
         "barcode: PetSmart prints the GTIN-13 0769949610281 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status source_verified: every AGENTS.md §10 gate passes"
+        "research_status source_verified: every AGENTS.md §10 gate passes",
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -13310,9 +13311,10 @@
         "adequacy: printed on https://www.instinctpetfood.com/products/minced-cups-rabbit — \"Instinct Minced Rabbit Recipe in Savory Gravy is formulated to meet the nutritional levels established by the AAFCO Cat Food Nutrient Profiles for maintenance.\"",
         "instinct-grain-free-minced-cat-food---natural-rabbit-5265786.html: the PetSmart ingredient statement for Rabbit equals the maker's word for word (case aside); its calorie line is '752 kcal/kg, 75 kcal/3.5 oz cup'.",
         "barcode: PetSmart prints the GTIN-13 0769949610311 (leading zero + this UPC-A); the check digit validates for the 12-digit form.",
-        "research_status source_verified: every AGENTS.md §10 gate passes"
+        "research_status source_verified: every AGENTS.md §10 gate passes",
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,
@@ -14482,9 +14484,10 @@
         "shop.agwaycapecod.com prints no ingredient statement for this item; it binds the code and size only.",
         "petgoods.com: ingredient statement equals the maker's word for word (case aside).",
         "petgoods.com prints Caloric Content/kg 770 and Caloric Content 77 with unit kcal/3.5 oz cup; its guaranteed analysis equals the maker's.",
-        "research_status source_verified: every AGENTS.md §10 gate passes"
+        "research_status source_verified: every AGENTS.md §10 gate passes",
+        "Promoted to seed 2026-10-08, batch 055 (branch seed/instinct-rdc-120-122-126): identity in data/known-products.ts, composition in data/known-formulas.ts, the ingredient statement copied by script and compared equal to ingredients_verbatim. research_status changed from source_verified to promoted_to_seed (AGENTS.md §10); nothing else in the record changed."
       ],
-      "research_status": "source_verified"
+      "research_status": "promoted_to_seed"
     },
     {
       "catalog_number": null,

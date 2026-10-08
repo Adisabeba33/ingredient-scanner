@@ -902,6 +902,12 @@ export const US_PET_BRANDS: SeedBrand[] = [
       "RawBoost+ Kibble",
       "RawBoost+ Kibble for Small Breed Dogs",
       "RawBoost+ Whole Grain Kibble",
+      // Batch 055: the wet cat ranges as instinctpetfood.com names them
+      // (research-data-center task #122). Original and Limited Ingredient
+      // Diet cans file under the ranges above.
+      "Minced Cups",
+      "Flaked Entrées",
+      "Split Cups",
     ],
   },
   {

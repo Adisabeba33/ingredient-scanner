@@ -217,6 +217,12 @@ const VERIFIED_053 = "2026-10-08";
 // cup) and the AAFCO sentence are from that PetSmart page. Per cup, so no
 // arithmetic witness (SEEDING-A-BATCH.md §2.4).
 const VERIFIED_054 = "2026-10-08";
+// Batch 055 — Instinct wet cat food, from research-data-center task #122
+// (PR #172): the three 3.5 oz Minced Cups. List, panel and AAFCO sentence are
+// instinctpetfood.com's page text, read a second time on PetSmart (chicken,
+// rabbit) or petgoods.com (tuna), which agree; calories per cup — the cup the
+// food comes in — from that second page, so each has the arithmetic witness.
+const VERIFIED_055 = "2026-10-08";
 
 /**
  * The six guarantees every one of these packs prints.
@@ -11902,5 +11908,20 @@ export const KNOWN_FORMULAS: Record<string, KnownFormula> = {
     ingredients: `Salmon, Menhaden Fish Meal, Peas, Canola Oil (preserved with Mixed Tocopherols), Tapioca, Dried Yeast, Sweet Potato, Whitefish Meal, Dried Whitefish, Dried Salmon, Chickpeas, Natural Flavor, Ground Flaxseeds, Freeze-Dried Beef, Carrots, Coconut Glycerin, Dried Tomato Pomace, Freeze-Dried Beef Liver, Freeze-Dried Beef Spleen, Pumpkin Seeds, Apples, Blueberries, Cranberries, Freeze-Dried Beef Kidneys, Montmorillonite Clay, Choline Chloride, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Ethylenediamine Dihydroiodide), Ground Miscanthus Grass, Salt, Vitamins (Vitamin E Supplement, Niacin Supplement, Vitamin A Supplement, Thiamine Mononitrate, d-Calcium Pantothenate, Riboflavin Supplement, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Folic Acid, Vitamin D3 Supplement, Biotin), Salmon Oil, Taurine, Rosemary Extract, Yeast Culture, Dried Lactobacillus acidophilus Fermentation Product, Dried Enterococcus faecium Fermentation Product, Dried Aspergillus oryzae Fermentation Extract, Dried Trichoderma longibrachiatum Fermentation Extract, Dried Bacillus subtilis Fermentation Extract.`,
     analysis: withExtras(withCalories(ga(34, 13.5, 5, 10, null, 0.1), 3500, 411, "cup"), { "Vitamin A": ["min", 12000, "IU/kg"], "Vitamin E": ["min", 200, "IU/kg"], "Omega 3 Fatty Acids": ["min", 1, "%"], "Omega 6 Fatty Acids": ["min", 2, "%"], "Total Microorganisms (Lactobacillus acidophilus & Enterococcus faecium)": ["min", 80000000, "CFU/lb"] }),
     verifiedAt: VERIFIED_054,
+  },
+  "769949610281": {
+    ingredients: `Chicken Broth, Chicken, Chicken Liver, Egg Whites, Ground Dried Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Natural Flavor, Sodium Phosphate, Salt, Montmorillonite Clay, Dried Kelp, Potassium Chloride, Choline Chloride, Minerals (Iron Proteinate, Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide), Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin A Supplement, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid), Taurine, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(9, 4.5, 1, 82, null, null), 971, 97, "cup"), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.7, "%"] }),
+    verifiedAt: VERIFIED_055,
+  },
+  "769949610311": {
+    ingredients: `Pork Broth, Rabbit, Pork Liver, Pork, Natural Flavor, Egg Product, Dried Ground Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Montmorillonite Clay, Sodium Phosphate, Salt, Flaxseed Oil, Potassium Chloride, Dried Kelp, Calcium Carbonate, Minerals (Iron Proteinate, Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide), Choline Chloride, Vitamins (Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin A Supplement, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid), Taurine, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(9, 2, 1.5, 82, null, null), 752, 75, "cup"), { "Omega 3 Fatty Acids": ["min", 0.09, "%"], "Omega 6 Fatty Acids": ["min", 0.45, "%"] }),
+    verifiedAt: VERIFIED_055,
+  },
+  "769949610298": {
+    ingredients: `Fish Broth, Tuna, Pork Liver, Natural Flavor, Egg Product, Pork, Dried Ground Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Montmorillonite Clay, Sunflower Oil, Calcium Carbonate,  Sodium Phosphate, Salt, Potassium Chloride, Dried Kelp, Minerals (Iron Proteinate, Zinc Proteinate, Copper Proteinate, Manganese Proteinate, Sodium Selenite, Potassium Iodide), Choline Chloride, Vitamins (Thiamine Mononitrate, Vitamin E Supplement, Niacin Supplement, d-Calcium Pantothenate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin A Supplement, Biotin, Vitamin D3 Supplement, Vitamin B12 Supplement, Folic Acid), Taurine, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley.`,
+    analysis: withExtras(withCalories(ga(10, 2, 1, 82, null, null), 770, 77, "cup"), { "Omega 3 Fatty Acids": ["min", 0.1, "%"], "Omega 6 Fatty Acids": ["min", 0.3, "%"] }),
+    verifiedAt: VERIFIED_055,
   },
 };

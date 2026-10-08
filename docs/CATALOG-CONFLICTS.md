@@ -2585,3 +2585,75 @@ judged as dinner.
 The PeakBoost+ panels guarantee "Total Microorganisms (Lactobacillus
 acidophilus & Enterococcus faecium)" at 80 million CFU/lb, stored with the unit
 `CFU/lb` as batch 048 stored its Bacillus coagulans figure.
+
+## Batch 055 — Instinct wet cat food
+
+Twenty-seven records from research-data-center task #122 (PR #172), appended
+to `research/deep-research-instinct.json`. Three are stored with their
+compositions — the 3.5 oz Minced Cups Chicken, Rabbit and Tuna — twenty as
+identity, and four stay in the ledger. No conflict note on the three: the list,
+panel and AAFCO sentence ("… for maintenance") are the maker's page text, read
+a second time on PetSmart (chicken, rabbit) or petgoods.com (tuna), which agree
+word for word apart from letter case; calories are from that second page.
+
+### Calories per cup, and the cup is the pack
+
+The Minced Cups state "kcal/3.5 oz cup": the cup is the sealed container, not
+a measure, so unlike a kibble's cup the arithmetic applies. 971 kcal/kg × 3.5
+oz is 96.3 kcal against a printed 97; tuna 76.4 against 77; rabbit 74.6
+against 75. All three pass `scripts/check-batch.mjs`. The two that round up
+equal kcal/kg × 100 g, which the research notes and does not assume.
+
+**769949610298** — Minced Cups Tuna prints "Calcium Carbonate,  Sodium
+Phosphate" with two spaces; stored as delivered (copy, do not tidy).
+
+### Twenty seeded as identity only — two formula generations
+
+For every can and Split Cup the retailer page that binds the code (PetSmart,
+thatpetplace.com, southernagriculture.com, poudrefeed.com) prints a different
+ingredient statement from the maker's current page — Montmorillonite Clay,
+Artichokes, Cabbage and L-Ascorbyl-2-Polyphosphate among the differences, and
+on Original Salmon 3 oz a crude fat of 6.0% against the maker's 7.0%. So which
+formula a can carries is a photograph (`needs_physical_label`;
+`docs/CURATION-QUEUE.md`, "The status is a lookup"), and the retailers'
+calories, which belong to their own lists, are not used. No size binding is in
+doubt: each code is on a single-unit page that names the size.
+
+- **Original** — Real Salmon 769949605928 (3 oz), 769949605935 (5.5 oz);
+  Real Lamb 769949617266; Real Chicken 769949617013, 769949607014; Real
+  Rabbit 769949617464, 769949607465; Real Venison 769949607564; Real Duck
+  769949607366 (5.5 oz); for Kittens Chicken 769949610380 (3 oz).
+- **Limited Ingredient Diet** — Real Turkey 769949605751, 769949605768;
+  Real Rabbit 769949607533 (5.5 oz).
+- **Flaked Entrées** — Flaked Salmon, Duck, Rabbit, Tuna and Chicken
+  Entrée, 769949618218, 769949618225, 769949618232, 769949618201,
+  769949618195 (3 oz).
+- **Split Cups** — Paté Chicken Entrée 769949610120, Paté Salmon Entrée
+  769949610144 (2.64 oz). PetSmart's Split Cups page carries label blocks for
+  two flavours, the one marked Salmon beginning with Duck; the research used
+  it for the code and size only, never as a formula.
+
+Only the kitten can carries a `lifeStage`, "kitten", from "for Kittens" in its
+printed name (batch 052's rule). The others carry none, although the ledger
+says `all` or `adult`: the sentence read is on the maker's page, whose list
+the can may not carry.
+
+Variants are the ledger's. The wet Original "Real Chicken" and "for Kittens
+Chicken" sit beside batch 052's dry Original "Chicken" and "Chicken for
+Kittens" — different products, kept apart by their printed words and by food
+form.
+
+### Four candidates left in the ledger
+
+**769949617365** Original Real Duck 3 oz, **769949610397** Original for
+Kittens Chicken 5.5 oz, **769949607540** Limited Ingredient Diet Real Rabbit
+3 oz and **769949610137** Split Cups Paté Duck Entrée: no page read prints a
+calorie statement for the current formula, so they are `candidate` and not
+seeded. Their siblings above are in the catalog as identity.
+
+### Ranges and role
+
+`Minced Cups`, `Flaked Entrées` and `Split Cups` are new to
+`data/us-pet-brands.ts`. Every range here is a complete diet and resolves to
+`unknown` in `lib/nutrition-role.ts`, judged as dinner. Food form: wet, 78–83%
+moisture max; nothing here needs a new value.
